@@ -68,6 +68,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extended_notes")
     private List<AccountingExtendedNote> extendedNotes;
 
@@ -80,6 +85,11 @@ public class AccountingInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     private String invoiceNumber;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_inclusive_of_tax")
+    private Boolean isInclusiveOfTax;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -168,6 +178,13 @@ public class AccountingInvoice {
     @JsonProperty("refunded_at")
     private OffsetDateTime refundedAt;
 
+    /**
+     * refs -&gt; AccountingSalesorder; the sales orders this invoice was raised from
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("salesorder_ids")
+    private List<String> salesorderIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send")
@@ -177,6 +194,11 @@ public class AccountingInvoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingInvoiceStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sub_total_amount")
+    private Double subTotalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -219,9 +241,11 @@ public class AccountingInvoice {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("extended_notes") @Nullable List<AccountingExtendedNote> extendedNotes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("invoice_number") @Nullable String invoiceNumber,
+            @JsonProperty("is_inclusive_of_tax") @Nullable Boolean isInclusiveOfTax,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
@@ -239,8 +263,10 @@ public class AccountingInvoice {
             @JsonProperty("refund_amount") @Nullable Double refundAmount,
             @JsonProperty("refund_reason") @Nullable String refundReason,
             @JsonProperty("refunded_at") @Nullable OffsetDateTime refundedAt,
+            @JsonProperty("salesorder_ids") @Nullable List<String> salesorderIds,
             @JsonProperty("send") @Nullable Boolean send,
             @JsonProperty("status") @Nullable AccountingInvoiceStatus status,
+            @JsonProperty("sub_total_amount") @Nullable Double subTotalAmount,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("term") @Nullable AccountingInvoiceTerm term,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
@@ -256,9 +282,11 @@ public class AccountingInvoice {
         this.currency = currency;
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
+        this.exchangeRate = exchangeRate;
         this.extendedNotes = extendedNotes;
         this.id = id;
         this.invoiceNumber = invoiceNumber;
+        this.isInclusiveOfTax = isInclusiveOfTax;
         this.lineitems = lineitems;
         this.metadata = metadata;
         this.notes = notes;
@@ -276,8 +304,10 @@ public class AccountingInvoice {
         this.refundAmount = refundAmount;
         this.refundReason = refundReason;
         this.refundedAt = refundedAt;
+        this.salesorderIds = salesorderIds;
         this.send = send;
         this.status = status;
+        this.subTotalAmount = subTotalAmount;
         this.taxAmount = taxAmount;
         this.term = term;
         this.totalAmount = totalAmount;
@@ -299,7 +329,8 @@ public class AccountingInvoice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -338,6 +369,10 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.dueAt);
     }
 
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
+    }
+
     public Optional<List<AccountingExtendedNote>> extendedNotes() {
         return Optional.ofNullable(this.extendedNotes);
     }
@@ -348,6 +383,10 @@ public class AccountingInvoice {
 
     public Optional<String> invoiceNumber() {
         return Optional.ofNullable(this.invoiceNumber);
+    }
+
+    public Optional<Boolean> isInclusiveOfTax() {
+        return Optional.ofNullable(this.isInclusiveOfTax);
     }
 
     public Optional<List<AccountingLineitem>> lineitems() {
@@ -421,12 +460,23 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.refundedAt);
     }
 
+    /**
+     * refs -&gt; AccountingSalesorder; the sales orders this invoice was raised from
+     */
+    public Optional<List<String>> salesorderIds() {
+        return Optional.ofNullable(this.salesorderIds);
+    }
+
     public Optional<Boolean> send() {
         return Optional.ofNullable(this.send);
     }
 
     public Optional<AccountingInvoiceStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<Double> subTotalAmount() {
+        return Optional.ofNullable(this.subTotalAmount);
     }
 
     public Optional<Double> taxAmount() {
@@ -512,6 +562,12 @@ public class AccountingInvoice {
     }
 
 
+    public AccountingInvoice withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
+        return this;
+    }
+
+
     public AccountingInvoice withExtendedNotes(@Nullable List<AccountingExtendedNote> extendedNotes) {
         this.extendedNotes = extendedNotes;
         return this;
@@ -526,6 +582,12 @@ public class AccountingInvoice {
 
     public AccountingInvoice withInvoiceNumber(@Nullable String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
+        return this;
+    }
+
+
+    public AccountingInvoice withIsInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
+        this.isInclusiveOfTax = isInclusiveOfTax;
         return this;
     }
 
@@ -635,6 +697,15 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * refs -&gt; AccountingSalesorder; the sales orders this invoice was raised from
+     */
+    public AccountingInvoice withSalesorderIds(@Nullable List<String> salesorderIds) {
+        this.salesorderIds = salesorderIds;
+        return this;
+    }
+
+
     public AccountingInvoice withSend(@Nullable Boolean send) {
         this.send = send;
         return this;
@@ -643,6 +714,12 @@ public class AccountingInvoice {
 
     public AccountingInvoice withStatus(@Nullable AccountingInvoiceStatus status) {
         this.status = status;
+        return this;
+    }
+
+
+    public AccountingInvoice withSubTotalAmount(@Nullable Double subTotalAmount) {
+        this.subTotalAmount = subTotalAmount;
         return this;
     }
 
@@ -702,9 +779,11 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.extendedNotes, other.extendedNotes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceNumber, other.invoiceNumber) &&
+            Utils.enhancedDeepEquals(this.isInclusiveOfTax, other.isInclusiveOfTax) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
@@ -722,8 +801,10 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
             Utils.enhancedDeepEquals(this.refundReason, other.refundReason) &&
             Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
+            Utils.enhancedDeepEquals(this.salesorderIds, other.salesorderIds) &&
             Utils.enhancedDeepEquals(this.send, other.send) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.subTotalAmount, other.subTotalAmount) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.term, other.term) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
@@ -738,16 +819,17 @@ public class AccountingInvoice {
             attachments, balanceAmount, cancelledAt,
             categoryIds, contactId, createdAt,
             currency, discountAmount, dueAt,
-            extendedNotes, id, invoiceNumber,
-            lineitems, metadata, notes,
-            organizationId, paidAmount, paidAt,
-            paymentCollectionMethod, paymentTerms, payments,
-            paymenttermId, postedAt, projectId,
-            raw, reference, refundAmount,
-            refundReason, refundedAt, send,
-            status, taxAmount, term,
-            totalAmount, type, updatedAt,
-            url);
+            exchangeRate, extendedNotes, id,
+            invoiceNumber, isInclusiveOfTax, lineitems,
+            metadata, notes, organizationId,
+            paidAmount, paidAt, paymentCollectionMethod,
+            paymentTerms, payments, paymenttermId,
+            postedAt, projectId, raw,
+            reference, refundAmount, refundReason,
+            refundedAt, salesorderIds, send,
+            status, subTotalAmount, taxAmount,
+            term, totalAmount, type,
+            updatedAt, url);
     }
     
     @Override
@@ -762,9 +844,11 @@ public class AccountingInvoice {
                 "currency", currency,
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
+                "exchangeRate", exchangeRate,
                 "extendedNotes", extendedNotes,
                 "id", id,
                 "invoiceNumber", invoiceNumber,
+                "isInclusiveOfTax", isInclusiveOfTax,
                 "lineitems", lineitems,
                 "metadata", metadata,
                 "notes", notes,
@@ -782,8 +866,10 @@ public class AccountingInvoice {
                 "refundAmount", refundAmount,
                 "refundReason", refundReason,
                 "refundedAt", refundedAt,
+                "salesorderIds", salesorderIds,
                 "send", send,
                 "status", status,
+                "subTotalAmount", subTotalAmount,
                 "taxAmount", taxAmount,
                 "term", term,
                 "totalAmount", totalAmount,
@@ -813,11 +899,15 @@ public class AccountingInvoice {
 
         private OffsetDateTime dueAt;
 
+        private Double exchangeRate;
+
         private List<AccountingExtendedNote> extendedNotes;
 
         private String id;
 
         private String invoiceNumber;
+
+        private Boolean isInclusiveOfTax;
 
         private List<AccountingLineitem> lineitems;
 
@@ -853,9 +943,13 @@ public class AccountingInvoice {
 
         private OffsetDateTime refundedAt;
 
+        private List<String> salesorderIds;
+
         private Boolean send;
 
         private AccountingInvoiceStatus status;
+
+        private Double subTotalAmount;
 
         private Double taxAmount;
 
@@ -918,6 +1012,11 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
+            return this;
+        }
+
         public Builder extendedNotes(@Nullable List<AccountingExtendedNote> extendedNotes) {
             this.extendedNotes = extendedNotes;
             return this;
@@ -930,6 +1029,11 @@ public class AccountingInvoice {
 
         public Builder invoiceNumber(@Nullable String invoiceNumber) {
             this.invoiceNumber = invoiceNumber;
+            return this;
+        }
+
+        public Builder isInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
+            this.isInclusiveOfTax = isInclusiveOfTax;
             return this;
         }
 
@@ -1021,6 +1125,14 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * refs -&gt; AccountingSalesorder; the sales orders this invoice was raised from
+         */
+        public Builder salesorderIds(@Nullable List<String> salesorderIds) {
+            this.salesorderIds = salesorderIds;
+            return this;
+        }
+
         public Builder send(@Nullable Boolean send) {
             this.send = send;
             return this;
@@ -1028,6 +1140,11 @@ public class AccountingInvoice {
 
         public Builder status(@Nullable AccountingInvoiceStatus status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder subTotalAmount(@Nullable Double subTotalAmount) {
+            this.subTotalAmount = subTotalAmount;
             return this;
         }
 
@@ -1066,16 +1183,17 @@ public class AccountingInvoice {
                 attachments, balanceAmount, cancelledAt,
                 categoryIds, contactId, createdAt,
                 currency, discountAmount, dueAt,
-                extendedNotes, id, invoiceNumber,
-                lineitems, metadata, notes,
-                organizationId, paidAmount, paidAt,
-                paymentCollectionMethod, paymentTerms, payments,
-                paymenttermId, postedAt, projectId,
-                raw, reference, refundAmount,
-                refundReason, refundedAt, send,
-                status, taxAmount, term,
-                totalAmount, type, updatedAt,
-                url);
+                exchangeRate, extendedNotes, id,
+                invoiceNumber, isInclusiveOfTax, lineitems,
+                metadata, notes, organizationId,
+                paidAmount, paidAt, paymentCollectionMethod,
+                paymentTerms, payments, paymenttermId,
+                postedAt, projectId, raw,
+                reference, refundAmount, refundReason,
+                refundedAt, salesorderIds, send,
+                status, subTotalAmount, taxAmount,
+                term, totalAmount, type,
+                updatedAt, url);
         }
 
     }

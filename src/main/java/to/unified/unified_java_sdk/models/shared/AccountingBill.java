@@ -73,6 +73,11 @@ public class AccountingBill {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extended_notes")
     private List<AccountingExtendedNote> extendedNotes;
 
@@ -143,6 +148,13 @@ public class AccountingBill {
     @JsonProperty("project_id")
     private String projectId;
 
+    /**
+     * refs -&gt; AccountingPurchaseorder; the purchase orders this bill was raised from
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("purchaseorder_ids")
+    private List<String> purchaseorderIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -172,6 +184,11 @@ public class AccountingBill {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingBillStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sub_total_amount")
+    private Double subTotalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -210,6 +227,7 @@ public class AccountingBill {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("extended_notes") @Nullable List<AccountingExtendedNote> extendedNotes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
@@ -224,12 +242,14 @@ public class AccountingBill {
             @JsonProperty("paymentterm_id") @Nullable String paymenttermId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("project_id") @Nullable String projectId,
+            @JsonProperty("purchaseorder_ids") @Nullable List<String> purchaseorderIds,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("refund_amount") @Nullable Double refundAmount,
             @JsonProperty("refund_reason") @Nullable String refundReason,
             @JsonProperty("refunded_at") @Nullable OffsetDateTime refundedAt,
             @JsonProperty("send") @Nullable Boolean send,
             @JsonProperty("status") @Nullable AccountingBillStatus status,
+            @JsonProperty("sub_total_amount") @Nullable Double subTotalAmount,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("term") @Nullable Term term,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
@@ -245,6 +265,7 @@ public class AccountingBill {
         this.currency = currency;
         this.discountAmount = discountAmount;
         this.dueAt = dueAt;
+        this.exchangeRate = exchangeRate;
         this.extendedNotes = extendedNotes;
         this.id = id;
         this.lineitems = lineitems;
@@ -259,12 +280,14 @@ public class AccountingBill {
         this.paymenttermId = paymenttermId;
         this.postedAt = postedAt;
         this.projectId = projectId;
+        this.purchaseorderIds = purchaseorderIds;
         this.raw = raw;
         this.refundAmount = refundAmount;
         this.refundReason = refundReason;
         this.refundedAt = refundedAt;
         this.send = send;
         this.status = status;
+        this.subTotalAmount = subTotalAmount;
         this.taxAmount = taxAmount;
         this.term = term;
         this.totalAmount = totalAmount;
@@ -274,6 +297,7 @@ public class AccountingBill {
     
     public AccountingBill() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -325,6 +349,10 @@ public class AccountingBill {
 
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
+    }
+
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
     }
 
     public Optional<List<AccountingExtendedNote>> extendedNotes() {
@@ -386,6 +414,13 @@ public class AccountingBill {
         return Optional.ofNullable(this.projectId);
     }
 
+    /**
+     * refs -&gt; AccountingPurchaseorder; the purchase orders this bill was raised from
+     */
+    public Optional<List<String>> purchaseorderIds() {
+        return Optional.ofNullable(this.purchaseorderIds);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -408,6 +443,10 @@ public class AccountingBill {
 
     public Optional<AccountingBillStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<Double> subTotalAmount() {
+        return Optional.ofNullable(this.subTotalAmount);
     }
 
     public Optional<Double> taxAmount() {
@@ -491,6 +530,12 @@ public class AccountingBill {
 
     public AccountingBill withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
+        return this;
+    }
+
+
+    public AccountingBill withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
         return this;
     }
 
@@ -582,6 +627,15 @@ public class AccountingBill {
     }
 
 
+    /**
+     * refs -&gt; AccountingPurchaseorder; the purchase orders this bill was raised from
+     */
+    public AccountingBill withPurchaseorderIds(@Nullable List<String> purchaseorderIds) {
+        this.purchaseorderIds = purchaseorderIds;
+        return this;
+    }
+
+
     public AccountingBill withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -614,6 +668,12 @@ public class AccountingBill {
 
     public AccountingBill withStatus(@Nullable AccountingBillStatus status) {
         this.status = status;
+        return this;
+    }
+
+
+    public AccountingBill withSubTotalAmount(@Nullable Double subTotalAmount) {
+        this.subTotalAmount = subTotalAmount;
         return this;
     }
 
@@ -668,6 +728,7 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.extendedNotes, other.extendedNotes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
@@ -682,12 +743,14 @@ public class AccountingBill {
             Utils.enhancedDeepEquals(this.paymenttermId, other.paymenttermId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
+            Utils.enhancedDeepEquals(this.purchaseorderIds, other.purchaseorderIds) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
             Utils.enhancedDeepEquals(this.refundReason, other.refundReason) &&
             Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
             Utils.enhancedDeepEquals(this.send, other.send) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.subTotalAmount, other.subTotalAmount) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.term, other.term) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
@@ -701,13 +764,14 @@ public class AccountingBill {
             attachments, balanceAmount, billNumber,
             cancelledAt, categoryIds, contactId,
             createdAt, currency, discountAmount,
-            dueAt, extendedNotes, id,
-            lineitems, metadata, notes,
-            organizationId, paidAmount, paidAt,
-            paymentCollectionMethod, paymentTerms, payments,
-            paymenttermId, postedAt, projectId,
-            raw, refundAmount, refundReason,
-            refundedAt, send, status,
+            dueAt, exchangeRate, extendedNotes,
+            id, lineitems, metadata,
+            notes, organizationId, paidAmount,
+            paidAt, paymentCollectionMethod, paymentTerms,
+            payments, paymenttermId, postedAt,
+            projectId, purchaseorderIds, raw,
+            refundAmount, refundReason, refundedAt,
+            send, status, subTotalAmount,
             taxAmount, term, totalAmount,
             updatedAt, url);
     }
@@ -725,6 +789,7 @@ public class AccountingBill {
                 "currency", currency,
                 "discountAmount", discountAmount,
                 "dueAt", dueAt,
+                "exchangeRate", exchangeRate,
                 "extendedNotes", extendedNotes,
                 "id", id,
                 "lineitems", lineitems,
@@ -739,12 +804,14 @@ public class AccountingBill {
                 "paymenttermId", paymenttermId,
                 "postedAt", postedAt,
                 "projectId", projectId,
+                "purchaseorderIds", purchaseorderIds,
                 "raw", raw,
                 "refundAmount", refundAmount,
                 "refundReason", refundReason,
                 "refundedAt", refundedAt,
                 "send", send,
                 "status", status,
+                "subTotalAmount", subTotalAmount,
                 "taxAmount", taxAmount,
                 "term", term,
                 "totalAmount", totalAmount,
@@ -775,6 +842,8 @@ public class AccountingBill {
 
         private OffsetDateTime dueAt;
 
+        private Double exchangeRate;
+
         private List<AccountingExtendedNote> extendedNotes;
 
         private String id;
@@ -803,6 +872,8 @@ public class AccountingBill {
 
         private String projectId;
 
+        private List<String> purchaseorderIds;
+
         private Map<String, Object> raw;
 
         private Double refundAmount;
@@ -814,6 +885,8 @@ public class AccountingBill {
         private Boolean send;
 
         private AccountingBillStatus status;
+
+        private Double subTotalAmount;
 
         private Double taxAmount;
 
@@ -876,6 +949,11 @@ public class AccountingBill {
 
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
+            return this;
+        }
+
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
             return this;
         }
 
@@ -952,6 +1030,14 @@ public class AccountingBill {
             return this;
         }
 
+        /**
+         * refs -&gt; AccountingPurchaseorder; the purchase orders this bill was raised from
+         */
+        public Builder purchaseorderIds(@Nullable List<String> purchaseorderIds) {
+            this.purchaseorderIds = purchaseorderIds;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -979,6 +1065,11 @@ public class AccountingBill {
 
         public Builder status(@Nullable AccountingBillStatus status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder subTotalAmount(@Nullable Double subTotalAmount) {
+            this.subTotalAmount = subTotalAmount;
             return this;
         }
 
@@ -1012,13 +1103,14 @@ public class AccountingBill {
                 attachments, balanceAmount, billNumber,
                 cancelledAt, categoryIds, contactId,
                 createdAt, currency, discountAmount,
-                dueAt, extendedNotes, id,
-                lineitems, metadata, notes,
-                organizationId, paidAmount, paidAt,
-                paymentCollectionMethod, paymentTerms, payments,
-                paymenttermId, postedAt, projectId,
-                raw, refundAmount, refundReason,
-                refundedAt, send, status,
+                dueAt, exchangeRate, extendedNotes,
+                id, lineitems, metadata,
+                notes, organizationId, paidAmount,
+                paidAt, paymentCollectionMethod, paymentTerms,
+                payments, paymenttermId, postedAt,
+                projectId, purchaseorderIds, raw,
+                refundAmount, refundReason, refundedAt,
+                send, status, subTotalAmount,
                 taxAmount, term, totalAmount,
                 updatedAt, url);
         }

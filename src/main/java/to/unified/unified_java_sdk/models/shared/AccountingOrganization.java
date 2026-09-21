@@ -27,6 +27,11 @@ public class AccountingOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("books_close_at")
+    private OffsetDateTime booksCloseAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -103,6 +108,7 @@ public class AccountingOrganization {
     @JsonCreator
     public AccountingOrganization(
             @JsonProperty("address") @Nullable PropertyAccountingOrganizationAddress address,
+            @JsonProperty("books_close_at") @Nullable OffsetDateTime booksCloseAt,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("fiscal_year_end_month") @Nullable Double fiscalYearEndMonth,
@@ -119,6 +125,7 @@ public class AccountingOrganization {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("website") @Nullable String website) {
         this.address = address;
+        this.booksCloseAt = booksCloseAt;
         this.createdAt = createdAt;
         this.currency = currency;
         this.fiscalYearEndMonth = fiscalYearEndMonth;
@@ -142,11 +149,15 @@ public class AccountingOrganization {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyAccountingOrganizationAddress> address() {
         return Optional.ofNullable(this.address);
+    }
+
+    public Optional<OffsetDateTime> booksCloseAt() {
+        return Optional.ofNullable(this.booksCloseAt);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -216,6 +227,12 @@ public class AccountingOrganization {
 
     public AccountingOrganization withAddress(@Nullable PropertyAccountingOrganizationAddress address) {
         this.address = address;
+        return this;
+    }
+
+
+    public AccountingOrganization withBooksCloseAt(@Nullable OffsetDateTime booksCloseAt) {
+        this.booksCloseAt = booksCloseAt;
         return this;
     }
 
@@ -321,6 +338,7 @@ public class AccountingOrganization {
         AccountingOrganization other = (AccountingOrganization) o;
         return 
             Utils.enhancedDeepEquals(this.address, other.address) &&
+            Utils.enhancedDeepEquals(this.booksCloseAt, other.booksCloseAt) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.fiscalYearEndMonth, other.fiscalYearEndMonth) &&
@@ -341,18 +359,19 @@ public class AccountingOrganization {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, createdAt, currency,
-            fiscalYearEndMonth, id, isElimination,
-            legalName, name, organizationCode,
-            parentId, raw, taxNumber,
-            timezone, type, updatedAt,
-            website);
+            address, booksCloseAt, createdAt,
+            currency, fiscalYearEndMonth, id,
+            isElimination, legalName, name,
+            organizationCode, parentId, raw,
+            taxNumber, timezone, type,
+            updatedAt, website);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingOrganization.class,
                 "address", address,
+                "booksCloseAt", booksCloseAt,
                 "createdAt", createdAt,
                 "currency", currency,
                 "fiscalYearEndMonth", fiscalYearEndMonth,
@@ -374,6 +393,8 @@ public class AccountingOrganization {
     public final static class Builder {
 
         private PropertyAccountingOrganizationAddress address;
+
+        private OffsetDateTime booksCloseAt;
 
         private OffsetDateTime createdAt;
 
@@ -411,6 +432,11 @@ public class AccountingOrganization {
 
         public Builder address(@Nullable PropertyAccountingOrganizationAddress address) {
             this.address = address;
+            return this;
+        }
+
+        public Builder booksCloseAt(@Nullable OffsetDateTime booksCloseAt) {
+            this.booksCloseAt = booksCloseAt;
             return this;
         }
 
@@ -491,12 +517,12 @@ public class AccountingOrganization {
 
         public AccountingOrganization build() {
             return new AccountingOrganization(
-                address, createdAt, currency,
-                fiscalYearEndMonth, id, isElimination,
-                legalName, name, organizationCode,
-                parentId, raw, taxNumber,
-                timezone, type, updatedAt,
-                website);
+                address, booksCloseAt, createdAt,
+                currency, fiscalYearEndMonth, id,
+                isElimination, legalName, name,
+                organizationCode, parentId, raw,
+                taxNumber, timezone, type,
+                updatedAt, website);
         }
 
     }

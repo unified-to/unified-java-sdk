@@ -27,8 +27,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -42,14 +41,26 @@ public class Application {
 
         CreateAccountingTaxrateRequest req = CreateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .components(List.of(
+                        AccountingTaxrateComponent.builder()
+                            .isCompound(false)
+                            .name("cogo")
+                            .rate(53d)
+                            .build()))
+                    .country("BY")
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
-                    .description("Nemo atrox tricesimus creator aranea.")
-                    .id("2dc548c8-a2e1-4f45-9753-84e3be753ff7")
+                    .description("Atrox tricesimus creator.")
+                    .effectiveRate(53d)
+                    .id("f60cdbf8-fb40-4fa3-80f7-548de98ad657")
                     .isActive(false)
+                    .isCompound(true)
                     .metadata(List.of())
-                    .name("cogo")
-                    .rate(1d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-06T02:39:18.785Z"))
+                    .name("villa")
+                    .rate(53d)
+                    .region("TX")
+                    .totalRate(53d)
+                    .type(AccountingTaxrateType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.142Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,8 +223,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -227,14 +237,26 @@ public class Application {
 
         PatchAccountingTaxrateRequest req = PatchAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .components(List.of(
+                        AccountingTaxrateComponent.builder()
+                            .isCompound(false)
+                            .name("cogo")
+                            .rate(53d)
+                            .build()))
+                    .country("BY")
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
-                    .description("Nemo atrox tricesimus creator aranea.")
-                    .id("6378fb69-5183-4686-985b-608ff8ef1df3")
+                    .description("Atrox tricesimus creator.")
+                    .effectiveRate(53d)
+                    .id("6157a522-08d3-45f7-9287-187fd17fc766")
                     .isActive(false)
+                    .isCompound(true)
                     .metadata(List.of())
-                    .name("cogo")
-                    .rate(1d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-06T02:39:18.803Z"))
+                    .name("villa")
+                    .rate(53d)
+                    .region("TX")
+                    .totalRate(53d)
+                    .type(AccountingTaxrateType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.150Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -339,8 +361,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingTaxrateResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingTaxrate;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -354,14 +375,26 @@ public class Application {
 
         UpdateAccountingTaxrateRequest req = UpdateAccountingTaxrateRequest.builder()
                 .accountingTaxrate(AccountingTaxrate.builder()
+                    .components(List.of(
+                        AccountingTaxrateComponent.builder()
+                            .isCompound(false)
+                            .name("cogo")
+                            .rate(53d)
+                            .build()))
+                    .country("BY")
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
-                    .description("Nemo atrox tricesimus creator aranea.")
-                    .id("6378fb69-5183-4686-985b-608ff8ef1df3")
+                    .description("Atrox tricesimus creator.")
+                    .effectiveRate(53d)
+                    .id("6157a522-08d3-45f7-9287-187fd17fc766")
                     .isActive(false)
+                    .isCompound(true)
                     .metadata(List.of())
-                    .name("cogo")
-                    .rate(1d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-06T02:39:18.803Z"))
+                    .name("villa")
+                    .rate(53d)
+                    .region("TX")
+                    .totalRate(53d)
+                    .type(AccountingTaxrateType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.150Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

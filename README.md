@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.16'
+implementation 'to.unified:unified-java-sdk:0.49.17'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.16</version>
+    <version>0.49.17</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -115,7 +115,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -162,7 +162,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -178,7 +178,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -445,6 +445,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getAccountingAgedreceivable](docs/sdks/agedreceivable/README.md#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [listAccountingAgedreceivables](docs/sdks/agedreceivable/README.md#listaccountingagedreceivables) - List all agedreceivables
+
+### [Agent](docs/sdks/agent/README.md)
+
+* [createGenaiAgent](docs/sdks/agent/README.md#creategenaiagent) - Create an agent
+* [getGenaiAgent](docs/sdks/agent/README.md#getgenaiagent) - Retrieve an agent
+* [listGenaiAgents](docs/sdks/agent/README.md#listgenaiagents) - List all agents
+* [patchGenaiAgent](docs/sdks/agent/README.md#patchgenaiagent) - Update an agent
+* [removeGenaiAgent](docs/sdks/agent/README.md#removegenaiagent) - Remove an agent
+* [updateGenaiAgent](docs/sdks/agent/README.md#updategenaiagent) - Update an agent
 
 ### [Analytics](docs/sdks/analytics/README.md)
 
@@ -1222,10 +1231,26 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Genai](docs/sdks/genai/README.md)
 
+* [createGenaiAgent](docs/sdks/genai/README.md#creategenaiagent) - Create an agent
 * [createGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
+* [createGenaiOrganization](docs/sdks/genai/README.md#creategenaiorganization) - Create an organization
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
+* [createGenaiTask](docs/sdks/genai/README.md#creategenaitask) - Create a task
+* [getGenaiAgent](docs/sdks/genai/README.md#getgenaiagent) - Retrieve an agent
 * [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
+* [getGenaiOrganization](docs/sdks/genai/README.md#getgenaiorganization) - Retrieve an organization
+* [getGenaiTask](docs/sdks/genai/README.md#getgenaitask) - Retrieve a task
+* [listGenaiAgents](docs/sdks/genai/README.md#listgenaiagents) - List all agents
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+* [listGenaiOrganizations](docs/sdks/genai/README.md#listgenaiorganizations) - List all organizations
+* [listGenaiTasks](docs/sdks/genai/README.md#listgenaitasks) - List all tasks
+* [patchGenaiAgent](docs/sdks/genai/README.md#patchgenaiagent) - Update an agent
+* [patchGenaiOrganization](docs/sdks/genai/README.md#patchgenaiorganization) - Update an organization
+* [removeGenaiAgent](docs/sdks/genai/README.md#removegenaiagent) - Remove an agent
+* [removeGenaiOrganization](docs/sdks/genai/README.md#removegenaiorganization) - Remove an organization
+* [removeGenaiTask](docs/sdks/genai/README.md#removegenaitask) - Remove a task
+* [updateGenaiAgent](docs/sdks/genai/README.md#updategenaiagent) - Update an agent
+* [updateGenaiOrganization](docs/sdks/genai/README.md#updategenaiorganization) - Update an organization
 
 ### [Goal](docs/sdks/goal/README.md)
 
@@ -1667,18 +1692,24 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Organization](docs/sdks/organization/README.md)
 
 * [createAdsOrganization](docs/sdks/organization/README.md#createadsorganization) - Create an organization
+* [createGenaiOrganization](docs/sdks/organization/README.md#creategenaiorganization) - Create an organization
 * [createRepoOrganization](docs/sdks/organization/README.md#createrepoorganization) - Create an organization
 * [getAccountingOrganization](docs/sdks/organization/README.md#getaccountingorganization) - Retrieve an organization
 * [getAdsOrganization](docs/sdks/organization/README.md#getadsorganization) - Retrieve an organization
+* [getGenaiOrganization](docs/sdks/organization/README.md#getgenaiorganization) - Retrieve an organization
 * [getRepoOrganization](docs/sdks/organization/README.md#getrepoorganization) - Retrieve an organization
 * [listAccountingOrganizations](docs/sdks/organization/README.md#listaccountingorganizations) - List all organizations
 * [listAdsOrganizations](docs/sdks/organization/README.md#listadsorganizations) - List all organizations
+* [listGenaiOrganizations](docs/sdks/organization/README.md#listgenaiorganizations) - List all organizations
 * [listRepoOrganizations](docs/sdks/organization/README.md#listrepoorganizations) - List all organizations
 * [patchAdsOrganization](docs/sdks/organization/README.md#patchadsorganization) - Update an organization
+* [patchGenaiOrganization](docs/sdks/organization/README.md#patchgenaiorganization) - Update an organization
 * [patchRepoOrganization](docs/sdks/organization/README.md#patchrepoorganization) - Update an organization
 * [removeAdsOrganization](docs/sdks/organization/README.md#removeadsorganization) - Remove an organization
+* [removeGenaiOrganization](docs/sdks/organization/README.md#removegenaiorganization) - Remove an organization
 * [removeRepoOrganization](docs/sdks/organization/README.md#removerepoorganization) - Remove an organization
 * [updateAdsOrganization](docs/sdks/organization/README.md#updateadsorganization) - Update an organization
+* [updateGenaiOrganization](docs/sdks/organization/README.md#updategenaiorganization) - Update an organization
 * [updateRepoOrganization](docs/sdks/organization/README.md#updaterepoorganization) - Update an organization
 
 ### [Package](docs/sdks/package/README.md)
@@ -2189,13 +2220,16 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Task](docs/sdks/task/README.md)
 
+* [createGenaiTask](docs/sdks/task/README.md#creategenaitask) - Create a task
 * [createTaskComment](docs/sdks/task/README.md#createtaskcomment) - Create a comment
 * [createTaskProject](docs/sdks/task/README.md#createtaskproject) - Create a project
 * [createTaskTask](docs/sdks/task/README.md#createtasktask) - Create a task
+* [getGenaiTask](docs/sdks/task/README.md#getgenaitask) - Retrieve a task
 * [getTaskChange](docs/sdks/task/README.md#gettaskchange) - Retrieve a change
 * [getTaskComment](docs/sdks/task/README.md#gettaskcomment) - Retrieve a comment
 * [getTaskProject](docs/sdks/task/README.md#gettaskproject) - Retrieve a project
 * [getTaskTask](docs/sdks/task/README.md#gettasktask) - Retrieve a task
+* [listGenaiTasks](docs/sdks/task/README.md#listgenaitasks) - List all tasks
 * [listTaskChanges](docs/sdks/task/README.md#listtaskchanges) - List all changes
 * [listTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [listTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
@@ -2203,6 +2237,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchTaskComment](docs/sdks/task/README.md#patchtaskcomment) - Update a comment
 * [patchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
 * [patchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
+* [removeGenaiTask](docs/sdks/task/README.md#removegenaitask) - Remove a task
 * [removeTaskComment](docs/sdks/task/README.md#removetaskcomment) - Remove a comment
 * [removeTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
 * [removeTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
@@ -2466,7 +2501,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2482,7 +2517,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2530,7 +2565,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2546,7 +2581,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2613,7 +2648,7 @@ public class Application {
                         .currency("BOB")
                         .customerDefinedCode("quo")
                         .description("Spoliatio comedo vilitas harum cupiditate.")
-                        .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                        .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                         .isPayable(true)
                         .name("Electronic Aluminum Tuna")
                         .status(Status.ARCHIVED)
@@ -2629,7 +2664,7 @@ public class Application {
                                 .originalType("adamo")
                                 .build()))
                         .type(Type.BANK)
-                        .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -2784,7 +2819,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("8cbc485a-f8ae-4b0a-b562-56fb2380cf33")
+                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2800,7 +2835,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T09:03:02.872Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

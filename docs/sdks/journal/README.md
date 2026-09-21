@@ -27,8 +27,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingJournal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -47,12 +46,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("FKP")
                     .description("Calco constans adipisci.")
-                    .id("70ec7d79-af44-4076-ab72-0a0b30c1a4c7")
-                    .postedAt(OffsetDateTime.parse("2023-10-20T05:12:35.563Z"))
+                    .id("590b6288-5aee-4f57-a3a9-1a4e6c635598")
+                    .isInclusiveOfTax(true)
+                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.144Z"))
                     .reference("ullam")
                     .source("crustulum")
+                    .status(AccountingJournalStatus.VOID)
                     .taxAmount(78672d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T01:04:41.068Z"))
+                    .totalAmount(74094d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.270Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -215,8 +217,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingJournal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -235,12 +236,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("FKP")
                     .description("Calco constans adipisci.")
-                    .id("573730e5-c488-42ef-a25f-2dfbcc02344f")
-                    .postedAt(OffsetDateTime.parse("2023-10-20T05:12:35.575Z"))
+                    .id("c749aba5-ca79-4974-b223-7c1515e3dbd8")
+                    .isInclusiveOfTax(true)
+                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.157Z"))
                     .reference("ullam")
                     .source("crustulum")
+                    .status(AccountingJournalStatus.VOID)
                     .taxAmount(78672d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T01:04:41.075Z"))
+                    .totalAmount(74094d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.276Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -345,8 +349,7 @@ import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalResponse;
-import to.unified.unified_java_sdk.models.shared.AccountingJournal;
-import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.*;
 
 public class Application {
 
@@ -365,12 +368,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("FKP")
                     .description("Calco constans adipisci.")
-                    .id("573730e5-c488-42ef-a25f-2dfbcc02344f")
-                    .postedAt(OffsetDateTime.parse("2023-10-20T05:12:35.575Z"))
+                    .id("c749aba5-ca79-4974-b223-7c1515e3dbd8")
+                    .isInclusiveOfTax(true)
+                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.157Z"))
                     .reference("ullam")
                     .source("crustulum")
+                    .status(AccountingJournalStatus.VOID)
                     .taxAmount(78672d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T01:04:41.075Z"))
+                    .totalAmount(74094d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.276Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

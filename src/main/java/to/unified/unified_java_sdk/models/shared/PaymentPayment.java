@@ -50,6 +50,13 @@ public class PaymentPayment {
     @JsonProperty("card_last4")
     private String cardLast4;
 
+    /**
+     * dimension refs -&gt; AccountingCategory
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("category_ids")
+    private List<String> categoryIds;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
@@ -69,6 +76,11 @@ public class PaymentPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     private String deviceId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -97,6 +109,11 @@ public class PaymentPayment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_amount")
+    private Double netAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -104,6 +121,11 @@ public class PaymentPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paid_at")
+    private OffsetDateTime paidAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -162,17 +184,21 @@ public class PaymentPayment {
             @JsonProperty("bill_id") @Nullable String billId,
             @JsonProperty("card_brand") @Nullable String cardBrand,
             @JsonProperty("card_last4") @Nullable String cardLast4,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("device_id") @Nullable String deviceId,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("fee_amount") @Nullable Double feeAmount,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("invoice_id") @Nullable String invoiceId,
             @JsonProperty("link_id") @Nullable String linkId,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
@@ -188,18 +214,22 @@ public class PaymentPayment {
         this.billId = billId;
         this.cardBrand = cardBrand;
         this.cardLast4 = cardLast4;
+        this.categoryIds = categoryIds;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = Optional.ofNullable(currency)
             .orElse(Builder._SINGLETON_VALUE_Currency.value());
         this.deviceId = deviceId;
+        this.exchangeRate = exchangeRate;
         this.feeAmount = feeAmount;
         this.id = id;
         this.invoiceId = invoiceId;
         this.linkId = linkId;
         this.locationId = locationId;
+        this.netAmount = netAmount;
         this.notes = notes;
         this.organizationId = organizationId;
+        this.paidAt = paidAt;
         this.paymentMethod = paymentMethod;
         this.raw = raw;
         this.reference = reference;
@@ -221,7 +251,8 @@ public class PaymentPayment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -248,6 +279,13 @@ public class PaymentPayment {
         return Optional.ofNullable(this.cardLast4);
     }
 
+    /**
+     * dimension refs -&gt; AccountingCategory
+     */
+    public Optional<List<String>> categoryIds() {
+        return Optional.ofNullable(this.categoryIds);
+    }
+
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -262,6 +300,10 @@ public class PaymentPayment {
 
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
+    }
+
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
     }
 
     public Optional<Double> feeAmount() {
@@ -284,12 +326,20 @@ public class PaymentPayment {
         return Optional.ofNullable(this.locationId);
     }
 
+    public Optional<Double> netAmount() {
+        return Optional.ofNullable(this.netAmount);
+    }
+
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
 
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
+    }
+
+    public Optional<OffsetDateTime> paidAt() {
+        return Optional.ofNullable(this.paidAt);
     }
 
     public Optional<String> paymentMethod() {
@@ -371,6 +421,15 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * dimension refs -&gt; AccountingCategory
+     */
+    public PaymentPayment withCategoryIds(@Nullable List<String> categoryIds) {
+        this.categoryIds = categoryIds;
+        return this;
+    }
+
+
     public PaymentPayment withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -391,6 +450,12 @@ public class PaymentPayment {
 
     public PaymentPayment withDeviceId(@Nullable String deviceId) {
         this.deviceId = deviceId;
+        return this;
+    }
+
+
+    public PaymentPayment withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
         return this;
     }
 
@@ -425,6 +490,12 @@ public class PaymentPayment {
     }
 
 
+    public PaymentPayment withNetAmount(@Nullable Double netAmount) {
+        this.netAmount = netAmount;
+        return this;
+    }
+
+
     public PaymentPayment withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -433,6 +504,12 @@ public class PaymentPayment {
 
     public PaymentPayment withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
+        return this;
+    }
+
+
+    public PaymentPayment withPaidAt(@Nullable OffsetDateTime paidAt) {
+        this.paidAt = paidAt;
         return this;
     }
 
@@ -512,17 +589,21 @@ public class PaymentPayment {
             Utils.enhancedDeepEquals(this.billId, other.billId) &&
             Utils.enhancedDeepEquals(this.cardBrand, other.cardBrand) &&
             Utils.enhancedDeepEquals(this.cardLast4, other.cardLast4) &&
+            Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.deviceId, other.deviceId) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.feeAmount, other.feeAmount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.linkId, other.linkId) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
@@ -539,14 +620,15 @@ public class PaymentPayment {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, allocations, billId,
-            cardBrand, cardLast4, contactId,
-            createdAt, currency, deviceId,
-            feeAmount, id, invoiceId,
-            linkId, locationId, notes,
-            organizationId, paymentMethod, raw,
-            reference, salesorderId, status,
-            tenderType, tipAmount, totalAmount,
-            type, updatedAt);
+            cardBrand, cardLast4, categoryIds,
+            contactId, createdAt, currency,
+            deviceId, exchangeRate, feeAmount,
+            id, invoiceId, linkId,
+            locationId, netAmount, notes,
+            organizationId, paidAt, paymentMethod,
+            raw, reference, salesorderId,
+            status, tenderType, tipAmount,
+            totalAmount, type, updatedAt);
     }
     
     @Override
@@ -557,17 +639,21 @@ public class PaymentPayment {
                 "billId", billId,
                 "cardBrand", cardBrand,
                 "cardLast4", cardLast4,
+                "categoryIds", categoryIds,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
                 "deviceId", deviceId,
+                "exchangeRate", exchangeRate,
                 "feeAmount", feeAmount,
                 "id", id,
                 "invoiceId", invoiceId,
                 "linkId", linkId,
                 "locationId", locationId,
+                "netAmount", netAmount,
                 "notes", notes,
                 "organizationId", organizationId,
+                "paidAt", paidAt,
                 "paymentMethod", paymentMethod,
                 "raw", raw,
                 "reference", reference,
@@ -593,6 +679,8 @@ public class PaymentPayment {
 
         private String cardLast4;
 
+        private List<String> categoryIds;
+
         private String contactId;
 
         private OffsetDateTime createdAt;
@@ -600,6 +688,8 @@ public class PaymentPayment {
         private String currency;
 
         private String deviceId;
+
+        private Double exchangeRate;
 
         private Double feeAmount;
 
@@ -611,9 +701,13 @@ public class PaymentPayment {
 
         private String locationId;
 
+        private Double netAmount;
+
         private String notes;
 
         private String organizationId;
+
+        private OffsetDateTime paidAt;
 
         private String paymentMethod;
 
@@ -668,6 +762,14 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * dimension refs -&gt; AccountingCategory
+         */
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
+            this.categoryIds = categoryIds;
+            return this;
+        }
+
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
@@ -685,6 +787,11 @@ public class PaymentPayment {
 
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
+            return this;
+        }
+
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
             return this;
         }
 
@@ -713,6 +820,11 @@ public class PaymentPayment {
             return this;
         }
 
+        public Builder netAmount(@Nullable Double netAmount) {
+            this.netAmount = netAmount;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -720,6 +832,11 @@ public class PaymentPayment {
 
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
+            return this;
+        }
+
+        public Builder paidAt(@Nullable OffsetDateTime paidAt) {
+            this.paidAt = paidAt;
             return this;
         }
 
@@ -776,14 +893,15 @@ public class PaymentPayment {
         public PaymentPayment build() {
             return new PaymentPayment(
                 accountId, allocations, billId,
-                cardBrand, cardLast4, contactId,
-                createdAt, currency, deviceId,
-                feeAmount, id, invoiceId,
-                linkId, locationId, notes,
-                organizationId, paymentMethod, raw,
-                reference, salesorderId, status,
-                tenderType, tipAmount, totalAmount,
-                type, updatedAt);
+                cardBrand, cardLast4, categoryIds,
+                contactId, createdAt, currency,
+                deviceId, exchangeRate, feeAmount,
+                id, invoiceId, linkId,
+                locationId, netAmount, notes,
+                organizationId, paidAt, paymentMethod,
+                raw, reference, salesorderId,
+                status, tenderType, tipAmount,
+                totalAmount, type, updatedAt);
         }
 
 

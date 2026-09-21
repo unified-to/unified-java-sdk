@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
@@ -47,8 +48,18 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_inclusive_of_tax")
+    private Boolean isInclusiveOfTax;
 
     /**
      * new field name
@@ -89,6 +100,11 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private AccountingJournalStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
@@ -96,6 +112,11 @@ public class AccountingJournal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_amount")
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -109,7 +130,9 @@ public class AccountingJournal {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_inclusive_of_tax") @Nullable Boolean isInclusiveOfTax,
             @JsonProperty("lineitems") @Nullable List<AccountingJournalLineitem> lineitems,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
@@ -117,15 +140,19 @@ public class AccountingJournal {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("source") @Nullable String source,
+            @JsonProperty("status") @Nullable AccountingJournalStatus status,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.attachments = attachments;
         this.categoryIds = categoryIds;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
+        this.exchangeRate = exchangeRate;
         this.id = id;
+        this.isInclusiveOfTax = isInclusiveOfTax;
         this.lineitems = lineitems;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
@@ -133,8 +160,10 @@ public class AccountingJournal {
         this.raw = raw;
         this.reference = reference;
         this.source = source;
+        this.status = status;
         this.taxAmount = taxAmount;
         this.taxrateId = taxrateId;
+        this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
     }
     
@@ -144,7 +173,8 @@ public class AccountingJournal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -167,8 +197,16 @@ public class AccountingJournal {
         return Optional.ofNullable(this.description);
     }
 
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<Boolean> isInclusiveOfTax() {
+        return Optional.ofNullable(this.isInclusiveOfTax);
     }
 
     /**
@@ -202,12 +240,20 @@ public class AccountingJournal {
         return Optional.ofNullable(this.source);
     }
 
+    public Optional<AccountingJournalStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
     }
 
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
+    }
+
+    public Optional<Double> totalAmount() {
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -249,8 +295,20 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
+        return this;
+    }
+
+
     public AccountingJournal withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public AccountingJournal withIsInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
+        this.isInclusiveOfTax = isInclusiveOfTax;
         return this;
     }
 
@@ -300,6 +358,12 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withStatus(@Nullable AccountingJournalStatus status) {
+        this.status = status;
+        return this;
+    }
+
+
     public AccountingJournal withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -308,6 +372,12 @@ public class AccountingJournal {
 
     public AccountingJournal withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
+        return this;
+    }
+
+
+    public AccountingJournal withTotalAmount(@Nullable Double totalAmount) {
+        this.totalAmount = totalAmount;
         return this;
     }
 
@@ -333,7 +403,9 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isInclusiveOfTax, other.isInclusiveOfTax) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
@@ -341,8 +413,10 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
+            Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
@@ -350,11 +424,12 @@ public class AccountingJournal {
     public int hashCode() {
         return Utils.enhancedHash(
             attachments, categoryIds, createdAt,
-            currency, description, id,
-            lineitems, organizationId, postedAt,
-            projectId, raw, reference,
-            source, taxAmount, taxrateId,
-            updatedAt);
+            currency, description, exchangeRate,
+            id, isInclusiveOfTax, lineitems,
+            organizationId, postedAt, projectId,
+            raw, reference, source,
+            status, taxAmount, taxrateId,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -365,7 +440,9 @@ public class AccountingJournal {
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
+                "exchangeRate", exchangeRate,
                 "id", id,
+                "isInclusiveOfTax", isInclusiveOfTax,
                 "lineitems", lineitems,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
@@ -373,8 +450,10 @@ public class AccountingJournal {
                 "raw", raw,
                 "reference", reference,
                 "source", source,
+                "status", status,
                 "taxAmount", taxAmount,
                 "taxrateId", taxrateId,
+                "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
 
@@ -391,7 +470,11 @@ public class AccountingJournal {
 
         private String description;
 
+        private Double exchangeRate;
+
         private String id;
+
+        private Boolean isInclusiveOfTax;
 
         private List<AccountingJournalLineitem> lineitems;
 
@@ -407,9 +490,13 @@ public class AccountingJournal {
 
         private String source;
 
+        private AccountingJournalStatus status;
+
         private Double taxAmount;
 
         private String taxrateId;
+
+        private Double totalAmount;
 
         private OffsetDateTime updatedAt;
 
@@ -442,8 +529,18 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder isInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
+            this.isInclusiveOfTax = isInclusiveOfTax;
             return this;
         }
 
@@ -485,6 +582,11 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder status(@Nullable AccountingJournalStatus status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -492,6 +594,11 @@ public class AccountingJournal {
 
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
+            return this;
+        }
+
+        public Builder totalAmount(@Nullable Double totalAmount) {
+            this.totalAmount = totalAmount;
             return this;
         }
 
@@ -503,11 +610,12 @@ public class AccountingJournal {
         public AccountingJournal build() {
             return new AccountingJournal(
                 attachments, categoryIds, createdAt,
-                currency, description, id,
-                lineitems, organizationId, postedAt,
-                projectId, raw, reference,
-                source, taxAmount, taxrateId,
-                updatedAt);
+                currency, description, exchangeRate,
+                id, isInclusiveOfTax, lineitems,
+                organizationId, postedAt, projectId,
+                raw, reference, source,
+                status, taxAmount, taxrateId,
+                totalAmount, updatedAt);
         }
 
     }

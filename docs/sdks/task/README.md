@@ -4,13 +4,16 @@
 
 ### Available Operations
 
+* [createGenaiTask](#creategenaitask) - Create a task
 * [createTaskComment](#createtaskcomment) - Create a comment
 * [createTaskProject](#createtaskproject) - Create a project
 * [createTaskTask](#createtasktask) - Create a task
+* [getGenaiTask](#getgenaitask) - Retrieve a task
 * [getTaskChange](#gettaskchange) - Retrieve a change
 * [getTaskComment](#gettaskcomment) - Retrieve a comment
 * [getTaskProject](#gettaskproject) - Retrieve a project
 * [getTaskTask](#gettasktask) - Retrieve a task
+* [listGenaiTasks](#listgenaitasks) - List all tasks
 * [listTaskChanges](#listtaskchanges) - List all changes
 * [listTaskComments](#listtaskcomments) - List all comments
 * [listTaskProjects](#listtaskprojects) - List all projects
@@ -18,12 +21,97 @@
 * [patchTaskComment](#patchtaskcomment) - Update a comment
 * [patchTaskProject](#patchtaskproject) - Update a project
 * [patchTaskTask](#patchtasktask) - Update a task
+* [removeGenaiTask](#removegenaitask) - Remove a task
 * [removeTaskComment](#removetaskcomment) - Remove a comment
 * [removeTaskProject](#removetaskproject) - Remove a project
 * [removeTaskTask](#removetasktask) - Remove a task
 * [updateTaskComment](#updatetaskcomment) - Update a comment
 * [updateTaskProject](#updatetaskproject) - Update a project
 * [updateTaskTask](#updatetasktask) - Update a task
+
+## createGenaiTask
+
+Create a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateGenaiTaskRequest req = CreateGenaiTaskRequest.builder()
+                .genaiTask(GenaiTask.builder()
+                    .completedAt(OffsetDateTime.parse("2025-09-06T13:57:38.078Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
+                    .filesChanged(19d)
+                    .id("968cf408-0894-4133-a538-3598570fa578")
+                    .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
+                    .linesAdded(244d)
+                    .linesDeleted(118d)
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .role(Role.ASSISTANT)
+                            .build()))
+                    .name("connect multi-byte port")
+                    .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
+                    .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
+                    .sourceBranchIdentifier("main")
+                    .startedAt(OffsetDateTime.parse("2024-05-03T13:35:15.218Z"))
+                    .status(GenaiTaskStatus.BLOCKED)
+                    .summary("Cur aeternus cogito vesper.")
+                    .targetBranchIdentifier("agent/joshingly-ignorance")
+                    .tokensUsed(2165d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-14T14:26:48.799Z"))
+                    .webUrl("https://inexperienced-adrenalin.biz/")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateGenaiTaskResponse res = sdk.task().createGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [CreateGenaiTaskRequest](../../models/operations/CreateGenaiTaskRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[CreateGenaiTaskResponse](../../models/operations/CreateGenaiTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createTaskComment
 
@@ -57,9 +145,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("ebbb6942-1657-49d9-bd9e-5b202a13e17a")
+                    .id("d92b2d9e-8c09-4571-a417-fe7110f8b0bb")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T15:01:59.492Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.583Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -127,13 +215,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("edd126ef-4200-4c19-8ca5-05535cc1def1")
+                    .id("cc0e16de-8188-4d43-868f-cf9e3787c27c")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("af7b30bd-aaf5-4916-8844-09d92816bd68")
+                            .id("e83b4005-eac1-4dfa-ae95-4013f93c4c7d")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -142,13 +230,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("d8dba921-32a1-407a-85bf-2ba14466872a")
+                            .id("9d196c7e-2d47-4411-8942-a6472f44cb31")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T19:19:07.132Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.328Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -211,18 +299,18 @@ public class Application {
         CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T08:05:53.860Z"))
+                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.679Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-25T07:13:10.130Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-14T17:11:46.682Z"))
+                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.806Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.330Z"))
                     .hasChildren(true)
-                    .id("7e20087e-5fbd-4792-b693-5f35bad372fb")
+                    .id("f0703b97-9544-4c08-a485-22fe3b0af672")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T06:30:30.328Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.624Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -231,7 +319,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T13:41:41.163Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.986Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")
@@ -257,6 +345,64 @@ public class Application {
 ### Response
 
 **[CreateTaskTaskResponse](../../models/operations/CreateTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getGenaiTask
+
+Retrieve a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getGenaiTask" method="get" path="/genai/{connection_id}/task/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetGenaiTaskRequest req = GetGenaiTaskRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetGenaiTaskResponse res = sdk.task().getGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [GetGenaiTaskRequest](../../models/operations/GetGenaiTaskRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[GetGenaiTaskResponse](../../models/operations/GetGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -489,6 +635,63 @@ public class Application {
 ### Response
 
 **[GetTaskTaskResponse](../../models/operations/GetTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listGenaiTasks
+
+List all tasks
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listGenaiTasks" method="get" path="/genai/{connection_id}/task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiTasksResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListGenaiTasksRequest req = ListGenaiTasksRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListGenaiTasksResponse res = sdk.task().listGenaiTasks()
+                .request(req)
+                .call();
+
+        if (res.genaiTasks().isPresent()) {
+            System.out.println(res.genaiTasks().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListGenaiTasksRequest](../../models/operations/ListGenaiTasksRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[ListGenaiTasksResponse](../../models/operations/ListGenaiTasksResponse.md)**
 
 ### Errors
 
@@ -756,9 +959,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("b4a74521-2c2c-4963-8063-002b43b440ff")
+                    .id("73440994-5b81-4ab7-9441-ec40694d6397")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T15:01:59.496Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.585Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -827,13 +1030,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("8492eaeb-fa3b-4712-8d3f-84ba968a5fc8")
+                    .id("fd489a85-c972-40fd-aaf9-2d7c6c737ed1")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("54453c41-3ddd-4cac-86d9-c9119cc2901d")
+                            .id("0539bb0b-5263-44ef-8147-ac6393fdd8b6")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -842,13 +1045,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("c931be27-119b-4954-a152-28439b95b41d")
+                            .id("2a317897-0d1f-46b6-831a-e55155eb784d")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T19:19:07.133Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.329Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -912,18 +1115,18 @@ public class Application {
         PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T08:05:53.869Z"))
+                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.689Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-25T07:13:10.150Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-14T17:11:46.692Z"))
+                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.830Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.342Z"))
                     .hasChildren(true)
-                    .id("2665a062-60fe-45ec-898a-f3eccbce628f")
+                    .id("907fd4b6-91ec-4eec-8491-5f9677a3e58f")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T06:30:30.336Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.634Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -932,7 +1135,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T13:41:41.164Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.988Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")
@@ -959,6 +1162,62 @@ public class Application {
 ### Response
 
 **[PatchTaskTaskResponse](../../models/operations/PatchTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeGenaiTask
+
+Remove a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeGenaiTask" method="delete" path="/genai/{connection_id}/task/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveGenaiTaskRequest req = RemoveGenaiTaskRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveGenaiTaskResponse res = sdk.task().removeGenaiTask()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [RemoveGenaiTaskRequest](../../models/operations/RemoveGenaiTaskRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[RemoveGenaiTaskResponse](../../models/operations/RemoveGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -1166,9 +1425,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("b4a74521-2c2c-4963-8063-002b43b440ff")
+                    .id("73440994-5b81-4ab7-9441-ec40694d6397")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T15:01:59.496Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.585Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -1237,13 +1496,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("8492eaeb-fa3b-4712-8d3f-84ba968a5fc8")
+                    .id("fd489a85-c972-40fd-aaf9-2d7c6c737ed1")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("54453c41-3ddd-4cac-86d9-c9119cc2901d")
+                            .id("0539bb0b-5263-44ef-8147-ac6393fdd8b6")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -1252,13 +1511,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("c931be27-119b-4954-a152-28439b95b41d")
+                            .id("2a317897-0d1f-46b6-831a-e55155eb784d")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T19:19:07.133Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.329Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1322,18 +1581,18 @@ public class Application {
         UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T08:05:53.869Z"))
+                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.689Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-25T07:13:10.150Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-14T17:11:46.692Z"))
+                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.830Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.342Z"))
                     .hasChildren(true)
-                    .id("2665a062-60fe-45ec-898a-f3eccbce628f")
+                    .id("907fd4b6-91ec-4eec-8491-5f9677a3e58f")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T06:30:30.336Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.634Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -1342,7 +1601,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T13:41:41.164Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.988Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")

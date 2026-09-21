@@ -51,13 +51,28 @@ public class PaymentRefund {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("reason")
+    private Reason reason;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("refunded_at")
+    private OffsetDateTime refundedAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private PaymentRefundStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tender_type")
+    private PaymentRefundTenderType tenderType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -77,8 +92,11 @@ public class PaymentRefund {
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reason") @Nullable Reason reason,
             @JsonProperty("reference") @Nullable String reference,
+            @JsonProperty("refunded_at") @Nullable OffsetDateTime refundedAt,
             @JsonProperty("status") @Nullable PaymentRefundStatus status,
+            @JsonProperty("tender_type") @Nullable PaymentRefundTenderType tenderType,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
@@ -87,14 +105,18 @@ public class PaymentRefund {
         this.notes = notes;
         this.paymentId = paymentId;
         this.raw = raw;
+        this.reason = reason;
         this.reference = reference;
+        this.refundedAt = refundedAt;
         this.status = status;
+        this.tenderType = tenderType;
         this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
     }
     
     public PaymentRefund() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null);
@@ -124,12 +146,24 @@ public class PaymentRefund {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<Reason> reason() {
+        return Optional.ofNullable(this.reason);
+    }
+
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
 
+    public Optional<OffsetDateTime> refundedAt() {
+        return Optional.ofNullable(this.refundedAt);
+    }
+
     public Optional<PaymentRefundStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<PaymentRefundTenderType> tenderType() {
+        return Optional.ofNullable(this.tenderType);
     }
 
     public Optional<Double> totalAmount() {
@@ -181,14 +215,32 @@ public class PaymentRefund {
     }
 
 
+    public PaymentRefund withReason(@Nullable Reason reason) {
+        this.reason = reason;
+        return this;
+    }
+
+
     public PaymentRefund withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
 
+    public PaymentRefund withRefundedAt(@Nullable OffsetDateTime refundedAt) {
+        this.refundedAt = refundedAt;
+        return this;
+    }
+
+
     public PaymentRefund withStatus(@Nullable PaymentRefundStatus status) {
         this.status = status;
+        return this;
+    }
+
+
+    public PaymentRefund withTenderType(@Nullable PaymentRefundTenderType tenderType) {
+        this.tenderType = tenderType;
         return this;
     }
 
@@ -221,8 +273,11 @@ public class PaymentRefund {
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.reason, other.reason) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
+            Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.tenderType, other.tenderType) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -232,7 +287,8 @@ public class PaymentRefund {
         return Utils.enhancedHash(
             createdAt, currency, id,
             notes, paymentId, raw,
-            reference, status, totalAmount,
+            reason, reference, refundedAt,
+            status, tenderType, totalAmount,
             updatedAt);
     }
     
@@ -245,8 +301,11 @@ public class PaymentRefund {
                 "notes", notes,
                 "paymentId", paymentId,
                 "raw", raw,
+                "reason", reason,
                 "reference", reference,
+                "refundedAt", refundedAt,
                 "status", status,
+                "tenderType", tenderType,
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt);
     }
@@ -266,9 +325,15 @@ public class PaymentRefund {
 
         private Map<String, Object> raw;
 
+        private Reason reason;
+
         private String reference;
 
+        private OffsetDateTime refundedAt;
+
         private PaymentRefundStatus status;
+
+        private PaymentRefundTenderType tenderType;
 
         private Double totalAmount;
 
@@ -308,13 +373,28 @@ public class PaymentRefund {
             return this;
         }
 
+        public Builder reason(@Nullable Reason reason) {
+            this.reason = reason;
+            return this;
+        }
+
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
+        public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
+            this.refundedAt = refundedAt;
+            return this;
+        }
+
         public Builder status(@Nullable PaymentRefundStatus status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder tenderType(@Nullable PaymentRefundTenderType tenderType) {
+            this.tenderType = tenderType;
             return this;
         }
 
@@ -332,7 +412,8 @@ public class PaymentRefund {
             return new PaymentRefund(
                 createdAt, currency, id,
                 notes, paymentId, raw,
-                reference, status, totalAmount,
+                reason, reference, refundedAt,
+                status, tenderType, totalAmount,
                 updatedAt);
         }
 

@@ -52,6 +52,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -102,6 +107,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private AccountingTransactionStatus status;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_total_amount")
     private Double subTotalAmount;
 
@@ -114,6 +124,11 @@ public class AccountingTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("transaction_at")
+    private OffsetDateTime transactionAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -133,6 +148,7 @@ public class AccountingTransaction {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("customer_message") @Nullable String customerMessage,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingTransactionLineItem> lineitems,
             @JsonProperty("memo") @Nullable String memo,
@@ -143,9 +159,11 @@ public class AccountingTransaction {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("split_account_id") @Nullable String splitAccountId,
+            @JsonProperty("status") @Nullable AccountingTransactionStatus status,
             @JsonProperty("sub_total_amount") @Nullable Double subTotalAmount,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("transaction_at") @Nullable OffsetDateTime transactionAt,
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
@@ -154,6 +172,7 @@ public class AccountingTransaction {
         this.createdAt = createdAt;
         this.currency = currency;
         this.customerMessage = customerMessage;
+        this.exchangeRate = exchangeRate;
         this.id = id;
         this.lineitems = lineitems;
         this.memo = memo;
@@ -164,15 +183,18 @@ public class AccountingTransaction {
         this.raw = raw;
         this.reference = reference;
         this.splitAccountId = splitAccountId;
+        this.status = status;
         this.subTotalAmount = subTotalAmount;
         this.taxAmount = taxAmount;
         this.totalAmount = totalAmount;
+        this.transactionAt = transactionAt;
         this.type = type;
         this.updatedAt = updatedAt;
     }
     
     public AccountingTransaction() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -203,6 +225,10 @@ public class AccountingTransaction {
 
     public Optional<String> customerMessage() {
         return Optional.ofNullable(this.customerMessage);
+    }
+
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
     }
 
     public Optional<String> id() {
@@ -245,6 +271,10 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.splitAccountId);
     }
 
+    public Optional<AccountingTransactionStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<Double> subTotalAmount() {
         return Optional.ofNullable(this.subTotalAmount);
     }
@@ -255,6 +285,10 @@ public class AccountingTransaction {
 
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
+    }
+
+    public Optional<OffsetDateTime> transactionAt() {
+        return Optional.ofNullable(this.transactionAt);
     }
 
     public Optional<String> type() {
@@ -302,6 +336,12 @@ public class AccountingTransaction {
 
     public AccountingTransaction withCustomerMessage(@Nullable String customerMessage) {
         this.customerMessage = customerMessage;
+        return this;
+    }
+
+
+    public AccountingTransaction withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
         return this;
     }
 
@@ -366,6 +406,12 @@ public class AccountingTransaction {
     }
 
 
+    public AccountingTransaction withStatus(@Nullable AccountingTransactionStatus status) {
+        this.status = status;
+        return this;
+    }
+
+
     public AccountingTransaction withSubTotalAmount(@Nullable Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -380,6 +426,12 @@ public class AccountingTransaction {
 
     public AccountingTransaction withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
+        return this;
+    }
+
+
+    public AccountingTransaction withTransactionAt(@Nullable OffsetDateTime transactionAt) {
+        this.transactionAt = transactionAt;
         return this;
     }
 
@@ -412,6 +464,7 @@ public class AccountingTransaction {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.customerMessage, other.customerMessage) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.memo, other.memo) &&
@@ -422,9 +475,11 @@ public class AccountingTransaction {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.splitAccountId, other.splitAccountId) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.subTotalAmount, other.subTotalAmount) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
+            Utils.enhancedDeepEquals(this.transactionAt, other.transactionAt) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -434,11 +489,12 @@ public class AccountingTransaction {
         return Utils.enhancedHash(
             accountId, categoryIds, contacts,
             createdAt, currency, customerMessage,
-            id, lineitems, memo,
-            organizationId, paymentMethod, paymentTerms,
-            projectId, raw, reference,
-            splitAccountId, subTotalAmount, taxAmount,
-            totalAmount, type, updatedAt);
+            exchangeRate, id, lineitems,
+            memo, organizationId, paymentMethod,
+            paymentTerms, projectId, raw,
+            reference, splitAccountId, status,
+            subTotalAmount, taxAmount, totalAmount,
+            transactionAt, type, updatedAt);
     }
     
     @Override
@@ -450,6 +506,7 @@ public class AccountingTransaction {
                 "createdAt", createdAt,
                 "currency", currency,
                 "customerMessage", customerMessage,
+                "exchangeRate", exchangeRate,
                 "id", id,
                 "lineitems", lineitems,
                 "memo", memo,
@@ -460,9 +517,11 @@ public class AccountingTransaction {
                 "raw", raw,
                 "reference", reference,
                 "splitAccountId", splitAccountId,
+                "status", status,
                 "subTotalAmount", subTotalAmount,
                 "taxAmount", taxAmount,
                 "totalAmount", totalAmount,
+                "transactionAt", transactionAt,
                 "type", type,
                 "updatedAt", updatedAt);
     }
@@ -481,6 +540,8 @@ public class AccountingTransaction {
         private String currency;
 
         private String customerMessage;
+
+        private Double exchangeRate;
 
         private String id;
 
@@ -502,11 +563,15 @@ public class AccountingTransaction {
 
         private String splitAccountId;
 
+        private AccountingTransactionStatus status;
+
         private Double subTotalAmount;
 
         private Double taxAmount;
 
         private Double totalAmount;
+
+        private OffsetDateTime transactionAt;
 
         private String type;
 
@@ -543,6 +608,11 @@ public class AccountingTransaction {
 
         public Builder customerMessage(@Nullable String customerMessage) {
             this.customerMessage = customerMessage;
+            return this;
+        }
+
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
             return this;
         }
 
@@ -596,6 +666,11 @@ public class AccountingTransaction {
             return this;
         }
 
+        public Builder status(@Nullable AccountingTransactionStatus status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder subTotalAmount(@Nullable Double subTotalAmount) {
             this.subTotalAmount = subTotalAmount;
             return this;
@@ -608,6 +683,11 @@ public class AccountingTransaction {
 
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
+            return this;
+        }
+
+        public Builder transactionAt(@Nullable OffsetDateTime transactionAt) {
+            this.transactionAt = transactionAt;
             return this;
         }
 
@@ -625,11 +705,12 @@ public class AccountingTransaction {
             return new AccountingTransaction(
                 accountId, categoryIds, contacts,
                 createdAt, currency, customerMessage,
-                id, lineitems, memo,
-                organizationId, paymentMethod, paymentTerms,
-                projectId, raw, reference,
-                splitAccountId, subTotalAmount, taxAmount,
-                totalAmount, type, updatedAt);
+                exchangeRate, id, lineitems,
+                memo, organizationId, paymentMethod,
+                paymentTerms, projectId, raw,
+                reference, splitAccountId, status,
+                subTotalAmount, taxAmount, totalAmount,
+                transactionAt, type, updatedAt);
         }
 
     }

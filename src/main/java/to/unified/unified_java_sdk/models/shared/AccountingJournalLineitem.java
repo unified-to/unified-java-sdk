@@ -84,6 +84,11 @@ public class AccountingJournalLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    private String taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
@@ -102,6 +107,7 @@ public class AccountingJournalLineitem {
             @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("total_amount") @Nullable Double totalAmount) {
         this.accountId = accountId;
         this.categoryIds = categoryIds;
@@ -116,6 +122,7 @@ public class AccountingJournalLineitem {
         this.paymentId = paymentId;
         this.projectId = projectId;
         this.taxAmount = taxAmount;
+        this.taxrateId = taxrateId;
         this.totalAmount = totalAmount;
     }
     
@@ -124,7 +131,7 @@ public class AccountingJournalLineitem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -177,6 +184,10 @@ public class AccountingJournalLineitem {
 
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
+    }
+
+    public Optional<String> taxrateId() {
+        return Optional.ofNullable(this.taxrateId);
     }
 
     public Optional<Double> totalAmount() {
@@ -266,6 +277,12 @@ public class AccountingJournalLineitem {
     }
 
 
+    public AccountingJournalLineitem withTaxrateId(@Nullable String taxrateId) {
+        this.taxrateId = taxrateId;
+        return this;
+    }
+
+
     public AccountingJournalLineitem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -295,6 +312,7 @@ public class AccountingJournalLineitem {
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount);
     }
     
@@ -305,7 +323,7 @@ public class AccountingJournalLineitem {
             creditAmount, debitAmount, description,
             groupId, id, invoiceId,
             organizationId, paymentId, projectId,
-            taxAmount, totalAmount);
+            taxAmount, taxrateId, totalAmount);
     }
     
     @Override
@@ -324,6 +342,7 @@ public class AccountingJournalLineitem {
                 "paymentId", paymentId,
                 "projectId", projectId,
                 "taxAmount", taxAmount,
+                "taxrateId", taxrateId,
                 "totalAmount", totalAmount);
     }
 
@@ -355,6 +374,8 @@ public class AccountingJournalLineitem {
         private String projectId;
 
         private Double taxAmount;
+
+        private String taxrateId;
 
         private Double totalAmount;
 
@@ -427,6 +448,11 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        public Builder taxrateId(@Nullable String taxrateId) {
+            this.taxrateId = taxrateId;
+            return this;
+        }
+
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -438,7 +464,7 @@ public class AccountingJournalLineitem {
                 creditAmount, debitAmount, description,
                 groupId, id, invoiceId,
                 organizationId, paymentId, projectId,
-                taxAmount, totalAmount);
+                taxAmount, taxrateId, totalAmount);
         }
 
     }

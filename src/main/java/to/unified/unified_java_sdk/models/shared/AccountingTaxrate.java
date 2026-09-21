@@ -21,6 +21,18 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingTaxrate {
+    /**
+     * Component parts of a compound or multi-component tax
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("components")
+    private List<AccountingTaxrateComponent> components;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country")
+    private String country;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -33,6 +45,11 @@ public class AccountingTaxrate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("effective_rate")
+    private Double effectiveRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -40,6 +57,11 @@ public class AccountingTaxrate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_compound")
+    private Boolean isCompound;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -68,30 +90,59 @@ public class AccountingTaxrate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region")
+    private String region;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_rate")
+    private Double totalRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private AccountingTaxrateType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingTaxrate(
+            @JsonProperty("components") @Nullable List<AccountingTaxrateComponent> components,
+            @JsonProperty("country") @Nullable String country,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("effective_rate") @Nullable Double effectiveRate,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_compound") @Nullable Boolean isCompound,
             @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("rate") @Nullable Double rate,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("region") @Nullable String region,
+            @JsonProperty("total_rate") @Nullable Double totalRate,
+            @JsonProperty("type") @Nullable AccountingTaxrateType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.components = components;
+        this.country = country;
         this.createdAt = createdAt;
         this.description = description;
+        this.effectiveRate = effectiveRate;
         this.id = id;
         this.isActive = isActive;
+        this.isCompound = isCompound;
         this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.rate = rate;
         this.raw = raw;
+        this.region = region;
+        this.totalRate = totalRate;
+        this.type = type;
         this.updatedAt = updatedAt;
     }
     
@@ -99,7 +150,20 @@ public class AccountingTaxrate {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null);
+    }
+
+    /**
+     * Component parts of a compound or multi-component tax
+     */
+    public Optional<List<AccountingTaxrateComponent>> components() {
+        return Optional.ofNullable(this.components);
+    }
+
+    public Optional<String> country() {
+        return Optional.ofNullable(this.country);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -110,12 +174,20 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.description);
     }
 
+    public Optional<Double> effectiveRate() {
+        return Optional.ofNullable(this.effectiveRate);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<Boolean> isCompound() {
+        return Optional.ofNullable(this.isCompound);
     }
 
     public Optional<List<AccountingMetadata>> metadata() {
@@ -138,12 +210,39 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<String> region() {
+        return Optional.ofNullable(this.region);
+    }
+
+    public Optional<Double> totalRate() {
+        return Optional.ofNullable(this.totalRate);
+    }
+
+    public Optional<AccountingTaxrateType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Component parts of a compound or multi-component tax
+     */
+    public AccountingTaxrate withComponents(@Nullable List<AccountingTaxrateComponent> components) {
+        this.components = components;
+        return this;
+    }
+
+
+    public AccountingTaxrate withCountry(@Nullable String country) {
+        this.country = country;
+        return this;
     }
 
 
@@ -159,6 +258,12 @@ public class AccountingTaxrate {
     }
 
 
+    public AccountingTaxrate withEffectiveRate(@Nullable Double effectiveRate) {
+        this.effectiveRate = effectiveRate;
+        return this;
+    }
+
+
     public AccountingTaxrate withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -167,6 +272,12 @@ public class AccountingTaxrate {
 
     public AccountingTaxrate withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
+        return this;
+    }
+
+
+    public AccountingTaxrate withIsCompound(@Nullable Boolean isCompound) {
+        this.isCompound = isCompound;
         return this;
     }
 
@@ -201,6 +312,24 @@ public class AccountingTaxrate {
     }
 
 
+    public AccountingTaxrate withRegion(@Nullable String region) {
+        this.region = region;
+        return this;
+    }
+
+
+    public AccountingTaxrate withTotalRate(@Nullable Double totalRate) {
+        this.totalRate = totalRate;
+        return this;
+    }
+
+
+    public AccountingTaxrate withType(@Nullable AccountingTaxrateType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public AccountingTaxrate withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -217,52 +346,76 @@ public class AccountingTaxrate {
         }
         AccountingTaxrate other = (AccountingTaxrate) o;
         return 
+            Utils.enhancedDeepEquals(this.components, other.components) &&
+            Utils.enhancedDeepEquals(this.country, other.country) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.effectiveRate, other.effectiveRate) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isCompound, other.isCompound) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.rate, other.rate) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.region, other.region) &&
+            Utils.enhancedDeepEquals(this.totalRate, other.totalRate) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, description, id,
-            isActive, metadata, name,
-            organizationId, rate, raw,
-            updatedAt);
+            components, country, createdAt,
+            description, effectiveRate, id,
+            isActive, isCompound, metadata,
+            name, organizationId, rate,
+            raw, region, totalRate,
+            type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingTaxrate.class,
+                "components", components,
+                "country", country,
                 "createdAt", createdAt,
                 "description", description,
+                "effectiveRate", effectiveRate,
                 "id", id,
                 "isActive", isActive,
+                "isCompound", isCompound,
                 "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "rate", rate,
                 "raw", raw,
+                "region", region,
+                "totalRate", totalRate,
+                "type", type,
                 "updatedAt", updatedAt);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private List<AccountingTaxrateComponent> components;
+
+        private String country;
+
         private OffsetDateTime createdAt;
 
         private String description;
 
+        private Double effectiveRate;
+
         private String id;
 
         private Boolean isActive;
+
+        private Boolean isCompound;
 
         private List<AccountingMetadata> metadata;
 
@@ -274,10 +427,29 @@ public class AccountingTaxrate {
 
         private Map<String, Object> raw;
 
+        private String region;
+
+        private Double totalRate;
+
+        private AccountingTaxrateType type;
+
         private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Component parts of a compound or multi-component tax
+         */
+        public Builder components(@Nullable List<AccountingTaxrateComponent> components) {
+            this.components = components;
+            return this;
+        }
+
+        public Builder country(@Nullable String country) {
+            this.country = country;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -290,6 +462,11 @@ public class AccountingTaxrate {
             return this;
         }
 
+        public Builder effectiveRate(@Nullable Double effectiveRate) {
+            this.effectiveRate = effectiveRate;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -297,6 +474,11 @@ public class AccountingTaxrate {
 
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
+            return this;
+        }
+
+        public Builder isCompound(@Nullable Boolean isCompound) {
+            this.isCompound = isCompound;
             return this;
         }
 
@@ -325,6 +507,21 @@ public class AccountingTaxrate {
             return this;
         }
 
+        public Builder region(@Nullable String region) {
+            this.region = region;
+            return this;
+        }
+
+        public Builder totalRate(@Nullable Double totalRate) {
+            this.totalRate = totalRate;
+            return this;
+        }
+
+        public Builder type(@Nullable AccountingTaxrateType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -332,10 +529,12 @@ public class AccountingTaxrate {
 
         public AccountingTaxrate build() {
             return new AccountingTaxrate(
-                createdAt, description, id,
-                isActive, metadata, name,
-                organizationId, rate, raw,
-                updatedAt);
+                components, country, createdAt,
+                description, effectiveRate, id,
+                isActive, isCompound, metadata,
+                name, organizationId, rate,
+                raw, region, totalRate,
+                type, updatedAt);
         }
 
     }

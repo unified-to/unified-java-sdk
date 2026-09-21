@@ -41,9 +41,9 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-13T02:47:06.452Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-13T16:53:13.472Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("1d05ff03-6a0a-487e-b893-5cbc820c89e0")
+                    .id("abe61881-290f-49db-9dda-5a3c14d1111a")
                     .labels(List.of(
                         "adhuc",
                         "quaerat"))
@@ -52,7 +52,7 @@ public class Application {
                     .status(RepoPullrequestStatus.REJECTED)
                     .targetBranchId("feed-reboot")
                     .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-01T01:09:49.523Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-01T13:24:36.687Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -229,9 +229,9 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-13T02:47:06.456Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-13T16:53:13.480Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("bceaef18-faa8-48f0-aab4-8ef726149b87")
+                    .id("e110885a-bc17-46c9-8c2e-133a24165d7d")
                     .labels(List.of(
                         "adhuc",
                         "quaerat"))
@@ -240,7 +240,7 @@ public class Application {
                     .status(RepoPullrequestStatus.REJECTED)
                     .targetBranchId("feed-reboot")
                     .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-01T01:09:49.526Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-01T13:24:36.693Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -359,9 +359,9 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-13T02:47:06.456Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-13T16:53:13.480Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("bceaef18-faa8-48f0-aab4-8ef726149b87")
+                    .id("e110885a-bc17-46c9-8c2e-133a24165d7d")
                     .labels(List.of(
                         "adhuc",
                         "quaerat"))
@@ -370,7 +370,7 @@ public class Application {
                     .status(RepoPullrequestStatus.REJECTED)
                     .targetBranchId("feed-reboot")
                     .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-01T01:09:49.526Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-01T13:24:36.693Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -7,13 +7,16 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskTaskRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskTaskRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskProjectsRequest;
@@ -21,18 +24,23 @@ import to.unified.unified_java_sdk.models.operations.ListTaskTasksRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskTaskRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskTaskRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskTaskRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskChangeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskChangeResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskCommentRequestBuilder;
@@ -41,6 +49,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectRequest
 import to.unified.unified_java_sdk.models.operations.async.GetTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskChangesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskCommentsRequestBuilder;
@@ -55,6 +65,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectReque
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskProjectRequestBuilder;
@@ -67,13 +79,16 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectRequ
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskProjectResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskTaskResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiTask;
 import to.unified.unified_java_sdk.operations.CreateTaskComment;
 import to.unified.unified_java_sdk.operations.CreateTaskProject;
 import to.unified.unified_java_sdk.operations.CreateTaskTask;
+import to.unified.unified_java_sdk.operations.GetGenaiTask;
 import to.unified.unified_java_sdk.operations.GetTaskChange;
 import to.unified.unified_java_sdk.operations.GetTaskComment;
 import to.unified.unified_java_sdk.operations.GetTaskProject;
 import to.unified.unified_java_sdk.operations.GetTaskTask;
+import to.unified.unified_java_sdk.operations.ListGenaiTasks;
 import to.unified.unified_java_sdk.operations.ListTaskChanges;
 import to.unified.unified_java_sdk.operations.ListTaskComments;
 import to.unified.unified_java_sdk.operations.ListTaskProjects;
@@ -81,6 +96,7 @@ import to.unified.unified_java_sdk.operations.ListTaskTasks;
 import to.unified.unified_java_sdk.operations.PatchTaskComment;
 import to.unified.unified_java_sdk.operations.PatchTaskProject;
 import to.unified.unified_java_sdk.operations.PatchTaskTask;
+import to.unified.unified_java_sdk.operations.RemoveGenaiTask;
 import to.unified.unified_java_sdk.operations.RemoveTaskComment;
 import to.unified.unified_java_sdk.operations.RemoveTaskProject;
 import to.unified.unified_java_sdk.operations.RemoveTaskTask;
@@ -107,6 +123,29 @@ public class AsyncTask {
      */
     public Task sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a task
+     * 
+     * @return The async call builder
+     */
+    public CreateGenaiTaskRequestBuilder createGenaiTask() {
+        return new CreateGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request) {
+        AsyncRequestOperation<CreateGenaiTaskRequest, CreateGenaiTaskResponse> operation
+              = new CreateGenaiTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -174,6 +213,29 @@ public class AsyncTask {
     public CompletableFuture<CreateTaskTaskResponse> createTaskTask(@Nonnull CreateTaskTaskRequest request) {
         AsyncRequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
               = new CreateTaskTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a task
+     * 
+     * @return The async call builder
+     */
+    public GetGenaiTaskRequestBuilder getGenaiTask() {
+        return new GetGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request) {
+        AsyncRequestOperation<GetGenaiTaskRequest, GetGenaiTaskResponse> operation
+              = new GetGenaiTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -266,6 +328,29 @@ public class AsyncTask {
     public CompletableFuture<GetTaskTaskResponse> getTaskTask(@Nonnull GetTaskTaskRequest request) {
         AsyncRequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
               = new GetTaskTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all tasks
+     * 
+     * @return The async call builder
+     */
+    public ListGenaiTasksRequestBuilder listGenaiTasks() {
+        return new ListGenaiTasksRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request) {
+        AsyncRequestOperation<ListGenaiTasksRequest, ListGenaiTasksResponse> operation
+              = new ListGenaiTasks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -427,6 +512,29 @@ public class AsyncTask {
     public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(@Nonnull PatchTaskTaskRequest request) {
         AsyncRequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
               = new PatchTaskTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a task
+     * 
+     * @return The async call builder
+     */
+    public RemoveGenaiTaskRequestBuilder removeGenaiTask() {
+        return new RemoveGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request) {
+        AsyncRequestOperation<RemoveGenaiTaskRequest, RemoveGenaiTaskResponse> operation
+              = new RemoveGenaiTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

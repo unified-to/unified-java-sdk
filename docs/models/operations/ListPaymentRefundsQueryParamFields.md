@@ -22,4 +22,7 @@ ListPaymentRefundsQueryParamFields value = ListPaymentRefundsQueryParamFields.ID
 | `NOTES`        | notes          |
 | `STATUS`       | status         |
 | `REFERENCE`    | reference      |
+| `REFUNDED_AT`  | refunded_at    |
+| `REASON`       | reason         |
+| `TENDER_TYPE`  | tender_type    |
 | `RAW`          | raw            |

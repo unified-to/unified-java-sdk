@@ -69,6 +69,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_number")
     private String externalNumber;
 
@@ -139,6 +144,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    private String taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
@@ -168,6 +178,7 @@ public class AccountingExpense {
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("external_number") @Nullable String externalNumber,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
@@ -182,6 +193,7 @@ public class AccountingExpense {
             @JsonProperty("reimbursed_at") @Nullable OffsetDateTime reimbursedAt,
             @JsonProperty("status") @Nullable AccountingExpenseStatus status,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
@@ -195,6 +207,7 @@ public class AccountingExpense {
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.exchangeRate = exchangeRate;
         this.externalNumber = externalNumber;
         this.id = id;
         this.lineitems = lineitems;
@@ -209,6 +222,7 @@ public class AccountingExpense {
         this.reimbursedAt = reimbursedAt;
         this.status = status;
         this.taxAmount = taxAmount;
+        this.taxrateId = taxrateId;
         this.totalAmount = totalAmount;
         this.updatedAt = updatedAt;
         this.userId = userId;
@@ -224,7 +238,8 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<String> accountId() {
@@ -264,6 +279,10 @@ public class AccountingExpense {
 
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
     }
 
     public Optional<String> externalNumber() {
@@ -320,6 +339,10 @@ public class AccountingExpense {
 
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
+    }
+
+    public Optional<String> taxrateId() {
+        return Optional.ofNullable(this.taxrateId);
     }
 
     public Optional<Double> totalAmount() {
@@ -396,6 +419,12 @@ public class AccountingExpense {
 
     public AccountingExpense withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    public AccountingExpense withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
         return this;
     }
 
@@ -484,6 +513,12 @@ public class AccountingExpense {
     }
 
 
+    public AccountingExpense withTaxrateId(@Nullable String taxrateId) {
+        this.taxrateId = taxrateId;
+        return this;
+    }
+
+
     public AccountingExpense withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -527,6 +562,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.externalNumber, other.externalNumber) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
@@ -541,6 +577,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.reimbursedAt, other.reimbursedAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
+            Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
@@ -553,12 +590,13 @@ public class AccountingExpense {
             accountId, approvedAt, approverUserId,
             approverUsers, attachments, categoryIds,
             contactId, createdAt, currency,
-            externalNumber, id, lineitems,
-            metadata, name, organizationId,
-            paymentMethod, postedAt, projectId,
-            raw, reimbursedAmount, reimbursedAt,
-            status, taxAmount, totalAmount,
-            updatedAt, userId, users);
+            exchangeRate, externalNumber, id,
+            lineitems, metadata, name,
+            organizationId, paymentMethod, postedAt,
+            projectId, raw, reimbursedAmount,
+            reimbursedAt, status, taxAmount,
+            taxrateId, totalAmount, updatedAt,
+            userId, users);
     }
     
     @Override
@@ -573,6 +611,7 @@ public class AccountingExpense {
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
+                "exchangeRate", exchangeRate,
                 "externalNumber", externalNumber,
                 "id", id,
                 "lineitems", lineitems,
@@ -587,6 +626,7 @@ public class AccountingExpense {
                 "reimbursedAt", reimbursedAt,
                 "status", status,
                 "taxAmount", taxAmount,
+                "taxrateId", taxrateId,
                 "totalAmount", totalAmount,
                 "updatedAt", updatedAt,
                 "userId", userId,
@@ -613,6 +653,8 @@ public class AccountingExpense {
         private OffsetDateTime createdAt;
 
         private String currency;
+
+        private Double exchangeRate;
 
         private String externalNumber;
 
@@ -641,6 +683,8 @@ public class AccountingExpense {
         private AccountingExpenseStatus status;
 
         private Double taxAmount;
+
+        private String taxrateId;
 
         private Double totalAmount;
 
@@ -699,6 +743,11 @@ public class AccountingExpense {
 
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
             return this;
         }
 
@@ -772,6 +821,11 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder taxrateId(@Nullable String taxrateId) {
+            this.taxrateId = taxrateId;
+            return this;
+        }
+
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -797,12 +851,13 @@ public class AccountingExpense {
                 accountId, approvedAt, approverUserId,
                 approverUsers, attachments, categoryIds,
                 contactId, createdAt, currency,
-                externalNumber, id, lineitems,
-                metadata, name, organizationId,
-                paymentMethod, postedAt, projectId,
-                raw, reimbursedAmount, reimbursedAt,
-                status, taxAmount, totalAmount,
-                updatedAt, userId, users);
+                exchangeRate, externalNumber, id,
+                lineitems, metadata, name,
+                organizationId, paymentMethod, postedAt,
+                projectId, raw, reimbursedAmount,
+                reimbursedAt, status, taxAmount,
+                taxrateId, totalAmount, updatedAt,
+                userId, users);
         }
 
     }

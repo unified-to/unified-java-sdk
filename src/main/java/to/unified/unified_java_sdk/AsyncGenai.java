@@ -7,22 +7,86 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiAgentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiAgentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiAgentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiAgentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiAgentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiAgentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiAgentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiAgentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.operations.CreateGenaiAgent;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
+import to.unified.unified_java_sdk.operations.CreateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
+import to.unified.unified_java_sdk.operations.CreateGenaiTask;
+import to.unified.unified_java_sdk.operations.GetGenaiAgent;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
+import to.unified.unified_java_sdk.operations.GetGenaiOrganization;
+import to.unified.unified_java_sdk.operations.GetGenaiTask;
+import to.unified.unified_java_sdk.operations.ListGenaiAgents;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
+import to.unified.unified_java_sdk.operations.ListGenaiOrganizations;
+import to.unified.unified_java_sdk.operations.ListGenaiTasks;
+import to.unified.unified_java_sdk.operations.PatchGenaiAgent;
+import to.unified.unified_java_sdk.operations.PatchGenaiOrganization;
+import to.unified.unified_java_sdk.operations.RemoveGenaiAgent;
+import to.unified.unified_java_sdk.operations.RemoveGenaiOrganization;
+import to.unified.unified_java_sdk.operations.RemoveGenaiTask;
+import to.unified.unified_java_sdk.operations.UpdateGenaiAgent;
+import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -47,6 +111,29 @@ public class AsyncGenai {
 
 
     /**
+     * Create an agent
+     * 
+     * @return The async call builder
+     */
+    public CreateGenaiAgentRequestBuilder createGenaiAgent() {
+        return new CreateGenaiAgentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an agent
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiAgentResponse> createGenaiAgent(@Nonnull CreateGenaiAgentRequest request) {
+        AsyncRequestOperation<CreateGenaiAgentRequest, CreateGenaiAgentResponse> operation
+              = new CreateGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Create an embedding
      * 
      * @return The async call builder
@@ -64,6 +151,29 @@ public class AsyncGenai {
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create an organization
+     * 
+     * @return The async call builder
+     */
+    public CreateGenaiOrganizationRequestBuilder createGenaiOrganization() {
+        return new CreateGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiOrganizationResponse> createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request) {
+        AsyncRequestOperation<CreateGenaiOrganizationRequest, CreateGenaiOrganizationResponse> operation
+              = new CreateGenaiOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -93,6 +203,52 @@ public class AsyncGenai {
 
 
     /**
+     * Create a task
+     * 
+     * @return The async call builder
+     */
+    public CreateGenaiTaskRequestBuilder createGenaiTask() {
+        return new CreateGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiTaskResponse> createGenaiTask(@Nonnull CreateGenaiTaskRequest request) {
+        AsyncRequestOperation<CreateGenaiTaskRequest, CreateGenaiTaskResponse> operation
+              = new CreateGenaiTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an agent
+     * 
+     * @return The async call builder
+     */
+    public GetGenaiAgentRequestBuilder getGenaiAgent() {
+        return new GetGenaiAgentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an agent
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiAgentResponse> getGenaiAgent(@Nonnull GetGenaiAgentRequest request) {
+        AsyncRequestOperation<GetGenaiAgentRequest, GetGenaiAgentResponse> operation
+              = new GetGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a model
      * 
      * @return The async call builder
@@ -116,6 +272,75 @@ public class AsyncGenai {
 
 
     /**
+     * Retrieve an organization
+     * 
+     * @return The async call builder
+     */
+    public GetGenaiOrganizationRequestBuilder getGenaiOrganization() {
+        return new GetGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiOrganizationResponse> getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request) {
+        AsyncRequestOperation<GetGenaiOrganizationRequest, GetGenaiOrganizationResponse> operation
+              = new GetGenaiOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a task
+     * 
+     * @return The async call builder
+     */
+    public GetGenaiTaskRequestBuilder getGenaiTask() {
+        return new GetGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiTaskResponse> getGenaiTask(@Nonnull GetGenaiTaskRequest request) {
+        AsyncRequestOperation<GetGenaiTaskRequest, GetGenaiTaskResponse> operation
+              = new GetGenaiTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all agents
+     * 
+     * @return The async call builder
+     */
+    public ListGenaiAgentsRequestBuilder listGenaiAgents() {
+        return new ListGenaiAgentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all agents
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListGenaiAgentsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiAgentsResponse> listGenaiAgents(@Nonnull ListGenaiAgentsRequest request) {
+        AsyncRequestOperation<ListGenaiAgentsRequest, ListGenaiAgentsResponse> operation
+              = new ListGenaiAgents.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all models
      * 
      * @return The async call builder
@@ -133,6 +358,213 @@ public class AsyncGenai {
     public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all organizations
+     * 
+     * @return The async call builder
+     */
+    public ListGenaiOrganizationsRequestBuilder listGenaiOrganizations() {
+        return new ListGenaiOrganizationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiOrganizationsResponse> listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request) {
+        AsyncRequestOperation<ListGenaiOrganizationsRequest, ListGenaiOrganizationsResponse> operation
+              = new ListGenaiOrganizations.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all tasks
+     * 
+     * @return The async call builder
+     */
+    public ListGenaiTasksRequestBuilder listGenaiTasks() {
+        return new ListGenaiTasksRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all tasks
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiTasksResponse> listGenaiTasks(@Nonnull ListGenaiTasksRequest request) {
+        AsyncRequestOperation<ListGenaiTasksRequest, ListGenaiTasksResponse> operation
+              = new ListGenaiTasks.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an agent
+     * 
+     * @return The async call builder
+     */
+    public PatchGenaiAgentRequestBuilder patchGenaiAgent() {
+        return new PatchGenaiAgentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiAgentResponse> patchGenaiAgent(@Nonnull PatchGenaiAgentRequest request) {
+        AsyncRequestOperation<PatchGenaiAgentRequest, PatchGenaiAgentResponse> operation
+              = new PatchGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an organization
+     * 
+     * @return The async call builder
+     */
+    public PatchGenaiOrganizationRequestBuilder patchGenaiOrganization() {
+        return new PatchGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiOrganizationResponse> patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request) {
+        AsyncRequestOperation<PatchGenaiOrganizationRequest, PatchGenaiOrganizationResponse> operation
+              = new PatchGenaiOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove an agent
+     * 
+     * @return The async call builder
+     */
+    public RemoveGenaiAgentRequestBuilder removeGenaiAgent() {
+        return new RemoveGenaiAgentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an agent
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiAgentResponse> removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request) {
+        AsyncRequestOperation<RemoveGenaiAgentRequest, RemoveGenaiAgentResponse> operation
+              = new RemoveGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove an organization
+     * 
+     * @return The async call builder
+     */
+    public RemoveGenaiOrganizationRequestBuilder removeGenaiOrganization() {
+        return new RemoveGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiOrganizationResponse> removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request) {
+        AsyncRequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
+              = new RemoveGenaiOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a task
+     * 
+     * @return The async call builder
+     */
+    public RemoveGenaiTaskRequestBuilder removeGenaiTask() {
+        return new RemoveGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiTaskResponse> removeGenaiTask(@Nonnull RemoveGenaiTaskRequest request) {
+        AsyncRequestOperation<RemoveGenaiTaskRequest, RemoveGenaiTaskResponse> operation
+              = new RemoveGenaiTask.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an agent
+     * 
+     * @return The async call builder
+     */
+    public UpdateGenaiAgentRequestBuilder updateGenaiAgent() {
+        return new UpdateGenaiAgentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an agent
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateGenaiAgentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiAgentResponse> updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request) {
+        AsyncRequestOperation<UpdateGenaiAgentRequest, UpdateGenaiAgentResponse> operation
+              = new UpdateGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an organization
+     * 
+     * @return The async call builder
+     */
+    public UpdateGenaiOrganizationRequestBuilder updateGenaiOrganization() {
+        return new UpdateGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiOrganizationResponse> updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request) {
+        AsyncRequestOperation<UpdateGenaiOrganizationRequest, UpdateGenaiOrganizationResponse> operation
+              = new UpdateGenaiOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

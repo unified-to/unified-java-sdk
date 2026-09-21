@@ -113,6 +113,9 @@ public class WebhookObjectType {
     public static final WebhookObjectType GENAI_MODEL = new WebhookObjectType("genai_model");
     public static final WebhookObjectType GENAI_PROMPT = new WebhookObjectType("genai_prompt");
     public static final WebhookObjectType GENAI_EMBEDDING = new WebhookObjectType("genai_embedding");
+    public static final WebhookObjectType GENAI_TASK = new WebhookObjectType("genai_task");
+    public static final WebhookObjectType GENAI_AGENT = new WebhookObjectType("genai_agent");
+    public static final WebhookObjectType GENAI_ORGANIZATION = new WebhookObjectType("genai_organization");
     public static final WebhookObjectType MESSAGING_MESSAGE = new WebhookObjectType("messaging_message");
     public static final WebhookObjectType MESSAGING_CHANNEL = new WebhookObjectType("messaging_channel");
     public static final WebhookObjectType MESSAGING_EVENT = new WebhookObjectType("messaging_event");
@@ -358,6 +361,9 @@ public class WebhookObjectType {
         map.put("genai_model", GENAI_MODEL);
         map.put("genai_prompt", GENAI_PROMPT);
         map.put("genai_embedding", GENAI_EMBEDDING);
+        map.put("genai_task", GENAI_TASK);
+        map.put("genai_agent", GENAI_AGENT);
+        map.put("genai_organization", GENAI_ORGANIZATION);
         map.put("messaging_message", MESSAGING_MESSAGE);
         map.put("messaging_channel", MESSAGING_CHANNEL);
         map.put("messaging_event", MESSAGING_EVENT);
@@ -535,6 +541,9 @@ public class WebhookObjectType {
         map.put("genai_model", WebhookObjectTypeEnum.GENAI_MODEL);
         map.put("genai_prompt", WebhookObjectTypeEnum.GENAI_PROMPT);
         map.put("genai_embedding", WebhookObjectTypeEnum.GENAI_EMBEDDING);
+        map.put("genai_task", WebhookObjectTypeEnum.GENAI_TASK);
+        map.put("genai_agent", WebhookObjectTypeEnum.GENAI_AGENT);
+        map.put("genai_organization", WebhookObjectTypeEnum.GENAI_ORGANIZATION);
         map.put("messaging_message", WebhookObjectTypeEnum.MESSAGING_MESSAGE);
         map.put("messaging_channel", WebhookObjectTypeEnum.MESSAGING_CHANNEL);
         map.put("messaging_event", WebhookObjectTypeEnum.MESSAGING_EVENT);
@@ -713,6 +722,9 @@ public class WebhookObjectType {
         GENAI_MODEL("genai_model"),
         GENAI_PROMPT("genai_prompt"),
         GENAI_EMBEDDING("genai_embedding"),
+        GENAI_TASK("genai_task"),
+        GENAI_AGENT("genai_agent"),
+        GENAI_ORGANIZATION("genai_organization"),
         MESSAGING_MESSAGE("messaging_message"),
         MESSAGING_CHANNEL("messaging_channel"),
         MESSAGING_EVENT("messaging_event"),

@@ -49,6 +49,11 @@ public class AccountingTransactionLineItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxrate_id")
+    private String taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
@@ -70,6 +75,7 @@ public class AccountingTransactionLineItem {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("object_type") @Nullable String objectType,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("unit_amount") @Nullable Double unitAmount,
             @JsonProperty("unit_quantity") @Nullable Double unitQuantity) {
@@ -79,6 +85,7 @@ public class AccountingTransactionLineItem {
         this.id = id;
         this.name = name;
         this.objectType = objectType;
+        this.taxrateId = taxrateId;
         this.totalAmount = totalAmount;
         this.unitAmount = unitAmount;
         this.unitQuantity = unitQuantity;
@@ -87,7 +94,8 @@ public class AccountingTransactionLineItem {
     public AccountingTransactionLineItem() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -112,6 +120,10 @@ public class AccountingTransactionLineItem {
 
     public Optional<String> objectType() {
         return Optional.ofNullable(this.objectType);
+    }
+
+    public Optional<String> taxrateId() {
+        return Optional.ofNullable(this.taxrateId);
     }
 
     public Optional<Double> totalAmount() {
@@ -167,6 +179,12 @@ public class AccountingTransactionLineItem {
     }
 
 
+    public AccountingTransactionLineItem withTaxrateId(@Nullable String taxrateId) {
+        this.taxrateId = taxrateId;
+        return this;
+    }
+
+
     public AccountingTransactionLineItem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -201,6 +219,7 @@ public class AccountingTransactionLineItem {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
+            Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
             Utils.enhancedDeepEquals(this.unitAmount, other.unitAmount) &&
             Utils.enhancedDeepEquals(this.unitQuantity, other.unitQuantity);
@@ -211,7 +230,8 @@ public class AccountingTransactionLineItem {
         return Utils.enhancedHash(
             accountId, categoryIds, description,
             id, name, objectType,
-            totalAmount, unitAmount, unitQuantity);
+            taxrateId, totalAmount, unitAmount,
+            unitQuantity);
     }
     
     @Override
@@ -223,6 +243,7 @@ public class AccountingTransactionLineItem {
                 "id", id,
                 "name", name,
                 "objectType", objectType,
+                "taxrateId", taxrateId,
                 "totalAmount", totalAmount,
                 "unitAmount", unitAmount,
                 "unitQuantity", unitQuantity);
@@ -242,6 +263,8 @@ public class AccountingTransactionLineItem {
         private String name;
 
         private String objectType;
+
+        private String taxrateId;
 
         private Double totalAmount;
 
@@ -283,6 +306,11 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+        public Builder taxrateId(@Nullable String taxrateId) {
+            this.taxrateId = taxrateId;
+            return this;
+        }
+
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -302,7 +330,8 @@ public class AccountingTransactionLineItem {
             return new AccountingTransactionLineItem(
                 accountId, categoryIds, description,
                 id, name, objectType,
-                totalAmount, unitAmount, unitQuantity);
+                taxrateId, totalAmount, unitAmount,
+                unitQuantity);
         }
 
     }

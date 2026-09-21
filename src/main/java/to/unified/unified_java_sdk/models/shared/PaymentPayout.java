@@ -12,12 +12,24 @@ import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentPayout {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    private String accountId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("arrival_at")
+    private OffsetDateTime arrivalAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -30,8 +42,25 @@ public class PaymentPayout {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fee_amount")
+    private Double feeAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+    /**
+     * The transactions included in this payout
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("lineitems")
+    private List<PaymentPayoutLineitem> lineitems;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_amount")
+    private Double netAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -60,17 +89,27 @@ public class PaymentPayout {
 
     @JsonCreator
     public PaymentPayout(
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("arrival_at") @Nullable OffsetDateTime arrivalAt,
             @JsonProperty("created_at") @Nullable String createdAt,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("fee_amount") @Nullable Double feeAmount,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lineitems") @Nullable List<PaymentPayoutLineitem> lineitems,
+            @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable PaymentPayoutStatus status,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable String updatedAt) {
+        this.accountId = accountId;
+        this.arrivalAt = arrivalAt;
         this.createdAt = createdAt;
         this.currency = currency;
+        this.feeAmount = feeAmount;
         this.id = id;
+        this.lineitems = lineitems;
+        this.netAmount = netAmount;
         this.notes = notes;
         this.raw = raw;
         this.status = status;
@@ -81,7 +120,17 @@ public class PaymentPayout {
     public PaymentPayout() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null,
+            null);
+    }
+
+    public Optional<String> accountId() {
+        return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<OffsetDateTime> arrivalAt() {
+        return Optional.ofNullable(this.arrivalAt);
     }
 
     public Optional<String> createdAt() {
@@ -92,8 +141,23 @@ public class PaymentPayout {
         return Optional.ofNullable(this.currency);
     }
 
+    public Optional<Double> feeAmount() {
+        return Optional.ofNullable(this.feeAmount);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    /**
+     * The transactions included in this payout
+     */
+    public Optional<List<PaymentPayoutLineitem>> lineitems() {
+        return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<Double> netAmount() {
+        return Optional.ofNullable(this.netAmount);
     }
 
     public Optional<String> notes() {
@@ -121,6 +185,18 @@ public class PaymentPayout {
     }
 
 
+    public PaymentPayout withAccountId(@Nullable String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+
+
+    public PaymentPayout withArrivalAt(@Nullable OffsetDateTime arrivalAt) {
+        this.arrivalAt = arrivalAt;
+        return this;
+    }
+
+
     public PaymentPayout withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -133,8 +209,29 @@ public class PaymentPayout {
     }
 
 
+    public PaymentPayout withFeeAmount(@Nullable Double feeAmount) {
+        this.feeAmount = feeAmount;
+        return this;
+    }
+
+
     public PaymentPayout withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    /**
+     * The transactions included in this payout
+     */
+    public PaymentPayout withLineitems(@Nullable List<PaymentPayoutLineitem> lineitems) {
+        this.lineitems = lineitems;
+        return this;
+    }
+
+
+    public PaymentPayout withNetAmount(@Nullable Double netAmount) {
+        this.netAmount = netAmount;
         return this;
     }
 
@@ -179,9 +276,14 @@ public class PaymentPayout {
         }
         PaymentPayout other = (PaymentPayout) o;
         return 
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.arrivalAt, other.arrivalAt) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.feeAmount, other.feeAmount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -192,17 +294,24 @@ public class PaymentPayout {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, currency, id,
-            notes, raw, status,
-            totalAmount, updatedAt);
+            accountId, arrivalAt, createdAt,
+            currency, feeAmount, id,
+            lineitems, netAmount, notes,
+            raw, status, totalAmount,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PaymentPayout.class,
+                "accountId", accountId,
+                "arrivalAt", arrivalAt,
                 "createdAt", createdAt,
                 "currency", currency,
+                "feeAmount", feeAmount,
                 "id", id,
+                "lineitems", lineitems,
+                "netAmount", netAmount,
                 "notes", notes,
                 "raw", raw,
                 "status", status,
@@ -213,11 +322,21 @@ public class PaymentPayout {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private String accountId;
+
+        private OffsetDateTime arrivalAt;
+
         private String createdAt;
 
         private String currency;
 
+        private Double feeAmount;
+
         private String id;
+
+        private List<PaymentPayoutLineitem> lineitems;
+
+        private Double netAmount;
 
         private String notes;
 
@@ -233,6 +352,16 @@ public class PaymentPayout {
           // force use of static builder() method
         }
 
+        public Builder accountId(@Nullable String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+
+        public Builder arrivalAt(@Nullable OffsetDateTime arrivalAt) {
+            this.arrivalAt = arrivalAt;
+            return this;
+        }
+
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -243,8 +372,26 @@ public class PaymentPayout {
             return this;
         }
 
+        public Builder feeAmount(@Nullable Double feeAmount) {
+            this.feeAmount = feeAmount;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        /**
+         * The transactions included in this payout
+         */
+        public Builder lineitems(@Nullable List<PaymentPayoutLineitem> lineitems) {
+            this.lineitems = lineitems;
+            return this;
+        }
+
+        public Builder netAmount(@Nullable Double netAmount) {
+            this.netAmount = netAmount;
             return this;
         }
 
@@ -275,9 +422,11 @@ public class PaymentPayout {
 
         public PaymentPayout build() {
             return new PaymentPayout(
-                createdAt, currency, id,
-                notes, raw, status,
-                totalAmount, updatedAt);
+                accountId, arrivalAt, createdAt,
+                currency, feeAmount, id,
+                lineitems, netAmount, notes,
+                raw, status, totalAmount,
+                updatedAt);
         }
 
     }

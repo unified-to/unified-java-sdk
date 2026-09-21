@@ -199,11 +199,15 @@ public class AsyncUnifiedTo {
 
     private final AsyncGenai genai;
 
+    private final AsyncAgent agent;
+
     private final AsyncEmbedding embedding;
 
     private final AsyncModel model;
 
     private final AsyncPrompt prompt;
+
+    private final AsyncTask task;
 
     private final AsyncHris hris;
 
@@ -316,8 +320,6 @@ public class AsyncUnifiedTo {
     private final AsyncStorage storage;
 
     private final AsyncFile file;
-
-    private final AsyncTask task;
 
     private final AsyncChange change;
 
@@ -733,6 +735,10 @@ public class AsyncUnifiedTo {
         return genai;
     }
 
+    public AsyncAgent agent() {
+        return agent;
+    }
+
     public AsyncEmbedding embedding() {
         return embedding;
     }
@@ -743,6 +749,10 @@ public class AsyncUnifiedTo {
 
     public AsyncPrompt prompt() {
         return prompt;
+    }
+
+    public AsyncTask task() {
+        return task;
     }
 
     public AsyncHris hris() {
@@ -969,10 +979,6 @@ public class AsyncUnifiedTo {
         return file;
     }
 
-    public AsyncTask task() {
-        return task;
-    }
-
     public AsyncChange change() {
         return change;
     }
@@ -1156,9 +1162,11 @@ public class AsyncUnifiedTo {
         this.form = new AsyncForm(syncSDK.form(), sdkConfiguration);
         this.submission = new AsyncSubmission(syncSDK.submission(), sdkConfiguration);
         this.genai = new AsyncGenai(syncSDK.genai(), sdkConfiguration);
+        this.agent = new AsyncAgent(syncSDK.agent(), sdkConfiguration);
         this.embedding = new AsyncEmbedding(syncSDK.embedding(), sdkConfiguration);
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
+        this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
         this.attendance = new AsyncAttendance(syncSDK.attendance(), sdkConfiguration);
         this.bankaccount = new AsyncBankaccount(syncSDK.bankaccount(), sdkConfiguration);
@@ -1215,7 +1223,6 @@ public class AsyncUnifiedTo {
         this.post = new AsyncPost(syncSDK.post(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
-        this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
         this.change = new AsyncChange(syncSDK.change(), sdkConfiguration);
         this.ticketing = new AsyncTicketing(syncSDK.ticketing(), sdkConfiguration);
         this.customer = new AsyncCustomer(syncSDK.customer(), sdkConfiguration);

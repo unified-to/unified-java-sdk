@@ -189,6 +189,12 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions GENAI_PROMPT_WRITE = new PropertyConnectionPermissions("genai_prompt_write");
     public static final PropertyConnectionPermissions GENAI_EMBEDDING_READ = new PropertyConnectionPermissions("genai_embedding_read");
     public static final PropertyConnectionPermissions GENAI_EMBEDDING_WRITE = new PropertyConnectionPermissions("genai_embedding_write");
+    public static final PropertyConnectionPermissions GENAI_TASK_READ = new PropertyConnectionPermissions("genai_task_read");
+    public static final PropertyConnectionPermissions GENAI_TASK_WRITE = new PropertyConnectionPermissions("genai_task_write");
+    public static final PropertyConnectionPermissions GENAI_AGENT_READ = new PropertyConnectionPermissions("genai_agent_read");
+    public static final PropertyConnectionPermissions GENAI_AGENT_WRITE = new PropertyConnectionPermissions("genai_agent_write");
+    public static final PropertyConnectionPermissions GENAI_ORGANIZATION_READ = new PropertyConnectionPermissions("genai_organization_read");
+    public static final PropertyConnectionPermissions GENAI_ORGANIZATION_WRITE = new PropertyConnectionPermissions("genai_organization_write");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_READ = new PropertyConnectionPermissions("messaging_message_read");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_WRITE = new PropertyConnectionPermissions("messaging_message_write");
     public static final PropertyConnectionPermissions MESSAGING_CHANNEL_READ = new PropertyConnectionPermissions("messaging_channel_read");
@@ -580,6 +586,12 @@ public class PropertyConnectionPermissions {
         map.put("genai_prompt_write", GENAI_PROMPT_WRITE);
         map.put("genai_embedding_read", GENAI_EMBEDDING_READ);
         map.put("genai_embedding_write", GENAI_EMBEDDING_WRITE);
+        map.put("genai_task_read", GENAI_TASK_READ);
+        map.put("genai_task_write", GENAI_TASK_WRITE);
+        map.put("genai_agent_read", GENAI_AGENT_READ);
+        map.put("genai_agent_write", GENAI_AGENT_WRITE);
+        map.put("genai_organization_read", GENAI_ORGANIZATION_READ);
+        map.put("genai_organization_write", GENAI_ORGANIZATION_WRITE);
         map.put("messaging_message_read", MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", MESSAGING_CHANNEL_READ);
@@ -903,6 +915,12 @@ public class PropertyConnectionPermissions {
         map.put("genai_prompt_write", PropertyConnectionPermissionsEnum.GENAI_PROMPT_WRITE);
         map.put("genai_embedding_read", PropertyConnectionPermissionsEnum.GENAI_EMBEDDING_READ);
         map.put("genai_embedding_write", PropertyConnectionPermissionsEnum.GENAI_EMBEDDING_WRITE);
+        map.put("genai_task_read", PropertyConnectionPermissionsEnum.GENAI_TASK_READ);
+        map.put("genai_task_write", PropertyConnectionPermissionsEnum.GENAI_TASK_WRITE);
+        map.put("genai_agent_read", PropertyConnectionPermissionsEnum.GENAI_AGENT_READ);
+        map.put("genai_agent_write", PropertyConnectionPermissionsEnum.GENAI_AGENT_WRITE);
+        map.put("genai_organization_read", PropertyConnectionPermissionsEnum.GENAI_ORGANIZATION_READ);
+        map.put("genai_organization_write", PropertyConnectionPermissionsEnum.GENAI_ORGANIZATION_WRITE);
         map.put("messaging_message_read", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", PropertyConnectionPermissionsEnum.MESSAGING_CHANNEL_READ);
@@ -1227,6 +1245,12 @@ public class PropertyConnectionPermissions {
         GENAI_PROMPT_WRITE("genai_prompt_write"),
         GENAI_EMBEDDING_READ("genai_embedding_read"),
         GENAI_EMBEDDING_WRITE("genai_embedding_write"),
+        GENAI_TASK_READ("genai_task_read"),
+        GENAI_TASK_WRITE("genai_task_write"),
+        GENAI_AGENT_READ("genai_agent_read"),
+        GENAI_AGENT_WRITE("genai_agent_write"),
+        GENAI_ORGANIZATION_READ("genai_organization_read"),
+        GENAI_ORGANIZATION_WRITE("genai_organization_write"),
         MESSAGING_MESSAGE_READ("messaging_message_read"),
         MESSAGING_MESSAGE_WRITE("messaging_message_write"),
         MESSAGING_CHANNEL_READ("messaging_channel_read"),

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -45,6 +46,11 @@ public class AccountingLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("exchange_rate")
+    private Double exchangeRate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fees")
     private List<AccountingFee> fees;
 
@@ -52,6 +58,11 @@ public class AccountingLineitem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_billable")
+    private Boolean isBillable;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -87,6 +98,11 @@ public class AccountingLineitem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("project_id")
+    private String projectId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -135,8 +151,10 @@ public class AccountingLineitem {
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("discount_amount") @Nullable Double discountAmount,
+            @JsonProperty("exchange_rate") @Nullable Double exchangeRate,
             @JsonProperty("fees") @Nullable List<AccountingFee> fees,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_billable") @Nullable Boolean isBillable,
             @JsonProperty("item_description") @Nullable String itemDescription,
             @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("item_name") @Nullable String itemName,
@@ -144,6 +162,7 @@ public class AccountingLineitem {
             @JsonProperty("item_variants") @Nullable List<AccountingReference> itemVariants,
             @JsonProperty("locations") @Nullable List<AccountingReference> locations,
             @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("refund_amount") @Nullable Double refundAmount,
             @JsonProperty("refunded_at") @Nullable OffsetDateTime refundedAt,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
@@ -157,8 +176,10 @@ public class AccountingLineitem {
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.discountAmount = discountAmount;
+        this.exchangeRate = exchangeRate;
         this.fees = fees;
         this.id = id;
+        this.isBillable = isBillable;
         this.itemDescription = itemDescription;
         this.itemId = itemId;
         this.itemName = itemName;
@@ -166,6 +187,7 @@ public class AccountingLineitem {
         this.itemVariants = itemVariants;
         this.locations = locations;
         this.notes = notes;
+        this.projectId = projectId;
         this.refundAmount = refundAmount;
         this.refundedAt = refundedAt;
         this.taxAmount = taxAmount;
@@ -178,6 +200,7 @@ public class AccountingLineitem {
     
     public AccountingLineitem() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -207,12 +230,20 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    public Optional<Double> exchangeRate() {
+        return Optional.ofNullable(this.exchangeRate);
+    }
+
     public Optional<List<AccountingFee>> fees() {
         return Optional.ofNullable(this.fees);
     }
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<Boolean> isBillable() {
+        return Optional.ofNullable(this.isBillable);
     }
 
     public Optional<String> itemDescription() {
@@ -241,6 +272,10 @@ public class AccountingLineitem {
 
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
+    }
+
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
     public Optional<Double> refundAmount() {
@@ -310,6 +345,12 @@ public class AccountingLineitem {
     }
 
 
+    public AccountingLineitem withExchangeRate(@Nullable Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
+        return this;
+    }
+
+
     public AccountingLineitem withFees(@Nullable List<AccountingFee> fees) {
         this.fees = fees;
         return this;
@@ -318,6 +359,12 @@ public class AccountingLineitem {
 
     public AccountingLineitem withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public AccountingLineitem withIsBillable(@Nullable Boolean isBillable) {
+        this.isBillable = isBillable;
         return this;
     }
 
@@ -360,6 +407,12 @@ public class AccountingLineitem {
 
     public AccountingLineitem withNotes(@Nullable String notes) {
         this.notes = notes;
+        return this;
+    }
+
+
+    public AccountingLineitem withProjectId(@Nullable String projectId) {
+        this.projectId = projectId;
         return this;
     }
 
@@ -427,8 +480,10 @@ public class AccountingLineitem {
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.discountAmount, other.discountAmount) &&
+            Utils.enhancedDeepEquals(this.exchangeRate, other.exchangeRate) &&
             Utils.enhancedDeepEquals(this.fees, other.fees) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isBillable, other.isBillable) &&
             Utils.enhancedDeepEquals(this.itemDescription, other.itemDescription) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.itemName, other.itemName) &&
@@ -436,6 +491,7 @@ public class AccountingLineitem {
             Utils.enhancedDeepEquals(this.itemVariants, other.itemVariants) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.refundAmount, other.refundAmount) &&
             Utils.enhancedDeepEquals(this.refundedAt, other.refundedAt) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
@@ -450,10 +506,11 @@ public class AccountingLineitem {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, categoryIds, contactId,
-            createdAt, discountAmount, fees,
-            id, itemDescription, itemId,
-            itemName, itemSku, itemVariants,
-            locations, notes, refundAmount,
+            createdAt, discountAmount, exchangeRate,
+            fees, id, isBillable,
+            itemDescription, itemId, itemName,
+            itemSku, itemVariants, locations,
+            notes, projectId, refundAmount,
             refundedAt, taxAmount, taxrateId,
             totalAmount, unitAmount, unitQuantity,
             updatedAt);
@@ -467,8 +524,10 @@ public class AccountingLineitem {
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "discountAmount", discountAmount,
+                "exchangeRate", exchangeRate,
                 "fees", fees,
                 "id", id,
+                "isBillable", isBillable,
                 "itemDescription", itemDescription,
                 "itemId", itemId,
                 "itemName", itemName,
@@ -476,6 +535,7 @@ public class AccountingLineitem {
                 "itemVariants", itemVariants,
                 "locations", locations,
                 "notes", notes,
+                "projectId", projectId,
                 "refundAmount", refundAmount,
                 "refundedAt", refundedAt,
                 "taxAmount", taxAmount,
@@ -499,9 +559,13 @@ public class AccountingLineitem {
 
         private Double discountAmount;
 
+        private Double exchangeRate;
+
         private List<AccountingFee> fees;
 
         private String id;
+
+        private Boolean isBillable;
 
         private String itemDescription;
 
@@ -516,6 +580,8 @@ public class AccountingLineitem {
         private List<AccountingReference> locations;
 
         private String notes;
+
+        private String projectId;
 
         private Double refundAmount;
 
@@ -562,6 +628,11 @@ public class AccountingLineitem {
             return this;
         }
 
+        public Builder exchangeRate(@Nullable Double exchangeRate) {
+            this.exchangeRate = exchangeRate;
+            return this;
+        }
+
         public Builder fees(@Nullable List<AccountingFee> fees) {
             this.fees = fees;
             return this;
@@ -569,6 +640,11 @@ public class AccountingLineitem {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder isBillable(@Nullable Boolean isBillable) {
+            this.isBillable = isBillable;
             return this;
         }
 
@@ -604,6 +680,11 @@ public class AccountingLineitem {
 
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
+            return this;
+        }
+
+        public Builder projectId(@Nullable String projectId) {
+            this.projectId = projectId;
             return this;
         }
 
@@ -650,10 +731,11 @@ public class AccountingLineitem {
         public AccountingLineitem build() {
             return new AccountingLineitem(
                 accountId, categoryIds, contactId,
-                createdAt, discountAmount, fees,
-                id, itemDescription, itemId,
-                itemName, itemSku, itemVariants,
-                locations, notes, refundAmount,
+                createdAt, discountAmount, exchangeRate,
+                fees, id, isBillable,
+                itemDescription, itemId, itemName,
+                itemSku, itemVariants, locations,
+                notes, projectId, refundAmount,
                 refundedAt, taxAmount, taxrateId,
                 totalAmount, unitAmount, unitQuantity,
                 updatedAt);

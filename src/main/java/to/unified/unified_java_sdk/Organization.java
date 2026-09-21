@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
@@ -18,6 +21,9 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingOrganizationRe
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetRepoOrganizationResponse;
@@ -27,40 +33,58 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizations
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListRepoOrganizationsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveRepoOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
 import to.unified.unified_java_sdk.operations.CreateAdsOrganization;
+import to.unified.unified_java_sdk.operations.CreateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.CreateRepoOrganization;
 import to.unified.unified_java_sdk.operations.GetAccountingOrganization;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
+import to.unified.unified_java_sdk.operations.GetGenaiOrganization;
 import to.unified.unified_java_sdk.operations.GetRepoOrganization;
 import to.unified.unified_java_sdk.operations.ListAccountingOrganizations;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
+import to.unified.unified_java_sdk.operations.ListGenaiOrganizations;
 import to.unified.unified_java_sdk.operations.ListRepoOrganizations;
 import to.unified.unified_java_sdk.operations.PatchAdsOrganization;
+import to.unified.unified_java_sdk.operations.PatchGenaiOrganization;
 import to.unified.unified_java_sdk.operations.PatchRepoOrganization;
 import to.unified.unified_java_sdk.operations.RemoveAdsOrganization;
+import to.unified.unified_java_sdk.operations.RemoveGenaiOrganization;
 import to.unified.unified_java_sdk.operations.RemoveRepoOrganization;
 import to.unified.unified_java_sdk.operations.UpdateAdsOrganization;
+import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.UpdateRepoOrganization;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -103,6 +127,28 @@ public class Organization {
     public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
         RequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
               = new CreateAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create an organization
+     * 
+     * @return The call builder
+     */
+    public CreateGenaiOrganizationRequestBuilder createGenaiOrganization() {
+        return new CreateGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateGenaiOrganizationResponse createGenaiOrganization(@Nonnull CreateGenaiOrganizationRequest request) {
+        RequestOperation<CreateGenaiOrganizationRequest, CreateGenaiOrganizationResponse> operation
+              = new CreateGenaiOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -177,6 +223,28 @@ public class Organization {
      * 
      * @return The call builder
      */
+    public GetGenaiOrganizationRequestBuilder getGenaiOrganization() {
+        return new GetGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiOrganizationResponse getGenaiOrganization(@Nonnull GetGenaiOrganizationRequest request) {
+        RequestOperation<GetGenaiOrganizationRequest, GetGenaiOrganizationResponse> operation
+              = new GetGenaiOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an organization
+     * 
+     * @return The call builder
+     */
     public GetRepoOrganizationRequestBuilder getRepoOrganization() {
         return new GetRepoOrganizationRequestBuilder(sdkConfiguration);
     }
@@ -243,6 +311,28 @@ public class Organization {
      * 
      * @return The call builder
      */
+    public ListGenaiOrganizationsRequestBuilder listGenaiOrganizations() {
+        return new ListGenaiOrganizationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all organizations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiOrganizationsResponse listGenaiOrganizations(@Nonnull ListGenaiOrganizationsRequest request) {
+        RequestOperation<ListGenaiOrganizationsRequest, ListGenaiOrganizationsResponse> operation
+              = new ListGenaiOrganizations.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all organizations
+     * 
+     * @return The call builder
+     */
     public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
         return new ListRepoOrganizationsRequestBuilder(sdkConfiguration);
     }
@@ -279,6 +369,28 @@ public class Organization {
     public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
         RequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
               = new PatchAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @return The call builder
+     */
+    public PatchGenaiOrganizationRequestBuilder patchGenaiOrganization() {
+        return new PatchGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchGenaiOrganizationResponse patchGenaiOrganization(@Nonnull PatchGenaiOrganizationRequest request) {
+        RequestOperation<PatchGenaiOrganizationRequest, PatchGenaiOrganizationResponse> operation
+              = new PatchGenaiOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -331,6 +443,28 @@ public class Organization {
      * 
      * @return The call builder
      */
+    public RemoveGenaiOrganizationRequestBuilder removeGenaiOrganization() {
+        return new RemoveGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiOrganizationResponse removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request) {
+        RequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
+              = new RemoveGenaiOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove an organization
+     * 
+     * @return The call builder
+     */
     public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
         return new RemoveRepoOrganizationRequestBuilder(sdkConfiguration);
     }
@@ -367,6 +501,28 @@ public class Organization {
     public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
         RequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
               = new UpdateAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @return The call builder
+     */
+    public UpdateGenaiOrganizationRequestBuilder updateGenaiOrganization() {
+        return new UpdateGenaiOrganizationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an organization
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateGenaiOrganizationResponse updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request) {
+        RequestOperation<UpdateGenaiOrganizationRequest, UpdateGenaiOrganizationResponse> operation
+              = new UpdateGenaiOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

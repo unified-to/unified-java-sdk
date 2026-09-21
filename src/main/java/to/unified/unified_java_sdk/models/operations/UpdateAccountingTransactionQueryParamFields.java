@@ -29,6 +29,9 @@ public enum UpdateAccountingTransactionQueryParamFields {
     ORGANIZATION_ID("organization_id"),
     CATEGORY_IDS("category_ids"),
     PROJECT_ID("project_id"),
+    TRANSACTION_AT("transaction_at"),
+    EXCHANGE_RATE("exchange_rate"),
+    STATUS("status"),
     RAW("raw");
 
     @JsonValue

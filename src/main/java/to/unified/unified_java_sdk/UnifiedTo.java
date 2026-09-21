@@ -320,6 +320,9 @@ public class UnifiedTo {
     private final Genai genai;
 
 
+    private final Agent agent;
+
+
     private final Embedding embedding;
 
 
@@ -327,6 +330,9 @@ public class UnifiedTo {
 
 
     private final Prompt prompt;
+
+
+    private final Task task;
 
 
     private final Hris hris;
@@ -495,9 +501,6 @@ public class UnifiedTo {
 
 
     private final File file;
-
-
-    private final Task task;
 
 
     private final Change change;
@@ -1028,6 +1031,11 @@ public class UnifiedTo {
     }
 
 
+    public Agent agent() {
+        return agent;
+    }
+
+
     public Embedding embedding() {
         return embedding;
     }
@@ -1040,6 +1048,11 @@ public class UnifiedTo {
 
     public Prompt prompt() {
         return prompt;
+    }
+
+
+    public Task task() {
+        return task;
     }
 
 
@@ -1320,11 +1333,6 @@ public class UnifiedTo {
 
     public File file() {
         return file;
-    }
-
-
-    public Task task() {
-        return task;
     }
 
 
@@ -1662,9 +1670,11 @@ public class UnifiedTo {
         this.form = new Form(sdkConfiguration);
         this.submission = new Submission(sdkConfiguration);
         this.genai = new Genai(sdkConfiguration);
+        this.agent = new Agent(sdkConfiguration);
         this.embedding = new Embedding(sdkConfiguration);
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
+        this.task = new Task(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
         this.attendance = new Attendance(sdkConfiguration);
         this.bankaccount = new Bankaccount(sdkConfiguration);
@@ -1721,7 +1731,6 @@ public class UnifiedTo {
         this.post = new Post(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
-        this.task = new Task(sdkConfiguration);
         this.change = new Change(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);

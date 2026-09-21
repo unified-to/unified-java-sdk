@@ -109,6 +109,9 @@ WebhookObjectType custom = WebhookObjectType.of("custom_value");
 | `GENAI_MODEL`                    | genai_model                      |
 | `GENAI_PROMPT`                   | genai_prompt                     |
 | `GENAI_EMBEDDING`                | genai_embedding                  |
+| `GENAI_TASK`                     | genai_task                       |
+| `GENAI_AGENT`                    | genai_agent                      |
+| `GENAI_ORGANIZATION`             | genai_organization               |
 | `MESSAGING_MESSAGE`              | messaging_message                |
 | `MESSAGING_CHANNEL`              | messaging_channel                |
 | `MESSAGING_EVENT`                | messaging_event                  |

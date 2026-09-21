@@ -16,6 +16,11 @@ public enum GetPaymentPayoutQueryParamFields {
     CURRENCY("currency"),
     NOTES("notes"),
     STATUS("status"),
+    ARRIVAL_AT("arrival_at"),
+    FEE_AMOUNT("fee_amount"),
+    NET_AMOUNT("net_amount"),
+    ACCOUNT_ID("account_id"),
+    LINEITEMS("lineitems"),
     RAW("raw");
 
     @JsonValue
