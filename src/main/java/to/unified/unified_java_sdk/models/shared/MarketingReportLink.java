@@ -17,32 +17,44 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class MarketingReportLink {
-
+    /**
+     * Percentage of total clicks
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("click_percentage")
     private Double clickPercentage;
 
-
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_click_at")
     private OffsetDateTime lastClickAt;
 
-
+    /**
+     * Total clicks on this link
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_clicks")
     private Double totalClicks;
 
-
+    /**
+     * Percentage of unique clicks
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique_click_percentage")
     private Double uniqueClickPercentage;
 
-
+    /**
+     * Unique clicks on this link
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique_clicks")
     private Double uniqueClicks;
 
-
+    /**
+     * The URL
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -68,26 +80,44 @@ public class MarketingReportLink {
             null, null, null);
     }
 
+    /**
+     * Percentage of total clicks
+     */
     public Optional<Double> clickPercentage() {
         return Optional.ofNullable(this.clickPercentage);
     }
 
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastClickAt() {
         return Optional.ofNullable(this.lastClickAt);
     }
 
+    /**
+     * Total clicks on this link
+     */
     public Optional<Double> totalClicks() {
         return Optional.ofNullable(this.totalClicks);
     }
 
+    /**
+     * Percentage of unique clicks
+     */
     public Optional<Double> uniqueClickPercentage() {
         return Optional.ofNullable(this.uniqueClickPercentage);
     }
 
+    /**
+     * Unique clicks on this link
+     */
     public Optional<Double> uniqueClicks() {
         return Optional.ofNullable(this.uniqueClicks);
     }
 
+    /**
+     * The URL
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -97,36 +127,54 @@ public class MarketingReportLink {
     }
 
 
+    /**
+     * Percentage of total clicks
+     */
     public MarketingReportLink withClickPercentage(@Nullable Double clickPercentage) {
         this.clickPercentage = clickPercentage;
         return this;
     }
 
 
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReportLink withLastClickAt(@Nullable OffsetDateTime lastClickAt) {
         this.lastClickAt = lastClickAt;
         return this;
     }
 
 
+    /**
+     * Total clicks on this link
+     */
     public MarketingReportLink withTotalClicks(@Nullable Double totalClicks) {
         this.totalClicks = totalClicks;
         return this;
     }
 
 
+    /**
+     * Percentage of unique clicks
+     */
     public MarketingReportLink withUniqueClickPercentage(@Nullable Double uniqueClickPercentage) {
         this.uniqueClickPercentage = uniqueClickPercentage;
         return this;
     }
 
 
+    /**
+     * Unique clicks on this link
+     */
     public MarketingReportLink withUniqueClicks(@Nullable Double uniqueClicks) {
         this.uniqueClicks = uniqueClicks;
         return this;
     }
 
 
+    /**
+     * The URL
+     */
     public MarketingReportLink withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -188,31 +236,49 @@ public class MarketingReportLink {
           // force use of static builder() method
         }
 
+        /**
+         * Percentage of total clicks
+         */
         public Builder clickPercentage(@Nullable Double clickPercentage) {
             this.clickPercentage = clickPercentage;
             return this;
         }
 
+        /**
+         * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastClickAt(@Nullable OffsetDateTime lastClickAt) {
             this.lastClickAt = lastClickAt;
             return this;
         }
 
+        /**
+         * Total clicks on this link
+         */
         public Builder totalClicks(@Nullable Double totalClicks) {
             this.totalClicks = totalClicks;
             return this;
         }
 
+        /**
+         * Percentage of unique clicks
+         */
         public Builder uniqueClickPercentage(@Nullable Double uniqueClickPercentage) {
             this.uniqueClickPercentage = uniqueClickPercentage;
             return this;
         }
 
+        /**
+         * Unique clicks on this link
+         */
         public Builder uniqueClicks(@Nullable Double uniqueClicks) {
             this.uniqueClicks = uniqueClicks;
             return this;
         }
 
+        /**
+         * The URL
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

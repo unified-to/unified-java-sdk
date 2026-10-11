@@ -19,62 +19,86 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SigningSignatory {
-
+    /**
+     * The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Reason for declining (if status is DECLINED)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decline_reason")
     private String declineReason;
 
-
+    /**
+     * Parent signing document; points to SigningDocument
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_id")
     private String documentId;
 
-
+    /**
+     * Email address of the signatory
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     private String email;
 
-
+    /**
+     * Unique identifier for this signatory
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Full name of the signatory
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Signing order (1, 2, 3...)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     private Double order;
 
-
+    /**
+     * The raw data returned by the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Role of the signatory
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     private SigningSignatoryRole role;
 
-
+    /**
+     * When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed_at")
     private OffsetDateTime signedAt;
 
-
+    /**
+     * Current status of this signatory
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private SigningSignatoryStatus status;
 
-
+    /**
+     * The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -114,50 +138,86 @@ public class SigningSignatory {
             null, null, null);
     }
 
+    /**
+     * The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Reason for declining (if status is DECLINED)
+     */
     public Optional<String> declineReason() {
         return Optional.ofNullable(this.declineReason);
     }
 
+    /**
+     * Parent signing document; points to SigningDocument
+     */
     public Optional<String> documentId() {
         return Optional.ofNullable(this.documentId);
     }
 
+    /**
+     * Email address of the signatory
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
 
+    /**
+     * Unique identifier for this signatory
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Full name of the signatory
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Signing order (1, 2, 3...)
+     */
     public Optional<Double> order() {
         return Optional.ofNullable(this.order);
     }
 
+    /**
+     * The raw data returned by the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Role of the signatory
+     */
     public Optional<SigningSignatoryRole> role() {
         return Optional.ofNullable(this.role);
     }
 
+    /**
+     * When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> signedAt() {
         return Optional.ofNullable(this.signedAt);
     }
 
+    /**
+     * Current status of this signatory
+     */
     public Optional<SigningSignatoryStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -167,72 +227,108 @@ public class SigningSignatory {
     }
 
 
+    /**
+     * The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningSignatory withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Reason for declining (if status is DECLINED)
+     */
     public SigningSignatory withDeclineReason(@Nullable String declineReason) {
         this.declineReason = declineReason;
         return this;
     }
 
 
+    /**
+     * Parent signing document; points to SigningDocument
+     */
     public SigningSignatory withDocumentId(@Nullable String documentId) {
         this.documentId = documentId;
         return this;
     }
 
 
+    /**
+     * Email address of the signatory
+     */
     public SigningSignatory withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this signatory
+     */
     public SigningSignatory withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Full name of the signatory
+     */
     public SigningSignatory withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Signing order (1, 2, 3...)
+     */
     public SigningSignatory withOrder(@Nullable Double order) {
         this.order = order;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration
+     */
     public SigningSignatory withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Role of the signatory
+     */
     public SigningSignatory withRole(@Nullable SigningSignatoryRole role) {
         this.role = role;
         return this;
     }
 
 
+    /**
+     * When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningSignatory withSignedAt(@Nullable OffsetDateTime signedAt) {
         this.signedAt = signedAt;
         return this;
     }
 
 
+    /**
+     * Current status of this signatory
+     */
     public SigningSignatory withStatus(@Nullable SigningSignatoryStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningSignatory withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -320,61 +416,97 @@ public class SigningSignatory {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Reason for declining (if status is DECLINED)
+         */
         public Builder declineReason(@Nullable String declineReason) {
             this.declineReason = declineReason;
             return this;
         }
 
+        /**
+         * Parent signing document; points to SigningDocument
+         */
         public Builder documentId(@Nullable String documentId) {
             this.documentId = documentId;
             return this;
         }
 
+        /**
+         * Email address of the signatory
+         */
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
+        /**
+         * Unique identifier for this signatory
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Full name of the signatory
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Signing order (1, 2, 3...)
+         */
         public Builder order(@Nullable Double order) {
             this.order = order;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Role of the signatory
+         */
         public Builder role(@Nullable SigningSignatoryRole role) {
             this.role = role;
             return this;
         }
 
+        /**
+         * When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder signedAt(@Nullable OffsetDateTime signedAt) {
             this.signedAt = signedAt;
             return this;
         }
 
+        /**
+         * Current status of this signatory
+         */
         public Builder status(@Nullable SigningSignatoryStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

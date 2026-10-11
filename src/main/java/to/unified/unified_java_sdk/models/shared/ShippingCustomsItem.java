@@ -16,12 +16,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingCustomsItem {
-
+    /**
+     * Value per unit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * Country of origin (ISO code)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_of_origin")
     private String countryOfOrigin;
@@ -31,27 +35,37 @@ public class ShippingCustomsItem {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Item description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * HS code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harmonized_tariff_code")
     private String harmonizedTariffCode;
 
-
+    /**
+     * Quantity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     private Double quantity;
 
-
+    /**
+     * SKU
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     private String sku;
 
-
+    /**
+     * Weight per unit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     private Double weight;
@@ -89,10 +103,16 @@ public class ShippingCustomsItem {
             null, null, null);
     }
 
+    /**
+     * Value per unit
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * Country of origin (ISO code)
+     */
     public Optional<String> countryOfOrigin() {
         return Optional.ofNullable(this.countryOfOrigin);
     }
@@ -101,22 +121,37 @@ public class ShippingCustomsItem {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Item description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * HS code
+     */
     public Optional<String> harmonizedTariffCode() {
         return Optional.ofNullable(this.harmonizedTariffCode);
     }
 
+    /**
+     * Quantity
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
 
+    /**
+     * SKU
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Weight per unit
+     */
     public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -130,12 +165,18 @@ public class ShippingCustomsItem {
     }
 
 
+    /**
+     * Value per unit
+     */
     public ShippingCustomsItem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * Country of origin (ISO code)
+     */
     public ShippingCustomsItem withCountryOfOrigin(@Nullable String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
@@ -148,30 +189,45 @@ public class ShippingCustomsItem {
     }
 
 
+    /**
+     * Item description
+     */
     public ShippingCustomsItem withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * HS code
+     */
     public ShippingCustomsItem withHarmonizedTariffCode(@Nullable String harmonizedTariffCode) {
         this.harmonizedTariffCode = harmonizedTariffCode;
         return this;
     }
 
 
+    /**
+     * Quantity
+     */
     public ShippingCustomsItem withQuantity(@Nullable Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
 
+    /**
+     * SKU
+     */
     public ShippingCustomsItem withSku(@Nullable String sku) {
         this.sku = sku;
         return this;
     }
 
 
+    /**
+     * Weight per unit
+     */
     public ShippingCustomsItem withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
@@ -252,11 +308,17 @@ public class ShippingCustomsItem {
           // force use of static builder() method
         }
 
+        /**
+         * Value per unit
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * Country of origin (ISO code)
+         */
         public Builder countryOfOrigin(@Nullable String countryOfOrigin) {
             this.countryOfOrigin = countryOfOrigin;
             return this;
@@ -267,26 +329,41 @@ public class ShippingCustomsItem {
             return this;
         }
 
+        /**
+         * Item description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * HS code
+         */
         public Builder harmonizedTariffCode(@Nullable String harmonizedTariffCode) {
             this.harmonizedTariffCode = harmonizedTariffCode;
             return this;
         }
 
+        /**
+         * Quantity
+         */
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
+        /**
+         * SKU
+         */
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
+        /**
+         * Weight per unit
+         */
         public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;

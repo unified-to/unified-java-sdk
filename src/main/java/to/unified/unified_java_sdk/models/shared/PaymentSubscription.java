@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentSubscription {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_at")
     private OffsetDateTime canceledAt;
 
-
+    /**
+     * a reference to an Accounting Contact (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -40,22 +46,32 @@ public class PaymentSubscription {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_end_at")
     private OffsetDateTime currentPeriodEndAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_start_at")
     private OffsetDateTime currentPeriodStartAt;
 
-
+    /**
+     * The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only
+     * applies when the interval_unit is MONTH.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_month")
     private Double dayOfMonth;
 
-
+    /**
+     * The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only
+     * applies when the interval_unit is WEEK.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_week")
     private Double dayOfWeek;
@@ -65,7 +81,9 @@ public class PaymentSubscription {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -75,7 +93,9 @@ public class PaymentSubscription {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The number of intervals between charges within the interval_unit. Defaults to 1.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     private Double interval;
@@ -85,7 +105,9 @@ public class PaymentSubscription {
     @JsonProperty("interval_unit")
     private IntervalUnit intervalUnit;
 
-
+    /**
+     * a reference to an Accounting Invoice (reference to AccountingInvoice)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private String invoiceId;
@@ -95,7 +117,9 @@ public class PaymentSubscription {
     @JsonProperty("lineitems")
     private List<PaymentLineitem> lineitems;
 
-
+    /**
+     * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
     private Double month;
@@ -105,7 +129,9 @@ public class PaymentSubscription {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -120,7 +146,9 @@ public class PaymentSubscription {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -181,14 +209,23 @@ public class PaymentSubscription {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> canceledAt() {
         return Optional.ofNullable(this.canceledAt);
     }
 
+    /**
+     * a reference to an Accounting Contact (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -197,18 +234,32 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> currentPeriodEndAt() {
         return Optional.ofNullable(this.currentPeriodEndAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> currentPeriodStartAt() {
         return Optional.ofNullable(this.currentPeriodStartAt);
     }
 
+    /**
+     * The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only
+     * applies when the interval_unit is MONTH.
+     */
     public Optional<Double> dayOfMonth() {
         return Optional.ofNullable(this.dayOfMonth);
     }
 
+    /**
+     * The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only
+     * applies when the interval_unit is WEEK.
+     */
     public Optional<Double> dayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
@@ -217,6 +268,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -225,6 +279,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The number of intervals between charges within the interval_unit. Defaults to 1.
+     */
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -233,6 +290,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.intervalUnit);
     }
 
+    /**
+     * a reference to an Accounting Invoice (reference to AccountingInvoice)
+     */
     public Optional<String> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
     }
@@ -241,6 +301,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
+     */
     public Optional<Double> month() {
         return Optional.ofNullable(this.month);
     }
@@ -249,6 +312,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -261,6 +327,9 @@ public class PaymentSubscription {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -270,18 +339,27 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withCanceledAt(@Nullable OffsetDateTime canceledAt) {
         this.canceledAt = canceledAt;
         return this;
     }
 
 
+    /**
+     * a reference to an Accounting Contact (reference to AccountingContact)
+     */
     public PaymentSubscription withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -294,24 +372,38 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withCurrentPeriodEndAt(@Nullable OffsetDateTime currentPeriodEndAt) {
         this.currentPeriodEndAt = currentPeriodEndAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withCurrentPeriodStartAt(@Nullable OffsetDateTime currentPeriodStartAt) {
         this.currentPeriodStartAt = currentPeriodStartAt;
         return this;
     }
 
 
+    /**
+     * The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only
+     * applies when the interval_unit is MONTH.
+     */
     public PaymentSubscription withDayOfMonth(@Nullable Double dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
     }
 
 
+    /**
+     * The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only
+     * applies when the interval_unit is WEEK.
+     */
     public PaymentSubscription withDayOfWeek(@Nullable Double dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -324,6 +416,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -336,6 +431,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * The number of intervals between charges within the interval_unit. Defaults to 1.
+     */
     public PaymentSubscription withInterval(@Nullable Double interval) {
         this.interval = interval;
         return this;
@@ -348,6 +446,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * a reference to an Accounting Invoice (reference to AccountingInvoice)
+     */
     public PaymentSubscription withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -360,6 +461,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
+     */
     public PaymentSubscription withMonth(@Nullable Double month) {
         this.month = month;
         return this;
@@ -372,6 +476,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -390,6 +497,9 @@ public class PaymentSubscription {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentSubscription withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -516,16 +626,25 @@ public class PaymentSubscription {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder canceledAt(@Nullable OffsetDateTime canceledAt) {
             this.canceledAt = canceledAt;
             return this;
         }
 
+        /**
+         * a reference to an Accounting Contact (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -536,21 +655,35 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder currentPeriodEndAt(@Nullable OffsetDateTime currentPeriodEndAt) {
             this.currentPeriodEndAt = currentPeriodEndAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder currentPeriodStartAt(@Nullable OffsetDateTime currentPeriodStartAt) {
             this.currentPeriodStartAt = currentPeriodStartAt;
             return this;
         }
 
+        /**
+         * The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only
+         * applies when the interval_unit is MONTH.
+         */
         public Builder dayOfMonth(@Nullable Double dayOfMonth) {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
 
+        /**
+         * The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only
+         * applies when the interval_unit is WEEK.
+         */
         public Builder dayOfWeek(@Nullable Double dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
@@ -561,6 +694,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -571,6 +707,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * The number of intervals between charges within the interval_unit. Defaults to 1.
+         */
         public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
@@ -581,6 +720,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * a reference to an Accounting Invoice (reference to AccountingInvoice)
+         */
         public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
@@ -591,6 +733,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
+         */
         public Builder month(@Nullable Double month) {
             this.month = month;
             return this;
@@ -601,6 +746,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -616,6 +764,9 @@ public class PaymentSubscription {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

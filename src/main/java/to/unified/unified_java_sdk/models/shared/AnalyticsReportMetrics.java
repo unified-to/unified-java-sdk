@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AnalyticsReportMetrics {
-
+    /**
+     * new vs returning
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     private AnalyticsReportMetricsDimension dimension;
@@ -26,7 +28,9 @@ public class AnalyticsReportMetrics {
     @JsonProperty("dimension_value")
     private String dimensionValue;
 
-
+    /**
+     * Traffic metrics
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AnalyticsReportMetricsType type;
@@ -53,6 +57,9 @@ public class AnalyticsReportMetrics {
             null);
     }
 
+    /**
+     * new vs returning
+     */
     public Optional<AnalyticsReportMetricsDimension> dimension() {
         return Optional.ofNullable(this.dimension);
     }
@@ -61,6 +68,9 @@ public class AnalyticsReportMetrics {
         return Optional.ofNullable(this.dimensionValue);
     }
 
+    /**
+     * Traffic metrics
+     */
     public Optional<AnalyticsReportMetricsType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -74,6 +84,9 @@ public class AnalyticsReportMetrics {
     }
 
 
+    /**
+     * new vs returning
+     */
     public AnalyticsReportMetrics withDimension(@Nullable AnalyticsReportMetricsDimension dimension) {
         this.dimension = dimension;
         return this;
@@ -86,6 +99,9 @@ public class AnalyticsReportMetrics {
     }
 
 
+    /**
+     * Traffic metrics
+     */
     public AnalyticsReportMetrics withType(@Nullable AnalyticsReportMetricsType type) {
         this.type = type;
         return this;
@@ -145,6 +161,9 @@ public class AnalyticsReportMetrics {
           // force use of static builder() method
         }
 
+        /**
+         * new vs returning
+         */
         public Builder dimension(@Nullable AnalyticsReportMetricsDimension dimension) {
             this.dimension = dimension;
             return this;
@@ -155,6 +174,9 @@ public class AnalyticsReportMetrics {
             return this;
         }
 
+        /**
+         * Traffic metrics
+         */
         public Builder type(@Nullable AnalyticsReportMetricsType type) {
             this.type = type;
             return this;

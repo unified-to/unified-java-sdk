@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingRate {
-
+    /**
+     * Reference to the carrier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_id")
     private String carrierId;
@@ -36,7 +38,9 @@ public class ShippingRate {
     @JsonProperty("from_address")
     private PropertyShippingRateFromAddress fromAddress;
 
-
+    /**
+     * Unique identifier for this rate object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -58,12 +62,16 @@ public class ShippingRate {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ship_by_at")
     private OffsetDateTime shipByAt;
 
-
+    /**
+     * Reference to the shipping object (if rate is for existing shipment)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     private String shipmentId;
@@ -106,6 +114,9 @@ public class ShippingRate {
             null);
     }
 
+    /**
+     * Reference to the carrier
+     */
     public Optional<String> carrierId() {
         return Optional.ofNullable(this.carrierId);
     }
@@ -121,6 +132,9 @@ public class ShippingRate {
         return Optional.ofNullable(this.fromAddress);
     }
 
+    /**
+     * Unique identifier for this rate object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -140,10 +154,16 @@ public class ShippingRate {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> shipByAt() {
         return Optional.ofNullable(this.shipByAt);
     }
 
+    /**
+     * Reference to the shipping object (if rate is for existing shipment)
+     */
     public Optional<String> shipmentId() {
         return Optional.ofNullable(this.shipmentId);
     }
@@ -160,6 +180,9 @@ public class ShippingRate {
     }
 
 
+    /**
+     * Reference to the carrier
+     */
     public ShippingRate withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
         return this;
@@ -181,6 +204,9 @@ public class ShippingRate {
     }
 
 
+    /**
+     * Unique identifier for this rate object
+     */
     public ShippingRate withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -208,12 +234,18 @@ public class ShippingRate {
     }
 
 
+    /**
+     * Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingRate withShipByAt(@Nullable OffsetDateTime shipByAt) {
         this.shipByAt = shipByAt;
         return this;
     }
 
 
+    /**
+     * Reference to the shipping object (if rate is for existing shipment)
+     */
     public ShippingRate withShipmentId(@Nullable String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -302,6 +334,9 @@ public class ShippingRate {
           // force use of static builder() method
         }
 
+        /**
+         * Reference to the carrier
+         */
         public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
             return this;
@@ -320,6 +355,9 @@ public class ShippingRate {
             return this;
         }
 
+        /**
+         * Unique identifier for this rate object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -343,11 +381,17 @@ public class ShippingRate {
             return this;
         }
 
+        /**
+         * Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder shipByAt(@Nullable OffsetDateTime shipByAt) {
             this.shipByAt = shipByAt;
             return this;
         }
 
+        /**
+         * Reference to the shipping object (if rate is for existing shipment)
+         */
         public Builder shipmentId(@Nullable String shipmentId) {
             this.shipmentId = shipmentId;
             return this;

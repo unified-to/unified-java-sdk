@@ -27,6 +27,7 @@ public class HrisGroupType {
     public static final HrisGroupType BUSINESS_UNIT = new HrisGroupType("BUSINESS_UNIT");
     public static final HrisGroupType BRANCH = new HrisGroupType("BRANCH");
     public static final HrisGroupType SUB_DEPARTMENT = new HrisGroupType("SUB_DEPARTMENT");
+    public static final HrisGroupType PAY_GROUP = new HrisGroupType("PAY_GROUP");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +108,7 @@ public class HrisGroupType {
         map.put("BUSINESS_UNIT", BUSINESS_UNIT);
         map.put("BRANCH", BRANCH);
         map.put("SUB_DEPARTMENT", SUB_DEPARTMENT);
+        map.put("PAY_GROUP", PAY_GROUP);
         return map;
     }
 
@@ -119,6 +121,7 @@ public class HrisGroupType {
         map.put("BUSINESS_UNIT", HrisGroupTypeEnum.BUSINESS_UNIT);
         map.put("BRANCH", HrisGroupTypeEnum.BRANCH);
         map.put("SUB_DEPARTMENT", HrisGroupTypeEnum.SUB_DEPARTMENT);
+        map.put("PAY_GROUP", HrisGroupTypeEnum.PAY_GROUP);
         return map;
     }
     
@@ -131,7 +134,8 @@ public class HrisGroupType {
         DIVISION("DIVISION"),
         BUSINESS_UNIT("BUSINESS_UNIT"),
         BRANCH("BRANCH"),
-        SUB_DEPARTMENT("SUB_DEPARTMENT"),;
+        SUB_DEPARTMENT("SUB_DEPARTMENT"),
+        PAY_GROUP("PAY_GROUP"),;
 
         private final String value;
 

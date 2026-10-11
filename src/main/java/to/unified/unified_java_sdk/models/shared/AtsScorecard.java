@@ -34,7 +34,9 @@ public class AtsScorecard {
     @JsonProperty("comment")
     private String comment;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -74,7 +76,9 @@ public class AtsScorecard {
     @JsonProperty("recommendation")
     private Recommendation recommendation;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -126,6 +130,9 @@ public class AtsScorecard {
         return Optional.ofNullable(this.comment);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -158,6 +165,9 @@ public class AtsScorecard {
         return Optional.ofNullable(this.recommendation);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -185,6 +195,9 @@ public class AtsScorecard {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsScorecard withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -233,6 +246,9 @@ public class AtsScorecard {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsScorecard withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -335,6 +351,9 @@ public class AtsScorecard {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -375,6 +394,9 @@ public class AtsScorecard {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

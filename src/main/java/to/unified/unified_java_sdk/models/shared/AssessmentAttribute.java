@@ -21,7 +21,9 @@ public class AssessmentAttribute {
     @JsonProperty("label")
     private String label;
 
-
+    /**
+     * For SUB_RESULT type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
@@ -36,7 +38,9 @@ public class AssessmentAttribute {
     @JsonProperty("score_value")
     private Double scoreValue;
 
-
+    /**
+     * For SUB_RESULT type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AssessmentAttributeStatus status;
@@ -45,7 +49,9 @@ public class AssessmentAttribute {
     @JsonProperty("type")
     private AssessmentAttributeType type;
 
-
+    /**
+     * For TEXT and NUMBER types
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private String value;
@@ -82,6 +88,9 @@ public class AssessmentAttribute {
         return this.label;
     }
 
+    /**
+     * For SUB_RESULT type
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -94,6 +103,9 @@ public class AssessmentAttribute {
         return Optional.ofNullable(this.scoreValue);
     }
 
+    /**
+     * For SUB_RESULT type
+     */
     public Optional<AssessmentAttributeStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -102,6 +114,9 @@ public class AssessmentAttribute {
         return this.type;
     }
 
+    /**
+     * For TEXT and NUMBER types
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -117,6 +132,9 @@ public class AssessmentAttribute {
     }
 
 
+    /**
+     * For SUB_RESULT type
+     */
     public AssessmentAttribute withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
@@ -135,6 +153,9 @@ public class AssessmentAttribute {
     }
 
 
+    /**
+     * For SUB_RESULT type
+     */
     public AssessmentAttribute withStatus(@Nullable AssessmentAttributeStatus status) {
         this.status = status;
         return this;
@@ -147,6 +168,9 @@ public class AssessmentAttribute {
     }
 
 
+    /**
+     * For TEXT and NUMBER types
+     */
     public AssessmentAttribute withValue(@Nullable String value) {
         this.value = value;
         return this;
@@ -218,6 +242,9 @@ public class AssessmentAttribute {
             return this;
         }
 
+        /**
+         * For SUB_RESULT type
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
@@ -233,6 +260,9 @@ public class AssessmentAttribute {
             return this;
         }
 
+        /**
+         * For SUB_RESULT type
+         */
         public Builder status(@Nullable AssessmentAttributeStatus status) {
             this.status = status;
             return this;
@@ -243,6 +273,9 @@ public class AssessmentAttribute {
             return this;
         }
 
+        /**
+         * For TEXT and NUMBER types
+         */
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;

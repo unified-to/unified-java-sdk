@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PaymentRefundTenderType
+ * 
+ * <p>Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
+ */
 public class PaymentRefundTenderType {
 
     public static final PaymentRefundTenderType CARD = new PaymentRefundTenderType("CARD");

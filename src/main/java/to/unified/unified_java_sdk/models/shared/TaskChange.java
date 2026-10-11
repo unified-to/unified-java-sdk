@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class TaskChange {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -39,17 +41,23 @@ public class TaskChange {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (reference to TaskTask)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     private String taskId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -78,6 +86,9 @@ public class TaskChange {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -94,14 +105,23 @@ public class TaskChange {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (reference to TaskTask)
+     */
     public Optional<String> taskId() {
         return Optional.ofNullable(this.taskId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -111,6 +131,9 @@ public class TaskChange {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskChange withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -135,18 +158,27 @@ public class TaskChange {
     }
 
 
+    /**
+     * (reference to TaskTask)
+     */
     public TaskChange withTaskId(@Nullable String taskId) {
         this.taskId = taskId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskChange withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public TaskChange withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -213,6 +245,9 @@ public class TaskChange {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -233,16 +268,25 @@ public class TaskChange {
             return this;
         }
 
+        /**
+         * (reference to TaskTask)
+         */
         public Builder taskId(@Nullable String taskId) {
             this.taskId = taskId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

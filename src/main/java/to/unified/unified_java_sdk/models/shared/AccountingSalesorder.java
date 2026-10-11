@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingSalesorder {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -35,17 +37,23 @@ public class AccountingSalesorder {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
 
-
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -55,7 +63,9 @@ public class AccountingSalesorder {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * POS register/terminal/device (HRIS Device)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     private String deviceId;
@@ -65,7 +75,9 @@ public class AccountingSalesorder {
     @JsonProperty("discount_amount")
     private Double discountAmount;
 
-
+    /**
+     * selling/serving HR employee (server, cashier) (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_user_id")
     private String employeeUserId;
@@ -95,7 +107,9 @@ public class AccountingSalesorder {
     @JsonProperty("lineitems")
     private List<AccountingLineitem> lineitems;
 
-
+    /**
+     * store/site; reference to a commerce_location or hris_location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -105,7 +119,9 @@ public class AccountingSalesorder {
     @JsonProperty("metadata")
     private List<AccountingMetadata> metadata;
 
-
+    /**
+     * human-facing receipt/ticket/check number, distinct from id
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_number")
     private String orderNumber;
@@ -122,7 +138,9 @@ public class AccountingSalesorder {
     @JsonProperty("payments")
     private List<AccountingPaymentReference> payments;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
@@ -157,12 +175,16 @@ public class AccountingSalesorder {
     @JsonProperty("status")
     private AccountingSalesorderStatus status;
 
-
+    /**
+     * payment_subscription that generated this order, if recurring
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription_id")
     private String subscriptionId;
 
-
+    /**
+     * pre-tax, pre-tip amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_amount")
     private Double subtotalAmount;
@@ -182,7 +204,9 @@ public class AccountingSalesorder {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -271,6 +295,9 @@ public class AccountingSalesorder {
             null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -283,14 +310,23 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -299,6 +335,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * POS register/terminal/device (HRIS Device)
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
@@ -307,6 +346,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    /**
+     * selling/serving HR employee (server, cashier) (reference to HrisEmployee)
+     */
     public Optional<String> employeeUserId() {
         return Optional.ofNullable(this.employeeUserId);
     }
@@ -331,6 +373,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * store/site; reference to a commerce_location or hris_location
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -339,6 +384,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * human-facing receipt/ticket/check number, distinct from id
+     */
     public Optional<String> orderNumber() {
         return Optional.ofNullable(this.orderNumber);
     }
@@ -354,6 +402,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.payments);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
@@ -382,10 +433,16 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * payment_subscription that generated this order, if recurring
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
 
+    /**
+     * pre-tax, pre-tip amount
+     */
     public Optional<Double> subtotalAmount() {
         return Optional.ofNullable(this.subtotalAmount);
     }
@@ -402,6 +459,9 @@ public class AccountingSalesorder {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -411,6 +471,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingSalesorder withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -429,18 +492,27 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingSalesorder withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public AccountingSalesorder withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingSalesorder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -453,6 +525,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * POS register/terminal/device (HRIS Device)
+     */
     public AccountingSalesorder withDeviceId(@Nullable String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -465,6 +540,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * selling/serving HR employee (server, cashier) (reference to HrisEmployee)
+     */
     public AccountingSalesorder withEmployeeUserId(@Nullable String employeeUserId) {
         this.employeeUserId = employeeUserId;
         return this;
@@ -501,6 +579,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * store/site; reference to a commerce_location or hris_location
+     */
     public AccountingSalesorder withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -513,6 +594,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * human-facing receipt/ticket/check number, distinct from id
+     */
     public AccountingSalesorder withOrderNumber(@Nullable String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -534,6 +618,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingSalesorder withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -576,12 +663,18 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * payment_subscription that generated this order, if recurring
+     */
     public AccountingSalesorder withSubscriptionId(@Nullable String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
 
 
+    /**
+     * pre-tax, pre-tip amount
+     */
     public AccountingSalesorder withSubtotalAmount(@Nullable Double subtotalAmount) {
         this.subtotalAmount = subtotalAmount;
         return this;
@@ -606,6 +699,9 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingSalesorder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -784,6 +880,9 @@ public class AccountingSalesorder {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -799,16 +898,25 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
+        /**
+         * Customer, Supplier (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -819,6 +927,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * POS register/terminal/device (HRIS Device)
+         */
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
@@ -829,6 +940,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * selling/serving HR employee (server, cashier) (reference to HrisEmployee)
+         */
         public Builder employeeUserId(@Nullable String employeeUserId) {
             this.employeeUserId = employeeUserId;
             return this;
@@ -859,6 +973,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * store/site; reference to a commerce_location or hris_location
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -869,6 +986,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * human-facing receipt/ticket/check number, distinct from id
+         */
         public Builder orderNumber(@Nullable String orderNumber) {
             this.orderNumber = orderNumber;
             return this;
@@ -887,6 +1007,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -922,11 +1045,17 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * payment_subscription that generated this order, if recurring
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * pre-tax, pre-tip amount
+         */
         public Builder subtotalAmount(@Nullable Double subtotalAmount) {
             this.subtotalAmount = subtotalAmount;
             return this;
@@ -947,6 +1076,9 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

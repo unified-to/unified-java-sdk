@@ -38,7 +38,9 @@ public class Connection {
     @JsonProperty("categories")
     private List<PropertyConnectionCategories> categories;
 
-
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -48,12 +50,16 @@ public class Connection {
     @JsonProperty("environment")
     private String environment;
 
-
+    /**
+     * customer's user ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_xref")
     private String externalXref;
 
-
+    /**
+     * Unique identifier for this integration object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -63,26 +69,36 @@ public class Connection {
     @JsonProperty("integration_name")
     private String integrationName;
 
-
+    /**
+     * The integration type
+     */
     @JsonProperty("integration_type")
     private String integrationType;
 
-
+    /**
+     * Whether this integration has exceed the monthly limit of the plan
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_paused")
     private Boolean isPaused;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_healthy_at")
     private OffsetDateTime lastHealthyAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_unhealthy_at")
     private OffsetDateTime lastUnhealthyAt;
 
-
+    /**
+     * The HTTP status code that caused the last unhealthy status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_unhealthy_code")
     private String lastUnhealthyCode;
@@ -91,22 +107,30 @@ public class Connection {
     @JsonProperty("permissions")
     private List<PropertyConnectionPermissions> permissions;
 
-
+    /**
+     * the ID of the SecretsManager object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretsmanager_id")
     private String secretsmanagerId;
 
-
+    /**
+     * the key/path/name of the secret within the vault
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretsmanager_key")
     private String secretsmanagerKey;
 
-
+    /**
+     * The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -179,6 +203,9 @@ public class Connection {
         return this.categories;
     }
 
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -187,10 +214,16 @@ public class Connection {
         return Optional.ofNullable(this.environment);
     }
 
+    /**
+     * customer's user ID
+     */
     public Optional<String> externalXref() {
         return Optional.ofNullable(this.externalXref);
     }
 
+    /**
+     * Unique identifier for this integration object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -199,22 +232,37 @@ public class Connection {
         return Optional.ofNullable(this.integrationName);
     }
 
+    /**
+     * The integration type
+     */
     public String integrationType() {
         return this.integrationType;
     }
 
+    /**
+     * Whether this integration has exceed the monthly limit of the plan
+     */
     public Optional<Boolean> isPaused() {
         return Optional.ofNullable(this.isPaused);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastHealthyAt() {
         return Optional.ofNullable(this.lastHealthyAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastUnhealthyAt() {
         return Optional.ofNullable(this.lastUnhealthyAt);
     }
 
+    /**
+     * The HTTP status code that caused the last unhealthy status
+     */
     public Optional<String> lastUnhealthyCode() {
         return Optional.ofNullable(this.lastUnhealthyCode);
     }
@@ -223,18 +271,30 @@ public class Connection {
         return this.permissions;
     }
 
+    /**
+     * the ID of the SecretsManager object
+     */
     public Optional<String> secretsmanagerId() {
         return Optional.ofNullable(this.secretsmanagerId);
     }
 
+    /**
+     * the key/path/name of the secret within the vault
+     */
     public Optional<String> secretsmanagerKey() {
         return Optional.ofNullable(this.secretsmanagerKey);
     }
 
+    /**
+     * The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -262,6 +322,9 @@ public class Connection {
     }
 
 
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Connection withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -274,12 +337,18 @@ public class Connection {
     }
 
 
+    /**
+     * customer's user ID
+     */
     public Connection withExternalXref(@Nullable String externalXref) {
         this.externalXref = externalXref;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this integration object
+     */
     public Connection withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -292,30 +361,45 @@ public class Connection {
     }
 
 
+    /**
+     * The integration type
+     */
     public Connection withIntegrationType(@Nonnull String integrationType) {
         this.integrationType = Utils.checkNotNull(integrationType, "integrationType");
         return this;
     }
 
 
+    /**
+     * Whether this integration has exceed the monthly limit of the plan
+     */
     public Connection withIsPaused(@Nullable Boolean isPaused) {
         this.isPaused = isPaused;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Connection withLastHealthyAt(@Nullable OffsetDateTime lastHealthyAt) {
         this.lastHealthyAt = lastHealthyAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Connection withLastUnhealthyAt(@Nullable OffsetDateTime lastUnhealthyAt) {
         this.lastUnhealthyAt = lastUnhealthyAt;
         return this;
     }
 
 
+    /**
+     * The HTTP status code that caused the last unhealthy status
+     */
     public Connection withLastUnhealthyCode(@Nullable String lastUnhealthyCode) {
         this.lastUnhealthyCode = lastUnhealthyCode;
         return this;
@@ -328,24 +412,36 @@ public class Connection {
     }
 
 
+    /**
+     * the ID of the SecretsManager object
+     */
     public Connection withSecretsmanagerId(@Nullable String secretsmanagerId) {
         this.secretsmanagerId = secretsmanagerId;
         return this;
     }
 
 
+    /**
+     * the key/path/name of the secret within the vault
+     */
     public Connection withSecretsmanagerKey(@Nullable String secretsmanagerKey) {
         this.secretsmanagerKey = secretsmanagerKey;
         return this;
     }
 
 
+    /**
+     * The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Connection withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Connection withWorkspaceId(@Nullable String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -471,6 +567,9 @@ public class Connection {
             return this;
         }
 
+        /**
+         * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -481,11 +580,17 @@ public class Connection {
             return this;
         }
 
+        /**
+         * customer's user ID
+         */
         public Builder externalXref(@Nullable String externalXref) {
             this.externalXref = externalXref;
             return this;
         }
 
+        /**
+         * Unique identifier for this integration object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -496,26 +601,41 @@ public class Connection {
             return this;
         }
 
+        /**
+         * The integration type
+         */
         public Builder integrationType(@Nonnull String integrationType) {
             this.integrationType = Utils.checkNotNull(integrationType, "integrationType");
             return this;
         }
 
+        /**
+         * Whether this integration has exceed the monthly limit of the plan
+         */
         public Builder isPaused(@Nullable Boolean isPaused) {
             this.isPaused = isPaused;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastHealthyAt(@Nullable OffsetDateTime lastHealthyAt) {
             this.lastHealthyAt = lastHealthyAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastUnhealthyAt(@Nullable OffsetDateTime lastUnhealthyAt) {
             this.lastUnhealthyAt = lastUnhealthyAt;
             return this;
         }
 
+        /**
+         * The HTTP status code that caused the last unhealthy status
+         */
         public Builder lastUnhealthyCode(@Nullable String lastUnhealthyCode) {
             this.lastUnhealthyCode = lastUnhealthyCode;
             return this;
@@ -526,21 +646,33 @@ public class Connection {
             return this;
         }
 
+        /**
+         * the ID of the SecretsManager object
+         */
         public Builder secretsmanagerId(@Nullable String secretsmanagerId) {
             this.secretsmanagerId = secretsmanagerId;
             return this;
         }
 
+        /**
+         * the key/path/name of the secret within the vault
+         */
         public Builder secretsmanagerKey(@Nullable String secretsmanagerKey) {
             this.secretsmanagerKey = secretsmanagerKey;
             return this;
         }
 
+        /**
+         * The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;

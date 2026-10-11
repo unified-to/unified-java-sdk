@@ -18,6 +18,7 @@
 * [listTaskComments](#listtaskcomments) - List all comments
 * [listTaskProjects](#listtaskprojects) - List all projects
 * [listTaskTasks](#listtasktasks) - List all tasks
+* [patchGenaiTask](#patchgenaitask) - Update a task
 * [patchTaskComment](#patchtaskcomment) - Update a comment
 * [patchTaskProject](#patchtaskproject) - Update a project
 * [patchTaskTask](#patchtasktask) - Update a task
@@ -25,6 +26,7 @@
 * [removeTaskComment](#removetaskcomment) - Remove a comment
 * [removeTaskProject](#removetaskproject) - Remove a project
 * [removeTaskTask](#removetasktask) - Remove a task
+* [updateGenaiTask](#updategenaitask) - Update a task
 * [updateTaskComment](#updatetaskcomment) - Update a comment
 * [updateTaskProject](#updatetaskproject) - Update a project
 * [updateTaskTask](#updatetasktask) - Update a task
@@ -59,28 +61,29 @@ public class Application {
 
         CreateGenaiTaskRequest req = CreateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-09-06T13:57:38.078Z"))
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.745Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("968cf408-0894-4133-a538-3598570fa578")
+                    .id("29e10421-e909-4556-95f3-15cbb6f8aadd")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
                     .messages(List.of(
                         GenaiContent.builder()
                             .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
                             .role(Role.ASSISTANT)
                             .build()))
                     .name("connect multi-byte port")
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-03T13:35:15.218Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.422Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-14T14:26:48.799Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.031Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -145,9 +148,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("d92b2d9e-8c09-4571-a417-fe7110f8b0bb")
+                    .id("a081c477-07b4-4423-bedd-f33e41b3771f")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.583Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-30T12:31:24.347Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -215,13 +218,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("cc0e16de-8188-4d43-868f-cf9e3787c27c")
+                    .id("d5c0ef94-a1b0-4a8c-a4c9-d8a70f692263")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("e83b4005-eac1-4dfa-ae95-4013f93c4c7d")
+                            .id("f691b070-82a0-4959-ad65-8c92a54e8e4f")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -230,13 +233,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("9d196c7e-2d47-4411-8942-a6472f44cb31")
+                            .id("20516573-393f-4f42-bb48-e515524e25cc")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.328Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-10T16:48:52.107Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -299,18 +302,18 @@ public class Application {
         CreateTaskTaskRequest req = CreateTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.679Z"))
+                    .completedAt(OffsetDateTime.parse("2022-04-02T23:21:52.176Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.806Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.330Z"))
+                    .dueAt(OffsetDateTime.parse("2026-05-15T03:37:23.500Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-24T21:09:01.287Z"))
                     .hasChildren(true)
-                    .id("f0703b97-9544-4c08-a485-22fe3b0af672")
+                    .id("aa83f646-6689-48c2-89a4-426722e49ec4")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.624Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-28T10:13:03.421Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -319,7 +322,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.986Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-14T19:08:13.238Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")
@@ -927,6 +930,92 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchGenaiTaskRequest req = PatchGenaiTaskRequest.builder()
+                .genaiTask(GenaiTask.builder()
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.763Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
+                    .filesChanged(19d)
+                    .id("90014b59-c502-4956-b3c4-7c91f99182b8")
+                    .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
+                    .linesAdded(244d)
+                    .linesDeleted(118d)
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
+                            .role(Role.ASSISTANT)
+                            .build()))
+                    .name("connect multi-byte port")
+                    .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
+                    .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
+                    .sourceBranchIdentifier("main")
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.435Z"))
+                    .status(GenaiTaskStatus.BLOCKED)
+                    .summary("Cur aeternus cogito vesper.")
+                    .targetBranchIdentifier("agent/joshingly-ignorance")
+                    .tokensUsed(2165d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.040Z"))
+                    .webUrl("https://inexperienced-adrenalin.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchGenaiTaskResponse res = sdk.task().patchGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchGenaiTaskRequest](../../models/operations/PatchGenaiTaskRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[PatchGenaiTaskResponse](../../models/operations/PatchGenaiTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchTaskComment
 
 Update a comment
@@ -959,9 +1048,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("73440994-5b81-4ab7-9441-ec40694d6397")
+                    .id("4e0836c0-32b6-44d9-97e4-e09919ed7d2b")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.585Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-30T12:31:24.348Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -1030,13 +1119,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("fd489a85-c972-40fd-aaf9-2d7c6c737ed1")
+                    .id("694a3d15-b260-40ed-aaeb-ae1408c288c7")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("0539bb0b-5263-44ef-8147-ac6393fdd8b6")
+                            .id("4777e1fc-238e-438e-9aae-b289edea5a89")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -1045,13 +1134,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("2a317897-0d1f-46b6-831a-e55155eb784d")
+                            .id("8ebedd03-9d83-4a4d-ae84-2c88820ee464")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-10T16:48:52.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1115,18 +1204,18 @@ public class Application {
         PatchTaskTaskRequest req = PatchTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.689Z"))
+                    .completedAt(OffsetDateTime.parse("2022-04-02T23:21:52.181Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.830Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.342Z"))
+                    .dueAt(OffsetDateTime.parse("2026-05-15T03:37:23.513Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-24T21:09:01.294Z"))
                     .hasChildren(true)
-                    .id("907fd4b6-91ec-4eec-8491-5f9677a3e58f")
+                    .id("a2bbddc7-36ec-4547-84d1-69a24fce4916")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.634Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-28T10:13:03.427Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -1135,7 +1224,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.988Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-14T19:08:13.239Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")
@@ -1393,6 +1482,92 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateGenaiTaskRequest req = UpdateGenaiTaskRequest.builder()
+                .genaiTask(GenaiTask.builder()
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.763Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
+                    .filesChanged(19d)
+                    .id("90014b59-c502-4956-b3c4-7c91f99182b8")
+                    .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
+                    .linesAdded(244d)
+                    .linesDeleted(118d)
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
+                            .role(Role.ASSISTANT)
+                            .build()))
+                    .name("connect multi-byte port")
+                    .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
+                    .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
+                    .sourceBranchIdentifier("main")
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.435Z"))
+                    .status(GenaiTaskStatus.BLOCKED)
+                    .summary("Cur aeternus cogito vesper.")
+                    .targetBranchIdentifier("agent/joshingly-ignorance")
+                    .tokensUsed(2165d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.040Z"))
+                    .webUrl("https://inexperienced-adrenalin.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateGenaiTaskResponse res = sdk.task().updateGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateGenaiTaskRequest](../../models/operations/UpdateGenaiTaskRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[UpdateGenaiTaskResponse](../../models/operations/UpdateGenaiTaskResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateTaskComment
 
 Update a comment
@@ -1425,9 +1600,9 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("73440994-5b81-4ab7-9441-ec40694d6397")
+                    .id("4e0836c0-32b6-44d9-97e4-e09919ed7d2b")
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-09-24T21:41:00.585Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-30T12:31:24.348Z"))
                     .userName("Santina Abbott")
                     .build())
                 .connectionId("<id>")
@@ -1496,13 +1671,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("fd489a85-c972-40fd-aaf9-2d7c6c737ed1")
+                    .id("694a3d15-b260-40ed-aaeb-ae1408c288c7")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("0539bb0b-5263-44ef-8147-ac6393fdd8b6")
+                            .id("4777e1fc-238e-438e-9aae-b289edea5a89")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -1511,13 +1686,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("2a317897-0d1f-46b6-831a-e55155eb784d")
+                            .id("8ebedd03-9d83-4a4d-ae84-2c88820ee464")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-08T21:27:25.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-10T16:48:52.109Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1581,18 +1756,18 @@ public class Application {
         UpdateTaskTaskRequest req = UpdateTaskTaskRequest.builder()
                 .taskTask(TaskTask.builder()
                     .attachmentIds(List.of())
-                    .completedAt(OffsetDateTime.parse("2022-03-25T17:50:24.689Z"))
+                    .completedAt(OffsetDateTime.parse("2022-04-02T23:21:52.181Z"))
                     .createdAt(OffsetDateTime.parse("2019-01-31T08:34:55.626Z"))
-                    .dueAt(OffsetDateTime.parse("2026-04-26T05:36:40.830Z"))
-                    .endAt(OffsetDateTime.parse("2022-10-15T04:39:45.342Z"))
+                    .dueAt(OffsetDateTime.parse("2026-05-15T03:37:23.513Z"))
+                    .endAt(OffsetDateTime.parse("2022-10-24T21:09:01.294Z"))
                     .hasChildren(true)
-                    .id("907fd4b6-91ec-4eec-8491-5f9677a3e58f")
+                    .id("a2bbddc7-36ec-4547-84d1-69a24fce4916")
                     .metadata(List.of())
                     .name("Direct Markets Architect")
                     .notes("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.")
                     .priority("LOW")
                     .progress(2d)
-                    .startAt(OffsetDateTime.parse("2022-01-20T15:42:25.634Z"))
+                    .startAt(OffsetDateTime.parse("2022-01-28T10:13:03.427Z"))
                     .status(TaskTaskStatus.IN_PROGRESS)
                     .storyPoints(0d)
                     .tags(List.of(
@@ -1601,7 +1776,7 @@ public class Application {
                     .timeSpent(957d)
                     .timeSpentUnit("SECONDS")
                     .type("tubineus")
-                    .updatedAt(OffsetDateTime.parse("2019-07-13T15:04:42.988Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-07-14T19:08:13.239Z"))
                     .url("https://dismal-silk.net/")
                     .build())
                 .connectionId("<id>")

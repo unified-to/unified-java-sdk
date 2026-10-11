@@ -21,22 +21,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingBankfeedtransaction {
-
+    /**
+     * GL account once categorized (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * transaction amount (positive; direction from type)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * the bank's own category label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_category")
     private String bankCategory;
 
-
+    /**
+     * ref -&gt; BankfeedAccount this transaction belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankfeedaccount_id")
     private String bankfeedaccountId;
@@ -48,22 +56,30 @@ public class AccountingBankfeedtransaction {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * matched vendor/customer once reconciled (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * bank memo / statement text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -73,47 +89,65 @@ public class AccountingBankfeedtransaction {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * true if not yet cleared
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_pending")
     private Boolean isPending;
 
-
+    /**
+     * counterparty as reported by the bank
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_name")
     private String merchantName;
 
-
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
-
+    /**
+     * The original data from the integration's API
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * bank reference or check number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
 
-
+    /**
+     * when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_at")
     private OffsetDateTime transactionAt;
 
-
+    /**
+     * direction: DEBIT, CREDIT
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AccountingBankfeedtransactionType type;
 
-
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -170,18 +204,30 @@ public class AccountingBankfeedtransaction {
             null);
     }
 
+    /**
+     * GL account once categorized (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * transaction amount (positive; direction from type)
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * the bank's own category label
+     */
     public Optional<String> bankCategory() {
         return Optional.ofNullable(this.bankCategory);
     }
 
+    /**
+     * ref -&gt; BankfeedAccount this transaction belongs to
+     */
     public Optional<String> bankfeedaccountId() {
         return Optional.ofNullable(this.bankfeedaccountId);
     }
@@ -193,18 +239,30 @@ public class AccountingBankfeedtransaction {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * matched vendor/customer once reconciled (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * bank memo / statement text
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -213,38 +271,65 @@ public class AccountingBankfeedtransaction {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * true if not yet cleared
+     */
     public Optional<Boolean> isPending() {
         return Optional.ofNullable(this.isPending);
     }
 
+    /**
+     * counterparty as reported by the bank
+     */
     public Optional<String> merchantName() {
         return Optional.ofNullable(this.merchantName);
     }
 
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
 
+    /**
+     * The original data from the integration's API
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * bank reference or check number
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
 
+    /**
+     * when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> transactionAt() {
         return Optional.ofNullable(this.transactionAt);
     }
 
+    /**
+     * direction: DEBIT, CREDIT
+     */
     public Optional<AccountingBankfeedtransactionType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -254,24 +339,36 @@ public class AccountingBankfeedtransaction {
     }
 
 
+    /**
+     * GL account once categorized (reference to AccountingAccount)
+     */
     public AccountingBankfeedtransaction withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * transaction amount (positive; direction from type)
+     */
     public AccountingBankfeedtransaction withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * the bank's own category label
+     */
     public AccountingBankfeedtransaction withBankCategory(@Nullable String bankCategory) {
         this.bankCategory = bankCategory;
         return this;
     }
 
 
+    /**
+     * ref -&gt; BankfeedAccount this transaction belongs to
+     */
     public AccountingBankfeedtransaction withBankfeedaccountId(@Nullable String bankfeedaccountId) {
         this.bankfeedaccountId = bankfeedaccountId;
         return this;
@@ -287,24 +384,36 @@ public class AccountingBankfeedtransaction {
     }
 
 
+    /**
+     * matched vendor/customer once reconciled (reference to AccountingContact)
+     */
     public AccountingBankfeedtransaction withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedtransaction withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * ISO 4217
+     */
     public AccountingBankfeedtransaction withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * bank memo / statement text
+     */
     public AccountingBankfeedtransaction withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -317,54 +426,81 @@ public class AccountingBankfeedtransaction {
     }
 
 
+    /**
+     * true if not yet cleared
+     */
     public AccountingBankfeedtransaction withIsPending(@Nullable Boolean isPending) {
         this.isPending = isPending;
         return this;
     }
 
 
+    /**
+     * counterparty as reported by the bank
+     */
     public AccountingBankfeedtransaction withMerchantName(@Nullable String merchantName) {
         this.merchantName = merchantName;
         return this;
     }
 
 
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     public AccountingBankfeedtransaction withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedtransaction withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
 
+    /**
+     * The original data from the integration's API
+     */
     public AccountingBankfeedtransaction withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * bank reference or check number
+     */
     public AccountingBankfeedtransaction withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
 
+    /**
+     * when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedtransaction withTransactionAt(@Nullable OffsetDateTime transactionAt) {
         this.transactionAt = transactionAt;
         return this;
     }
 
 
+    /**
+     * direction: DEBIT, CREDIT
+     */
     public AccountingBankfeedtransaction withType(@Nullable AccountingBankfeedtransactionType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedtransaction withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -483,21 +619,33 @@ public class AccountingBankfeedtransaction {
           // force use of static builder() method
         }
 
+        /**
+         * GL account once categorized (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * transaction amount (positive; direction from type)
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * the bank's own category label
+         */
         public Builder bankCategory(@Nullable String bankCategory) {
             this.bankCategory = bankCategory;
             return this;
         }
 
+        /**
+         * ref -&gt; BankfeedAccount this transaction belongs to
+         */
         public Builder bankfeedaccountId(@Nullable String bankfeedaccountId) {
             this.bankfeedaccountId = bankfeedaccountId;
             return this;
@@ -511,21 +659,33 @@ public class AccountingBankfeedtransaction {
             return this;
         }
 
+        /**
+         * matched vendor/customer once reconciled (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * bank memo / statement text
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -536,46 +696,73 @@ public class AccountingBankfeedtransaction {
             return this;
         }
 
+        /**
+         * true if not yet cleared
+         */
         public Builder isPending(@Nullable Boolean isPending) {
             this.isPending = isPending;
             return this;
         }
 
+        /**
+         * counterparty as reported by the bank
+         */
         public Builder merchantName(@Nullable String merchantName) {
             this.merchantName = merchantName;
             return this;
         }
 
+        /**
+         * ref -&gt; accounting Organization this record belongs to
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
+        /**
+         * The original data from the integration's API
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * bank reference or check number
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
+        /**
+         * when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder transactionAt(@Nullable OffsetDateTime transactionAt) {
             this.transactionAt = transactionAt;
             return this;
         }
 
+        /**
+         * direction: DEBIT, CREDIT
+         */
         public Builder type(@Nullable AccountingBankfeedtransactionType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

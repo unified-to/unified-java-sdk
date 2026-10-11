@@ -40,12 +40,16 @@ public class AtsActivity {
     @JsonProperty("cc")
     private List<AtsEmail> cc;
 
-
+    /**
+     * (reference to AtsCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -117,7 +121,9 @@ public class AtsActivity {
     @JsonProperty("type")
     private AtsActivityType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -201,10 +207,16 @@ public class AtsActivity {
         return Optional.ofNullable(this.cc);
     }
 
+    /**
+     * (reference to AtsCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -264,6 +276,9 @@ public class AtsActivity {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -304,12 +319,18 @@ public class AtsActivity {
     }
 
 
+    /**
+     * (reference to AtsCompany)
+     */
     public AtsActivity withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsActivity withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -397,6 +418,9 @@ public class AtsActivity {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsActivity withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -552,11 +576,17 @@ public class AtsActivity {
             return this;
         }
 
+        /**
+         * (reference to AtsCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -630,6 +660,9 @@ public class AtsActivity {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

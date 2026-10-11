@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Tax
+ * 
+ * <p>Tax describes the tax treatment of the benefit
+ */
 public class Tax {
 
     public static final Tax PRE_TAX = new Tax("PRE_TAX");

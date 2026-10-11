@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Type
+ * 
+ * <p>Account type, such as BANK. EQUITY, ASSET,...
+ */
 public class Type {
 
     public static final Type ACCOUNTS_PAYABLE = new Type("ACCOUNTS_PAYABLE");

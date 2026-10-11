@@ -18,6 +18,16 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * WebhookType
+ * 
+ * <p>"native" registers with the integration, which sends events as they happen. "virtual" checks for
+ * changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the
+ * object.
+ * 
+ * <p>Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on
+ * update are ignored without an error. Delete and recreate the webhook to change type.
+ */
 public class WebhookType {
 
     public static final WebhookType VIRTUAL = new WebhookType("virtual");

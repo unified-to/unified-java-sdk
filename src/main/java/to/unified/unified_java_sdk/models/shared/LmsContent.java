@@ -36,7 +36,9 @@ public class LmsContent {
     @JsonProperty("course_ids")
     private List<String> courseIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -46,7 +48,9 @@ public class LmsContent {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("difficulty")
     private String difficulty;
@@ -101,7 +105,9 @@ public class LmsContent {
     @JsonProperty("provider_name")
     private String providerName;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_at")
     private OffsetDateTime publishedAt;
@@ -138,7 +144,9 @@ public class LmsContent {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -218,6 +226,9 @@ public class LmsContent {
         return Optional.ofNullable(this.courseIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -226,6 +237,9 @@ public class LmsContent {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
+     */
     public Optional<String> difficulty() {
         return Optional.ofNullable(this.difficulty);
     }
@@ -270,6 +284,9 @@ public class LmsContent {
         return Optional.ofNullable(this.providerName);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> publishedAt() {
         return Optional.ofNullable(this.publishedAt);
     }
@@ -301,6 +318,9 @@ public class LmsContent {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -328,6 +348,9 @@ public class LmsContent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsContent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -340,6 +363,9 @@ public class LmsContent {
     }
 
 
+    /**
+     * Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
+     */
     public LmsContent withDifficulty(@Nullable String difficulty) {
         this.difficulty = difficulty;
         return this;
@@ -406,6 +432,9 @@ public class LmsContent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsContent withPublishedAt(@Nullable OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -451,6 +480,9 @@ public class LmsContent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsContent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -605,6 +637,9 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -615,6 +650,9 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
+         */
         public Builder difficulty(@Nullable String difficulty) {
             this.difficulty = difficulty;
             return this;
@@ -670,6 +708,9 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder publishedAt(@Nullable OffsetDateTime publishedAt) {
             this.publishedAt = publishedAt;
             return this;
@@ -708,6 +749,9 @@ public class LmsContent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

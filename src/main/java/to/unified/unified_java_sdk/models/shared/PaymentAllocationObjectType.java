@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PaymentAllocationObjectType
+ * 
+ * <p>The type of object this payment was applied to
+ */
 public class PaymentAllocationObjectType {
 
     public static final PaymentAllocationObjectType INVOICE = new PaymentAllocationObjectType("INVOICE");

@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingExpense {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
     private OffsetDateTime approvedAt;
 
-
+    /**
+     * references HR employee/user (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
     private String approverUserId;
@@ -52,12 +58,16 @@ public class AccountingExpense {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -67,7 +77,9 @@ public class AccountingExpense {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Exchange rate to the base/home currency at the expense date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
@@ -107,12 +119,16 @@ public class AccountingExpense {
     @JsonProperty("payment_method")
     private String paymentMethod;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -127,7 +143,9 @@ public class AccountingExpense {
     @JsonProperty("reimbursed_amount")
     private Double reimbursedAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reimbursed_at")
     private OffsetDateTime reimbursedAt;
@@ -142,7 +160,9 @@ public class AccountingExpense {
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
-
+    /**
+     * ref -&gt; AccountingTaxrate applied to the expense
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
@@ -152,12 +172,23 @@ public class AccountingExpense {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
+    /**
+     * USER = employee spend; COMPANY = books/purchase expense
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private AccountingExpenseType type;
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * references a HR employee/user (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -195,6 +226,7 @@ public class AccountingExpense {
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("type") @Nullable AccountingExpenseType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
             @JsonProperty("users") @Nullable List<AccountingReference> users) {
@@ -224,6 +256,7 @@ public class AccountingExpense {
         this.taxAmount = taxAmount;
         this.taxrateId = taxrateId;
         this.totalAmount = totalAmount;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
         this.users = users;
@@ -239,17 +272,26 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> approvedAt() {
         return Optional.ofNullable(this.approvedAt);
     }
 
+    /**
+     * references HR employee/user (reference to HrisEmployee)
+     */
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
     }
@@ -269,10 +311,16 @@ public class AccountingExpense {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -281,6 +329,9 @@ public class AccountingExpense {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Exchange rate to the base/home currency at the expense date
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
@@ -313,10 +364,16 @@ public class AccountingExpense {
         return Optional.ofNullable(this.paymentMethod);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -329,6 +386,9 @@ public class AccountingExpense {
         return Optional.ofNullable(this.reimbursedAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> reimbursedAt() {
         return Optional.ofNullable(this.reimbursedAt);
     }
@@ -341,6 +401,9 @@ public class AccountingExpense {
         return Optional.ofNullable(this.taxAmount);
     }
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the expense
+     */
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
     }
@@ -349,10 +412,23 @@ public class AccountingExpense {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * USER = employee spend; COMPANY = books/purchase expense
+     */
+    public Optional<AccountingExpenseType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * references a HR employee/user (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -366,18 +442,27 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingExpense withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingExpense withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
 
+    /**
+     * references HR employee/user (reference to HrisEmployee)
+     */
     public AccountingExpense withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
@@ -405,12 +490,18 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingExpense withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingExpense withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -423,6 +514,9 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * Exchange rate to the base/home currency at the expense date
+     */
     public AccountingExpense withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -471,12 +565,18 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingExpense withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public AccountingExpense withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -495,6 +595,9 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingExpense withReimbursedAt(@Nullable OffsetDateTime reimbursedAt) {
         this.reimbursedAt = reimbursedAt;
         return this;
@@ -513,6 +616,9 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the expense
+     */
     public AccountingExpense withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
@@ -525,12 +631,27 @@ public class AccountingExpense {
     }
 
 
+    /**
+     * USER = employee spend; COMPANY = books/purchase expense
+     */
+    public AccountingExpense withType(@Nullable AccountingExpenseType type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingExpense withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * references a HR employee/user (reference to HrisEmployee)
+     */
     public AccountingExpense withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -579,6 +700,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
             Utils.enhancedDeepEquals(this.users, other.users);
@@ -595,8 +717,8 @@ public class AccountingExpense {
             organizationId, paymentMethod, postedAt,
             projectId, raw, reimbursedAmount,
             reimbursedAt, status, taxAmount,
-            taxrateId, totalAmount, updatedAt,
-            userId, users);
+            taxrateId, totalAmount, type,
+            updatedAt, userId, users);
     }
     
     @Override
@@ -628,6 +750,7 @@ public class AccountingExpense {
                 "taxAmount", taxAmount,
                 "taxrateId", taxrateId,
                 "totalAmount", totalAmount,
+                "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId,
                 "users", users);
@@ -688,6 +811,8 @@ public class AccountingExpense {
 
         private Double totalAmount;
 
+        private AccountingExpenseType type;
+
         private OffsetDateTime updatedAt;
 
         private String userId;
@@ -698,16 +823,25 @@ public class AccountingExpense {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
+        /**
+         * references HR employee/user (reference to HrisEmployee)
+         */
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
@@ -731,11 +865,17 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -746,6 +886,9 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * Exchange rate to the base/home currency at the expense date
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
@@ -786,11 +929,17 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -806,6 +955,9 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder reimbursedAt(@Nullable OffsetDateTime reimbursedAt) {
             this.reimbursedAt = reimbursedAt;
             return this;
@@ -821,6 +973,9 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * ref -&gt; AccountingTaxrate applied to the expense
+         */
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
@@ -831,11 +986,25 @@ public class AccountingExpense {
             return this;
         }
 
+        /**
+         * USER = employee spend; COMPANY = books/purchase expense
+         */
+        public Builder type(@Nullable AccountingExpenseType type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * references a HR employee/user (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -856,8 +1025,8 @@ public class AccountingExpense {
                 organizationId, paymentMethod, postedAt,
                 projectId, raw, reimbursedAmount,
                 reimbursedAt, status, taxAmount,
-                taxrateId, totalAmount, updatedAt,
-                userId, users);
+                taxrateId, totalAmount, type,
+                updatedAt, userId, users);
         }
 
     }

@@ -30,7 +30,9 @@ public class PropertyAdsReportMetricsGroupTargetingOptimization {
     @JsonProperty("advantage_placements")
     private Boolean advantagePlacements;
 
-
+    /**
+     * Google: bid_only falsetrue
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     private PropertyAdsReportMetricsGroupTargetingOptimizationMode mode;
@@ -65,6 +67,9 @@ public class PropertyAdsReportMetricsGroupTargetingOptimization {
         return Optional.ofNullable(this.advantagePlacements);
     }
 
+    /**
+     * Google: bid_only falsetrue
+     */
     public Optional<PropertyAdsReportMetricsGroupTargetingOptimizationMode> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -90,6 +95,9 @@ public class PropertyAdsReportMetricsGroupTargetingOptimization {
     }
 
 
+    /**
+     * Google: bid_only falsetrue
+     */
     public PropertyAdsReportMetricsGroupTargetingOptimization withMode(@Nullable PropertyAdsReportMetricsGroupTargetingOptimizationMode mode) {
         this.mode = mode;
         return this;
@@ -159,6 +167,9 @@ public class PropertyAdsReportMetricsGroupTargetingOptimization {
             return this;
         }
 
+        /**
+         * Google: bid_only falsetrue
+         */
         public Builder mode(@Nullable PropertyAdsReportMetricsGroupTargetingOptimizationMode mode) {
             this.mode = mode;
             return this;

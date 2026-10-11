@@ -23,7 +23,9 @@ public class HrisAttendanceBreak {
     @JsonProperty("duration_minutes")
     private Double durationMinutes;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -38,12 +40,16 @@ public class HrisAttendanceBreak {
     @JsonProperty("is_paid")
     private Boolean isPaid;
 
-
+    /**
+     * break type label, e.g. "Lunch"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -73,6 +79,9 @@ public class HrisAttendanceBreak {
         return Optional.ofNullable(this.durationMinutes);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -85,10 +94,16 @@ public class HrisAttendanceBreak {
         return Optional.ofNullable(this.isPaid);
     }
 
+    /**
+     * break type label, e.g. "Lunch"
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -104,6 +119,9 @@ public class HrisAttendanceBreak {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendanceBreak withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -122,12 +140,18 @@ public class HrisAttendanceBreak {
     }
 
 
+    /**
+     * break type label, e.g. "Lunch"
+     */
     public HrisAttendanceBreak withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendanceBreak withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -194,6 +218,9 @@ public class HrisAttendanceBreak {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -209,11 +236,17 @@ public class HrisAttendanceBreak {
             return this;
         }
 
+        /**
+         * break type label, e.g. "Lunch"
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;

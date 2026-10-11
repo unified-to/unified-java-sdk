@@ -33,27 +33,38 @@ public class TaskTask {
     @JsonProperty("attachment_ids")
     private List<String> attachmentIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The user who created this task (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     private String creatorUserId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
 
-
+    /**
+     * Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -103,12 +114,16 @@ public class TaskTask {
     @JsonProperty("priority")
     private String priority;
 
-
+    /**
+     * 0-100
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     private Double progress;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -118,7 +133,10 @@ public class TaskTask {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -148,12 +166,16 @@ public class TaskTask {
     @JsonProperty("time_spent_unit")
     private String timeSpentUnit;
 
-
+    /**
+     * The task/issue type name (e.g. Jira issue type).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -247,22 +269,38 @@ public class TaskTask {
         return Optional.ofNullable(this.attachmentIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The user who created this task (reference to HrisEmployee)
+     */
     public Optional<String> creatorUserId() {
         return Optional.ofNullable(this.creatorUserId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
 
+    /**
+     * Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -303,10 +341,16 @@ public class TaskTask {
         return Optional.ofNullable(this.priority);
     }
 
+    /**
+     * 0-100
+     */
     public Optional<Double> progress() {
         return Optional.ofNullable(this.progress);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -315,6 +359,10 @@ public class TaskTask {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -339,10 +387,16 @@ public class TaskTask {
         return Optional.ofNullable(this.timeSpentUnit);
     }
 
+    /**
+     * The task/issue type name (e.g. Jira issue type).
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -371,30 +425,46 @@ public class TaskTask {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskTask withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskTask withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The user who created this task (reference to HrisEmployee)
+     */
     public TaskTask withCreatorUserId(@Nullable String creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskTask withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
     }
 
 
+    /**
+     * Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskTask withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -455,12 +525,18 @@ public class TaskTask {
     }
 
 
+    /**
+     * 0-100
+     */
     public TaskTask withProgress(@Nullable Double progress) {
         this.progress = progress;
         return this;
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public TaskTask withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -473,6 +549,10 @@ public class TaskTask {
     }
 
 
+    /**
+     * Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
     public TaskTask withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -509,12 +589,18 @@ public class TaskTask {
     }
 
 
+    /**
+     * The task/issue type name (e.g. Jira issue type).
+     */
     public TaskTask withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskTask withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -691,26 +777,42 @@ public class TaskTask {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The user who created this task (reference to HrisEmployee)
+         */
         public Builder creatorUserId(@Nullable String creatorUserId) {
             this.creatorUserId = creatorUserId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
         }
 
+        /**
+         * Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -761,11 +863,17 @@ public class TaskTask {
             return this;
         }
 
+        /**
+         * 0-100
+         */
         public Builder progress(@Nullable Double progress) {
             this.progress = progress;
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -776,6 +884,10 @@ public class TaskTask {
             return this;
         }
 
+        /**
+         * Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+         * format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -806,11 +918,17 @@ public class TaskTask {
             return this;
         }
 
+        /**
+         * The task/issue type name (e.g. Jira issue type).
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

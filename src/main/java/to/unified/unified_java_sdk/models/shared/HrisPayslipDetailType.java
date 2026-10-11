@@ -37,6 +37,29 @@ public class HrisPayslipDetailType {
     public static final HrisPayslipDetailType POSTTAX_BENEFIT = new HrisPayslipDetailType("POSTTAX_BENEFIT");
     public static final HrisPayslipDetailType POSTTAX_GARNISHMENT = new HrisPayslipDetailType("POSTTAX_GARNISHMENT");
     public static final HrisPayslipDetailType REIMBURSEMENT = new HrisPayslipDetailType("REIMBURSEMENT");
+    public static final HrisPayslipDetailType EARNING_REGULAR = new HrisPayslipDetailType("EARNING_REGULAR");
+    public static final HrisPayslipDetailType EARNING_DOUBLE_OVERTIME = new HrisPayslipDetailType("EARNING_DOUBLE_OVERTIME");
+    public static final HrisPayslipDetailType EARNING_PTO = new HrisPayslipDetailType("EARNING_PTO");
+    public static final HrisPayslipDetailType EARNING_SICK = new HrisPayslipDetailType("EARNING_SICK");
+    public static final HrisPayslipDetailType EARNING_HOLIDAY = new HrisPayslipDetailType("EARNING_HOLIDAY");
+    public static final HrisPayslipDetailType EARNING_SEVERANCE = new HrisPayslipDetailType("EARNING_SEVERANCE");
+    public static final HrisPayslipDetailType EARNING_REIMBURSEMENT = new HrisPayslipDetailType("EARNING_REIMBURSEMENT");
+    public static final HrisPayslipDetailType TAX_SOCIAL_SECURITY = new HrisPayslipDetailType("TAX_SOCIAL_SECURITY");
+    public static final HrisPayslipDetailType TAX_MEDICARE = new HrisPayslipDetailType("TAX_MEDICARE");
+    public static final HrisPayslipDetailType TAX_UNEMPLOYMENT = new HrisPayslipDetailType("TAX_UNEMPLOYMENT");
+    public static final HrisPayslipDetailType TAX_EMPLOYER = new HrisPayslipDetailType("TAX_EMPLOYER");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_HSA = new HrisPayslipDetailType("PRETAX_DEDUCTION_HSA");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_FSA = new HrisPayslipDetailType("PRETAX_DEDUCTION_FSA");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_DEPENDENT_CARE = new HrisPayslipDetailType("PRETAX_DEDUCTION_DEPENDENT_CARE");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_COMMUTER = new HrisPayslipDetailType("PRETAX_DEDUCTION_COMMUTER");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_DENTAL = new HrisPayslipDetailType("PRETAX_DEDUCTION_DENTAL");
+    public static final HrisPayslipDetailType PRETAX_DEDUCTION_VISION = new HrisPayslipDetailType("PRETAX_DEDUCTION_VISION");
+    public static final HrisPayslipDetailType POSTTAX_DEDUCTION = new HrisPayslipDetailType("POSTTAX_DEDUCTION");
+    public static final HrisPayslipDetailType POSTTAX_RETIREMENT_ROTH = new HrisPayslipDetailType("POSTTAX_RETIREMENT_ROTH");
+    public static final HrisPayslipDetailType POSTTAX_LOAN_REPAYMENT = new HrisPayslipDetailType("POSTTAX_LOAN_REPAYMENT");
+    public static final HrisPayslipDetailType EMPLOYER_CONTRIBUTION = new HrisPayslipDetailType("EMPLOYER_CONTRIBUTION");
+    public static final HrisPayslipDetailType PENSION = new HrisPayslipDetailType("PENSION");
+    public static final HrisPayslipDetailType EARNING_CASH_IN_LIEU = new HrisPayslipDetailType("EARNING_CASH_IN_LIEU");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -127,6 +150,29 @@ public class HrisPayslipDetailType {
         map.put("POSTTAX_BENEFIT", POSTTAX_BENEFIT);
         map.put("POSTTAX_GARNISHMENT", POSTTAX_GARNISHMENT);
         map.put("REIMBURSEMENT", REIMBURSEMENT);
+        map.put("EARNING_REGULAR", EARNING_REGULAR);
+        map.put("EARNING_DOUBLE_OVERTIME", EARNING_DOUBLE_OVERTIME);
+        map.put("EARNING_PTO", EARNING_PTO);
+        map.put("EARNING_SICK", EARNING_SICK);
+        map.put("EARNING_HOLIDAY", EARNING_HOLIDAY);
+        map.put("EARNING_SEVERANCE", EARNING_SEVERANCE);
+        map.put("EARNING_REIMBURSEMENT", EARNING_REIMBURSEMENT);
+        map.put("TAX_SOCIAL_SECURITY", TAX_SOCIAL_SECURITY);
+        map.put("TAX_MEDICARE", TAX_MEDICARE);
+        map.put("TAX_UNEMPLOYMENT", TAX_UNEMPLOYMENT);
+        map.put("TAX_EMPLOYER", TAX_EMPLOYER);
+        map.put("PRETAX_DEDUCTION_HSA", PRETAX_DEDUCTION_HSA);
+        map.put("PRETAX_DEDUCTION_FSA", PRETAX_DEDUCTION_FSA);
+        map.put("PRETAX_DEDUCTION_DEPENDENT_CARE", PRETAX_DEDUCTION_DEPENDENT_CARE);
+        map.put("PRETAX_DEDUCTION_COMMUTER", PRETAX_DEDUCTION_COMMUTER);
+        map.put("PRETAX_DEDUCTION_DENTAL", PRETAX_DEDUCTION_DENTAL);
+        map.put("PRETAX_DEDUCTION_VISION", PRETAX_DEDUCTION_VISION);
+        map.put("POSTTAX_DEDUCTION", POSTTAX_DEDUCTION);
+        map.put("POSTTAX_RETIREMENT_ROTH", POSTTAX_RETIREMENT_ROTH);
+        map.put("POSTTAX_LOAN_REPAYMENT", POSTTAX_LOAN_REPAYMENT);
+        map.put("EMPLOYER_CONTRIBUTION", EMPLOYER_CONTRIBUTION);
+        map.put("PENSION", PENSION);
+        map.put("EARNING_CASH_IN_LIEU", EARNING_CASH_IN_LIEU);
         return map;
     }
 
@@ -149,6 +195,29 @@ public class HrisPayslipDetailType {
         map.put("POSTTAX_BENEFIT", HrisPayslipDetailTypeEnum.POSTTAX_BENEFIT);
         map.put("POSTTAX_GARNISHMENT", HrisPayslipDetailTypeEnum.POSTTAX_GARNISHMENT);
         map.put("REIMBURSEMENT", HrisPayslipDetailTypeEnum.REIMBURSEMENT);
+        map.put("EARNING_REGULAR", HrisPayslipDetailTypeEnum.EARNING_REGULAR);
+        map.put("EARNING_DOUBLE_OVERTIME", HrisPayslipDetailTypeEnum.EARNING_DOUBLE_OVERTIME);
+        map.put("EARNING_PTO", HrisPayslipDetailTypeEnum.EARNING_PTO);
+        map.put("EARNING_SICK", HrisPayslipDetailTypeEnum.EARNING_SICK);
+        map.put("EARNING_HOLIDAY", HrisPayslipDetailTypeEnum.EARNING_HOLIDAY);
+        map.put("EARNING_SEVERANCE", HrisPayslipDetailTypeEnum.EARNING_SEVERANCE);
+        map.put("EARNING_REIMBURSEMENT", HrisPayslipDetailTypeEnum.EARNING_REIMBURSEMENT);
+        map.put("TAX_SOCIAL_SECURITY", HrisPayslipDetailTypeEnum.TAX_SOCIAL_SECURITY);
+        map.put("TAX_MEDICARE", HrisPayslipDetailTypeEnum.TAX_MEDICARE);
+        map.put("TAX_UNEMPLOYMENT", HrisPayslipDetailTypeEnum.TAX_UNEMPLOYMENT);
+        map.put("TAX_EMPLOYER", HrisPayslipDetailTypeEnum.TAX_EMPLOYER);
+        map.put("PRETAX_DEDUCTION_HSA", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_HSA);
+        map.put("PRETAX_DEDUCTION_FSA", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_FSA);
+        map.put("PRETAX_DEDUCTION_DEPENDENT_CARE", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_DEPENDENT_CARE);
+        map.put("PRETAX_DEDUCTION_COMMUTER", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_COMMUTER);
+        map.put("PRETAX_DEDUCTION_DENTAL", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_DENTAL);
+        map.put("PRETAX_DEDUCTION_VISION", HrisPayslipDetailTypeEnum.PRETAX_DEDUCTION_VISION);
+        map.put("POSTTAX_DEDUCTION", HrisPayslipDetailTypeEnum.POSTTAX_DEDUCTION);
+        map.put("POSTTAX_RETIREMENT_ROTH", HrisPayslipDetailTypeEnum.POSTTAX_RETIREMENT_ROTH);
+        map.put("POSTTAX_LOAN_REPAYMENT", HrisPayslipDetailTypeEnum.POSTTAX_LOAN_REPAYMENT);
+        map.put("EMPLOYER_CONTRIBUTION", HrisPayslipDetailTypeEnum.EMPLOYER_CONTRIBUTION);
+        map.put("PENSION", HrisPayslipDetailTypeEnum.PENSION);
+        map.put("EARNING_CASH_IN_LIEU", HrisPayslipDetailTypeEnum.EARNING_CASH_IN_LIEU);
         return map;
     }
     
@@ -171,7 +240,30 @@ public class HrisPayslipDetailType {
         TAX_LOCAL("TAX_LOCAL"),
         POSTTAX_BENEFIT("POSTTAX_BENEFIT"),
         POSTTAX_GARNISHMENT("POSTTAX_GARNISHMENT"),
-        REIMBURSEMENT("REIMBURSEMENT"),;
+        REIMBURSEMENT("REIMBURSEMENT"),
+        EARNING_REGULAR("EARNING_REGULAR"),
+        EARNING_DOUBLE_OVERTIME("EARNING_DOUBLE_OVERTIME"),
+        EARNING_PTO("EARNING_PTO"),
+        EARNING_SICK("EARNING_SICK"),
+        EARNING_HOLIDAY("EARNING_HOLIDAY"),
+        EARNING_SEVERANCE("EARNING_SEVERANCE"),
+        EARNING_REIMBURSEMENT("EARNING_REIMBURSEMENT"),
+        TAX_SOCIAL_SECURITY("TAX_SOCIAL_SECURITY"),
+        TAX_MEDICARE("TAX_MEDICARE"),
+        TAX_UNEMPLOYMENT("TAX_UNEMPLOYMENT"),
+        TAX_EMPLOYER("TAX_EMPLOYER"),
+        PRETAX_DEDUCTION_HSA("PRETAX_DEDUCTION_HSA"),
+        PRETAX_DEDUCTION_FSA("PRETAX_DEDUCTION_FSA"),
+        PRETAX_DEDUCTION_DEPENDENT_CARE("PRETAX_DEDUCTION_DEPENDENT_CARE"),
+        PRETAX_DEDUCTION_COMMUTER("PRETAX_DEDUCTION_COMMUTER"),
+        PRETAX_DEDUCTION_DENTAL("PRETAX_DEDUCTION_DENTAL"),
+        PRETAX_DEDUCTION_VISION("PRETAX_DEDUCTION_VISION"),
+        POSTTAX_DEDUCTION("POSTTAX_DEDUCTION"),
+        POSTTAX_RETIREMENT_ROTH("POSTTAX_RETIREMENT_ROTH"),
+        POSTTAX_LOAN_REPAYMENT("POSTTAX_LOAN_REPAYMENT"),
+        EMPLOYER_CONTRIBUTION("EMPLOYER_CONTRIBUTION"),
+        PENSION("PENSION"),
+        EARNING_CASH_IN_LIEU("EARNING_CASH_IN_LIEU"),;
 
         private final String value;
 

@@ -20,22 +20,30 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The meeting object, when type = meeting
  */
 public class PropertyCrmEventMeeting {
-
+    /**
+     * The event meeting's agendadescription
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * The event meeting's topicsubject
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
@@ -57,18 +65,30 @@ public class PropertyCrmEventMeeting {
             null);
     }
 
+    /**
+     * The event meeting's agendadescription
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * The event meeting's topicsubject
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -78,24 +98,36 @@ public class PropertyCrmEventMeeting {
     }
 
 
+    /**
+     * The event meeting's agendadescription
+     */
     public PropertyCrmEventMeeting withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyCrmEventMeeting withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyCrmEventMeeting withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * The event meeting's topicsubject
+     */
     public PropertyCrmEventMeeting withTitle(@Nullable String title) {
         this.title = title;
         return this;
@@ -149,21 +181,33 @@ public class PropertyCrmEventMeeting {
           // force use of static builder() method
         }
 
+        /**
+         * The event meeting's agendadescription
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * The event meeting's topicsubject
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;

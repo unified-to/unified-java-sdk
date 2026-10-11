@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class RepoRepository {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -44,7 +46,9 @@ public class RepoRepository {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * (reference to RepoOrganization)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_id")
     private String orgId;
@@ -59,7 +63,9 @@ public class RepoRepository {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -102,6 +108,9 @@ public class RepoRepository {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -122,6 +131,9 @@ public class RepoRepository {
         return this.name;
     }
 
+    /**
+     * (reference to RepoOrganization)
+     */
     public Optional<String> orgId() {
         return Optional.ofNullable(this.orgId);
     }
@@ -134,6 +146,9 @@ public class RepoRepository {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -147,6 +162,9 @@ public class RepoRepository {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoRepository withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -177,6 +195,9 @@ public class RepoRepository {
     }
 
 
+    /**
+     * (reference to RepoOrganization)
+     */
     public RepoRepository withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
         return this;
@@ -195,6 +216,9 @@ public class RepoRepository {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoRepository withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -280,6 +304,9 @@ public class RepoRepository {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -305,6 +332,9 @@ public class RepoRepository {
             return this;
         }
 
+        /**
+         * (reference to RepoOrganization)
+         */
         public Builder orgId(@Nullable String orgId) {
             this.orgId = orgId;
             return this;
@@ -320,6 +350,9 @@ public class RepoRepository {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

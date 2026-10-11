@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class RepoBranch {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -38,11 +40,15 @@ public class RepoBranch {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (reference to RepoRepository)
+     */
     @JsonProperty("repo_id")
     private String repoId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -72,6 +78,9 @@ public class RepoBranch {
             null, repoId, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -88,10 +97,16 @@ public class RepoBranch {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (reference to RepoRepository)
+     */
     public String repoId() {
         return this.repoId;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -101,6 +116,9 @@ public class RepoBranch {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoBranch withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -125,12 +143,18 @@ public class RepoBranch {
     }
 
 
+    /**
+     * (reference to RepoRepository)
+     */
     public RepoBranch withRepoId(@Nonnull String repoId) {
         this.repoId = Utils.checkNotNull(repoId, "repoId");
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoBranch withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -192,6 +216,9 @@ public class RepoBranch {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -212,11 +239,17 @@ public class RepoBranch {
             return this;
         }
 
+        /**
+         * (reference to RepoRepository)
+         */
         public Builder repoId(@Nonnull String repoId) {
             this.repoId = Utils.checkNotNull(repoId, "repoId");
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

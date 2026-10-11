@@ -25,12 +25,16 @@ public class Notification {
     @JsonProperty("connection_id")
     private String connectionId;
 
-
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Longer description of this notification
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -40,7 +44,9 @@ public class Notification {
     @JsonProperty("event")
     private Event event;
 
-
+    /**
+     * Unique identifier for this notification object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -55,17 +61,23 @@ public class Notification {
     @JsonProperty("integration_type")
     private String integrationType;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     private OffsetDateTime sentAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -80,7 +92,9 @@ public class Notification {
     @JsonProperty("webhook_id")
     private String webhookId;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -134,10 +148,16 @@ public class Notification {
         return Optional.ofNullable(this.connectionId);
     }
 
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Longer description of this notification
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -146,6 +166,9 @@ public class Notification {
         return Optional.ofNullable(this.event);
     }
 
+    /**
+     * Unique identifier for this notification object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -158,14 +181,23 @@ public class Notification {
         return Optional.ofNullable(this.integrationType);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sentAt() {
         return Optional.ofNullable(this.sentAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -178,6 +210,9 @@ public class Notification {
         return Optional.ofNullable(this.webhookId);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -197,12 +232,18 @@ public class Notification {
     }
 
 
+    /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Notification withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Longer description of this notification
+     */
     public Notification withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -215,6 +256,9 @@ public class Notification {
     }
 
 
+    /**
+     * Unique identifier for this notification object
+     */
     public Notification withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -233,18 +277,27 @@ public class Notification {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Notification withSentAt(@Nullable OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Notification withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Notification withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -263,6 +316,9 @@ public class Notification {
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Notification withWorkspaceId(@Nullable String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -370,11 +426,17 @@ public class Notification {
             return this;
         }
 
+        /**
+         * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Longer description of this notification
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -385,6 +447,9 @@ public class Notification {
             return this;
         }
 
+        /**
+         * Unique identifier for this notification object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -400,16 +465,25 @@ public class Notification {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sentAt(@Nullable OffsetDateTime sentAt) {
             this.sentAt = sentAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -425,6 +499,9 @@ public class Notification {
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;

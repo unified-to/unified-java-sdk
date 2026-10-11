@@ -23,12 +23,16 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A contact represents a person that optionally is associated with a call
  */
 public class UcContact {
-
+    /**
+     * The company/organization name  of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private String company;
 
-
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -45,7 +49,9 @@ public class UcContact {
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * Unique identifier for this contact object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -55,12 +61,16 @@ public class UcContact {
     @JsonProperty("last_name")
     private String lastName;
 
-
+    /**
+     * The name of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -72,12 +82,16 @@ public class UcContact {
     @JsonProperty("telephones")
     private List<UcTelephone> telephones;
 
-
+    /**
+     * The job title of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -115,10 +129,16 @@ public class UcContact {
             null, null);
     }
 
+    /**
+     * The company/organization name  of the contact
+     */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
     }
 
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -134,6 +154,9 @@ public class UcContact {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * Unique identifier for this contact object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -142,10 +165,16 @@ public class UcContact {
         return Optional.ofNullable(this.lastName);
     }
 
+    /**
+     * The name of the contact
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this contact
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -157,10 +186,16 @@ public class UcContact {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * The job title of the contact
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -170,12 +205,18 @@ public class UcContact {
     }
 
 
+    /**
+     * The company/organization name  of the contact
+     */
     public UcContact withCompany(@Nullable String company) {
         this.company = company;
         return this;
     }
 
 
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcContact withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -197,6 +238,9 @@ public class UcContact {
     }
 
 
+    /**
+     * Unique identifier for this contact object
+     */
     public UcContact withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -209,12 +253,18 @@ public class UcContact {
     }
 
 
+    /**
+     * The name of the contact
+     */
     public UcContact withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this contact
+     */
     public UcContact withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -230,12 +280,18 @@ public class UcContact {
     }
 
 
+    /**
+     * The job title of the contact
+     */
     public UcContact withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcContact withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -319,11 +375,17 @@ public class UcContact {
           // force use of static builder() method
         }
 
+        /**
+         * The company/organization name  of the contact
+         */
         public Builder company(@Nullable String company) {
             this.company = company;
             return this;
         }
 
+        /**
+         * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -342,6 +404,9 @@ public class UcContact {
             return this;
         }
 
+        /**
+         * Unique identifier for this contact object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -352,11 +417,17 @@ public class UcContact {
             return this;
         }
 
+        /**
+         * The name of the contact
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this contact
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -370,11 +441,17 @@ public class UcContact {
             return this;
         }
 
+        /**
+         * The job title of the contact
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

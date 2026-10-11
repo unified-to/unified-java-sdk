@@ -21,17 +21,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The call object, when type = call
  */
 public class PropertyCrmEventCall {
-
+    /**
+     * The event call's descriptionnotes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The event call's duration in minutes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     private Double duration;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -50,14 +56,23 @@ public class PropertyCrmEventCall {
         this(null, null, null);
     }
 
+    /**
+     * The event call's descriptionnotes
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The event call's duration in minutes
+     */
     public Optional<Double> duration() {
         return Optional.ofNullable(this.duration);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -67,18 +82,27 @@ public class PropertyCrmEventCall {
     }
 
 
+    /**
+     * The event call's descriptionnotes
+     */
     public PropertyCrmEventCall withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The event call's duration in minutes
+     */
     public PropertyCrmEventCall withDuration(@Nullable Double duration) {
         this.duration = duration;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyCrmEventCall withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -127,16 +151,25 @@ public class PropertyCrmEventCall {
           // force use of static builder() method
         }
 
+        /**
+         * The event call's descriptionnotes
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The event call's duration in minutes
+         */
         public Builder duration(@Nullable Double duration) {
             this.duration = duration;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;

@@ -11,6 +11,7 @@ import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,6 +21,14 @@ public class GenaiContent {
     @JsonProperty("content")
     private String content;
 
+    /**
+     * Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...).
+     * Only for models with has_vision.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("images")
+    private List<String> images;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
@@ -28,19 +37,29 @@ public class GenaiContent {
     @JsonCreator
     public GenaiContent(
             @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("images") @Nullable List<String> images,
             @JsonProperty("role") @Nullable Role role) {
         this.content = Optional.ofNullable(content)
             .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
+        this.images = images;
         this.role = role;
     }
     
     public GenaiContent(
             @Nonnull String content) {
-        this(content, null);
+        this(content, null, null);
     }
 
     public String content() {
         return this.content;
+    }
+
+    /**
+     * Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...).
+     * Only for models with has_vision.
+     */
+    public Optional<List<String>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     public Optional<Role> role() {
@@ -54,6 +73,16 @@ public class GenaiContent {
 
     public GenaiContent withContent(@Nonnull String content) {
         this.content = Utils.checkNotNull(content, "content");
+        return this;
+    }
+
+
+    /**
+     * Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...).
+     * Only for models with has_vision.
+     */
+    public GenaiContent withImages(@Nullable List<String> images) {
+        this.images = images;
         return this;
     }
 
@@ -75,19 +104,21 @@ public class GenaiContent {
         GenaiContent other = (GenaiContent) o;
         return 
             Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.images, other.images) &&
             Utils.enhancedDeepEquals(this.role, other.role);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            content, role);
+            content, images, role);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiContent.class,
                 "content", content,
+                "images", images,
                 "role", role);
     }
 
@@ -95,6 +126,8 @@ public class GenaiContent {
     public final static class Builder {
 
         private String content;
+
+        private List<String> images;
 
         private Role role;
 
@@ -107,6 +140,15 @@ public class GenaiContent {
             return this;
         }
 
+        /**
+         * Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...).
+         * Only for models with has_vision.
+         */
+        public Builder images(@Nullable List<String> images) {
+            this.images = images;
+            return this;
+        }
+
         public Builder role(@Nullable Role role) {
             this.role = role;
             return this;
@@ -114,7 +156,7 @@ public class GenaiContent {
 
         public GenaiContent build() {
             return new GenaiContent(
-                content, role);
+                content, images, role);
         }
 
     }

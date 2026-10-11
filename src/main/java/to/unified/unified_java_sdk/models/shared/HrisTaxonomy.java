@@ -27,12 +27,16 @@ public class HrisTaxonomy {
     @JsonProperty("alternative_names")
     private List<String> alternativeNames;
 
-
+    /**
+     * 2nd-level grouping
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     private String category;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -42,7 +46,9 @@ public class HrisTaxonomy {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * 1st-level grouping (broadest)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     private String domain;
@@ -57,12 +63,16 @@ public class HrisTaxonomy {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * the preferred label of the skill/role
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * id of the parent taxonomy item, for providers exposing arbitrary-depth trees
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
@@ -79,22 +89,30 @@ public class HrisTaxonomy {
     @JsonProperty("role_ids")
     private List<String> roleIds;
 
-
+    /**
+     * 3rd-level grouping
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subcategory")
     private String subcategory;
 
-
+    /**
+     * the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HrisTaxonomyType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * external reference URL for this item
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -148,10 +166,16 @@ public class HrisTaxonomy {
         return Optional.ofNullable(this.alternativeNames);
     }
 
+    /**
+     * 2nd-level grouping
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -160,6 +184,9 @@ public class HrisTaxonomy {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * 1st-level grouping (broadest)
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -172,10 +199,16 @@ public class HrisTaxonomy {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * the preferred label of the skill/role
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * id of the parent taxonomy item, for providers exposing arbitrary-depth trees
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -191,18 +224,30 @@ public class HrisTaxonomy {
         return Optional.ofNullable(this.roleIds);
     }
 
+    /**
+     * 3rd-level grouping
+     */
     public Optional<String> subcategory() {
         return Optional.ofNullable(this.subcategory);
     }
 
+    /**
+     * the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+     */
     public Optional<HrisTaxonomyType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * external reference URL for this item
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -221,12 +266,18 @@ public class HrisTaxonomy {
     }
 
 
+    /**
+     * 2nd-level grouping
+     */
     public HrisTaxonomy withCategory(@Nullable String category) {
         this.category = category;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTaxonomy withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -239,6 +290,9 @@ public class HrisTaxonomy {
     }
 
 
+    /**
+     * 1st-level grouping (broadest)
+     */
     public HrisTaxonomy withDomain(@Nullable String domain) {
         this.domain = domain;
         return this;
@@ -257,12 +311,18 @@ public class HrisTaxonomy {
     }
 
 
+    /**
+     * the preferred label of the skill/role
+     */
     public HrisTaxonomy withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * id of the parent taxonomy item, for providers exposing arbitrary-depth trees
+     */
     public HrisTaxonomy withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -284,24 +344,36 @@ public class HrisTaxonomy {
     }
 
 
+    /**
+     * 3rd-level grouping
+     */
     public HrisTaxonomy withSubcategory(@Nullable String subcategory) {
         this.subcategory = subcategory;
         return this;
     }
 
 
+    /**
+     * the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+     */
     public HrisTaxonomy withType(@Nullable HrisTaxonomyType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTaxonomy withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * external reference URL for this item
+     */
     public HrisTaxonomy withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -410,11 +482,17 @@ public class HrisTaxonomy {
             return this;
         }
 
+        /**
+         * 2nd-level grouping
+         */
         public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -425,6 +503,9 @@ public class HrisTaxonomy {
             return this;
         }
 
+        /**
+         * 1st-level grouping (broadest)
+         */
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
@@ -440,11 +521,17 @@ public class HrisTaxonomy {
             return this;
         }
 
+        /**
+         * the preferred label of the skill/role
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * id of the parent taxonomy item, for providers exposing arbitrary-depth trees
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -463,21 +550,33 @@ public class HrisTaxonomy {
             return this;
         }
 
+        /**
+         * 3rd-level grouping
+         */
         public Builder subcategory(@Nullable String subcategory) {
             this.subcategory = subcategory;
             return this;
         }
 
+        /**
+         * the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+         */
         public Builder type(@Nullable HrisTaxonomyType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * external reference URL for this item
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

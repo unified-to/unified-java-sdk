@@ -17,12 +17,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentLineitem {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -42,7 +46,9 @@ public class PaymentLineitem {
     @JsonProperty("item_description")
     private String itemDescription;
 
-
+    /**
+     * (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
@@ -62,12 +68,16 @@ public class PaymentLineitem {
     @JsonProperty("notes")
     private String notes;
 
-
+    /**
+     * new field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
     private Double refundAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private OffsetDateTime refundedAt;
@@ -97,7 +107,9 @@ public class PaymentLineitem {
     @JsonProperty("unit_quantity")
     private Double unitQuantity;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,10 +161,16 @@ public class PaymentLineitem {
             null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -169,6 +187,9 @@ public class PaymentLineitem {
         return Optional.ofNullable(this.itemDescription);
     }
 
+    /**
+     * (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -185,10 +206,16 @@ public class PaymentLineitem {
         return Optional.ofNullable(this.notes);
     }
 
+    /**
+     * new field
+     */
     public Optional<Double> refundAmount() {
         return Optional.ofNullable(this.refundAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> refundedAt() {
         return Optional.ofNullable(this.refundedAt);
     }
@@ -213,6 +240,9 @@ public class PaymentLineitem {
         return Optional.ofNullable(this.unitQuantity);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -222,12 +252,18 @@ public class PaymentLineitem {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public PaymentLineitem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentLineitem withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -252,6 +288,9 @@ public class PaymentLineitem {
     }
 
 
+    /**
+     * (reference to CommerceItem)
+     */
     public PaymentLineitem withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
@@ -276,12 +315,18 @@ public class PaymentLineitem {
     }
 
 
+    /**
+     * new field
+     */
     public PaymentLineitem withRefundAmount(@Nullable Double refundAmount) {
         this.refundAmount = refundAmount;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentLineitem withRefundedAt(@Nullable OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
@@ -318,6 +363,9 @@ public class PaymentLineitem {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentLineitem withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -427,11 +475,17 @@ public class PaymentLineitem {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -452,6 +506,9 @@ public class PaymentLineitem {
             return this;
         }
 
+        /**
+         * (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
@@ -472,11 +529,17 @@ public class PaymentLineitem {
             return this;
         }
 
+        /**
+         * new field
+         */
         public Builder refundAmount(@Nullable Double refundAmount) {
             this.refundAmount = refundAmount;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
             this.refundedAt = refundedAt;
             return this;
@@ -507,6 +570,9 @@ public class PaymentLineitem {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

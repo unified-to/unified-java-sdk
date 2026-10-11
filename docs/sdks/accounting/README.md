@@ -12,6 +12,7 @@
 * [createAccountingContact](#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
 * [createAccountingExpense](#createaccountingexpense) - Create an expense
+* [createAccountingExpensereport](#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
 * [createAccountingOrder](#createaccountingorder) - Create an order
@@ -35,6 +36,7 @@
 * [getAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
 * [getAccountingExpense](#getaccountingexpense) - Retrieve an expense
+* [getAccountingExpensereport](#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
@@ -43,8 +45,10 @@
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
 * [getAccountingProject](#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [getAccountingPurchasereceipt](#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [getAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
+* [getAccountingSalesreceipt](#getaccountingsalesreceipt) - Retrieve a salesreceipt
 * [getAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [getAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
@@ -60,6 +64,7 @@
 * [listAccountingCategories](#listaccountingcategories) - List all categories
 * [listAccountingContacts](#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
+* [listAccountingExpensereports](#listaccountingexpensereports) - List all expensereports
 * [listAccountingExpenses](#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](#listaccountingjournals) - List all journals
@@ -69,8 +74,10 @@
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 * [listAccountingProjects](#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
+* [listAccountingPurchasereceipts](#listaccountingpurchasereceipts) - List all purchasereceipts
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
 * [listAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
+* [listAccountingSalesreceipts](#listaccountingsalesreceipts) - List all salesreceipts
 * [listAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
@@ -83,6 +90,7 @@
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
 * [patchAccountingExpense](#patchaccountingexpense) - Update an expense
+* [patchAccountingExpensereport](#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
@@ -102,6 +110,7 @@
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
 * [removeAccountingExpense](#removeaccountingexpense) - Remove an expense
+* [removeAccountingExpensereport](#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](#removeaccountingorder) - Remove an order
@@ -121,6 +130,7 @@
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 * [updateAccountingExpense](#updateaccountingexpense) - Update an expense
+* [updateAccountingExpensereport](#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](#updateaccountingorder) - Update an order
@@ -168,7 +178,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -184,7 +194,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -254,11 +264,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("SSP")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("7532335b-4d11-43d3-acb2-ec773f6d3972")
+                    .id("c877b0c4-6618-42ea-bf2f-a8d647ee3099")
                     .name("Corwin, Donnelly and Connelly Savings")
                     .routingNumber("667753156")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-12T16:03:10.090Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-20T02:35:59.939Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -329,14 +339,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("SRD")
                     .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
-                    .id("63e8e361-59cc-45a9-9ca0-f7fbc930f184")
+                    .id("19ed8f06-5331-414b-b1a0-1ee664683214")
                     .isPending(true)
                     .merchantName("Reichert, Erdman and Tillman")
-                    .postedAt(OffsetDateTime.parse("2025-03-25T19:12:54.812Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-08T03:38:14.249Z"))
                     .reference("93642593")
-                    .transactionAt(OffsetDateTime.parse("2022-07-28T01:21:00.312Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-29T13:53:15.798Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-23T23:26:58.193Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-24T16:58:29.868Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -406,13 +416,13 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
                     .extendedNotes(List.of())
-                    .id("c1508f96-35ec-472c-a901-f0ee469454e4")
+                    .id("339a5fd3-7fbe-4871-95ba-b75769001fca")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Tutamen cilicium infit.")
                     .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2024-04-06T07:02:22.576Z"))
+                    .postedAt(OffsetDateTime.parse("2024-04-19T08:55:21.037Z"))
                     .purchaseorderIds(List.of())
                     .send(true)
                     .status(AccountingBillStatus.DELETED)
@@ -420,7 +430,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET10)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-01-31T09:00:56.052Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-15T18:13:43.875Z"))
                     .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
@@ -486,11 +496,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("88148b1e-dc10-46c0-9597-b3cdf31f314d")
+                    .id("2dfe35ff-f710-4187-961b-1e8ceb4536a4")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-08-22T07:37:19.698Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-04T18:35:02.003Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -554,11 +564,11 @@ public class Application {
                 .accountingContact(AccountingContact.builder()
                     .associatedContacts(List.of(
                         AccountingAssociatedContact.builder()
-                            .id("aed4a25a-a941-4154-854f-32113e8dd6ca")
+                            .id("9b5c2f50-3514-43d7-aad0-d3ec98a9103d")
                             .name("Delores Reynolds")
                             .build(),
                         AccountingAssociatedContact.builder()
-                            .id("5a725f40-c54e-4aa5-a55d-353408faa333")
+                            .id("98c10c29-8cbf-45a2-b73d-3a24353fdd78")
                             .name("Delores Reynolds")
                             .build()))
                     .billingAddress(PropertyAccountingContactBillingAddress.builder()
@@ -579,7 +589,7 @@ public class Application {
                             .type(AccountingEmailType.HOME)
                             .build()))
                     .firstName("Delores")
-                    .id("c6a1cc7a-b779-4420-a19a-0d6b905137af")
+                    .id("a7c01682-7ccf-4b17-be2a-46f6b10e8e2f")
                     .identification("amicitia")
                     .isActive(true)
                     .isCustomer(true)
@@ -590,7 +600,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("00dadef0-7876-4af4-be59-5aa5a33c1ee3")
+                            .id("ec710ebe-1e5a-45d5-b416-8cc245211f46")
                             .name("Visa 1234")
                             .build()))
                     .portalUrl("https://scented-t-shirt.info/")
@@ -614,7 +624,7 @@ public class Application {
                             .telephone("(540) 913-9171")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-06T07:23:48.157Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T08:19:00.768Z"))
                     .website("https://noxious-advertisement.org")
                     .build())
                 .connectionId("<id>")
@@ -681,7 +691,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://enlightened-chairperson.com/")
-                            .id("852128f4-fbc1-4b6a-a326-60c6ed936eab")
+                            .id("ab0d27db-f5a6-47e6-a1cc-f141bc4061a3")
                             .mimeType("complectus")
                             .name("thesis")
                             .build()))
@@ -690,12 +700,12 @@ public class Application {
                     .currency("MKD")
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
-                    .id("16ebb11b-b079-4d4f-8e95-4282a755f71e")
+                    .id("3d014091-d624-4745-bc32-ac501fc4aee3")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Dedecor amo adfero torqueo quas.")
                     .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
-                    .postedAt(OffsetDateTime.parse("2025-11-17T15:25:54.544Z"))
+                    .postedAt(OffsetDateTime.parse("2025-12-02T00:30:20.953Z"))
                     .refundAmount(0d)
                     .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
                     .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
@@ -703,7 +713,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2024-11-16T17:39:05.647Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-11-24T10:48:32.149Z"))
                     .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
@@ -766,11 +776,11 @@ public class Application {
 
         CreateAccountingExpenseRequest req = CreateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-12T14:59:51.847Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.731Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("2b12c7c0-070e-46a8-a60a-f6b9ac0974d1")
+                            .id("2d3e86aa-a965-4d39-95a0-62dbc6d206a8")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -778,10 +788,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("48eda7e6-33a6-4cc4-983e-d235e6b1e640")
+                    .id("f2122bc2-cfb5-4623-850e-6715ad47d337")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("0f3ecfc8-0d5c-4da9-962b-a1ab4a21ec65")
+                            .id("75904edd-1d58-4000-90ed-90de804f6b9d")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -794,12 +804,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-04T16:26:44.890Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.552Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
-                    .updatedAt(OffsetDateTime.parse("2026-05-12T14:59:51.847Z"))
+                    .type(AccountingExpenseType.USER)
+                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.731Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -824,6 +835,105 @@ public class Application {
 ### Response
 
 **[CreateAccountingExpenseResponse](../../models/operations/CreateAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAccountingExpensereport
+
+Create an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" example="accounting_expensereport" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAccountingExpensereportRequest req = CreateAccountingExpensereportRequest.builder()
+                .accountingExpensereport(AccountingExpensereport.builder()
+                    .approvedAt(OffsetDateTime.parse("2025-04-06T09:47:16.641Z"))
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
+                    .currency("BMD")
+                    .externalNumber("asporto")
+                    .id("610828f0-563e-4383-85a1-92a419086e50")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("3741c577-32e9-4539-8f4d-e1a873597a92")
+                            .itemDescription("The Synchronised motivating software Car offers reliable performance and webbed design")
+                            .itemName("Intelligent Gold Cheese")
+                            .itemSku("978-0-6550-0228-4")
+                            .notes("Utrimque quas vesica spes.")
+                            .taxAmount(448d)
+                            .totalAmount(10875d)
+                            .unitAmount(4092d)
+                            .unitQuantity(1d)
+                            .build(),
+                        AccountingLineitem.builder()
+                            .id("dad308a6-54ac-4e77-bde6-b56079cd696a")
+                            .itemDescription("Ergonomic Bike made with Marble for all-day coordinated support")
+                            .itemName("Practical Steel Pizza")
+                            .itemSku("978-1-4129-9332-6")
+                            .notes("Corrumpo.")
+                            .taxAmount(875d)
+                            .totalAmount(12363d)
+                            .unitAmount(6783d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Rustic Aluminum Car")
+                    .postedAt(OffsetDateTime.parse("2022-10-30T06:40:14.178Z"))
+                    .reimbursedAmount(6696d)
+                    .status(AccountingExpensereportStatus.PAID)
+                    .taxAmount(983d)
+                    .totalAmount(13931d)
+                    .updatedAt(OffsetDateTime.parse("2025-04-06T09:47:16.641Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAccountingExpensereportResponse res = sdk.accounting().createAccountingExpensereport()
+                .request(req)
+                .call();
+
+        if (res.accountingExpensereport().isPresent()) {
+            System.out.println(res.accountingExpensereport().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [CreateAccountingExpensereportRequest](../../models/operations/CreateAccountingExpensereportRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[CreateAccountingExpensereportResponse](../../models/operations/CreateAccountingExpensereportResponse.md)**
 
 ### Errors
 
@@ -864,7 +974,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("5cf0c60a-c701-4795-a3aa-5f03390e836b")
+                            .id("cd662c39-8498-45de-a007-33fc7fe5eb3c")
                             .mimeType("benevolentia")
                             .name("vespillo")
                             .build()))
@@ -875,7 +985,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
                     .extendedNotes(List.of())
-                    .id("fcd76287-438d-4c94-b929-76593cc6f8a6")
+                    .id("6db4d48a-654d-4079-8546-7b90facdee42")
                     .invoiceNumber("vinco")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
@@ -885,7 +995,7 @@ public class Application {
                     .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
                     .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-03-29T14:31:44.384Z"))
+                    .postedAt(OffsetDateTime.parse("2026-04-16T02:26:28.611Z"))
                     .reference("adinventitias")
                     .salesorderIds(List.of())
                     .send(true)
@@ -895,7 +1005,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET45)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.CREDITMEMO)
-                    .updatedAt(OffsetDateTime.parse("2023-02-06T11:29:32.706Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-07T18:19:06.744Z"))
                     .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
@@ -961,17 +1071,18 @@ public class Application {
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
-                    .currency("FKP")
-                    .description("Calco constans adipisci.")
-                    .id("590b6288-5aee-4f57-a3a9-1a4e6c635598")
-                    .isInclusiveOfTax(true)
-                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.144Z"))
-                    .reference("ullam")
-                    .source("crustulum")
+                    .currency("RUB")
+                    .description("Solum commemoro conor nemo ultio.")
+                    .exchangeRate(1.0625)
+                    .id("95573ab0-2508-42ed-8504-0b6059c152c6")
+                    .isInclusiveOfTax(false)
+                    .lineitems(List.of())
+                    .postedAt(OffsetDateTime.parse("2023-10-31T21:10:41.551Z"))
+                    .reference("82523039")
+                    .source("amplitudo")
                     .status(AccountingJournalStatus.VOID)
-                    .taxAmount(78672d)
-                    .totalAmount(74094d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.270Z"))
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-07T23:42:12.421Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1044,10 +1155,10 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("USD")
-                    .id("7076518a-2762-43cc-b62f-1fca5b3421fa")
+                    .id("53ea3cb4-8380-4b34-9781-59589848c165")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2022-04-05T17:22:19.726Z"))
+                    .postedAt(OffsetDateTime.parse("2022-04-10T10:12:59.145Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
                         .address1("9745 Betty Shore")
                         .city("South Alainaland")
@@ -1059,7 +1170,7 @@ public class Application {
                     .status(AccountingOrderStatus.SUBMITTED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.PURCHASE)
-                    .updatedAt(OffsetDateTime.parse("2021-06-18T05:51:10.099Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-20T05:07:07.767Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1130,12 +1241,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("7dc32579-8321-4cc9-a89d-fe7aa2787ab4")
+                    .id("9b4907b3-29b7-4f92-8a35-b89d9ae4d121")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2025-12-14T00:52:14.687Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T23:39:55.115Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1257,6 +1368,7 @@ public class Application {
 
         CreateAccountingPurchaseorderRequest req = CreateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .attachments(List.of())
                     .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
                         .address1("37214 Tanya Walks")
                         .city("South Annabelleton")
@@ -1268,10 +1380,10 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("ZMW")
-                    .id("f7dde434-bbb1-4325-ae3c-a9403bede977")
+                    .id("5df0165d-2362-45a3-a731-a5c2c266b425")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-27T10:38:53.396Z"))
+                    .postedAt(OffsetDateTime.parse("2025-05-12T13:45:08.967Z"))
                     .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
                         .address1("649 Maggio Overpass")
                         .city("Lake Jaylan")
@@ -1282,7 +1394,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-02-26T05:56:03.104Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T23:11:58.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1414,7 +1526,7 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-08-17T22:23:55.028Z"))
+                    .closedAt(OffsetDateTime.parse("2023-08-24T16:29:18.392Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("ANG")
                     .discountAmount(99d)
@@ -1427,12 +1539,12 @@ public class Application {
                             .build()))
                     .fulfillmentType(FulfillmentType.TAKEOUT)
                     .guestCount(8d)
-                    .id("d4941a2a-7d44-42b9-90df-3e4a65d79d41")
+                    .id("843100e4-79ef-4100-964b-71f23c4bc368")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("988187")
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-01-13T16:17:32.520Z"))
+                    .postedAt(OffsetDateTime.parse("2026-01-30T17:24:29.322Z"))
                     .refundedAmount(0d)
                     .salesChannel("Harvey, Collier and Weimann")
                     .serviceChargeAmount(63d)
@@ -1450,7 +1562,7 @@ public class Application {
                     .taxAmount(63d)
                     .tipAmount(34d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-02-10T19:50:55.205Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-11T02:37:49.468Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1522,7 +1634,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Atrox tricesimus creator.")
                     .effectiveRate(53d)
-                    .id("f60cdbf8-fb40-4fa3-80f7-548de98ad657")
+                    .id("5133c370-8e58-4991-80af-a10937bf9444")
                     .isActive(false)
                     .isCompound(true)
                     .metadata(List.of())
@@ -1531,7 +1643,7 @@ public class Application {
                     .region("TX")
                     .totalRate(53d)
                     .type(AccountingTaxrateType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.142Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-20T04:28:16.150Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1595,12 +1707,12 @@ public class Application {
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
                     .exchangeRate(0.5674)
-                    .id("87e1785a-99e0-4104-9ca4-f517ff6e6f4f")
+                    .id("7de0c454-3db6-4811-afb0-45b3bb174f8d")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
-                            .id("78395113-acef-4251-9287-02bf9466a9dd")
+                            .id("562d87be-d72d-46fc-b369-1a30ad47cb35")
                             .name("Salad")
                             .objectType("delicate")
                             .totalAmount(58531d)
@@ -1612,7 +1724,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(94452d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-09-10T23:02:19.723Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-16T13:36:17.078Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1680,14 +1792,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("KGS")
                     .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
-                    .id("b338c9bb-4b83-4be5-9fbc-b6460c8258a0")
+                    .id("77980879-72c8-45e3-a9ff-6e76f0de3795")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Conatus cruciamentum decor avaritia tantum.")
-                    .postedAt(OffsetDateTime.parse("2023-09-29T02:22:24.982Z"))
+                    .postedAt(OffsetDateTime.parse("2023-10-01T17:54:40.291Z"))
                     .status(AccountingVendorcreditStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-11-27T03:40:07.005Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-30T17:46:49.347Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2415,6 +2527,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAccountingExpensereport
+
+Retrieve an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingExpensereport" method="get" path="/accounting/{connection_id}/expensereport/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpensereportResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingExpensereportRequest req = GetAccountingExpensereportRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingExpensereportResponse res = sdk.accounting().getAccountingExpensereport()
+                .request(req)
+                .call();
+
+        if (res.accountingExpensereport().isPresent()) {
+            System.out.println(res.accountingExpensereport().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [GetAccountingExpensereportRequest](../../models/operations/GetAccountingExpensereportRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[GetAccountingExpensereportResponse](../../models/operations/GetAccountingExpensereportResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingInvoice
 
 Retrieve an invoice
@@ -2879,6 +3049,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAccountingPurchasereceipt
+
+Retrieve a purchasereceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingPurchasereceipt" method="get" path="/accounting/{connection_id}/purchasereceipt/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchasereceiptRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchasereceiptResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingPurchasereceiptRequest req = GetAccountingPurchasereceiptRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingPurchasereceiptResponse res = sdk.accounting().getAccountingPurchasereceipt()
+                .request(req)
+                .call();
+
+        if (res.accountingPurchasereceipt().isPresent()) {
+            System.out.println(res.accountingPurchasereceipt().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [GetAccountingPurchasereceiptRequest](../../models/operations/GetAccountingPurchasereceiptRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[GetAccountingPurchasereceiptResponse](../../models/operations/GetAccountingPurchasereceiptResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAccountingQuote
 
 Retrieve a quote
@@ -2988,6 +3216,64 @@ public class Application {
 ### Response
 
 **[GetAccountingSalesorderResponse](../../models/operations/GetAccountingSalesorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAccountingSalesreceipt
+
+Retrieve a salesreceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAccountingSalesreceipt" method="get" path="/accounting/{connection_id}/salesreceipt/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesreceiptRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesreceiptResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAccountingSalesreceiptRequest req = GetAccountingSalesreceiptRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAccountingSalesreceiptResponse res = sdk.accounting().getAccountingSalesreceipt()
+                .request(req)
+                .call();
+
+        if (res.accountingSalesreceipt().isPresent()) {
+            System.out.println(res.accountingSalesreceipt().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [GetAccountingSalesreceiptRequest](../../models/operations/GetAccountingSalesreceiptRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[GetAccountingSalesreceiptResponse](../../models/operations/GetAccountingSalesreceiptResponse.md)**
 
 ### Errors
 
@@ -3854,6 +4140,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingExpensereports
+
+List all expensereports
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingExpensereports" method="get" path="/accounting/{connection_id}/expensereport" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensereportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensereportsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingExpensereportsRequest req = ListAccountingExpensereportsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingExpensereportsResponse res = sdk.accounting().listAccountingExpensereports()
+                .request(req)
+                .call();
+
+        if (res.accountingExpensereports().isPresent()) {
+            System.out.println(res.accountingExpensereports().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [ListAccountingExpensereportsRequest](../../models/operations/ListAccountingExpensereportsRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[ListAccountingExpensereportsResponse](../../models/operations/ListAccountingExpensereportsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingExpenses
 
 List all expenses
@@ -4367,6 +4710,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAccountingPurchasereceipts
+
+List all purchasereceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingPurchasereceipts" method="get" path="/accounting/{connection_id}/purchasereceipt" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingPurchasereceiptsRequest req = ListAccountingPurchasereceiptsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingPurchasereceiptsResponse res = sdk.accounting().listAccountingPurchasereceipts()
+                .request(req)
+                .call();
+
+        if (res.accountingPurchasereceipts().isPresent()) {
+            System.out.println(res.accountingPurchasereceipts().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [ListAccountingPurchasereceiptsRequest](../../models/operations/ListAccountingPurchasereceiptsRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[ListAccountingPurchasereceiptsResponse](../../models/operations/ListAccountingPurchasereceiptsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingQuotes
 
 List all quotes
@@ -4474,6 +4874,63 @@ public class Application {
 ### Response
 
 **[ListAccountingSalesordersResponse](../../models/operations/ListAccountingSalesordersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAccountingSalesreceipts
+
+List all salesreceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAccountingSalesreceipts" method="get" path="/accounting/{connection_id}/salesreceipt" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesreceiptsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesreceiptsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAccountingSalesreceiptsRequest req = ListAccountingSalesreceiptsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAccountingSalesreceiptsResponse res = sdk.accounting().listAccountingSalesreceipts()
+                .request(req)
+                .call();
+
+        if (res.accountingSalesreceipts().isPresent()) {
+            System.out.println(res.accountingSalesreceipts().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [ListAccountingSalesreceiptsRequest](../../models/operations/ListAccountingSalesreceiptsRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[ListAccountingSalesreceiptsResponse](../../models/operations/ListAccountingSalesreceiptsResponse.md)**
 
 ### Errors
 
@@ -4744,7 +5201,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("53cbd8a2-f18c-4a78-8bb8-874214dbad58")
+                    .id("215d9175-23e0-4862-b499-51dd50e98635")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -4760,7 +5217,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.295Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.511Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4831,11 +5288,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("SSP")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("60b23ad0-32a2-4590-b9cd-fcf578434bb9")
+                    .id("b8854a60-42a4-4705-beb0-212f3c9087a7")
                     .name("Corwin, Donnelly and Connelly Savings")
                     .routingNumber("667753156")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-12T16:03:10.095Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-20T02:35:59.942Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4907,14 +5364,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("SRD")
                     .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
-                    .id("56011350-c2b0-41d1-9ed0-b65eb5620267")
+                    .id("5fd4827b-da2b-4367-92eb-e65ee546deb0")
                     .isPending(true)
                     .merchantName("Reichert, Erdman and Tillman")
-                    .postedAt(OffsetDateTime.parse("2025-03-25T19:12:54.821Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-08T03:38:14.255Z"))
                     .reference("93642593")
-                    .transactionAt(OffsetDateTime.parse("2022-07-28T01:21:00.313Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-29T13:53:15.799Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-23T23:26:58.193Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-24T16:58:29.868Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4985,13 +5442,13 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
                     .extendedNotes(List.of())
-                    .id("1d6afaf7-b2f7-4b88-b0e8-a071286a07b8")
+                    .id("687c6fa9-67b0-43b9-b80f-ee40f2bcb790")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Tutamen cilicium infit.")
                     .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2024-04-06T07:02:22.604Z"))
+                    .postedAt(OffsetDateTime.parse("2024-04-19T08:55:21.062Z"))
                     .purchaseorderIds(List.of())
                     .send(true)
                     .status(AccountingBillStatus.DELETED)
@@ -4999,7 +5456,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET10)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-01-31T09:00:56.085Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-15T18:13:43.905Z"))
                     .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
@@ -5066,11 +5523,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("879a3600-e0d0-422d-8b03-6483b173c016")
+                    .id("2ae5d710-e676-4d0f-96b3-acab3b2d98cb")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-08-22T07:37:19.705Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-04T18:35:02.010Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5135,11 +5592,11 @@ public class Application {
                 .accountingContact(AccountingContact.builder()
                     .associatedContacts(List.of(
                         AccountingAssociatedContact.builder()
-                            .id("32bde497-bc3f-4491-ba2c-fb650eccb8d1")
+                            .id("ab6100bc-c0cf-43fc-8ce0-eb6e166a84ba")
                             .name("Delores Reynolds")
                             .build(),
                         AccountingAssociatedContact.builder()
-                            .id("2a3996a2-f5d4-46b3-bf49-8127eab40cc2")
+                            .id("a617cbfd-4d86-4769-a0c8-8bbe99244b53")
                             .name("Delores Reynolds")
                             .build()))
                     .billingAddress(PropertyAccountingContactBillingAddress.builder()
@@ -5160,7 +5617,7 @@ public class Application {
                             .type(AccountingEmailType.HOME)
                             .build()))
                     .firstName("Delores")
-                    .id("eb2d42b7-7120-4cde-9354-5e8775fd6701")
+                    .id("7b4c36f6-9ea3-4138-af0a-48fdb5c23c4f")
                     .identification("amicitia")
                     .isActive(true)
                     .isCustomer(true)
@@ -5171,7 +5628,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("60ce8459-b72d-4dc8-a716-ba5c44475ca2")
+                            .id("aa7b1b9d-d1bb-4a82-8262-b46a99ffd007")
                             .name("Visa 1234")
                             .build()))
                     .portalUrl("https://scented-t-shirt.info/")
@@ -5195,7 +5652,7 @@ public class Application {
                             .telephone("(540) 913-9171")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-06T07:23:48.180Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T08:19:00.780Z"))
                     .website("https://noxious-advertisement.org")
                     .build())
                 .connectionId("<id>")
@@ -5263,7 +5720,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://enlightened-chairperson.com/")
-                            .id("dab75275-1827-4921-9864-2cdfb4ae6cec")
+                            .id("bf83c250-cf36-4499-b9be-ca3763083bd4")
                             .mimeType("complectus")
                             .name("thesis")
                             .build()))
@@ -5272,12 +5729,12 @@ public class Application {
                     .currency("MKD")
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
-                    .id("ffffa0d5-61aa-4cbe-8725-bece1a674001")
+                    .id("98e3de9f-5a18-4005-840e-ee0ca5904187")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Dedecor amo adfero torqueo quas.")
                     .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
-                    .postedAt(OffsetDateTime.parse("2025-11-17T15:25:54.581Z"))
+                    .postedAt(OffsetDateTime.parse("2025-12-02T00:30:20.982Z"))
                     .refundAmount(0d)
                     .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
                     .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
@@ -5285,7 +5742,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2024-11-16T17:39:05.667Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-11-24T10:48:32.165Z"))
                     .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
@@ -5349,11 +5806,11 @@ public class Application {
 
         PatchAccountingExpenseRequest req = PatchAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-12T14:59:51.879Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("5418c1de-6c66-4111-b8f6-97e2beb48015")
+                            .id("fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -5361,10 +5818,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("852b20a2-b542-43e7-87de-8de713f7ed30")
+                    .id("acbe7639-ea60-46a9-9bec-90ec8c83fa2b")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("4f3f2270-fb10-4aed-86d4-8312f2819c24")
+                            .id("65c7f906-1e52-4a2c-857f-498f4a43dfe7")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -5377,12 +5834,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-04T16:26:44.896Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.557Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
-                    .updatedAt(OffsetDateTime.parse("2026-05-12T14:59:51.879Z"))
+                    .type(AccountingExpenseType.USER)
+                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5408,6 +5866,106 @@ public class Application {
 ### Response
 
 **[PatchAccountingExpenseResponse](../../models/operations/PatchAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAccountingExpensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpensereportResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAccountingExpensereportRequest req = PatchAccountingExpensereportRequest.builder()
+                .accountingExpensereport(AccountingExpensereport.builder()
+                    .approvedAt(OffsetDateTime.parse("2025-04-06T09:47:16.665Z"))
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
+                    .currency("BMD")
+                    .externalNumber("asporto")
+                    .id("c3336adf-1600-4299-808c-84e8d2cf73d1")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("e92cbd00-bb45-4fb9-bcde-8b1876e273c0")
+                            .itemDescription("The Synchronised motivating software Car offers reliable performance and webbed design")
+                            .itemName("Intelligent Gold Cheese")
+                            .itemSku("978-0-6550-0228-4")
+                            .notes("Utrimque quas vesica spes.")
+                            .taxAmount(448d)
+                            .totalAmount(10875d)
+                            .unitAmount(4092d)
+                            .unitQuantity(1d)
+                            .build(),
+                        AccountingLineitem.builder()
+                            .id("5c54139d-c7f6-4e33-925e-e8732bf9ebae")
+                            .itemDescription("Ergonomic Bike made with Marble for all-day coordinated support")
+                            .itemName("Practical Steel Pizza")
+                            .itemSku("978-1-4129-9332-6")
+                            .notes("Corrumpo.")
+                            .taxAmount(875d)
+                            .totalAmount(12363d)
+                            .unitAmount(6783d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Rustic Aluminum Car")
+                    .postedAt(OffsetDateTime.parse("2022-10-30T06:40:14.190Z"))
+                    .reimbursedAmount(6696d)
+                    .status(AccountingExpensereportStatus.PAID)
+                    .taxAmount(983d)
+                    .totalAmount(13931d)
+                    .updatedAt(OffsetDateTime.parse("2025-04-06T09:47:16.665Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAccountingExpensereportResponse res = sdk.accounting().patchAccountingExpensereport()
+                .request(req)
+                .call();
+
+        if (res.accountingExpensereport().isPresent()) {
+            System.out.println(res.accountingExpensereport().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [PatchAccountingExpensereportRequest](../../models/operations/PatchAccountingExpensereportRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[PatchAccountingExpensereportResponse](../../models/operations/PatchAccountingExpensereportResponse.md)**
 
 ### Errors
 
@@ -5448,7 +6006,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("9c84fb4a-f568-4d57-9814-d2f48b6721f9")
+                            .id("e7117d57-065f-4896-8906-6eba679f146a")
                             .mimeType("benevolentia")
                             .name("vespillo")
                             .build()))
@@ -5459,7 +6017,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
                     .extendedNotes(List.of())
-                    .id("f85296bf-760d-4117-adb2-15ceb0fbb211")
+                    .id("49add81c-73bd-4ba3-a86a-07b6154932c0")
                     .invoiceNumber("vinco")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
@@ -5469,7 +6027,7 @@ public class Application {
                     .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
                     .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-03-29T14:31:44.428Z"))
+                    .postedAt(OffsetDateTime.parse("2026-04-16T02:26:28.645Z"))
                     .reference("adinventitias")
                     .salesorderIds(List.of())
                     .send(true)
@@ -5479,7 +6037,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET45)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.CREDITMEMO)
-                    .updatedAt(OffsetDateTime.parse("2023-02-06T11:29:32.709Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-07T18:19:06.746Z"))
                     .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
@@ -5546,17 +6104,18 @@ public class Application {
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
-                    .currency("FKP")
-                    .description("Calco constans adipisci.")
-                    .id("c749aba5-ca79-4974-b223-7c1515e3dbd8")
-                    .isInclusiveOfTax(true)
-                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.157Z"))
-                    .reference("ullam")
-                    .source("crustulum")
+                    .currency("RUB")
+                    .description("Solum commemoro conor nemo ultio.")
+                    .exchangeRate(1.0625)
+                    .id("c1e00979-6ffe-46b9-b7ca-6815812ac842")
+                    .isInclusiveOfTax(false)
+                    .lineitems(List.of())
+                    .postedAt(OffsetDateTime.parse("2023-10-31T21:10:41.563Z"))
+                    .reference("82523039")
+                    .source("amplitudo")
                     .status(AccountingJournalStatus.VOID)
-                    .taxAmount(78672d)
-                    .totalAmount(74094d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.276Z"))
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-07T23:42:12.427Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5630,10 +6189,10 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("USD")
-                    .id("5d099f4f-0732-4ed8-bab2-99111982e74c")
+                    .id("da1e6c6b-5808-4374-a576-0aa875b701a9")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2022-04-05T17:22:19.738Z"))
+                    .postedAt(OffsetDateTime.parse("2022-04-10T10:12:59.153Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
                         .address1("9745 Betty Shore")
                         .city("South Alainaland")
@@ -5645,7 +6204,7 @@ public class Application {
                     .status(AccountingOrderStatus.SUBMITTED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.PURCHASE)
-                    .updatedAt(OffsetDateTime.parse("2021-06-18T05:51:10.104Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-20T05:07:07.770Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5717,12 +6276,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("acdabe07-04be-4f73-a80f-0e0c44a47e72")
+                    .id("99702f5c-8b2f-4d48-91ba-826a43bbe0b7")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2025-12-14T00:52:14.701Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T23:39:55.125Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5846,6 +6405,7 @@ public class Application {
 
         PatchAccountingPurchaseorderRequest req = PatchAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .attachments(List.of())
                     .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
                         .address1("37214 Tanya Walks")
                         .city("South Annabelleton")
@@ -5857,10 +6417,10 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("ZMW")
-                    .id("d118cce2-44a0-4328-bf59-7259e05d3180")
+                    .id("0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-27T10:38:53.438Z"))
+                    .postedAt(OffsetDateTime.parse("2025-05-12T13:45:08.992Z"))
                     .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
                         .address1("649 Maggio Overpass")
                         .city("Lake Jaylan")
@@ -5871,7 +6431,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-02-26T05:56:03.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T23:11:58.691Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6005,7 +6565,7 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-08-17T22:23:55.042Z"))
+                    .closedAt(OffsetDateTime.parse("2023-08-24T16:29:18.407Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("ANG")
                     .discountAmount(99d)
@@ -6018,12 +6578,12 @@ public class Application {
                             .build()))
                     .fulfillmentType(FulfillmentType.TAKEOUT)
                     .guestCount(8d)
-                    .id("82afdd80-8627-4a82-80bb-72e1655b3593")
+                    .id("5558e453-d0ab-4386-989b-ddeefe517d68")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("988187")
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-01-13T16:17:32.555Z"))
+                    .postedAt(OffsetDateTime.parse("2026-01-30T17:24:29.360Z"))
                     .refundedAmount(0d)
                     .salesChannel("Harvey, Collier and Weimann")
                     .serviceChargeAmount(63d)
@@ -6041,7 +6601,7 @@ public class Application {
                     .taxAmount(63d)
                     .tipAmount(34d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-02-10T19:50:55.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-11T02:37:49.468Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6114,7 +6674,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Atrox tricesimus creator.")
                     .effectiveRate(53d)
-                    .id("6157a522-08d3-45f7-9287-187fd17fc766")
+                    .id("2e3bcadc-8c35-4f8d-afdc-3083ef7be848")
                     .isActive(false)
                     .isCompound(true)
                     .metadata(List.of())
@@ -6123,7 +6683,7 @@ public class Application {
                     .region("TX")
                     .totalRate(53d)
                     .type(AccountingTaxrateType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.150Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-20T04:28:16.155Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6188,12 +6748,12 @@ public class Application {
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
                     .exchangeRate(0.5674)
-                    .id("149fa846-c137-4a76-850e-1e5bd335bf10")
+                    .id("a54266f5-37f6-4957-849c-d6006068b45e")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
-                            .id("66a182d7-5406-4d9d-837d-4d25c59428ad")
+                            .id("1bfb935d-3996-4971-befd-4c3ff7ca22ea")
                             .name("Salad")
                             .objectType("delicate")
                             .totalAmount(58531d)
@@ -6205,7 +6765,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(94452d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-09-10T23:02:19.731Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-16T13:36:17.083Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6274,14 +6834,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("KGS")
                     .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
-                    .id("f037c8ee-fc51-466e-b5c7-85bfcaec147f")
+                    .id("b8ec19a9-c8ef-4a8b-bb14-c4a360838fd9")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Conatus cruciamentum decor avaritia tantum.")
-                    .postedAt(OffsetDateTime.parse("2023-09-29T02:22:24.987Z"))
+                    .postedAt(OffsetDateTime.parse("2023-10-01T17:54:40.294Z"))
                     .status(AccountingVendorcreditStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-11-27T03:40:07.012Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-30T17:46:49.352Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6755,6 +7315,62 @@ public class Application {
 ### Response
 
 **[RemoveAccountingExpenseResponse](../../models/operations/RemoveAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAccountingExpensereport
+
+Remove an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAccountingExpensereport" method="delete" path="/accounting/{connection_id}/expensereport/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpensereportResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAccountingExpensereportRequest req = RemoveAccountingExpensereportRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAccountingExpensereportResponse res = sdk.accounting().removeAccountingExpensereport()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [RemoveAccountingExpensereportRequest](../../models/operations/RemoveAccountingExpensereportRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[RemoveAccountingExpensereportResponse](../../models/operations/RemoveAccountingExpensereportResponse.md)**
 
 ### Errors
 
@@ -7413,7 +8029,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("53cbd8a2-f18c-4a78-8bb8-874214dbad58")
+                    .id("215d9175-23e0-4862-b499-51dd50e98635")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -7429,7 +8045,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.295Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.511Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7500,11 +8116,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("SSP")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("60b23ad0-32a2-4590-b9cd-fcf578434bb9")
+                    .id("b8854a60-42a4-4705-beb0-212f3c9087a7")
                     .name("Corwin, Donnelly and Connelly Savings")
                     .routingNumber("667753156")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-12T16:03:10.095Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-20T02:35:59.942Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7576,14 +8192,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("SRD")
                     .description("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.")
-                    .id("56011350-c2b0-41d1-9ed0-b65eb5620267")
+                    .id("5fd4827b-da2b-4367-92eb-e65ee546deb0")
                     .isPending(true)
                     .merchantName("Reichert, Erdman and Tillman")
-                    .postedAt(OffsetDateTime.parse("2025-03-25T19:12:54.821Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-08T03:38:14.255Z"))
                     .reference("93642593")
-                    .transactionAt(OffsetDateTime.parse("2022-07-28T01:21:00.313Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-29T13:53:15.799Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-23T23:26:58.193Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-24T16:58:29.868Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7654,13 +8270,13 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-08-11T20:52:55.321Z"))
                     .extendedNotes(List.of())
-                    .id("1d6afaf7-b2f7-4b88-b0e8-a071286a07b8")
+                    .id("687c6fa9-67b0-43b9-b80f-ee40f2bcb790")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Tutamen cilicium infit.")
                     .paymentCollectionMethod(PaymentCollectionMethod.CHARGE_AUTOMATICALLY)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2024-04-06T07:02:22.604Z"))
+                    .postedAt(OffsetDateTime.parse("2024-04-19T08:55:21.062Z"))
                     .purchaseorderIds(List.of())
                     .send(true)
                     .status(AccountingBillStatus.DELETED)
@@ -7668,7 +8284,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET10)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-01-31T09:00:56.085Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-15T18:13:43.905Z"))
                     .url("https://coarse-interviewer.biz/")
                     .build())
                 .connectionId("<id>")
@@ -7735,11 +8351,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("879a3600-e0d0-422d-8b03-6483b173c016")
+                    .id("2ae5d710-e676-4d0f-96b3-acab3b2d98cb")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-08-22T07:37:19.705Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-04T18:35:02.010Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -7804,11 +8420,11 @@ public class Application {
                 .accountingContact(AccountingContact.builder()
                     .associatedContacts(List.of(
                         AccountingAssociatedContact.builder()
-                            .id("32bde497-bc3f-4491-ba2c-fb650eccb8d1")
+                            .id("ab6100bc-c0cf-43fc-8ce0-eb6e166a84ba")
                             .name("Delores Reynolds")
                             .build(),
                         AccountingAssociatedContact.builder()
-                            .id("2a3996a2-f5d4-46b3-bf49-8127eab40cc2")
+                            .id("a617cbfd-4d86-4769-a0c8-8bbe99244b53")
                             .name("Delores Reynolds")
                             .build()))
                     .billingAddress(PropertyAccountingContactBillingAddress.builder()
@@ -7829,7 +8445,7 @@ public class Application {
                             .type(AccountingEmailType.HOME)
                             .build()))
                     .firstName("Delores")
-                    .id("eb2d42b7-7120-4cde-9354-5e8775fd6701")
+                    .id("7b4c36f6-9ea3-4138-af0a-48fdb5c23c4f")
                     .identification("amicitia")
                     .isActive(true)
                     .isCustomer(true)
@@ -7840,7 +8456,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("60ce8459-b72d-4dc8-a716-ba5c44475ca2")
+                            .id("aa7b1b9d-d1bb-4a82-8262-b46a99ffd007")
                             .name("Visa 1234")
                             .build()))
                     .portalUrl("https://scented-t-shirt.info/")
@@ -7864,7 +8480,7 @@ public class Application {
                             .telephone("(540) 913-9171")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-06T07:23:48.180Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-15T08:19:00.780Z"))
                     .website("https://noxious-advertisement.org")
                     .build())
                 .connectionId("<id>")
@@ -7932,7 +8548,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://enlightened-chairperson.com/")
-                            .id("dab75275-1827-4921-9864-2cdfb4ae6cec")
+                            .id("bf83c250-cf36-4499-b9be-ca3763083bd4")
                             .mimeType("complectus")
                             .name("thesis")
                             .build()))
@@ -7941,12 +8557,12 @@ public class Application {
                     .currency("MKD")
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2023-10-18T04:35:00.543Z"))
-                    .id("ffffa0d5-61aa-4cbe-8725-bece1a674001")
+                    .id("98e3de9f-5a18-4005-840e-ee0ca5904187")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Dedecor amo adfero torqueo quas.")
                     .paymentCollectionMethod(AccountingCreditmemoPaymentCollectionMethod.CHARGE_AUTOMATICALLY)
-                    .postedAt(OffsetDateTime.parse("2025-11-17T15:25:54.581Z"))
+                    .postedAt(OffsetDateTime.parse("2025-12-02T00:30:20.982Z"))
                     .refundAmount(0d)
                     .refundReason("Virgo inflammatio quibusdam aestivus magnam.")
                     .refundedAt(OffsetDateTime.parse("2023-10-23T00:35:36.814Z"))
@@ -7954,7 +8570,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2024-11-16T17:39:05.667Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-11-24T10:48:32.165Z"))
                     .url("https://lighthearted-bandwidth.net/")
                     .build())
                 .connectionId("<id>")
@@ -8018,11 +8634,11 @@ public class Application {
 
         UpdateAccountingExpenseRequest req = UpdateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-12T14:59:51.879Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("5418c1de-6c66-4111-b8f6-97e2beb48015")
+                            .id("fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -8030,10 +8646,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("852b20a2-b542-43e7-87de-8de713f7ed30")
+                    .id("acbe7639-ea60-46a9-9bec-90ec8c83fa2b")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("4f3f2270-fb10-4aed-86d4-8312f2819c24")
+                            .id("65c7f906-1e52-4a2c-857f-498f4a43dfe7")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -8046,12 +8662,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-04T16:26:44.896Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.557Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
-                    .updatedAt(OffsetDateTime.parse("2026-05-12T14:59:51.879Z"))
+                    .type(AccountingExpenseType.USER)
+                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8077,6 +8694,106 @@ public class Application {
 ### Response
 
 **[UpdateAccountingExpenseResponse](../../models/operations/UpdateAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAccountingExpensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpensereportResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAccountingExpensereportRequest req = UpdateAccountingExpensereportRequest.builder()
+                .accountingExpensereport(AccountingExpensereport.builder()
+                    .approvedAt(OffsetDateTime.parse("2025-04-06T09:47:16.665Z"))
+                    .attachments(List.of())
+                    .categoryIds(List.of())
+                    .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
+                    .currency("BMD")
+                    .externalNumber("asporto")
+                    .id("c3336adf-1600-4299-808c-84e8d2cf73d1")
+                    .lineitems(List.of(
+                        AccountingLineitem.builder()
+                            .id("e92cbd00-bb45-4fb9-bcde-8b1876e273c0")
+                            .itemDescription("The Synchronised motivating software Car offers reliable performance and webbed design")
+                            .itemName("Intelligent Gold Cheese")
+                            .itemSku("978-0-6550-0228-4")
+                            .notes("Utrimque quas vesica spes.")
+                            .taxAmount(448d)
+                            .totalAmount(10875d)
+                            .unitAmount(4092d)
+                            .unitQuantity(1d)
+                            .build(),
+                        AccountingLineitem.builder()
+                            .id("5c54139d-c7f6-4e33-925e-e8732bf9ebae")
+                            .itemDescription("Ergonomic Bike made with Marble for all-day coordinated support")
+                            .itemName("Practical Steel Pizza")
+                            .itemSku("978-1-4129-9332-6")
+                            .notes("Corrumpo.")
+                            .taxAmount(875d)
+                            .totalAmount(12363d)
+                            .unitAmount(6783d)
+                            .unitQuantity(1d)
+                            .build()))
+                    .metadata(List.of())
+                    .name("Rustic Aluminum Car")
+                    .postedAt(OffsetDateTime.parse("2022-10-30T06:40:14.190Z"))
+                    .reimbursedAmount(6696d)
+                    .status(AccountingExpensereportStatus.PAID)
+                    .taxAmount(983d)
+                    .totalAmount(13931d)
+                    .updatedAt(OffsetDateTime.parse("2025-04-06T09:47:16.665Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAccountingExpensereportResponse res = sdk.accounting().updateAccountingExpensereport()
+                .request(req)
+                .call();
+
+        if (res.accountingExpensereport().isPresent()) {
+            System.out.println(res.accountingExpensereport().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [UpdateAccountingExpensereportRequest](../../models/operations/UpdateAccountingExpensereportRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[UpdateAccountingExpensereportResponse](../../models/operations/UpdateAccountingExpensereportResponse.md)**
 
 ### Errors
 
@@ -8117,7 +8834,7 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("9c84fb4a-f568-4d57-9814-d2f48b6721f9")
+                            .id("e7117d57-065f-4896-8906-6eba679f146a")
                             .mimeType("benevolentia")
                             .name("vespillo")
                             .build()))
@@ -8128,7 +8845,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-11-27T21:25:37.363Z"))
                     .extendedNotes(List.of())
-                    .id("f85296bf-760d-4117-adb2-15ceb0fbb211")
+                    .id("49add81c-73bd-4ba3-a86a-07b6154932c0")
                     .invoiceNumber("vinco")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
@@ -8138,7 +8855,7 @@ public class Application {
                     .paidAt(OffsetDateTime.parse("2022-11-25T15:00:28.871Z"))
                     .paymentCollectionMethod(AccountingInvoicePaymentCollectionMethod.SEND_INVOICE)
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-03-29T14:31:44.428Z"))
+                    .postedAt(OffsetDateTime.parse("2026-04-16T02:26:28.645Z"))
                     .reference("adinventitias")
                     .salesorderIds(List.of())
                     .send(true)
@@ -8148,7 +8865,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET45)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.CREDITMEMO)
-                    .updatedAt(OffsetDateTime.parse("2023-02-06T11:29:32.709Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-07T18:19:06.746Z"))
                     .url("https://gifted-yarmulke.info/")
                     .build())
                 .connectionId("<id>")
@@ -8215,17 +8932,18 @@ public class Application {
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
-                    .currency("FKP")
-                    .description("Calco constans adipisci.")
-                    .id("c749aba5-ca79-4974-b223-7c1515e3dbd8")
-                    .isInclusiveOfTax(true)
-                    .postedAt(OffsetDateTime.parse("2023-10-20T18:22:08.157Z"))
-                    .reference("ullam")
-                    .source("crustulum")
+                    .currency("RUB")
+                    .description("Solum commemoro conor nemo ultio.")
+                    .exchangeRate(1.0625)
+                    .id("c1e00979-6ffe-46b9-b7ca-6815812ac842")
+                    .isInclusiveOfTax(false)
+                    .lineitems(List.of())
+                    .postedAt(OffsetDateTime.parse("2023-10-31T21:10:41.563Z"))
+                    .reference("82523039")
+                    .source("amplitudo")
                     .status(AccountingJournalStatus.VOID)
-                    .taxAmount(78672d)
-                    .totalAmount(74094d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-02T07:46:54.276Z"))
+                    .totalAmount(0d)
+                    .updatedAt(OffsetDateTime.parse("2022-01-07T23:42:12.427Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8299,10 +9017,10 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("USD")
-                    .id("5d099f4f-0732-4ed8-bab2-99111982e74c")
+                    .id("da1e6c6b-5808-4374-a576-0aa875b701a9")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2022-04-05T17:22:19.738Z"))
+                    .postedAt(OffsetDateTime.parse("2022-04-10T10:12:59.153Z"))
                     .shippingAddress(PropertyAccountingOrderShippingAddress.builder()
                         .address1("9745 Betty Shore")
                         .city("South Alainaland")
@@ -8314,7 +9032,7 @@ public class Application {
                     .status(AccountingOrderStatus.SUBMITTED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.PURCHASE)
-                    .updatedAt(OffsetDateTime.parse("2021-06-18T05:51:10.104Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-20T05:07:07.770Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8386,12 +9104,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("acdabe07-04be-4f73-a80f-0e0c44a47e72")
+                    .id("99702f5c-8b2f-4d48-91ba-826a43bbe0b7")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2025-12-14T00:52:14.701Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T23:39:55.125Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8515,6 +9233,7 @@ public class Application {
 
         UpdateAccountingPurchaseorderRequest req = UpdateAccountingPurchaseorderRequest.builder()
                 .accountingPurchaseorder(AccountingPurchaseorder.builder()
+                    .attachments(List.of())
                     .billingAddress(PropertyAccountingPurchaseorderBillingAddress.builder()
                         .address1("37214 Tanya Walks")
                         .city("South Annabelleton")
@@ -8526,10 +9245,10 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("ZMW")
-                    .id("d118cce2-44a0-4328-bf59-7259e05d3180")
+                    .id("0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136")
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-27T10:38:53.438Z"))
+                    .postedAt(OffsetDateTime.parse("2025-05-12T13:45:08.992Z"))
                     .shippingAddress(PropertyAccountingPurchaseorderShippingAddress.builder()
                         .address1("649 Maggio Overpass")
                         .city("Lake Jaylan")
@@ -8540,7 +9259,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.PARTIALLY_REFUNDED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-02-26T05:56:03.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-26T23:11:58.691Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8674,7 +9393,7 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-08-17T22:23:55.042Z"))
+                    .closedAt(OffsetDateTime.parse("2023-08-24T16:29:18.407Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("ANG")
                     .discountAmount(99d)
@@ -8687,12 +9406,12 @@ public class Application {
                             .build()))
                     .fulfillmentType(FulfillmentType.TAKEOUT)
                     .guestCount(8d)
-                    .id("82afdd80-8627-4a82-80bb-72e1655b3593")
+                    .id("5558e453-d0ab-4386-989b-ddeefe517d68")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("988187")
                     .payments(List.of())
-                    .postedAt(OffsetDateTime.parse("2026-01-13T16:17:32.555Z"))
+                    .postedAt(OffsetDateTime.parse("2026-01-30T17:24:29.360Z"))
                     .refundedAmount(0d)
                     .salesChannel("Harvey, Collier and Weimann")
                     .serviceChargeAmount(63d)
@@ -8710,7 +9429,7 @@ public class Application {
                     .taxAmount(63d)
                     .tipAmount(34d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-02-10T19:50:55.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-11T02:37:49.468Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8783,7 +9502,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Atrox tricesimus creator.")
                     .effectiveRate(53d)
-                    .id("6157a522-08d3-45f7-9287-187fd17fc766")
+                    .id("2e3bcadc-8c35-4f8d-afdc-3083ef7be848")
                     .isActive(false)
                     .isCompound(true)
                     .metadata(List.of())
@@ -8792,7 +9511,7 @@ public class Application {
                     .region("TX")
                     .totalRate(53d)
                     .type(AccountingTaxrateType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2022-04-13T10:10:02.150Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-20T04:28:16.155Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8857,12 +9576,12 @@ public class Application {
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
                     .exchangeRate(0.5674)
-                    .id("149fa846-c137-4a76-850e-1e5bd335bf10")
+                    .id("a54266f5-37f6-4957-849c-d6006068b45e")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The Nikolas Table is the latest in a series of downright products from Beier and Sons")
-                            .id("66a182d7-5406-4d9d-837d-4d25c59428ad")
+                            .id("1bfb935d-3996-4971-befd-4c3ff7ca22ea")
                             .name("Salad")
                             .objectType("delicate")
                             .totalAmount(58531d)
@@ -8874,7 +9593,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(94452d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-09-10T23:02:19.731Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-16T13:36:17.083Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8943,14 +9662,14 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("KGS")
                     .dueAt(OffsetDateTime.parse("2023-05-06T20:38:46.775Z"))
-                    .id("f037c8ee-fc51-466e-b5c7-85bfcaec147f")
+                    .id("b8ec19a9-c8ef-4a8b-bb14-c4a360838fd9")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Conatus cruciamentum decor avaritia tantum.")
-                    .postedAt(OffsetDateTime.parse("2023-09-29T02:22:24.987Z"))
+                    .postedAt(OffsetDateTime.parse("2023-10-01T17:54:40.294Z"))
                     .status(AccountingVendorcreditStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-11-27T03:40:07.012Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-30T17:46:49.352Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

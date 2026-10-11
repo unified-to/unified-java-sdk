@@ -19,47 +19,66 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingBankfeedaccount {
-
+    /**
+     * ref -&gt; AccountingAccount: the target GL account the feed posts into (reference to
+     * AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * full account number where available
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number")
     private String accountNumber;
 
-
+    /**
+     * last-4 when the full number isn't returned
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number_last4")
     private String accountNumberLast4;
 
-
+    /**
+     * CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_type")
     private AccountType accountType;
 
-
+    /**
+     * current balance of the source account
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     private Double balance;
 
-
+    /**
+     * bank / institution name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bank_name")
     private String bankName;
 
-
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217 currency of the account
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feed_start_at")
     private OffsetDateTime feedStartAt;
@@ -69,32 +88,44 @@ public class AccountingBankfeedaccount {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * account nickname / source name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * The original data from the integration's API
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * bank routing number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing_number")
     private String routingNumber;
 
-
+    /**
+     * feed state: ACTIVE, INACTIVE
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingBankfeedaccountStatus status;
 
-
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -144,38 +175,66 @@ public class AccountingBankfeedaccount {
             null);
     }
 
+    /**
+     * ref -&gt; AccountingAccount: the target GL account the feed posts into (reference to
+     * AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * full account number where available
+     */
     public Optional<String> accountNumber() {
         return Optional.ofNullable(this.accountNumber);
     }
 
+    /**
+     * last-4 when the full number isn't returned
+     */
     public Optional<String> accountNumberLast4() {
         return Optional.ofNullable(this.accountNumberLast4);
     }
 
+    /**
+     * CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+     */
     public Optional<AccountType> accountType() {
         return Optional.ofNullable(this.accountType);
     }
 
+    /**
+     * current balance of the source account
+     */
     public Optional<Double> balance() {
         return Optional.ofNullable(this.balance);
     }
 
+    /**
+     * bank / institution name
+     */
     public Optional<String> bankName() {
         return Optional.ofNullable(this.bankName);
     }
 
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217 currency of the account
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> feedStartAt() {
         return Optional.ofNullable(this.feedStartAt);
     }
@@ -184,26 +243,44 @@ public class AccountingBankfeedaccount {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * account nickname / source name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * The original data from the integration's API
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * bank routing number
+     */
     public Optional<String> routingNumber() {
         return Optional.ofNullable(this.routingNumber);
     }
 
+    /**
+     * feed state: ACTIVE, INACTIVE
+     */
     public Optional<AccountingBankfeedaccountStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -213,54 +290,82 @@ public class AccountingBankfeedaccount {
     }
 
 
+    /**
+     * ref -&gt; AccountingAccount: the target GL account the feed posts into (reference to
+     * AccountingAccount)
+     */
     public AccountingBankfeedaccount withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * full account number where available
+     */
     public AccountingBankfeedaccount withAccountNumber(@Nullable String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
     }
 
 
+    /**
+     * last-4 when the full number isn't returned
+     */
     public AccountingBankfeedaccount withAccountNumberLast4(@Nullable String accountNumberLast4) {
         this.accountNumberLast4 = accountNumberLast4;
         return this;
     }
 
 
+    /**
+     * CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+     */
     public AccountingBankfeedaccount withAccountType(@Nullable AccountType accountType) {
         this.accountType = accountType;
         return this;
     }
 
 
+    /**
+     * current balance of the source account
+     */
     public AccountingBankfeedaccount withBalance(@Nullable Double balance) {
         this.balance = balance;
         return this;
     }
 
 
+    /**
+     * bank / institution name
+     */
     public AccountingBankfeedaccount withBankName(@Nullable String bankName) {
         this.bankName = bankName;
         return this;
     }
 
 
+    /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedaccount withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * ISO 4217 currency of the account
+     */
     public AccountingBankfeedaccount withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedaccount withFeedStartAt(@Nullable OffsetDateTime feedStartAt) {
         this.feedStartAt = feedStartAt;
         return this;
@@ -273,36 +378,54 @@ public class AccountingBankfeedaccount {
     }
 
 
+    /**
+     * account nickname / source name
+     */
     public AccountingBankfeedaccount withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * ref -&gt; accounting Organization this record belongs to
+     */
     public AccountingBankfeedaccount withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * The original data from the integration's API
+     */
     public AccountingBankfeedaccount withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * bank routing number
+     */
     public AccountingBankfeedaccount withRoutingNumber(@Nullable String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
     }
 
 
+    /**
+     * feed state: ACTIVE, INACTIVE
+     */
     public AccountingBankfeedaccount withStatus(@Nullable AccountingBankfeedaccountStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingBankfeedaccount withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -408,46 +531,74 @@ public class AccountingBankfeedaccount {
           // force use of static builder() method
         }
 
+        /**
+         * ref -&gt; AccountingAccount: the target GL account the feed posts into (reference to
+         * AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * full account number where available
+         */
         public Builder accountNumber(@Nullable String accountNumber) {
             this.accountNumber = accountNumber;
             return this;
         }
 
+        /**
+         * last-4 when the full number isn't returned
+         */
         public Builder accountNumberLast4(@Nullable String accountNumberLast4) {
             this.accountNumberLast4 = accountNumberLast4;
             return this;
         }
 
+        /**
+         * CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+         */
         public Builder accountType(@Nullable AccountType accountType) {
             this.accountType = accountType;
             return this;
         }
 
+        /**
+         * current balance of the source account
+         */
         public Builder balance(@Nullable Double balance) {
             this.balance = balance;
             return this;
         }
 
+        /**
+         * bank / institution name
+         */
         public Builder bankName(@Nullable String bankName) {
             this.bankName = bankName;
             return this;
         }
 
+        /**
+         * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217 currency of the account
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder feedStartAt(@Nullable OffsetDateTime feedStartAt) {
             this.feedStartAt = feedStartAt;
             return this;
@@ -458,31 +609,49 @@ public class AccountingBankfeedaccount {
             return this;
         }
 
+        /**
+         * account nickname / source name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * ref -&gt; accounting Organization this record belongs to
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * The original data from the integration's API
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * bank routing number
+         */
         public Builder routingNumber(@Nullable String routingNumber) {
             this.routingNumber = routingNumber;
             return this;
         }
 
+        /**
+         * feed state: ACTIVE, INACTIVE
+         */
         public Builder status(@Nullable AccountingBankfeedaccountStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -32,7 +32,9 @@ public class ScimRole {
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * value of the role
+     */
     @JsonProperty("value")
     private String value;
 
@@ -67,6 +69,9 @@ public class ScimRole {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * value of the role
+     */
     public String value() {
         return this.value;
     }
@@ -94,6 +99,9 @@ public class ScimRole {
     }
 
 
+    /**
+     * value of the role
+     */
     public ScimRole withValue(@Nonnull String value) {
         this.value = Utils.checkNotNull(value, "value");
         return this;
@@ -162,6 +170,9 @@ public class ScimRole {
             return this;
         }
 
+        /**
+         * value of the role
+         */
         public Builder value(@Nonnull String value) {
             this.value = Utils.checkNotNull(value, "value");
             return this;

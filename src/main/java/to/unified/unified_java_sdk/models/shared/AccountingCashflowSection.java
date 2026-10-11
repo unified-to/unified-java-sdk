@@ -22,12 +22,16 @@ public class AccountingCashflowSection {
     @JsonProperty("items")
     private List<AccountingCashflowItem> items;
 
-
+    /**
+     * e.g. "Operating Activities"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_name")
     private String sectionName;
 
-
+    /**
+     * Net cash providedused by this section
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
@@ -50,10 +54,16 @@ public class AccountingCashflowSection {
         return Optional.ofNullable(this.items);
     }
 
+    /**
+     * e.g. "Operating Activities"
+     */
     public Optional<String> sectionName() {
         return Optional.ofNullable(this.sectionName);
     }
 
+    /**
+     * Net cash providedused by this section
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
@@ -69,12 +79,18 @@ public class AccountingCashflowSection {
     }
 
 
+    /**
+     * e.g. "Operating Activities"
+     */
     public AccountingCashflowSection withSectionName(@Nullable String sectionName) {
         this.sectionName = sectionName;
         return this;
     }
 
 
+    /**
+     * Net cash providedused by this section
+     */
     public AccountingCashflowSection withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -128,11 +144,17 @@ public class AccountingCashflowSection {
             return this;
         }
 
+        /**
+         * e.g. "Operating Activities"
+         */
         public Builder sectionName(@Nullable String sectionName) {
             this.sectionName = sectionName;
             return this;
         }
 
+        /**
+         * Net cash providedused by this section
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * WebhookObjectType
+ * 
+ * <p>The object to return (eg. CRM "contact")
+ */
 public class WebhookObjectType {
 
     public static final WebhookObjectType ACCOUNTING_ACCOUNT = new WebhookObjectType("accounting_account");
@@ -33,12 +38,15 @@ public class WebhookObjectType {
     public static final WebhookObjectType ACCOUNTING_ORGANIZATION = new WebhookObjectType("accounting_organization");
     public static final WebhookObjectType ACCOUNTING_ORDER = new WebhookObjectType("accounting_order");
     public static final WebhookObjectType ACCOUNTING_SALESORDER = new WebhookObjectType("accounting_salesorder");
+    public static final WebhookObjectType ACCOUNTING_SALESRECEIPT = new WebhookObjectType("accounting_salesreceipt");
     public static final WebhookObjectType ACCOUNTING_PURCHASEORDER = new WebhookObjectType("accounting_purchaseorder");
     public static final WebhookObjectType ACCOUNTING_BALANCESHEET = new WebhookObjectType("accounting_balancesheet");
     public static final WebhookObjectType ACCOUNTING_PROFITLOSS = new WebhookObjectType("accounting_profitloss");
     public static final WebhookObjectType ACCOUNTING_TRIALBALANCE = new WebhookObjectType("accounting_trialbalance");
     public static final WebhookObjectType ACCOUNTING_CATEGORY = new WebhookObjectType("accounting_category");
     public static final WebhookObjectType ACCOUNTING_EXPENSE = new WebhookObjectType("accounting_expense");
+    public static final WebhookObjectType ACCOUNTING_EXPENSEREPORT = new WebhookObjectType("accounting_expensereport");
+    public static final WebhookObjectType ACCOUNTING_PURCHASERECEIPT = new WebhookObjectType("accounting_purchasereceipt");
     public static final WebhookObjectType ACCOUNTING_CASHFLOW = new WebhookObjectType("accounting_cashflow");
     public static final WebhookObjectType ACCOUNTING_QUOTE = new WebhookObjectType("accounting_quote");
     public static final WebhookObjectType ACCOUNTING_AGEDRECEIVABLE = new WebhookObjectType("accounting_agedreceivable");
@@ -94,6 +102,10 @@ public class WebhookObjectType {
     public static final WebhookObjectType HRIS_BANKACCOUNT = new WebhookObjectType("hris_bankaccount");
     public static final WebhookObjectType HRIS_DOCUMENT = new WebhookObjectType("hris_document");
     public static final WebhookObjectType HRIS_TAXONOMY = new WebhookObjectType("hris_taxonomy");
+    public static final WebhookObjectType HRIS_JOB = new WebhookObjectType("hris_job");
+    public static final WebhookObjectType HRIS_PAYROLL = new WebhookObjectType("hris_payroll");
+    public static final WebhookObjectType HRIS_PAYCODE = new WebhookObjectType("hris_paycode");
+    public static final WebhookObjectType HRIS_EARNING = new WebhookObjectType("hris_earning");
     public static final WebhookObjectType MARTECH_LIST = new WebhookObjectType("martech_list");
     public static final WebhookObjectType MARTECH_MEMBER = new WebhookObjectType("martech_member");
     public static final WebhookObjectType MARTECH_CAMPAIGN = new WebhookObjectType("martech_campaign");
@@ -107,6 +119,8 @@ public class WebhookObjectType {
     public static final WebhookObjectType UC_CALL = new WebhookObjectType("uc_call");
     public static final WebhookObjectType UC_COMMENT = new WebhookObjectType("uc_comment");
     public static final WebhookObjectType UC_RECORDING = new WebhookObjectType("uc_recording");
+    public static final WebhookObjectType UC_SCORECARD = new WebhookObjectType("uc_scorecard");
+    public static final WebhookObjectType UC_SCORECARDTEMPLATE = new WebhookObjectType("uc_scorecardtemplate");
     public static final WebhookObjectType ENRICH_PERSON = new WebhookObjectType("enrich_person");
     public static final WebhookObjectType ENRICH_COMPANY = new WebhookObjectType("enrich_company");
     public static final WebhookObjectType STORAGE_FILE = new WebhookObjectType("storage_file");
@@ -116,6 +130,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType GENAI_TASK = new WebhookObjectType("genai_task");
     public static final WebhookObjectType GENAI_AGENT = new WebhookObjectType("genai_agent");
     public static final WebhookObjectType GENAI_ORGANIZATION = new WebhookObjectType("genai_organization");
+    public static final WebhookObjectType GENAI_SKILL = new WebhookObjectType("genai_skill");
     public static final WebhookObjectType MESSAGING_MESSAGE = new WebhookObjectType("messaging_message");
     public static final WebhookObjectType MESSAGING_CHANNEL = new WebhookObjectType("messaging_channel");
     public static final WebhookObjectType MESSAGING_EVENT = new WebhookObjectType("messaging_event");
@@ -281,12 +296,15 @@ public class WebhookObjectType {
         map.put("accounting_organization", ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", ACCOUNTING_ORDER);
         map.put("accounting_salesorder", ACCOUNTING_SALESORDER);
+        map.put("accounting_salesreceipt", ACCOUNTING_SALESRECEIPT);
         map.put("accounting_purchaseorder", ACCOUNTING_PURCHASEORDER);
         map.put("accounting_balancesheet", ACCOUNTING_BALANCESHEET);
         map.put("accounting_profitloss", ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", ACCOUNTING_TRIALBALANCE);
         map.put("accounting_category", ACCOUNTING_CATEGORY);
         map.put("accounting_expense", ACCOUNTING_EXPENSE);
+        map.put("accounting_expensereport", ACCOUNTING_EXPENSEREPORT);
+        map.put("accounting_purchasereceipt", ACCOUNTING_PURCHASERECEIPT);
         map.put("accounting_cashflow", ACCOUNTING_CASHFLOW);
         map.put("accounting_quote", ACCOUNTING_QUOTE);
         map.put("accounting_agedreceivable", ACCOUNTING_AGEDRECEIVABLE);
@@ -342,6 +360,10 @@ public class WebhookObjectType {
         map.put("hris_bankaccount", HRIS_BANKACCOUNT);
         map.put("hris_document", HRIS_DOCUMENT);
         map.put("hris_taxonomy", HRIS_TAXONOMY);
+        map.put("hris_job", HRIS_JOB);
+        map.put("hris_payroll", HRIS_PAYROLL);
+        map.put("hris_paycode", HRIS_PAYCODE);
+        map.put("hris_earning", HRIS_EARNING);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
         map.put("martech_campaign", MARTECH_CAMPAIGN);
@@ -355,6 +377,8 @@ public class WebhookObjectType {
         map.put("uc_call", UC_CALL);
         map.put("uc_comment", UC_COMMENT);
         map.put("uc_recording", UC_RECORDING);
+        map.put("uc_scorecard", UC_SCORECARD);
+        map.put("uc_scorecardtemplate", UC_SCORECARDTEMPLATE);
         map.put("enrich_person", ENRICH_PERSON);
         map.put("enrich_company", ENRICH_COMPANY);
         map.put("storage_file", STORAGE_FILE);
@@ -364,6 +388,7 @@ public class WebhookObjectType {
         map.put("genai_task", GENAI_TASK);
         map.put("genai_agent", GENAI_AGENT);
         map.put("genai_organization", GENAI_ORGANIZATION);
+        map.put("genai_skill", GENAI_SKILL);
         map.put("messaging_message", MESSAGING_MESSAGE);
         map.put("messaging_channel", MESSAGING_CHANNEL);
         map.put("messaging_event", MESSAGING_EVENT);
@@ -461,12 +486,15 @@ public class WebhookObjectType {
         map.put("accounting_organization", WebhookObjectTypeEnum.ACCOUNTING_ORGANIZATION);
         map.put("accounting_order", WebhookObjectTypeEnum.ACCOUNTING_ORDER);
         map.put("accounting_salesorder", WebhookObjectTypeEnum.ACCOUNTING_SALESORDER);
+        map.put("accounting_salesreceipt", WebhookObjectTypeEnum.ACCOUNTING_SALESRECEIPT);
         map.put("accounting_purchaseorder", WebhookObjectTypeEnum.ACCOUNTING_PURCHASEORDER);
         map.put("accounting_balancesheet", WebhookObjectTypeEnum.ACCOUNTING_BALANCESHEET);
         map.put("accounting_profitloss", WebhookObjectTypeEnum.ACCOUNTING_PROFITLOSS);
         map.put("accounting_trialbalance", WebhookObjectTypeEnum.ACCOUNTING_TRIALBALANCE);
         map.put("accounting_category", WebhookObjectTypeEnum.ACCOUNTING_CATEGORY);
         map.put("accounting_expense", WebhookObjectTypeEnum.ACCOUNTING_EXPENSE);
+        map.put("accounting_expensereport", WebhookObjectTypeEnum.ACCOUNTING_EXPENSEREPORT);
+        map.put("accounting_purchasereceipt", WebhookObjectTypeEnum.ACCOUNTING_PURCHASERECEIPT);
         map.put("accounting_cashflow", WebhookObjectTypeEnum.ACCOUNTING_CASHFLOW);
         map.put("accounting_quote", WebhookObjectTypeEnum.ACCOUNTING_QUOTE);
         map.put("accounting_agedreceivable", WebhookObjectTypeEnum.ACCOUNTING_AGEDRECEIVABLE);
@@ -522,6 +550,10 @@ public class WebhookObjectType {
         map.put("hris_bankaccount", WebhookObjectTypeEnum.HRIS_BANKACCOUNT);
         map.put("hris_document", WebhookObjectTypeEnum.HRIS_DOCUMENT);
         map.put("hris_taxonomy", WebhookObjectTypeEnum.HRIS_TAXONOMY);
+        map.put("hris_job", WebhookObjectTypeEnum.HRIS_JOB);
+        map.put("hris_payroll", WebhookObjectTypeEnum.HRIS_PAYROLL);
+        map.put("hris_paycode", WebhookObjectTypeEnum.HRIS_PAYCODE);
+        map.put("hris_earning", WebhookObjectTypeEnum.HRIS_EARNING);
         map.put("martech_list", WebhookObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", WebhookObjectTypeEnum.MARTECH_MEMBER);
         map.put("martech_campaign", WebhookObjectTypeEnum.MARTECH_CAMPAIGN);
@@ -535,6 +567,8 @@ public class WebhookObjectType {
         map.put("uc_call", WebhookObjectTypeEnum.UC_CALL);
         map.put("uc_comment", WebhookObjectTypeEnum.UC_COMMENT);
         map.put("uc_recording", WebhookObjectTypeEnum.UC_RECORDING);
+        map.put("uc_scorecard", WebhookObjectTypeEnum.UC_SCORECARD);
+        map.put("uc_scorecardtemplate", WebhookObjectTypeEnum.UC_SCORECARDTEMPLATE);
         map.put("enrich_person", WebhookObjectTypeEnum.ENRICH_PERSON);
         map.put("enrich_company", WebhookObjectTypeEnum.ENRICH_COMPANY);
         map.put("storage_file", WebhookObjectTypeEnum.STORAGE_FILE);
@@ -544,6 +578,7 @@ public class WebhookObjectType {
         map.put("genai_task", WebhookObjectTypeEnum.GENAI_TASK);
         map.put("genai_agent", WebhookObjectTypeEnum.GENAI_AGENT);
         map.put("genai_organization", WebhookObjectTypeEnum.GENAI_ORGANIZATION);
+        map.put("genai_skill", WebhookObjectTypeEnum.GENAI_SKILL);
         map.put("messaging_message", WebhookObjectTypeEnum.MESSAGING_MESSAGE);
         map.put("messaging_channel", WebhookObjectTypeEnum.MESSAGING_CHANNEL);
         map.put("messaging_event", WebhookObjectTypeEnum.MESSAGING_EVENT);
@@ -642,12 +677,15 @@ public class WebhookObjectType {
         ACCOUNTING_ORGANIZATION("accounting_organization"),
         ACCOUNTING_ORDER("accounting_order"),
         ACCOUNTING_SALESORDER("accounting_salesorder"),
+        ACCOUNTING_SALESRECEIPT("accounting_salesreceipt"),
         ACCOUNTING_PURCHASEORDER("accounting_purchaseorder"),
         ACCOUNTING_BALANCESHEET("accounting_balancesheet"),
         ACCOUNTING_PROFITLOSS("accounting_profitloss"),
         ACCOUNTING_TRIALBALANCE("accounting_trialbalance"),
         ACCOUNTING_CATEGORY("accounting_category"),
         ACCOUNTING_EXPENSE("accounting_expense"),
+        ACCOUNTING_EXPENSEREPORT("accounting_expensereport"),
+        ACCOUNTING_PURCHASERECEIPT("accounting_purchasereceipt"),
         ACCOUNTING_CASHFLOW("accounting_cashflow"),
         ACCOUNTING_QUOTE("accounting_quote"),
         ACCOUNTING_AGEDRECEIVABLE("accounting_agedreceivable"),
@@ -703,6 +741,10 @@ public class WebhookObjectType {
         HRIS_BANKACCOUNT("hris_bankaccount"),
         HRIS_DOCUMENT("hris_document"),
         HRIS_TAXONOMY("hris_taxonomy"),
+        HRIS_JOB("hris_job"),
+        HRIS_PAYROLL("hris_payroll"),
+        HRIS_PAYCODE("hris_paycode"),
+        HRIS_EARNING("hris_earning"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
         MARTECH_CAMPAIGN("martech_campaign"),
@@ -716,6 +758,8 @@ public class WebhookObjectType {
         UC_CALL("uc_call"),
         UC_COMMENT("uc_comment"),
         UC_RECORDING("uc_recording"),
+        UC_SCORECARD("uc_scorecard"),
+        UC_SCORECARDTEMPLATE("uc_scorecardtemplate"),
         ENRICH_PERSON("enrich_person"),
         ENRICH_COMPANY("enrich_company"),
         STORAGE_FILE("storage_file"),
@@ -725,6 +769,7 @@ public class WebhookObjectType {
         GENAI_TASK("genai_task"),
         GENAI_AGENT("genai_agent"),
         GENAI_ORGANIZATION("genai_organization"),
+        GENAI_SKILL("genai_skill"),
         MESSAGING_MESSAGE("messaging_message"),
         MESSAGING_CHANNEL("messaging_channel"),
         MESSAGING_EVENT("messaging_event"),

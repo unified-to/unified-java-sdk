@@ -25,6 +25,8 @@ public class HrisCompensationType {
     public static final HrisCompensationType STOCK_OPTIONS = new HrisCompensationType("STOCK_OPTIONS");
     public static final HrisCompensationType EQUITY = new HrisCompensationType("EQUITY");
     public static final HrisCompensationType OTHER = new HrisCompensationType("OTHER");
+    public static final HrisCompensationType HOURLY = new HrisCompensationType("HOURLY");
+    public static final HrisCompensationType COMMISSION = new HrisCompensationType("COMMISSION");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -103,6 +105,8 @@ public class HrisCompensationType {
         map.put("STOCK_OPTIONS", STOCK_OPTIONS);
         map.put("EQUITY", EQUITY);
         map.put("OTHER", OTHER);
+        map.put("HOURLY", HOURLY);
+        map.put("COMMISSION", COMMISSION);
         return map;
     }
 
@@ -113,6 +117,8 @@ public class HrisCompensationType {
         map.put("STOCK_OPTIONS", HrisCompensationTypeEnum.STOCK_OPTIONS);
         map.put("EQUITY", HrisCompensationTypeEnum.EQUITY);
         map.put("OTHER", HrisCompensationTypeEnum.OTHER);
+        map.put("HOURLY", HrisCompensationTypeEnum.HOURLY);
+        map.put("COMMISSION", HrisCompensationTypeEnum.COMMISSION);
         return map;
     }
     
@@ -123,7 +129,9 @@ public class HrisCompensationType {
         BONUS("BONUS"),
         STOCK_OPTIONS("STOCK_OPTIONS"),
         EQUITY("EQUITY"),
-        OTHER("OTHER"),;
+        OTHER("OTHER"),
+        HOURLY("HOURLY"),
+        COMMISSION("COMMISSION"),;
 
         private final String value;
 

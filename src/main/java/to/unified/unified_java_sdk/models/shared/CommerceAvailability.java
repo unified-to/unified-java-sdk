@@ -19,17 +19,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CommerceAvailability {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
 
-
+    /**
+     * (reference to CommerceLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -44,12 +50,16 @@ public class CommerceAvailability {
     @JsonProperty("size")
     private Double size;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staff_user_id")
     private String staffUserId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -78,14 +88,23 @@ public class CommerceAvailability {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -98,10 +117,16 @@ public class CommerceAvailability {
         return Optional.ofNullable(this.size);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> staffUserId() {
         return Optional.ofNullable(this.staffUserId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -111,18 +136,27 @@ public class CommerceAvailability {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceAvailability withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * (reference to CommerceItem)
+     */
     public CommerceAvailability withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
     }
 
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public CommerceAvailability withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -141,12 +175,18 @@ public class CommerceAvailability {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CommerceAvailability withStaffUserId(@Nullable String staffUserId) {
         this.staffUserId = staffUserId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceAvailability withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -213,16 +253,25 @@ public class CommerceAvailability {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
+        /**
+         * (reference to CommerceLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -238,11 +287,17 @@ public class CommerceAvailability {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder staffUserId(@Nullable String staffUserId) {
             this.staffUserId = staffUserId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;

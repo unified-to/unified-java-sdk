@@ -35,7 +35,9 @@ public class AssessmentAddress {
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * Country code in ISO 3166 A-2 format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private String countryCode;
@@ -45,12 +47,16 @@ public class AssessmentAddress {
     @JsonProperty("postal_code")
     private String postalCode;
 
-
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private String region;
 
-
+    /**
+     * Short form for regional area (e.g., two-letter stateprovince abbreviation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
     private String regionCode;
@@ -97,6 +103,9 @@ public class AssessmentAddress {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * Country code in ISO 3166 A-2 format
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -105,10 +114,16 @@ public class AssessmentAddress {
         return Optional.ofNullable(this.postalCode);
     }
 
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * Short form for regional area (e.g., two-letter stateprovince abbreviation)
+     */
     public Optional<String> regionCode() {
         return Optional.ofNullable(this.regionCode);
     }
@@ -142,6 +157,9 @@ public class AssessmentAddress {
     }
 
 
+    /**
+     * Country code in ISO 3166 A-2 format
+     */
     public AssessmentAddress withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -154,12 +172,18 @@ public class AssessmentAddress {
     }
 
 
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     public AssessmentAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
 
+    /**
+     * Short form for regional area (e.g., two-letter stateprovince abbreviation)
+     */
     public AssessmentAddress withRegionCode(@Nullable String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -250,6 +274,9 @@ public class AssessmentAddress {
             return this;
         }
 
+        /**
+         * Country code in ISO 3166 A-2 format
+         */
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
@@ -260,11 +287,17 @@ public class AssessmentAddress {
             return this;
         }
 
+        /**
+         * Regional area (e.g., state in the U.S., province in Canada)
+         */
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
+        /**
+         * Short form for regional area (e.g., two-letter stateprovince abbreviation)
+         */
         public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = regionCode;
             return this;

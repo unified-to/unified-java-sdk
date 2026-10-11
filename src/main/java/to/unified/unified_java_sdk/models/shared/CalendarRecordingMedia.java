@@ -22,12 +22,16 @@ public class CalendarRecordingMedia {
     @JsonProperty("attendees")
     private List<CalendarAttendee> attendees;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * two digit ISO code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
@@ -37,17 +41,23 @@ public class CalendarRecordingMedia {
     @JsonProperty("recording_download_url")
     private String recordingDownloadUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * provider AI-generated meeting summary
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
 
-
+    /**
+     * download/export link for a provider AI summary document (e.g. Google Meet smart notes)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary_download_url")
     private String summaryDownloadUrl;
@@ -94,10 +104,16 @@ public class CalendarRecordingMedia {
         return Optional.ofNullable(this.attendees);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * two digit ISO code
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
@@ -106,14 +122,23 @@ public class CalendarRecordingMedia {
         return Optional.ofNullable(this.recordingDownloadUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * provider AI-generated meeting summary
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
 
+    /**
+     * download/export link for a provider AI summary document (e.g. Google Meet smart notes)
+     */
     public Optional<String> summaryDownloadUrl() {
         return Optional.ofNullable(this.summaryDownloadUrl);
     }
@@ -137,12 +162,18 @@ public class CalendarRecordingMedia {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarRecordingMedia withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * two digit ISO code
+     */
     public CalendarRecordingMedia withLanguage(@Nullable String language) {
         this.language = language;
         return this;
@@ -155,18 +186,27 @@ public class CalendarRecordingMedia {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarRecordingMedia withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * provider AI-generated meeting summary
+     */
     public CalendarRecordingMedia withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
     }
 
 
+    /**
+     * download/export link for a provider AI summary document (e.g. Google Meet smart notes)
+     */
     public CalendarRecordingMedia withSummaryDownloadUrl(@Nullable String summaryDownloadUrl) {
         this.summaryDownloadUrl = summaryDownloadUrl;
         return this;
@@ -258,11 +298,17 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * two digit ISO code
+         */
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
@@ -273,16 +319,25 @@ public class CalendarRecordingMedia {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * provider AI-generated meeting summary
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
+        /**
+         * download/export link for a provider AI summary document (e.g. Google Meet smart notes)
+         */
         public Builder summaryDownloadUrl(@Nullable String summaryDownloadUrl) {
             this.summaryDownloadUrl = summaryDownloadUrl;
             return this;

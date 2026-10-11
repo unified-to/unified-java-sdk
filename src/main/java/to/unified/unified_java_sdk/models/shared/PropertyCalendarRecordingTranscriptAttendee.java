@@ -41,7 +41,9 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     @JsonProperty("status")
     private PropertyCalendarRecordingTranscriptAttendeeStatus status;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -87,6 +89,9 @@ public class PropertyCalendarRecordingTranscriptAttendee {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -126,6 +131,9 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public PropertyCalendarRecordingTranscriptAttendee withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -212,6 +220,9 @@ public class PropertyCalendarRecordingTranscriptAttendee {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

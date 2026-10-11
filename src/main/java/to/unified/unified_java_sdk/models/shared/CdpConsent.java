@@ -16,17 +16,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpConsent {
-
+    /**
+     * The consent purpose or objective (eg. marketing, analytics)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     private String purpose;
 
-
+    /**
+     * The consent status for this purpose
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private CdpConsentStatus status;
 
-
+    /**
+     * When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -45,14 +51,23 @@ public class CdpConsent {
         this(null, null, null);
     }
 
+    /**
+     * The consent purpose or objective (eg. marketing, analytics)
+     */
     public Optional<String> purpose() {
         return Optional.ofNullable(this.purpose);
     }
 
+    /**
+     * The consent status for this purpose
+     */
     public Optional<CdpConsentStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -62,18 +77,27 @@ public class CdpConsent {
     }
 
 
+    /**
+     * The consent purpose or objective (eg. marketing, analytics)
+     */
     public CdpConsent withPurpose(@Nullable String purpose) {
         this.purpose = purpose;
         return this;
     }
 
 
+    /**
+     * The consent status for this purpose
+     */
     public CdpConsent withStatus(@Nullable CdpConsentStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpConsent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -122,16 +146,25 @@ public class CdpConsent {
           // force use of static builder() method
         }
 
+        /**
+         * The consent purpose or objective (eg. marketing, analytics)
+         */
         public Builder purpose(@Nullable String purpose) {
             this.purpose = purpose;
             return this;
         }
 
+        /**
+         * The consent status for this purpose
+         */
         public Builder status(@Nullable CdpConsentStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

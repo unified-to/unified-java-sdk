@@ -28,7 +28,9 @@ public class MarketingList {
     @JsonProperty("address")
     private PropertyMarketingListAddress address;
 
-
+    /**
+     * Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -38,12 +40,16 @@ public class MarketingList {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * Identifier for this list
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -58,12 +64,16 @@ public class MarketingList {
     @JsonProperty("language")
     private String language;
 
-
+    /**
+     * The list's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this list
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -88,7 +98,9 @@ public class MarketingList {
     @JsonProperty("sender_phone")
     private String senderPhone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -98,12 +110,16 @@ public class MarketingList {
     @JsonProperty("subject")
     private String subject;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The user who created this list (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -159,6 +175,9 @@ public class MarketingList {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -167,10 +186,16 @@ public class MarketingList {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * Identifier for this list
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -183,10 +208,16 @@ public class MarketingList {
         return Optional.ofNullable(this.language);
     }
 
+    /**
+     * The list's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this list
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -207,6 +238,9 @@ public class MarketingList {
         return Optional.ofNullable(this.senderPhone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -215,10 +249,16 @@ public class MarketingList {
         return Optional.ofNullable(this.subject);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The user who created this list (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -234,6 +274,9 @@ public class MarketingList {
     }
 
 
+    /**
+     * Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingList withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -246,12 +289,18 @@ public class MarketingList {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingList withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * Identifier for this list
+     */
     public MarketingList withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -270,12 +319,18 @@ public class MarketingList {
     }
 
 
+    /**
+     * The list's name
+     */
     public MarketingList withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this list
+     */
     public MarketingList withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -306,6 +361,9 @@ public class MarketingList {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingList withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -318,12 +376,18 @@ public class MarketingList {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingList withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The user who created this list (reference to HrisEmployee)
+     */
     public MarketingList withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -438,6 +502,9 @@ public class MarketingList {
             return this;
         }
 
+        /**
+         * Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -448,11 +515,17 @@ public class MarketingList {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * Identifier for this list
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -468,11 +541,17 @@ public class MarketingList {
             return this;
         }
 
+        /**
+         * The list's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this list
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -498,6 +577,9 @@ public class MarketingList {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -508,11 +590,17 @@ public class MarketingList {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The user who created this list (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

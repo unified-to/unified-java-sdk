@@ -25,7 +25,9 @@ public class LmsActivity {
     @JsonProperty("assigned_grade")
     private String assignedGrade;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
@@ -35,12 +37,16 @@ public class LmsActivity {
     @JsonProperty("content_id")
     private String contentId;
 
-
+    /**
+     * For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("course_id")
     private String courseId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -70,17 +76,23 @@ public class LmsActivity {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     private OffsetDateTime startedAt;
 
-
+    /**
+     * (reference to LmsStudent)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("student_id")
     private String studentId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -127,6 +139,9 @@ public class LmsActivity {
         return Optional.ofNullable(this.assignedGrade);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
@@ -135,10 +150,16 @@ public class LmsActivity {
         return Optional.ofNullable(this.contentId);
     }
 
+    /**
+     * For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
+     */
     public Optional<String> courseId() {
         return Optional.ofNullable(this.courseId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -163,14 +184,23 @@ public class LmsActivity {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }
 
+    /**
+     * (reference to LmsStudent)
+     */
     public Optional<String> studentId() {
         return Optional.ofNullable(this.studentId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -186,6 +216,9 @@ public class LmsActivity {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsActivity withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -198,12 +231,18 @@ public class LmsActivity {
     }
 
 
+    /**
+     * For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
+     */
     public LmsActivity withCourseId(@Nullable String courseId) {
         this.courseId = courseId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsActivity withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -240,18 +279,27 @@ public class LmsActivity {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsActivity withStartedAt(@Nullable OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
     }
 
 
+    /**
+     * (reference to LmsStudent)
+     */
     public LmsActivity withStudentId(@Nullable String studentId) {
         this.studentId = studentId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsActivity withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -349,6 +397,9 @@ public class LmsActivity {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
@@ -359,11 +410,17 @@ public class LmsActivity {
             return this;
         }
 
+        /**
+         * For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
+         */
         public Builder courseId(@Nullable String courseId) {
             this.courseId = courseId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -394,16 +451,25 @@ public class LmsActivity {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startedAt(@Nullable OffsetDateTime startedAt) {
             this.startedAt = startedAt;
             return this;
         }
 
+        /**
+         * (reference to LmsStudent)
+         */
         public Builder studentId(@Nullable String studentId) {
             this.studentId = studentId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

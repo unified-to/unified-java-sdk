@@ -21,7 +21,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CalendarWebinar {
-
+    /**
+     * (reference to CalendarCalendar)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_id")
     private String calendarId;
@@ -36,12 +38,16 @@ public class CalendarWebinar {
     @JsonProperty("conference")
     private List<CalendarConference> conference;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -161,7 +167,9 @@ public class CalendarWebinar {
     @JsonProperty("require_phone")
     private Boolean requirePhone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -181,12 +189,16 @@ public class CalendarWebinar {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * information
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     private String webUrl;
@@ -278,6 +290,9 @@ public class CalendarWebinar {
             null);
     }
 
+    /**
+     * (reference to CalendarCalendar)
+     */
     public Optional<String> calendarId() {
         return Optional.ofNullable(this.calendarId);
     }
@@ -290,10 +305,16 @@ public class CalendarWebinar {
         return Optional.ofNullable(this.conference);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -390,6 +411,9 @@ public class CalendarWebinar {
         return Optional.ofNullable(this.requirePhone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -406,10 +430,16 @@ public class CalendarWebinar {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * information
+     */
     public Optional<String> webUrl() {
         return Optional.ofNullable(this.webUrl);
     }
@@ -419,6 +449,9 @@ public class CalendarWebinar {
     }
 
 
+    /**
+     * (reference to CalendarCalendar)
+     */
     public CalendarWebinar withCalendarId(@Nullable String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -437,12 +470,18 @@ public class CalendarWebinar {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarWebinar withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarWebinar withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -587,6 +626,9 @@ public class CalendarWebinar {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarWebinar withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -611,12 +653,18 @@ public class CalendarWebinar {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarWebinar withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * information
+     */
     public CalendarWebinar withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
@@ -800,6 +848,9 @@ public class CalendarWebinar {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to CalendarCalendar)
+         */
         public Builder calendarId(@Nullable String calendarId) {
             this.calendarId = calendarId;
             return this;
@@ -815,11 +866,17 @@ public class CalendarWebinar {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -940,6 +997,9 @@ public class CalendarWebinar {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -960,11 +1020,17 @@ public class CalendarWebinar {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * information
+         */
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;

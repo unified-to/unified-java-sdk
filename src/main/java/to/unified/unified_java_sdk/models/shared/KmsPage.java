@@ -21,7 +21,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class KmsPage {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -61,7 +63,9 @@ public class KmsPage {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space_id")
     private String spaceId;
@@ -75,12 +79,16 @@ public class KmsPage {
     @JsonProperty("type")
     private KmsPageType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -132,6 +140,9 @@ public class KmsPage {
             null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -164,6 +175,9 @@ public class KmsPage {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Optional<String> spaceId() {
         return Optional.ofNullable(this.spaceId);
     }
@@ -176,10 +190,16 @@ public class KmsPage {
         return this.type;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -193,6 +213,9 @@ public class KmsPage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsPage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -241,6 +264,9 @@ public class KmsPage {
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public KmsPage withSpaceId(@Nullable String spaceId) {
         this.spaceId = spaceId;
         return this;
@@ -259,12 +285,18 @@ public class KmsPage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsPage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public KmsPage withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -367,6 +399,9 @@ public class KmsPage {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -407,6 +442,9 @@ public class KmsPage {
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder spaceId(@Nullable String spaceId) {
             this.spaceId = spaceId;
             return this;
@@ -422,11 +460,17 @@ public class KmsPage {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

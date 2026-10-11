@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GenaiAgent {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -34,7 +36,9 @@ public class GenaiAgent {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The system prompt or stored procedure that the agent follows.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     private String instructions;
@@ -44,7 +48,9 @@ public class GenaiAgent {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * The model that the agent runs on.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_id")
     private String modelId;
@@ -59,7 +65,9 @@ public class GenaiAgent {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -92,6 +100,9 @@ public class GenaiAgent {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -104,6 +115,9 @@ public class GenaiAgent {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The system prompt or stored procedure that the agent follows.
+     */
     public Optional<String> instructions() {
         return Optional.ofNullable(this.instructions);
     }
@@ -112,6 +126,9 @@ public class GenaiAgent {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * The model that the agent runs on.
+     */
     public Optional<String> modelId() {
         return Optional.ofNullable(this.modelId);
     }
@@ -124,6 +141,9 @@ public class GenaiAgent {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -133,6 +153,9 @@ public class GenaiAgent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiAgent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -151,6 +174,9 @@ public class GenaiAgent {
     }
 
 
+    /**
+     * The system prompt or stored procedure that the agent follows.
+     */
     public GenaiAgent withInstructions(@Nullable String instructions) {
         this.instructions = instructions;
         return this;
@@ -163,6 +189,9 @@ public class GenaiAgent {
     }
 
 
+    /**
+     * The model that the agent runs on.
+     */
     public GenaiAgent withModelId(@Nullable String modelId) {
         this.modelId = modelId;
         return this;
@@ -181,6 +210,9 @@ public class GenaiAgent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiAgent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -255,6 +287,9 @@ public class GenaiAgent {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -270,6 +305,9 @@ public class GenaiAgent {
             return this;
         }
 
+        /**
+         * The system prompt or stored procedure that the agent follows.
+         */
         public Builder instructions(@Nullable String instructions) {
             this.instructions = instructions;
             return this;
@@ -280,6 +318,9 @@ public class GenaiAgent {
             return this;
         }
 
+        /**
+         * The model that the agent runs on.
+         */
         public Builder modelId(@Nullable String modelId) {
             this.modelId = modelId;
             return this;
@@ -295,6 +336,9 @@ public class GenaiAgent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

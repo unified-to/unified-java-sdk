@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
@@ -13,7 +14,7 @@
 
 ## createUnifiedConnection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -64,6 +65,63 @@ public class Application {
 ### Response
 
 **[CreateUnifiedConnectionResponse](../../models/operations/CreateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createUnifiedConnectionReauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateUnifiedConnectionReauthRequest req = CreateUnifiedConnectionReauthRequest.builder()
+                .id("<id>")
+                .build();
+
+        CreateUnifiedConnectionReauthResponse res = sdk.connection().createUnifiedConnectionReauth()
+                .request(req)
+                .call();
+
+        if (res.connectionReauth().isPresent()) {
+            System.out.println(res.connectionReauth().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [CreateUnifiedConnectionReauthRequest](../../models/operations/CreateUnifiedConnectionReauthRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[CreateUnifiedConnectionReauthResponse](../../models/operations/CreateUnifiedConnectionReauthResponse.md)**
 
 ### Errors
 

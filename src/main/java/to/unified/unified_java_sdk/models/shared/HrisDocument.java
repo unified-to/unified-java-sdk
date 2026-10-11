@@ -18,22 +18,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisDocument {
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * base64 encoded file contents for create/update
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_data")
     private String documentData;
 
-
+    /**
+     * download link, expires after 1 hour
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_url")
     private String documentUrl;
@@ -53,17 +61,23 @@ public class HrisDocument {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * unified, normalized document type (OTHER when unmappable)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HrisDocumentType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * pointer to the HR Employee object that owns this document (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -99,18 +113,30 @@ public class HrisDocument {
             null);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * base64 encoded file contents for create/update
+     */
     public Optional<String> documentData() {
         return Optional.ofNullable(this.documentData);
     }
 
+    /**
+     * download link, expires after 1 hour
+     */
     public Optional<String> documentUrl() {
         return Optional.ofNullable(this.documentUrl);
     }
@@ -127,14 +153,23 @@ public class HrisDocument {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * unified, normalized document type (OTHER when unmappable)
+     */
     public Optional<HrisDocumentType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * pointer to the HR Employee object that owns this document (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -144,24 +179,36 @@ public class HrisDocument {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisDocument withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisDocument withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * base64 encoded file contents for create/update
+     */
     public HrisDocument withDocumentData(@Nullable String documentData) {
         this.documentData = documentData;
         return this;
     }
 
 
+    /**
+     * download link, expires after 1 hour
+     */
     public HrisDocument withDocumentUrl(@Nullable String documentUrl) {
         this.documentUrl = documentUrl;
         return this;
@@ -186,18 +233,27 @@ public class HrisDocument {
     }
 
 
+    /**
+     * unified, normalized document type (OTHER when unmappable)
+     */
     public HrisDocument withType(@Nullable HrisDocumentType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisDocument withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * pointer to the HR Employee object that owns this document (reference to HrisEmployee)
+     */
     public HrisDocument withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -277,21 +333,33 @@ public class HrisDocument {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * base64 encoded file contents for create/update
+         */
         public Builder documentData(@Nullable String documentData) {
             this.documentData = documentData;
             return this;
         }
 
+        /**
+         * download link, expires after 1 hour
+         */
         public Builder documentUrl(@Nullable String documentUrl) {
             this.documentUrl = documentUrl;
             return this;
@@ -312,16 +380,25 @@ public class HrisDocument {
             return this;
         }
 
+        /**
+         * unified, normalized document type (OTHER when unmappable)
+         */
         public Builder type(@Nullable HrisDocumentType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * pointer to the HR Employee object that owns this document (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

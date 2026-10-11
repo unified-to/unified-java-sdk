@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class MessagingAttachment {
-
+    /**
+     * the inline attachment's content_id
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_identifier")
     private String contentIdentifier;
@@ -67,6 +69,9 @@ public class MessagingAttachment {
             null, null, null);
     }
 
+    /**
+     * the inline attachment's content_id
+     */
     public Optional<String> contentIdentifier() {
         return Optional.ofNullable(this.contentIdentifier);
     }
@@ -96,6 +101,9 @@ public class MessagingAttachment {
     }
 
 
+    /**
+     * the inline attachment's content_id
+     */
     public MessagingAttachment withContentIdentifier(@Nullable String contentIdentifier) {
         this.contentIdentifier = contentIdentifier;
         return this;
@@ -187,6 +195,9 @@ public class MessagingAttachment {
           // force use of static builder() method
         }
 
+        /**
+         * the inline attachment's content_id
+         */
         public Builder contentIdentifier(@Nullable String contentIdentifier) {
             this.contentIdentifier = contentIdentifier;
             return this;

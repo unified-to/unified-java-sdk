@@ -40,6 +40,12 @@ public class ListHrisEmployeesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     private String groupId;
 
+    /**
+     * The job ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    private String jobId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
@@ -89,6 +95,7 @@ public class ListHrisEmployeesRequest {
             @Nonnull String connectionId,
             @Nullable List<ListHrisEmployeesQueryParamFields> fields,
             @Nullable String groupId,
+            @Nullable String jobId,
             @Nullable Double limit,
             @Nullable String locationId,
             @Nullable Double offset,
@@ -102,6 +109,7 @@ public class ListHrisEmployeesRequest {
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.groupId = groupId;
+        this.jobId = jobId;
         this.limit = limit;
         this.locationId = locationId;
         this.offset = offset;
@@ -117,7 +125,8 @@ public class ListHrisEmployeesRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -146,6 +155,13 @@ public class ListHrisEmployeesRequest {
      */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
+    }
+
+    /**
+     * The job ID to filter by
+     */
+    public Optional<String> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     public Optional<Double> limit() {
@@ -236,6 +252,15 @@ public class ListHrisEmployeesRequest {
     }
 
 
+    /**
+     * The job ID to filter by
+     */
+    public ListHrisEmployeesRequest withJobId(@Nullable String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+
+
     public ListHrisEmployeesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
@@ -313,6 +338,7 @@ public class ListHrisEmployeesRequest {
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -327,9 +353,10 @@ public class ListHrisEmployeesRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             companyId, connectionId, fields,
-            groupId, limit, locationId,
-            offset, order, query,
-            raw, sort, updatedGte);
+            groupId, jobId, limit,
+            locationId, offset, order,
+            query, raw, sort,
+            updatedGte);
     }
     
     @Override
@@ -339,6 +366,7 @@ public class ListHrisEmployeesRequest {
                 "connectionId", connectionId,
                 "fields", fields,
                 "groupId", groupId,
+                "jobId", jobId,
                 "limit", limit,
                 "locationId", locationId,
                 "offset", offset,
@@ -359,6 +387,8 @@ public class ListHrisEmployeesRequest {
         private List<ListHrisEmployeesQueryParamFields> fields;
 
         private String groupId;
+
+        private String jobId;
 
         private Double limit;
 
@@ -409,6 +439,14 @@ public class ListHrisEmployeesRequest {
          */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * The job ID to filter by
+         */
+        public Builder jobId(@Nullable String jobId) {
+            this.jobId = jobId;
             return this;
         }
 
@@ -470,9 +508,10 @@ public class ListHrisEmployeesRequest {
         public ListHrisEmployeesRequest build() {
             return new ListHrisEmployeesRequest(
                 companyId, connectionId, fields,
-                groupId, limit, locationId,
-                offset, order, query,
-                raw, sort, updatedGte);
+                groupId, jobId, limit,
+                locationId, offset, order,
+                query, raw, sort,
+                updatedGte);
         }
 
     }

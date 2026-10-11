@@ -52,7 +52,9 @@ public class PropertyAdsInsertionorderBidStrategy {
     @JsonProperty("raise_bid_for_deals")
     private Boolean raiseBidForDeals;
 
-
+    /**
+     * Target ROAS e.g. 2.5 = 250% (Google)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_roas")
     private Double targetRoas;
@@ -128,6 +130,9 @@ public class PropertyAdsInsertionorderBidStrategy {
         return Optional.ofNullable(this.raiseBidForDeals);
     }
 
+    /**
+     * Target ROAS e.g. 2.5 = 250% (Google)
+     */
     public Optional<Double> targetRoas() {
         return Optional.ofNullable(this.targetRoas);
     }
@@ -185,6 +190,9 @@ public class PropertyAdsInsertionorderBidStrategy {
     }
 
 
+    /**
+     * Target ROAS e.g. 2.5 = 250% (Google)
+     */
     public PropertyAdsInsertionorderBidStrategy withTargetRoas(@Nullable Double targetRoas) {
         this.targetRoas = targetRoas;
         return this;
@@ -312,6 +320,9 @@ public class PropertyAdsInsertionorderBidStrategy {
             return this;
         }
 
+        /**
+         * Target ROAS e.g. 2.5 = 250% (Google)
+         */
         public Builder targetRoas(@Nullable Double targetRoas) {
             this.targetRoas = targetRoas;
             return this;

@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AtsJobOpening {
-
+    /**
+     * points to an application
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private String applicationId;
@@ -26,12 +28,16 @@ public class AtsJobOpening {
     @JsonProperty("close_reason")
     private String closeReason;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_at")
     private OffsetDateTime openedAt;
@@ -60,6 +66,9 @@ public class AtsJobOpening {
             null, null);
     }
 
+    /**
+     * points to an application
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -68,10 +77,16 @@ public class AtsJobOpening {
         return Optional.ofNullable(this.closeReason);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> openedAt() {
         return Optional.ofNullable(this.openedAt);
     }
@@ -85,6 +100,9 @@ public class AtsJobOpening {
     }
 
 
+    /**
+     * points to an application
+     */
     public AtsJobOpening withApplicationId(@Nullable String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -97,12 +115,18 @@ public class AtsJobOpening {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJobOpening withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJobOpening withOpenedAt(@Nullable OffsetDateTime openedAt) {
         this.openedAt = openedAt;
         return this;
@@ -166,6 +190,9 @@ public class AtsJobOpening {
           // force use of static builder() method
         }
 
+        /**
+         * points to an application
+         */
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
@@ -176,11 +203,17 @@ public class AtsJobOpening {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder openedAt(@Nullable OffsetDateTime openedAt) {
             this.openedAt = openedAt;
             return this;

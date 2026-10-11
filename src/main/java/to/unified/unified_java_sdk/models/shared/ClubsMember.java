@@ -23,57 +23,79 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>`lastname` is only a single initial. We do not synthesize an id, so `id` is typically absent.
  */
 public class ClubsMember {
-
+    /**
+     * The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The member's first name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * The group this member belongs to (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
 
-
+    /**
+     * Unique identifier for this member (not provided by Strava)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the member is an admin of the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_admin")
     private Boolean isAdmin;
 
-
+    /**
+     * Whether the member is the owner of the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_owner")
     private Boolean isOwner;
 
-
+    /**
+     * The member's last name (a single initial for Strava)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private String lastName;
 
-
+    /**
+     * The member's membership status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership_status")
     private ClubsMemberMembershipStatus membershipStatus;
 
-
+    /**
+     * The full name of the member (first name + last initial for Strava)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this member
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -111,46 +133,79 @@ public class ClubsMember {
             null, null);
     }
 
+    /**
+     * The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The member's first name
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * The group this member belongs to (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
 
+    /**
+     * Unique identifier for this member (not provided by Strava)
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the member is an admin of the group
+     */
     public Optional<Boolean> isAdmin() {
         return Optional.ofNullable(this.isAdmin);
     }
 
+    /**
+     * Whether the member is the owner of the group
+     */
     public Optional<Boolean> isOwner() {
         return Optional.ofNullable(this.isOwner);
     }
 
+    /**
+     * The member's last name (a single initial for Strava)
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
 
+    /**
+     * The member's membership status
+     */
     public Optional<ClubsMemberMembershipStatus> membershipStatus() {
         return Optional.ofNullable(this.membershipStatus);
     }
 
+    /**
+     * The full name of the member (first name + last initial for Strava)
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this member
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -160,66 +215,99 @@ public class ClubsMember {
     }
 
 
+    /**
+     * The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsMember withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The member's first name
+     */
     public ClubsMember withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
 
+    /**
+     * The group this member belongs to (reference to HrisGroup)
+     */
     public ClubsMember withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this member (not provided by Strava)
+     */
     public ClubsMember withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the member is an admin of the group
+     */
     public ClubsMember withIsAdmin(@Nullable Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
     }
 
 
+    /**
+     * Whether the member is the owner of the group
+     */
     public ClubsMember withIsOwner(@Nullable Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
     }
 
 
+    /**
+     * The member's last name (a single initial for Strava)
+     */
     public ClubsMember withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
 
+    /**
+     * The member's membership status
+     */
     public ClubsMember withMembershipStatus(@Nullable ClubsMemberMembershipStatus membershipStatus) {
         this.membershipStatus = membershipStatus;
         return this;
     }
 
 
+    /**
+     * The full name of the member (first name + last initial for Strava)
+     */
     public ClubsMember withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this member
+     */
     public ClubsMember withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsMember withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -303,56 +391,89 @@ public class ClubsMember {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The member's first name
+         */
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
+        /**
+         * The group this member belongs to (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
+        /**
+         * Unique identifier for this member (not provided by Strava)
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the member is an admin of the group
+         */
         public Builder isAdmin(@Nullable Boolean isAdmin) {
             this.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * Whether the member is the owner of the group
+         */
         public Builder isOwner(@Nullable Boolean isOwner) {
             this.isOwner = isOwner;
             return this;
         }
 
+        /**
+         * The member's last name (a single initial for Strava)
+         */
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
+        /**
+         * The member's membership status
+         */
         public Builder membershipStatus(@Nullable ClubsMemberMembershipStatus membershipStatus) {
             this.membershipStatus = membershipStatus;
             return this;
         }
 
+        /**
+         * The full name of the member (first name + last initial for Strava)
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this member
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

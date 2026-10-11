@@ -25,7 +25,9 @@ public class ScimAddress {
     @JsonProperty("formatted")
     private String formatted;
 
-
+    /**
+     * city
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     private String locality;
@@ -35,12 +37,16 @@ public class ScimAddress {
     @JsonProperty("postalCode")
     private String postalCode;
 
-
+    /**
+     * stateprovince
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private String region;
 
-
+    /**
+     * could be multi-line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
     private String streetAddress;
@@ -82,6 +88,9 @@ public class ScimAddress {
         return Optional.ofNullable(this.formatted);
     }
 
+    /**
+     * city
+     */
     public Optional<String> locality() {
         return Optional.ofNullable(this.locality);
     }
@@ -90,10 +99,16 @@ public class ScimAddress {
         return Optional.ofNullable(this.postalCode);
     }
 
+    /**
+     * stateprovince
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * could be multi-line
+     */
     public Optional<String> streetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }
@@ -119,6 +134,9 @@ public class ScimAddress {
     }
 
 
+    /**
+     * city
+     */
     public ScimAddress withLocality(@Nullable String locality) {
         this.locality = locality;
         return this;
@@ -131,12 +149,18 @@ public class ScimAddress {
     }
 
 
+    /**
+     * stateprovince
+     */
     public ScimAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
 
+    /**
+     * could be multi-line
+     */
     public ScimAddress withStreetAddress(@Nullable String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
@@ -219,6 +243,9 @@ public class ScimAddress {
             return this;
         }
 
+        /**
+         * city
+         */
         public Builder locality(@Nullable String locality) {
             this.locality = locality;
             return this;
@@ -229,11 +256,17 @@ public class ScimAddress {
             return this;
         }
 
+        /**
+         * stateprovince
+         */
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
+        /**
+         * could be multi-line
+         */
         public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = streetAddress;
             return this;

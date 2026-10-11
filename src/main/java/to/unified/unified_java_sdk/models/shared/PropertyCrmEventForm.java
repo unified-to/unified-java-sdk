@@ -17,7 +17,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PropertyCrmEventForm {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived_at")
     private OffsetDateTime archivedAt;
@@ -54,6 +56,9 @@ public class PropertyCrmEventForm {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> archivedAt() {
         return Optional.ofNullable(this.archivedAt);
     }
@@ -75,6 +80,9 @@ public class PropertyCrmEventForm {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyCrmEventForm withArchivedAt(@Nullable OffsetDateTime archivedAt) {
         this.archivedAt = archivedAt;
         return this;
@@ -146,6 +154,9 @@ public class PropertyCrmEventForm {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder archivedAt(@Nullable OffsetDateTime archivedAt) {
             this.archivedAt = archivedAt;
             return this;

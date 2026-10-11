@@ -10,8 +10,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -28,10 +30,66 @@ public class AtsJobQuestion {
     @JsonProperty("id")
     private String id;
 
+    /**
+     * latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("max_at")
+    private OffsetDateTime maxAt;
+
+    /**
+     * maximum answer length (TEXT)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("max_length")
+    private Double maxLength;
+
+    /**
+     * maximum answer value (NUMBER)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("max_value")
+    private Double maxValue;
+
+    /**
+     * earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("min_at")
+    private OffsetDateTime minAt;
+
+    /**
+     * minimum answer length (TEXT)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("min_length")
+    private Double minLength;
+
+    /**
+     * minimum answer value (NUMBER)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("min_value")
+    private Double minValue;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     private List<String> options;
+
+    /**
+     * only ask this question when the parent question's answer is one of these
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_answer_values")
+    private List<String> parentAnswerValues;
+
+    /**
+     * id of the question in this job's questions list that this question depends on
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -55,14 +113,30 @@ public class AtsJobQuestion {
     public AtsJobQuestion(
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("max_at") @Nullable OffsetDateTime maxAt,
+            @JsonProperty("max_length") @Nullable Double maxLength,
+            @JsonProperty("max_value") @Nullable Double maxValue,
+            @JsonProperty("min_at") @Nullable OffsetDateTime minAt,
+            @JsonProperty("min_length") @Nullable Double minLength,
+            @JsonProperty("min_value") @Nullable Double minValue,
             @JsonProperty("options") @Nullable List<String> options,
+            @JsonProperty("parent_answer_values") @Nullable List<String> parentAnswerValues,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("prompt") @Nullable String prompt,
             @JsonProperty("question") @Nonnull String question,
             @JsonProperty("required") @Nullable Boolean required,
             @JsonProperty("type") @Nonnull AtsJobQuestionType type) {
         this.description = description;
         this.id = id;
+        this.maxAt = maxAt;
+        this.maxLength = maxLength;
+        this.maxValue = maxValue;
+        this.minAt = minAt;
+        this.minLength = minLength;
+        this.minValue = minValue;
         this.options = options;
+        this.parentAnswerValues = parentAnswerValues;
+        this.parentId = parentId;
         this.prompt = prompt;
         this.question = Optional.ofNullable(question)
             .orElseThrow(() -> new IllegalArgumentException("question cannot be null"));
@@ -75,8 +149,10 @@ public class AtsJobQuestion {
             @Nonnull String question,
             @Nonnull AtsJobQuestionType type) {
         this(null, null, null,
-            null, question, null,
-            type);
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            question, null, type);
     }
 
     public Optional<String> description() {
@@ -87,8 +163,64 @@ public class AtsJobQuestion {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> maxAt() {
+        return Optional.ofNullable(this.maxAt);
+    }
+
+    /**
+     * maximum answer length (TEXT)
+     */
+    public Optional<Double> maxLength() {
+        return Optional.ofNullable(this.maxLength);
+    }
+
+    /**
+     * maximum answer value (NUMBER)
+     */
+    public Optional<Double> maxValue() {
+        return Optional.ofNullable(this.maxValue);
+    }
+
+    /**
+     * earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> minAt() {
+        return Optional.ofNullable(this.minAt);
+    }
+
+    /**
+     * minimum answer length (TEXT)
+     */
+    public Optional<Double> minLength() {
+        return Optional.ofNullable(this.minLength);
+    }
+
+    /**
+     * minimum answer value (NUMBER)
+     */
+    public Optional<Double> minValue() {
+        return Optional.ofNullable(this.minValue);
+    }
+
     public Optional<List<String>> options() {
         return Optional.ofNullable(this.options);
+    }
+
+    /**
+     * only ask this question when the parent question's answer is one of these
+     */
+    public Optional<List<String>> parentAnswerValues() {
+        return Optional.ofNullable(this.parentAnswerValues);
+    }
+
+    /**
+     * id of the question in this job's questions list that this question depends on
+     */
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     public Optional<String> prompt() {
@@ -124,8 +256,80 @@ public class AtsJobQuestion {
     }
 
 
+    /**
+     * latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public AtsJobQuestion withMaxAt(@Nullable OffsetDateTime maxAt) {
+        this.maxAt = maxAt;
+        return this;
+    }
+
+
+    /**
+     * maximum answer length (TEXT)
+     */
+    public AtsJobQuestion withMaxLength(@Nullable Double maxLength) {
+        this.maxLength = maxLength;
+        return this;
+    }
+
+
+    /**
+     * maximum answer value (NUMBER)
+     */
+    public AtsJobQuestion withMaxValue(@Nullable Double maxValue) {
+        this.maxValue = maxValue;
+        return this;
+    }
+
+
+    /**
+     * earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public AtsJobQuestion withMinAt(@Nullable OffsetDateTime minAt) {
+        this.minAt = minAt;
+        return this;
+    }
+
+
+    /**
+     * minimum answer length (TEXT)
+     */
+    public AtsJobQuestion withMinLength(@Nullable Double minLength) {
+        this.minLength = minLength;
+        return this;
+    }
+
+
+    /**
+     * minimum answer value (NUMBER)
+     */
+    public AtsJobQuestion withMinValue(@Nullable Double minValue) {
+        this.minValue = minValue;
+        return this;
+    }
+
+
     public AtsJobQuestion withOptions(@Nullable List<String> options) {
         this.options = options;
+        return this;
+    }
+
+
+    /**
+     * only ask this question when the parent question's answer is one of these
+     */
+    public AtsJobQuestion withParentAnswerValues(@Nullable List<String> parentAnswerValues) {
+        this.parentAnswerValues = parentAnswerValues;
+        return this;
+    }
+
+
+    /**
+     * id of the question in this job's questions list that this question depends on
+     */
+    public AtsJobQuestion withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -166,7 +370,15 @@ public class AtsJobQuestion {
         return 
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.maxAt, other.maxAt) &&
+            Utils.enhancedDeepEquals(this.maxLength, other.maxLength) &&
+            Utils.enhancedDeepEquals(this.maxValue, other.maxValue) &&
+            Utils.enhancedDeepEquals(this.minAt, other.minAt) &&
+            Utils.enhancedDeepEquals(this.minLength, other.minLength) &&
+            Utils.enhancedDeepEquals(this.minValue, other.minValue) &&
             Utils.enhancedDeepEquals(this.options, other.options) &&
+            Utils.enhancedDeepEquals(this.parentAnswerValues, other.parentAnswerValues) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.prompt, other.prompt) &&
             Utils.enhancedDeepEquals(this.question, other.question) &&
             Utils.enhancedDeepEquals(this.required, other.required) &&
@@ -176,9 +388,11 @@ public class AtsJobQuestion {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description, id, options,
-            prompt, question, required,
-            type);
+            description, id, maxAt,
+            maxLength, maxValue, minAt,
+            minLength, minValue, options,
+            parentAnswerValues, parentId, prompt,
+            question, required, type);
     }
     
     @Override
@@ -186,7 +400,15 @@ public class AtsJobQuestion {
         return Utils.toString(AtsJobQuestion.class,
                 "description", description,
                 "id", id,
+                "maxAt", maxAt,
+                "maxLength", maxLength,
+                "maxValue", maxValue,
+                "minAt", minAt,
+                "minLength", minLength,
+                "minValue", minValue,
                 "options", options,
+                "parentAnswerValues", parentAnswerValues,
+                "parentId", parentId,
                 "prompt", prompt,
                 "question", question,
                 "required", required,
@@ -200,7 +422,23 @@ public class AtsJobQuestion {
 
         private String id;
 
+        private OffsetDateTime maxAt;
+
+        private Double maxLength;
+
+        private Double maxValue;
+
+        private OffsetDateTime minAt;
+
+        private Double minLength;
+
+        private Double minValue;
+
         private List<String> options;
+
+        private List<String> parentAnswerValues;
+
+        private String parentId;
 
         private String prompt;
 
@@ -224,8 +462,72 @@ public class AtsJobQuestion {
             return this;
         }
 
+        /**
+         * latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder maxAt(@Nullable OffsetDateTime maxAt) {
+            this.maxAt = maxAt;
+            return this;
+        }
+
+        /**
+         * maximum answer length (TEXT)
+         */
+        public Builder maxLength(@Nullable Double maxLength) {
+            this.maxLength = maxLength;
+            return this;
+        }
+
+        /**
+         * maximum answer value (NUMBER)
+         */
+        public Builder maxValue(@Nullable Double maxValue) {
+            this.maxValue = maxValue;
+            return this;
+        }
+
+        /**
+         * earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder minAt(@Nullable OffsetDateTime minAt) {
+            this.minAt = minAt;
+            return this;
+        }
+
+        /**
+         * minimum answer length (TEXT)
+         */
+        public Builder minLength(@Nullable Double minLength) {
+            this.minLength = minLength;
+            return this;
+        }
+
+        /**
+         * minimum answer value (NUMBER)
+         */
+        public Builder minValue(@Nullable Double minValue) {
+            this.minValue = minValue;
+            return this;
+        }
+
         public Builder options(@Nullable List<String> options) {
             this.options = options;
+            return this;
+        }
+
+        /**
+         * only ask this question when the parent question's answer is one of these
+         */
+        public Builder parentAnswerValues(@Nullable List<String> parentAnswerValues) {
+            this.parentAnswerValues = parentAnswerValues;
+            return this;
+        }
+
+        /**
+         * id of the question in this job's questions list that this question depends on
+         */
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -251,9 +553,11 @@ public class AtsJobQuestion {
 
         public AtsJobQuestion build() {
             return new AtsJobQuestion(
-                description, id, options,
-                prompt, question, required,
-                type);
+                description, id, maxAt,
+                maxLength, maxValue, minAt,
+                minLength, minValue, options,
+                parentAnswerValues, parentId, prompt,
+                question, required, type);
         }
 
     }

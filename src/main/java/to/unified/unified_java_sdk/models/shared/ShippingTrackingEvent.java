@@ -16,22 +16,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingTrackingEvent {
-
+    /**
+     * Carrier's status code at this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_code")
     private String carrierStatusCode;
 
-
+    /**
+     * The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Description of the tracking event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Carrier-specific event code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_code")
     private String eventCode;
@@ -41,27 +49,37 @@ public class ShippingTrackingEvent {
     @JsonProperty("location_address")
     private PropertyShippingTrackingEventLocationAddress locationAddress;
 
-
+    /**
+     * Location ID; points to CommerceLocation (reference to ShippingLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * Location name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_name")
     private String locationName;
 
-
+    /**
+     * Additional notes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
-
+    /**
+     * Who signed for delivery
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed_by")
     private String signedBy;
 
-
+    /**
+     * Status at the time of this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private ShippingTrackingEventStatus status;
@@ -97,18 +115,30 @@ public class ShippingTrackingEvent {
             null);
     }
 
+    /**
+     * Carrier's status code at this event
+     */
     public Optional<String> carrierStatusCode() {
         return Optional.ofNullable(this.carrierStatusCode);
     }
 
+    /**
+     * The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Description of the tracking event
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Carrier-specific event code
+     */
     public Optional<String> eventCode() {
         return Optional.ofNullable(this.eventCode);
     }
@@ -117,22 +147,37 @@ public class ShippingTrackingEvent {
         return Optional.ofNullable(this.locationAddress);
     }
 
+    /**
+     * Location ID; points to CommerceLocation (reference to ShippingLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * Location name
+     */
     public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
     }
 
+    /**
+     * Additional notes
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
 
+    /**
+     * Who signed for delivery
+     */
     public Optional<String> signedBy() {
         return Optional.ofNullable(this.signedBy);
     }
 
+    /**
+     * Status at the time of this event
+     */
     public Optional<ShippingTrackingEventStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -142,24 +187,36 @@ public class ShippingTrackingEvent {
     }
 
 
+    /**
+     * Carrier's status code at this event
+     */
     public ShippingTrackingEvent withCarrierStatusCode(@Nullable String carrierStatusCode) {
         this.carrierStatusCode = carrierStatusCode;
         return this;
     }
 
 
+    /**
+     * The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingTrackingEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Description of the tracking event
+     */
     public ShippingTrackingEvent withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Carrier-specific event code
+     */
     public ShippingTrackingEvent withEventCode(@Nullable String eventCode) {
         this.eventCode = eventCode;
         return this;
@@ -172,30 +229,45 @@ public class ShippingTrackingEvent {
     }
 
 
+    /**
+     * Location ID; points to CommerceLocation (reference to ShippingLocation)
+     */
     public ShippingTrackingEvent withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
 
+    /**
+     * Location name
+     */
     public ShippingTrackingEvent withLocationName(@Nullable String locationName) {
         this.locationName = locationName;
         return this;
     }
 
 
+    /**
+     * Additional notes
+     */
     public ShippingTrackingEvent withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
 
+    /**
+     * Who signed for delivery
+     */
     public ShippingTrackingEvent withSignedBy(@Nullable String signedBy) {
         this.signedBy = signedBy;
         return this;
     }
 
 
+    /**
+     * Status at the time of this event
+     */
     public ShippingTrackingEvent withStatus(@Nullable ShippingTrackingEventStatus status) {
         this.status = status;
         return this;
@@ -275,21 +347,33 @@ public class ShippingTrackingEvent {
           // force use of static builder() method
         }
 
+        /**
+         * Carrier's status code at this event
+         */
         public Builder carrierStatusCode(@Nullable String carrierStatusCode) {
             this.carrierStatusCode = carrierStatusCode;
             return this;
         }
 
+        /**
+         * The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Description of the tracking event
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Carrier-specific event code
+         */
         public Builder eventCode(@Nullable String eventCode) {
             this.eventCode = eventCode;
             return this;
@@ -300,26 +384,41 @@ public class ShippingTrackingEvent {
             return this;
         }
 
+        /**
+         * Location ID; points to CommerceLocation (reference to ShippingLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
+        /**
+         * Location name
+         */
         public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }
 
+        /**
+         * Additional notes
+         */
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
+        /**
+         * Who signed for delivery
+         */
         public Builder signedBy(@Nullable String signedBy) {
             this.signedBy = signedBy;
             return this;
         }
 
+        /**
+         * Status at the time of this event
+         */
         public Builder status(@Nullable ShippingTrackingEventStatus status) {
             this.status = status;
             return this;

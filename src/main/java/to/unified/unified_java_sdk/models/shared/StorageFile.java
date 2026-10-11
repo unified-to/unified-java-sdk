@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class StorageFile {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * base64 encoded file contents used to create/update only
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     private String data;
@@ -35,7 +39,10 @@ public class StorageFile {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve
+     * a file" endpoint again to get a new download_url.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     private String downloadUrl;
@@ -97,12 +104,16 @@ public class StorageFile {
     @JsonProperty("type")
     private StorageFileType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -169,10 +180,16 @@ public class StorageFile {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * base64 encoded file contents used to create/update only
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
@@ -181,6 +198,10 @@ public class StorageFile {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve
+     * a file" endpoint again to get a new download_url.
+     */
     public Optional<String> downloadUrl() {
         return Optional.ofNullable(this.downloadUrl);
     }
@@ -232,10 +253,16 @@ public class StorageFile {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -253,12 +280,18 @@ public class StorageFile {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public StorageFile withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * base64 encoded file contents used to create/update only
+     */
     public StorageFile withData(@Nullable String data) {
         this.data = data;
         return this;
@@ -271,6 +304,10 @@ public class StorageFile {
     }
 
 
+    /**
+     * This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve
+     * a file" endpoint again to get a new download_url.
+     */
     public StorageFile withDownloadUrl(@Nullable String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -346,12 +383,18 @@ public class StorageFile {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public StorageFile withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public StorageFile withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -482,11 +525,17 @@ public class StorageFile {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * base64 encoded file contents used to create/update only
+         */
         public Builder data(@Nullable String data) {
             this.data = data;
             return this;
@@ -497,6 +546,10 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve
+         * a file" endpoint again to get a new download_url.
+         */
         public Builder downloadUrl(@Nullable String downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
@@ -560,11 +613,17 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

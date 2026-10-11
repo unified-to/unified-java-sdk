@@ -19,19 +19,27 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-
+/**
+ * HrisAttendance
+ * 
+ * <p>Also called timesheets
+ */
 public class HrisAttendance {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private PropertyHrisAttendanceAddress address;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
     private OffsetDateTime approvedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
     private String approverUserId;
@@ -41,35 +49,49 @@ public class HrisAttendance {
     @JsonProperty("breaks")
     private List<HrisAttendanceBreak> breaks;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * pairs with hourly_rate and tip amounts
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * cash tips declared by the employee for this attendance record
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declared_tips_amount")
     private Double declaredTipsAmount;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonProperty("employee_user_id")
     private String employeeUserId;
 
-
+    /**
+     * clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -79,7 +101,9 @@ public class HrisAttendance {
     @JsonProperty("hourly_rate")
     private Double hourlyRate;
 
-
+    /**
+     * worked hours
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
     private Double hours;
@@ -94,12 +118,16 @@ public class HrisAttendance {
     @JsonProperty("job_name")
     private String jobName;
 
-
+    /**
+     * (reference to HrisLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * card/non-cash tips attributed to this attendance record
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_cash_tips_amount")
     private Double nonCashTipsAmount;
@@ -109,7 +137,9 @@ public class HrisAttendance {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
@@ -118,7 +148,9 @@ public class HrisAttendance {
     @JsonProperty("status")
     private HrisAttendanceStatus status;
 
-
+    /**
+     * the scheduled hris_timeshift this attendance record fulfils
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeshift_id")
     private String timeshiftId;
@@ -128,7 +160,9 @@ public class HrisAttendance {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -204,10 +238,16 @@ public class HrisAttendance {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> approvedAt() {
         return Optional.ofNullable(this.approvedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
     }
@@ -216,30 +256,51 @@ public class HrisAttendance {
         return Optional.ofNullable(this.breaks);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * pairs with hourly_rate and tip amounts
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * cash tips declared by the employee for this attendance record
+     */
     public Optional<Double> declaredTipsAmount() {
         return Optional.ofNullable(this.declaredTipsAmount);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public String employeeUserId() {
         return this.employeeUserId;
     }
 
+    /**
+     * clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public OffsetDateTime endAt() {
         return this.endAt;
     }
 
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -248,6 +309,9 @@ public class HrisAttendance {
         return Optional.ofNullable(this.hourlyRate);
     }
 
+    /**
+     * worked hours
+     */
     public Optional<Double> hours() {
         return Optional.ofNullable(this.hours);
     }
@@ -260,10 +324,16 @@ public class HrisAttendance {
         return Optional.ofNullable(this.jobName);
     }
 
+    /**
+     * (reference to HrisLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * card/non-cash tips attributed to this attendance record
+     */
     public Optional<Double> nonCashTipsAmount() {
         return Optional.ofNullable(this.nonCashTipsAmount);
     }
@@ -272,6 +342,9 @@ public class HrisAttendance {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public OffsetDateTime startAt() {
         return this.startAt;
     }
@@ -280,6 +353,9 @@ public class HrisAttendance {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * the scheduled hris_timeshift this attendance record fulfils
+     */
     public Optional<String> timeshiftId() {
         return Optional.ofNullable(this.timeshiftId);
     }
@@ -288,6 +364,9 @@ public class HrisAttendance {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -303,12 +382,18 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendance withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public HrisAttendance withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
@@ -321,42 +406,63 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisAttendance withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendance withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * pairs with hourly_rate and tip amounts
+     */
     public HrisAttendance withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * cash tips declared by the employee for this attendance record
+     */
     public HrisAttendance withDeclaredTipsAmount(@Nullable Double declaredTipsAmount) {
         this.declaredTipsAmount = declaredTipsAmount;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public HrisAttendance withEmployeeUserId(@Nonnull String employeeUserId) {
         this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
         return this;
     }
 
 
+    /**
+     * clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendance withEndAt(@Nonnull OffsetDateTime endAt) {
         this.endAt = Utils.checkNotNull(endAt, "endAt");
         return this;
     }
 
 
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     public HrisAttendance withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -369,6 +475,9 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * worked hours
+     */
     public HrisAttendance withHours(@Nullable Double hours) {
         this.hours = hours;
         return this;
@@ -387,12 +496,18 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * (reference to HrisLocation)
+     */
     public HrisAttendance withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
 
+    /**
+     * card/non-cash tips attributed to this attendance record
+     */
     public HrisAttendance withNonCashTipsAmount(@Nullable Double nonCashTipsAmount) {
         this.nonCashTipsAmount = nonCashTipsAmount;
         return this;
@@ -405,6 +520,9 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendance withStartAt(@Nonnull OffsetDateTime startAt) {
         this.startAt = Utils.checkNotNull(startAt, "startAt");
         return this;
@@ -417,6 +535,9 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * the scheduled hris_timeshift this attendance record fulfils
+     */
     public HrisAttendance withTimeshiftId(@Nullable String timeshiftId) {
         this.timeshiftId = timeshiftId;
         return this;
@@ -429,6 +550,9 @@ public class HrisAttendance {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisAttendance withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -569,11 +693,17 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
@@ -584,36 +714,57 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * pairs with hourly_rate and tip amounts
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * cash tips declared by the employee for this attendance record
+         */
         public Builder declaredTipsAmount(@Nullable Double declaredTipsAmount) {
             this.declaredTipsAmount = declaredTipsAmount;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder employeeUserId(@Nonnull String employeeUserId) {
             this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
             return this;
         }
 
+        /**
+         * clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nonnull OffsetDateTime endAt) {
             this.endAt = Utils.checkNotNull(endAt, "endAt");
             return this;
         }
 
+        /**
+         * department, team, etc. (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -624,6 +775,9 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * worked hours
+         */
         public Builder hours(@Nullable Double hours) {
             this.hours = hours;
             return this;
@@ -639,11 +793,17 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * (reference to HrisLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
+        /**
+         * card/non-cash tips attributed to this attendance record
+         */
         public Builder nonCashTipsAmount(@Nullable Double nonCashTipsAmount) {
             this.nonCashTipsAmount = nonCashTipsAmount;
             return this;
@@ -654,6 +814,9 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nonnull OffsetDateTime startAt) {
             this.startAt = Utils.checkNotNull(startAt, "startAt");
             return this;
@@ -664,6 +827,9 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * the scheduled hris_timeshift this attendance record fulfils
+         */
         public Builder timeshiftId(@Nullable String timeshiftId) {
             this.timeshiftId = timeshiftId;
             return this;
@@ -674,6 +840,9 @@ public class HrisAttendance {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingBankfeedtransactionType
+ * 
+ * <p>direction: DEBIT, CREDIT
+ */
 public class AccountingBankfeedtransactionType {
 
     public static final AccountingBankfeedtransactionType DEBIT = new AccountingBankfeedtransactionType("DEBIT");

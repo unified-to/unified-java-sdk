@@ -30,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoR
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateAccountingExpensereportResponse;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
@@ -99,6 +102,9 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoResp
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpensereportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingExpensereportResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingInvoiceResponse;
@@ -123,12 +129,18 @@ import to.unified.unified_java_sdk.models.operations.GetAccountingProjectRespons
 import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchasereceiptRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchasereceiptRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchasereceiptResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderResponse;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesreceiptRequest;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesreceiptRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAccountingSalesreceiptResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateResponse;
@@ -174,6 +186,9 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingContactsRespo
 import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCreditmemoesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensereportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensereportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensereportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesResponse;
@@ -201,12 +216,18 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingProjectsRespo
 import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingPurchaseordersResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingSalesordersResponse;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesreceiptsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesreceiptsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAccountingSalesreceiptsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTaxratesResponse;
@@ -243,6 +264,9 @@ import to.unified.unified_java_sdk.models.operations.PatchAccountingCreditmemoRe
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpensereportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAccountingExpensereportResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceResponse;
@@ -300,6 +324,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingCreditmemoR
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpensereportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpensereportResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingInvoiceResponse;
@@ -357,6 +384,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingCreditmemoR
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpensereportRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpensereportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpensereportResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceResponse;
@@ -398,6 +428,7 @@ import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
 import to.unified.unified_java_sdk.operations.CreateAccountingContact;
 import to.unified.unified_java_sdk.operations.CreateAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
+import to.unified.unified_java_sdk.operations.CreateAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.CreateAccountingInvoice;
 import to.unified.unified_java_sdk.operations.CreateAccountingJournal;
 import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
@@ -421,6 +452,7 @@ import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingContact;
 import to.unified.unified_java_sdk.operations.GetAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.GetAccountingExpense;
+import to.unified.unified_java_sdk.operations.GetAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.GetAccountingInvoice;
 import to.unified.unified_java_sdk.operations.GetAccountingJournal;
 import to.unified.unified_java_sdk.operations.GetAccountingOrder;
@@ -429,8 +461,10 @@ import to.unified.unified_java_sdk.operations.GetAccountingPaymentterm;
 import to.unified.unified_java_sdk.operations.GetAccountingProfitloss;
 import to.unified.unified_java_sdk.operations.GetAccountingProject;
 import to.unified.unified_java_sdk.operations.GetAccountingPurchaseorder;
+import to.unified.unified_java_sdk.operations.GetAccountingPurchasereceipt;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
 import to.unified.unified_java_sdk.operations.GetAccountingSalesorder;
+import to.unified.unified_java_sdk.operations.GetAccountingSalesreceipt;
 import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
 import to.unified.unified_java_sdk.operations.GetAccountingTransaction;
 import to.unified.unified_java_sdk.operations.GetAccountingTrialbalance;
@@ -446,6 +480,7 @@ import to.unified.unified_java_sdk.operations.ListAccountingCashflows;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
 import to.unified.unified_java_sdk.operations.ListAccountingContacts;
 import to.unified.unified_java_sdk.operations.ListAccountingCreditmemoes;
+import to.unified.unified_java_sdk.operations.ListAccountingExpensereports;
 import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
 import to.unified.unified_java_sdk.operations.ListAccountingInvoices;
 import to.unified.unified_java_sdk.operations.ListAccountingJournals;
@@ -455,8 +490,10 @@ import to.unified.unified_java_sdk.operations.ListAccountingPaymentterms;
 import to.unified.unified_java_sdk.operations.ListAccountingProfitlosses;
 import to.unified.unified_java_sdk.operations.ListAccountingProjects;
 import to.unified.unified_java_sdk.operations.ListAccountingPurchaseorders;
+import to.unified.unified_java_sdk.operations.ListAccountingPurchasereceipts;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
 import to.unified.unified_java_sdk.operations.ListAccountingSalesorders;
+import to.unified.unified_java_sdk.operations.ListAccountingSalesreceipts;
 import to.unified.unified_java_sdk.operations.ListAccountingTaxrates;
 import to.unified.unified_java_sdk.operations.ListAccountingTransactions;
 import to.unified.unified_java_sdk.operations.ListAccountingTrialbalances;
@@ -469,6 +506,7 @@ import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
 import to.unified.unified_java_sdk.operations.PatchAccountingContact;
 import to.unified.unified_java_sdk.operations.PatchAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
+import to.unified.unified_java_sdk.operations.PatchAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.PatchAccountingInvoice;
 import to.unified.unified_java_sdk.operations.PatchAccountingJournal;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
@@ -488,6 +526,7 @@ import to.unified.unified_java_sdk.operations.RemoveAccountingCategory;
 import to.unified.unified_java_sdk.operations.RemoveAccountingContact;
 import to.unified.unified_java_sdk.operations.RemoveAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
+import to.unified.unified_java_sdk.operations.RemoveAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.RemoveAccountingInvoice;
 import to.unified.unified_java_sdk.operations.RemoveAccountingJournal;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
@@ -507,6 +546,7 @@ import to.unified.unified_java_sdk.operations.UpdateAccountingCategory;
 import to.unified.unified_java_sdk.operations.UpdateAccountingContact;
 import to.unified.unified_java_sdk.operations.UpdateAccountingCreditmemo;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
+import to.unified.unified_java_sdk.operations.UpdateAccountingExpensereport;
 import to.unified.unified_java_sdk.operations.UpdateAccountingInvoice;
 import to.unified.unified_java_sdk.operations.UpdateAccountingJournal;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
@@ -713,6 +753,28 @@ public class Accounting {
     public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
               = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create an expensereport
+     * 
+     * @return The call builder
+     */
+    public CreateAccountingExpensereportRequestBuilder createAccountingExpensereport() {
+        return new CreateAccountingExpensereportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an expensereport
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateAccountingExpensereportResponse createAccountingExpensereport(@Nonnull CreateAccountingExpensereportRequest request) {
+        RequestOperation<CreateAccountingExpensereportRequest, CreateAccountingExpensereportResponse> operation
+              = new CreateAccountingExpensereport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1223,6 +1285,28 @@ public class Accounting {
     }
 
     /**
+     * Retrieve an expensereport
+     * 
+     * @return The call builder
+     */
+    public GetAccountingExpensereportRequestBuilder getAccountingExpensereport() {
+        return new GetAccountingExpensereportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an expensereport
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingExpensereportResponse getAccountingExpensereport(@Nonnull GetAccountingExpensereportRequest request) {
+        RequestOperation<GetAccountingExpensereportRequest, GetAccountingExpensereportResponse> operation
+              = new GetAccountingExpensereport.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve an invoice
      * 
      * @return The call builder
@@ -1399,6 +1483,28 @@ public class Accounting {
     }
 
     /**
+     * Retrieve a purchasereceipt
+     * 
+     * @return The call builder
+     */
+    public GetAccountingPurchasereceiptRequestBuilder getAccountingPurchasereceipt() {
+        return new GetAccountingPurchasereceiptRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a purchasereceipt
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingPurchasereceiptResponse getAccountingPurchasereceipt(@Nonnull GetAccountingPurchasereceiptRequest request) {
+        RequestOperation<GetAccountingPurchasereceiptRequest, GetAccountingPurchasereceiptResponse> operation
+              = new GetAccountingPurchasereceipt.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a quote
      * 
      * @return The call builder
@@ -1439,6 +1545,28 @@ public class Accounting {
     public GetAccountingSalesorderResponse getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
               = new GetAccountingSalesorder.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a salesreceipt
+     * 
+     * @return The call builder
+     */
+    public GetAccountingSalesreceiptRequestBuilder getAccountingSalesreceipt() {
+        return new GetAccountingSalesreceiptRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a salesreceipt
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAccountingSalesreceiptResponse getAccountingSalesreceipt(@Nonnull GetAccountingSalesreceiptRequest request) {
+        RequestOperation<GetAccountingSalesreceiptRequest, GetAccountingSalesreceiptResponse> operation
+              = new GetAccountingSalesreceipt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1773,6 +1901,28 @@ public class Accounting {
     }
 
     /**
+     * List all expensereports
+     * 
+     * @return The call builder
+     */
+    public ListAccountingExpensereportsRequestBuilder listAccountingExpensereports() {
+        return new ListAccountingExpensereportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all expensereports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingExpensereportsResponse listAccountingExpensereports(@Nonnull ListAccountingExpensereportsRequest request) {
+        RequestOperation<ListAccountingExpensereportsRequest, ListAccountingExpensereportsResponse> operation
+              = new ListAccountingExpensereports.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all expenses
      * 
      * @return The call builder
@@ -1971,6 +2121,28 @@ public class Accounting {
     }
 
     /**
+     * List all purchasereceipts
+     * 
+     * @return The call builder
+     */
+    public ListAccountingPurchasereceiptsRequestBuilder listAccountingPurchasereceipts() {
+        return new ListAccountingPurchasereceiptsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all purchasereceipts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingPurchasereceiptsResponse listAccountingPurchasereceipts(@Nonnull ListAccountingPurchasereceiptsRequest request) {
+        RequestOperation<ListAccountingPurchasereceiptsRequest, ListAccountingPurchasereceiptsResponse> operation
+              = new ListAccountingPurchasereceipts.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all quotes
      * 
      * @return The call builder
@@ -2011,6 +2183,28 @@ public class Accounting {
     public ListAccountingSalesordersResponse listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
               = new ListAccountingSalesorders.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all salesreceipts
+     * 
+     * @return The call builder
+     */
+    public ListAccountingSalesreceiptsRequestBuilder listAccountingSalesreceipts() {
+        return new ListAccountingSalesreceiptsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all salesreceipts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAccountingSalesreceiptsResponse listAccountingSalesreceipts(@Nonnull ListAccountingSalesreceiptsRequest request) {
+        RequestOperation<ListAccountingSalesreceiptsRequest, ListAccountingSalesreceiptsResponse> operation
+              = new ListAccountingSalesreceipts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2275,6 +2469,28 @@ public class Accounting {
     public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * @return The call builder
+     */
+    public PatchAccountingExpensereportRequestBuilder patchAccountingExpensereport() {
+        return new PatchAccountingExpensereportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAccountingExpensereportResponse patchAccountingExpensereport(@Nonnull PatchAccountingExpensereportRequest request) {
+        RequestOperation<PatchAccountingExpensereportRequest, PatchAccountingExpensereportResponse> operation
+              = new PatchAccountingExpensereport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -2697,6 +2913,28 @@ public class Accounting {
     }
 
     /**
+     * Remove an expensereport
+     * 
+     * @return The call builder
+     */
+    public RemoveAccountingExpensereportRequestBuilder removeAccountingExpensereport() {
+        return new RemoveAccountingExpensereportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an expensereport
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveAccountingExpensereportResponse removeAccountingExpensereport(@Nonnull RemoveAccountingExpensereportRequest request) {
+        RequestOperation<RemoveAccountingExpensereportRequest, RemoveAccountingExpensereportResponse> operation
+              = new RemoveAccountingExpensereport.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an invoice
      * 
      * @return The call builder
@@ -3111,6 +3349,28 @@ public class Accounting {
     public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * @return The call builder
+     */
+    public UpdateAccountingExpensereportRequestBuilder updateAccountingExpensereport() {
+        return new UpdateAccountingExpensereportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expensereport
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAccountingExpensereportResponse updateAccountingExpensereport(@Nonnull UpdateAccountingExpensereportRequest request) {
+        RequestOperation<UpdateAccountingExpensereportRequest, UpdateAccountingExpensereportResponse> operation
+              = new UpdateAccountingExpensereport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

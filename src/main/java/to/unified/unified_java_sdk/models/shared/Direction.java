@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Direction
+ * 
+ * <p>DESTINATION, or BIDIRECTIONAL for import+export connectors
+ */
 public class Direction {
 
     public static final Direction SOURCE = new Direction("SOURCE");

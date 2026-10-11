@@ -16,22 +16,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpProfileSegment {
-
+    /**
+     * When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private OffsetDateTime expiresAt;
 
-
+    /**
+     * When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joined_at")
     private OffsetDateTime joinedAt;
 
-
+    /**
+     * The name of the segment/audience
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The segment/audience this profile belongs to; points to CdpSegment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment_id")
     private String segmentId;
@@ -53,18 +61,30 @@ public class CdpProfileSegment {
             null);
     }
 
+    /**
+     * When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> expiresAt() {
         return Optional.ofNullable(this.expiresAt);
     }
 
+    /**
+     * When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> joinedAt() {
         return Optional.ofNullable(this.joinedAt);
     }
 
+    /**
+     * The name of the segment/audience
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The segment/audience this profile belongs to; points to CdpSegment
+     */
     public Optional<String> segmentId() {
         return Optional.ofNullable(this.segmentId);
     }
@@ -74,24 +94,36 @@ public class CdpProfileSegment {
     }
 
 
+    /**
+     * When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpProfileSegment withExpiresAt(@Nullable OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
 
 
+    /**
+     * When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpProfileSegment withJoinedAt(@Nullable OffsetDateTime joinedAt) {
         this.joinedAt = joinedAt;
         return this;
     }
 
 
+    /**
+     * The name of the segment/audience
+     */
     public CdpProfileSegment withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The segment/audience this profile belongs to; points to CdpSegment
+     */
     public CdpProfileSegment withSegmentId(@Nullable String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -145,21 +177,33 @@ public class CdpProfileSegment {
           // force use of static builder() method
         }
 
+        /**
+         * When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder expiresAt(@Nullable OffsetDateTime expiresAt) {
             this.expiresAt = expiresAt;
             return this;
         }
 
+        /**
+         * When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder joinedAt(@Nullable OffsetDateTime joinedAt) {
             this.joinedAt = joinedAt;
             return this;
         }
 
+        /**
+         * The name of the segment/audience
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The segment/audience this profile belongs to; points to CdpSegment
+         */
         public Builder segmentId(@Nullable String segmentId) {
             this.segmentId = segmentId;
             return this;

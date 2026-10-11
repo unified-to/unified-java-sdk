@@ -20,22 +20,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingLabel {
-
+    /**
+     * The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Unique identifier for this label object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether label has been voided
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_voided")
     private Boolean isVoided;
 
-
+    /**
+     * Cost to purchase label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_cost")
     private Double labelCost;
@@ -45,47 +53,65 @@ public class ShippingLabel {
     @JsonProperty("label_cost_currency")
     private String labelCostCurrency;
 
-
+    /**
+     * Format of the label (PDF, PNG, ZPL, EPL2)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_format")
     private LabelFormat labelFormat;
 
-
+    /**
+     * URL to download the label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_url")
     private String labelUrl;
 
-
+    /**
+     * Rate used for this label; points to ShippingRate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_id")
     private String rateId;
 
-
+    /**
+     * The raw data returned by the integration for this label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Service code used
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_code")
     private String serviceCode;
 
-
+    /**
+     * Reference to the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     private String shipmentId;
 
-
+    /**
+     * Status of the label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private ShippingLabelStatus status;
 
-
+    /**
+     * Tracking number for the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     private String trackingNumber;
 
-
+    /**
+     * The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -130,18 +156,30 @@ public class ShippingLabel {
             null, null);
     }
 
+    /**
+     * The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Unique identifier for this label object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether label has been voided
+     */
     public Optional<Boolean> isVoided() {
         return Optional.ofNullable(this.isVoided);
     }
 
+    /**
+     * Cost to purchase label
+     */
     public Optional<Double> labelCost() {
         return Optional.ofNullable(this.labelCost);
     }
@@ -150,38 +188,65 @@ public class ShippingLabel {
         return Optional.ofNullable(this.labelCostCurrency);
     }
 
+    /**
+     * Format of the label (PDF, PNG, ZPL, EPL2)
+     */
     public Optional<LabelFormat> labelFormat() {
         return Optional.ofNullable(this.labelFormat);
     }
 
+    /**
+     * URL to download the label
+     */
     public Optional<String> labelUrl() {
         return Optional.ofNullable(this.labelUrl);
     }
 
+    /**
+     * Rate used for this label; points to ShippingRate
+     */
     public Optional<String> rateId() {
         return Optional.ofNullable(this.rateId);
     }
 
+    /**
+     * The raw data returned by the integration for this label
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Service code used
+     */
     public Optional<String> serviceCode() {
         return Optional.ofNullable(this.serviceCode);
     }
 
+    /**
+     * Reference to the shipment
+     */
     public Optional<String> shipmentId() {
         return Optional.ofNullable(this.shipmentId);
     }
 
+    /**
+     * Status of the label
+     */
     public Optional<ShippingLabelStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Tracking number for the shipment
+     */
     public Optional<String> trackingNumber() {
         return Optional.ofNullable(this.trackingNumber);
     }
 
+    /**
+     * The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -191,24 +256,36 @@ public class ShippingLabel {
     }
 
 
+    /**
+     * The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingLabel withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this label object
+     */
     public ShippingLabel withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether label has been voided
+     */
     public ShippingLabel withIsVoided(@Nullable Boolean isVoided) {
         this.isVoided = isVoided;
         return this;
     }
 
 
+    /**
+     * Cost to purchase label
+     */
     public ShippingLabel withLabelCost(@Nullable Double labelCost) {
         this.labelCost = labelCost;
         return this;
@@ -221,54 +298,81 @@ public class ShippingLabel {
     }
 
 
+    /**
+     * Format of the label (PDF, PNG, ZPL, EPL2)
+     */
     public ShippingLabel withLabelFormat(@Nullable LabelFormat labelFormat) {
         this.labelFormat = labelFormat;
         return this;
     }
 
 
+    /**
+     * URL to download the label
+     */
     public ShippingLabel withLabelUrl(@Nullable String labelUrl) {
         this.labelUrl = labelUrl;
         return this;
     }
 
 
+    /**
+     * Rate used for this label; points to ShippingRate
+     */
     public ShippingLabel withRateId(@Nullable String rateId) {
         this.rateId = rateId;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this label
+     */
     public ShippingLabel withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Service code used
+     */
     public ShippingLabel withServiceCode(@Nullable String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
 
+    /**
+     * Reference to the shipment
+     */
     public ShippingLabel withShipmentId(@Nullable String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
 
 
+    /**
+     * Status of the label
+     */
     public ShippingLabel withStatus(@Nullable ShippingLabelStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * Tracking number for the shipment
+     */
     public ShippingLabel withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
 
+    /**
+     * The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingLabel withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -365,21 +469,33 @@ public class ShippingLabel {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Unique identifier for this label object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether label has been voided
+         */
         public Builder isVoided(@Nullable Boolean isVoided) {
             this.isVoided = isVoided;
             return this;
         }
 
+        /**
+         * Cost to purchase label
+         */
         public Builder labelCost(@Nullable Double labelCost) {
             this.labelCost = labelCost;
             return this;
@@ -390,46 +506,73 @@ public class ShippingLabel {
             return this;
         }
 
+        /**
+         * Format of the label (PDF, PNG, ZPL, EPL2)
+         */
         public Builder labelFormat(@Nullable LabelFormat labelFormat) {
             this.labelFormat = labelFormat;
             return this;
         }
 
+        /**
+         * URL to download the label
+         */
         public Builder labelUrl(@Nullable String labelUrl) {
             this.labelUrl = labelUrl;
             return this;
         }
 
+        /**
+         * Rate used for this label; points to ShippingRate
+         */
         public Builder rateId(@Nullable String rateId) {
             this.rateId = rateId;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this label
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Service code used
+         */
         public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
 
+        /**
+         * Reference to the shipment
+         */
         public Builder shipmentId(@Nullable String shipmentId) {
             this.shipmentId = shipmentId;
             return this;
         }
 
+        /**
+         * Status of the label
+         */
         public Builder status(@Nullable ShippingLabelStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * Tracking number for the shipment
+         */
         public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
+        /**
+         * The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

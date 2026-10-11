@@ -16,6 +16,13 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GetUnifiedIntegrationAuthRequest {
+    /**
+     * Existing connection ID to re-authorize in place instead of creating a duplicate. Requires
+     * reauth_token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
+    private String connectionId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
     private String env;
@@ -44,6 +51,13 @@ public class GetUnifiedIntegrationAuthRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     private String lang;
+
+    /**
+     * Single-use token from "Create a re-authorization token for a connection" (POST
+     * /unified/connection/{id}/reauth); required with connection_id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reauth_token")
+    private String reauthToken;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect")
@@ -88,11 +102,13 @@ public class GetUnifiedIntegrationAuthRequest {
 
     @JsonCreator
     public GetUnifiedIntegrationAuthRequest(
+            @Nullable String connectionId,
             @Nullable String env,
             @Nullable String externalXref,
             @Nullable String failureRedirect,
             @Nonnull String integrationType,
             @Nullable String lang,
+            @Nullable String reauthToken,
             @Nullable Boolean redirect,
             @Nullable String region,
             @Nullable List<String> scopes,
@@ -100,12 +116,14 @@ public class GetUnifiedIntegrationAuthRequest {
             @Nullable String subdomain,
             @Nullable String successRedirect,
             @Nonnull String workspaceId) {
+        this.connectionId = connectionId;
         this.env = env;
         this.externalXref = externalXref;
         this.failureRedirect = failureRedirect;
         this.integrationType = Optional.ofNullable(integrationType)
             .orElseThrow(() -> new IllegalArgumentException("integrationType cannot be null"));
         this.lang = lang;
+        this.reauthToken = reauthToken;
         this.redirect = redirect;
         this.region = region;
         this.scopes = scopes;
@@ -120,9 +138,18 @@ public class GetUnifiedIntegrationAuthRequest {
             @Nonnull String integrationType,
             @Nonnull String workspaceId) {
         this(null, null, null,
-            integrationType, null, null,
+            null, integrationType, null,
             null, null, null,
-            null, null, workspaceId);
+            null, null, null,
+            null, workspaceId);
+    }
+
+    /**
+     * Existing connection ID to re-authorize in place instead of creating a duplicate. Requires
+     * reauth_token.
+     */
+    public Optional<String> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     public Optional<String> env() {
@@ -156,6 +183,14 @@ public class GetUnifiedIntegrationAuthRequest {
      */
     public Optional<String> lang() {
         return Optional.ofNullable(this.lang);
+    }
+
+    /**
+     * Single-use token from "Create a re-authorization token for a connection" (POST
+     * /unified/connection/{id}/reauth); required with connection_id.
+     */
+    public Optional<String> reauthToken() {
+        return Optional.ofNullable(this.reauthToken);
     }
 
     public Optional<Boolean> redirect() {
@@ -209,6 +244,16 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
 
+    /**
+     * Existing connection ID to re-authorize in place instead of creating a duplicate. Requires
+     * reauth_token.
+     */
+    public GetUnifiedIntegrationAuthRequest withConnectionId(@Nullable String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+
+
     public GetUnifiedIntegrationAuthRequest withEnv(@Nullable String env) {
         this.env = env;
         return this;
@@ -248,6 +293,16 @@ public class GetUnifiedIntegrationAuthRequest {
      */
     public GetUnifiedIntegrationAuthRequest withLang(@Nullable String lang) {
         this.lang = lang;
+        return this;
+    }
+
+
+    /**
+     * Single-use token from "Create a re-authorization token for a connection" (POST
+     * /unified/connection/{id}/reauth); required with connection_id.
+     */
+    public GetUnifiedIntegrationAuthRequest withReauthToken(@Nullable String reauthToken) {
+        this.reauthToken = reauthToken;
         return this;
     }
 
@@ -322,11 +377,13 @@ public class GetUnifiedIntegrationAuthRequest {
         }
         GetUnifiedIntegrationAuthRequest other = (GetUnifiedIntegrationAuthRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.env, other.env) &&
             Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
             Utils.enhancedDeepEquals(this.failureRedirect, other.failureRedirect) &&
             Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
             Utils.enhancedDeepEquals(this.lang, other.lang) &&
+            Utils.enhancedDeepEquals(this.reauthToken, other.reauthToken) &&
             Utils.enhancedDeepEquals(this.redirect, other.redirect) &&
             Utils.enhancedDeepEquals(this.region, other.region) &&
             Utils.enhancedDeepEquals(this.scopes, other.scopes) &&
@@ -339,20 +396,23 @@ public class GetUnifiedIntegrationAuthRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            env, externalXref, failureRedirect,
-            integrationType, lang, redirect,
-            region, scopes, state,
-            subdomain, successRedirect, workspaceId);
+            connectionId, env, externalXref,
+            failureRedirect, integrationType, lang,
+            reauthToken, redirect, region,
+            scopes, state, subdomain,
+            successRedirect, workspaceId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GetUnifiedIntegrationAuthRequest.class,
+                "connectionId", connectionId,
                 "env", env,
                 "externalXref", externalXref,
                 "failureRedirect", failureRedirect,
                 "integrationType", integrationType,
                 "lang", lang,
+                "reauthToken", reauthToken,
                 "redirect", redirect,
                 "region", region,
                 "scopes", scopes,
@@ -365,6 +425,8 @@ public class GetUnifiedIntegrationAuthRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private String connectionId;
+
         private String env;
 
         private String externalXref;
@@ -374,6 +436,8 @@ public class GetUnifiedIntegrationAuthRequest {
         private String integrationType;
 
         private String lang;
+
+        private String reauthToken;
 
         private Boolean redirect;
 
@@ -391,6 +455,15 @@ public class GetUnifiedIntegrationAuthRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Existing connection ID to re-authorize in place instead of creating a duplicate. Requires
+         * reauth_token.
+         */
+        public Builder connectionId(@Nullable String connectionId) {
+            this.connectionId = connectionId;
+            return this;
         }
 
         public Builder env(@Nullable String env) {
@@ -428,6 +501,15 @@ public class GetUnifiedIntegrationAuthRequest {
          */
         public Builder lang(@Nullable String lang) {
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Single-use token from "Create a re-authorization token for a connection" (POST
+         * /unified/connection/{id}/reauth); required with connection_id.
+         */
+        public Builder reauthToken(@Nullable String reauthToken) {
+            this.reauthToken = reauthToken;
             return this;
         }
 
@@ -486,10 +568,11 @@ public class GetUnifiedIntegrationAuthRequest {
 
         public GetUnifiedIntegrationAuthRequest build() {
             return new GetUnifiedIntegrationAuthRequest(
-                env, externalXref, failureRedirect,
-                integrationType, lang, redirect,
-                region, scopes, state,
-                subdomain, successRedirect, workspaceId);
+                connectionId, env, externalXref,
+                failureRedirect, integrationType, lang,
+                reauthToken, redirect, region,
+                scopes, state, subdomain,
+                successRedirect, workspaceId);
         }
 
     }

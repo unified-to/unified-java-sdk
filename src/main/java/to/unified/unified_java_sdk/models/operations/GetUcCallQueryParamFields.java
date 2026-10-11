@@ -23,7 +23,8 @@ public enum GetUcCallQueryParamFields {
     USER_PHONE("user_phone"),
     TYPE("type"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    CONVERSATION_IDENTIFIER("conversation_identifier");
 
     @JsonValue
     private final String value;

@@ -24,7 +24,9 @@ public class AtsApplication {
     @JsonProperty("answers")
     private List<AtsApplicationAnswer> answers;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_at")
     private OffsetDateTime appliedAt;
@@ -34,12 +36,16 @@ public class AtsApplication {
     @JsonProperty("candidate_id")
     private String candidateId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hired_at")
     private OffsetDateTime hiredAt;
@@ -64,12 +70,18 @@ public class AtsApplication {
     @JsonProperty("offers")
     private List<AtsOffer> offers;
 
-
+    /**
+     * The integration's original status. Mostly used to have your customers chose the application
+     * status/stage so that your software can trigger an event.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     private String originalStatus;
 
-
+    /**
+     * The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready
+     * hiring_stage)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_substatus")
     private String originalSubstatus;
@@ -79,7 +91,9 @@ public class AtsApplication {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
     private OffsetDateTime rejectedAt;
@@ -99,17 +113,23 @@ public class AtsApplication {
     @JsonProperty("status")
     private AtsApplicationStatus status;
 
-
+    /**
+     * Application personal summary (e.g. Pinpoint Personal Summary)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * HR user/employee ID (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -170,6 +190,9 @@ public class AtsApplication {
         return Optional.ofNullable(this.answers);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> appliedAt() {
         return Optional.ofNullable(this.appliedAt);
     }
@@ -178,10 +201,16 @@ public class AtsApplication {
         return Optional.ofNullable(this.candidateId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> hiredAt() {
         return Optional.ofNullable(this.hiredAt);
     }
@@ -202,10 +231,18 @@ public class AtsApplication {
         return Optional.ofNullable(this.offers);
     }
 
+    /**
+     * The integration's original status. Mostly used to have your customers chose the application
+     * status/stage so that your software can trigger an event.
+     */
     public Optional<String> originalStatus() {
         return Optional.ofNullable(this.originalStatus);
     }
 
+    /**
+     * The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready
+     * hiring_stage)
+     */
     public Optional<String> originalSubstatus() {
         return Optional.ofNullable(this.originalSubstatus);
     }
@@ -214,6 +251,9 @@ public class AtsApplication {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> rejectedAt() {
         return Optional.ofNullable(this.rejectedAt);
     }
@@ -230,14 +270,23 @@ public class AtsApplication {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Application personal summary (e.g. Pinpoint Personal Summary)
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * HR user/employee ID (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -253,6 +302,9 @@ public class AtsApplication {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsApplication withAppliedAt(@Nullable OffsetDateTime appliedAt) {
         this.appliedAt = appliedAt;
         return this;
@@ -265,12 +317,18 @@ public class AtsApplication {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsApplication withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsApplication withHiredAt(@Nullable OffsetDateTime hiredAt) {
         this.hiredAt = hiredAt;
         return this;
@@ -301,12 +359,20 @@ public class AtsApplication {
     }
 
 
+    /**
+     * The integration's original status. Mostly used to have your customers chose the application
+     * status/stage so that your software can trigger an event.
+     */
     public AtsApplication withOriginalStatus(@Nullable String originalStatus) {
         this.originalStatus = originalStatus;
         return this;
     }
 
 
+    /**
+     * The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready
+     * hiring_stage)
+     */
     public AtsApplication withOriginalSubstatus(@Nullable String originalSubstatus) {
         this.originalSubstatus = originalSubstatus;
         return this;
@@ -319,6 +385,9 @@ public class AtsApplication {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsApplication withRejectedAt(@Nullable OffsetDateTime rejectedAt) {
         this.rejectedAt = rejectedAt;
         return this;
@@ -343,18 +412,27 @@ public class AtsApplication {
     }
 
 
+    /**
+     * Application personal summary (e.g. Pinpoint Personal Summary)
+     */
     public AtsApplication withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsApplication withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * HR user/employee ID (reference to HrisEmployee)
+     */
     public AtsApplication withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -478,6 +556,9 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder appliedAt(@Nullable OffsetDateTime appliedAt) {
             this.appliedAt = appliedAt;
             return this;
@@ -488,11 +569,17 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder hiredAt(@Nullable OffsetDateTime hiredAt) {
             this.hiredAt = hiredAt;
             return this;
@@ -518,11 +605,19 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * The integration's original status. Mostly used to have your customers chose the application
+         * status/stage so that your software can trigger an event.
+         */
         public Builder originalStatus(@Nullable String originalStatus) {
             this.originalStatus = originalStatus;
             return this;
         }
 
+        /**
+         * The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready
+         * hiring_stage)
+         */
         public Builder originalSubstatus(@Nullable String originalSubstatus) {
             this.originalSubstatus = originalSubstatus;
             return this;
@@ -533,6 +628,9 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder rejectedAt(@Nullable OffsetDateTime rejectedAt) {
             this.rejectedAt = rejectedAt;
             return this;
@@ -553,16 +651,25 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * Application personal summary (e.g. Pinpoint Personal Summary)
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * HR user/employee ID (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

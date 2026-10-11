@@ -17,12 +17,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class UcRecordingMedia {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * two digit ISO code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
@@ -32,7 +36,9 @@ public class UcRecordingMedia {
     @JsonProperty("recording_download_url")
     private String recordingDownloadUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -68,10 +74,16 @@ public class UcRecordingMedia {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * two digit ISO code
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
@@ -80,6 +92,9 @@ public class UcRecordingMedia {
         return Optional.ofNullable(this.recordingDownloadUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -97,12 +112,18 @@ public class UcRecordingMedia {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecordingMedia withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * two digit ISO code
+     */
     public UcRecordingMedia withLanguage(@Nullable String language) {
         this.language = language;
         return this;
@@ -115,6 +136,9 @@ public class UcRecordingMedia {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecordingMedia withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -188,11 +212,17 @@ public class UcRecordingMedia {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * two digit ISO code
+         */
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
@@ -203,6 +233,9 @@ public class UcRecordingMedia {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;

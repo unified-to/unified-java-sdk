@@ -22,12 +22,16 @@ public class AssessmentPackageRegion {
     @JsonProperty("cost_amount")
     private Double costAmount;
 
-
+    /**
+     * ISO 4217 format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Processing time in milliseconds
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_time")
     private Double processingTime;
@@ -60,10 +64,16 @@ public class AssessmentPackageRegion {
         return Optional.ofNullable(this.costAmount);
     }
 
+    /**
+     * ISO 4217 format
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Processing time in milliseconds
+     */
     public Optional<Double> processingTime() {
         return Optional.ofNullable(this.processingTime);
     }
@@ -86,12 +96,18 @@ public class AssessmentPackageRegion {
     }
 
 
+    /**
+     * ISO 4217 format
+     */
     public AssessmentPackageRegion withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Processing time in milliseconds
+     */
     public AssessmentPackageRegion withProcessingTime(@Nullable Double processingTime) {
         this.processingTime = processingTime;
         return this;
@@ -159,11 +175,17 @@ public class AssessmentPackageRegion {
             return this;
         }
 
+        /**
+         * ISO 4217 format
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Processing time in milliseconds
+         */
         public Builder processingTime(@Nullable Double processingTime) {
             this.processingTime = processingTime;
             return this;

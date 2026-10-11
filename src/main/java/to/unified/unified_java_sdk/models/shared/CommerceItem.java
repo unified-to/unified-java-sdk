@@ -21,7 +21,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CommerceItem {
-
+    /**
+     * Reference to Accounting Account (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -33,7 +35,9 @@ public class CommerceItem {
     @JsonProperty("collections")
     private List<CommerceReference> collections;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -43,7 +47,9 @@ public class CommerceItem {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * minutes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     private Double duration;
@@ -83,7 +89,9 @@ public class CommerceItem {
     @JsonProperty("is_visible")
     private Boolean isVisible;
 
-
+    /**
+     * (reference to CommerceLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -138,7 +146,9 @@ public class CommerceItem {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * references AccountingTaxrate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
@@ -148,12 +158,16 @@ public class CommerceItem {
     @JsonProperty("total_stock")
     private Double totalStock;
 
-
+    /**
+     * product, service, digital-download,...
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -250,6 +264,9 @@ public class CommerceItem {
             null, null, null);
     }
 
+    /**
+     * Reference to Accounting Account (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -261,6 +278,9 @@ public class CommerceItem {
         return Optional.ofNullable(this.collections);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -269,6 +289,9 @@ public class CommerceItem {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * minutes
+     */
     public Optional<Double> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -301,6 +324,9 @@ public class CommerceItem {
         return Optional.ofNullable(this.isVisible);
     }
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -345,6 +371,9 @@ public class CommerceItem {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * references AccountingTaxrate
+     */
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
     }
@@ -353,10 +382,16 @@ public class CommerceItem {
         return Optional.ofNullable(this.totalStock);
     }
 
+    /**
+     * product, service, digital-download,...
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -378,6 +413,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * Reference to Accounting Account (reference to AccountingAccount)
+     */
     public CommerceItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -393,6 +431,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceItem withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -405,6 +446,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * minutes
+     */
     public CommerceItem withDuration(@Nullable Double duration) {
         this.duration = duration;
         return this;
@@ -453,6 +497,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public CommerceItem withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -519,6 +566,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * references AccountingTaxrate
+     */
     public CommerceItem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
@@ -531,12 +581,18 @@ public class CommerceItem {
     }
 
 
+    /**
+     * product, service, digital-download,...
+     */
     public CommerceItem withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceItem withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -720,6 +776,9 @@ public class CommerceItem {
           // force use of static builder() method
         }
 
+        /**
+         * Reference to Accounting Account (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -733,6 +792,9 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -743,6 +805,9 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * minutes
+         */
         public Builder duration(@Nullable Double duration) {
             this.duration = duration;
             return this;
@@ -783,6 +848,9 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * (reference to CommerceLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -838,6 +906,9 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * references AccountingTaxrate
+         */
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
@@ -848,11 +919,17 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * product, service, digital-download,...
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

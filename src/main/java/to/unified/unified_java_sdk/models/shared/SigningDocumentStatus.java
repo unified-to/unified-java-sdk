@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * SigningDocumentStatus
+ * 
+ * <p>Current status of the signing document
+ */
 public class SigningDocumentStatus {
 
     public static final SigningDocumentStatus DRAFT = new SigningDocumentStatus("DRAFT");

@@ -17,17 +17,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingTaxrateComponent {
-
+    /**
+     * True when this component is charged on top of the other components
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_compound")
     private Boolean isCompound;
 
-
+    /**
+     * Name of the tax component, e.g. GST or PST
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Rate of this component, in %
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     private Double rate;
@@ -46,14 +52,23 @@ public class AccountingTaxrateComponent {
         this(null, null, null);
     }
 
+    /**
+     * True when this component is charged on top of the other components
+     */
     public Optional<Boolean> isCompound() {
         return Optional.ofNullable(this.isCompound);
     }
 
+    /**
+     * Name of the tax component, e.g. GST or PST
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Rate of this component, in %
+     */
     public Optional<Double> rate() {
         return Optional.ofNullable(this.rate);
     }
@@ -63,18 +78,27 @@ public class AccountingTaxrateComponent {
     }
 
 
+    /**
+     * True when this component is charged on top of the other components
+     */
     public AccountingTaxrateComponent withIsCompound(@Nullable Boolean isCompound) {
         this.isCompound = isCompound;
         return this;
     }
 
 
+    /**
+     * Name of the tax component, e.g. GST or PST
+     */
     public AccountingTaxrateComponent withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Rate of this component, in %
+     */
     public AccountingTaxrateComponent withRate(@Nullable Double rate) {
         this.rate = rate;
         return this;
@@ -123,16 +147,25 @@ public class AccountingTaxrateComponent {
           // force use of static builder() method
         }
 
+        /**
+         * True when this component is charged on top of the other components
+         */
         public Builder isCompound(@Nullable Boolean isCompound) {
             this.isCompound = isCompound;
             return this;
         }
 
+        /**
+         * Name of the tax component, e.g. GST or PST
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Rate of this component, in %
+         */
         public Builder rate(@Nullable Double rate) {
             this.rate = rate;
             return this;

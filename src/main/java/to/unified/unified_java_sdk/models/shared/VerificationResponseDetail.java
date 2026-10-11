@@ -31,7 +31,9 @@ public class VerificationResponseDetail {
     @JsonProperty("is_private")
     private Boolean isPrivate;
 
-
+    /**
+     * in reference to the parameter input
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter_id")
     private String parameterId;
@@ -79,6 +81,9 @@ public class VerificationResponseDetail {
         return Optional.ofNullable(this.isPrivate);
     }
 
+    /**
+     * in reference to the parameter input
+     */
     public Optional<String> parameterId() {
         return Optional.ofNullable(this.parameterId);
     }
@@ -114,6 +119,9 @@ public class VerificationResponseDetail {
     }
 
 
+    /**
+     * in reference to the parameter input
+     */
     public VerificationResponseDetail withParameterId(@Nullable String parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -202,6 +210,9 @@ public class VerificationResponseDetail {
             return this;
         }
 
+        /**
+         * in reference to the parameter input
+         */
         public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = parameterId;
             return this;

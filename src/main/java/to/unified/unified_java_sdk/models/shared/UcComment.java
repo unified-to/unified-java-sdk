@@ -27,7 +27,9 @@ public class UcComment {
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
@@ -42,12 +44,16 @@ public class UcComment {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
 
-
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -84,6 +90,9 @@ public class UcComment {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -96,10 +105,16 @@ public class UcComment {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -121,6 +136,9 @@ public class UcComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcComment withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -139,12 +157,18 @@ public class UcComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcComment withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public UcComment withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -221,6 +245,9 @@ public class UcComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -236,11 +263,17 @@ public class UcComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * reference to HrisEmployee (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

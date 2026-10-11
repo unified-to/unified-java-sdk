@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpEventType
+ * 
+ * <p>The unified structural category of the event
+ */
 public class CdpEventType {
 
     public static final CdpEventType TRACK = new CdpEventType("TRACK");

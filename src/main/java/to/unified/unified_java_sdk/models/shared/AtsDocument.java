@@ -28,17 +28,24 @@ public class AtsDocument {
     @JsonProperty("candidate_id")
     private String candidateId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * base64 encoded file contents used for create/update actions. Use this field to send an attachment
+     * e.g. a resume, a profile, or other text content
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_data")
     private String documentData;
 
-
+    /**
+     * This link expires after 1 hour.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_url")
     private String documentUrl;
@@ -68,12 +75,16 @@ public class AtsDocument {
     @JsonProperty("type")
     private AtsDocumentType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -121,14 +132,24 @@ public class AtsDocument {
         return Optional.ofNullable(this.candidateId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * base64 encoded file contents used for create/update actions. Use this field to send an attachment
+     * e.g. a resume, a profile, or other text content
+     */
     public Optional<String> documentData() {
         return Optional.ofNullable(this.documentData);
     }
 
+    /**
+     * This link expires after 1 hour.
+     */
     public Optional<String> documentUrl() {
         return Optional.ofNullable(this.documentUrl);
     }
@@ -153,10 +174,16 @@ public class AtsDocument {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -178,18 +205,28 @@ public class AtsDocument {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsDocument withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * base64 encoded file contents used for create/update actions. Use this field to send an attachment
+     * e.g. a resume, a profile, or other text content
+     */
     public AtsDocument withDocumentData(@Nullable String documentData) {
         this.documentData = documentData;
         return this;
     }
 
 
+    /**
+     * This link expires after 1 hour.
+     */
     public AtsDocument withDocumentUrl(@Nullable String documentUrl) {
         this.documentUrl = documentUrl;
         return this;
@@ -226,12 +263,18 @@ public class AtsDocument {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsDocument withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public AtsDocument withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -329,16 +372,26 @@ public class AtsDocument {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * base64 encoded file contents used for create/update actions. Use this field to send an attachment
+         * e.g. a resume, a profile, or other text content
+         */
         public Builder documentData(@Nullable String documentData) {
             this.documentData = documentData;
             return this;
         }
 
+        /**
+         * This link expires after 1 hour.
+         */
         public Builder documentUrl(@Nullable String documentUrl) {
             this.documentUrl = documentUrl;
             return this;
@@ -369,11 +422,17 @@ public class AtsDocument {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

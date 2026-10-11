@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The business's reply to the review
  */
 public class PropertySocialReviewReply {
-
+    /**
+     * The reply text from the business
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -49,14 +55,23 @@ public class PropertySocialReviewReply {
         this(null, null, null);
     }
 
+    /**
+     * The reply text from the business
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -66,18 +81,27 @@ public class PropertySocialReviewReply {
     }
 
 
+    /**
+     * The reply text from the business
+     */
     public PropertySocialReviewReply withContent(@Nullable String content) {
         this.content = content;
         return this;
     }
 
 
+    /**
+     * When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertySocialReviewReply withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertySocialReviewReply withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -126,16 +150,25 @@ public class PropertySocialReviewReply {
           // force use of static builder() method
         }
 
+        /**
+         * The reply text from the business
+         */
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
+        /**
+         * When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

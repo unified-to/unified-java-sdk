@@ -19,47 +19,65 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SocialInsight {
-
+    /**
+     * When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The day/timestamp of the data point
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     private OffsetDateTime date;
 
-
+    /**
+     * Unique identifier for the insight data point
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The metric being reported
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     private Metric metric;
 
-
+    /**
+     * The aggregation period of the value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     private Period period;
 
-
+    /**
+     * Optional: the post these stats belong to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_id")
     private String postId;
 
-
+    /**
+     * The social profile these stats belong to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_id")
     private String profileId;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The metric value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private Double value;
@@ -92,38 +110,65 @@ public class SocialInsight {
             null, null, null);
     }
 
+    /**
+     * When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The day/timestamp of the data point
+     */
     public Optional<OffsetDateTime> date() {
         return Optional.ofNullable(this.date);
     }
 
+    /**
+     * Unique identifier for the insight data point
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The metric being reported
+     */
     public Optional<Metric> metric() {
         return Optional.ofNullable(this.metric);
     }
 
+    /**
+     * The aggregation period of the value
+     */
     public Optional<Period> period() {
         return Optional.ofNullable(this.period);
     }
 
+    /**
+     * Optional: the post these stats belong to
+     */
     public Optional<String> postId() {
         return Optional.ofNullable(this.postId);
     }
 
+    /**
+     * The social profile these stats belong to
+     */
     public Optional<String> profileId() {
         return Optional.ofNullable(this.profileId);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The metric value
+     */
     public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }
@@ -133,54 +178,81 @@ public class SocialInsight {
     }
 
 
+    /**
+     * When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialInsight withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The day/timestamp of the data point
+     */
     public SocialInsight withDate(@Nullable OffsetDateTime date) {
         this.date = date;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the insight data point
+     */
     public SocialInsight withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The metric being reported
+     */
     public SocialInsight withMetric(@Nullable Metric metric) {
         this.metric = metric;
         return this;
     }
 
 
+    /**
+     * The aggregation period of the value
+     */
     public SocialInsight withPeriod(@Nullable Period period) {
         this.period = period;
         return this;
     }
 
 
+    /**
+     * Optional: the post these stats belong to
+     */
     public SocialInsight withPostId(@Nullable String postId) {
         this.postId = postId;
         return this;
     }
 
 
+    /**
+     * The social profile these stats belong to
+     */
     public SocialInsight withProfileId(@Nullable String profileId) {
         this.profileId = profileId;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public SocialInsight withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The metric value
+     */
     public SocialInsight withValue(@Nullable Double value) {
         this.value = value;
         return this;
@@ -255,46 +327,73 @@ public class SocialInsight {
           // force use of static builder() method
         }
 
+        /**
+         * When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The day/timestamp of the data point
+         */
         public Builder date(@Nullable OffsetDateTime date) {
             this.date = date;
             return this;
         }
 
+        /**
+         * Unique identifier for the insight data point
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The metric being reported
+         */
         public Builder metric(@Nullable Metric metric) {
             this.metric = metric;
             return this;
         }
 
+        /**
+         * The aggregation period of the value
+         */
         public Builder period(@Nullable Period period) {
             this.period = period;
             return this;
         }
 
+        /**
+         * Optional: the post these stats belong to
+         */
         public Builder postId(@Nullable String postId) {
             this.postId = postId;
             return this;
         }
 
+        /**
+         * The social profile these stats belong to
+         */
         public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The metric value
+         */
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;

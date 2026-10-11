@@ -18,7 +18,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class StoragePermission {
-
+    /**
+     * (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -37,7 +39,9 @@ public class StoragePermission {
     @JsonProperty("roles")
     private List<PropertyStoragePermissionRoles> roles;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -63,6 +67,9 @@ public class StoragePermission {
             roles, null);
     }
 
+    /**
+     * (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -79,6 +86,9 @@ public class StoragePermission {
         return this.roles;
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -88,6 +98,9 @@ public class StoragePermission {
     }
 
 
+    /**
+     * (reference to HrisGroup)
+     */
     public StoragePermission withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -112,6 +125,9 @@ public class StoragePermission {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public StoragePermission withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -169,6 +185,9 @@ public class StoragePermission {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -189,6 +208,9 @@ public class StoragePermission {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

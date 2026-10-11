@@ -28,7 +28,9 @@ public class AccountingContact {
     @JsonProperty("associated_contacts")
     private List<AccountingAssociatedContact> associatedContacts;
 
-
+    /**
+     * Outstanding AR/AP balance for this contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance_amount")
     private Double balanceAmount;
@@ -43,7 +45,9 @@ public class AccountingContact {
     @JsonProperty("company_name")
     private String companyName;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -68,7 +72,10 @@ public class AccountingContact {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * contact account numbers such as registration, A membership or identification reference to help to
+     * identify and search customers
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identification")
     private String identification;
@@ -123,7 +130,9 @@ public class AccountingContact {
     @JsonProperty("paymentterm_id")
     private String paymenttermId;
 
-
+    /**
+     * URL for the contact’s portal
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_url")
     private String portalUrl;
@@ -143,7 +152,10 @@ public class AccountingContact {
     @JsonProperty("tax_exemption")
     private TaxExemption taxExemption;
 
-
+    /**
+     * The ID/number of the customer's tax number. This is also known as the ABN (Australia), GST Number
+     * (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
     private String taxNumber;
@@ -153,7 +165,9 @@ public class AccountingContact {
     @JsonProperty("telephones")
     private List<AccountingTelephone> telephones;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -241,6 +255,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.associatedContacts);
     }
 
+    /**
+     * Outstanding AR/AP balance for this contact
+     */
     public Optional<Double> balanceAmount() {
         return Optional.ofNullable(this.balanceAmount);
     }
@@ -253,6 +270,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.companyName);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -273,6 +293,10 @@ public class AccountingContact {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * contact account numbers such as registration, A membership or identification reference to help to
+     * identify and search customers
+     */
     public Optional<String> identification() {
         return Optional.ofNullable(this.identification);
     }
@@ -317,6 +341,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.paymenttermId);
     }
 
+    /**
+     * URL for the contact’s portal
+     */
     public Optional<String> portalUrl() {
         return Optional.ofNullable(this.portalUrl);
     }
@@ -333,6 +360,10 @@ public class AccountingContact {
         return Optional.ofNullable(this.taxExemption);
     }
 
+    /**
+     * The ID/number of the customer's tax number. This is also known as the ABN (Australia), GST Number
+     * (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
+     */
     public Optional<String> taxNumber() {
         return Optional.ofNullable(this.taxNumber);
     }
@@ -341,6 +372,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -360,6 +394,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * Outstanding AR/AP balance for this contact
+     */
     public AccountingContact withBalanceAmount(@Nullable Double balanceAmount) {
         this.balanceAmount = balanceAmount;
         return this;
@@ -378,6 +415,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingContact withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -408,6 +448,10 @@ public class AccountingContact {
     }
 
 
+    /**
+     * contact account numbers such as registration, A membership or identification reference to help to
+     * identify and search customers
+     */
     public AccountingContact withIdentification(@Nullable String identification) {
         this.identification = identification;
         return this;
@@ -474,6 +518,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * URL for the contact’s portal
+     */
     public AccountingContact withPortalUrl(@Nullable String portalUrl) {
         this.portalUrl = portalUrl;
         return this;
@@ -498,6 +545,10 @@ public class AccountingContact {
     }
 
 
+    /**
+     * The ID/number of the customer's tax number. This is also known as the ABN (Australia), GST Number
+     * (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
+     */
     public AccountingContact withTaxNumber(@Nullable String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
@@ -510,6 +561,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingContact withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -678,6 +732,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * Outstanding AR/AP balance for this contact
+         */
         public Builder balanceAmount(@Nullable Double balanceAmount) {
             this.balanceAmount = balanceAmount;
             return this;
@@ -693,6 +750,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -718,6 +778,10 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * contact account numbers such as registration, A membership or identification reference to help to
+         * identify and search customers
+         */
         public Builder identification(@Nullable String identification) {
             this.identification = identification;
             return this;
@@ -773,6 +837,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * URL for the contact’s portal
+         */
         public Builder portalUrl(@Nullable String portalUrl) {
             this.portalUrl = portalUrl;
             return this;
@@ -793,6 +860,10 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * The ID/number of the customer's tax number. This is also known as the ABN (Australia), GST Number
+         * (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
+         */
         public Builder taxNumber(@Nullable String taxNumber) {
             this.taxNumber = taxNumber;
             return this;
@@ -803,6 +874,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

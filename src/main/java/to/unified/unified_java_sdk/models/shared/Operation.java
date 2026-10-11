@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Operation
+ * 
+ * <p>ONLY USED ON UPDATES
+ */
 public class Operation {
 
     public static final Operation ADD = new Operation("add");

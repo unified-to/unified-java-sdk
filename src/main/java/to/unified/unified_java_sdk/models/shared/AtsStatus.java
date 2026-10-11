@@ -27,7 +27,9 @@ public class AtsStatus {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private String jobId;
@@ -76,6 +78,9 @@ public class AtsStatus {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -109,6 +114,9 @@ public class AtsStatus {
     }
 
 
+    /**
+     * The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
+     */
     public AtsStatus withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
@@ -198,6 +206,9 @@ public class AtsStatus {
             return this;
         }
 
+        /**
+         * The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
+         */
         public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;

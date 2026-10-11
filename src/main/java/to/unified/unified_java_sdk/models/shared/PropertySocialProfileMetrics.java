@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Audience metrics for the profile
  */
 public class PropertySocialProfileMetrics {
-
+    /**
+     * Number of followers
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("follower_count")
     private Double followerCount;
 
-
+    /**
+     * Number of accounts this profile follows
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following_count")
     private Double followingCount;
 
-
+    /**
+     * Total number of posts published by this profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_count")
     private Double postCount;
@@ -49,14 +55,23 @@ public class PropertySocialProfileMetrics {
         this(null, null, null);
     }
 
+    /**
+     * Number of followers
+     */
     public Optional<Double> followerCount() {
         return Optional.ofNullable(this.followerCount);
     }
 
+    /**
+     * Number of accounts this profile follows
+     */
     public Optional<Double> followingCount() {
         return Optional.ofNullable(this.followingCount);
     }
 
+    /**
+     * Total number of posts published by this profile
+     */
     public Optional<Double> postCount() {
         return Optional.ofNullable(this.postCount);
     }
@@ -66,18 +81,27 @@ public class PropertySocialProfileMetrics {
     }
 
 
+    /**
+     * Number of followers
+     */
     public PropertySocialProfileMetrics withFollowerCount(@Nullable Double followerCount) {
         this.followerCount = followerCount;
         return this;
     }
 
 
+    /**
+     * Number of accounts this profile follows
+     */
     public PropertySocialProfileMetrics withFollowingCount(@Nullable Double followingCount) {
         this.followingCount = followingCount;
         return this;
     }
 
 
+    /**
+     * Total number of posts published by this profile
+     */
     public PropertySocialProfileMetrics withPostCount(@Nullable Double postCount) {
         this.postCount = postCount;
         return this;
@@ -126,16 +150,25 @@ public class PropertySocialProfileMetrics {
           // force use of static builder() method
         }
 
+        /**
+         * Number of followers
+         */
         public Builder followerCount(@Nullable Double followerCount) {
             this.followerCount = followerCount;
             return this;
         }
 
+        /**
+         * Number of accounts this profile follows
+         */
         public Builder followingCount(@Nullable Double followingCount) {
             this.followingCount = followingCount;
             return this;
         }
 
+        /**
+         * Total number of posts published by this profile
+         */
         public Builder postCount(@Nullable Double postCount) {
             this.postCount = postCount;
             return this;

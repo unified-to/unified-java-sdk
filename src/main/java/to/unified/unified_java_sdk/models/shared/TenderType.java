@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * TenderType
+ * 
+ * <p>normalized tender category; the provider's original label stays in payment_method
+ */
 public class TenderType {
 
     public static final TenderType CARD = new TenderType("CARD");

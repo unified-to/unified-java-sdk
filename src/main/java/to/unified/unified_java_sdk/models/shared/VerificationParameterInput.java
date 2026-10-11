@@ -26,7 +26,9 @@ public class VerificationParameterInput {
     @JsonProperty("inputs")
     private List<String> inputs;
 
-
+    /**
+     * name of parameter
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -53,6 +55,9 @@ public class VerificationParameterInput {
         return Optional.ofNullable(this.inputs);
     }
 
+    /**
+     * name of parameter
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +79,9 @@ public class VerificationParameterInput {
     }
 
 
+    /**
+     * name of parameter
+     */
     public VerificationParameterInput withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -132,6 +140,9 @@ public class VerificationParameterInput {
             return this;
         }
 
+        /**
+         * name of parameter
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

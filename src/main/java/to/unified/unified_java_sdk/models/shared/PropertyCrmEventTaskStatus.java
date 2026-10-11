@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyCrmEventTaskStatus
+ * 
+ * <p>The event task's status
+ */
 public class PropertyCrmEventTaskStatus {
 
     public static final PropertyCrmEventTaskStatus COMPLETED = new PropertyCrmEventTaskStatus("COMPLETED");

@@ -24,10 +24,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 /**
  * Webhook
  * 
- * <p>A webhook is used to POST new/updated information to your server.
+ * <p>A webhook is used to POST new, updated, or deleted records to your server.
  */
 public class Webhook {
-
+    /**
+     * Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook
+     * implementation, so don't use this field to tell whether a webhook is still running.
+     * 
+     * <p>Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health.
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checked_at")
     private OffsetDateTime checkedAt;
@@ -36,7 +42,9 @@ public class Webhook {
     @JsonProperty("connection_id")
     private String connectionId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -66,7 +74,10 @@ public class Webhook {
     @JsonProperty("environment")
     private String environment;
 
-
+    /**
+     * The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where
+     * the integration supports it. Check the integration's Feature Support tab.
+     */
     @JsonProperty("event")
     private WebhookEvent event;
 
@@ -75,12 +86,21 @@ public class Webhook {
     @JsonProperty("fields")
     private String fields;
 
-
+    /**
+     * Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's
+     * Feature Support tab for which filters apply. Filters the integration doesn't support are accepted
+     * but have no effect.
+     * 
+     * <p>Some integrations require a filter; if it's missing, create returns an error naming the integration
+     * and the filter.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     private Map<String, String> filters;
 
-
+    /**
+     * The URL of the webhook
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hook_url")
     private String hookUrl;
@@ -95,7 +115,12 @@ public class Webhook {
     @JsonProperty("integration_type")
     private String integrationType;
 
-
+    /**
+     * Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum
+     * 1 on paid plans, 60 on free.
+     * 
+     * <p>Ignored for native webhooks.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     private Double interval;
@@ -105,7 +130,12 @@ public class Webhook {
     @JsonProperty("is_beta")
     private Boolean isBeta;
 
-
+    /**
+     * Read-only. True while the webhook can operate or recover; a transient failure may still be retrying.
+     * False after retries are exhausted or a non-retryable failure such as broken connection auth.
+     * 
+     * <p>Cannot be reset; recreate the webhook.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_healthy")
     private Boolean isHealthy;
@@ -115,7 +145,9 @@ public class Webhook {
     @JsonProperty("is_paused")
     private Boolean isPaused;
 
-
+    /**
+     * The object to return (eg. CRM "contact")
+     */
     @JsonProperty("object_type")
     private WebhookObjectType objectType;
 
@@ -125,23 +157,34 @@ public class Webhook {
     private Double pageMaxLimit;
 
     /**
-     * An array of the most revent virtual webhook runs
+     * An array of the most recent virtual webhook runs
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     private List<String> runs;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * "native" registers with the integration, which sends events as they happen. "virtual" checks for
+     * changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the
+     * object.
+     * 
+     * <p>Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on
+     * update are ignored without an error. Delete and recreate the webhook to change type.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_type")
     private WebhookType webhookType;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -216,6 +259,13 @@ public class Webhook {
             null, null, null);
     }
 
+    /**
+     * Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook
+     * implementation, so don't use this field to tell whether a webhook is still running.
+     * 
+     * <p>Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health.
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> checkedAt() {
         return Optional.ofNullable(this.checkedAt);
     }
@@ -224,6 +274,9 @@ public class Webhook {
         return this.connectionId;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -248,6 +301,10 @@ public class Webhook {
         return Optional.ofNullable(this.environment);
     }
 
+    /**
+     * The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where
+     * the integration supports it. Check the integration's Feature Support tab.
+     */
     public WebhookEvent event() {
         return this.event;
     }
@@ -256,10 +313,21 @@ public class Webhook {
         return Optional.ofNullable(this.fields);
     }
 
+    /**
+     * Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's
+     * Feature Support tab for which filters apply. Filters the integration doesn't support are accepted
+     * but have no effect.
+     * 
+     * <p>Some integrations require a filter; if it's missing, create returns an error naming the integration
+     * and the filter.
+     */
     public Optional<Map<String, String>> filters() {
         return Optional.ofNullable(this.filters);
     }
 
+    /**
+     * The URL of the webhook
+     */
     public Optional<String> hookUrl() {
         return Optional.ofNullable(this.hookUrl);
     }
@@ -272,6 +340,12 @@ public class Webhook {
         return Optional.ofNullable(this.integrationType);
     }
 
+    /**
+     * Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum
+     * 1 on paid plans, 60 on free.
+     * 
+     * <p>Ignored for native webhooks.
+     */
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -280,6 +354,12 @@ public class Webhook {
         return Optional.ofNullable(this.isBeta);
     }
 
+    /**
+     * Read-only. True while the webhook can operate or recover; a transient failure may still be retrying.
+     * False after retries are exhausted or a non-retryable failure such as broken connection auth.
+     * 
+     * <p>Cannot be reset; recreate the webhook.
+     */
     public Optional<Boolean> isHealthy() {
         return Optional.ofNullable(this.isHealthy);
     }
@@ -288,6 +368,9 @@ public class Webhook {
         return Optional.ofNullable(this.isPaused);
     }
 
+    /**
+     * The object to return (eg. CRM "contact")
+     */
     public WebhookObjectType objectType() {
         return this.objectType;
     }
@@ -297,20 +380,34 @@ public class Webhook {
     }
 
     /**
-     * An array of the most revent virtual webhook runs
+     * An array of the most recent virtual webhook runs
      */
     public Optional<List<String>> runs() {
         return Optional.ofNullable(this.runs);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * "native" registers with the integration, which sends events as they happen. "virtual" checks for
+     * changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the
+     * object.
+     * 
+     * <p>Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on
+     * update are ignored without an error. Delete and recreate the webhook to change type.
+     */
     public Optional<WebhookType> webhookType() {
         return Optional.ofNullable(this.webhookType);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -320,6 +417,13 @@ public class Webhook {
     }
 
 
+    /**
+     * Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook
+     * implementation, so don't use this field to tell whether a webhook is still running.
+     * 
+     * <p>Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health.
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Webhook withCheckedAt(@Nullable OffsetDateTime checkedAt) {
         this.checkedAt = checkedAt;
         return this;
@@ -332,6 +436,9 @@ public class Webhook {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Webhook withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -368,6 +475,10 @@ public class Webhook {
     }
 
 
+    /**
+     * The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where
+     * the integration supports it. Check the integration's Feature Support tab.
+     */
     public Webhook withEvent(@Nonnull WebhookEvent event) {
         this.event = Utils.checkNotNull(event, "event");
         return this;
@@ -380,12 +491,23 @@ public class Webhook {
     }
 
 
+    /**
+     * Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's
+     * Feature Support tab for which filters apply. Filters the integration doesn't support are accepted
+     * but have no effect.
+     * 
+     * <p>Some integrations require a filter; if it's missing, create returns an error naming the integration
+     * and the filter.
+     */
     public Webhook withFilters(@Nullable Map<String, String> filters) {
         this.filters = filters;
         return this;
     }
 
 
+    /**
+     * The URL of the webhook
+     */
     public Webhook withHookUrl(@Nullable String hookUrl) {
         this.hookUrl = hookUrl;
         return this;
@@ -404,6 +526,12 @@ public class Webhook {
     }
 
 
+    /**
+     * Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum
+     * 1 on paid plans, 60 on free.
+     * 
+     * <p>Ignored for native webhooks.
+     */
     public Webhook withInterval(@Nullable Double interval) {
         this.interval = interval;
         return this;
@@ -416,6 +544,12 @@ public class Webhook {
     }
 
 
+    /**
+     * Read-only. True while the webhook can operate or recover; a transient failure may still be retrying.
+     * False after retries are exhausted or a non-retryable failure such as broken connection auth.
+     * 
+     * <p>Cannot be reset; recreate the webhook.
+     */
     public Webhook withIsHealthy(@Nullable Boolean isHealthy) {
         this.isHealthy = isHealthy;
         return this;
@@ -428,6 +562,9 @@ public class Webhook {
     }
 
 
+    /**
+     * The object to return (eg. CRM "contact")
+     */
     public Webhook withObjectType(@Nonnull WebhookObjectType objectType) {
         this.objectType = Utils.checkNotNull(objectType, "objectType");
         return this;
@@ -441,7 +578,7 @@ public class Webhook {
 
 
     /**
-     * An array of the most revent virtual webhook runs
+     * An array of the most recent virtual webhook runs
      */
     public Webhook withRuns(@Nullable List<String> runs) {
         this.runs = runs;
@@ -449,18 +586,32 @@ public class Webhook {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Webhook withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * "native" registers with the integration, which sends events as they happen. "virtual" checks for
+     * changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the
+     * object.
+     * 
+     * <p>Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on
+     * update are ignored without an error. Delete and recreate the webhook to change type.
+     */
     public Webhook withWebhookType(@Nullable WebhookType webhookType) {
         this.webhookType = webhookType;
         return this;
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Webhook withWorkspaceId(@Nullable String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -600,6 +751,13 @@ public class Webhook {
           // force use of static builder() method
         }
 
+        /**
+         * Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook
+         * implementation, so don't use this field to tell whether a webhook is still running.
+         * 
+         * <p>Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health.
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder checkedAt(@Nullable OffsetDateTime checkedAt) {
             this.checkedAt = checkedAt;
             return this;
@@ -610,6 +768,9 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -640,6 +801,10 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where
+         * the integration supports it. Check the integration's Feature Support tab.
+         */
         public Builder event(@Nonnull WebhookEvent event) {
             this.event = Utils.checkNotNull(event, "event");
             return this;
@@ -650,11 +815,22 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's
+         * Feature Support tab for which filters apply. Filters the integration doesn't support are accepted
+         * but have no effect.
+         * 
+         * <p>Some integrations require a filter; if it's missing, create returns an error naming the integration
+         * and the filter.
+         */
         public Builder filters(@Nullable Map<String, String> filters) {
             this.filters = filters;
             return this;
         }
 
+        /**
+         * The URL of the webhook
+         */
         public Builder hookUrl(@Nullable String hookUrl) {
             this.hookUrl = hookUrl;
             return this;
@@ -670,6 +846,12 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum
+         * 1 on paid plans, 60 on free.
+         * 
+         * <p>Ignored for native webhooks.
+         */
         public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
@@ -680,6 +862,12 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * Read-only. True while the webhook can operate or recover; a transient failure may still be retrying.
+         * False after retries are exhausted or a non-retryable failure such as broken connection auth.
+         * 
+         * <p>Cannot be reset; recreate the webhook.
+         */
         public Builder isHealthy(@Nullable Boolean isHealthy) {
             this.isHealthy = isHealthy;
             return this;
@@ -690,6 +878,9 @@ public class Webhook {
             return this;
         }
 
+        /**
+         * The object to return (eg. CRM "contact")
+         */
         public Builder objectType(@Nonnull WebhookObjectType objectType) {
             this.objectType = Utils.checkNotNull(objectType, "objectType");
             return this;
@@ -701,23 +892,37 @@ public class Webhook {
         }
 
         /**
-         * An array of the most revent virtual webhook runs
+         * An array of the most recent virtual webhook runs
          */
         public Builder runs(@Nullable List<String> runs) {
             this.runs = runs;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * "native" registers with the integration, which sends events as they happen. "virtual" checks for
+         * changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the
+         * object.
+         * 
+         * <p>Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on
+         * update are ignored without an error. Delete and recreate the webhook to change type.
+         */
         public Builder webhookType(@Nullable WebhookType webhookType) {
             this.webhookType = webhookType;
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;

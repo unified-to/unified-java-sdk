@@ -16,27 +16,37 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ScimGroupMember {
-
+    /**
+     * url to user
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     private String dollarRef;
 
-
+    /**
+     * user name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     private String display;
 
-
+    /**
+     * ONLY USED ON UPDATES
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     private Operation operation;
 
-
+    /**
+     * NOT STANDARD
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private ScimGroupMemberType type;
 
-
+    /**
+     * ID of user
+     */
     @JsonProperty("value")
     private String value;
 
@@ -61,22 +71,37 @@ public class ScimGroupMember {
             null, value);
     }
 
+    /**
+     * url to user
+     */
     public Optional<String> dollarRef() {
         return Optional.ofNullable(this.dollarRef);
     }
 
+    /**
+     * user name
+     */
     public Optional<String> display() {
         return Optional.ofNullable(this.display);
     }
 
+    /**
+     * ONLY USED ON UPDATES
+     */
     public Optional<Operation> operation() {
         return Optional.ofNullable(this.operation);
     }
 
+    /**
+     * NOT STANDARD
+     */
     public Optional<ScimGroupMemberType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * ID of user
+     */
     public String value() {
         return this.value;
     }
@@ -86,30 +111,45 @@ public class ScimGroupMember {
     }
 
 
+    /**
+     * url to user
+     */
     public ScimGroupMember withDollarRef(@Nullable String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
     }
 
 
+    /**
+     * user name
+     */
     public ScimGroupMember withDisplay(@Nullable String display) {
         this.display = display;
         return this;
     }
 
 
+    /**
+     * ONLY USED ON UPDATES
+     */
     public ScimGroupMember withOperation(@Nullable Operation operation) {
         this.operation = operation;
         return this;
     }
 
 
+    /**
+     * NOT STANDARD
+     */
     public ScimGroupMember withType(@Nullable ScimGroupMemberType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * ID of user
+     */
     public ScimGroupMember withValue(@Nonnull String value) {
         this.value = Utils.checkNotNull(value, "value");
         return this;
@@ -167,26 +207,41 @@ public class ScimGroupMember {
           // force use of static builder() method
         }
 
+        /**
+         * url to user
+         */
         public Builder dollarRef(@Nullable String dollarRef) {
             this.dollarRef = dollarRef;
             return this;
         }
 
+        /**
+         * user name
+         */
         public Builder display(@Nullable String display) {
             this.display = display;
             return this;
         }
 
+        /**
+         * ONLY USED ON UPDATES
+         */
         public Builder operation(@Nullable Operation operation) {
             this.operation = operation;
             return this;
         }
 
+        /**
+         * NOT STANDARD
+         */
         public Builder type(@Nullable ScimGroupMemberType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * ID of user
+         */
         public Builder value(@Nonnull String value) {
             this.value = Utils.checkNotNull(value, "value");
             return this;

@@ -16,57 +16,79 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingPackage {
-
+    /**
+     * ISO 4217 currency code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Description of the package contents
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Height of the package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     private Double height;
 
-
+    /**
+     * Insured value for this package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insured_amount")
     private Double insuredAmount;
 
-
+    /**
+     * Length of the package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     private Double length;
 
-
+    /**
+     * Unit for dimensions (cm, inch)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_unit")
     private ShippingPackageSizeUnit sizeUnit;
 
-
+    /**
+     * Package-level tracking (for multi-package shipments)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     private String trackingNumber;
 
-
+    /**
+     * Declared value of the package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private Double value;
 
-
+    /**
+     * Weight of the package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     private Double weight;
 
-
+    /**
+     * Unit for weight (g, kg, oz, lb)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
     private ShippingPackageWeightUnit weightUnit;
 
-
+    /**
+     * Width of the package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     private Double width;
@@ -104,46 +126,79 @@ public class ShippingPackage {
             null, null);
     }
 
+    /**
+     * ISO 4217 currency code
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Description of the package contents
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Height of the package
+     */
     public Optional<Double> height() {
         return Optional.ofNullable(this.height);
     }
 
+    /**
+     * Insured value for this package
+     */
     public Optional<Double> insuredAmount() {
         return Optional.ofNullable(this.insuredAmount);
     }
 
+    /**
+     * Length of the package
+     */
     public Optional<Double> length() {
         return Optional.ofNullable(this.length);
     }
 
+    /**
+     * Unit for dimensions (cm, inch)
+     */
     public Optional<ShippingPackageSizeUnit> sizeUnit() {
         return Optional.ofNullable(this.sizeUnit);
     }
 
+    /**
+     * Package-level tracking (for multi-package shipments)
+     */
     public Optional<String> trackingNumber() {
         return Optional.ofNullable(this.trackingNumber);
     }
 
+    /**
+     * Declared value of the package
+     */
     public Optional<Double> value() {
         return Optional.ofNullable(this.value);
     }
 
+    /**
+     * Weight of the package
+     */
     public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
 
+    /**
+     * Unit for weight (g, kg, oz, lb)
+     */
     public Optional<ShippingPackageWeightUnit> weightUnit() {
         return Optional.ofNullable(this.weightUnit);
     }
 
+    /**
+     * Width of the package
+     */
     public Optional<Double> width() {
         return Optional.ofNullable(this.width);
     }
@@ -153,66 +208,99 @@ public class ShippingPackage {
     }
 
 
+    /**
+     * ISO 4217 currency code
+     */
     public ShippingPackage withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Description of the package contents
+     */
     public ShippingPackage withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Height of the package
+     */
     public ShippingPackage withHeight(@Nullable Double height) {
         this.height = height;
         return this;
     }
 
 
+    /**
+     * Insured value for this package
+     */
     public ShippingPackage withInsuredAmount(@Nullable Double insuredAmount) {
         this.insuredAmount = insuredAmount;
         return this;
     }
 
 
+    /**
+     * Length of the package
+     */
     public ShippingPackage withLength(@Nullable Double length) {
         this.length = length;
         return this;
     }
 
 
+    /**
+     * Unit for dimensions (cm, inch)
+     */
     public ShippingPackage withSizeUnit(@Nullable ShippingPackageSizeUnit sizeUnit) {
         this.sizeUnit = sizeUnit;
         return this;
     }
 
 
+    /**
+     * Package-level tracking (for multi-package shipments)
+     */
     public ShippingPackage withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
 
+    /**
+     * Declared value of the package
+     */
     public ShippingPackage withValue(@Nullable Double value) {
         this.value = value;
         return this;
     }
 
 
+    /**
+     * Weight of the package
+     */
     public ShippingPackage withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
     }
 
 
+    /**
+     * Unit for weight (g, kg, oz, lb)
+     */
     public ShippingPackage withWeightUnit(@Nullable ShippingPackageWeightUnit weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
 
 
+    /**
+     * Width of the package
+     */
     public ShippingPackage withWidth(@Nullable Double width) {
         this.width = width;
         return this;
@@ -296,56 +384,89 @@ public class ShippingPackage {
           // force use of static builder() method
         }
 
+        /**
+         * ISO 4217 currency code
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Description of the package contents
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Height of the package
+         */
         public Builder height(@Nullable Double height) {
             this.height = height;
             return this;
         }
 
+        /**
+         * Insured value for this package
+         */
         public Builder insuredAmount(@Nullable Double insuredAmount) {
             this.insuredAmount = insuredAmount;
             return this;
         }
 
+        /**
+         * Length of the package
+         */
         public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
 
+        /**
+         * Unit for dimensions (cm, inch)
+         */
         public Builder sizeUnit(@Nullable ShippingPackageSizeUnit sizeUnit) {
             this.sizeUnit = sizeUnit;
             return this;
         }
 
+        /**
+         * Package-level tracking (for multi-package shipments)
+         */
         public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
+        /**
+         * Declared value of the package
+         */
         public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }
 
+        /**
+         * Weight of the package
+         */
         public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }
 
+        /**
+         * Unit for weight (g, kg, oz, lb)
+         */
         public Builder weightUnit(@Nullable ShippingPackageWeightUnit weightUnit) {
             this.weightUnit = weightUnit;
             return this;
         }
 
+        /**
+         * Width of the package
+         */
         public Builder width(@Nullable Double width) {
             this.width = width;
             return this;

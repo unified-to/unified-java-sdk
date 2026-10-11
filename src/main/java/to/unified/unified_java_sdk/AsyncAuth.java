@@ -43,10 +43,11 @@ public class AsyncAuth {
 
 
     /**
-     * Authorize new connection
+     * Authorize or re-authorize a connection
      * 
-     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
-     * a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
      * 
      * @return The async call builder
      */
@@ -55,10 +56,11 @@ public class AsyncAuth {
     }
 
     /**
-     * Authorize new connection
+     * Authorize or re-authorize a connection
      * 
-     * <p>Returns an authorization URL for the specified integration. Once a successful authorization occurs,
-     * a new connection is created.
+     * <p>Returns an authorization URL for the specified integration. After successful authorization, a new
+     * connection is created unless connection_id and reauth_token are provided, in which case the existing
+     * connection is updated in place.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response

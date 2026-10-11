@@ -19,47 +19,65 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpDestination {
-
+    /**
+     * The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * DESTINATION, or BIDIRECTIONAL for import+export connectors
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     private Direction direction;
 
-
+    /**
+     * Unique identifier for this destination object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the destination is active/enabled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     private Boolean isEnabled;
 
-
+    /**
+     * The name of the outbound activation destination
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this destination
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * A stable handle/key for the destination
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The connector/destination type (eg. the provider's connector slug or plugin id)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -92,38 +110,65 @@ public class CdpDestination {
             null, null, null);
     }
 
+    /**
+     * The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * DESTINATION, or BIDIRECTIONAL for import+export connectors
+     */
     public Optional<Direction> direction() {
         return Optional.ofNullable(this.direction);
     }
 
+    /**
+     * Unique identifier for this destination object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the destination is active/enabled
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
 
+    /**
+     * The name of the outbound activation destination
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this destination
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * A stable handle/key for the destination
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The connector/destination type (eg. the provider's connector slug or plugin id)
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -133,54 +178,81 @@ public class CdpDestination {
     }
 
 
+    /**
+     * The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpDestination withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * DESTINATION, or BIDIRECTIONAL for import+export connectors
+     */
     public CdpDestination withDirection(@Nullable Direction direction) {
         this.direction = direction;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this destination object
+     */
     public CdpDestination withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the destination is active/enabled
+     */
     public CdpDestination withIsEnabled(@Nullable Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
 
 
+    /**
+     * The name of the outbound activation destination
+     */
     public CdpDestination withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this destination
+     */
     public CdpDestination withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * A stable handle/key for the destination
+     */
     public CdpDestination withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The connector/destination type (eg. the provider's connector slug or plugin id)
+     */
     public CdpDestination withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpDestination withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -255,46 +327,73 @@ public class CdpDestination {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * DESTINATION, or BIDIRECTIONAL for import+export connectors
+         */
         public Builder direction(@Nullable Direction direction) {
             this.direction = direction;
             return this;
         }
 
+        /**
+         * Unique identifier for this destination object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the destination is active/enabled
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * The name of the outbound activation destination
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this destination
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * A stable handle/key for the destination
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The connector/destination type (eg. the provider's connector slug or plugin id)
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

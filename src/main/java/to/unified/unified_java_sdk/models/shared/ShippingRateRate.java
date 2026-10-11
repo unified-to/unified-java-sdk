@@ -25,7 +25,9 @@ public class ShippingRateRate {
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * Base shipping rate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_amount")
     private Double baseAmount;
@@ -35,12 +37,16 @@ public class ShippingRateRate {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Delivery days (integer)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_days")
     private Double deliveryDays;
 
-
+    /**
+     * Delivery duration terms (e.g., "3-5 business days")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_terms")
     private String deliveryTerms;
@@ -50,52 +56,72 @@ public class ShippingRateRate {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Applied discount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
     private Double discountAmount;
 
-
+    /**
+     * Estimated delivery time in days
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_days")
     private Double estimatedDays;
 
-
+    /**
+     * Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery_end_at")
     private OffsetDateTime estimatedDeliveryEndAt;
 
-
+    /**
+     * Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery_start_at")
     private OffsetDateTime estimatedDeliveryStartAt;
 
-
+    /**
+     * Whether rate is currently available
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * Whether delivery is guaranteed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_guaranteed")
     private Boolean isGuaranteed;
 
-
+    /**
+     * Whether this is a negotiated rate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_negotiated_rate")
     private Boolean isNegotiatedRate;
 
-
+    /**
+     * Whether shipment is trackable
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_trackable")
     private Boolean isTrackable;
 
-
+    /**
+     * Package type (e.g., "package", "envelope", "flat")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_type")
     private String packageType;
 
-
+    /**
+     * Source of rate (e.g., "carrier", "negotiated", "account")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_source")
     private String rateSource;
@@ -116,7 +142,9 @@ public class ShippingRateRate {
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * Transit time in hours
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transit_hours")
     private Double transitHours;
@@ -181,6 +209,9 @@ public class ShippingRateRate {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * Base shipping rate
+     */
     public Optional<Double> baseAmount() {
         return Optional.ofNullable(this.baseAmount);
     }
@@ -189,10 +220,16 @@ public class ShippingRateRate {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Delivery days (integer)
+     */
     public Optional<Double> deliveryDays() {
         return Optional.ofNullable(this.deliveryDays);
     }
 
+    /**
+     * Delivery duration terms (e.g., "3-5 business days")
+     */
     public Optional<String> deliveryTerms() {
         return Optional.ofNullable(this.deliveryTerms);
     }
@@ -201,42 +238,72 @@ public class ShippingRateRate {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Applied discount
+     */
     public Optional<Double> discountAmount() {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    /**
+     * Estimated delivery time in days
+     */
     public Optional<Double> estimatedDays() {
         return Optional.ofNullable(this.estimatedDays);
     }
 
+    /**
+     * Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> estimatedDeliveryEndAt() {
         return Optional.ofNullable(this.estimatedDeliveryEndAt);
     }
 
+    /**
+     * Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> estimatedDeliveryStartAt() {
         return Optional.ofNullable(this.estimatedDeliveryStartAt);
     }
 
+    /**
+     * Whether rate is currently available
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * Whether delivery is guaranteed
+     */
     public Optional<Boolean> isGuaranteed() {
         return Optional.ofNullable(this.isGuaranteed);
     }
 
+    /**
+     * Whether this is a negotiated rate
+     */
     public Optional<Boolean> isNegotiatedRate() {
         return Optional.ofNullable(this.isNegotiatedRate);
     }
 
+    /**
+     * Whether shipment is trackable
+     */
     public Optional<Boolean> isTrackable() {
         return Optional.ofNullable(this.isTrackable);
     }
 
+    /**
+     * Package type (e.g., "package", "envelope", "flat")
+     */
     public Optional<String> packageType() {
         return Optional.ofNullable(this.packageType);
     }
 
+    /**
+     * Source of rate (e.g., "carrier", "negotiated", "account")
+     */
     public Optional<String> rateSource() {
         return Optional.ofNullable(this.rateSource);
     }
@@ -256,6 +323,9 @@ public class ShippingRateRate {
         return this.title;
     }
 
+    /**
+     * Transit time in hours
+     */
     public Optional<Double> transitHours() {
         return Optional.ofNullable(this.transitHours);
     }
@@ -271,6 +341,9 @@ public class ShippingRateRate {
     }
 
 
+    /**
+     * Base shipping rate
+     */
     public ShippingRateRate withBaseAmount(@Nullable Double baseAmount) {
         this.baseAmount = baseAmount;
         return this;
@@ -283,12 +356,18 @@ public class ShippingRateRate {
     }
 
 
+    /**
+     * Delivery days (integer)
+     */
     public ShippingRateRate withDeliveryDays(@Nullable Double deliveryDays) {
         this.deliveryDays = deliveryDays;
         return this;
     }
 
 
+    /**
+     * Delivery duration terms (e.g., "3-5 business days")
+     */
     public ShippingRateRate withDeliveryTerms(@Nullable String deliveryTerms) {
         this.deliveryTerms = deliveryTerms;
         return this;
@@ -301,60 +380,90 @@ public class ShippingRateRate {
     }
 
 
+    /**
+     * Applied discount
+     */
     public ShippingRateRate withDiscountAmount(@Nullable Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
     }
 
 
+    /**
+     * Estimated delivery time in days
+     */
     public ShippingRateRate withEstimatedDays(@Nullable Double estimatedDays) {
         this.estimatedDays = estimatedDays;
         return this;
     }
 
 
+    /**
+     * Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingRateRate withEstimatedDeliveryEndAt(@Nullable OffsetDateTime estimatedDeliveryEndAt) {
         this.estimatedDeliveryEndAt = estimatedDeliveryEndAt;
         return this;
     }
 
 
+    /**
+     * Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingRateRate withEstimatedDeliveryStartAt(@Nullable OffsetDateTime estimatedDeliveryStartAt) {
         this.estimatedDeliveryStartAt = estimatedDeliveryStartAt;
         return this;
     }
 
 
+    /**
+     * Whether rate is currently available
+     */
     public ShippingRateRate withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
 
+    /**
+     * Whether delivery is guaranteed
+     */
     public ShippingRateRate withIsGuaranteed(@Nullable Boolean isGuaranteed) {
         this.isGuaranteed = isGuaranteed;
         return this;
     }
 
 
+    /**
+     * Whether this is a negotiated rate
+     */
     public ShippingRateRate withIsNegotiatedRate(@Nullable Boolean isNegotiatedRate) {
         this.isNegotiatedRate = isNegotiatedRate;
         return this;
     }
 
 
+    /**
+     * Whether shipment is trackable
+     */
     public ShippingRateRate withIsTrackable(@Nullable Boolean isTrackable) {
         this.isTrackable = isTrackable;
         return this;
     }
 
 
+    /**
+     * Package type (e.g., "package", "envelope", "flat")
+     */
     public ShippingRateRate withPackageType(@Nullable String packageType) {
         this.packageType = packageType;
         return this;
     }
 
 
+    /**
+     * Source of rate (e.g., "carrier", "negotiated", "account")
+     */
     public ShippingRateRate withRateSource(@Nullable String rateSource) {
         this.rateSource = rateSource;
         return this;
@@ -382,6 +491,9 @@ public class ShippingRateRate {
     }
 
 
+    /**
+     * Transit time in hours
+     */
     public ShippingRateRate withTransitHours(@Nullable Double transitHours) {
         this.transitHours = transitHours;
         return this;
@@ -509,6 +621,9 @@ public class ShippingRateRate {
             return this;
         }
 
+        /**
+         * Base shipping rate
+         */
         public Builder baseAmount(@Nullable Double baseAmount) {
             this.baseAmount = baseAmount;
             return this;
@@ -519,11 +634,17 @@ public class ShippingRateRate {
             return this;
         }
 
+        /**
+         * Delivery days (integer)
+         */
         public Builder deliveryDays(@Nullable Double deliveryDays) {
             this.deliveryDays = deliveryDays;
             return this;
         }
 
+        /**
+         * Delivery duration terms (e.g., "3-5 business days")
+         */
         public Builder deliveryTerms(@Nullable String deliveryTerms) {
             this.deliveryTerms = deliveryTerms;
             return this;
@@ -534,51 +655,81 @@ public class ShippingRateRate {
             return this;
         }
 
+        /**
+         * Applied discount
+         */
         public Builder discountAmount(@Nullable Double discountAmount) {
             this.discountAmount = discountAmount;
             return this;
         }
 
+        /**
+         * Estimated delivery time in days
+         */
         public Builder estimatedDays(@Nullable Double estimatedDays) {
             this.estimatedDays = estimatedDays;
             return this;
         }
 
+        /**
+         * Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder estimatedDeliveryEndAt(@Nullable OffsetDateTime estimatedDeliveryEndAt) {
             this.estimatedDeliveryEndAt = estimatedDeliveryEndAt;
             return this;
         }
 
+        /**
+         * Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder estimatedDeliveryStartAt(@Nullable OffsetDateTime estimatedDeliveryStartAt) {
             this.estimatedDeliveryStartAt = estimatedDeliveryStartAt;
             return this;
         }
 
+        /**
+         * Whether rate is currently available
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
+        /**
+         * Whether delivery is guaranteed
+         */
         public Builder isGuaranteed(@Nullable Boolean isGuaranteed) {
             this.isGuaranteed = isGuaranteed;
             return this;
         }
 
+        /**
+         * Whether this is a negotiated rate
+         */
         public Builder isNegotiatedRate(@Nullable Boolean isNegotiatedRate) {
             this.isNegotiatedRate = isNegotiatedRate;
             return this;
         }
 
+        /**
+         * Whether shipment is trackable
+         */
         public Builder isTrackable(@Nullable Boolean isTrackable) {
             this.isTrackable = isTrackable;
             return this;
         }
 
+        /**
+         * Package type (e.g., "package", "envelope", "flat")
+         */
         public Builder packageType(@Nullable String packageType) {
             this.packageType = packageType;
             return this;
         }
 
+        /**
+         * Source of rate (e.g., "carrier", "negotiated", "account")
+         */
         public Builder rateSource(@Nullable String rateSource) {
             this.rateSource = rateSource;
             return this;
@@ -602,6 +753,9 @@ public class ShippingRateRate {
             return this;
         }
 
+        /**
+         * Transit time in hours
+         */
         public Builder transitHours(@Nullable Double transitHours) {
             this.transitHours = transitHours;
             return this;

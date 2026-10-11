@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyHrisPayslipDeductionFrequency
+ * 
+ * <p>Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+ */
 public class PropertyHrisPayslipDeductionFrequency {
 
     public static final PropertyHrisPayslipDeductionFrequency ONE_TIME = new PropertyHrisPayslipDeductionFrequency("ONE_TIME");
@@ -27,6 +32,8 @@ public class PropertyHrisPayslipDeductionFrequency {
     public static final PropertyHrisPayslipDeductionFrequency HOUR = new PropertyHrisPayslipDeductionFrequency("HOUR");
     public static final PropertyHrisPayslipDeductionFrequency MONTH = new PropertyHrisPayslipDeductionFrequency("MONTH");
     public static final PropertyHrisPayslipDeductionFrequency WEEK = new PropertyHrisPayslipDeductionFrequency("WEEK");
+    public static final PropertyHrisPayslipDeductionFrequency BIWEEKLY = new PropertyHrisPayslipDeductionFrequency("BIWEEKLY");
+    public static final PropertyHrisPayslipDeductionFrequency SEMIMONTHLY = new PropertyHrisPayslipDeductionFrequency("SEMIMONTHLY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +114,8 @@ public class PropertyHrisPayslipDeductionFrequency {
         map.put("HOUR", HOUR);
         map.put("MONTH", MONTH);
         map.put("WEEK", WEEK);
+        map.put("BIWEEKLY", BIWEEKLY);
+        map.put("SEMIMONTHLY", SEMIMONTHLY);
         return map;
     }
 
@@ -119,6 +128,8 @@ public class PropertyHrisPayslipDeductionFrequency {
         map.put("HOUR", PropertyHrisPayslipDeductionFrequencyEnum.HOUR);
         map.put("MONTH", PropertyHrisPayslipDeductionFrequencyEnum.MONTH);
         map.put("WEEK", PropertyHrisPayslipDeductionFrequencyEnum.WEEK);
+        map.put("BIWEEKLY", PropertyHrisPayslipDeductionFrequencyEnum.BIWEEKLY);
+        map.put("SEMIMONTHLY", PropertyHrisPayslipDeductionFrequencyEnum.SEMIMONTHLY);
         return map;
     }
     
@@ -131,7 +142,9 @@ public class PropertyHrisPayslipDeductionFrequency {
         YEAR("YEAR"),
         HOUR("HOUR"),
         MONTH("MONTH"),
-        WEEK("WEEK"),;
+        WEEK("WEEK"),
+        BIWEEKLY("BIWEEKLY"),
+        SEMIMONTHLY("SEMIMONTHLY"),;
 
         private final String value;
 

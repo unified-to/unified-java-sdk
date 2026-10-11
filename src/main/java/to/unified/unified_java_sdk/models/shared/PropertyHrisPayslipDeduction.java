@@ -24,7 +24,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
  */
 public class PropertyHrisPayslipDeduction {
-
+    /**
+     * percentage or absolute amount (employee's portion)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
@@ -34,30 +36,59 @@ public class PropertyHrisPayslipDeduction {
     @JsonProperty("benefit_id")
     private String benefitId;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_level")
     private PropertyHrisPayslipDeductionCoverageLevel coverageLevel;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
+    /**
+     * percentage or absolute amount (employer's portion/match)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employer_amount")
+    private Double employerAmount;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employer_type")
+    private PropertyHrisPayslipDeductionEmployerType employerType;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     private PropertyHrisPayslipDeductionFrequency frequency;
+
+    /**
+     * set when this deduction is a court-ordered garnishment
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("garnishment_type")
+    private PropertyHrisPayslipDeductionGarnishmentType garnishmentType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -69,17 +100,33 @@ public class PropertyHrisPayslipDeduction {
     @JsonProperty("is_active")
     private Boolean isActive;
 
+    /**
+     * annual maximum employee amount (always money)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("max_amount")
+    private Double maxAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
+
+    /**
+     * the hris_paycode (deduction code) this deduction uses
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paycode_id")
+    private String paycodeId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -89,12 +136,16 @@ public class PropertyHrisPayslipDeduction {
     @JsonProperty("type")
     private PropertyHrisPayslipDeductionType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -106,11 +157,16 @@ public class PropertyHrisPayslipDeduction {
             @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("coverage_level") @Nullable PropertyHrisPayslipDeductionCoverageLevel coverageLevel,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("employer_amount") @Nullable Double employerAmount,
+            @JsonProperty("employer_type") @Nullable PropertyHrisPayslipDeductionEmployerType employerType,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency") @Nullable PropertyHrisPayslipDeductionFrequency frequency,
+            @JsonProperty("garnishment_type") @Nullable PropertyHrisPayslipDeductionGarnishmentType garnishmentType,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("max_amount") @Nullable Double maxAmount,
             @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("paycode_id") @Nullable String paycodeId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("type") @Nullable PropertyHrisPayslipDeductionType type,
@@ -121,11 +177,16 @@ public class PropertyHrisPayslipDeduction {
         this.companyId = companyId;
         this.coverageLevel = coverageLevel;
         this.createdAt = createdAt;
+        this.employerAmount = employerAmount;
+        this.employerType = employerType;
         this.endAt = endAt;
         this.frequency = frequency;
+        this.garnishmentType = garnishmentType;
         this.id = id;
         this.isActive = isActive;
+        this.maxAmount = maxAmount;
         this.notes = notes;
+        this.paycodeId = paycodeId;
         this.raw = raw;
         this.startAt = startAt;
         this.type = type;
@@ -138,9 +199,14 @@ public class PropertyHrisPayslipDeduction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
+    /**
+     * percentage or absolute amount (employee's portion)
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
@@ -149,24 +215,57 @@ public class PropertyHrisPayslipDeduction {
         return Optional.ofNullable(this.benefitId);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
+     */
     public Optional<PropertyHrisPayslipDeductionCoverageLevel> coverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * percentage or absolute amount (employer's portion/match)
+     */
+    public Optional<Double> employerAmount() {
+        return Optional.ofNullable(this.employerAmount);
+    }
+
+    public Optional<PropertyHrisPayslipDeductionEmployerType> employerType() {
+        return Optional.ofNullable(this.employerType);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+     */
     public Optional<PropertyHrisPayslipDeductionFrequency> frequency() {
         return Optional.ofNullable(this.frequency);
+    }
+
+    /**
+     * set when this deduction is a court-ordered garnishment
+     */
+    public Optional<PropertyHrisPayslipDeductionGarnishmentType> garnishmentType() {
+        return Optional.ofNullable(this.garnishmentType);
     }
 
     public Optional<String> id() {
@@ -177,14 +276,31 @@ public class PropertyHrisPayslipDeduction {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * annual maximum employee amount (always money)
+     */
+    public Optional<Double> maxAmount() {
+        return Optional.ofNullable(this.maxAmount);
+    }
+
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
+    }
+
+    /**
+     * the hris_paycode (deduction code) this deduction uses
+     */
+    public Optional<String> paycodeId() {
+        return Optional.ofNullable(this.paycodeId);
     }
 
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -193,10 +309,16 @@ public class PropertyHrisPayslipDeduction {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -206,6 +328,9 @@ public class PropertyHrisPayslipDeduction {
     }
 
 
+    /**
+     * percentage or absolute amount (employee's portion)
+     */
     public PropertyHrisPayslipDeduction withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
@@ -218,32 +343,71 @@ public class PropertyHrisPayslipDeduction {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public PropertyHrisPayslipDeduction withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
+     */
     public PropertyHrisPayslipDeduction withCoverageLevel(@Nullable PropertyHrisPayslipDeductionCoverageLevel coverageLevel) {
         this.coverageLevel = coverageLevel;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyHrisPayslipDeduction withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * percentage or absolute amount (employer's portion/match)
+     */
+    public PropertyHrisPayslipDeduction withEmployerAmount(@Nullable Double employerAmount) {
+        this.employerAmount = employerAmount;
+        return this;
+    }
+
+
+    public PropertyHrisPayslipDeduction withEmployerType(@Nullable PropertyHrisPayslipDeductionEmployerType employerType) {
+        this.employerType = employerType;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyHrisPayslipDeduction withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+     */
     public PropertyHrisPayslipDeduction withFrequency(@Nullable PropertyHrisPayslipDeductionFrequency frequency) {
         this.frequency = frequency;
+        return this;
+    }
+
+
+    /**
+     * set when this deduction is a court-ordered garnishment
+     */
+    public PropertyHrisPayslipDeduction withGarnishmentType(@Nullable PropertyHrisPayslipDeductionGarnishmentType garnishmentType) {
+        this.garnishmentType = garnishmentType;
         return this;
     }
 
@@ -260,8 +424,26 @@ public class PropertyHrisPayslipDeduction {
     }
 
 
+    /**
+     * annual maximum employee amount (always money)
+     */
+    public PropertyHrisPayslipDeduction withMaxAmount(@Nullable Double maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+
+
     public PropertyHrisPayslipDeduction withNotes(@Nullable String notes) {
         this.notes = notes;
+        return this;
+    }
+
+
+    /**
+     * the hris_paycode (deduction code) this deduction uses
+     */
+    public PropertyHrisPayslipDeduction withPaycodeId(@Nullable String paycodeId) {
+        this.paycodeId = paycodeId;
         return this;
     }
 
@@ -272,6 +454,9 @@ public class PropertyHrisPayslipDeduction {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyHrisPayslipDeduction withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -284,12 +469,18 @@ public class PropertyHrisPayslipDeduction {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyHrisPayslipDeduction withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     public PropertyHrisPayslipDeduction withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -311,11 +502,16 @@ public class PropertyHrisPayslipDeduction {
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.coverageLevel, other.coverageLevel) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.employerAmount, other.employerAmount) &&
+            Utils.enhancedDeepEquals(this.employerType, other.employerType) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
+            Utils.enhancedDeepEquals(this.garnishmentType, other.garnishmentType) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.maxAmount, other.maxAmount) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.paycodeId, other.paycodeId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -327,10 +523,12 @@ public class PropertyHrisPayslipDeduction {
     public int hashCode() {
         return Utils.enhancedHash(
             amount, benefitId, companyId,
-            coverageLevel, createdAt, endAt,
-            frequency, id, isActive,
-            notes, raw, startAt,
-            type, updatedAt, userId);
+            coverageLevel, createdAt, employerAmount,
+            employerType, endAt, frequency,
+            garnishmentType, id, isActive,
+            maxAmount, notes, paycodeId,
+            raw, startAt, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -341,11 +539,16 @@ public class PropertyHrisPayslipDeduction {
                 "companyId", companyId,
                 "coverageLevel", coverageLevel,
                 "createdAt", createdAt,
+                "employerAmount", employerAmount,
+                "employerType", employerType,
                 "endAt", endAt,
                 "frequency", frequency,
+                "garnishmentType", garnishmentType,
                 "id", id,
                 "isActive", isActive,
+                "maxAmount", maxAmount,
                 "notes", notes,
+                "paycodeId", paycodeId,
                 "raw", raw,
                 "startAt", startAt,
                 "type", type,
@@ -366,15 +569,25 @@ public class PropertyHrisPayslipDeduction {
 
         private OffsetDateTime createdAt;
 
+        private Double employerAmount;
+
+        private PropertyHrisPayslipDeductionEmployerType employerType;
+
         private OffsetDateTime endAt;
 
         private PropertyHrisPayslipDeductionFrequency frequency;
+
+        private PropertyHrisPayslipDeductionGarnishmentType garnishmentType;
 
         private String id;
 
         private Boolean isActive;
 
+        private Double maxAmount;
+
         private String notes;
+
+        private String paycodeId;
 
         private Map<String, Object> raw;
 
@@ -390,6 +603,9 @@ public class PropertyHrisPayslipDeduction {
           // force use of static builder() method
         }
 
+        /**
+         * percentage or absolute amount (employee's portion)
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
@@ -400,28 +616,64 @@ public class PropertyHrisPayslipDeduction {
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
+         */
         public Builder coverageLevel(@Nullable PropertyHrisPayslipDeductionCoverageLevel coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * percentage or absolute amount (employer's portion/match)
+         */
+        public Builder employerAmount(@Nullable Double employerAmount) {
+            this.employerAmount = employerAmount;
+            return this;
+        }
+
+        public Builder employerType(@Nullable PropertyHrisPayslipDeductionEmployerType employerType) {
+            this.employerType = employerType;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+         */
         public Builder frequency(@Nullable PropertyHrisPayslipDeductionFrequency frequency) {
             this.frequency = frequency;
+            return this;
+        }
+
+        /**
+         * set when this deduction is a court-ordered garnishment
+         */
+        public Builder garnishmentType(@Nullable PropertyHrisPayslipDeductionGarnishmentType garnishmentType) {
+            this.garnishmentType = garnishmentType;
             return this;
         }
 
@@ -435,8 +687,24 @@ public class PropertyHrisPayslipDeduction {
             return this;
         }
 
+        /**
+         * annual maximum employee amount (always money)
+         */
+        public Builder maxAmount(@Nullable Double maxAmount) {
+            this.maxAmount = maxAmount;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
+            return this;
+        }
+
+        /**
+         * the hris_paycode (deduction code) this deduction uses
+         */
+        public Builder paycodeId(@Nullable String paycodeId) {
+            this.paycodeId = paycodeId;
             return this;
         }
 
@@ -445,6 +713,9 @@ public class PropertyHrisPayslipDeduction {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -455,11 +726,17 @@ public class PropertyHrisPayslipDeduction {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * employee ID (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -468,10 +745,12 @@ public class PropertyHrisPayslipDeduction {
         public PropertyHrisPayslipDeduction build() {
             return new PropertyHrisPayslipDeduction(
                 amount, benefitId, companyId,
-                coverageLevel, createdAt, endAt,
-                frequency, id, isActive,
-                notes, raw, startAt,
-                type, updatedAt, userId);
+                coverageLevel, createdAt, employerAmount,
+                employerType, endAt, frequency,
+                garnishmentType, id, isActive,
+                maxAmount, notes, paycodeId,
+                raw, startAt, type,
+                updatedAt, userId);
         }
 
     }

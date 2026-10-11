@@ -80,6 +80,9 @@ public class UnifiedTo {
     private final Expense expense;
 
 
+    private final Expensereport expensereport;
+
+
     private final Invoice invoice;
 
 
@@ -104,10 +107,16 @@ public class UnifiedTo {
     private final Purchaseorder purchaseorder;
 
 
+    private final Purchasereceipt purchasereceipt;
+
+
     private final Quote quote;
 
 
     private final Salesorder salesorder;
+
+
+    private final Salesreceipt salesreceipt;
 
 
     private final Taxrate taxrate;
@@ -332,6 +341,9 @@ public class UnifiedTo {
     private final Prompt prompt;
 
 
+    private final Skill skill;
+
+
     private final Task task;
 
 
@@ -353,7 +365,16 @@ public class UnifiedTo {
     private final Device device;
 
 
+    private final Earning earning;
+
+
     private final Employee employee;
+
+
+    private final Paycode paycode;
+
+
+    private final Payroll payroll;
 
 
     private final Payslip payslip;
@@ -524,6 +545,9 @@ public class UnifiedTo {
     private final Call call;
 
 
+    private final Scorecardtemplate scorecardtemplate;
+
+
     private final Unified unified;
 
 
@@ -554,10 +578,10 @@ public class UnifiedTo {
     private final Notification notification;
 
 
-    private final Webhook webhook;
-
-
     private final Secretsmanager secretsmanager;
+
+
+    private final Webhook webhook;
 
 
     private final Verification verification;
@@ -631,6 +655,11 @@ public class UnifiedTo {
     }
 
 
+    public Expensereport expensereport() {
+        return expensereport;
+    }
+
+
     public Invoice invoice() {
         return invoice;
     }
@@ -671,6 +700,11 @@ public class UnifiedTo {
     }
 
 
+    public Purchasereceipt purchasereceipt() {
+        return purchasereceipt;
+    }
+
+
     public Quote quote() {
         return quote;
     }
@@ -678,6 +712,11 @@ public class UnifiedTo {
 
     public Salesorder salesorder() {
         return salesorder;
+    }
+
+
+    public Salesreceipt salesreceipt() {
+        return salesreceipt;
     }
 
 
@@ -1051,6 +1090,11 @@ public class UnifiedTo {
     }
 
 
+    public Skill skill() {
+        return skill;
+    }
+
+
     public Task task() {
         return task;
     }
@@ -1086,8 +1130,23 @@ public class UnifiedTo {
     }
 
 
+    public Earning earning() {
+        return earning;
+    }
+
+
     public Employee employee() {
         return employee;
+    }
+
+
+    public Paycode paycode() {
+        return paycode;
+    }
+
+
+    public Payroll payroll() {
+        return payroll;
     }
 
 
@@ -1371,6 +1430,11 @@ public class UnifiedTo {
     }
 
 
+    public Scorecardtemplate scorecardtemplate() {
+        return scorecardtemplate;
+    }
+
+
     public Unified unified() {
         return unified;
     }
@@ -1421,13 +1485,13 @@ public class UnifiedTo {
     }
 
 
-    public Webhook webhook() {
-        return webhook;
+    public Secretsmanager secretsmanager() {
+        return secretsmanager;
     }
 
 
-    public Secretsmanager secretsmanager() {
-        return secretsmanager;
+    public Webhook webhook() {
+        return webhook;
     }
 
 
@@ -1590,6 +1654,7 @@ public class UnifiedTo {
         this.contact = new Contact(sdkConfiguration);
         this.creditmemo = new Creditmemo(sdkConfiguration);
         this.expense = new Expense(sdkConfiguration);
+        this.expensereport = new Expensereport(sdkConfiguration);
         this.invoice = new Invoice(sdkConfiguration);
         this.journal = new Journal(sdkConfiguration);
         this.order = new Order(sdkConfiguration);
@@ -1598,8 +1663,10 @@ public class UnifiedTo {
         this.profitloss = new Profitloss(sdkConfiguration);
         this.project = new Project(sdkConfiguration);
         this.purchaseorder = new Purchaseorder(sdkConfiguration);
+        this.purchasereceipt = new Purchasereceipt(sdkConfiguration);
         this.quote = new Quote(sdkConfiguration);
         this.salesorder = new Salesorder(sdkConfiguration);
+        this.salesreceipt = new Salesreceipt(sdkConfiguration);
         this.taxrate = new Taxrate(sdkConfiguration);
         this.transaction = new Transaction(sdkConfiguration);
         this.trialbalance = new Trialbalance(sdkConfiguration);
@@ -1674,6 +1741,7 @@ public class UnifiedTo {
         this.embedding = new Embedding(sdkConfiguration);
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
+        this.skill = new Skill(sdkConfiguration);
         this.task = new Task(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
         this.attendance = new Attendance(sdkConfiguration);
@@ -1681,7 +1749,10 @@ public class UnifiedTo {
         this.benefit = new Benefit(sdkConfiguration);
         this.deduction = new Deduction(sdkConfiguration);
         this.device = new Device(sdkConfiguration);
+        this.earning = new Earning(sdkConfiguration);
         this.employee = new Employee(sdkConfiguration);
+        this.paycode = new Paycode(sdkConfiguration);
+        this.payroll = new Payroll(sdkConfiguration);
         this.payslip = new Payslip(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.timeshift = new Timeshift(sdkConfiguration);
@@ -1738,6 +1809,7 @@ public class UnifiedTo {
         this.ticket = new Ticket(sdkConfiguration);
         this.uc = new Uc(sdkConfiguration);
         this.call = new Call(sdkConfiguration);
+        this.scorecardtemplate = new Scorecardtemplate(sdkConfiguration);
         this.unified = new Unified(sdkConfiguration);
         this.apicall = new Apicall(sdkConfiguration);
         this.connection = new Connection(sdkConfiguration);
@@ -1748,8 +1820,8 @@ public class UnifiedTo {
         this.saml = new Saml(sdkConfiguration);
         this.issue = new Issue(sdkConfiguration);
         this.notification = new Notification(sdkConfiguration);
-        this.webhook = new Webhook(sdkConfiguration);
         this.secretsmanager = new Secretsmanager(sdkConfiguration);
+        this.webhook = new Webhook(sdkConfiguration);
         this.verification = new Verification(sdkConfiguration);
         this.request = new Request(sdkConfiguration);
         this.asyncSDK = new AsyncUnifiedTo(this, sdkConfiguration);

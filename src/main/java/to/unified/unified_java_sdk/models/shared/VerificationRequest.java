@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class VerificationRequest {
-
+    /**
+     * points to ATS Candidate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private String candidateId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -50,7 +54,9 @@ public class VerificationRequest {
     @JsonProperty("profile_addresses")
     private List<VerificationAddress> profileAddresses;
 
-
+    /**
+     * YYYY-MM-DD
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_date_of_birth")
     private String profileDateOfBirth;
@@ -65,7 +71,9 @@ public class VerificationRequest {
     @JsonProperty("profile_gender")
     private VerificationRequestProfileGender profileGender;
 
-
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_ip_address")
     private String profileIpAddress;
@@ -90,7 +98,9 @@ public class VerificationRequest {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_completed_at")
     private OffsetDateTime responseCompletedAt;
@@ -107,22 +117,37 @@ public class VerificationRequest {
     @JsonProperty("response_download_urls")
     private List<String> responseDownloadUrls;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_expires_at")
     private OffsetDateTime responseExpiresAt;
 
-
+    /**
+     * datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_issued_at")
     private OffsetDateTime responseIssuedAt;
 
-
+    /**
+     * Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as
+     * Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user
+     * consent and information.
+     * 
+     * <p>This allows them to properly handle disclosures required by regulations like FCRA. Employment and
+     * Education Verification need users to confirm previous employers and schools.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_redirect_url")
     private String responseRedirectUrl;
 
-
+    /**
+     * Identity verification services provide confidence scores (e.g., 0-100), Credit checks return
+     * specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g.,
+     * 1-999)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_score")
     private Double responseScore;
@@ -132,7 +157,9 @@ public class VerificationRequest {
     @JsonProperty("response_source")
     private String responseSource;
 
-
+    /**
+     * Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
     private VerificationRequestResponseStatus responseStatus;
@@ -142,7 +169,9 @@ public class VerificationRequest {
     @JsonProperty("target_url")
     private String targetUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -213,10 +242,16 @@ public class VerificationRequest {
             null);
     }
 
+    /**
+     * points to ATS Candidate
+     */
     public Optional<String> candidateId() {
         return Optional.ofNullable(this.candidateId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -237,6 +272,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.profileAddresses);
     }
 
+    /**
+     * YYYY-MM-DD
+     */
     public Optional<String> profileDateOfBirth() {
         return Optional.ofNullable(this.profileDateOfBirth);
     }
@@ -249,6 +287,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.profileGender);
     }
 
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     public Optional<String> profileIpAddress() {
         return Optional.ofNullable(this.profileIpAddress);
     }
@@ -269,6 +310,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseCompletedAt() {
         return Optional.ofNullable(this.responseCompletedAt);
     }
@@ -284,18 +328,37 @@ public class VerificationRequest {
         return Optional.ofNullable(this.responseDownloadUrls);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseExpiresAt() {
         return Optional.ofNullable(this.responseExpiresAt);
     }
 
+    /**
+     * datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseIssuedAt() {
         return Optional.ofNullable(this.responseIssuedAt);
     }
 
+    /**
+     * Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as
+     * Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user
+     * consent and information.
+     * 
+     * <p>This allows them to properly handle disclosures required by regulations like FCRA. Employment and
+     * Education Verification need users to confirm previous employers and schools.
+     */
     public Optional<String> responseRedirectUrl() {
         return Optional.ofNullable(this.responseRedirectUrl);
     }
 
+    /**
+     * Identity verification services provide confidence scores (e.g., 0-100), Credit checks return
+     * specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g.,
+     * 1-999)
+     */
     public Optional<Double> responseScore() {
         return Optional.ofNullable(this.responseScore);
     }
@@ -304,6 +367,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.responseSource);
     }
 
+    /**
+     * Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+     */
     public Optional<VerificationRequestResponseStatus> responseStatus() {
         return Optional.ofNullable(this.responseStatus);
     }
@@ -312,6 +378,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.targetUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -321,12 +390,18 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * points to ATS Candidate
+     */
     public VerificationRequest withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationRequest withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -357,6 +432,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * YYYY-MM-DD
+     */
     public VerificationRequest withProfileDateOfBirth(@Nullable String profileDateOfBirth) {
         this.profileDateOfBirth = profileDateOfBirth;
         return this;
@@ -375,6 +453,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     public VerificationRequest withProfileIpAddress(@Nullable String profileIpAddress) {
         this.profileIpAddress = profileIpAddress;
         return this;
@@ -405,6 +486,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationRequest withResponseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
         this.responseCompletedAt = responseCompletedAt;
         return this;
@@ -426,24 +510,43 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationRequest withResponseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
         this.responseExpiresAt = responseExpiresAt;
         return this;
     }
 
 
+    /**
+     * datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationRequest withResponseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
         this.responseIssuedAt = responseIssuedAt;
         return this;
     }
 
 
+    /**
+     * Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as
+     * Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user
+     * consent and information.
+     * 
+     * <p>This allows them to properly handle disclosures required by regulations like FCRA. Employment and
+     * Education Verification need users to confirm previous employers and schools.
+     */
     public VerificationRequest withResponseRedirectUrl(@Nullable String responseRedirectUrl) {
         this.responseRedirectUrl = responseRedirectUrl;
         return this;
     }
 
 
+    /**
+     * Identity verification services provide confidence scores (e.g., 0-100), Credit checks return
+     * specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g.,
+     * 1-999)
+     */
     public VerificationRequest withResponseScore(@Nullable Double responseScore) {
         this.responseScore = responseScore;
         return this;
@@ -456,6 +559,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+     */
     public VerificationRequest withResponseStatus(@Nullable VerificationRequestResponseStatus responseStatus) {
         this.responseStatus = responseStatus;
         return this;
@@ -468,6 +574,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationRequest withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -612,11 +721,17 @@ public class VerificationRequest {
           // force use of static builder() method
         }
 
+        /**
+         * points to ATS Candidate
+         */
         public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -642,6 +757,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * YYYY-MM-DD
+         */
         public Builder profileDateOfBirth(@Nullable String profileDateOfBirth) {
             this.profileDateOfBirth = profileDateOfBirth;
             return this;
@@ -657,6 +775,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * XXX.XXX.XXX.XXX
+         */
         public Builder profileIpAddress(@Nullable String profileIpAddress) {
             this.profileIpAddress = profileIpAddress;
             return this;
@@ -682,6 +803,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
             this.responseCompletedAt = responseCompletedAt;
             return this;
@@ -700,21 +824,40 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
             this.responseExpiresAt = responseExpiresAt;
             return this;
         }
 
+        /**
+         * datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
             this.responseIssuedAt = responseIssuedAt;
             return this;
         }
 
+        /**
+         * Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as
+         * Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user
+         * consent and information.
+         * 
+         * <p>This allows them to properly handle disclosures required by regulations like FCRA. Employment and
+         * Education Verification need users to confirm previous employers and schools.
+         */
         public Builder responseRedirectUrl(@Nullable String responseRedirectUrl) {
             this.responseRedirectUrl = responseRedirectUrl;
             return this;
         }
 
+        /**
+         * Identity verification services provide confidence scores (e.g., 0-100), Credit checks return
+         * specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g.,
+         * 1-999)
+         */
         public Builder responseScore(@Nullable Double responseScore) {
             this.responseScore = responseScore;
             return this;
@@ -725,6 +868,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+         */
         public Builder responseStatus(@Nullable VerificationRequestResponseStatus responseStatus) {
             this.responseStatus = responseStatus;
             return this;
@@ -735,6 +881,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingQuote {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepted_at")
     private OffsetDateTime acceptedAt;
@@ -32,7 +34,9 @@ public class AccountingQuote {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
@@ -44,7 +48,9 @@ public class AccountingQuote {
     @JsonProperty("contacts")
     private List<AccountingTransactionContact> contacts;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -54,17 +60,23 @@ public class AccountingQuote {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * exchange rate to the organization's base currency
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_rate")
     private Double currencyRate;
 
-
+    /**
+     * customer-visible message
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_message")
     private String customerMessage;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declined_at")
     private OffsetDateTime declinedAt;
@@ -74,12 +86,16 @@ public class AccountingQuote {
     @JsonProperty("discount_amount")
     private Double discountAmount;
 
-
+    /**
+     * Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private OffsetDateTime expiresAt;
 
-
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -89,12 +105,17 @@ public class AccountingQuote {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * populated once the quote is converted to an invoice; left null when the source cannot supply it
+     * (reference to AccountingInvoice)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private String invoiceId;
 
-
+    /**
+     * Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issued_at")
     private OffsetDateTime issuedAt;
@@ -104,7 +125,9 @@ public class AccountingQuote {
     @JsonProperty("lineitems")
     private List<AccountingLineitem> lineitems;
 
-
+    /**
+     * internal note, not customer-visible
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     private String memo;
@@ -119,17 +142,23 @@ public class AccountingQuote {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * unified payment terms enum, as on accounting_invoice / accounting_bill
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_terms")
     private AccountingQuotePaymentTerms paymentTerms;
 
-
+    /**
+     * points to an AccountingProject (accounting costing project) (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
 
-
+    /**
+     * External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_number")
     private String quoteNumber;
@@ -139,17 +168,23 @@ public class AccountingQuote {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * customer-side reference / PO number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     private OffsetDateTime sentAt;
 
-
+    /**
+     * where EXPIRED is derived (expires_at &lt; now), the source status is preserved in raw
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingQuoteStatus status;
@@ -159,7 +194,9 @@ public class AccountingQuote {
     @JsonProperty("sub_total_amount")
     private Double subTotalAmount;
 
-
+    /**
+     * longer summary (Xero Summary, max 3000)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
@@ -169,12 +206,16 @@ public class AccountingQuote {
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
-
+    /**
+     * INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_mode")
     private TaxMode taxMode;
 
-
+    /**
+     * short title (Xero Title, max 100)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
@@ -184,12 +225,16 @@ public class AccountingQuote {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * public online-quote link where exposed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -281,6 +326,9 @@ public class AccountingQuote {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> acceptedAt() {
         return Optional.ofNullable(this.acceptedAt);
     }
@@ -292,6 +340,9 @@ public class AccountingQuote {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -303,6 +354,9 @@ public class AccountingQuote {
         return Optional.ofNullable(this.contacts);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -311,14 +365,23 @@ public class AccountingQuote {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * exchange rate to the organization's base currency
+     */
     public Optional<Double> currencyRate() {
         return Optional.ofNullable(this.currencyRate);
     }
 
+    /**
+     * customer-visible message
+     */
     public Optional<String> customerMessage() {
         return Optional.ofNullable(this.customerMessage);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> declinedAt() {
         return Optional.ofNullable(this.declinedAt);
     }
@@ -327,10 +390,16 @@ public class AccountingQuote {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    /**
+     * Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> expiresAt() {
         return Optional.ofNullable(this.expiresAt);
     }
 
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -339,10 +408,17 @@ public class AccountingQuote {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * populated once the quote is converted to an invoice; left null when the source cannot supply it
+     * (reference to AccountingInvoice)
+     */
     public Optional<String> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
     }
 
+    /**
+     * Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> issuedAt() {
         return Optional.ofNullable(this.issuedAt);
     }
@@ -351,6 +427,9 @@ public class AccountingQuote {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * internal note, not customer-visible
+     */
     public Optional<String> memo() {
         return Optional.ofNullable(this.memo);
     }
@@ -363,14 +442,23 @@ public class AccountingQuote {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * unified payment terms enum, as on accounting_invoice / accounting_bill
+     */
     public Optional<AccountingQuotePaymentTerms> paymentTerms() {
         return Optional.ofNullable(this.paymentTerms);
     }
 
+    /**
+     * points to an AccountingProject (accounting costing project) (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
 
+    /**
+     * External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
+     */
     public Optional<String> quoteNumber() {
         return Optional.ofNullable(this.quoteNumber);
     }
@@ -379,14 +467,23 @@ public class AccountingQuote {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * customer-side reference / PO number
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sentAt() {
         return Optional.ofNullable(this.sentAt);
     }
 
+    /**
+     * where EXPIRED is derived (expires_at &lt; now), the source status is preserved in raw
+     */
     public Optional<AccountingQuoteStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -395,6 +492,9 @@ public class AccountingQuote {
         return Optional.ofNullable(this.subTotalAmount);
     }
 
+    /**
+     * longer summary (Xero Summary, max 3000)
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -403,10 +503,16 @@ public class AccountingQuote {
         return Optional.ofNullable(this.taxAmount);
     }
 
+    /**
+     * INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+     */
     public Optional<TaxMode> taxMode() {
         return Optional.ofNullable(this.taxMode);
     }
 
+    /**
+     * short title (Xero Title, max 100)
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -415,10 +521,16 @@ public class AccountingQuote {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * public online-quote link where exposed
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -428,6 +540,9 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withAcceptedAt(@Nullable OffsetDateTime acceptedAt) {
         this.acceptedAt = acceptedAt;
         return this;
@@ -443,6 +558,9 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingQuote withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -458,6 +576,9 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -470,18 +591,27 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * exchange rate to the organization's base currency
+     */
     public AccountingQuote withCurrencyRate(@Nullable Double currencyRate) {
         this.currencyRate = currencyRate;
         return this;
     }
 
 
+    /**
+     * customer-visible message
+     */
     public AccountingQuote withCustomerMessage(@Nullable String customerMessage) {
         this.customerMessage = customerMessage;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withDeclinedAt(@Nullable OffsetDateTime declinedAt) {
         this.declinedAt = declinedAt;
         return this;
@@ -494,12 +624,18 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withExpiresAt(@Nullable OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
 
 
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     public AccountingQuote withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -512,12 +648,19 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * populated once the quote is converted to an invoice; left null when the source cannot supply it
+     * (reference to AccountingInvoice)
+     */
     public AccountingQuote withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
 
 
+    /**
+     * Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withIssuedAt(@Nullable OffsetDateTime issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -530,6 +673,9 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * internal note, not customer-visible
+     */
     public AccountingQuote withMemo(@Nullable String memo) {
         this.memo = memo;
         return this;
@@ -548,18 +694,27 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * unified payment terms enum, as on accounting_invoice / accounting_bill
+     */
     public AccountingQuote withPaymentTerms(@Nullable AccountingQuotePaymentTerms paymentTerms) {
         this.paymentTerms = paymentTerms;
         return this;
     }
 
 
+    /**
+     * points to an AccountingProject (accounting costing project) (reference to TaskProject)
+     */
     public AccountingQuote withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
     }
 
 
+    /**
+     * External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
+     */
     public AccountingQuote withQuoteNumber(@Nullable String quoteNumber) {
         this.quoteNumber = quoteNumber;
         return this;
@@ -572,18 +727,27 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * customer-side reference / PO number
+     */
     public AccountingQuote withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withSentAt(@Nullable OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
 
 
+    /**
+     * where EXPIRED is derived (expires_at &lt; now), the source status is preserved in raw
+     */
     public AccountingQuote withStatus(@Nullable AccountingQuoteStatus status) {
         this.status = status;
         return this;
@@ -596,6 +760,9 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * longer summary (Xero Summary, max 3000)
+     */
     public AccountingQuote withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
@@ -608,12 +775,18 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+     */
     public AccountingQuote withTaxMode(@Nullable TaxMode taxMode) {
         this.taxMode = taxMode;
         return this;
     }
 
 
+    /**
+     * short title (Xero Title, max 100)
+     */
     public AccountingQuote withTitle(@Nullable String title) {
         this.title = title;
         return this;
@@ -626,12 +799,18 @@ public class AccountingQuote {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingQuote withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * public online-quote link where exposed
+     */
     public AccountingQuote withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -815,6 +994,9 @@ public class AccountingQuote {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder acceptedAt(@Nullable OffsetDateTime acceptedAt) {
             this.acceptedAt = acceptedAt;
             return this;
@@ -828,6 +1010,9 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
@@ -841,6 +1026,9 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -851,16 +1039,25 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * exchange rate to the organization's base currency
+         */
         public Builder currencyRate(@Nullable Double currencyRate) {
             this.currencyRate = currencyRate;
             return this;
         }
 
+        /**
+         * customer-visible message
+         */
         public Builder customerMessage(@Nullable String customerMessage) {
             this.customerMessage = customerMessage;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder declinedAt(@Nullable OffsetDateTime declinedAt) {
             this.declinedAt = declinedAt;
             return this;
@@ -871,11 +1068,17 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder expiresAt(@Nullable OffsetDateTime expiresAt) {
             this.expiresAt = expiresAt;
             return this;
         }
 
+        /**
+         * points to a HRIS Group (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -886,11 +1089,18 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * populated once the quote is converted to an invoice; left null when the source cannot supply it
+         * (reference to AccountingInvoice)
+         */
         public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
         }
 
+        /**
+         * Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder issuedAt(@Nullable OffsetDateTime issuedAt) {
             this.issuedAt = issuedAt;
             return this;
@@ -901,6 +1111,9 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * internal note, not customer-visible
+         */
         public Builder memo(@Nullable String memo) {
             this.memo = memo;
             return this;
@@ -916,16 +1129,25 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * unified payment terms enum, as on accounting_invoice / accounting_bill
+         */
         public Builder paymentTerms(@Nullable AccountingQuotePaymentTerms paymentTerms) {
             this.paymentTerms = paymentTerms;
             return this;
         }
 
+        /**
+         * points to an AccountingProject (accounting costing project) (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
+        /**
+         * External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
+         */
         public Builder quoteNumber(@Nullable String quoteNumber) {
             this.quoteNumber = quoteNumber;
             return this;
@@ -936,16 +1158,25 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * customer-side reference / PO number
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sentAt(@Nullable OffsetDateTime sentAt) {
             this.sentAt = sentAt;
             return this;
         }
 
+        /**
+         * where EXPIRED is derived (expires_at &lt; now), the source status is preserved in raw
+         */
         public Builder status(@Nullable AccountingQuoteStatus status) {
             this.status = status;
             return this;
@@ -956,6 +1187,9 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * longer summary (Xero Summary, max 3000)
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
@@ -966,11 +1200,17 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+         */
         public Builder taxMode(@Nullable TaxMode taxMode) {
             this.taxMode = taxMode;
             return this;
         }
 
+        /**
+         * short title (Xero Title, max 100)
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
@@ -981,11 +1221,17 @@ public class AccountingQuote {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * public online-quote link where exposed
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

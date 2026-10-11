@@ -38,6 +38,10 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_CONTACT_WRITE = new PropertyConnectionPermissions("accounting_contact_write");
     public static final PropertyConnectionPermissions ACCOUNTING_EXPENSE_READ = new PropertyConnectionPermissions("accounting_expense_read");
     public static final PropertyConnectionPermissions ACCOUNTING_EXPENSE_WRITE = new PropertyConnectionPermissions("accounting_expense_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_EXPENSEREPORT_READ = new PropertyConnectionPermissions("accounting_expensereport_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_EXPENSEREPORT_WRITE = new PropertyConnectionPermissions("accounting_expensereport_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_PURCHASERECEIPT_READ = new PropertyConnectionPermissions("accounting_purchasereceipt_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_PURCHASERECEIPT_WRITE = new PropertyConnectionPermissions("accounting_purchasereceipt_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TAXRATE_READ = new PropertyConnectionPermissions("accounting_taxrate_read");
     public static final PropertyConnectionPermissions ACCOUNTING_TAXRATE_WRITE = new PropertyConnectionPermissions("accounting_taxrate_write");
     public static final PropertyConnectionPermissions ACCOUNTING_PAYMENTTERM_READ = new PropertyConnectionPermissions("accounting_paymentterm_read");
@@ -49,6 +53,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ACCOUNTING_PURCHASEORDER_WRITE = new PropertyConnectionPermissions("accounting_purchaseorder_write");
     public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_READ = new PropertyConnectionPermissions("accounting_salesorder_read");
     public static final PropertyConnectionPermissions ACCOUNTING_SALESORDER_WRITE = new PropertyConnectionPermissions("accounting_salesorder_write");
+    public static final PropertyConnectionPermissions ACCOUNTING_SALESRECEIPT_READ = new PropertyConnectionPermissions("accounting_salesreceipt_read");
+    public static final PropertyConnectionPermissions ACCOUNTING_SALESRECEIPT_WRITE = new PropertyConnectionPermissions("accounting_salesreceipt_write");
     public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_READ = new PropertyConnectionPermissions("accounting_trialbalance_read");
     public static final PropertyConnectionPermissions ACCOUNTING_TRIALBALANCE_WRITE = new PropertyConnectionPermissions("accounting_trialbalance_write");
     public static final PropertyConnectionPermissions ACCOUNTING_PROFITLOSS_READ = new PropertyConnectionPermissions("accounting_profitloss_read");
@@ -175,12 +181,22 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_DOCUMENT_WRITE = new PropertyConnectionPermissions("hris_document_write");
     public static final PropertyConnectionPermissions HRIS_TAXONOMY_READ = new PropertyConnectionPermissions("hris_taxonomy_read");
     public static final PropertyConnectionPermissions HRIS_TAXONOMY_WRITE = new PropertyConnectionPermissions("hris_taxonomy_write");
+    public static final PropertyConnectionPermissions HRIS_JOB_READ = new PropertyConnectionPermissions("hris_job_read");
+    public static final PropertyConnectionPermissions HRIS_JOB_WRITE = new PropertyConnectionPermissions("hris_job_write");
+    public static final PropertyConnectionPermissions HRIS_PAYROLL_READ = new PropertyConnectionPermissions("hris_payroll_read");
+    public static final PropertyConnectionPermissions HRIS_PAYROLL_WRITE = new PropertyConnectionPermissions("hris_payroll_write");
+    public static final PropertyConnectionPermissions HRIS_PAYCODE_READ = new PropertyConnectionPermissions("hris_paycode_read");
+    public static final PropertyConnectionPermissions HRIS_PAYCODE_WRITE = new PropertyConnectionPermissions("hris_paycode_write");
+    public static final PropertyConnectionPermissions HRIS_EARNING_READ = new PropertyConnectionPermissions("hris_earning_read");
+    public static final PropertyConnectionPermissions HRIS_EARNING_WRITE = new PropertyConnectionPermissions("hris_earning_write");
     public static final PropertyConnectionPermissions UC_CALL_READ = new PropertyConnectionPermissions("uc_call_read");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
     public static final PropertyConnectionPermissions UC_CONTACT_WRITE = new PropertyConnectionPermissions("uc_contact_write");
     public static final PropertyConnectionPermissions UC_COMMENT_READ = new PropertyConnectionPermissions("uc_comment_read");
     public static final PropertyConnectionPermissions UC_COMMENT_WRITE = new PropertyConnectionPermissions("uc_comment_write");
     public static final PropertyConnectionPermissions UC_RECORDING_READ = new PropertyConnectionPermissions("uc_recording_read");
+    public static final PropertyConnectionPermissions UC_SCORECARD_READ = new PropertyConnectionPermissions("uc_scorecard_read");
+    public static final PropertyConnectionPermissions UC_SCORECARDTEMPLATE_READ = new PropertyConnectionPermissions("uc_scorecardtemplate_read");
     public static final PropertyConnectionPermissions STORAGE_FILE_READ = new PropertyConnectionPermissions("storage_file_read");
     public static final PropertyConnectionPermissions STORAGE_FILE_WRITE = new PropertyConnectionPermissions("storage_file_write");
     public static final PropertyConnectionPermissions WEBHOOK = new PropertyConnectionPermissions("webhook");
@@ -195,6 +211,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions GENAI_AGENT_WRITE = new PropertyConnectionPermissions("genai_agent_write");
     public static final PropertyConnectionPermissions GENAI_ORGANIZATION_READ = new PropertyConnectionPermissions("genai_organization_read");
     public static final PropertyConnectionPermissions GENAI_ORGANIZATION_WRITE = new PropertyConnectionPermissions("genai_organization_write");
+    public static final PropertyConnectionPermissions GENAI_SKILL_READ = new PropertyConnectionPermissions("genai_skill_read");
+    public static final PropertyConnectionPermissions GENAI_SKILL_WRITE = new PropertyConnectionPermissions("genai_skill_write");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_READ = new PropertyConnectionPermissions("messaging_message_read");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_WRITE = new PropertyConnectionPermissions("messaging_message_write");
     public static final PropertyConnectionPermissions MESSAGING_CHANNEL_READ = new PropertyConnectionPermissions("messaging_channel_read");
@@ -299,6 +317,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SIGNING_SIGNATORY_READ = new PropertyConnectionPermissions("signing_signatory_read");
     public static final PropertyConnectionPermissions SIGNING_SIGNATORY_WRITE = new PropertyConnectionPermissions("signing_signatory_write");
     public static final PropertyConnectionPermissions SIGNING_TEMPLATE_READ = new PropertyConnectionPermissions("signing_template_read");
+    public static final PropertyConnectionPermissions SIGNING_TEMPLATE_WRITE = new PropertyConnectionPermissions("signing_template_write");
     public static final PropertyConnectionPermissions CLUBS_GROUP_READ = new PropertyConnectionPermissions("clubs_group_read");
     public static final PropertyConnectionPermissions CLUBS_GROUP_WRITE = new PropertyConnectionPermissions("clubs_group_write");
     public static final PropertyConnectionPermissions CLUBS_MEMBER_READ = new PropertyConnectionPermissions("clubs_member_read");
@@ -435,6 +454,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_contact_write", ACCOUNTING_CONTACT_WRITE);
         map.put("accounting_expense_read", ACCOUNTING_EXPENSE_READ);
         map.put("accounting_expense_write", ACCOUNTING_EXPENSE_WRITE);
+        map.put("accounting_expensereport_read", ACCOUNTING_EXPENSEREPORT_READ);
+        map.put("accounting_expensereport_write", ACCOUNTING_EXPENSEREPORT_WRITE);
+        map.put("accounting_purchasereceipt_read", ACCOUNTING_PURCHASERECEIPT_READ);
+        map.put("accounting_purchasereceipt_write", ACCOUNTING_PURCHASERECEIPT_WRITE);
         map.put("accounting_taxrate_read", ACCOUNTING_TAXRATE_READ);
         map.put("accounting_taxrate_write", ACCOUNTING_TAXRATE_WRITE);
         map.put("accounting_paymentterm_read", ACCOUNTING_PAYMENTTERM_READ);
@@ -446,6 +469,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_purchaseorder_write", ACCOUNTING_PURCHASEORDER_WRITE);
         map.put("accounting_salesorder_read", ACCOUNTING_SALESORDER_READ);
         map.put("accounting_salesorder_write", ACCOUNTING_SALESORDER_WRITE);
+        map.put("accounting_salesreceipt_read", ACCOUNTING_SALESRECEIPT_READ);
+        map.put("accounting_salesreceipt_write", ACCOUNTING_SALESRECEIPT_WRITE);
         map.put("accounting_trialbalance_read", ACCOUNTING_TRIALBALANCE_READ);
         map.put("accounting_trialbalance_write", ACCOUNTING_TRIALBALANCE_WRITE);
         map.put("accounting_profitloss_read", ACCOUNTING_PROFITLOSS_READ);
@@ -572,12 +597,22 @@ public class PropertyConnectionPermissions {
         map.put("hris_document_write", HRIS_DOCUMENT_WRITE);
         map.put("hris_taxonomy_read", HRIS_TAXONOMY_READ);
         map.put("hris_taxonomy_write", HRIS_TAXONOMY_WRITE);
+        map.put("hris_job_read", HRIS_JOB_READ);
+        map.put("hris_job_write", HRIS_JOB_WRITE);
+        map.put("hris_payroll_read", HRIS_PAYROLL_READ);
+        map.put("hris_payroll_write", HRIS_PAYROLL_WRITE);
+        map.put("hris_paycode_read", HRIS_PAYCODE_READ);
+        map.put("hris_paycode_write", HRIS_PAYCODE_WRITE);
+        map.put("hris_earning_read", HRIS_EARNING_READ);
+        map.put("hris_earning_write", HRIS_EARNING_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
         map.put("uc_contact_read", UC_CONTACT_READ);
         map.put("uc_contact_write", UC_CONTACT_WRITE);
         map.put("uc_comment_read", UC_COMMENT_READ);
         map.put("uc_comment_write", UC_COMMENT_WRITE);
         map.put("uc_recording_read", UC_RECORDING_READ);
+        map.put("uc_scorecard_read", UC_SCORECARD_READ);
+        map.put("uc_scorecardtemplate_read", UC_SCORECARDTEMPLATE_READ);
         map.put("storage_file_read", STORAGE_FILE_READ);
         map.put("storage_file_write", STORAGE_FILE_WRITE);
         map.put("webhook", WEBHOOK);
@@ -592,6 +627,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_agent_write", GENAI_AGENT_WRITE);
         map.put("genai_organization_read", GENAI_ORGANIZATION_READ);
         map.put("genai_organization_write", GENAI_ORGANIZATION_WRITE);
+        map.put("genai_skill_read", GENAI_SKILL_READ);
+        map.put("genai_skill_write", GENAI_SKILL_WRITE);
         map.put("messaging_message_read", MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", MESSAGING_CHANNEL_READ);
@@ -696,6 +733,7 @@ public class PropertyConnectionPermissions {
         map.put("signing_signatory_read", SIGNING_SIGNATORY_READ);
         map.put("signing_signatory_write", SIGNING_SIGNATORY_WRITE);
         map.put("signing_template_read", SIGNING_TEMPLATE_READ);
+        map.put("signing_template_write", SIGNING_TEMPLATE_WRITE);
         map.put("clubs_group_read", CLUBS_GROUP_READ);
         map.put("clubs_group_write", CLUBS_GROUP_WRITE);
         map.put("clubs_member_read", CLUBS_MEMBER_READ);
@@ -764,6 +802,10 @@ public class PropertyConnectionPermissions {
         map.put("accounting_contact_write", PropertyConnectionPermissionsEnum.ACCOUNTING_CONTACT_WRITE);
         map.put("accounting_expense_read", PropertyConnectionPermissionsEnum.ACCOUNTING_EXPENSE_READ);
         map.put("accounting_expense_write", PropertyConnectionPermissionsEnum.ACCOUNTING_EXPENSE_WRITE);
+        map.put("accounting_expensereport_read", PropertyConnectionPermissionsEnum.ACCOUNTING_EXPENSEREPORT_READ);
+        map.put("accounting_expensereport_write", PropertyConnectionPermissionsEnum.ACCOUNTING_EXPENSEREPORT_WRITE);
+        map.put("accounting_purchasereceipt_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASERECEIPT_READ);
+        map.put("accounting_purchasereceipt_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASERECEIPT_WRITE);
         map.put("accounting_taxrate_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TAXRATE_READ);
         map.put("accounting_taxrate_write", PropertyConnectionPermissionsEnum.ACCOUNTING_TAXRATE_WRITE);
         map.put("accounting_paymentterm_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PAYMENTTERM_READ);
@@ -775,6 +817,8 @@ public class PropertyConnectionPermissions {
         map.put("accounting_purchaseorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_PURCHASEORDER_WRITE);
         map.put("accounting_salesorder_read", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_READ);
         map.put("accounting_salesorder_write", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESORDER_WRITE);
+        map.put("accounting_salesreceipt_read", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESRECEIPT_READ);
+        map.put("accounting_salesreceipt_write", PropertyConnectionPermissionsEnum.ACCOUNTING_SALESRECEIPT_WRITE);
         map.put("accounting_trialbalance_read", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_READ);
         map.put("accounting_trialbalance_write", PropertyConnectionPermissionsEnum.ACCOUNTING_TRIALBALANCE_WRITE);
         map.put("accounting_profitloss_read", PropertyConnectionPermissionsEnum.ACCOUNTING_PROFITLOSS_READ);
@@ -901,12 +945,22 @@ public class PropertyConnectionPermissions {
         map.put("hris_document_write", PropertyConnectionPermissionsEnum.HRIS_DOCUMENT_WRITE);
         map.put("hris_taxonomy_read", PropertyConnectionPermissionsEnum.HRIS_TAXONOMY_READ);
         map.put("hris_taxonomy_write", PropertyConnectionPermissionsEnum.HRIS_TAXONOMY_WRITE);
+        map.put("hris_job_read", PropertyConnectionPermissionsEnum.HRIS_JOB_READ);
+        map.put("hris_job_write", PropertyConnectionPermissionsEnum.HRIS_JOB_WRITE);
+        map.put("hris_payroll_read", PropertyConnectionPermissionsEnum.HRIS_PAYROLL_READ);
+        map.put("hris_payroll_write", PropertyConnectionPermissionsEnum.HRIS_PAYROLL_WRITE);
+        map.put("hris_paycode_read", PropertyConnectionPermissionsEnum.HRIS_PAYCODE_READ);
+        map.put("hris_paycode_write", PropertyConnectionPermissionsEnum.HRIS_PAYCODE_WRITE);
+        map.put("hris_earning_read", PropertyConnectionPermissionsEnum.HRIS_EARNING_READ);
+        map.put("hris_earning_write", PropertyConnectionPermissionsEnum.HRIS_EARNING_WRITE);
         map.put("uc_call_read", PropertyConnectionPermissionsEnum.UC_CALL_READ);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
         map.put("uc_contact_write", PropertyConnectionPermissionsEnum.UC_CONTACT_WRITE);
         map.put("uc_comment_read", PropertyConnectionPermissionsEnum.UC_COMMENT_READ);
         map.put("uc_comment_write", PropertyConnectionPermissionsEnum.UC_COMMENT_WRITE);
         map.put("uc_recording_read", PropertyConnectionPermissionsEnum.UC_RECORDING_READ);
+        map.put("uc_scorecard_read", PropertyConnectionPermissionsEnum.UC_SCORECARD_READ);
+        map.put("uc_scorecardtemplate_read", PropertyConnectionPermissionsEnum.UC_SCORECARDTEMPLATE_READ);
         map.put("storage_file_read", PropertyConnectionPermissionsEnum.STORAGE_FILE_READ);
         map.put("storage_file_write", PropertyConnectionPermissionsEnum.STORAGE_FILE_WRITE);
         map.put("webhook", PropertyConnectionPermissionsEnum.WEBHOOK);
@@ -921,6 +975,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_agent_write", PropertyConnectionPermissionsEnum.GENAI_AGENT_WRITE);
         map.put("genai_organization_read", PropertyConnectionPermissionsEnum.GENAI_ORGANIZATION_READ);
         map.put("genai_organization_write", PropertyConnectionPermissionsEnum.GENAI_ORGANIZATION_WRITE);
+        map.put("genai_skill_read", PropertyConnectionPermissionsEnum.GENAI_SKILL_READ);
+        map.put("genai_skill_write", PropertyConnectionPermissionsEnum.GENAI_SKILL_WRITE);
         map.put("messaging_message_read", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", PropertyConnectionPermissionsEnum.MESSAGING_CHANNEL_READ);
@@ -1025,6 +1081,7 @@ public class PropertyConnectionPermissions {
         map.put("signing_signatory_read", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_READ);
         map.put("signing_signatory_write", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_WRITE);
         map.put("signing_template_read", PropertyConnectionPermissionsEnum.SIGNING_TEMPLATE_READ);
+        map.put("signing_template_write", PropertyConnectionPermissionsEnum.SIGNING_TEMPLATE_WRITE);
         map.put("clubs_group_read", PropertyConnectionPermissionsEnum.CLUBS_GROUP_READ);
         map.put("clubs_group_write", PropertyConnectionPermissionsEnum.CLUBS_GROUP_WRITE);
         map.put("clubs_member_read", PropertyConnectionPermissionsEnum.CLUBS_MEMBER_READ);
@@ -1094,6 +1151,10 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_CONTACT_WRITE("accounting_contact_write"),
         ACCOUNTING_EXPENSE_READ("accounting_expense_read"),
         ACCOUNTING_EXPENSE_WRITE("accounting_expense_write"),
+        ACCOUNTING_EXPENSEREPORT_READ("accounting_expensereport_read"),
+        ACCOUNTING_EXPENSEREPORT_WRITE("accounting_expensereport_write"),
+        ACCOUNTING_PURCHASERECEIPT_READ("accounting_purchasereceipt_read"),
+        ACCOUNTING_PURCHASERECEIPT_WRITE("accounting_purchasereceipt_write"),
         ACCOUNTING_TAXRATE_READ("accounting_taxrate_read"),
         ACCOUNTING_TAXRATE_WRITE("accounting_taxrate_write"),
         ACCOUNTING_PAYMENTTERM_READ("accounting_paymentterm_read"),
@@ -1105,6 +1166,8 @@ public class PropertyConnectionPermissions {
         ACCOUNTING_PURCHASEORDER_WRITE("accounting_purchaseorder_write"),
         ACCOUNTING_SALESORDER_READ("accounting_salesorder_read"),
         ACCOUNTING_SALESORDER_WRITE("accounting_salesorder_write"),
+        ACCOUNTING_SALESRECEIPT_READ("accounting_salesreceipt_read"),
+        ACCOUNTING_SALESRECEIPT_WRITE("accounting_salesreceipt_write"),
         ACCOUNTING_TRIALBALANCE_READ("accounting_trialbalance_read"),
         ACCOUNTING_TRIALBALANCE_WRITE("accounting_trialbalance_write"),
         ACCOUNTING_PROFITLOSS_READ("accounting_profitloss_read"),
@@ -1231,12 +1294,22 @@ public class PropertyConnectionPermissions {
         HRIS_DOCUMENT_WRITE("hris_document_write"),
         HRIS_TAXONOMY_READ("hris_taxonomy_read"),
         HRIS_TAXONOMY_WRITE("hris_taxonomy_write"),
+        HRIS_JOB_READ("hris_job_read"),
+        HRIS_JOB_WRITE("hris_job_write"),
+        HRIS_PAYROLL_READ("hris_payroll_read"),
+        HRIS_PAYROLL_WRITE("hris_payroll_write"),
+        HRIS_PAYCODE_READ("hris_paycode_read"),
+        HRIS_PAYCODE_WRITE("hris_paycode_write"),
+        HRIS_EARNING_READ("hris_earning_read"),
+        HRIS_EARNING_WRITE("hris_earning_write"),
         UC_CALL_READ("uc_call_read"),
         UC_CONTACT_READ("uc_contact_read"),
         UC_CONTACT_WRITE("uc_contact_write"),
         UC_COMMENT_READ("uc_comment_read"),
         UC_COMMENT_WRITE("uc_comment_write"),
         UC_RECORDING_READ("uc_recording_read"),
+        UC_SCORECARD_READ("uc_scorecard_read"),
+        UC_SCORECARDTEMPLATE_READ("uc_scorecardtemplate_read"),
         STORAGE_FILE_READ("storage_file_read"),
         STORAGE_FILE_WRITE("storage_file_write"),
         WEBHOOK("webhook"),
@@ -1251,6 +1324,8 @@ public class PropertyConnectionPermissions {
         GENAI_AGENT_WRITE("genai_agent_write"),
         GENAI_ORGANIZATION_READ("genai_organization_read"),
         GENAI_ORGANIZATION_WRITE("genai_organization_write"),
+        GENAI_SKILL_READ("genai_skill_read"),
+        GENAI_SKILL_WRITE("genai_skill_write"),
         MESSAGING_MESSAGE_READ("messaging_message_read"),
         MESSAGING_MESSAGE_WRITE("messaging_message_write"),
         MESSAGING_CHANNEL_READ("messaging_channel_read"),
@@ -1355,6 +1430,7 @@ public class PropertyConnectionPermissions {
         SIGNING_SIGNATORY_READ("signing_signatory_read"),
         SIGNING_SIGNATORY_WRITE("signing_signatory_write"),
         SIGNING_TEMPLATE_READ("signing_template_read"),
+        SIGNING_TEMPLATE_WRITE("signing_template_write"),
         CLUBS_GROUP_READ("clubs_group_read"),
         CLUBS_GROUP_WRITE("clubs_group_write"),
         CLUBS_MEMBER_READ("clubs_member_read"),

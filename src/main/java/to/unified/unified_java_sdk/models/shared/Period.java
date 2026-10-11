@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Period
+ * 
+ * <p>The aggregation period of the value
+ */
 public class Period {
 
     public static final Period DAY = new Period("DAY");

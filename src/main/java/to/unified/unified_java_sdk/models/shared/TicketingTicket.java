@@ -26,17 +26,23 @@ public class TicketingTicket {
     @JsonProperty("attachment_ids")
     private List<String> attachmentIds;
 
-
+    /**
+     * (reference to AccountingCategory)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     private String categoryId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -46,12 +52,16 @@ public class TicketingTicket {
     @JsonProperty("customer_id")
     private String customerId;
 
-
+    /**
+     * Full description of ticket issue
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
@@ -71,12 +81,16 @@ public class TicketingTicket {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Channel where ticket was originally submitted
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
 
-
+    /**
+     * Reference to source-specific object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_ref")
     private String sourceRef;
@@ -86,7 +100,9 @@ public class TicketingTicket {
     @JsonProperty("status")
     private TicketingTicketStatus status;
 
-
+    /**
+     * short description of the ticket
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private String subject;
@@ -96,7 +112,9 @@ public class TicketingTicket {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -106,7 +124,9 @@ public class TicketingTicket {
     @JsonProperty("url")
     private String url;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -167,14 +187,23 @@ public class TicketingTicket {
         return Optional.ofNullable(this.attachmentIds);
     }
 
+    /**
+     * (reference to AccountingCategory)
+     */
     public Optional<String> categoryId() {
         return Optional.ofNullable(this.categoryId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -183,10 +212,16 @@ public class TicketingTicket {
         return Optional.ofNullable(this.customerId);
     }
 
+    /**
+     * Full description of ticket issue
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
@@ -203,10 +238,16 @@ public class TicketingTicket {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Channel where ticket was originally submitted
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 
+    /**
+     * Reference to source-specific object
+     */
     public Optional<String> sourceRef() {
         return Optional.ofNullable(this.sourceRef);
     }
@@ -215,6 +256,9 @@ public class TicketingTicket {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * short description of the ticket
+     */
     public Optional<String> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -223,6 +267,9 @@ public class TicketingTicket {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -231,6 +278,9 @@ public class TicketingTicket {
         return Optional.ofNullable(this.url);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -249,18 +299,27 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * (reference to AccountingCategory)
+     */
     public TicketingTicket withCategoryId(@Nullable String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TicketingTicket withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TicketingTicket withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -273,12 +332,18 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * Full description of ticket issue
+     */
     public TicketingTicket withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TicketingTicket withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -303,12 +368,18 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * Channel where ticket was originally submitted
+     */
     public TicketingTicket withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
 
+    /**
+     * Reference to source-specific object
+     */
     public TicketingTicket withSourceRef(@Nullable String sourceRef) {
         this.sourceRef = sourceRef;
         return this;
@@ -321,6 +392,9 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * short description of the ticket
+     */
     public TicketingTicket withSubject(@Nullable String subject) {
         this.subject = subject;
         return this;
@@ -333,6 +407,9 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TicketingTicket withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -345,6 +422,9 @@ public class TicketingTicket {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public TicketingTicket withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -466,16 +546,25 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * (reference to AccountingCategory)
+         */
         public Builder categoryId(@Nullable String categoryId) {
             this.categoryId = categoryId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -486,11 +575,17 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * Full description of ticket issue
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
@@ -511,11 +606,17 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * Channel where ticket was originally submitted
+         */
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
+        /**
+         * Reference to source-specific object
+         */
         public Builder sourceRef(@Nullable String sourceRef) {
             this.sourceRef = sourceRef;
             return this;
@@ -526,6 +627,9 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * short description of the ticket
+         */
         public Builder subject(@Nullable String subject) {
             this.subject = subject;
             return this;
@@ -536,6 +640,9 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -546,6 +653,9 @@ public class TicketingTicket {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

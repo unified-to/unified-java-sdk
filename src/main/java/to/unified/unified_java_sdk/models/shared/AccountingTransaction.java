@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingTransaction {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -35,7 +37,9 @@ public class AccountingTransaction {
     @JsonProperty("contacts")
     private List<AccountingTransactionContact> contacts;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -50,7 +54,9 @@ public class AccountingTransaction {
     @JsonProperty("customer_message")
     private String customerMessage;
 
-
+    /**
+     * Exchange rate to the base/home currency at the transaction date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
@@ -85,7 +91,9 @@ public class AccountingTransaction {
     @JsonProperty("payment_terms")
     private String paymentTerms;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -105,7 +113,9 @@ public class AccountingTransaction {
     @JsonProperty("split_account_id")
     private String splitAccountId;
 
-
+    /**
+     * Posting state of the transaction
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingTransactionStatus status;
@@ -115,27 +125,42 @@ public class AccountingTransaction {
     @JsonProperty("sub_total_amount")
     private Double subTotalAmount;
 
-
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
-
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_at")
     private OffsetDateTime transactionAt;
 
-
+    /**
+     * eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit,
+     * VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit,
+     * BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt,
+     * CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment,
+     * GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service
+     * Tax Defer, Service Tax Partial Utilisation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -203,6 +228,9 @@ public class AccountingTransaction {
             null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -215,6 +243,9 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.contacts);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -227,6 +258,9 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.customerMessage);
     }
 
+    /**
+     * Exchange rate to the base/home currency at the transaction date
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
@@ -255,6 +289,9 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.paymentTerms);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -271,6 +308,9 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.splitAccountId);
     }
 
+    /**
+     * Posting state of the transaction
+     */
     public Optional<AccountingTransactionStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -279,22 +319,42 @@ public class AccountingTransaction {
         return Optional.ofNullable(this.subTotalAmount);
     }
 
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     public Optional<Double> taxAmount() {
         return Optional.ofNullable(this.taxAmount);
     }
 
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> transactionAt() {
         return Optional.ofNullable(this.transactionAt);
     }
 
+    /**
+     * eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit,
+     * VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit,
+     * BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt,
+     * CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment,
+     * GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service
+     * Tax Defer, Service Tax Partial Utilisation
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -304,6 +364,9 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingTransaction withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -322,6 +385,9 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingTransaction withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -340,6 +406,9 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * Exchange rate to the base/home currency at the transaction date
+     */
     public AccountingTransaction withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -382,6 +451,9 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public AccountingTransaction withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -406,6 +478,9 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * Posting state of the transaction
+     */
     public AccountingTransaction withStatus(@Nullable AccountingTransactionStatus status) {
         this.status = status;
         return this;
@@ -418,30 +493,50 @@ public class AccountingTransaction {
     }
 
 
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     public AccountingTransaction withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
 
+    /**
+     * negative for CREDIT, positive for DEBIT
+     */
     public AccountingTransaction withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingTransaction withTransactionAt(@Nullable OffsetDateTime transactionAt) {
         this.transactionAt = transactionAt;
         return this;
     }
 
 
+    /**
+     * eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit,
+     * VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit,
+     * BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt,
+     * CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment,
+     * GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service
+     * Tax Defer, Service Tax Partial Utilisation
+     */
     public AccountingTransaction withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingTransaction withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -581,6 +676,9 @@ public class AccountingTransaction {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -596,6 +694,9 @@ public class AccountingTransaction {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -611,6 +712,9 @@ public class AccountingTransaction {
             return this;
         }
 
+        /**
+         * Exchange rate to the base/home currency at the transaction date
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
@@ -646,6 +750,9 @@ public class AccountingTransaction {
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -666,6 +773,9 @@ public class AccountingTransaction {
             return this;
         }
 
+        /**
+         * Posting state of the transaction
+         */
         public Builder status(@Nullable AccountingTransactionStatus status) {
             this.status = status;
             return this;
@@ -676,26 +786,46 @@ public class AccountingTransaction {
             return this;
         }
 
+        /**
+         * negative for CREDIT, positive for DEBIT
+         */
         public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
+        /**
+         * negative for CREDIT, positive for DEBIT
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder transactionAt(@Nullable OffsetDateTime transactionAt) {
             this.transactionAt = transactionAt;
             return this;
         }
 
+        /**
+         * eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit,
+         * VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit,
+         * BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt,
+         * CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment,
+         * GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service
+         * Tax Defer, Service Tax Partial Utilisation
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

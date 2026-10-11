@@ -20,67 +20,93 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpSegment {
-
+    /**
+     * How the segment membership is computed (REALTIME or BATCH)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compute_mode")
     private ComputeMode computeMode;
 
-
+    /**
+     * The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The membership rule/query that defines the segment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     private String definition;
 
-
+    /**
+     * The description of the segment/audience
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Unique identifier for this segment object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the segment is active/enabled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * The name of the segment/audience
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this segment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The number of profiles currently in the segment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Double size;
 
-
+    /**
+     * The data-plane handle/key used to identify segment membership in profiles and destinations
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The cdp_source this segment originated from; points to CdpSource
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     private String sourceId;
 
-
+    /**
+     * The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private CdpSegmentType type;
 
-
+    /**
+     * The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -123,54 +149,93 @@ public class CdpSegment {
             null);
     }
 
+    /**
+     * How the segment membership is computed (REALTIME or BATCH)
+     */
     public Optional<ComputeMode> computeMode() {
         return Optional.ofNullable(this.computeMode);
     }
 
+    /**
+     * The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The membership rule/query that defines the segment
+     */
     public Optional<String> definition() {
         return Optional.ofNullable(this.definition);
     }
 
+    /**
+     * The description of the segment/audience
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Unique identifier for this segment object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the segment is active/enabled
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * The name of the segment/audience
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this segment
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The number of profiles currently in the segment
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
 
+    /**
+     * The data-plane handle/key used to identify segment membership in profiles and destinations
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The cdp_source this segment originated from; points to CdpSource
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
 
+    /**
+     * The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+     */
     public Optional<CdpSegmentType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -180,78 +245,117 @@ public class CdpSegment {
     }
 
 
+    /**
+     * How the segment membership is computed (REALTIME or BATCH)
+     */
     public CdpSegment withComputeMode(@Nullable ComputeMode computeMode) {
         this.computeMode = computeMode;
         return this;
     }
 
 
+    /**
+     * The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpSegment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The membership rule/query that defines the segment
+     */
     public CdpSegment withDefinition(@Nullable String definition) {
         this.definition = definition;
         return this;
     }
 
 
+    /**
+     * The description of the segment/audience
+     */
     public CdpSegment withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this segment object
+     */
     public CdpSegment withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the segment is active/enabled
+     */
     public CdpSegment withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
 
+    /**
+     * The name of the segment/audience
+     */
     public CdpSegment withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this segment
+     */
     public CdpSegment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The number of profiles currently in the segment
+     */
     public CdpSegment withSize(@Nullable Double size) {
         this.size = size;
         return this;
     }
 
 
+    /**
+     * The data-plane handle/key used to identify segment membership in profiles and destinations
+     */
     public CdpSegment withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The cdp_source this segment originated from; points to CdpSource
+     */
     public CdpSegment withSourceId(@Nullable String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
 
 
+    /**
+     * The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+     */
     public CdpSegment withType(@Nullable CdpSegmentType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpSegment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -344,66 +448,105 @@ public class CdpSegment {
           // force use of static builder() method
         }
 
+        /**
+         * How the segment membership is computed (REALTIME or BATCH)
+         */
         public Builder computeMode(@Nullable ComputeMode computeMode) {
             this.computeMode = computeMode;
             return this;
         }
 
+        /**
+         * The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The membership rule/query that defines the segment
+         */
         public Builder definition(@Nullable String definition) {
             this.definition = definition;
             return this;
         }
 
+        /**
+         * The description of the segment/audience
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Unique identifier for this segment object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the segment is active/enabled
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
+        /**
+         * The name of the segment/audience
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this segment
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The number of profiles currently in the segment
+         */
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
+        /**
+         * The data-plane handle/key used to identify segment membership in profiles and destinations
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The cdp_source this segment originated from; points to CdpSource
+         */
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+         */
         public Builder type(@Nullable CdpSegmentType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

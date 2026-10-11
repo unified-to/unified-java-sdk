@@ -31,27 +31,37 @@ public class EnrichPerson {
     @JsonProperty("address")
     private PropertyEnrichPersonAddress address;
 
-
+    /**
+     * The biography description of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     private String bio;
 
-
+    /**
+     * The birth date of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdate")
     private String birthdate;
 
-
+    /**
+     * The companyorganization name  of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private String company;
 
-
+    /**
+     * The company's domain
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_domain")
     private String companyDomain;
 
-
+    /**
+     * The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -63,7 +73,9 @@ public class EnrichPerson {
     @JsonProperty("emails")
     private List<EnrichEmail> emails;
 
-
+    /**
+     * The Facebook URL of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
     private String facebookUrl;
@@ -73,27 +85,37 @@ public class EnrichPerson {
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * The gender of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     private EnrichPersonGender gender;
 
-
+    /**
+     * The GitHub URL of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_url")
     private String githubUrl;
 
-
+    /**
+     * The GitHub username of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_username")
     private String githubUsername;
 
-
+    /**
+     * Unique identifier for this person object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The image URL of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private String imageUrl;
@@ -103,17 +125,23 @@ public class EnrichPerson {
     @JsonProperty("last_name")
     private String lastName;
 
-
+    /**
+     * The LinkedIn URL of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
     private String linkedinUrl;
 
-
+    /**
+     * The name of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -125,32 +153,44 @@ public class EnrichPerson {
     @JsonProperty("telephones")
     private List<EnrichTelephone> telephones;
 
-
+    /**
+     * The timezone code of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * The job title of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * The twitter handle of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
     private String twitterHandle;
 
-
+    /**
+     * The twitter URL of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
     private String twitterUrl;
 
-
+    /**
+     * The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The timezone's hourly offset from UTC of the person
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utc_offset")
     private Double utcOffset;
@@ -235,22 +275,37 @@ public class EnrichPerson {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * The biography description of the person
+     */
     public Optional<String> bio() {
         return Optional.ofNullable(this.bio);
     }
 
+    /**
+     * The birth date of the person
+     */
     public Optional<String> birthdate() {
         return Optional.ofNullable(this.birthdate);
     }
 
+    /**
+     * The companyorganization name  of the person
+     */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
     }
 
+    /**
+     * The company's domain
+     */
     public Optional<String> companyDomain() {
         return Optional.ofNullable(this.companyDomain);
     }
 
+    /**
+     * The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -262,6 +317,9 @@ public class EnrichPerson {
         return Optional.ofNullable(this.emails);
     }
 
+    /**
+     * The Facebook URL of the person
+     */
     public Optional<String> facebookUrl() {
         return Optional.ofNullable(this.facebookUrl);
     }
@@ -270,22 +328,37 @@ public class EnrichPerson {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * The gender of the person
+     */
     public Optional<EnrichPersonGender> gender() {
         return Optional.ofNullable(this.gender);
     }
 
+    /**
+     * The GitHub URL of the person
+     */
     public Optional<String> githubUrl() {
         return Optional.ofNullable(this.githubUrl);
     }
 
+    /**
+     * The GitHub username of the person
+     */
     public Optional<String> githubUsername() {
         return Optional.ofNullable(this.githubUsername);
     }
 
+    /**
+     * Unique identifier for this person object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The image URL of the person
+     */
     public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
@@ -294,14 +367,23 @@ public class EnrichPerson {
         return Optional.ofNullable(this.lastName);
     }
 
+    /**
+     * The LinkedIn URL of the person
+     */
     public Optional<String> linkedinUrl() {
         return Optional.ofNullable(this.linkedinUrl);
     }
 
+    /**
+     * The name of the person
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this person
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -313,26 +395,44 @@ public class EnrichPerson {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * The timezone code of the person
+     */
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * The job title of the person
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * The twitter handle of the person
+     */
     public Optional<String> twitterHandle() {
         return Optional.ofNullable(this.twitterHandle);
     }
 
+    /**
+     * The twitter URL of the person
+     */
     public Optional<String> twitterUrl() {
         return Optional.ofNullable(this.twitterUrl);
     }
 
+    /**
+     * The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The timezone's hourly offset from UTC of the person
+     */
     public Optional<Double> utcOffset() {
         return Optional.ofNullable(this.utcOffset);
     }
@@ -355,30 +455,45 @@ public class EnrichPerson {
     }
 
 
+    /**
+     * The biography description of the person
+     */
     public EnrichPerson withBio(@Nullable String bio) {
         this.bio = bio;
         return this;
     }
 
 
+    /**
+     * The birth date of the person
+     */
     public EnrichPerson withBirthdate(@Nullable String birthdate) {
         this.birthdate = birthdate;
         return this;
     }
 
 
+    /**
+     * The companyorganization name  of the person
+     */
     public EnrichPerson withCompany(@Nullable String company) {
         this.company = company;
         return this;
     }
 
 
+    /**
+     * The company's domain
+     */
     public EnrichPerson withCompanyDomain(@Nullable String companyDomain) {
         this.companyDomain = companyDomain;
         return this;
     }
 
 
+    /**
+     * The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichPerson withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -394,6 +509,9 @@ public class EnrichPerson {
     }
 
 
+    /**
+     * The Facebook URL of the person
+     */
     public EnrichPerson withFacebookUrl(@Nullable String facebookUrl) {
         this.facebookUrl = facebookUrl;
         return this;
@@ -406,30 +524,45 @@ public class EnrichPerson {
     }
 
 
+    /**
+     * The gender of the person
+     */
     public EnrichPerson withGender(@Nullable EnrichPersonGender gender) {
         this.gender = gender;
         return this;
     }
 
 
+    /**
+     * The GitHub URL of the person
+     */
     public EnrichPerson withGithubUrl(@Nullable String githubUrl) {
         this.githubUrl = githubUrl;
         return this;
     }
 
 
+    /**
+     * The GitHub username of the person
+     */
     public EnrichPerson withGithubUsername(@Nullable String githubUsername) {
         this.githubUsername = githubUsername;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this person object
+     */
     public EnrichPerson withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The image URL of the person
+     */
     public EnrichPerson withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -442,18 +575,27 @@ public class EnrichPerson {
     }
 
 
+    /**
+     * The LinkedIn URL of the person
+     */
     public EnrichPerson withLinkedinUrl(@Nullable String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
     }
 
 
+    /**
+     * The name of the person
+     */
     public EnrichPerson withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this person
+     */
     public EnrichPerson withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -469,36 +611,54 @@ public class EnrichPerson {
     }
 
 
+    /**
+     * The timezone code of the person
+     */
     public EnrichPerson withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
 
+    /**
+     * The job title of the person
+     */
     public EnrichPerson withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * The twitter handle of the person
+     */
     public EnrichPerson withTwitterHandle(@Nullable String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
     }
 
 
+    /**
+     * The twitter URL of the person
+     */
     public EnrichPerson withTwitterUrl(@Nullable String twitterUrl) {
         this.twitterUrl = twitterUrl;
         return this;
     }
 
 
+    /**
+     * The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichPerson withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The timezone's hourly offset from UTC of the person
+     */
     public EnrichPerson withUtcOffset(@Nullable Double utcOffset) {
         this.utcOffset = utcOffset;
         return this;
@@ -661,26 +821,41 @@ public class EnrichPerson {
             return this;
         }
 
+        /**
+         * The biography description of the person
+         */
         public Builder bio(@Nullable String bio) {
             this.bio = bio;
             return this;
         }
 
+        /**
+         * The birth date of the person
+         */
         public Builder birthdate(@Nullable String birthdate) {
             this.birthdate = birthdate;
             return this;
         }
 
+        /**
+         * The companyorganization name  of the person
+         */
         public Builder company(@Nullable String company) {
             this.company = company;
             return this;
         }
 
+        /**
+         * The company's domain
+         */
         public Builder companyDomain(@Nullable String companyDomain) {
             this.companyDomain = companyDomain;
             return this;
         }
 
+        /**
+         * The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -694,6 +869,9 @@ public class EnrichPerson {
             return this;
         }
 
+        /**
+         * The Facebook URL of the person
+         */
         public Builder facebookUrl(@Nullable String facebookUrl) {
             this.facebookUrl = facebookUrl;
             return this;
@@ -704,26 +882,41 @@ public class EnrichPerson {
             return this;
         }
 
+        /**
+         * The gender of the person
+         */
         public Builder gender(@Nullable EnrichPersonGender gender) {
             this.gender = gender;
             return this;
         }
 
+        /**
+         * The GitHub URL of the person
+         */
         public Builder githubUrl(@Nullable String githubUrl) {
             this.githubUrl = githubUrl;
             return this;
         }
 
+        /**
+         * The GitHub username of the person
+         */
         public Builder githubUsername(@Nullable String githubUsername) {
             this.githubUsername = githubUsername;
             return this;
         }
 
+        /**
+         * Unique identifier for this person object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The image URL of the person
+         */
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
@@ -734,16 +927,25 @@ public class EnrichPerson {
             return this;
         }
 
+        /**
+         * The LinkedIn URL of the person
+         */
         public Builder linkedinUrl(@Nullable String linkedinUrl) {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
 
+        /**
+         * The name of the person
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this person
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -757,31 +959,49 @@ public class EnrichPerson {
             return this;
         }
 
+        /**
+         * The timezone code of the person
+         */
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
+        /**
+         * The job title of the person
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * The twitter handle of the person
+         */
         public Builder twitterHandle(@Nullable String twitterHandle) {
             this.twitterHandle = twitterHandle;
             return this;
         }
 
+        /**
+         * The twitter URL of the person
+         */
         public Builder twitterUrl(@Nullable String twitterUrl) {
             this.twitterUrl = twitterUrl;
             return this;
         }
 
+        /**
+         * The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The timezone's hourly offset from UTC of the person
+         */
         public Builder utcOffset(@Nullable Double utcOffset) {
             this.utcOffset = utcOffset;
             return this;

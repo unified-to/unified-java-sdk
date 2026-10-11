@@ -31,7 +31,9 @@ public class PropertyShippingTrackingEventLocationAddress {
     @JsonProperty("city")
     private String city;
 
-
+    /**
+     * Company name (for commercial addresses)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private String companyName;
@@ -41,32 +43,44 @@ public class PropertyShippingTrackingEventLocationAddress {
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * ISO 2-digit country code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private String countryCode;
 
-
+    /**
+     * Special delivery notes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_instructions")
     private String deliveryInstructions;
 
-
+    /**
+     * Email address (for delivery notifications)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     private String email;
 
-
+    /**
+     * Alias for address_type === 'RESIDENTIAL'
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_residential")
     private Boolean isResidential;
 
-
+    /**
+     * Whether address has been validated
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_validated")
     private Boolean isValidated;
 
-
+    /**
+     * Recipientsender name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -86,7 +100,9 @@ public class PropertyShippingTrackingEventLocationAddress {
     @JsonProperty("region_code")
     private String regionCode;
 
-
+    /**
+     * Phone number (required by FedEx, UPS, DHL)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     private String telephone;
@@ -145,6 +161,9 @@ public class PropertyShippingTrackingEventLocationAddress {
         return Optional.ofNullable(this.city);
     }
 
+    /**
+     * Company name (for commercial addresses)
+     */
     public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
@@ -153,26 +172,44 @@ public class PropertyShippingTrackingEventLocationAddress {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * ISO 2-digit country code
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
 
+    /**
+     * Special delivery notes
+     */
     public Optional<String> deliveryInstructions() {
         return Optional.ofNullable(this.deliveryInstructions);
     }
 
+    /**
+     * Email address (for delivery notifications)
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
 
+    /**
+     * Alias for address_type === 'RESIDENTIAL'
+     */
     public Optional<Boolean> isResidential() {
         return Optional.ofNullable(this.isResidential);
     }
 
+    /**
+     * Whether address has been validated
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
 
+    /**
+     * Recipientsender name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -189,6 +226,9 @@ public class PropertyShippingTrackingEventLocationAddress {
         return Optional.ofNullable(this.regionCode);
     }
 
+    /**
+     * Phone number (required by FedEx, UPS, DHL)
+     */
     public Optional<String> telephone() {
         return Optional.ofNullable(this.telephone);
     }
@@ -216,6 +256,9 @@ public class PropertyShippingTrackingEventLocationAddress {
     }
 
 
+    /**
+     * Company name (for commercial addresses)
+     */
     public PropertyShippingTrackingEventLocationAddress withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
@@ -228,36 +271,54 @@ public class PropertyShippingTrackingEventLocationAddress {
     }
 
 
+    /**
+     * ISO 2-digit country code
+     */
     public PropertyShippingTrackingEventLocationAddress withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
 
 
+    /**
+     * Special delivery notes
+     */
     public PropertyShippingTrackingEventLocationAddress withDeliveryInstructions(@Nullable String deliveryInstructions) {
         this.deliveryInstructions = deliveryInstructions;
         return this;
     }
 
 
+    /**
+     * Email address (for delivery notifications)
+     */
     public PropertyShippingTrackingEventLocationAddress withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
 
+    /**
+     * Alias for address_type === 'RESIDENTIAL'
+     */
     public PropertyShippingTrackingEventLocationAddress withIsResidential(@Nullable Boolean isResidential) {
         this.isResidential = isResidential;
         return this;
     }
 
 
+    /**
+     * Whether address has been validated
+     */
     public PropertyShippingTrackingEventLocationAddress withIsValidated(@Nullable Boolean isValidated) {
         this.isValidated = isValidated;
         return this;
     }
 
 
+    /**
+     * Recipientsender name
+     */
     public PropertyShippingTrackingEventLocationAddress withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -282,6 +343,9 @@ public class PropertyShippingTrackingEventLocationAddress {
     }
 
 
+    /**
+     * Phone number (required by FedEx, UPS, DHL)
+     */
     public PropertyShippingTrackingEventLocationAddress withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
@@ -397,6 +461,9 @@ public class PropertyShippingTrackingEventLocationAddress {
             return this;
         }
 
+        /**
+         * Company name (for commercial addresses)
+         */
         public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
@@ -407,31 +474,49 @@ public class PropertyShippingTrackingEventLocationAddress {
             return this;
         }
 
+        /**
+         * ISO 2-digit country code
+         */
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * Special delivery notes
+         */
         public Builder deliveryInstructions(@Nullable String deliveryInstructions) {
             this.deliveryInstructions = deliveryInstructions;
             return this;
         }
 
+        /**
+         * Email address (for delivery notifications)
+         */
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
+        /**
+         * Alias for address_type === 'RESIDENTIAL'
+         */
         public Builder isResidential(@Nullable Boolean isResidential) {
             this.isResidential = isResidential;
             return this;
         }
 
+        /**
+         * Whether address has been validated
+         */
         public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
+        /**
+         * Recipientsender name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -452,6 +537,9 @@ public class PropertyShippingTrackingEventLocationAddress {
             return this;
         }
 
+        /**
+         * Phone number (required by FedEx, UPS, DHL)
+         */
         public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;

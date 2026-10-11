@@ -24,17 +24,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A deal represents an opportunity with companies and/or contacts
  */
 public class CrmDeal {
-
+    /**
+     * The potential amount that deal could be worth
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
 
-
+    /**
+     * expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_at")
     private OffsetDateTime closingAt;
@@ -49,12 +55,16 @@ public class CrmDeal {
     @JsonProperty("contact_ids")
     private List<String> contactIds;
 
-
+    /**
+     * The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The currency for the deal amount (3 letter ISO code; eg. USD)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
@@ -64,7 +74,9 @@ public class CrmDeal {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Unique identifier for this deal object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -79,7 +91,9 @@ public class CrmDeal {
     @JsonProperty("metadata")
     private List<CrmMetadata> metadata;
 
-
+    /**
+     * The name of this deal
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -94,12 +108,16 @@ public class CrmDeal {
     @JsonProperty("probability")
     private Double probability;
 
-
+    /**
+     * The raw data returned by the integration for this deal
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The source for this deal
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
@@ -114,12 +132,16 @@ public class CrmDeal {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -185,14 +207,23 @@ public class CrmDeal {
             null, null, null);
     }
 
+    /**
+     * The potential amount that deal could be worth
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
 
+    /**
+     * expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closingAt() {
         return Optional.ofNullable(this.closingAt);
     }
@@ -205,10 +236,16 @@ public class CrmDeal {
         return Optional.ofNullable(this.contactIds);
     }
 
+    /**
+     * The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The currency for the deal amount (3 letter ISO code; eg. USD)
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
@@ -217,6 +254,9 @@ public class CrmDeal {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Unique identifier for this deal object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -229,6 +269,9 @@ public class CrmDeal {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The name of this deal
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -241,10 +284,16 @@ public class CrmDeal {
         return Optional.ofNullable(this.probability);
     }
 
+    /**
+     * The raw data returned by the integration for this deal
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The source for this deal
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
@@ -257,10 +306,16 @@ public class CrmDeal {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -274,18 +329,27 @@ public class CrmDeal {
     }
 
 
+    /**
+     * The potential amount that deal could be worth
+     */
     public CrmDeal withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmDeal withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
 
+    /**
+     * expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmDeal withClosingAt(@Nullable OffsetDateTime closingAt) {
         this.closingAt = closingAt;
         return this;
@@ -304,12 +368,18 @@ public class CrmDeal {
     }
 
 
+    /**
+     * The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmDeal withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The currency for the deal amount (3 letter ISO code; eg. USD)
+     */
     public CrmDeal withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
@@ -322,6 +392,9 @@ public class CrmDeal {
     }
 
 
+    /**
+     * Unique identifier for this deal object
+     */
     public CrmDeal withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -340,6 +413,9 @@ public class CrmDeal {
     }
 
 
+    /**
+     * The name of this deal
+     */
     public CrmDeal withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -358,12 +434,18 @@ public class CrmDeal {
     }
 
 
+    /**
+     * The raw data returned by the integration for this deal
+     */
     public CrmDeal withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The source for this deal
+     */
     public CrmDeal withSource(@Nullable String source) {
         this.source = source;
         return this;
@@ -382,12 +464,18 @@ public class CrmDeal {
     }
 
 
+    /**
+     * The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmDeal withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmDeal withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -520,16 +608,25 @@ public class CrmDeal {
           // force use of static builder() method
         }
 
+        /**
+         * The potential amount that deal could be worth
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
+        /**
+         * expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closingAt(@Nullable OffsetDateTime closingAt) {
             this.closingAt = closingAt;
             return this;
@@ -545,11 +642,17 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The currency for the deal amount (3 letter ISO code; eg. USD)
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
@@ -560,6 +663,9 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * Unique identifier for this deal object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -575,6 +681,9 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * The name of this deal
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -590,11 +699,17 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this deal
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The source for this deal
+         */
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
@@ -610,11 +725,17 @@ public class CrmDeal {
             return this;
         }
 
+        /**
+         * The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

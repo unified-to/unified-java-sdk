@@ -18,7 +18,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AnalyticsProperty {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -43,7 +45,9 @@ public class AnalyticsProperty {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * points to AnalyticsProperty
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
@@ -58,7 +62,9 @@ public class AnalyticsProperty {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -91,6 +97,9 @@ public class AnalyticsProperty {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -111,6 +120,9 @@ public class AnalyticsProperty {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * points to AnalyticsProperty
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -123,6 +135,9 @@ public class AnalyticsProperty {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -132,6 +147,9 @@ public class AnalyticsProperty {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsProperty withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -162,6 +180,9 @@ public class AnalyticsProperty {
     }
 
 
+    /**
+     * points to AnalyticsProperty
+     */
     public AnalyticsProperty withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -180,6 +201,9 @@ public class AnalyticsProperty {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsProperty withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -254,6 +278,9 @@ public class AnalyticsProperty {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -279,6 +306,9 @@ public class AnalyticsProperty {
             return this;
         }
 
+        /**
+         * points to AnalyticsProperty
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -294,6 +324,9 @@ public class AnalyticsProperty {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountType
+ * 
+ * <p>CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+ */
 public class AccountType {
 
     public static final AccountType CHECKING = new AccountType("CHECKING");

@@ -21,12 +21,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class RepoCommit {
-
+    /**
+     * (reference to RepoBranch)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch_id")
     private String branchId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -66,16 +70,22 @@ public class RepoCommit {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (reference to RepoRepository)
+     */
     @JsonProperty("repo_id")
     private String repoId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -117,10 +127,16 @@ public class RepoCommit {
             repoId, null, null);
     }
 
+    /**
+     * (reference to RepoBranch)
+     */
     public Optional<String> branchId() {
         return Optional.ofNullable(this.branchId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -153,14 +169,23 @@ public class RepoCommit {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (reference to RepoRepository)
+     */
     public String repoId() {
         return this.repoId;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -170,12 +195,18 @@ public class RepoCommit {
     }
 
 
+    /**
+     * (reference to RepoBranch)
+     */
     public RepoCommit withBranchId(@Nullable String branchId) {
         this.branchId = branchId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoCommit withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -224,18 +255,27 @@ public class RepoCommit {
     }
 
 
+    /**
+     * (reference to RepoRepository)
+     */
     public RepoCommit withRepoId(@Nonnull String repoId) {
         this.repoId = Utils.checkNotNull(repoId, "repoId");
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoCommit withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public RepoCommit withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -323,11 +363,17 @@ public class RepoCommit {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to RepoBranch)
+         */
         public Builder branchId(@Nullable String branchId) {
             this.branchId = branchId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -368,16 +414,25 @@ public class RepoCommit {
             return this;
         }
 
+        /**
+         * (reference to RepoRepository)
+         */
         public Builder repoId(@Nonnull String repoId) {
             this.repoId = Utils.checkNotNull(repoId, "repoId");
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

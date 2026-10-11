@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SocialPost {
-
+    /**
+     * The main text content of the post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     private String body;
@@ -31,17 +33,23 @@ public class SocialPost {
     @JsonProperty("call_to_action")
     private PropertySocialPostCallToAction callToAction;
 
-
+    /**
+     * When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Unique identifier for the post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Language code of the post content
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
@@ -60,47 +68,65 @@ public class SocialPost {
     @JsonProperty("metrics")
     private PropertySocialPostMetrics metrics;
 
-
+    /**
+     * The post this one replies to or references
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_post_id")
     private String parentPostId;
 
-
+    /**
+     * The social profile (page/handle/listing) that owns this post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_id")
     private String profileId;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduled_at")
     private OffsetDateTime scheduledAt;
 
-
+    /**
+     * Publication status of the post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private SocialPostStatus status;
 
-
+    /**
+     * Optional post title/headline
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * The kind of post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private SocialPostType type;
 
-
+    /**
+     * When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Public permalink to the post
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -150,6 +176,9 @@ public class SocialPost {
             null);
     }
 
+    /**
+     * The main text content of the post
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
@@ -161,14 +190,23 @@ public class SocialPost {
         return Optional.ofNullable(this.callToAction);
     }
 
+    /**
+     * When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Unique identifier for the post
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Language code of the post content
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
@@ -187,38 +225,65 @@ public class SocialPost {
         return Optional.ofNullable(this.metrics);
     }
 
+    /**
+     * The post this one replies to or references
+     */
     public Optional<String> parentPostId() {
         return Optional.ofNullable(this.parentPostId);
     }
 
+    /**
+     * The social profile (page/handle/listing) that owns this post
+     */
     public Optional<String> profileId() {
         return Optional.ofNullable(this.profileId);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> scheduledAt() {
         return Optional.ofNullable(this.scheduledAt);
     }
 
+    /**
+     * Publication status of the post
+     */
     public Optional<SocialPostStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Optional post title/headline
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * The kind of post
+     */
     public Optional<SocialPostType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Public permalink to the post
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -228,6 +293,9 @@ public class SocialPost {
     }
 
 
+    /**
+     * The main text content of the post
+     */
     public SocialPost withBody(@Nullable String body) {
         this.body = body;
         return this;
@@ -243,18 +311,27 @@ public class SocialPost {
     }
 
 
+    /**
+     * When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialPost withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the post
+     */
     public SocialPost withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Language code of the post content
+     */
     public SocialPost withLanguage(@Nullable String language) {
         this.language = language;
         return this;
@@ -279,54 +356,81 @@ public class SocialPost {
     }
 
 
+    /**
+     * The post this one replies to or references
+     */
     public SocialPost withParentPostId(@Nullable String parentPostId) {
         this.parentPostId = parentPostId;
         return this;
     }
 
 
+    /**
+     * The social profile (page/handle/listing) that owns this post
+     */
     public SocialPost withProfileId(@Nullable String profileId) {
         this.profileId = profileId;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public SocialPost withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialPost withScheduledAt(@Nullable OffsetDateTime scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
     }
 
 
+    /**
+     * Publication status of the post
+     */
     public SocialPost withStatus(@Nullable SocialPostStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * Optional post title/headline
+     */
     public SocialPost withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * The kind of post
+     */
     public SocialPost withType(@Nullable SocialPostType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialPost withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Public permalink to the post
+     */
     public SocialPost withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -432,6 +536,9 @@ public class SocialPost {
           // force use of static builder() method
         }
 
+        /**
+         * The main text content of the post
+         */
         public Builder body(@Nullable String body) {
             this.body = body;
             return this;
@@ -445,16 +552,25 @@ public class SocialPost {
             return this;
         }
 
+        /**
+         * When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Unique identifier for the post
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Language code of the post content
+         */
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;
@@ -476,46 +592,73 @@ public class SocialPost {
             return this;
         }
 
+        /**
+         * The post this one replies to or references
+         */
         public Builder parentPostId(@Nullable String parentPostId) {
             this.parentPostId = parentPostId;
             return this;
         }
 
+        /**
+         * The social profile (page/handle/listing) that owns this post
+         */
         public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder scheduledAt(@Nullable OffsetDateTime scheduledAt) {
             this.scheduledAt = scheduledAt;
             return this;
         }
 
+        /**
+         * Publication status of the post
+         */
         public Builder status(@Nullable SocialPostStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * Optional post title/headline
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * The kind of post
+         */
         public Builder type(@Nullable SocialPostType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Public permalink to the post
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

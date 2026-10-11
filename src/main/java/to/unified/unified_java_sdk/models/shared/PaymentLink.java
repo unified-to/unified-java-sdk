@@ -26,12 +26,16 @@ public class PaymentLink {
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * ID of the AccountingContact (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -66,7 +70,9 @@ public class PaymentLink {
     @JsonProperty("lineitems")
     private List<PaymentLineitem> lineitems;
 
-
+    /**
+     * (reference to PaymentPayment)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
@@ -81,12 +87,16 @@ public class PaymentLink {
     @JsonProperty("success_url")
     private String successUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * the payment link
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -135,10 +145,16 @@ public class PaymentLink {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * ID of the AccountingContact (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -167,6 +183,9 @@ public class PaymentLink {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * (reference to PaymentPayment)
+     */
     public Optional<String> paymentId() {
         return Optional.ofNullable(this.paymentId);
     }
@@ -179,10 +198,16 @@ public class PaymentLink {
         return Optional.ofNullable(this.successUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * the payment link
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -198,12 +223,18 @@ public class PaymentLink {
     }
 
 
+    /**
+     * ID of the AccountingContact (reference to AccountingContact)
+     */
     public PaymentLink withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentLink withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -246,6 +277,9 @@ public class PaymentLink {
     }
 
 
+    /**
+     * (reference to PaymentPayment)
+     */
     public PaymentLink withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -264,12 +298,18 @@ public class PaymentLink {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentLink withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * the payment link
+     */
     public PaymentLink withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -371,11 +411,17 @@ public class PaymentLink {
             return this;
         }
 
+        /**
+         * ID of the AccountingContact (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -411,6 +457,9 @@ public class PaymentLink {
             return this;
         }
 
+        /**
+         * (reference to PaymentPayment)
+         */
         public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
@@ -426,11 +475,17 @@ public class PaymentLink {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * the payment link
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

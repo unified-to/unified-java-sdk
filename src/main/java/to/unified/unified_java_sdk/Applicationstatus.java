@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.operations.GetAtsApplicationstatus;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,28 @@ public class Applicationstatus {
      */
     public AsyncApplicationstatus async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @return The call builder
+     */
+    public GetAtsApplicationstatusRequestBuilder getAtsApplicationstatus() {
+        return new GetAtsApplicationstatusRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsApplicationstatusResponse getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        RequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
+              = new GetAtsApplicationstatus.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

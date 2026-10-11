@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Term
+ * 
+ * <p>&#64;deprecated use payment_terms instead
+ */
 public class Term {
 
     public static final Term ON_RECEIPT = new Term("ON_RECEIPT");

@@ -16,22 +16,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User {
-
+    /**
+     * 'M3',
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job Level")
     private String jobLevel;
 
-
+    /**
+     * 'People Manager',
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("People Manager (Reviews)")
     private String peopleManagerReviews;
 
-
+    /**
+     * 'Ontario',
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remote Work - Location")
     private String remoteWorkLocation;
 
-
+    /**
+     * '130000',
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salary Information")
     private String salaryInformation;
@@ -41,7 +49,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     @JsonProperty("Sub Departments")
     private String subDepartments;
 
-
+    /**
+     * "1987-10-06",
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthDate")
     private OffsetDateTime birthDate;
@@ -61,7 +71,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     @JsonProperty("sexualOrientation")
     private SexualOrientation sexualOrientation;
 
-
+    /**
+     * "2022-03-08",
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     private OffsetDateTime startDate;
@@ -97,18 +109,30 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
             null);
     }
 
+    /**
+     * 'M3',
+     */
     public Optional<String> jobLevel() {
         return Optional.ofNullable(this.jobLevel);
     }
 
+    /**
+     * 'People Manager',
+     */
     public Optional<String> peopleManagerReviews() {
         return Optional.ofNullable(this.peopleManagerReviews);
     }
 
+    /**
+     * 'Ontario',
+     */
     public Optional<String> remoteWorkLocation() {
         return Optional.ofNullable(this.remoteWorkLocation);
     }
 
+    /**
+     * '130000',
+     */
     public Optional<String> salaryInformation() {
         return Optional.ofNullable(this.salaryInformation);
     }
@@ -117,6 +141,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
         return Optional.ofNullable(this.subDepartments);
     }
 
+    /**
+     * "1987-10-06",
+     */
     public Optional<OffsetDateTime> birthDate() {
         return Optional.ofNullable(this.birthDate);
     }
@@ -133,6 +160,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
         return Optional.ofNullable(this.sexualOrientation);
     }
 
+    /**
+     * "2022-03-08",
+     */
     public Optional<OffsetDateTime> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -142,24 +172,36 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     }
 
 
+    /**
+     * 'M3',
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withJobLevel(@Nullable String jobLevel) {
         this.jobLevel = jobLevel;
         return this;
     }
 
 
+    /**
+     * 'People Manager',
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withPeopleManagerReviews(@Nullable String peopleManagerReviews) {
         this.peopleManagerReviews = peopleManagerReviews;
         return this;
     }
 
 
+    /**
+     * 'Ontario',
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withRemoteWorkLocation(@Nullable String remoteWorkLocation) {
         this.remoteWorkLocation = remoteWorkLocation;
         return this;
     }
 
 
+    /**
+     * '130000',
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSalaryInformation(@Nullable String salaryInformation) {
         this.salaryInformation = salaryInformation;
         return this;
@@ -172,6 +214,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     }
 
 
+    /**
+     * "1987-10-06",
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withBirthDate(@Nullable OffsetDateTime birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -196,6 +241,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     }
 
 
+    /**
+     * "2022-03-08",
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withStartDate(@Nullable OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -275,21 +323,33 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
           // force use of static builder() method
         }
 
+        /**
+         * 'M3',
+         */
         public Builder jobLevel(@Nullable String jobLevel) {
             this.jobLevel = jobLevel;
             return this;
         }
 
+        /**
+         * 'People Manager',
+         */
         public Builder peopleManagerReviews(@Nullable String peopleManagerReviews) {
             this.peopleManagerReviews = peopleManagerReviews;
             return this;
         }
 
+        /**
+         * 'Ontario',
+         */
         public Builder remoteWorkLocation(@Nullable String remoteWorkLocation) {
             this.remoteWorkLocation = remoteWorkLocation;
             return this;
         }
 
+        /**
+         * '130000',
+         */
         public Builder salaryInformation(@Nullable String salaryInformation) {
             this.salaryInformation = salaryInformation;
             return this;
@@ -300,6 +360,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
             return this;
         }
 
+        /**
+         * "1987-10-06",
+         */
         public Builder birthDate(@Nullable OffsetDateTime birthDate) {
             this.birthDate = birthDate;
             return this;
@@ -320,6 +383,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
             return this;
         }
 
+        /**
+         * "2022-03-08",
+         */
         public Builder startDate(@Nullable OffsetDateTime startDate) {
             this.startDate = startDate;
             return this;

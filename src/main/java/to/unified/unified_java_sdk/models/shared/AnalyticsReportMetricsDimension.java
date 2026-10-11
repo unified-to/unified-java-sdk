@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AnalyticsReportMetricsDimension
+ * 
+ * <p>new vs returning
+ */
 public class AnalyticsReportMetricsDimension {
 
     public static final AnalyticsReportMetricsDimension DATE = new AnalyticsReportMetricsDimension("DATE");

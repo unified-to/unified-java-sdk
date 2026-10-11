@@ -9,7 +9,9 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequest;
@@ -17,8 +19,12 @@ import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecardReq
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecardsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsScorecardRequestBuilder;
@@ -27,7 +33,9 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecardReq
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsScorecardResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
 import to.unified.unified_java_sdk.operations.GetAtsScorecard;
+import to.unified.unified_java_sdk.operations.GetUcScorecard;
 import to.unified.unified_java_sdk.operations.ListAtsScorecards;
+import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
@@ -101,6 +109,29 @@ public class AsyncScorecard {
 
 
     /**
+     * Retrieve a scorecard
+     * 
+     * @return The async call builder
+     */
+    public GetUcScorecardRequestBuilder getUcScorecard() {
+        return new GetUcScorecardRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        AsyncRequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
+              = new GetUcScorecard.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all scorecards
      * 
      * @return The async call builder
@@ -118,6 +149,29 @@ public class AsyncScorecard {
     public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all scorecards
+     * 
+     * @return The async call builder
+     */
+    public ListUcScorecardsRequestBuilder listUcScorecards() {
+        return new ListUcScorecardsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        AsyncRequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
+              = new ListUcScorecards.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

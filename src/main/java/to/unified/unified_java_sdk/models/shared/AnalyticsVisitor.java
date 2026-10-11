@@ -39,7 +39,9 @@ public class AnalyticsVisitor {
     @JsonProperty("country_code")
     private String countryCode;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -49,7 +51,9 @@ public class AnalyticsVisitor {
     @JsonProperty("email")
     private String email;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_seen_at")
     private OffsetDateTime firstSeenAt;
@@ -69,7 +73,9 @@ public class AnalyticsVisitor {
     @JsonProperty("language")
     private String language;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_seen_at")
     private OffsetDateTime lastSeenAt;
@@ -84,7 +90,9 @@ public class AnalyticsVisitor {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * points to AnalyticsProperty
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_id")
     private String propertyId;
@@ -114,7 +122,9 @@ public class AnalyticsVisitor {
     @JsonProperty("total_sessions")
     private Double totalSessions;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -189,6 +199,9 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.countryCode);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -197,6 +210,9 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.email);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> firstSeenAt() {
         return Optional.ofNullable(this.firstSeenAt);
     }
@@ -213,6 +229,9 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.language);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastSeenAt() {
         return Optional.ofNullable(this.lastSeenAt);
     }
@@ -225,6 +244,9 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * points to AnalyticsProperty
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -249,6 +271,9 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.totalSessions);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -282,6 +307,9 @@ public class AnalyticsVisitor {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsVisitor withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -294,6 +322,9 @@ public class AnalyticsVisitor {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsVisitor withFirstSeenAt(@Nullable OffsetDateTime firstSeenAt) {
         this.firstSeenAt = firstSeenAt;
         return this;
@@ -318,6 +349,9 @@ public class AnalyticsVisitor {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsVisitor withLastSeenAt(@Nullable OffsetDateTime lastSeenAt) {
         this.lastSeenAt = lastSeenAt;
         return this;
@@ -336,6 +370,9 @@ public class AnalyticsVisitor {
     }
 
 
+    /**
+     * points to AnalyticsProperty
+     */
     public AnalyticsVisitor withPropertyId(@Nullable String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -372,6 +409,9 @@ public class AnalyticsVisitor {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsVisitor withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -514,6 +554,9 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -524,6 +567,9 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder firstSeenAt(@Nullable OffsetDateTime firstSeenAt) {
             this.firstSeenAt = firstSeenAt;
             return this;
@@ -544,6 +590,9 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastSeenAt(@Nullable OffsetDateTime lastSeenAt) {
             this.lastSeenAt = lastSeenAt;
             return this;
@@ -559,6 +608,9 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        /**
+         * points to AnalyticsProperty
+         */
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
@@ -589,6 +641,9 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

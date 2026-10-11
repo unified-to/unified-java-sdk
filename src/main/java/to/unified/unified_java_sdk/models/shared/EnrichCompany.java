@@ -31,97 +31,135 @@ public class EnrichCompany {
     @JsonProperty("address")
     private PropertyEnrichCompanyAddress address;
 
-
+    /**
+     * The Alexa rank of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alexa_rank")
     private Double alexaRank;
 
-
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The Crunchbase URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crunchbase_url")
     private String crunchbaseUrl;
 
-
+    /**
+     * The description of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The webmail domain of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     private String domain;
 
-
+    /**
+     * The number of employees at the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employees")
     private String employees;
 
-
+    /**
+     * The public exchange of the company (eg. NASDAQ)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     private String exchange;
 
-
+    /**
+     * The Facebook URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
     private String facebookUrl;
 
-
+    /**
+     * Unique identifier for this company object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The industry of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     private String industry;
 
-
+    /**
+     * The Crunchbase URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instagram_url")
     private String instagramUrl;
 
-
+    /**
+     * The LinkedIn URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
     private String linkedinUrl;
 
-
+    /**
+     * The URL of the logo of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private String logoUrl;
 
-
+    /**
+     * The NAICS code of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naics_code")
     private Double naicsCode;
 
-
+    /**
+     * The name of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The approximate revenue of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenue")
     private String revenue;
 
-
+    /**
+     * The SIC code of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sic_code")
     private Double sicCode;
 
-
+    /**
+     * The stock ticker of the company (eg. AMZN)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
     private String stock;
@@ -133,32 +171,44 @@ public class EnrichCompany {
     @JsonProperty("telephones")
     private List<EnrichTelephone> telephones;
 
-
+    /**
+     * The twitter handle of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
     private String twitterHandle;
 
-
+    /**
+     * The twitter URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
     private String twitterUrl;
 
-
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The year that the company was founded
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_founded")
     private Double yearFounded;
 
-
+    /**
+     * The Yelp URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yelp_url")
     private String yelpUrl;
 
-
+    /**
+     * The Youtube URL of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtube_url")
     private String youtubeUrl;
@@ -240,78 +290,135 @@ public class EnrichCompany {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * The Alexa rank of the company
+     */
     public Optional<Double> alexaRank() {
         return Optional.ofNullable(this.alexaRank);
     }
 
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The Crunchbase URL of the company
+     */
     public Optional<String> crunchbaseUrl() {
         return Optional.ofNullable(this.crunchbaseUrl);
     }
 
+    /**
+     * The description of the company
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The webmail domain of the company
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
 
+    /**
+     * The number of employees at the company
+     */
     public Optional<String> employees() {
         return Optional.ofNullable(this.employees);
     }
 
+    /**
+     * The public exchange of the company (eg. NASDAQ)
+     */
     public Optional<String> exchange() {
         return Optional.ofNullable(this.exchange);
     }
 
+    /**
+     * The Facebook URL of the company
+     */
     public Optional<String> facebookUrl() {
         return Optional.ofNullable(this.facebookUrl);
     }
 
+    /**
+     * Unique identifier for this company object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The industry of the company
+     */
     public Optional<String> industry() {
         return Optional.ofNullable(this.industry);
     }
 
+    /**
+     * The Crunchbase URL of the company
+     */
     public Optional<String> instagramUrl() {
         return Optional.ofNullable(this.instagramUrl);
     }
 
+    /**
+     * The LinkedIn URL of the company
+     */
     public Optional<String> linkedinUrl() {
         return Optional.ofNullable(this.linkedinUrl);
     }
 
+    /**
+     * The URL of the logo of the company
+     */
     public Optional<String> logoUrl() {
         return Optional.ofNullable(this.logoUrl);
     }
 
+    /**
+     * The NAICS code of the company
+     */
     public Optional<Double> naicsCode() {
         return Optional.ofNullable(this.naicsCode);
     }
 
+    /**
+     * The name of the company
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this company
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The approximate revenue of the company
+     */
     public Optional<String> revenue() {
         return Optional.ofNullable(this.revenue);
     }
 
+    /**
+     * The SIC code of the company
+     */
     public Optional<Double> sicCode() {
         return Optional.ofNullable(this.sicCode);
     }
 
+    /**
+     * The stock ticker of the company (eg. AMZN)
+     */
     public Optional<String> stock() {
         return Optional.ofNullable(this.stock);
     }
@@ -323,26 +430,44 @@ public class EnrichCompany {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * The twitter handle of the company
+     */
     public Optional<String> twitterHandle() {
         return Optional.ofNullable(this.twitterHandle);
     }
 
+    /**
+     * The twitter URL of the company
+     */
     public Optional<String> twitterUrl() {
         return Optional.ofNullable(this.twitterUrl);
     }
 
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The year that the company was founded
+     */
     public Optional<Double> yearFounded() {
         return Optional.ofNullable(this.yearFounded);
     }
 
+    /**
+     * The Yelp URL of the company
+     */
     public Optional<String> yelpUrl() {
         return Optional.ofNullable(this.yelpUrl);
     }
 
+    /**
+     * The Youtube URL of the company
+     */
     public Optional<String> youtubeUrl() {
         return Optional.ofNullable(this.youtubeUrl);
     }
@@ -361,114 +486,171 @@ public class EnrichCompany {
     }
 
 
+    /**
+     * The Alexa rank of the company
+     */
     public EnrichCompany withAlexaRank(@Nullable Double alexaRank) {
         this.alexaRank = alexaRank;
         return this;
     }
 
 
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichCompany withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The Crunchbase URL of the company
+     */
     public EnrichCompany withCrunchbaseUrl(@Nullable String crunchbaseUrl) {
         this.crunchbaseUrl = crunchbaseUrl;
         return this;
     }
 
 
+    /**
+     * The description of the company
+     */
     public EnrichCompany withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The webmail domain of the company
+     */
     public EnrichCompany withDomain(@Nullable String domain) {
         this.domain = domain;
         return this;
     }
 
 
+    /**
+     * The number of employees at the company
+     */
     public EnrichCompany withEmployees(@Nullable String employees) {
         this.employees = employees;
         return this;
     }
 
 
+    /**
+     * The public exchange of the company (eg. NASDAQ)
+     */
     public EnrichCompany withExchange(@Nullable String exchange) {
         this.exchange = exchange;
         return this;
     }
 
 
+    /**
+     * The Facebook URL of the company
+     */
     public EnrichCompany withFacebookUrl(@Nullable String facebookUrl) {
         this.facebookUrl = facebookUrl;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this company object
+     */
     public EnrichCompany withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The industry of the company
+     */
     public EnrichCompany withIndustry(@Nullable String industry) {
         this.industry = industry;
         return this;
     }
 
 
+    /**
+     * The Crunchbase URL of the company
+     */
     public EnrichCompany withInstagramUrl(@Nullable String instagramUrl) {
         this.instagramUrl = instagramUrl;
         return this;
     }
 
 
+    /**
+     * The LinkedIn URL of the company
+     */
     public EnrichCompany withLinkedinUrl(@Nullable String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
     }
 
 
+    /**
+     * The URL of the logo of the company
+     */
     public EnrichCompany withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
     }
 
 
+    /**
+     * The NAICS code of the company
+     */
     public EnrichCompany withNaicsCode(@Nullable Double naicsCode) {
         this.naicsCode = naicsCode;
         return this;
     }
 
 
+    /**
+     * The name of the company
+     */
     public EnrichCompany withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this company
+     */
     public EnrichCompany withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The approximate revenue of the company
+     */
     public EnrichCompany withRevenue(@Nullable String revenue) {
         this.revenue = revenue;
         return this;
     }
 
 
+    /**
+     * The SIC code of the company
+     */
     public EnrichCompany withSicCode(@Nullable Double sicCode) {
         this.sicCode = sicCode;
         return this;
     }
 
 
+    /**
+     * The stock ticker of the company (eg. AMZN)
+     */
     public EnrichCompany withStock(@Nullable String stock) {
         this.stock = stock;
         return this;
@@ -484,36 +666,54 @@ public class EnrichCompany {
     }
 
 
+    /**
+     * The twitter handle of the company
+     */
     public EnrichCompany withTwitterHandle(@Nullable String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
     }
 
 
+    /**
+     * The twitter URL of the company
+     */
     public EnrichCompany withTwitterUrl(@Nullable String twitterUrl) {
         this.twitterUrl = twitterUrl;
         return this;
     }
 
 
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichCompany withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The year that the company was founded
+     */
     public EnrichCompany withYearFounded(@Nullable Double yearFounded) {
         this.yearFounded = yearFounded;
         return this;
     }
 
 
+    /**
+     * The Yelp URL of the company
+     */
     public EnrichCompany withYelpUrl(@Nullable String yelpUrl) {
         this.yelpUrl = yelpUrl;
         return this;
     }
 
 
+    /**
+     * The Youtube URL of the company
+     */
     public EnrichCompany withYoutubeUrl(@Nullable String youtubeUrl) {
         this.youtubeUrl = youtubeUrl;
         return this;
@@ -674,96 +874,153 @@ public class EnrichCompany {
             return this;
         }
 
+        /**
+         * The Alexa rank of the company
+         */
         public Builder alexaRank(@Nullable Double alexaRank) {
             this.alexaRank = alexaRank;
             return this;
         }
 
+        /**
+         * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The Crunchbase URL of the company
+         */
         public Builder crunchbaseUrl(@Nullable String crunchbaseUrl) {
             this.crunchbaseUrl = crunchbaseUrl;
             return this;
         }
 
+        /**
+         * The description of the company
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The webmail domain of the company
+         */
         public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
+        /**
+         * The number of employees at the company
+         */
         public Builder employees(@Nullable String employees) {
             this.employees = employees;
             return this;
         }
 
+        /**
+         * The public exchange of the company (eg. NASDAQ)
+         */
         public Builder exchange(@Nullable String exchange) {
             this.exchange = exchange;
             return this;
         }
 
+        /**
+         * The Facebook URL of the company
+         */
         public Builder facebookUrl(@Nullable String facebookUrl) {
             this.facebookUrl = facebookUrl;
             return this;
         }
 
+        /**
+         * Unique identifier for this company object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The industry of the company
+         */
         public Builder industry(@Nullable String industry) {
             this.industry = industry;
             return this;
         }
 
+        /**
+         * The Crunchbase URL of the company
+         */
         public Builder instagramUrl(@Nullable String instagramUrl) {
             this.instagramUrl = instagramUrl;
             return this;
         }
 
+        /**
+         * The LinkedIn URL of the company
+         */
         public Builder linkedinUrl(@Nullable String linkedinUrl) {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
 
+        /**
+         * The URL of the logo of the company
+         */
         public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
         }
 
+        /**
+         * The NAICS code of the company
+         */
         public Builder naicsCode(@Nullable Double naicsCode) {
             this.naicsCode = naicsCode;
             return this;
         }
 
+        /**
+         * The name of the company
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this company
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The approximate revenue of the company
+         */
         public Builder revenue(@Nullable String revenue) {
             this.revenue = revenue;
             return this;
         }
 
+        /**
+         * The SIC code of the company
+         */
         public Builder sicCode(@Nullable Double sicCode) {
             this.sicCode = sicCode;
             return this;
         }
 
+        /**
+         * The stock ticker of the company (eg. AMZN)
+         */
         public Builder stock(@Nullable String stock) {
             this.stock = stock;
             return this;
@@ -777,31 +1034,49 @@ public class EnrichCompany {
             return this;
         }
 
+        /**
+         * The twitter handle of the company
+         */
         public Builder twitterHandle(@Nullable String twitterHandle) {
             this.twitterHandle = twitterHandle;
             return this;
         }
 
+        /**
+         * The twitter URL of the company
+         */
         public Builder twitterUrl(@Nullable String twitterUrl) {
             this.twitterUrl = twitterUrl;
             return this;
         }
 
+        /**
+         * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The year that the company was founded
+         */
         public Builder yearFounded(@Nullable Double yearFounded) {
             this.yearFounded = yearFounded;
             return this;
         }
 
+        /**
+         * The Yelp URL of the company
+         */
         public Builder yelpUrl(@Nullable String yelpUrl) {
             this.yelpUrl = yelpUrl;
             return this;
         }
 
+        /**
+         * The Youtube URL of the company
+         */
         public Builder youtubeUrl(@Nullable String youtubeUrl) {
             this.youtubeUrl = youtubeUrl;
             return this;

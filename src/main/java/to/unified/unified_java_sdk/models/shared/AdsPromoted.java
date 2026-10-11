@@ -36,7 +36,9 @@ public class AdsPromoted {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Promoted entity types for ads_promoted list endpoint
+     */
     @JsonProperty("type")
     private AdsPromotedType type;
 
@@ -73,6 +75,9 @@ public class AdsPromoted {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Promoted entity types for ads_promoted list endpoint
+     */
     public AdsPromotedType type() {
         return this.type;
     }
@@ -100,6 +105,9 @@ public class AdsPromoted {
     }
 
 
+    /**
+     * Promoted entity types for ads_promoted list endpoint
+     */
     public AdsPromoted withType(@Nonnull AdsPromotedType type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
@@ -168,6 +176,9 @@ public class AdsPromoted {
             return this;
         }
 
+        /**
+         * Promoted entity types for ads_promoted list endpoint
+         */
         public Builder type(@Nonnull AdsPromotedType type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;

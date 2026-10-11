@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingVendorcredit {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -47,12 +49,16 @@ public class AccountingVendorcredit {
     @JsonProperty("bill_id")
     private String billId;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -62,7 +68,9 @@ public class AccountingVendorcredit {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
@@ -92,7 +100,9 @@ public class AccountingVendorcredit {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
@@ -112,7 +122,9 @@ public class AccountingVendorcredit {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -169,6 +181,9 @@ public class AccountingVendorcredit {
             null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -192,10 +207,16 @@ public class AccountingVendorcredit {
         return Optional.ofNullable(this.billId);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -204,6 +225,9 @@ public class AccountingVendorcredit {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
@@ -228,6 +252,9 @@ public class AccountingVendorcredit {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
@@ -244,6 +271,9 @@ public class AccountingVendorcredit {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -253,6 +283,9 @@ public class AccountingVendorcredit {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingVendorcredit withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -286,12 +319,18 @@ public class AccountingVendorcredit {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingVendorcredit withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingVendorcredit withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -304,6 +343,9 @@ public class AccountingVendorcredit {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingVendorcredit withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -340,6 +382,9 @@ public class AccountingVendorcredit {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingVendorcredit withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -364,6 +409,9 @@ public class AccountingVendorcredit {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingVendorcredit withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -482,6 +530,9 @@ public class AccountingVendorcredit {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -510,11 +561,17 @@ public class AccountingVendorcredit {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -525,6 +582,9 @@ public class AccountingVendorcredit {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
@@ -555,6 +615,9 @@ public class AccountingVendorcredit {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -575,6 +638,9 @@ public class AccountingVendorcredit {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

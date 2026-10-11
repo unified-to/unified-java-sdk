@@ -39,7 +39,9 @@ public class AnalyticsEvent {
     @JsonProperty("country_code")
     private String countryCode;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -94,7 +96,9 @@ public class AnalyticsEvent {
     @JsonProperty("page_url")
     private String pageUrl;
 
-
+    /**
+     * points to AnalyticsProperty
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_id")
     private String propertyId;
@@ -109,12 +113,16 @@ public class AnalyticsEvent {
     @JsonProperty("region")
     private String region;
 
-
+    /**
+     * points to AnalyticsSession
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_id")
     private String sessionId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,7 +157,9 @@ public class AnalyticsEvent {
     @JsonProperty("value")
     private Double value;
 
-
+    /**
+     * points to AnalyticsVisitor
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitor_id")
     private String visitorId;
@@ -240,6 +250,9 @@ public class AnalyticsEvent {
         return Optional.ofNullable(this.countryCode);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -284,6 +297,9 @@ public class AnalyticsEvent {
         return Optional.ofNullable(this.pageUrl);
     }
 
+    /**
+     * points to AnalyticsProperty
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -296,10 +312,16 @@ public class AnalyticsEvent {
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * points to AnalyticsSession
+     */
     public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -328,6 +350,9 @@ public class AnalyticsEvent {
         return Optional.ofNullable(this.value);
     }
 
+    /**
+     * points to AnalyticsVisitor
+     */
     public Optional<String> visitorId() {
         return Optional.ofNullable(this.visitorId);
     }
@@ -361,6 +386,9 @@ public class AnalyticsEvent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -427,6 +455,9 @@ public class AnalyticsEvent {
     }
 
 
+    /**
+     * points to AnalyticsProperty
+     */
     public AnalyticsEvent withPropertyId(@Nullable String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -445,12 +476,18 @@ public class AnalyticsEvent {
     }
 
 
+    /**
+     * points to AnalyticsSession
+     */
     public AnalyticsEvent withSessionId(@Nullable String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsEvent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -493,6 +530,9 @@ public class AnalyticsEvent {
     }
 
 
+    /**
+     * points to AnalyticsVisitor
+     */
     public AnalyticsEvent withVisitorId(@Nullable String visitorId) {
         this.visitorId = visitorId;
         return this;
@@ -665,6 +705,9 @@ public class AnalyticsEvent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -720,6 +763,9 @@ public class AnalyticsEvent {
             return this;
         }
 
+        /**
+         * points to AnalyticsProperty
+         */
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
@@ -735,11 +781,17 @@ public class AnalyticsEvent {
             return this;
         }
 
+        /**
+         * points to AnalyticsSession
+         */
         public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -775,6 +827,9 @@ public class AnalyticsEvent {
             return this;
         }
 
+        /**
+         * points to AnalyticsVisitor
+         */
         public Builder visitorId(@Nullable String visitorId) {
             this.visitorId = visitorId;
             return this;

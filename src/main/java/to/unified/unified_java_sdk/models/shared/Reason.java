@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Reason
+ * 
+ * <p>Why the refund was issued
+ */
 public class Reason {
 
     public static final Reason DUPLICATE = new Reason("DUPLICATE");

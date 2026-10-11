@@ -19,12 +19,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GenaiPrompt {
+    /**
+     * One answer per question, matched by id.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("answers")
+    private List<GenaiAnswer> answers;
 
+    /**
+     * a float between 0-1
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
     private Double maxTokens;
 
-
+    /**
+     * OAuth Bearer token for MCP servers that require authentication.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_authorization_token")
     private String mcpAuthorizationToken;
@@ -34,7 +45,10 @@ public class GenaiPrompt {
     @JsonProperty("mcp_deferred_tools")
     private List<String> mcpDeferredTools;
 
-
+    /**
+     * Supply a remote MCP URL to send to the LLM API for it to call its tools. Note: Some LLM APIs do not
+     * yet support remote MCP URLs.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_url")
     private String mcpUrl;
@@ -49,6 +63,13 @@ public class GenaiPrompt {
     @JsonProperty("model_id")
     private String modelId;
 
+    /**
+     * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("questions")
+    private List<GenaiQuestion> questions;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -59,7 +80,16 @@ public class GenaiPrompt {
     @JsonProperty("responses")
     private List<String> responses;
 
+    /**
+     * ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skill_ids")
+    private List<String> skillIds;
 
+    /**
+     * 0-1
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     private Double temperature;
@@ -71,24 +101,30 @@ public class GenaiPrompt {
 
     @JsonCreator
     public GenaiPrompt(
+            @JsonProperty("answers") @Nullable List<GenaiAnswer> answers,
             @JsonProperty("max_tokens") @Nullable Double maxTokens,
             @JsonProperty("mcp_authorization_token") @Nullable String mcpAuthorizationToken,
             @JsonProperty("mcp_deferred_tools") @Nullable List<String> mcpDeferredTools,
             @JsonProperty("mcp_url") @Nullable String mcpUrl,
             @JsonProperty("messages") @Nullable List<GenaiContent> messages,
             @JsonProperty("model_id") @Nullable String modelId,
+            @JsonProperty("questions") @Nullable List<GenaiQuestion> questions,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("responses") @Nullable List<String> responses,
+            @JsonProperty("skill_ids") @Nullable List<String> skillIds,
             @JsonProperty("temperature") @Nullable Double temperature,
             @JsonProperty("tokens_used") @Nullable Double tokensUsed) {
+        this.answers = answers;
         this.maxTokens = maxTokens;
         this.mcpAuthorizationToken = mcpAuthorizationToken;
         this.mcpDeferredTools = mcpDeferredTools;
         this.mcpUrl = mcpUrl;
         this.messages = messages;
         this.modelId = modelId;
+        this.questions = questions;
         this.raw = raw;
         this.responses = responses;
+        this.skillIds = skillIds;
         this.temperature = temperature;
         this.tokensUsed = tokensUsed;
     }
@@ -97,13 +133,27 @@ public class GenaiPrompt {
         this(null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null);
     }
 
+    /**
+     * One answer per question, matched by id.
+     */
+    public Optional<List<GenaiAnswer>> answers() {
+        return Optional.ofNullable(this.answers);
+    }
+
+    /**
+     * a float between 0-1
+     */
     public Optional<Double> maxTokens() {
         return Optional.ofNullable(this.maxTokens);
     }
 
+    /**
+     * OAuth Bearer token for MCP servers that require authentication.
+     */
     public Optional<String> mcpAuthorizationToken() {
         return Optional.ofNullable(this.mcpAuthorizationToken);
     }
@@ -112,6 +162,10 @@ public class GenaiPrompt {
         return Optional.ofNullable(this.mcpDeferredTools);
     }
 
+    /**
+     * Supply a remote MCP URL to send to the LLM API for it to call its tools. Note: Some LLM APIs do not
+     * yet support remote MCP URLs.
+     */
     public Optional<String> mcpUrl() {
         return Optional.ofNullable(this.mcpUrl);
     }
@@ -124,6 +178,13 @@ public class GenaiPrompt {
         return Optional.ofNullable(this.modelId);
     }
 
+    /**
+     * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+     */
+    public Optional<List<GenaiQuestion>> questions() {
+        return Optional.ofNullable(this.questions);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -132,6 +193,16 @@ public class GenaiPrompt {
         return Optional.ofNullable(this.responses);
     }
 
+    /**
+     * ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+     */
+    public Optional<List<String>> skillIds() {
+        return Optional.ofNullable(this.skillIds);
+    }
+
+    /**
+     * 0-1
+     */
     public Optional<Double> temperature() {
         return Optional.ofNullable(this.temperature);
     }
@@ -145,12 +216,27 @@ public class GenaiPrompt {
     }
 
 
+    /**
+     * One answer per question, matched by id.
+     */
+    public GenaiPrompt withAnswers(@Nullable List<GenaiAnswer> answers) {
+        this.answers = answers;
+        return this;
+    }
+
+
+    /**
+     * a float between 0-1
+     */
     public GenaiPrompt withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
         return this;
     }
 
 
+    /**
+     * OAuth Bearer token for MCP servers that require authentication.
+     */
     public GenaiPrompt withMcpAuthorizationToken(@Nullable String mcpAuthorizationToken) {
         this.mcpAuthorizationToken = mcpAuthorizationToken;
         return this;
@@ -163,6 +249,10 @@ public class GenaiPrompt {
     }
 
 
+    /**
+     * Supply a remote MCP URL to send to the LLM API for it to call its tools. Note: Some LLM APIs do not
+     * yet support remote MCP URLs.
+     */
     public GenaiPrompt withMcpUrl(@Nullable String mcpUrl) {
         this.mcpUrl = mcpUrl;
         return this;
@@ -181,6 +271,15 @@ public class GenaiPrompt {
     }
 
 
+    /**
+     * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+     */
+    public GenaiPrompt withQuestions(@Nullable List<GenaiQuestion> questions) {
+        this.questions = questions;
+        return this;
+    }
+
+
     public GenaiPrompt withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -193,6 +292,18 @@ public class GenaiPrompt {
     }
 
 
+    /**
+     * ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+     */
+    public GenaiPrompt withSkillIds(@Nullable List<String> skillIds) {
+        this.skillIds = skillIds;
+        return this;
+    }
+
+
+    /**
+     * 0-1
+     */
     public GenaiPrompt withTemperature(@Nullable Double temperature) {
         this.temperature = temperature;
         return this;
@@ -215,14 +326,17 @@ public class GenaiPrompt {
         }
         GenaiPrompt other = (GenaiPrompt) o;
         return 
+            Utils.enhancedDeepEquals(this.answers, other.answers) &&
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
             Utils.enhancedDeepEquals(this.mcpAuthorizationToken, other.mcpAuthorizationToken) &&
             Utils.enhancedDeepEquals(this.mcpDeferredTools, other.mcpDeferredTools) &&
             Utils.enhancedDeepEquals(this.mcpUrl, other.mcpUrl) &&
             Utils.enhancedDeepEquals(this.messages, other.messages) &&
             Utils.enhancedDeepEquals(this.modelId, other.modelId) &&
+            Utils.enhancedDeepEquals(this.questions, other.questions) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.responses, other.responses) &&
+            Utils.enhancedDeepEquals(this.skillIds, other.skillIds) &&
             Utils.enhancedDeepEquals(this.temperature, other.temperature) &&
             Utils.enhancedDeepEquals(this.tokensUsed, other.tokensUsed);
     }
@@ -230,29 +344,35 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            maxTokens, mcpAuthorizationToken, mcpDeferredTools,
-            mcpUrl, messages, modelId,
-            raw, responses, temperature,
+            answers, maxTokens, mcpAuthorizationToken,
+            mcpDeferredTools, mcpUrl, messages,
+            modelId, questions, raw,
+            responses, skillIds, temperature,
             tokensUsed);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiPrompt.class,
+                "answers", answers,
                 "maxTokens", maxTokens,
                 "mcpAuthorizationToken", mcpAuthorizationToken,
                 "mcpDeferredTools", mcpDeferredTools,
                 "mcpUrl", mcpUrl,
                 "messages", messages,
                 "modelId", modelId,
+                "questions", questions,
                 "raw", raw,
                 "responses", responses,
+                "skillIds", skillIds,
                 "temperature", temperature,
                 "tokensUsed", tokensUsed);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private List<GenaiAnswer> answers;
 
         private Double maxTokens;
 
@@ -266,9 +386,13 @@ public class GenaiPrompt {
 
         private String modelId;
 
+        private List<GenaiQuestion> questions;
+
         private Map<String, Object> raw;
 
         private List<String> responses;
+
+        private List<String> skillIds;
 
         private Double temperature;
 
@@ -278,11 +402,25 @@ public class GenaiPrompt {
           // force use of static builder() method
         }
 
+        /**
+         * One answer per question, matched by id.
+         */
+        public Builder answers(@Nullable List<GenaiAnswer> answers) {
+            this.answers = answers;
+            return this;
+        }
+
+        /**
+         * a float between 0-1
+         */
         public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
             return this;
         }
 
+        /**
+         * OAuth Bearer token for MCP servers that require authentication.
+         */
         public Builder mcpAuthorizationToken(@Nullable String mcpAuthorizationToken) {
             this.mcpAuthorizationToken = mcpAuthorizationToken;
             return this;
@@ -293,6 +431,10 @@ public class GenaiPrompt {
             return this;
         }
 
+        /**
+         * Supply a remote MCP URL to send to the LLM API for it to call its tools. Note: Some LLM APIs do not
+         * yet support remote MCP URLs.
+         */
         public Builder mcpUrl(@Nullable String mcpUrl) {
             this.mcpUrl = mcpUrl;
             return this;
@@ -308,6 +450,14 @@ public class GenaiPrompt {
             return this;
         }
 
+        /**
+         * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+         */
+        public Builder questions(@Nullable List<GenaiQuestion> questions) {
+            this.questions = questions;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -318,6 +468,17 @@ public class GenaiPrompt {
             return this;
         }
 
+        /**
+         * ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+         */
+        public Builder skillIds(@Nullable List<String> skillIds) {
+            this.skillIds = skillIds;
+            return this;
+        }
+
+        /**
+         * 0-1
+         */
         public Builder temperature(@Nullable Double temperature) {
             this.temperature = temperature;
             return this;
@@ -330,9 +491,10 @@ public class GenaiPrompt {
 
         public GenaiPrompt build() {
             return new GenaiPrompt(
-                maxTokens, mcpAuthorizationToken, mcpDeferredTools,
-                mcpUrl, messages, modelId,
-                raw, responses, temperature,
+                answers, maxTokens, mcpAuthorizationToken,
+                mcpDeferredTools, mcpUrl, messages,
+                modelId, questions, raw,
+                responses, skillIds, temperature,
                 tokensUsed);
         }
 

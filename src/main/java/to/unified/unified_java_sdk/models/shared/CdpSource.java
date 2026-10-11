@@ -19,47 +19,65 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpSource {
-
+    /**
+     * The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * SOURCE, or BIDIRECTIONAL for import+export connectors
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     private CdpSourceDirection direction;
 
-
+    /**
+     * Unique identifier for this source object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the source is active/enabled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     private Boolean isEnabled;
 
-
+    /**
+     * The name of the inbound data source
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this source
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * A stable handle/key for the source
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The connector/source type (eg. the provider's connector slug or plugin id)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -92,38 +110,65 @@ public class CdpSource {
             null, null, null);
     }
 
+    /**
+     * The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * SOURCE, or BIDIRECTIONAL for import+export connectors
+     */
     public Optional<CdpSourceDirection> direction() {
         return Optional.ofNullable(this.direction);
     }
 
+    /**
+     * Unique identifier for this source object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the source is active/enabled
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
 
+    /**
+     * The name of the inbound data source
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this source
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * A stable handle/key for the source
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The connector/source type (eg. the provider's connector slug or plugin id)
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -133,54 +178,81 @@ public class CdpSource {
     }
 
 
+    /**
+     * The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpSource withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * SOURCE, or BIDIRECTIONAL for import+export connectors
+     */
     public CdpSource withDirection(@Nullable CdpSourceDirection direction) {
         this.direction = direction;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this source object
+     */
     public CdpSource withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the source is active/enabled
+     */
     public CdpSource withIsEnabled(@Nullable Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
 
 
+    /**
+     * The name of the inbound data source
+     */
     public CdpSource withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this source
+     */
     public CdpSource withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * A stable handle/key for the source
+     */
     public CdpSource withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The connector/source type (eg. the provider's connector slug or plugin id)
+     */
     public CdpSource withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpSource withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -255,46 +327,73 @@ public class CdpSource {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * SOURCE, or BIDIRECTIONAL for import+export connectors
+         */
         public Builder direction(@Nullable CdpSourceDirection direction) {
             this.direction = direction;
             return this;
         }
 
+        /**
+         * Unique identifier for this source object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the source is active/enabled
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * The name of the inbound data source
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this source
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * A stable handle/key for the source
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The connector/source type (eg. the provider's connector slug or plugin id)
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

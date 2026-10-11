@@ -27,12 +27,16 @@ public class CdpProfile {
     @JsonProperty("address")
     private PropertyCdpProfileAddress address;
 
-
+    /**
+     * The birth date of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdate")
     private String birthdate;
 
-
+    /**
+     * The company/organization name of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private String company;
@@ -44,27 +48,37 @@ public class CdpProfile {
     @JsonProperty("consent")
     private List<CdpConsent> consent;
 
-
+    /**
+     * The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The primary email address of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     private String email;
 
-
+    /**
+     * The first name of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * The gender of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     private CdpProfileGender gender;
 
-
+    /**
+     * Unique identifier for this profile object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -76,12 +90,16 @@ public class CdpProfile {
     @JsonProperty("identifiers")
     private List<CdpIdentifier> identifiers;
 
-
+    /**
+     * Whether the profile is anonymous (no known identity)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_anonymous")
     private Boolean isAnonymous;
 
-
+    /**
+     * The last name of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private String lastName;
@@ -93,12 +111,16 @@ public class CdpProfile {
     @JsonProperty("metadata")
     private List<CdpMetadata> metadata;
 
-
+    /**
+     * The full name of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -110,22 +132,30 @@ public class CdpProfile {
     @JsonProperty("segments")
     private List<CdpProfileSegment> segments;
 
-
+    /**
+     * The cdp_source this profile originated from; points to CdpSource
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     private String sourceId;
 
-
+    /**
+     * The primary telephone number of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     private String telephone;
 
-
+    /**
+     * The job title of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -191,10 +221,16 @@ public class CdpProfile {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * The birth date of the profile
+     */
     public Optional<String> birthdate() {
         return Optional.ofNullable(this.birthdate);
     }
 
+    /**
+     * The company/organization name of the profile
+     */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
     }
@@ -206,22 +242,37 @@ public class CdpProfile {
         return Optional.ofNullable(this.consent);
     }
 
+    /**
+     * The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The primary email address of the profile
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
 
+    /**
+     * The first name of the profile
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * The gender of the profile
+     */
     public Optional<CdpProfileGender> gender() {
         return Optional.ofNullable(this.gender);
     }
 
+    /**
+     * Unique identifier for this profile object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -233,10 +284,16 @@ public class CdpProfile {
         return Optional.ofNullable(this.identifiers);
     }
 
+    /**
+     * Whether the profile is anonymous (no known identity)
+     */
     public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
 
+    /**
+     * The last name of the profile
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -248,10 +305,16 @@ public class CdpProfile {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The full name of the profile
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this profile
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -263,18 +326,30 @@ public class CdpProfile {
         return Optional.ofNullable(this.segments);
     }
 
+    /**
+     * The cdp_source this profile originated from; points to CdpSource
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
 
+    /**
+     * The primary telephone number of the profile
+     */
     public Optional<String> telephone() {
         return Optional.ofNullable(this.telephone);
     }
 
+    /**
+     * The job title of the profile
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -293,12 +368,18 @@ public class CdpProfile {
     }
 
 
+    /**
+     * The birth date of the profile
+     */
     public CdpProfile withBirthdate(@Nullable String birthdate) {
         this.birthdate = birthdate;
         return this;
     }
 
 
+    /**
+     * The company/organization name of the profile
+     */
     public CdpProfile withCompany(@Nullable String company) {
         this.company = company;
         return this;
@@ -314,30 +395,45 @@ public class CdpProfile {
     }
 
 
+    /**
+     * The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpProfile withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The primary email address of the profile
+     */
     public CdpProfile withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
 
+    /**
+     * The first name of the profile
+     */
     public CdpProfile withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
 
+    /**
+     * The gender of the profile
+     */
     public CdpProfile withGender(@Nullable CdpProfileGender gender) {
         this.gender = gender;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this profile object
+     */
     public CdpProfile withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -353,12 +449,18 @@ public class CdpProfile {
     }
 
 
+    /**
+     * Whether the profile is anonymous (no known identity)
+     */
     public CdpProfile withIsAnonymous(@Nullable Boolean isAnonymous) {
         this.isAnonymous = isAnonymous;
         return this;
     }
 
 
+    /**
+     * The last name of the profile
+     */
     public CdpProfile withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
@@ -374,12 +476,18 @@ public class CdpProfile {
     }
 
 
+    /**
+     * The full name of the profile
+     */
     public CdpProfile withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this profile
+     */
     public CdpProfile withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -395,24 +503,36 @@ public class CdpProfile {
     }
 
 
+    /**
+     * The cdp_source this profile originated from; points to CdpSource
+     */
     public CdpProfile withSourceId(@Nullable String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
 
 
+    /**
+     * The primary telephone number of the profile
+     */
     public CdpProfile withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
     }
 
 
+    /**
+     * The job title of the profile
+     */
     public CdpProfile withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpProfile withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -543,11 +663,17 @@ public class CdpProfile {
             return this;
         }
 
+        /**
+         * The birth date of the profile
+         */
         public Builder birthdate(@Nullable String birthdate) {
             this.birthdate = birthdate;
             return this;
         }
 
+        /**
+         * The company/organization name of the profile
+         */
         public Builder company(@Nullable String company) {
             this.company = company;
             return this;
@@ -561,26 +687,41 @@ public class CdpProfile {
             return this;
         }
 
+        /**
+         * The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The primary email address of the profile
+         */
         public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
+        /**
+         * The first name of the profile
+         */
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
+        /**
+         * The gender of the profile
+         */
         public Builder gender(@Nullable CdpProfileGender gender) {
             this.gender = gender;
             return this;
         }
 
+        /**
+         * Unique identifier for this profile object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -594,11 +735,17 @@ public class CdpProfile {
             return this;
         }
 
+        /**
+         * Whether the profile is anonymous (no known identity)
+         */
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
+        /**
+         * The last name of the profile
+         */
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
@@ -612,11 +759,17 @@ public class CdpProfile {
             return this;
         }
 
+        /**
+         * The full name of the profile
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this profile
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -630,21 +783,33 @@ public class CdpProfile {
             return this;
         }
 
+        /**
+         * The cdp_source this profile originated from; points to CdpSource
+         */
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * The primary telephone number of the profile
+         */
         public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;
         }
 
+        /**
+         * The job title of the profile
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

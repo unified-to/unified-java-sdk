@@ -25,12 +25,16 @@ public class HrisLocation {
     @JsonProperty("address")
     private PropertyHrisLocationAddress address;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -60,7 +64,9 @@ public class HrisLocation {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * if this location is the headquarters of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hq")
     private Boolean isHq;
@@ -95,7 +101,9 @@ public class HrisLocation {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,10 +157,16 @@ public class HrisLocation {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -177,6 +191,9 @@ public class HrisLocation {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * if this location is the headquarters of the company
+     */
     public Optional<Boolean> isHq() {
         return Optional.ofNullable(this.isHq);
     }
@@ -205,6 +222,9 @@ public class HrisLocation {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -220,12 +240,18 @@ public class HrisLocation {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisLocation withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisLocation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -262,6 +288,9 @@ public class HrisLocation {
     }
 
 
+    /**
+     * if this location is the headquarters of the company
+     */
     public HrisLocation withIsHq(@Nullable Boolean isHq) {
         this.isHq = isHq;
         return this;
@@ -304,6 +333,9 @@ public class HrisLocation {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisLocation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -414,11 +446,17 @@ public class HrisLocation {
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -449,6 +487,9 @@ public class HrisLocation {
             return this;
         }
 
+        /**
+         * if this location is the headquarters of the company
+         */
         public Builder isHq(@Nullable Boolean isHq) {
             this.isHq = isHq;
             return this;
@@ -484,6 +525,9 @@ public class HrisLocation {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

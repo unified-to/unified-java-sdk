@@ -22,22 +22,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PerformanceReview {
-
+    /**
+     * the overall/summary comment of this review
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     private String comment;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * pointer to the Performance Cycle object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle_id")
     private String cycleId;
@@ -47,7 +55,9 @@ public class PerformanceReview {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * whether the reviewee acknowledged this review
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_acknowledged")
     private Boolean isAcknowledged;
@@ -57,17 +67,23 @@ public class PerformanceReview {
     @JsonProperty("questions")
     private List<PerformanceReviewQuestion> questions;
 
-
+    /**
+     * the overall rating/score of this review
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     private Double rating;
 
-
+    /**
+     * label of the rating on the provider's scale (e.g. "Exceeds expectations")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating_description")
     private String ratingDescription;
 
-
+    /**
+     * the maximum possible rating/score on the provider's scale
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating_maximum")
     private Double ratingMaximum;
@@ -77,7 +93,9 @@ public class PerformanceReview {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * the HR Employee that wrote this review (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewer_user_id")
     private String reviewerUserId;
@@ -87,12 +105,16 @@ public class PerformanceReview {
     @JsonProperty("status")
     private PerformanceReviewStatus status;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submitted_at")
     private OffsetDateTime submittedAt;
 
-
+    /**
+     * id of the review template/form this review is based on
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_identifier")
     private String templateIdentifier;
@@ -102,12 +124,16 @@ public class PerformanceReview {
     @JsonProperty("type")
     private PerformanceReviewType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * the HR Employee being reviewed (reference to HrisEmployee)
+     */
     @JsonProperty("user_id")
     private String userId;
 
@@ -162,18 +188,30 @@ public class PerformanceReview {
             null, null, userId);
     }
 
+    /**
+     * the overall/summary comment of this review
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * pointer to the Performance Cycle object
+     */
     public Optional<String> cycleId() {
         return Optional.ofNullable(this.cycleId);
     }
@@ -182,6 +220,9 @@ public class PerformanceReview {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * whether the reviewee acknowledged this review
+     */
     public Optional<Boolean> isAcknowledged() {
         return Optional.ofNullable(this.isAcknowledged);
     }
@@ -190,14 +231,23 @@ public class PerformanceReview {
         return Optional.ofNullable(this.questions);
     }
 
+    /**
+     * the overall rating/score of this review
+     */
     public Optional<Double> rating() {
         return Optional.ofNullable(this.rating);
     }
 
+    /**
+     * label of the rating on the provider's scale (e.g. "Exceeds expectations")
+     */
     public Optional<String> ratingDescription() {
         return Optional.ofNullable(this.ratingDescription);
     }
 
+    /**
+     * the maximum possible rating/score on the provider's scale
+     */
     public Optional<Double> ratingMaximum() {
         return Optional.ofNullable(this.ratingMaximum);
     }
@@ -206,6 +256,9 @@ public class PerformanceReview {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * the HR Employee that wrote this review (reference to HrisEmployee)
+     */
     public Optional<String> reviewerUserId() {
         return Optional.ofNullable(this.reviewerUserId);
     }
@@ -214,10 +267,16 @@ public class PerformanceReview {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> submittedAt() {
         return Optional.ofNullable(this.submittedAt);
     }
 
+    /**
+     * id of the review template/form this review is based on
+     */
     public Optional<String> templateIdentifier() {
         return Optional.ofNullable(this.templateIdentifier);
     }
@@ -226,10 +285,16 @@ public class PerformanceReview {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * the HR Employee being reviewed (reference to HrisEmployee)
+     */
     public String userId() {
         return this.userId;
     }
@@ -239,24 +304,36 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * the overall/summary comment of this review
+     */
     public PerformanceReview withComment(@Nullable String comment) {
         this.comment = comment;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceReview withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceReview withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * pointer to the Performance Cycle object
+     */
     public PerformanceReview withCycleId(@Nullable String cycleId) {
         this.cycleId = cycleId;
         return this;
@@ -269,6 +346,9 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * whether the reviewee acknowledged this review
+     */
     public PerformanceReview withIsAcknowledged(@Nullable Boolean isAcknowledged) {
         this.isAcknowledged = isAcknowledged;
         return this;
@@ -281,18 +361,27 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * the overall rating/score of this review
+     */
     public PerformanceReview withRating(@Nullable Double rating) {
         this.rating = rating;
         return this;
     }
 
 
+    /**
+     * label of the rating on the provider's scale (e.g. "Exceeds expectations")
+     */
     public PerformanceReview withRatingDescription(@Nullable String ratingDescription) {
         this.ratingDescription = ratingDescription;
         return this;
     }
 
 
+    /**
+     * the maximum possible rating/score on the provider's scale
+     */
     public PerformanceReview withRatingMaximum(@Nullable Double ratingMaximum) {
         this.ratingMaximum = ratingMaximum;
         return this;
@@ -305,6 +394,9 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * the HR Employee that wrote this review (reference to HrisEmployee)
+     */
     public PerformanceReview withReviewerUserId(@Nullable String reviewerUserId) {
         this.reviewerUserId = reviewerUserId;
         return this;
@@ -317,12 +409,18 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceReview withSubmittedAt(@Nullable OffsetDateTime submittedAt) {
         this.submittedAt = submittedAt;
         return this;
     }
 
 
+    /**
+     * id of the review template/form this review is based on
+     */
     public PerformanceReview withTemplateIdentifier(@Nullable String templateIdentifier) {
         this.templateIdentifier = templateIdentifier;
         return this;
@@ -335,12 +433,18 @@ public class PerformanceReview {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceReview withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * the HR Employee being reviewed (reference to HrisEmployee)
+     */
     public PerformanceReview withUserId(@Nonnull String userId) {
         this.userId = Utils.checkNotNull(userId, "userId");
         return this;
@@ -454,21 +558,33 @@ public class PerformanceReview {
           // force use of static builder() method
         }
 
+        /**
+         * the overall/summary comment of this review
+         */
         public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * pointer to the Performance Cycle object
+         */
         public Builder cycleId(@Nullable String cycleId) {
             this.cycleId = cycleId;
             return this;
@@ -479,6 +595,9 @@ public class PerformanceReview {
             return this;
         }
 
+        /**
+         * whether the reviewee acknowledged this review
+         */
         public Builder isAcknowledged(@Nullable Boolean isAcknowledged) {
             this.isAcknowledged = isAcknowledged;
             return this;
@@ -489,16 +608,25 @@ public class PerformanceReview {
             return this;
         }
 
+        /**
+         * the overall rating/score of this review
+         */
         public Builder rating(@Nullable Double rating) {
             this.rating = rating;
             return this;
         }
 
+        /**
+         * label of the rating on the provider's scale (e.g. "Exceeds expectations")
+         */
         public Builder ratingDescription(@Nullable String ratingDescription) {
             this.ratingDescription = ratingDescription;
             return this;
         }
 
+        /**
+         * the maximum possible rating/score on the provider's scale
+         */
         public Builder ratingMaximum(@Nullable Double ratingMaximum) {
             this.ratingMaximum = ratingMaximum;
             return this;
@@ -509,6 +637,9 @@ public class PerformanceReview {
             return this;
         }
 
+        /**
+         * the HR Employee that wrote this review (reference to HrisEmployee)
+         */
         public Builder reviewerUserId(@Nullable String reviewerUserId) {
             this.reviewerUserId = reviewerUserId;
             return this;
@@ -519,11 +650,17 @@ public class PerformanceReview {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder submittedAt(@Nullable OffsetDateTime submittedAt) {
             this.submittedAt = submittedAt;
             return this;
         }
 
+        /**
+         * id of the review template/form this review is based on
+         */
         public Builder templateIdentifier(@Nullable String templateIdentifier) {
             this.templateIdentifier = templateIdentifier;
             return this;
@@ -534,11 +671,17 @@ public class PerformanceReview {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * the HR Employee being reviewed (reference to HrisEmployee)
+         */
         public Builder userId(@Nonnull String userId) {
             this.userId = Utils.checkNotNull(userId, "userId");
             return this;

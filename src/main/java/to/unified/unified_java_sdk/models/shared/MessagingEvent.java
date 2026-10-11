@@ -29,12 +29,16 @@ public class MessagingEvent {
     @JsonProperty("channel")
     private PropertyMessagingEventChannel channel;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * not used
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -100,10 +104,16 @@ public class MessagingEvent {
         return Optional.ofNullable(this.channel);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * not used
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -145,12 +155,18 @@ public class MessagingEvent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MessagingEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * not used
+     */
     public MessagingEvent withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -265,11 +281,17 @@ public class MessagingEvent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * not used
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;

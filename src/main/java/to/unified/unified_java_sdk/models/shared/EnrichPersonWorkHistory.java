@@ -22,7 +22,9 @@ public class EnrichPersonWorkHistory {
     @JsonProperty("company_domain")
     private String companyDomain;
 
-
+    /**
+     * (reference to EnrichCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -32,7 +34,9 @@ public class EnrichPersonWorkHistory {
     @JsonProperty("company_name")
     private String companyName;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -42,7 +46,9 @@ public class EnrichPersonWorkHistory {
     @JsonProperty("location")
     private String location;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -81,6 +87,9 @@ public class EnrichPersonWorkHistory {
         return Optional.ofNullable(this.companyDomain);
     }
 
+    /**
+     * (reference to EnrichCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -89,6 +98,9 @@ public class EnrichPersonWorkHistory {
         return Optional.ofNullable(this.companyName);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -97,6 +109,9 @@ public class EnrichPersonWorkHistory {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -116,6 +131,9 @@ public class EnrichPersonWorkHistory {
     }
 
 
+    /**
+     * (reference to EnrichCompany)
+     */
     public EnrichPersonWorkHistory withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -128,6 +146,9 @@ public class EnrichPersonWorkHistory {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichPersonWorkHistory withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -140,6 +161,9 @@ public class EnrichPersonWorkHistory {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public EnrichPersonWorkHistory withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -217,6 +241,9 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+        /**
+         * (reference to EnrichCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -227,6 +254,9 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -237,6 +267,9 @@ public class EnrichPersonWorkHistory {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;

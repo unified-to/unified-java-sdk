@@ -23,12 +23,16 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>A member represents a person
  */
 public class MarketingMember {
-
+    /**
+     * The name of the company/organization the member belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private String company;
 
-
+    /**
+     * The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -45,7 +49,9 @@ public class MarketingMember {
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * Unique identifier for this member object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -62,12 +68,16 @@ public class MarketingMember {
     @JsonProperty("list_ids")
     private List<String> listIds;
 
-
+    /**
+     * The name of the member
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this member
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -84,7 +94,9 @@ public class MarketingMember {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -124,10 +136,16 @@ public class MarketingMember {
             null, null, null);
     }
 
+    /**
+     * The name of the company/organization the member belongs to
+     */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
     }
 
+    /**
+     * The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -143,6 +161,9 @@ public class MarketingMember {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * Unique identifier for this member object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -158,10 +179,16 @@ public class MarketingMember {
         return Optional.ofNullable(this.listIds);
     }
 
+    /**
+     * The name of the member
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this member
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -177,6 +204,9 @@ public class MarketingMember {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -186,12 +216,18 @@ public class MarketingMember {
     }
 
 
+    /**
+     * The name of the company/organization the member belongs to
+     */
     public MarketingMember withCompany(@Nullable String company) {
         this.company = company;
         return this;
     }
 
 
+    /**
+     * The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingMember withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -213,6 +249,9 @@ public class MarketingMember {
     }
 
 
+    /**
+     * Unique identifier for this member object
+     */
     public MarketingMember withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -234,12 +273,18 @@ public class MarketingMember {
     }
 
 
+    /**
+     * The name of the member
+     */
     public MarketingMember withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this member
+     */
     public MarketingMember withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -261,6 +306,9 @@ public class MarketingMember {
     }
 
 
+    /**
+     * The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingMember withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -348,11 +396,17 @@ public class MarketingMember {
           // force use of static builder() method
         }
 
+        /**
+         * The name of the company/organization the member belongs to
+         */
         public Builder company(@Nullable String company) {
             this.company = company;
             return this;
         }
 
+        /**
+         * The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -371,6 +425,9 @@ public class MarketingMember {
             return this;
         }
 
+        /**
+         * Unique identifier for this member object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -389,11 +446,17 @@ public class MarketingMember {
             return this;
         }
 
+        /**
+         * The name of the member
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this member
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -412,6 +475,9 @@ public class MarketingMember {
             return this;
         }
 
+        /**
+         * The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

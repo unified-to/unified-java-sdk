@@ -45,7 +45,9 @@ public class CrmEvent {
     @JsonProperty("contact_ids")
     private List<String> contactIds;
 
-
+    /**
+     * The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -69,7 +71,9 @@ public class CrmEvent {
     @JsonProperty("form")
     private PropertyCrmEventForm form;
 
-
+    /**
+     * Unique identifier for this event object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -103,7 +107,9 @@ public class CrmEvent {
     @JsonProperty("page_view")
     private PropertyCrmEventPageView pageView;
 
-
+    /**
+     * The raw data returned by the integration for this event.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -115,17 +121,23 @@ public class CrmEvent {
     @JsonProperty("task")
     private PropertyCrmEventTask task;
 
-
+    /**
+     * The type of event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private CrmEventType type;
 
-
+    /**
+     * The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -200,6 +212,9 @@ public class CrmEvent {
         return Optional.ofNullable(this.contactIds);
     }
 
+    /**
+     * The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -222,6 +237,9 @@ public class CrmEvent {
         return Optional.ofNullable(this.form);
     }
 
+    /**
+     * Unique identifier for this event object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -252,6 +270,9 @@ public class CrmEvent {
         return Optional.ofNullable(this.pageView);
     }
 
+    /**
+     * The raw data returned by the integration for this event.
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -263,14 +284,23 @@ public class CrmEvent {
         return Optional.ofNullable(this.task);
     }
 
+    /**
+     * The type of event
+     */
     public Optional<CrmEventType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -307,6 +337,9 @@ public class CrmEvent {
     }
 
 
+    /**
+     * The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -337,6 +370,9 @@ public class CrmEvent {
     }
 
 
+    /**
+     * Unique identifier for this event object
+     */
     public CrmEvent withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -379,6 +415,9 @@ public class CrmEvent {
     }
 
 
+    /**
+     * The raw data returned by the integration for this event.
+     */
     public CrmEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -394,18 +433,27 @@ public class CrmEvent {
     }
 
 
+    /**
+     * The type of event
+     */
     public CrmEvent withType(@Nullable CrmEventType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmEvent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmEvent withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -543,6 +591,9 @@ public class CrmEvent {
             return this;
         }
 
+        /**
+         * The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -569,6 +620,9 @@ public class CrmEvent {
             return this;
         }
 
+        /**
+         * Unique identifier for this event object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -605,6 +659,9 @@ public class CrmEvent {
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this event.
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -618,16 +675,25 @@ public class CrmEvent {
             return this;
         }
 
+        /**
+         * The type of event
+         */
         public Builder type(@Nullable CrmEventType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

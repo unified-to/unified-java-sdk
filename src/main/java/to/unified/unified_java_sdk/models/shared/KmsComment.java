@@ -28,7 +28,9 @@ public class KmsComment {
     @JsonProperty("content_type")
     private ContentType contentType;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -38,7 +40,9 @@ public class KmsComment {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * (reference to KmsPage)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_id")
     private String pageId;
@@ -58,12 +62,16 @@ public class KmsComment {
     @JsonProperty("type")
     private KmsCommentType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -107,6 +115,9 @@ public class KmsComment {
         return Optional.ofNullable(this.contentType);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -115,6 +126,9 @@ public class KmsComment {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * (reference to KmsPage)
+     */
     public Optional<String> pageId() {
         return Optional.ofNullable(this.pageId);
     }
@@ -131,10 +145,16 @@ public class KmsComment {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -156,6 +176,9 @@ public class KmsComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsComment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -168,6 +191,9 @@ public class KmsComment {
     }
 
 
+    /**
+     * (reference to KmsPage)
+     */
     public KmsComment withPageId(@Nullable String pageId) {
         this.pageId = pageId;
         return this;
@@ -192,12 +218,18 @@ public class KmsComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsComment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public KmsComment withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -287,6 +319,9 @@ public class KmsComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -297,6 +332,9 @@ public class KmsComment {
             return this;
         }
 
+        /**
+         * (reference to KmsPage)
+         */
         public Builder pageId(@Nullable String pageId) {
             this.pageId = pageId;
             return this;
@@ -317,11 +355,17 @@ public class KmsComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

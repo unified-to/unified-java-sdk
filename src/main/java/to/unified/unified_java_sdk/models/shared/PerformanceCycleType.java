@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PerformanceCycleType
+ * 
+ * <p>whether this is a review cycle or a goal cycle/timeframe
+ */
 public class PerformanceCycleType {
 
     public static final PerformanceCycleType REVIEW = new PerformanceCycleType("REVIEW");

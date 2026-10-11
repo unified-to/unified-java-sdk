@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The note object, when type = note
  */
 public class PropertyCrmEventNote {
-
+    /**
+     * The event note's description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -41,6 +43,9 @@ public class PropertyCrmEventNote {
         this(null, null);
     }
 
+    /**
+     * The event note's description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +59,9 @@ public class PropertyCrmEventNote {
     }
 
 
+    /**
+     * The event note's description
+     */
     public PropertyCrmEventNote withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -104,6 +112,9 @@ public class PropertyCrmEventNote {
           // force use of static builder() method
         }
 
+        /**
+         * The event note's description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ReturnType
+ * 
+ * <p>Type of return
+ */
 public class ReturnType {
 
     public static final ReturnType CUSTOMER = new ReturnType("CUSTOMER");

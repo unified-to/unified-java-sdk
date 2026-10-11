@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.17'
+implementation 'to.unified:unified-java-sdk:0.49.18'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.17</version>
+    <version>0.49.18</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -115,7 +115,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -162,7 +162,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -178,7 +178,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -233,6 +233,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [createAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
 * [createAccountingExpense](docs/sdks/accounting/README.md#createaccountingexpense) - Create an expense
+* [createAccountingExpensereport](docs/sdks/accounting/README.md#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
@@ -256,6 +257,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [getAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
 * [getAccountingExpense](docs/sdks/accounting/README.md#getaccountingexpense) - Retrieve an expense
+* [getAccountingExpensereport](docs/sdks/accounting/README.md#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
@@ -264,8 +266,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
 * [getAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [getAccountingPurchasereceipt](docs/sdks/accounting/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [getAccountingQuote](docs/sdks/accounting/README.md#getaccountingquote) - Retrieve a quote
 * [getAccountingSalesorder](docs/sdks/accounting/README.md#getaccountingsalesorder) - Retrieve a salesorder
+* [getAccountingSalesreceipt](docs/sdks/accounting/README.md#getaccountingsalesreceipt) - Retrieve a salesreceipt
 * [getAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [getAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [getAccountingTrialbalance](docs/sdks/accounting/README.md#getaccountingtrialbalance) - Retrieve a trialbalance
@@ -281,6 +285,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [listAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [listAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
+* [listAccountingExpensereports](docs/sdks/accounting/README.md#listaccountingexpensereports) - List all expensereports
 * [listAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
@@ -290,8 +295,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
 * [listAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
+* [listAccountingPurchasereceipts](docs/sdks/accounting/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
 * [listAccountingQuotes](docs/sdks/accounting/README.md#listaccountingquotes) - List all quotes
 * [listAccountingSalesorders](docs/sdks/accounting/README.md#listaccountingsalesorders) - List all salesorders
+* [listAccountingSalesreceipts](docs/sdks/accounting/README.md#listaccountingsalesreceipts) - List all salesreceipts
 * [listAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [listAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [listAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
@@ -304,6 +311,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [patchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
 * [patchAccountingExpense](docs/sdks/accounting/README.md#patchaccountingexpense) - Update an expense
+* [patchAccountingExpensereport](docs/sdks/accounting/README.md#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
@@ -323,6 +331,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [removeAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
 * [removeAccountingExpense](docs/sdks/accounting/README.md#removeaccountingexpense) - Remove an expense
+* [removeAccountingExpensereport](docs/sdks/accounting/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
@@ -342,6 +351,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [updateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
 * [updateAccountingExpense](docs/sdks/accounting/README.md#updateaccountingexpense) - Update an expense
+* [updateAccountingExpensereport](docs/sdks/accounting/README.md#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
@@ -492,6 +502,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
+* [getAtsApplicationstatus](docs/sdks/applicationstatus/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -525,6 +536,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
 * [getAtsActivity](docs/sdks/ats/README.md#getatsactivity) - Retrieve an activity
 * [getAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
+* [getAtsApplicationstatus](docs/sdks/ats/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [getAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
 * [getAtsCompany](docs/sdks/ats/README.md#getatscompany) - Retrieve a company
 * [getAtsDocument](docs/sdks/ats/README.md#getatsdocument) - Retrieve a document
@@ -576,7 +588,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Auth](docs/sdks/auth/README.md)
 
-* [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 * [getUnifiedIntegrationSaml](docs/sdks/auth/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
@@ -928,6 +940,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Connection](docs/sdks/connection/README.md)
 
 * [createUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](docs/sdks/connection/README.md#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [getUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
 * [listUnifiedConnections](docs/sdks/connection/README.md#listunifiedconnections) - List all connections
 * [patchUnifiedConnection](docs/sdks/connection/README.md#patchunifiedconnection) - Update connection
@@ -1133,6 +1146,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [updateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
+### [Earning](docs/sdks/earning/README.md)
+
+* [createHrisEarning](docs/sdks/earning/README.md#createhrisearning) - Create an earning
+* [getHrisEarning](docs/sdks/earning/README.md#gethrisearning) - Retrieve an earning
+* [listHrisEarnings](docs/sdks/earning/README.md#listhrisearnings) - List all earnings
+* [patchHrisEarning](docs/sdks/earning/README.md#patchhrisearning) - Update an earning
+* [removeHrisEarning](docs/sdks/earning/README.md#removehrisearning) - Remove an earning
+* [updateHrisEarning](docs/sdks/earning/README.md#updatehrisearning) - Update an earning
+
 ### [Embedding](docs/sdks/embedding/README.md)
 
 * [createGenaiEmbedding](docs/sdks/embedding/README.md#creategenaiembedding) - Create an embedding
@@ -1194,6 +1216,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
 * [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
+### [Expensereport](docs/sdks/expensereport/README.md)
+
+* [createAccountingExpensereport](docs/sdks/expensereport/README.md#createaccountingexpensereport) - Create an expensereport
+* [getAccountingExpensereport](docs/sdks/expensereport/README.md#getaccountingexpensereport) - Retrieve an expensereport
+* [listAccountingExpensereports](docs/sdks/expensereport/README.md#listaccountingexpensereports) - List all expensereports
+* [patchAccountingExpensereport](docs/sdks/expensereport/README.md#patchaccountingexpensereport) - Update an expensereport
+* [removeAccountingExpensereport](docs/sdks/expensereport/README.md#removeaccountingexpensereport) - Remove an expensereport
+* [updateAccountingExpensereport](docs/sdks/expensereport/README.md#updateaccountingexpensereport) - Update an expensereport
+
 ### [Feedback](docs/sdks/feedback/README.md)
 
 * [createPerformanceFeedback](docs/sdks/feedback/README.md#createperformancefeedback) - Create a feedback
@@ -1239,18 +1270,23 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getGenaiAgent](docs/sdks/genai/README.md#getgenaiagent) - Retrieve an agent
 * [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](docs/sdks/genai/README.md#getgenaiorganization) - Retrieve an organization
+* [getGenaiSkill](docs/sdks/genai/README.md#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](docs/sdks/genai/README.md#getgenaitask) - Retrieve a task
 * [listGenaiAgents](docs/sdks/genai/README.md#listgenaiagents) - List all agents
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 * [listGenaiOrganizations](docs/sdks/genai/README.md#listgenaiorganizations) - List all organizations
+* [listGenaiSkills](docs/sdks/genai/README.md#listgenaiskills) - List all skills
 * [listGenaiTasks](docs/sdks/genai/README.md#listgenaitasks) - List all tasks
 * [patchGenaiAgent](docs/sdks/genai/README.md#patchgenaiagent) - Update an agent
 * [patchGenaiOrganization](docs/sdks/genai/README.md#patchgenaiorganization) - Update an organization
+* [patchGenaiTask](docs/sdks/genai/README.md#patchgenaitask) - Update a task
 * [removeGenaiAgent](docs/sdks/genai/README.md#removegenaiagent) - Remove an agent
 * [removeGenaiOrganization](docs/sdks/genai/README.md#removegenaiorganization) - Remove an organization
+* [removeGenaiSkill](docs/sdks/genai/README.md#removegenaiskill) - Remove a skill
 * [removeGenaiTask](docs/sdks/genai/README.md#removegenaitask) - Remove a task
 * [updateGenaiAgent](docs/sdks/genai/README.md#updategenaiagent) - Update an agent
 * [updateGenaiOrganization](docs/sdks/genai/README.md#updategenaiorganization) - Update an organization
+* [updateGenaiTask](docs/sdks/genai/README.md#updategenaitask) - Update a task
 
 ### [Goal](docs/sdks/goal/README.md)
 
@@ -1293,8 +1329,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [createHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
 * [createHrisDocument](docs/sdks/hris/README.md#createhrisdocument) - Create a document
+* [createHrisEarning](docs/sdks/hris/README.md#createhrisearning) - Create an earning
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [createHrisJob](docs/sdks/hris/README.md#createhrisjob) - Create a job
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [createHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
@@ -1306,9 +1344,13 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [getHrisDocument](docs/sdks/hris/README.md#gethrisdocument) - Retrieve a document
+* [getHrisEarning](docs/sdks/hris/README.md#gethrisearning) - Retrieve an earning
 * [getHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [getHrisJob](docs/sdks/hris/README.md#gethrisjob) - Retrieve a job
 * [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
+* [getHrisPaycode](docs/sdks/hris/README.md#gethrispaycode) - Retrieve a paycode
+* [getHrisPayroll](docs/sdks/hris/README.md#gethrispayroll) - Retrieve a payroll
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
@@ -1320,9 +1362,13 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [listHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [listHrisDocuments](docs/sdks/hris/README.md#listhrisdocuments) - List all documents
+* [listHrisEarnings](docs/sdks/hris/README.md#listhrisearnings) - List all earnings
 * [listHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [listHrisJobs](docs/sdks/hris/README.md#listhrisjobs) - List all jobs
 * [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
+* [listHrisPaycodes](docs/sdks/hris/README.md#listhrispaycodes) - List all paycodes
+* [listHrisPayrolls](docs/sdks/hris/README.md#listhrispayrolls) - List all payrolls
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
@@ -1334,8 +1380,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [patchHrisDocument](docs/sdks/hris/README.md#patchhrisdocument) - Update a document
+* [patchHrisEarning](docs/sdks/hris/README.md#patchhrisearning) - Update an earning
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [patchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
@@ -1346,8 +1394,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [removeHrisDocument](docs/sdks/hris/README.md#removehrisdocument) - Remove a document
+* [removeHrisEarning](docs/sdks/hris/README.md#removehrisearning) - Remove an earning
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [removeHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
@@ -1358,8 +1408,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [updateHrisDocument](docs/sdks/hris/README.md#updatehrisdocument) - Update a document
+* [updateHrisEarning](docs/sdks/hris/README.md#updatehrisearning) - Update an earning
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
+* [updateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
@@ -1389,7 +1441,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Integration](docs/sdks/integration/README.md)
 
-* [getUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [listUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
@@ -1446,11 +1498,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Job](docs/sdks/job/README.md)
 
 * [createAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
+* [createHrisJob](docs/sdks/job/README.md#createhrisjob) - Create a job
 * [getAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
+* [getHrisJob](docs/sdks/job/README.md#gethrisjob) - Retrieve a job
 * [listAtsJobs](docs/sdks/job/README.md#listatsjobs) - List all jobs
+* [listHrisJobs](docs/sdks/job/README.md#listhrisjobs) - List all jobs
 * [patchAtsJob](docs/sdks/job/README.md#patchatsjob) - Update a job
+* [patchHrisJob](docs/sdks/job/README.md#patchhrisjob) - Update a job
 * [removeAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
+* [removeHrisJob](docs/sdks/job/README.md#removehrisjob) - Remove a job
 * [updateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
+* [updateHrisJob](docs/sdks/job/README.md#updatehrisjob) - Update a job
 
 ### [Journal](docs/sdks/journal/README.md)
 
@@ -1743,6 +1801,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updatePassthroughJson](docs/sdks/passthrough/README.md#updatepassthroughjson) - Passthrough PUT
 * [updatePassthroughRaw](docs/sdks/passthrough/README.md#updatepassthroughraw) - Passthrough PUT
 
+### [Paycode](docs/sdks/paycode/README.md)
+
+* [getHrisPaycode](docs/sdks/paycode/README.md#gethrispaycode) - Retrieve a paycode
+* [listHrisPaycodes](docs/sdks/paycode/README.md#listhrispaycodes) - List all paycodes
+
 ### [Payment](docs/sdks/payment/README.md)
 
 * [createPaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
@@ -1781,6 +1844,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
 * [listPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
+
+### [Payroll](docs/sdks/payroll/README.md)
+
+* [getHrisPayroll](docs/sdks/payroll/README.md#gethrispayroll) - Retrieve a payroll
+* [listHrisPayrolls](docs/sdks/payroll/README.md#listhrispayrolls) - List all payrolls
 
 ### [Payslip](docs/sdks/payslip/README.md)
 
@@ -1891,6 +1959,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
 * [removeAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [updateAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
+
+### [Purchasereceipt](docs/sdks/purchasereceipt/README.md)
+
+* [getAccountingPurchasereceipt](docs/sdks/purchasereceipt/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
+* [listAccountingPurchasereceipts](docs/sdks/purchasereceipt/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -2033,6 +2106,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingSalesorder](docs/sdks/salesorder/README.md#removeaccountingsalesorder) - Remove a salesorder
 * [updateAccountingSalesorder](docs/sdks/salesorder/README.md#updateaccountingsalesorder) - Update a salesorder
 
+### [Salesreceipt](docs/sdks/salesreceipt/README.md)
+
+* [getAccountingSalesreceipt](docs/sdks/salesreceipt/README.md#getaccountingsalesreceipt) - Retrieve a salesreceipt
+* [listAccountingSalesreceipts](docs/sdks/salesreceipt/README.md#listaccountingsalesreceipts) - List all salesreceipts
+
 ### [Saml](docs/sdks/saml/README.md)
 
 * [getUnifiedIntegrationSaml](docs/sdks/saml/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
@@ -2056,17 +2134,26 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
 * [getAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
+* [getUcScorecard](docs/sdks/scorecard/README.md#getucscorecard) - Retrieve a scorecard
 * [listAtsScorecards](docs/sdks/scorecard/README.md#listatsscorecards) - List all scorecards
+* [listUcScorecards](docs/sdks/scorecard/README.md#listucscorecards) - List all scorecards
 * [patchAtsScorecard](docs/sdks/scorecard/README.md#patchatsscorecard) - Update a scorecard
 * [removeAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
+### [Scorecardtemplate](docs/sdks/scorecardtemplate/README.md)
+
+* [getUcScorecardtemplate](docs/sdks/scorecardtemplate/README.md#getucscorecardtemplate) - Retrieve a scorecardtemplate
+* [listUcScorecardtemplates](docs/sdks/scorecardtemplate/README.md#listucscorecardtemplates) - List all scorecardtemplates
+
 ### [Secretsmanager](docs/sdks/secretsmanager/README.md)
 
-* [createUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
-* [getUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
-* [listUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
-* [removeUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
+* [createUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedsecretsmanager) - Create secrets manager
+* [getUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
+* [listUnifiedSecretsmanagerInstructions](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [listUnifiedSecretsmanagerSecrets](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [listUnifiedSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagers) - List secrets managers
+* [removeUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2136,6 +2223,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
 * [updateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
 * [updateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
+### [Skill](docs/sdks/skill/README.md)
+
+* [getGenaiSkill](docs/sdks/skill/README.md#getgenaiskill) - Retrieve a skill
+* [listGenaiSkills](docs/sdks/skill/README.md#listgenaiskills) - List all skills
+* [removeGenaiSkill](docs/sdks/skill/README.md#removegenaiskill) - Remove a skill
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2234,6 +2327,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [listTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [listTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [patchGenaiTask](docs/sdks/task/README.md#patchgenaitask) - Update a task
 * [patchTaskComment](docs/sdks/task/README.md#patchtaskcomment) - Update a comment
 * [patchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
 * [patchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
@@ -2241,6 +2335,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeTaskComment](docs/sdks/task/README.md#removetaskcomment) - Remove a comment
 * [removeTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
 * [removeTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [updateGenaiTask](docs/sdks/task/README.md#updategenaitask) - Update a task
 * [updateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
@@ -2348,10 +2443,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [getUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
 * [getUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording
+* [getUcScorecard](docs/sdks/uc/README.md#getucscorecard) - Retrieve a scorecard
+* [getUcScorecardtemplate](docs/sdks/uc/README.md#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [listUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
 * [listUcComments](docs/sdks/uc/README.md#listuccomments) - List all comments
 * [listUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
 * [listUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
+* [listUcScorecards](docs/sdks/uc/README.md#listucscorecards) - List all scorecards
+* [listUcScorecardtemplates](docs/sdks/uc/README.md#listucscorecardtemplates) - List all scorecardtemplates
 * [patchUcComment](docs/sdks/uc/README.md#patchuccomment) - Update a comment
 * [patchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
 * [patchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
@@ -2365,15 +2464,16 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Unified](docs/sdks/unified/README.md)
 
 * [createUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](docs/sdks/unified/README.md#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
+* [createUnifiedSecretsmanager](docs/sdks/unified/README.md#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
-* [createUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
-* [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
+* [getUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
-* [getUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -2381,15 +2481,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [listUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
+* [listUnifiedSecretsmanagerInstructions](docs/sdks/unified/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [listUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [listUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
-* [listUnifiedWorkspaceSecretsmanagers](docs/sdks/unified/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
-* [removeUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
@@ -2501,7 +2603,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2517,7 +2619,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2565,7 +2667,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2581,7 +2683,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2648,7 +2750,7 @@ public class Application {
                         .currency("BOB")
                         .customerDefinedCode("quo")
                         .description("Spoliatio comedo vilitas harum cupiditate.")
-                        .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                        .id("56991dac-50de-4353-86e2-c684b15fcb69")
                         .isPayable(true)
                         .name("Electronic Aluminum Tuna")
                         .status(Status.ARCHIVED)
@@ -2664,7 +2766,7 @@ public class Application {
                                 .originalType("adamo")
                                 .build()))
                         .type(Type.BANK)
-                        .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -2819,7 +2921,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("ba60921a-31d4-49c5-b2fe-50a08d9b2eec")
+                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2835,7 +2937,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T11:52:17.293Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

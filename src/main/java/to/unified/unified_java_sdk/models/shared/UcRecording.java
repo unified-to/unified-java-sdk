@@ -29,17 +29,30 @@ public class UcRecording {
     @JsonProperty("contacts")
     private List<UcContact> contacts;
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("conversation_identifier")
+    private String conversationIdentifier;
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private OffsetDateTime expiresAt;
@@ -59,7 +72,9 @@ public class UcRecording {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -69,12 +84,16 @@ public class UcRecording {
     @JsonProperty("type")
     private UcRecordingType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -98,6 +117,7 @@ public class UcRecording {
     public UcRecording(
             @JsonProperty("call_id") @Nullable String callId,
             @JsonProperty("contacts") @Nullable List<UcContact> contacts,
+            @JsonProperty("conversation_identifier") @Nullable String conversationIdentifier,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("expires_at") @Nullable OffsetDateTime expiresAt,
@@ -113,6 +133,7 @@ public class UcRecording {
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.callId = callId;
         this.contacts = contacts;
+        this.conversationIdentifier = conversationIdentifier;
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.expiresAt = expiresAt;
@@ -133,7 +154,8 @@ public class UcRecording {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> callId() {
@@ -144,14 +166,30 @@ public class UcRecording {
         return Optional.ofNullable(this.contacts);
     }
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    public Optional<String> conversationIdentifier() {
+        return Optional.ofNullable(this.conversationIdentifier);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> expiresAt() {
         return Optional.ofNullable(this.expiresAt);
     }
@@ -168,6 +206,9 @@ public class UcRecording {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -176,10 +217,16 @@ public class UcRecording {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -213,18 +260,36 @@ public class UcRecording {
     }
 
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    public UcRecording withConversationIdentifier(@Nullable String conversationIdentifier) {
+        this.conversationIdentifier = conversationIdentifier;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecording withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecording withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecording withExpiresAt(@Nullable OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -249,6 +314,9 @@ public class UcRecording {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecording withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -261,12 +329,18 @@ public class UcRecording {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecording withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public UcRecording withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -303,6 +377,7 @@ public class UcRecording {
         return 
             Utils.enhancedDeepEquals(this.callId, other.callId) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
+            Utils.enhancedDeepEquals(this.conversationIdentifier, other.conversationIdentifier) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.expiresAt, other.expiresAt) &&
@@ -321,11 +396,12 @@ public class UcRecording {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            callId, contacts, createdAt,
-            endAt, expiresAt, id,
-            media, raw, startAt,
-            type, updatedAt, userId,
-            userName, userPhone, webUrl);
+            callId, contacts, conversationIdentifier,
+            createdAt, endAt, expiresAt,
+            id, media, raw,
+            startAt, type, updatedAt,
+            userId, userName, userPhone,
+            webUrl);
     }
     
     @Override
@@ -333,6 +409,7 @@ public class UcRecording {
         return Utils.toString(UcRecording.class,
                 "callId", callId,
                 "contacts", contacts,
+                "conversationIdentifier", conversationIdentifier,
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "expiresAt", expiresAt,
@@ -354,6 +431,8 @@ public class UcRecording {
         private String callId;
 
         private List<UcContact> contacts;
+
+        private String conversationIdentifier;
 
         private OffsetDateTime createdAt;
 
@@ -395,16 +474,33 @@ public class UcRecording {
             return this;
         }
 
+        /**
+         * opaque identifier shared across legs of one interaction
+         */
+        public Builder conversationIdentifier(@Nullable String conversationIdentifier) {
+            this.conversationIdentifier = conversationIdentifier;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder expiresAt(@Nullable OffsetDateTime expiresAt) {
             this.expiresAt = expiresAt;
             return this;
@@ -425,6 +521,9 @@ public class UcRecording {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -435,11 +534,17 @@ public class UcRecording {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * reference to HrisEmployee (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -462,11 +567,12 @@ public class UcRecording {
 
         public UcRecording build() {
             return new UcRecording(
-                callId, contacts, createdAt,
-                endAt, expiresAt, id,
-                media, raw, startAt,
-                type, updatedAt, userId,
-                userName, userPhone, webUrl);
+                callId, contacts, conversationIdentifier,
+                createdAt, endAt, expiresAt,
+                id, media, raw,
+                startAt, type, updatedAt,
+                userId, userName, userPhone,
+                webUrl);
         }
 
     }

@@ -31,12 +31,16 @@ public class LmsCourse {
     @JsonProperty("content_ids")
     private List<String> contentIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The currency code (ISO) of the course price
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
@@ -86,7 +90,9 @@ public class LmsCourse {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * How much the course costs
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_amount")
     private Double priceAmount;
@@ -96,7 +102,9 @@ public class LmsCourse {
     @JsonProperty("provider_name")
     private String providerName;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_at")
     private OffsetDateTime publishedAt;
@@ -121,7 +129,9 @@ public class LmsCourse {
     @JsonProperty("time_estimate_minutes")
     private Double timeEstimateMinutes;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -190,10 +200,16 @@ public class LmsCourse {
         return Optional.ofNullable(this.contentIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The currency code (ISO) of the course price
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
@@ -234,6 +250,9 @@ public class LmsCourse {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * How much the course costs
+     */
     public Optional<Double> priceAmount() {
         return Optional.ofNullable(this.priceAmount);
     }
@@ -242,6 +261,9 @@ public class LmsCourse {
         return Optional.ofNullable(this.providerName);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> publishedAt() {
         return Optional.ofNullable(this.publishedAt);
     }
@@ -262,6 +284,9 @@ public class LmsCourse {
         return Optional.ofNullable(this.timeEstimateMinutes);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -283,12 +308,18 @@ public class LmsCourse {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsCourse withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The currency code (ISO) of the course price
+     */
     public LmsCourse withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
@@ -349,6 +380,9 @@ public class LmsCourse {
     }
 
 
+    /**
+     * How much the course costs
+     */
     public LmsCourse withPriceAmount(@Nullable Double priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -361,6 +395,9 @@ public class LmsCourse {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsCourse withPublishedAt(@Nullable OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -391,6 +428,9 @@ public class LmsCourse {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsCourse withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -527,11 +567,17 @@ public class LmsCourse {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The currency code (ISO) of the course price
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
@@ -582,6 +628,9 @@ public class LmsCourse {
             return this;
         }
 
+        /**
+         * How much the course costs
+         */
         public Builder priceAmount(@Nullable Double priceAmount) {
             this.priceAmount = priceAmount;
             return this;
@@ -592,6 +641,9 @@ public class LmsCourse {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder publishedAt(@Nullable OffsetDateTime publishedAt) {
             this.publishedAt = publishedAt;
             return this;
@@ -617,6 +669,9 @@ public class LmsCourse {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

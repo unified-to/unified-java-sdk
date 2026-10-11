@@ -46,7 +46,9 @@ public class CommerceReviewComment {
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -76,7 +78,9 @@ public class CommerceReviewComment {
     @JsonProperty("metadata")
     private List<CommerceMetadata> metadata;
 
-
+    /**
+     * Original review data from source platform
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -91,7 +95,9 @@ public class CommerceReviewComment {
     @JsonProperty("unhelpful_votes")
     private Double unhelpfulVotes;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -158,6 +164,9 @@ public class CommerceReviewComment {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -182,6 +191,9 @@ public class CommerceReviewComment {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * Original review data from source platform
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -194,6 +206,9 @@ public class CommerceReviewComment {
         return Optional.ofNullable(this.unhelpfulVotes);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -233,6 +248,9 @@ public class CommerceReviewComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReviewComment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -269,6 +287,9 @@ public class CommerceReviewComment {
     }
 
 
+    /**
+     * Original review data from source platform
+     */
     public CommerceReviewComment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -287,6 +308,9 @@ public class CommerceReviewComment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReviewComment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -412,6 +436,9 @@ public class CommerceReviewComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -442,6 +469,9 @@ public class CommerceReviewComment {
             return this;
         }
 
+        /**
+         * Original review data from source platform
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -457,6 +487,9 @@ public class CommerceReviewComment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

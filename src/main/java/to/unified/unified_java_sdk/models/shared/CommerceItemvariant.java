@@ -21,12 +21,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CommerceItemvariant {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_at")
     private OffsetDateTime availableAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -128,7 +132,9 @@ public class CommerceItemvariant {
     @JsonProperty("size_unit")
     private SizeUnit sizeUnit;
 
-
+    /**
+     * barcode, UPC, isbn, etc
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     private String sku;
@@ -143,7 +149,9 @@ public class CommerceItemvariant {
     @JsonProperty("total_stock")
     private Double totalStock;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -236,10 +244,16 @@ public class CommerceItemvariant {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> availableAt() {
         return Optional.ofNullable(this.availableAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -323,6 +337,9 @@ public class CommerceItemvariant {
         return Optional.ofNullable(this.sizeUnit);
     }
 
+    /**
+     * barcode, UPC, isbn, etc
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -335,6 +352,9 @@ public class CommerceItemvariant {
         return Optional.ofNullable(this.totalStock);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -356,12 +376,18 @@ public class CommerceItemvariant {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceItemvariant withAvailableAt(@Nullable OffsetDateTime availableAt) {
         this.availableAt = availableAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceItemvariant withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -485,6 +511,9 @@ public class CommerceItemvariant {
     }
 
 
+    /**
+     * barcode, UPC, isbn, etc
+     */
     public CommerceItemvariant withSku(@Nullable String sku) {
         this.sku = sku;
         return this;
@@ -503,6 +532,9 @@ public class CommerceItemvariant {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceItemvariant withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -678,11 +710,17 @@ public class CommerceItemvariant {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder availableAt(@Nullable OffsetDateTime availableAt) {
             this.availableAt = availableAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -786,6 +824,9 @@ public class CommerceItemvariant {
             return this;
         }
 
+        /**
+         * barcode, UPC, isbn, etc
+         */
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
@@ -801,6 +842,9 @@ public class CommerceItemvariant {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

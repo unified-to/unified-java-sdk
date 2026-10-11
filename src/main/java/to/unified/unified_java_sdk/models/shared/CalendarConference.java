@@ -20,7 +20,9 @@ public class CalendarConference {
     @JsonProperty("conference_identifier")
     private String conferenceIdentifier;
 
-
+    /**
+     * ISO 2-digit country code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private String countryCode;
@@ -45,7 +47,9 @@ public class CalendarConference {
     @JsonProperty("participant_access_code")
     private String participantAccessCode;
 
-
+    /**
+     * ISO 2-digit region code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
     private String regionCode;
@@ -92,6 +96,9 @@ public class CalendarConference {
         return Optional.ofNullable(this.conferenceIdentifier);
     }
 
+    /**
+     * ISO 2-digit country code
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -112,6 +119,9 @@ public class CalendarConference {
         return Optional.ofNullable(this.participantAccessCode);
     }
 
+    /**
+     * ISO 2-digit region code
+     */
     public Optional<String> regionCode() {
         return Optional.ofNullable(this.regionCode);
     }
@@ -135,6 +145,9 @@ public class CalendarConference {
     }
 
 
+    /**
+     * ISO 2-digit country code
+     */
     public CalendarConference withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -165,6 +178,9 @@ public class CalendarConference {
     }
 
 
+    /**
+     * ISO 2-digit region code
+     */
     public CalendarConference withRegionCode(@Nullable String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -256,6 +272,9 @@ public class CalendarConference {
             return this;
         }
 
+        /**
+         * ISO 2-digit country code
+         */
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
@@ -281,6 +300,9 @@ public class CalendarConference {
             return this;
         }
 
+        /**
+         * ISO 2-digit region code
+         */
         public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = regionCode;
             return this;

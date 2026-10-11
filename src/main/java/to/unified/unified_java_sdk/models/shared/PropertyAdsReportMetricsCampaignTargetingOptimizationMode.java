@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyAdsReportMetricsCampaignTargetingOptimizationMode
+ * 
+ * <p>Google: bid_only falsetrue
+ */
 public class PropertyAdsReportMetricsCampaignTargetingOptimizationMode {
 
     public static final PropertyAdsReportMetricsCampaignTargetingOptimizationMode TARGETING = new PropertyAdsReportMetricsCampaignTargetingOptimizationMode("TARGETING");

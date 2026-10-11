@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class KmsSpace {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -49,7 +51,9 @@ public class KmsSpace {
     @JsonProperty("parent_id")
     private String parentId;
 
-
+    /**
+     * (reference to KmsPage)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_page_id")
     private String parentPageId;
@@ -59,12 +63,16 @@ public class KmsSpace {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -100,6 +108,9 @@ public class KmsSpace {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -124,6 +135,9 @@ public class KmsSpace {
         return Optional.ofNullable(this.parentId);
     }
 
+    /**
+     * (reference to KmsPage)
+     */
     public Optional<String> parentPageId() {
         return Optional.ofNullable(this.parentPageId);
     }
@@ -132,10 +146,16 @@ public class KmsSpace {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -145,6 +165,9 @@ public class KmsSpace {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsSpace withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -181,6 +204,9 @@ public class KmsSpace {
     }
 
 
+    /**
+     * (reference to KmsPage)
+     */
     public KmsSpace withParentPageId(@Nullable String parentPageId) {
         this.parentPageId = parentPageId;
         return this;
@@ -193,12 +219,18 @@ public class KmsSpace {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public KmsSpace withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public KmsSpace withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -278,6 +310,9 @@ public class KmsSpace {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -308,6 +343,9 @@ public class KmsSpace {
             return this;
         }
 
+        /**
+         * (reference to KmsPage)
+         */
         public Builder parentPageId(@Nullable String parentPageId) {
             this.parentPageId = parentPageId;
             return this;
@@ -318,11 +356,17 @@ public class KmsSpace {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

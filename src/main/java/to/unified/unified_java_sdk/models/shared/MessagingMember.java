@@ -30,7 +30,9 @@ public class MessagingMember {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -64,6 +66,9 @@ public class MessagingMember {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -91,6 +96,9 @@ public class MessagingMember {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public MessagingMember withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -159,6 +167,9 @@ public class MessagingMember {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

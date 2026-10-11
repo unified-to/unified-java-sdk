@@ -40,7 +40,9 @@ public class AnalyticsSession {
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -55,17 +57,23 @@ public class AnalyticsSession {
     @JsonProperty("duration_seconds")
     private Double durationSeconds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * Session attributes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events_count")
     private Double eventsCount;
 
-
+    /**
+     * Session attributes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exit_page")
     private String exitPage;
@@ -75,17 +83,23 @@ public class AnalyticsSession {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Engagement
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_bounce")
     private Boolean isBounce;
 
-
+    /**
+     * Engagement
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_conversion")
     private Boolean isConversion;
 
-
+    /**
+     * Session attributes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("landing_page")
     private String landingPage;
@@ -100,12 +114,16 @@ public class AnalyticsSession {
     @JsonProperty("os")
     private String os;
 
-
+    /**
+     * Session attributes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_views")
     private Double pageViews;
 
-
+    /**
+     * points to AnalyticsProperty
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_id")
     private String propertyId;
@@ -115,17 +133,23 @@ public class AnalyticsSession {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Acquisition
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -212,6 +236,9 @@ public class AnalyticsSession {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -224,14 +251,23 @@ public class AnalyticsSession {
         return Optional.ofNullable(this.durationSeconds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * Session attributes
+     */
     public Optional<Double> eventsCount() {
         return Optional.ofNullable(this.eventsCount);
     }
 
+    /**
+     * Session attributes
+     */
     public Optional<String> exitPage() {
         return Optional.ofNullable(this.exitPage);
     }
@@ -240,14 +276,23 @@ public class AnalyticsSession {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Engagement
+     */
     public Optional<Boolean> isBounce() {
         return Optional.ofNullable(this.isBounce);
     }
 
+    /**
+     * Engagement
+     */
     public Optional<Boolean> isConversion() {
         return Optional.ofNullable(this.isConversion);
     }
 
+    /**
+     * Session attributes
+     */
     public Optional<String> landingPage() {
         return Optional.ofNullable(this.landingPage);
     }
@@ -260,10 +305,16 @@ public class AnalyticsSession {
         return Optional.ofNullable(this.os);
     }
 
+    /**
+     * Session attributes
+     */
     public Optional<Double> pageViews() {
         return Optional.ofNullable(this.pageViews);
     }
 
+    /**
+     * points to AnalyticsProperty
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
@@ -272,14 +323,23 @@ public class AnalyticsSession {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Acquisition
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -317,6 +377,9 @@ public class AnalyticsSession {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsSession withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -335,18 +398,27 @@ public class AnalyticsSession {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsSession withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * Session attributes
+     */
     public AnalyticsSession withEventsCount(@Nullable Double eventsCount) {
         this.eventsCount = eventsCount;
         return this;
     }
 
 
+    /**
+     * Session attributes
+     */
     public AnalyticsSession withExitPage(@Nullable String exitPage) {
         this.exitPage = exitPage;
         return this;
@@ -359,18 +431,27 @@ public class AnalyticsSession {
     }
 
 
+    /**
+     * Engagement
+     */
     public AnalyticsSession withIsBounce(@Nullable Boolean isBounce) {
         this.isBounce = isBounce;
         return this;
     }
 
 
+    /**
+     * Engagement
+     */
     public AnalyticsSession withIsConversion(@Nullable Boolean isConversion) {
         this.isConversion = isConversion;
         return this;
     }
 
 
+    /**
+     * Session attributes
+     */
     public AnalyticsSession withLandingPage(@Nullable String landingPage) {
         this.landingPage = landingPage;
         return this;
@@ -389,12 +470,18 @@ public class AnalyticsSession {
     }
 
 
+    /**
+     * Session attributes
+     */
     public AnalyticsSession withPageViews(@Nullable Double pageViews) {
         this.pageViews = pageViews;
         return this;
     }
 
 
+    /**
+     * points to AnalyticsProperty
+     */
     public AnalyticsSession withPropertyId(@Nullable String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -407,18 +494,27 @@ public class AnalyticsSession {
     }
 
 
+    /**
+     * Acquisition
+     */
     public AnalyticsSession withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsSession withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AnalyticsSession withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -580,6 +676,9 @@ public class AnalyticsSession {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -595,16 +694,25 @@ public class AnalyticsSession {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * Session attributes
+         */
         public Builder eventsCount(@Nullable Double eventsCount) {
             this.eventsCount = eventsCount;
             return this;
         }
 
+        /**
+         * Session attributes
+         */
         public Builder exitPage(@Nullable String exitPage) {
             this.exitPage = exitPage;
             return this;
@@ -615,16 +723,25 @@ public class AnalyticsSession {
             return this;
         }
 
+        /**
+         * Engagement
+         */
         public Builder isBounce(@Nullable Boolean isBounce) {
             this.isBounce = isBounce;
             return this;
         }
 
+        /**
+         * Engagement
+         */
         public Builder isConversion(@Nullable Boolean isConversion) {
             this.isConversion = isConversion;
             return this;
         }
 
+        /**
+         * Session attributes
+         */
         public Builder landingPage(@Nullable String landingPage) {
             this.landingPage = landingPage;
             return this;
@@ -640,11 +757,17 @@ public class AnalyticsSession {
             return this;
         }
 
+        /**
+         * Session attributes
+         */
         public Builder pageViews(@Nullable Double pageViews) {
             this.pageViews = pageViews;
             return this;
         }
 
+        /**
+         * points to AnalyticsProperty
+         */
         public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
@@ -655,16 +778,25 @@ public class AnalyticsSession {
             return this;
         }
 
+        /**
+         * Acquisition
+         */
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

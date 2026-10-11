@@ -14,10 +14,14 @@ import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
@@ -41,6 +45,10 @@ import to.unified.unified_java_sdk.models.operations.async.GetUcContactRequestBu
 import to.unified.unified_java_sdk.models.operations.async.GetUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardtemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardtemplateResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCallsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsRequestBuilder;
@@ -49,6 +57,10 @@ import to.unified.unified_java_sdk.models.operations.async.ListUcContactsRequest
 import to.unified.unified_java_sdk.models.operations.async.ListUcContactsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardtemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardtemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcContactRequestBuilder;
@@ -74,10 +86,14 @@ import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
+import to.unified.unified_java_sdk.operations.GetUcScorecard;
+import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.ListUcContacts;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
+import to.unified.unified_java_sdk.operations.ListUcScorecards;
+import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
@@ -272,6 +288,52 @@ public class AsyncUc {
 
 
     /**
+     * Retrieve a scorecard
+     * 
+     * @return The async call builder
+     */
+    public GetUcScorecardRequestBuilder getUcScorecard() {
+        return new GetUcScorecardRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardResponse> getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        AsyncRequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
+              = new GetUcScorecard.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * @return The async call builder
+     */
+    public GetUcScorecardtemplateRequestBuilder getUcScorecardtemplate() {
+        return new GetUcScorecardtemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetUcScorecardtemplateResponse> getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request) {
+        AsyncRequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
+              = new GetUcScorecardtemplate.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all calls
      * 
      * @return The async call builder
@@ -358,6 +420,52 @@ public class AsyncUc {
     public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all scorecards
+     * 
+     * @return The async call builder
+     */
+    public ListUcScorecardsRequestBuilder listUcScorecards() {
+        return new ListUcScorecardsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardsResponse> listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        AsyncRequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
+              = new ListUcScorecards.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * @return The async call builder
+     */
+    public ListUcScorecardtemplatesRequestBuilder listUcScorecardtemplates() {
+        return new ListUcScorecardtemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListUcScorecardtemplatesResponse> listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request) {
+        AsyncRequestOperation<ListUcScorecardtemplatesRequest, ListUcScorecardtemplatesResponse> operation
+              = new ListUcScorecardtemplates.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

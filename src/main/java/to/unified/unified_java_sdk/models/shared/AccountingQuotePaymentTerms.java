@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingQuotePaymentTerms
+ * 
+ * <p>unified payment terms enum, as on accounting_invoice / accounting_bill
+ */
 public class AccountingQuotePaymentTerms {
 
     public static final AccountingQuotePaymentTerms ON_RECEIPT = new AccountingQuotePaymentTerms("ON_RECEIPT");

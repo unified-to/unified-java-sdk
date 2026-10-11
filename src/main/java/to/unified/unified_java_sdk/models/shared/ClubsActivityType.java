@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ClubsActivityType
+ * 
+ * <p>The activity type
+ */
 public class ClubsActivityType {
 
     public static final ClubsActivityType RUNNING = new ClubsActivityType("RUNNING");

@@ -17,17 +17,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class UcRecordingTranscript {
-
+    /**
+     * (reference to UcContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -36,7 +42,9 @@ public class UcRecordingTranscript {
     @JsonProperty("text")
     private String text;
 
-
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -62,14 +70,23 @@ public class UcRecordingTranscript {
             text, null);
     }
 
+    /**
+     * (reference to UcContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -78,6 +95,9 @@ public class UcRecordingTranscript {
         return this.text;
     }
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -87,18 +107,27 @@ public class UcRecordingTranscript {
     }
 
 
+    /**
+     * (reference to UcContact)
+     */
     public UcRecordingTranscript withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecordingTranscript withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcRecordingTranscript withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -111,6 +140,9 @@ public class UcRecordingTranscript {
     }
 
 
+    /**
+     * reference to HrisEmployee (reference to HrisEmployee)
+     */
     public UcRecordingTranscript withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -168,16 +200,25 @@ public class UcRecordingTranscript {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to UcContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -188,6 +229,9 @@ public class UcRecordingTranscript {
             return this;
         }
 
+        /**
+         * reference to HrisEmployee (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

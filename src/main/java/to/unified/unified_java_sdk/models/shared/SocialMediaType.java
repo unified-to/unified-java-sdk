@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * SocialMediaType
+ * 
+ * <p>Type of media
+ */
 public class SocialMediaType {
 
     public static final SocialMediaType PHOTO = new SocialMediaType("PHOTO");

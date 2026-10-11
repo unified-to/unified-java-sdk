@@ -11,8 +11,10 @@
 * [createHrisDeduction](#createhrisdeduction) - Create a deduction
 * [createHrisDevice](#createhrisdevice) - Create a device
 * [createHrisDocument](#createhrisdocument) - Create a document
+* [createHrisEarning](#createhrisearning) - Create an earning
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
+* [createHrisJob](#createhrisjob) - Create a job
 * [createHrisLocation](#createhrislocation) - Create a location
 * [createHrisTaxonomy](#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](#createhristimeoff) - Create a timeoff
@@ -24,9 +26,13 @@
 * [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](#gethrisdevice) - Retrieve a device
 * [getHrisDocument](#gethrisdocument) - Retrieve a document
+* [getHrisEarning](#gethrisearning) - Retrieve an earning
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [getHrisJob](#gethrisjob) - Retrieve a job
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [getHrisPaycode](#gethrispaycode) - Retrieve a paycode
+* [getHrisPayroll](#gethrispayroll) - Retrieve a payroll
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
@@ -38,9 +44,13 @@
 * [listHrisDeductions](#listhrisdeductions) - List all deductions
 * [listHrisDevices](#listhrisdevices) - List all devices
 * [listHrisDocuments](#listhrisdocuments) - List all documents
+* [listHrisEarnings](#listhrisearnings) - List all earnings
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
+* [listHrisJobs](#listhrisjobs) - List all jobs
 * [listHrisLocations](#listhrislocations) - List all locations
+* [listHrisPaycodes](#listhrispaycodes) - List all paycodes
+* [listHrisPayrolls](#listhrispayrolls) - List all payrolls
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
@@ -52,8 +62,10 @@
 * [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](#patchhrisdevice) - Update a device
 * [patchHrisDocument](#patchhrisdocument) - Update a document
+* [patchHrisEarning](#patchhrisearning) - Update an earning
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
+* [patchHrisJob](#patchhrisjob) - Update a job
 * [patchHrisLocation](#patchhrislocation) - Update a location
 * [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
@@ -64,8 +76,10 @@
 * [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](#removehrisdevice) - Remove a device
 * [removeHrisDocument](#removehrisdocument) - Remove a document
+* [removeHrisEarning](#removehrisearning) - Remove an earning
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
+* [removeHrisJob](#removehrisjob) - Remove a job
 * [removeHrisLocation](#removehrislocation) - Remove a location
 * [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
@@ -76,8 +90,10 @@
 * [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](#updatehrisdevice) - Update a device
 * [updateHrisDocument](#updatehrisdocument) - Update a document
+* [updateHrisEarning](#updatehrisearning) - Update an earning
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
+* [updateHrisJob](#updatehrisjob) - Update a job
 * [updateHrisLocation](#updatehrislocation) - Update a location
 * [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
@@ -113,8 +129,8 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-07T17:46:51.474Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-09T13:58:14.444Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-18T03:04:04.268Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-10T13:16:25.399Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -123,27 +139,27 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:42:10.868Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T11:22:36.465Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(12d)
-                            .endAt(OffsetDateTime.parse("2023-10-23T23:43:18.991Z"))
+                            .endAt(OffsetDateTime.parse("2023-11-01T14:11:40.384Z"))
                             .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
                             .isPaid(true)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-17T03:53:40.572Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-25T16:36:52.479Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("UGX")
                     .declaredTipsAmount(161d)
                     .hourlyRate(53d)
                     .hours(10d)
-                    .id("0dfdb179-687d-4983-9d57-e442cb84eb0d")
+                    .id("ce06123a-9946-4628-84b3-11a573803cb5")
                     .jobName("Global Creative Supervisor")
                     .nonCashTipsAmount(54d)
                     .status(HrisAttendanceStatus.CLOSED)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-17T07:38:03.665Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T00:35:08.159Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -208,12 +224,17 @@ public class Application {
                     .accountNumberLast4("3777")
                     .accountType(HrisBankaccountAccountType.CHECKING)
                     .bankName("Huel Group")
+                    .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
-                    .id("8861a5c0-e091-4718-8479-aec3dd76bf39")
+                    .currency("USD")
+                    .id("67c815ed-2f66-4e7d-a729-cc896bb10458")
                     .isPrimary(false)
                     .name("Checking Account")
+                    .priority(3d)
                     .routingNumber("448650724")
-                    .updatedAt(OffsetDateTime.parse("2025-06-06T22:35:03.395Z"))
+                    .splitAmount(23d)
+                    .splitType(SplitType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2025-06-23T03:40:10.104Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -281,13 +302,13 @@ public class Application {
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
-                    .frequency(HrisBenefitFrequency.HOUR)
-                    .id("2bc73132-a231-4f6b-b0f2-73d8f42a7bb3")
+                    .frequency(HrisBenefitFrequency.MONTH)
+                    .id("cb5f5b63-51cf-4c0b-b45c-af9a157b02d7")
                     .isActive(false)
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
-                    .type(HrisBenefitType.GARNISHMENT)
-                    .updatedAt(OffsetDateTime.parse("2023-03-07T18:44:31.792Z"))
+                    .type(HrisBenefitType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2023-03-16T11:45:46.342Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -357,10 +378,10 @@ public class Application {
                         .regionCode("PA")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("a11f97c3-0d79-4eae-aaf7-d7987e9817aa")
+                    .id("258d7f93-f76d-4295-97a8-21e15265d0aa")
                     .legalName("Schultz LLC")
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T21:31:26.668Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-28T17:58:44.575Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -424,14 +445,17 @@ public class Application {
                     .amount(139655d)
                     .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .endAt(OffsetDateTime.parse("2026-05-25T20:05:49.194Z"))
-                    .frequency(HrisDeductionFrequency.MONTH)
-                    .id("84f3e0b9-8ec8-4eb5-b808-e26cc8f4468a")
+                    .employerAmount(22611d)
+                    .employerType(EmployerType.FIXED)
+                    .endAt(OffsetDateTime.parse("2026-06-13T20:05:36.854Z"))
+                    .frequency(HrisDeductionFrequency.BIWEEKLY)
+                    .garnishmentType(GarnishmentType.OTHER)
+                    .id("fac4b834-71a1-4778-83f4-0eb27f981968")
                     .isActive(false)
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-02-20T12:02:49.110Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-07T17:02:44.736Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-03T20:28:34.377Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-16T03:24:52.301Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -502,14 +526,14 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(true)
-                    .id("ff6f7d28-8a09-4c0d-8233-996f14d17b4f")
+                    .id("270f1911-555b-49ef-9302-beab4f089d58")
                     .isMissing(false)
                     .manufacturer("Sanford - Hamill")
                     .model("Refined")
                     .name("cross_contamination_if.rar")
                     .os("monitor")
                     .osVersion("1.12.16")
-                    .updatedAt(OffsetDateTime.parse("2023-05-22T17:13:26.123Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T18:34:32.261Z"))
                     .version("2.20.17")
                     .build())
                 .connectionId("<id>")
@@ -574,9 +598,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("9b700086-451a-4120-8d57-fed917f0d7fe")
+                    .id("12c78552-ce05-4818-bf51-abfde44efa8f")
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T07:57:45.601Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-04T03:58:03.573Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -601,6 +625,75 @@ public class Application {
 ### Response
 
 **[CreateHrisDocumentResponse](../../models/operations/CreateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisEarning
+
+Create an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" example="hris_earning" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEarningResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisEarningRequest req = CreateHrisEarningRequest.builder()
+                .hrisEarning(HrisEarning.builder()
+                    .amount(4026d)
+                    .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
+                    .currency("PKR")
+                    .frequency(HrisEarningFrequency.BIWEEKLY)
+                    .id("0e597460-d93d-4c94-a4f5-8b113a9e47db")
+                    .notes("Truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-20T23:26:45.466Z"))
+                    .status(HrisEarningStatus.PROCESSED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-07T12:25:00.115Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisEarningResponse res = sdk.hris().createHrisEarning()
+                .request(req)
+                .call();
+
+        if (res.hrisEarning().isPresent()) {
+            System.out.println(res.hrisEarning().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateHrisEarningRequest](../../models/operations/CreateHrisEarningRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateHrisEarningResponse](../../models/operations/CreateHrisEarningResponse.md)**
 
 ### Errors
 
@@ -651,11 +744,11 @@ public class Application {
                     .bio("sushi devotee, singer")
                     .compensation(List.of(
                         HrisCompensation.builder()
-                            .amount(69148d)
+                            .amount(60136d)
                             .currency("CRC")
                             .frequency(HrisCompensationFrequency.QUARTER)
                             .notes("Tergeo laborum laboriosam tutis.")
-                            .type(HrisCompensationType.EQUITY)
+                            .type(HrisCompensationType.STOCK_OPTIONS)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
                     .currency("IDR")
@@ -669,10 +762,11 @@ public class Application {
                     .employmentStatus(EmploymentStatus.ACTIVE)
                     .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
                     .firstName("Zetta")
+                    .flsaStatus(FlsaStatus.SALARIED_NONEXEMPT)
                     .gender(HrisEmployeeGender.INTERSEX)
-                    .hasMfa(true)
-                    .hiredAt(OffsetDateTime.parse("2023-05-12T06:08:21.583Z"))
-                    .id("484040b5-6330-41f5-9b49-4d3045c77f39")
+                    .hasMfa(false)
+                    .hiredAt(OffsetDateTime.parse("2023-05-22T15:45:02.980Z"))
+                    .id("3c57c9db-2490-435f-890b-c3b4065605fd")
                     .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
                     .languageLocale("es")
                     .lastName("Prohaska")
@@ -683,12 +777,13 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("f3fc17c5-b836-407b-a353-5d1f99341389")
+                            .id("a18f53be-9e33-4567-8afb-ffd8e3af4904")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(HrisMetadataValue.of("tenetur"))
+                            .value(HrisMetadataValue.of("appono"))
                             .build()))
                     .name("Zetta Prohaska")
+                    .payFrequency(PayFrequency.BIWEEKLY)
                     .pronouns("she/her")
                     .relationships(List.of(
                         HrisEmployeerelationship.builder()
@@ -703,35 +798,32 @@ public class Application {
                                     .email("Hester80@gmail.com")
                                     .build()))
                             .name("Automotive")
-                            .type(HrisEmployeerelationshipType.EMERGENCY)
-                            .build(),
-                        HrisEmployeerelationship.builder()
-                            .emails(List.of(
-                                HrisEmail.builder()
-                                    .email("Benedict_Wisozk83@hotmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Princess_Rath43@gmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Elmira92@yahoo.com")
-                                    .build()))
-                            .name("Music")
                             .type(HrisEmployeerelationshipType.FRIEND)
                             .build(),
                         HrisEmployeerelationship.builder()
                             .emails(List.of(
                                 HrisEmail.builder()
-                                    .email("Jane30@gmail.com")
+                                    .email("Benedict_Wisozk83@hotmail.com")
                                     .build()))
-                            .name("Jewelry")
+                            .name("Music")
                             .type(HrisEmployeerelationshipType.SIBLING)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Margot11@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Jaden_Miller@gmail.com")
+                                    .build()))
+                            .name("Electronics")
+                            .type(HrisEmployeerelationshipType.OTHER)
                             .build()))
                     .salutation("Miss")
                     .ssnSin("yMRtj0Q3xO")
-                    .storageQuotaAllocated(3674489d)
-                    .storageQuotaAvailable(7748057d)
-                    .storageQuotaUsed(301727d)
+                    .storageQuotaAllocated(7748057d)
+                    .storageQuotaAvailable(1590710d)
+                    .storageQuotaUsed(730343d)
                     .telephones(List.of(
                         HrisTelephone.builder()
                             .telephone("(409) 801-3705")
@@ -742,7 +834,7 @@ public class Application {
                     .timeoffDaysUsed(6d)
                     .timezone("Africa/Harare")
                     .title("Investor Paradigm Liaison")
-                    .updatedAt(OffsetDateTime.parse("2022-02-20T08:15:24.501Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-27T06:24:28.834Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -805,11 +897,11 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("5c8815da-b7ad-4fcf-9182-6e52f3c7d156")
+                    .id("bb4d513f-e586-4c20-af9c-baa7aef5ab56")
                     .isActive(false)
                     .name("Games")
-                    .type(HrisGroupType.BUSINESS_UNIT)
-                    .updatedAt(OffsetDateTime.parse("2026-04-26T04:59:49.322Z"))
+                    .type(HrisGroupType.BRANCH)
+                    .updatedAt(OffsetDateTime.parse("2026-05-13T09:12:19.460Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -834,6 +926,74 @@ public class Application {
 ### Response
 
 **[CreateHrisGroupResponse](../../models/operations/CreateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisJob
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisJobRequest req = CreateHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("bb0fb822-230a-43a5-8b1b-4fd55b9ec014")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.073Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisJobResponse res = sdk.hris().createHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateHrisJobRequest](../../models/operations/CreateHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[CreateHrisJobResponse](../../models/operations/CreateHrisJobResponse.md)**
 
 ### Errors
 
@@ -883,8 +1043,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("96a41c8d-a0fd-4317-9a93-9adbec79d837")
-                    .id("735bb4e6-f12f-4c14-a185-655cdcecdb5e")
+                    .externalIdentifier("a95fb085-1de2-4952-a92c-4b2d394ad136")
+                    .id("71d77c71-c403-4af9-b84d-9873ee590086")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -903,7 +1063,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-10T03:17:45.017Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.024Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -976,7 +1136,7 @@ public class Application {
                         "2b1ef757-eb4c-4207-8af1-929afe49cd65"))
                     .subcategory("Bamboo")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-05-22T20:37:18.964Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-27T03:47:37.296Z"))
                     .url("https://our-polarisation.name")
                     .build())
                 .connectionId("<id>")
@@ -1039,20 +1199,20 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-21T02:34:00.707Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-22T14:56:33.852Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-09T12:28:57.437Z"))
-                    .id("2d890fd1-cb8d-4af9-8e18-587564259ad2")
+                    .endAt(OffsetDateTime.parse("2024-12-22T07:37:18.843Z"))
+                    .id("c0b7b9cf-126e-4e53-a9dc-78008dee9690")
                     .isPaid(true)
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-08-24T10:33:26.221Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-01T00:24:42.402Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-08T06:37:13.084Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-11T07:19:20.309Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1115,22 +1275,22 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2023-06-07T06:09:27.537Z"))
+                    .approvedAt(OffsetDateTime.parse("2023-06-18T03:10:12.113Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
                             .currency("JPY")
-                            .frequency(HrisCompensationFrequency.HOUR)
+                            .frequency(HrisCompensationFrequency.WEEK)
                             .notes("Annus adficio suasoria architecto aggero.")
-                            .type(HrisCompensationType.OTHER)
+                            .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-08-28T08:36:26.125Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-17T03:42:59.907Z"))
                     .hours(8d)
-                    .id("66e56b79-777c-4816-93c2-56aab6d4a323")
+                    .id("dfcf1802-ce5f-4727-89b0-f6b60d8029a2")
                     .isApproved(true)
-                    .startAt(OffsetDateTime.parse("2023-06-26T11:39:07.841Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-06-23T16:49:43.315Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-07T12:09:32.558Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-29T04:09:58.867Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1568,6 +1728,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisEarning
+
+Retrieve an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisEarning" method="get" path="/hris/{connection_id}/earning/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEarningResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisEarningRequest req = GetHrisEarningRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisEarningResponse res = sdk.hris().getHrisEarning()
+                .request(req)
+                .call();
+
+        if (res.hrisEarning().isPresent()) {
+            System.out.println(res.hrisEarning().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisEarningRequest](../../models/operations/GetHrisEarningRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetHrisEarningResponse](../../models/operations/GetHrisEarningResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisEmployee
 
 Retrieve an employee
@@ -1684,6 +1902,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisJob
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisJobRequest req = GetHrisJobRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisJobResponse res = sdk.hris().getHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetHrisJobRequest](../../models/operations/GetHrisJobRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+
+### Response
+
+**[GetHrisJobResponse](../../models/operations/GetHrisJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisLocation
 
 Retrieve a location
@@ -1735,6 +2011,122 @@ public class Application {
 ### Response
 
 **[GetHrisLocationResponse](../../models/operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisPaycode
+
+Retrieve a paycode
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisPaycode" method="get" path="/hris/{connection_id}/paycode/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisPaycodeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPaycodeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisPaycodeRequest req = GetHrisPaycodeRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisPaycodeResponse res = sdk.hris().getHrisPaycode()
+                .request(req)
+                .call();
+
+        if (res.hrisPaycode().isPresent()) {
+            System.out.println(res.hrisPaycode().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisPaycodeRequest](../../models/operations/GetHrisPaycodeRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetHrisPaycodeResponse](../../models/operations/GetHrisPaycodeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisPayroll
+
+Retrieve a payroll
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisPayroll" method="get" path="/hris/{connection_id}/payroll/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayrollResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisPayrollRequest req = GetHrisPayrollRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisPayrollResponse res = sdk.hris().getHrisPayroll()
+                .request(req)
+                .call();
+
+        if (res.hrisPayroll().isPresent()) {
+            System.out.println(res.hrisPayroll().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetHrisPayrollRequest](../../models/operations/GetHrisPayrollRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetHrisPayrollResponse](../../models/operations/GetHrisPayrollResponse.md)**
 
 ### Errors
 
@@ -2373,6 +2765,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisEarnings
+
+List all earnings
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisEarnings" method="get" path="/hris/{connection_id}/earning" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisEarningsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEarningsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisEarningsRequest req = ListHrisEarningsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisEarningsResponse res = sdk.hris().listHrisEarnings()
+                .request(req)
+                .call();
+
+        if (res.hrisEarnings().isPresent()) {
+            System.out.println(res.hrisEarnings().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListHrisEarningsRequest](../../models/operations/ListHrisEarningsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListHrisEarningsResponse](../../models/operations/ListHrisEarningsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisEmployees
 
 List all employees
@@ -2487,6 +2936,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisJobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisJobsRequest req = ListHrisJobsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisJobsResponse res = sdk.hris().listHrisJobs()
+                .request(req)
+                .call();
+
+        if (res.hrisJobs().isPresent()) {
+            System.out.println(res.hrisJobs().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListHrisJobsRequest](../../models/operations/ListHrisJobsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[ListHrisJobsResponse](../../models/operations/ListHrisJobsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisLocations
 
 List all locations
@@ -2537,6 +3043,120 @@ public class Application {
 ### Response
 
 **[ListHrisLocationsResponse](../../models/operations/ListHrisLocationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisPaycodes
+
+List all paycodes
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisPaycodes" method="get" path="/hris/{connection_id}/paycode" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisPaycodesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPaycodesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisPaycodesRequest req = ListHrisPaycodesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisPaycodesResponse res = sdk.hris().listHrisPaycodes()
+                .request(req)
+                .call();
+
+        if (res.hrisPaycodes().isPresent()) {
+            System.out.println(res.hrisPaycodes().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListHrisPaycodesRequest](../../models/operations/ListHrisPaycodesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListHrisPaycodesResponse](../../models/operations/ListHrisPaycodesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisPayrolls
+
+List all payrolls
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisPayrolls" method="get" path="/hris/{connection_id}/payroll" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisPayrollsRequest req = ListHrisPayrollsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisPayrollsResponse res = sdk.hris().listHrisPayrolls()
+                .request(req)
+                .call();
+
+        if (res.hrisPayrolls().isPresent()) {
+            System.out.println(res.hrisPayrolls().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListHrisPayrollsRequest](../../models/operations/ListHrisPayrollsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListHrisPayrollsResponse](../../models/operations/ListHrisPayrollsResponse.md)**
 
 ### Errors
 
@@ -2803,8 +3423,8 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-07T17:46:51.489Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-09T13:58:14.446Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-18T03:04:04.277Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-10T13:16:25.400Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -2813,27 +3433,27 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:42:10.868Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T11:22:36.465Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(12d)
-                            .endAt(OffsetDateTime.parse("2023-10-23T23:43:19.003Z"))
+                            .endAt(OffsetDateTime.parse("2023-11-01T14:11:40.391Z"))
                             .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
                             .isPaid(true)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-17T03:53:40.584Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-25T16:36:52.486Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("UGX")
                     .declaredTipsAmount(161d)
                     .hourlyRate(53d)
                     .hours(10d)
-                    .id("c47a366e-1c08-45fa-9d0c-38d1d738a641")
+                    .id("ca6855f6-b061-4c6c-a056-abf324fefe3d")
                     .jobName("Global Creative Supervisor")
                     .nonCashTipsAmount(54d)
                     .status(HrisAttendanceStatus.CLOSED)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-17T07:38:03.668Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T00:35:08.160Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2899,12 +3519,17 @@ public class Application {
                     .accountNumberLast4("3777")
                     .accountType(HrisBankaccountAccountType.CHECKING)
                     .bankName("Huel Group")
+                    .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
-                    .id("a59c46a7-5d4b-45df-98f1-c5935aac4d1f")
+                    .currency("USD")
+                    .id("bcd4408c-762d-4625-8f76-1344e852bade")
                     .isPrimary(false)
                     .name("Checking Account")
+                    .priority(3d)
                     .routingNumber("448650724")
-                    .updatedAt(OffsetDateTime.parse("2025-06-06T22:35:03.403Z"))
+                    .splitAmount(23d)
+                    .splitType(SplitType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2025-06-23T03:40:10.111Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2973,13 +3598,13 @@ public class Application {
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
-                    .frequency(HrisBenefitFrequency.HOUR)
-                    .id("8afb2ac2-392c-4be4-aa88-39cea81b92ae")
+                    .frequency(HrisBenefitFrequency.MONTH)
+                    .id("137a01e2-1551-4c4d-bb8f-022698b5d187")
                     .isActive(false)
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
-                    .type(HrisBenefitType.GARNISHMENT)
-                    .updatedAt(OffsetDateTime.parse("2023-03-07T18:44:31.799Z"))
+                    .type(HrisBenefitType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2023-03-16T11:45:46.348Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3050,10 +3675,10 @@ public class Application {
                         .regionCode("PA")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("50bdb37f-e21e-4d15-b7dd-677113a9b1d3")
+                    .id("b2a1b766-0ef1-4bb8-a60d-b7b34587b7f6")
                     .legalName("Schultz LLC")
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T21:31:26.681Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-28T17:58:44.583Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3118,14 +3743,17 @@ public class Application {
                     .amount(139655d)
                     .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .endAt(OffsetDateTime.parse("2026-05-25T20:05:49.207Z"))
-                    .frequency(HrisDeductionFrequency.MONTH)
-                    .id("271b0d0e-936f-4af8-9bed-1b4a1174fd65")
+                    .employerAmount(22611d)
+                    .employerType(EmployerType.FIXED)
+                    .endAt(OffsetDateTime.parse("2026-06-13T20:05:36.869Z"))
+                    .frequency(HrisDeductionFrequency.BIWEEKLY)
+                    .garnishmentType(GarnishmentType.OTHER)
+                    .id("6598ef77-e61d-41d8-aba3-8868627cf0e6")
                     .isActive(false)
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-02-20T12:02:49.120Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-07T17:02:44.747Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-03T20:28:34.384Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-16T03:24:52.310Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3197,14 +3825,14 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(true)
-                    .id("1e939b25-a7cf-4ff0-a182-104bfe9156ca")
+                    .id("2733098a-ab40-459a-854b-b1bb6d2fb2f6")
                     .isMissing(false)
                     .manufacturer("Sanford - Hamill")
                     .model("Refined")
                     .name("cross_contamination_if.rar")
                     .os("monitor")
                     .osVersion("1.12.16")
-                    .updatedAt(OffsetDateTime.parse("2023-05-22T17:13:26.130Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T18:34:32.265Z"))
                     .version("2.20.17")
                     .build())
                 .connectionId("<id>")
@@ -3270,9 +3898,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("85c0eb48-5170-4b2a-9af4-354cdbccee45")
+                    .id("2183db2b-38b6-41f4-b6a2-4f5318b5fb14")
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T07:57:45.609Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-04T03:58:03.579Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3298,6 +3926,76 @@ public class Application {
 ### Response
 
 **[PatchHrisDocumentResponse](../../models/operations/PatchHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisEarning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEarningResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisEarningRequest req = PatchHrisEarningRequest.builder()
+                .hrisEarning(HrisEarning.builder()
+                    .amount(4026d)
+                    .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
+                    .currency("PKR")
+                    .frequency(HrisEarningFrequency.BIWEEKLY)
+                    .id("e984a056-9298-45ea-9ffa-6479de095a1c")
+                    .notes("Truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-20T23:26:45.470Z"))
+                    .status(HrisEarningStatus.PROCESSED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-07T12:25:00.116Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisEarningResponse res = sdk.hris().patchHrisEarning()
+                .request(req)
+                .call();
+
+        if (res.hrisEarning().isPresent()) {
+            System.out.println(res.hrisEarning().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchHrisEarningRequest](../../models/operations/PatchHrisEarningRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchHrisEarningResponse](../../models/operations/PatchHrisEarningResponse.md)**
 
 ### Errors
 
@@ -3348,11 +4046,11 @@ public class Application {
                     .bio("sushi devotee, singer")
                     .compensation(List.of(
                         HrisCompensation.builder()
-                            .amount(69148d)
+                            .amount(60136d)
                             .currency("CRC")
                             .frequency(HrisCompensationFrequency.QUARTER)
                             .notes("Tergeo laborum laboriosam tutis.")
-                            .type(HrisCompensationType.EQUITY)
+                            .type(HrisCompensationType.STOCK_OPTIONS)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
                     .currency("IDR")
@@ -3366,10 +4064,11 @@ public class Application {
                     .employmentStatus(EmploymentStatus.ACTIVE)
                     .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
                     .firstName("Zetta")
+                    .flsaStatus(FlsaStatus.SALARIED_NONEXEMPT)
                     .gender(HrisEmployeeGender.INTERSEX)
-                    .hasMfa(true)
-                    .hiredAt(OffsetDateTime.parse("2023-05-12T06:08:21.617Z"))
-                    .id("9b80cc3c-35a4-4eb2-b269-399711785e39")
+                    .hasMfa(false)
+                    .hiredAt(OffsetDateTime.parse("2023-05-22T15:45:03.018Z"))
+                    .id("81c8b367-c709-49bf-83aa-4fe7d6faf9cc")
                     .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
                     .languageLocale("es")
                     .lastName("Prohaska")
@@ -3380,12 +4079,13 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("cd351d1b-4490-4933-92ab-fea7c8e86868")
+                            .id("24010608-6f76-45ac-925c-ab53fb3c734c")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(HrisMetadataValue.of("tenetur"))
+                            .value(HrisMetadataValue.of("appono"))
                             .build()))
                     .name("Zetta Prohaska")
+                    .payFrequency(PayFrequency.BIWEEKLY)
                     .pronouns("she/her")
                     .relationships(List.of(
                         HrisEmployeerelationship.builder()
@@ -3400,35 +4100,32 @@ public class Application {
                                     .email("Hester80@gmail.com")
                                     .build()))
                             .name("Automotive")
-                            .type(HrisEmployeerelationshipType.EMERGENCY)
-                            .build(),
-                        HrisEmployeerelationship.builder()
-                            .emails(List.of(
-                                HrisEmail.builder()
-                                    .email("Benedict_Wisozk83@hotmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Princess_Rath43@gmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Elmira92@yahoo.com")
-                                    .build()))
-                            .name("Music")
                             .type(HrisEmployeerelationshipType.FRIEND)
                             .build(),
                         HrisEmployeerelationship.builder()
                             .emails(List.of(
                                 HrisEmail.builder()
-                                    .email("Jane30@gmail.com")
+                                    .email("Benedict_Wisozk83@hotmail.com")
                                     .build()))
-                            .name("Jewelry")
+                            .name("Music")
                             .type(HrisEmployeerelationshipType.SIBLING)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Margot11@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Jaden_Miller@gmail.com")
+                                    .build()))
+                            .name("Electronics")
+                            .type(HrisEmployeerelationshipType.OTHER)
                             .build()))
                     .salutation("Miss")
                     .ssnSin("yMRtj0Q3xO")
-                    .storageQuotaAllocated(3674489d)
-                    .storageQuotaAvailable(7748057d)
-                    .storageQuotaUsed(301727d)
+                    .storageQuotaAllocated(7748057d)
+                    .storageQuotaAvailable(1590710d)
+                    .storageQuotaUsed(730343d)
                     .telephones(List.of(
                         HrisTelephone.builder()
                             .telephone("(409) 801-3705")
@@ -3439,7 +4136,7 @@ public class Application {
                     .timeoffDaysUsed(6d)
                     .timezone("Africa/Harare")
                     .title("Investor Paradigm Liaison")
-                    .updatedAt(OffsetDateTime.parse("2022-02-20T08:15:24.523Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-27T06:24:28.860Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3503,11 +4200,11 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("2dc0a185-c73f-4f72-8405-cfd966941363")
+                    .id("3e529d95-c8c0-4aaf-977f-4dfe1aa0158c")
                     .isActive(false)
                     .name("Games")
-                    .type(HrisGroupType.BUSINESS_UNIT)
-                    .updatedAt(OffsetDateTime.parse("2026-04-26T04:59:49.331Z"))
+                    .type(HrisGroupType.BRANCH)
+                    .updatedAt(OffsetDateTime.parse("2026-05-13T09:12:19.468Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3533,6 +4230,75 @@ public class Application {
 ### Response
 
 **[PatchHrisGroupResponse](../../models/operations/PatchHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisJobRequest req = PatchHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("69c74d53-aa9f-46fc-b7ae-68d6296eff97")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.112Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisJobResponse res = sdk.hris().patchHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchHrisJobRequest](../../models/operations/PatchHrisJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[PatchHrisJobResponse](../../models/operations/PatchHrisJobResponse.md)**
 
 ### Errors
 
@@ -3582,8 +4348,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("fd01f7ca-7b21-4d32-a619-3b75e64df32b")
-                    .id("f28f28b3-6633-431a-8161-7ef046d9d815")
+                    .externalIdentifier("019aebc6-abcb-41bd-842e-f9315e842363")
+                    .id("bf9eb454-3fd7-45f7-8a51-2b1635dfe888")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -3602,7 +4368,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-10T03:17:45.026Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.030Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3665,20 +4431,20 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-21T02:34:00.708Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-22T14:56:33.852Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-09T12:28:57.445Z"))
-                    .id("0827ff67-76de-4e75-a057-caf46aa2bff1")
+                    .endAt(OffsetDateTime.parse("2024-12-22T07:37:18.849Z"))
+                    .id("03bc149e-7269-4d92-91c1-5735550edffe")
                     .isPaid(true)
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-08-24T10:33:26.226Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-01T00:24:42.405Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-08T06:37:13.086Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-11T07:19:20.311Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3742,22 +4508,22 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2023-06-07T06:09:27.547Z"))
+                    .approvedAt(OffsetDateTime.parse("2023-06-18T03:10:12.122Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
                             .currency("JPY")
-                            .frequency(HrisCompensationFrequency.HOUR)
+                            .frequency(HrisCompensationFrequency.WEEK)
                             .notes("Annus adficio suasoria architecto aggero.")
-                            .type(HrisCompensationType.OTHER)
+                            .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-08-28T08:36:26.141Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-17T03:42:59.924Z"))
                     .hours(8d)
-                    .id("f4e9abcd-0967-4162-a883-8936d4157af5")
+                    .id("66a39c02-f126-4c60-921c-1874dc4ce92d")
                     .isApproved(true)
-                    .startAt(OffsetDateTime.parse("2023-06-26T11:39:07.851Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-06-23T16:49:43.319Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-07T12:09:32.567Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-29T04:09:58.872Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4182,6 +4948,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisEarning
+
+Remove an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisEarning" method="delete" path="/hris/{connection_id}/earning/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEarningResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisEarningRequest req = RemoveHrisEarningRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisEarningResponse res = sdk.hris().removeHrisEarning()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveHrisEarningRequest](../../models/operations/RemoveHrisEarningRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveHrisEarningResponse](../../models/operations/RemoveHrisEarningResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisEmployee
 
 Remove an employee
@@ -4287,6 +5109,62 @@ public class Application {
 ### Response
 
 **[RemoveHrisGroupResponse](../../models/operations/RemoveHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisJob
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisJobRequest req = RemoveHrisJobRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisJobResponse res = sdk.hris().removeHrisJob()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveHrisJobRequest](../../models/operations/RemoveHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[RemoveHrisJobResponse](../../models/operations/RemoveHrisJobResponse.md)**
 
 ### Errors
 
@@ -4493,8 +5371,8 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-07T17:46:51.489Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-09T13:58:14.446Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-18T03:04:04.277Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-10T13:16:25.400Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -4503,27 +5381,27 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-08-13T10:42:10.868Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-08-13T11:22:36.465Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(12d)
-                            .endAt(OffsetDateTime.parse("2023-10-23T23:43:19.003Z"))
+                            .endAt(OffsetDateTime.parse("2023-11-01T14:11:40.391Z"))
                             .id("d60a1001-5a8a-4991-8c21-f4da6036cc87")
                             .isPaid(true)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-17T03:53:40.584Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-25T16:36:52.486Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("UGX")
                     .declaredTipsAmount(161d)
                     .hourlyRate(53d)
                     .hours(10d)
-                    .id("c47a366e-1c08-45fa-9d0c-38d1d738a641")
+                    .id("ca6855f6-b061-4c6c-a056-abf324fefe3d")
                     .jobName("Global Creative Supervisor")
                     .nonCashTipsAmount(54d)
                     .status(HrisAttendanceStatus.CLOSED)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-17T07:38:03.668Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T00:35:08.160Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4589,12 +5467,17 @@ public class Application {
                     .accountNumberLast4("3777")
                     .accountType(HrisBankaccountAccountType.CHECKING)
                     .bankName("Huel Group")
+                    .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
-                    .id("a59c46a7-5d4b-45df-98f1-c5935aac4d1f")
+                    .currency("USD")
+                    .id("bcd4408c-762d-4625-8f76-1344e852bade")
                     .isPrimary(false)
                     .name("Checking Account")
+                    .priority(3d)
                     .routingNumber("448650724")
-                    .updatedAt(OffsetDateTime.parse("2025-06-06T22:35:03.403Z"))
+                    .splitAmount(23d)
+                    .splitType(SplitType.FIXED)
+                    .updatedAt(OffsetDateTime.parse("2025-06-23T03:40:10.111Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4663,13 +5546,13 @@ public class Application {
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
-                    .frequency(HrisBenefitFrequency.HOUR)
-                    .id("8afb2ac2-392c-4be4-aa88-39cea81b92ae")
+                    .frequency(HrisBenefitFrequency.MONTH)
+                    .id("137a01e2-1551-4c4d-bb8f-022698b5d187")
                     .isActive(false)
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
-                    .type(HrisBenefitType.GARNISHMENT)
-                    .updatedAt(OffsetDateTime.parse("2023-03-07T18:44:31.799Z"))
+                    .type(HrisBenefitType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2023-03-16T11:45:46.348Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4740,10 +5623,10 @@ public class Application {
                         .regionCode("PA")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("50bdb37f-e21e-4d15-b7dd-677113a9b1d3")
+                    .id("b2a1b766-0ef1-4bb8-a60d-b7b34587b7f6")
                     .legalName("Schultz LLC")
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T21:31:26.681Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-28T17:58:44.583Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4808,14 +5691,17 @@ public class Application {
                     .amount(139655d)
                     .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .endAt(OffsetDateTime.parse("2026-05-25T20:05:49.207Z"))
-                    .frequency(HrisDeductionFrequency.MONTH)
-                    .id("271b0d0e-936f-4af8-9bed-1b4a1174fd65")
+                    .employerAmount(22611d)
+                    .employerType(EmployerType.FIXED)
+                    .endAt(OffsetDateTime.parse("2026-06-13T20:05:36.869Z"))
+                    .frequency(HrisDeductionFrequency.BIWEEKLY)
+                    .garnishmentType(GarnishmentType.OTHER)
+                    .id("6598ef77-e61d-41d8-aba3-8868627cf0e6")
                     .isActive(false)
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-02-20T12:02:49.120Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-07T17:02:44.747Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-03T20:28:34.384Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-16T03:24:52.310Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4887,14 +5773,14 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(true)
-                    .id("1e939b25-a7cf-4ff0-a182-104bfe9156ca")
+                    .id("2733098a-ab40-459a-854b-b1bb6d2fb2f6")
                     .isMissing(false)
                     .manufacturer("Sanford - Hamill")
                     .model("Refined")
                     .name("cross_contamination_if.rar")
                     .os("monitor")
                     .osVersion("1.12.16")
-                    .updatedAt(OffsetDateTime.parse("2023-05-22T17:13:26.130Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T18:34:32.265Z"))
                     .version("2.20.17")
                     .build())
                 .connectionId("<id>")
@@ -4960,9 +5846,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("85c0eb48-5170-4b2a-9af4-354cdbccee45")
+                    .id("2183db2b-38b6-41f4-b6a2-4f5318b5fb14")
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T07:57:45.609Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-04T03:58:03.579Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4988,6 +5874,76 @@ public class Application {
 ### Response
 
 **[UpdateHrisDocumentResponse](../../models/operations/UpdateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisEarning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisEarningRequest req = UpdateHrisEarningRequest.builder()
+                .hrisEarning(HrisEarning.builder()
+                    .amount(4026d)
+                    .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
+                    .currency("PKR")
+                    .frequency(HrisEarningFrequency.BIWEEKLY)
+                    .id("e984a056-9298-45ea-9ffa-6479de095a1c")
+                    .notes("Truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-20T23:26:45.470Z"))
+                    .status(HrisEarningStatus.PROCESSED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-07T12:25:00.116Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisEarningResponse res = sdk.hris().updateHrisEarning()
+                .request(req)
+                .call();
+
+        if (res.hrisEarning().isPresent()) {
+            System.out.println(res.hrisEarning().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateHrisEarningRequest](../../models/operations/UpdateHrisEarningRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateHrisEarningResponse](../../models/operations/UpdateHrisEarningResponse.md)**
 
 ### Errors
 
@@ -5038,11 +5994,11 @@ public class Application {
                     .bio("sushi devotee, singer")
                     .compensation(List.of(
                         HrisCompensation.builder()
-                            .amount(69148d)
+                            .amount(60136d)
                             .currency("CRC")
                             .frequency(HrisCompensationFrequency.QUARTER)
                             .notes("Tergeo laborum laboriosam tutis.")
-                            .type(HrisCompensationType.EQUITY)
+                            .type(HrisCompensationType.STOCK_OPTIONS)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
                     .currency("IDR")
@@ -5056,10 +6012,11 @@ public class Application {
                     .employmentStatus(EmploymentStatus.ACTIVE)
                     .employmentType(HrisEmployeeEmploymentType.VOLUNTEER)
                     .firstName("Zetta")
+                    .flsaStatus(FlsaStatus.SALARIED_NONEXEMPT)
                     .gender(HrisEmployeeGender.INTERSEX)
-                    .hasMfa(true)
-                    .hiredAt(OffsetDateTime.parse("2023-05-12T06:08:21.617Z"))
-                    .id("9b80cc3c-35a4-4eb2-b269-399711785e39")
+                    .hasMfa(false)
+                    .hiredAt(OffsetDateTime.parse("2023-05-22T15:45:03.018Z"))
+                    .id("81c8b367-c709-49bf-83aa-4fe7d6faf9cc")
                     .imageUrl("https://loremflickr.com/3684/2116?lock=4686991638584456")
                     .languageLocale("es")
                     .lastName("Prohaska")
@@ -5070,12 +6027,13 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("cd351d1b-4490-4933-92ab-fea7c8e86868")
+                            .id("24010608-6f76-45ac-925c-ab53fb3c734c")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(HrisMetadataValue.of("tenetur"))
+                            .value(HrisMetadataValue.of("appono"))
                             .build()))
                     .name("Zetta Prohaska")
+                    .payFrequency(PayFrequency.BIWEEKLY)
                     .pronouns("she/her")
                     .relationships(List.of(
                         HrisEmployeerelationship.builder()
@@ -5090,35 +6048,32 @@ public class Application {
                                     .email("Hester80@gmail.com")
                                     .build()))
                             .name("Automotive")
-                            .type(HrisEmployeerelationshipType.EMERGENCY)
-                            .build(),
-                        HrisEmployeerelationship.builder()
-                            .emails(List.of(
-                                HrisEmail.builder()
-                                    .email("Benedict_Wisozk83@hotmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Princess_Rath43@gmail.com")
-                                    .build(),
-                                HrisEmail.builder()
-                                    .email("Elmira92@yahoo.com")
-                                    .build()))
-                            .name("Music")
                             .type(HrisEmployeerelationshipType.FRIEND)
                             .build(),
                         HrisEmployeerelationship.builder()
                             .emails(List.of(
                                 HrisEmail.builder()
-                                    .email("Jane30@gmail.com")
+                                    .email("Benedict_Wisozk83@hotmail.com")
                                     .build()))
-                            .name("Jewelry")
+                            .name("Music")
                             .type(HrisEmployeerelationshipType.SIBLING)
+                            .build(),
+                        HrisEmployeerelationship.builder()
+                            .emails(List.of(
+                                HrisEmail.builder()
+                                    .email("Margot11@yahoo.com")
+                                    .build(),
+                                HrisEmail.builder()
+                                    .email("Jaden_Miller@gmail.com")
+                                    .build()))
+                            .name("Electronics")
+                            .type(HrisEmployeerelationshipType.OTHER)
                             .build()))
                     .salutation("Miss")
                     .ssnSin("yMRtj0Q3xO")
-                    .storageQuotaAllocated(3674489d)
-                    .storageQuotaAvailable(7748057d)
-                    .storageQuotaUsed(301727d)
+                    .storageQuotaAllocated(7748057d)
+                    .storageQuotaAvailable(1590710d)
+                    .storageQuotaUsed(730343d)
                     .telephones(List.of(
                         HrisTelephone.builder()
                             .telephone("(409) 801-3705")
@@ -5129,7 +6084,7 @@ public class Application {
                     .timeoffDaysUsed(6d)
                     .timezone("Africa/Harare")
                     .title("Investor Paradigm Liaison")
-                    .updatedAt(OffsetDateTime.parse("2022-02-20T08:15:24.523Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-27T06:24:28.860Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5193,11 +6148,11 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("2dc0a185-c73f-4f72-8405-cfd966941363")
+                    .id("3e529d95-c8c0-4aaf-977f-4dfe1aa0158c")
                     .isActive(false)
                     .name("Games")
-                    .type(HrisGroupType.BUSINESS_UNIT)
-                    .updatedAt(OffsetDateTime.parse("2026-04-26T04:59:49.331Z"))
+                    .type(HrisGroupType.BRANCH)
+                    .updatedAt(OffsetDateTime.parse("2026-05-13T09:12:19.468Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5223,6 +6178,75 @@ public class Application {
 ### Response
 
 **[UpdateHrisGroupResponse](../../models/operations/UpdateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisJobRequest req = UpdateHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("69c74d53-aa9f-46fc-b7ae-68d6296eff97")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.112Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisJobResponse res = sdk.hris().updateHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateHrisJobRequest](../../models/operations/UpdateHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[UpdateHrisJobResponse](../../models/operations/UpdateHrisJobResponse.md)**
 
 ### Errors
 
@@ -5272,8 +6296,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("fd01f7ca-7b21-4d32-a619-3b75e64df32b")
-                    .id("f28f28b3-6633-431a-8161-7ef046d9d815")
+                    .externalIdentifier("019aebc6-abcb-41bd-842e-f9315e842363")
+                    .id("bf9eb454-3fd7-45f7-8a51-2b1635dfe888")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -5292,7 +6316,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-10T03:17:45.026Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.030Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5355,20 +6379,20 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-21T02:34:00.708Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-22T14:56:33.852Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-09T12:28:57.445Z"))
-                    .id("0827ff67-76de-4e75-a057-caf46aa2bff1")
+                    .endAt(OffsetDateTime.parse("2024-12-22T07:37:18.849Z"))
+                    .id("03bc149e-7269-4d92-91c1-5735550edffe")
                     .isPaid(true)
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-08-24T10:33:26.226Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-01T00:24:42.405Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-08T06:37:13.086Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-11T07:19:20.311Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5432,22 +6456,22 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2023-06-07T06:09:27.547Z"))
+                    .approvedAt(OffsetDateTime.parse("2023-06-18T03:10:12.122Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
                             .currency("JPY")
-                            .frequency(HrisCompensationFrequency.HOUR)
+                            .frequency(HrisCompensationFrequency.WEEK)
                             .notes("Annus adficio suasoria architecto aggero.")
-                            .type(HrisCompensationType.OTHER)
+                            .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-08-28T08:36:26.141Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-17T03:42:59.924Z"))
                     .hours(8d)
-                    .id("f4e9abcd-0967-4162-a883-8936d4157af5")
+                    .id("66a39c02-f126-4c60-921c-1874dc4ce92d")
                     .isApproved(true)
-                    .startAt(OffsetDateTime.parse("2023-06-26T11:39:07.851Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-06-23T16:49:43.319Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-07T12:09:32.567Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-29T04:09:58.872Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

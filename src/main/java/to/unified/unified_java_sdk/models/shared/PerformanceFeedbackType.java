@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PerformanceFeedbackType
+ * 
+ * <p>praise/recognition, constructive feedback, or a response to a feedback request
+ */
 public class PerformanceFeedbackType {
 
     public static final PerformanceFeedbackType PRAISE = new PerformanceFeedbackType("PRAISE");

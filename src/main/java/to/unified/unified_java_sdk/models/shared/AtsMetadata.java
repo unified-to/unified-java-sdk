@@ -35,7 +35,9 @@ public class AtsMetadata {
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * Actual textual value of the slug
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
@@ -82,6 +84,9 @@ public class AtsMetadata {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * Actual textual value of the slug
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
@@ -119,6 +124,9 @@ public class AtsMetadata {
     }
 
 
+    /**
+     * Actual textual value of the slug
+     */
     public AtsMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
@@ -206,6 +214,9 @@ public class AtsMetadata {
             return this;
         }
 
+        /**
+         * Actual textual value of the slug
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;

@@ -16,22 +16,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingRateSurcharge {
-
+    /**
+     * Surcharge amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     private String code;
 
-
+    /**
+     * Description of surcharge
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Human-readable name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -53,18 +61,30 @@ public class ShippingRateSurcharge {
             null);
     }
 
+    /**
+     * Surcharge amount
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
 
+    /**
+     * Description of surcharge
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Human-readable name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,24 +94,36 @@ public class ShippingRateSurcharge {
     }
 
 
+    /**
+     * Surcharge amount
+     */
     public ShippingRateSurcharge withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
+     */
     public ShippingRateSurcharge withCode(@Nullable String code) {
         this.code = code;
         return this;
     }
 
 
+    /**
+     * Description of surcharge
+     */
     public ShippingRateSurcharge withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Human-readable name
+     */
     public ShippingRateSurcharge withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -145,21 +177,33 @@ public class ShippingRateSurcharge {
           // force use of static builder() method
         }
 
+        /**
+         * Surcharge amount
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
+         */
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
+        /**
+         * Description of surcharge
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Human-readable name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

@@ -36,17 +36,23 @@ public class AccountingProject {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     private String code;
 
-
+    /**
+     * the customer the project is for (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -76,12 +82,16 @@ public class AccountingProject {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
 
-
+    /**
+     * actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ended_at")
     private OffsetDateTime endedAt;
@@ -126,7 +136,9 @@ public class AccountingProject {
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * references a HRIS employee/user (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager_user_id")
     private String managerUserId;
@@ -136,12 +148,16 @@ public class AccountingProject {
     @JsonProperty("metadata")
     private List<AccountingMetadata> metadata;
 
-
+    /**
+     * integer minutes, not hours
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes_logged")
     private Double minutesLogged;
 
-
+    /**
+     * integer minutes, not hours
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutes_to_be_invoiced")
     private Double minutesToBeInvoiced;
@@ -156,12 +172,16 @@ public class AccountingProject {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * parent project / sub-project hierarchy
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
-
+    /**
+     * 0-100
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percent_complete")
     private Double percentComplete;
@@ -171,7 +191,9 @@ public class AccountingProject {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     private OffsetDateTime startedAt;
@@ -186,7 +208,9 @@ public class AccountingProject {
     @JsonProperty("to_be_invoiced_amount")
     private Double toBeInvoicedAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -290,14 +314,23 @@ public class AccountingProject {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
 
+    /**
+     * the customer the project is for (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -322,10 +355,16 @@ public class AccountingProject {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
 
+    /**
+     * actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endedAt() {
         return Optional.ofNullable(this.endedAt);
     }
@@ -362,6 +401,9 @@ public class AccountingProject {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * references a HRIS employee/user (reference to HrisEmployee)
+     */
     public Optional<String> managerUserId() {
         return Optional.ofNullable(this.managerUserId);
     }
@@ -370,10 +412,16 @@ public class AccountingProject {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * integer minutes, not hours
+     */
     public Optional<Double> minutesLogged() {
         return Optional.ofNullable(this.minutesLogged);
     }
 
+    /**
+     * integer minutes, not hours
+     */
     public Optional<Double> minutesToBeInvoiced() {
         return Optional.ofNullable(this.minutesToBeInvoiced);
     }
@@ -386,10 +434,16 @@ public class AccountingProject {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * parent project / sub-project hierarchy
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
 
+    /**
+     * 0-100
+     */
     public Optional<Double> percentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
@@ -398,6 +452,9 @@ public class AccountingProject {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }
@@ -410,6 +467,9 @@ public class AccountingProject {
         return Optional.ofNullable(this.toBeInvoicedAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -437,18 +497,27 @@ public class AccountingProject {
     }
 
 
+    /**
+     * provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
+     */
     public AccountingProject withCode(@Nullable String code) {
         this.code = code;
         return this;
     }
 
 
+    /**
+     * the customer the project is for (reference to AccountingContact)
+     */
     public AccountingProject withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingProject withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -485,12 +554,18 @@ public class AccountingProject {
     }
 
 
+    /**
+     * planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingProject withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
     }
 
 
+    /**
+     * actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingProject withEndedAt(@Nullable OffsetDateTime endedAt) {
         this.endedAt = endedAt;
         return this;
@@ -545,6 +620,9 @@ public class AccountingProject {
     }
 
 
+    /**
+     * references a HRIS employee/user (reference to HrisEmployee)
+     */
     public AccountingProject withManagerUserId(@Nullable String managerUserId) {
         this.managerUserId = managerUserId;
         return this;
@@ -557,12 +635,18 @@ public class AccountingProject {
     }
 
 
+    /**
+     * integer minutes, not hours
+     */
     public AccountingProject withMinutesLogged(@Nullable Double minutesLogged) {
         this.minutesLogged = minutesLogged;
         return this;
     }
 
 
+    /**
+     * integer minutes, not hours
+     */
     public AccountingProject withMinutesToBeInvoiced(@Nullable Double minutesToBeInvoiced) {
         this.minutesToBeInvoiced = minutesToBeInvoiced;
         return this;
@@ -581,12 +665,18 @@ public class AccountingProject {
     }
 
 
+    /**
+     * parent project / sub-project hierarchy
+     */
     public AccountingProject withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
 
+    /**
+     * 0-100
+     */
     public AccountingProject withPercentComplete(@Nullable Double percentComplete) {
         this.percentComplete = percentComplete;
         return this;
@@ -599,6 +689,9 @@ public class AccountingProject {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingProject withStartedAt(@Nullable OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -617,6 +710,9 @@ public class AccountingProject {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingProject withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -815,16 +911,25 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
+         */
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
+        /**
+         * the customer the project is for (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -855,11 +960,17 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
         }
 
+        /**
+         * actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endedAt(@Nullable OffsetDateTime endedAt) {
             this.endedAt = endedAt;
             return this;
@@ -905,6 +1016,9 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * references a HRIS employee/user (reference to HrisEmployee)
+         */
         public Builder managerUserId(@Nullable String managerUserId) {
             this.managerUserId = managerUserId;
             return this;
@@ -915,11 +1029,17 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * integer minutes, not hours
+         */
         public Builder minutesLogged(@Nullable Double minutesLogged) {
             this.minutesLogged = minutesLogged;
             return this;
         }
 
+        /**
+         * integer minutes, not hours
+         */
         public Builder minutesToBeInvoiced(@Nullable Double minutesToBeInvoiced) {
             this.minutesToBeInvoiced = minutesToBeInvoiced;
             return this;
@@ -935,11 +1055,17 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * parent project / sub-project hierarchy
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
+        /**
+         * 0-100
+         */
         public Builder percentComplete(@Nullable Double percentComplete) {
             this.percentComplete = percentComplete;
             return this;
@@ -950,6 +1076,9 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startedAt(@Nullable OffsetDateTime startedAt) {
             this.startedAt = startedAt;
             return this;
@@ -965,6 +1094,9 @@ public class AccountingProject {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

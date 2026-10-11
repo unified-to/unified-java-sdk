@@ -26,27 +26,37 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("additionalManagers")
     private List<ScimManager> additionalManagers;
 
-
+    /**
+     * 1985-07-20
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthday")
     private OffsetDateTime birthday;
 
-
+    /**
+     * Identifies the name of a cost center.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costCenter")
     private String costCenter;
 
-
+    /**
+     * User currency
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Identifies the name of a department.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("department")
     private String department;
 
-
+    /**
+     * Identifies the name of a division.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("division")
     private String division;
@@ -56,7 +66,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("employeeNumber")
     private String employeeNumber;
 
-
+    /**
+     * 2022-02-25
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     private OffsetDateTime endDate;
@@ -71,7 +83,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("level")
     private String level;
 
-
+    /**
+     * Berlin
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private String location;
@@ -83,12 +97,16 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     @JsonProperty("manager")
     private PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager manager;
 
-
+    /**
+     * Identifies the name of an organization.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     private String organization;
 
-
+    /**
+     * 2011-03-25
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     private OffsetDateTime startDate;
@@ -137,22 +155,37 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return Optional.ofNullable(this.additionalManagers);
     }
 
+    /**
+     * 1985-07-20
+     */
     public Optional<OffsetDateTime> birthday() {
         return Optional.ofNullable(this.birthday);
     }
 
+    /**
+     * Identifies the name of a cost center.
+     */
     public Optional<String> costCenter() {
         return Optional.ofNullable(this.costCenter);
     }
 
+    /**
+     * User currency
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Identifies the name of a department.
+     */
     public Optional<String> department() {
         return Optional.ofNullable(this.department);
     }
 
+    /**
+     * Identifies the name of a division.
+     */
     public Optional<String> division() {
         return Optional.ofNullable(this.division);
     }
@@ -161,6 +194,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return Optional.ofNullable(this.employeeNumber);
     }
 
+    /**
+     * 2022-02-25
+     */
     public Optional<OffsetDateTime> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -173,6 +209,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return Optional.ofNullable(this.level);
     }
 
+    /**
+     * Berlin
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -184,10 +223,16 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         return Optional.ofNullable(this.manager);
     }
 
+    /**
+     * Identifies the name of an organization.
+     */
     public Optional<String> organization() {
         return Optional.ofNullable(this.organization);
     }
 
+    /**
+     * 2011-03-25
+     */
     public Optional<OffsetDateTime> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -203,30 +248,45 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     }
 
 
+    /**
+     * 1985-07-20
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withBirthday(@Nullable OffsetDateTime birthday) {
         this.birthday = birthday;
         return this;
     }
 
 
+    /**
+     * Identifies the name of a cost center.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withCostCenter(@Nullable String costCenter) {
         this.costCenter = costCenter;
         return this;
     }
 
 
+    /**
+     * User currency
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Identifies the name of a department.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withDepartment(@Nullable String department) {
         this.department = department;
         return this;
     }
 
 
+    /**
+     * Identifies the name of a division.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withDivision(@Nullable String division) {
         this.division = division;
         return this;
@@ -239,6 +299,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     }
 
 
+    /**
+     * 2022-02-25
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withEndDate(@Nullable OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -257,6 +320,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     }
 
 
+    /**
+     * Berlin
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withLocation(@Nullable String location) {
         this.location = location;
         return this;
@@ -272,12 +338,18 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     }
 
 
+    /**
+     * Identifies the name of an organization.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withOrganization(@Nullable String organization) {
         this.organization = organization;
         return this;
     }
 
 
+    /**
+     * 2011-03-25
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withStartDate(@Nullable OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -379,26 +451,41 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+        /**
+         * 1985-07-20
+         */
         public Builder birthday(@Nullable OffsetDateTime birthday) {
             this.birthday = birthday;
             return this;
         }
 
+        /**
+         * Identifies the name of a cost center.
+         */
         public Builder costCenter(@Nullable String costCenter) {
             this.costCenter = costCenter;
             return this;
         }
 
+        /**
+         * User currency
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Identifies the name of a department.
+         */
         public Builder department(@Nullable String department) {
             this.department = department;
             return this;
         }
 
+        /**
+         * Identifies the name of a division.
+         */
         public Builder division(@Nullable String division) {
             this.division = division;
             return this;
@@ -409,6 +496,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+        /**
+         * 2022-02-25
+         */
         public Builder endDate(@Nullable OffsetDateTime endDate) {
             this.endDate = endDate;
             return this;
@@ -424,6 +514,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+        /**
+         * Berlin
+         */
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
@@ -437,11 +530,17 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             return this;
         }
 
+        /**
+         * Identifies the name of an organization.
+         */
         public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
         }
 
+        /**
+         * 2011-03-25
+         */
         public Builder startDate(@Nullable OffsetDateTime startDate) {
             this.startDate = startDate;
             return this;

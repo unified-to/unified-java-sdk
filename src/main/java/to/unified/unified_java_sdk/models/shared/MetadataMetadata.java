@@ -21,7 +21,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class MetadataMetadata {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -45,7 +47,10 @@ public class MetadataMetadata {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * This is the unified object type that this metadata is associated with. eg. crm_contact or
+     * coomerce_item
+     */
     @JsonProperty("object_type")
     private String objectType;
 
@@ -74,7 +79,9 @@ public class MetadataMetadata {
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -118,6 +125,9 @@ public class MetadataMetadata {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -138,6 +148,10 @@ public class MetadataMetadata {
         return this.name;
     }
 
+    /**
+     * This is the unified object type that this metadata is associated with. eg. crm_contact or
+     * coomerce_item
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -162,6 +176,9 @@ public class MetadataMetadata {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -171,6 +188,9 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MetadataMetadata withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -201,6 +221,10 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * This is the unified object type that this metadata is associated with. eg. crm_contact or
+     * coomerce_item
+     */
     public MetadataMetadata withObjectType(@Nonnull String objectType) {
         this.objectType = Utils.checkNotNull(objectType, "objectType");
         return this;
@@ -237,6 +261,9 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MetadataMetadata withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -324,6 +351,9 @@ public class MetadataMetadata {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -349,6 +379,10 @@ public class MetadataMetadata {
             return this;
         }
 
+        /**
+         * This is the unified object type that this metadata is associated with. eg. crm_contact or
+         * coomerce_item
+         */
         public Builder objectType(@Nonnull String objectType) {
             this.objectType = Utils.checkNotNull(objectType, "objectType");
             return this;
@@ -379,6 +413,9 @@ public class MetadataMetadata {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

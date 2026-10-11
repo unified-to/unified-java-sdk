@@ -19,47 +19,65 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingCarrier {
-
+    /**
+     * Carrier code (e.g., "usps", "fedex", "ups")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     private String code;
 
-
+    /**
+     * The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Unique identifier for this carrier object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the carrier is currently active
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * Carrier logo URL
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private String logoUrl;
 
-
+    /**
+     * The name of the carrier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this carrier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Carrier website
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
     private String websiteUrl;
@@ -92,38 +110,65 @@ public class ShippingCarrier {
             null, null, null);
     }
 
+    /**
+     * Carrier code (e.g., "usps", "fedex", "ups")
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
 
+    /**
+     * The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Unique identifier for this carrier object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the carrier is currently active
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * Carrier logo URL
+     */
     public Optional<String> logoUrl() {
         return Optional.ofNullable(this.logoUrl);
     }
 
+    /**
+     * The name of the carrier
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this carrier
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Carrier website
+     */
     public Optional<String> websiteUrl() {
         return Optional.ofNullable(this.websiteUrl);
     }
@@ -133,54 +178,81 @@ public class ShippingCarrier {
     }
 
 
+    /**
+     * Carrier code (e.g., "usps", "fedex", "ups")
+     */
     public ShippingCarrier withCode(@Nullable String code) {
         this.code = code;
         return this;
     }
 
 
+    /**
+     * The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingCarrier withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this carrier object
+     */
     public ShippingCarrier withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the carrier is currently active
+     */
     public ShippingCarrier withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
 
+    /**
+     * Carrier logo URL
+     */
     public ShippingCarrier withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
     }
 
 
+    /**
+     * The name of the carrier
+     */
     public ShippingCarrier withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this carrier
+     */
     public ShippingCarrier withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingCarrier withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Carrier website
+     */
     public ShippingCarrier withWebsiteUrl(@Nullable String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
@@ -255,46 +327,73 @@ public class ShippingCarrier {
           // force use of static builder() method
         }
 
+        /**
+         * Carrier code (e.g., "usps", "fedex", "ups")
+         */
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
+        /**
+         * The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Unique identifier for this carrier object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the carrier is currently active
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
+        /**
+         * Carrier logo URL
+         */
         public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
         }
 
+        /**
+         * The name of the carrier
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this carrier
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Carrier website
+         */
         public Builder websiteUrl(@Nullable String websiteUrl) {
             this.websiteUrl = websiteUrl;
             return this;

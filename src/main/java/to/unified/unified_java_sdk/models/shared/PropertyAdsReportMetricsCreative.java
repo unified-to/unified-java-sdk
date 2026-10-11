@@ -37,7 +37,9 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("campaign_id")
     private String campaignId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -72,7 +74,9 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("external_placement_reference")
     private String externalPlacementReference;
 
-
+    /**
+     * (reference to AdsGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -92,7 +96,9 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * references Commerce Item ID (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
@@ -102,7 +108,9 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("labels")
     private List<String> labels;
 
-
+    /**
+     * Destination URL for creatives with links
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_url")
     private String linkUrl;
@@ -117,12 +125,16 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * Display URL path 1 (Microsoft RSA Path1)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path1")
     private String path1;
 
-
+    /**
+     * Display URL path 2 (Microsoft RSA Path2)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path2")
     private String path2;
@@ -152,12 +164,17 @@ public class PropertyAdsReportMetricsCreative {
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Appended URL tracking params (e.g. utm_source=..&amp;utm_medium=..); Meta url_tags, Google tracking
+     * template
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url_tags")
     private String urlTags;
@@ -264,6 +281,9 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.campaignId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -292,6 +312,9 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.externalPlacementReference);
     }
 
+    /**
+     * (reference to AdsGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -308,6 +331,9 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * references Commerce Item ID (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -316,6 +342,9 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.labels);
     }
 
+    /**
+     * Destination URL for creatives with links
+     */
     public Optional<String> linkUrl() {
         return Optional.ofNullable(this.linkUrl);
     }
@@ -328,10 +357,16 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * Display URL path 1 (Microsoft RSA Path1)
+     */
     public Optional<String> path1() {
         return Optional.ofNullable(this.path1);
     }
 
+    /**
+     * Display URL path 2 (Microsoft RSA Path2)
+     */
     public Optional<String> path2() {
         return Optional.ofNullable(this.path2);
     }
@@ -356,10 +391,17 @@ public class PropertyAdsReportMetricsCreative {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Appended URL tracking params (e.g. utm_source=..&amp;utm_medium=..); Meta url_tags, Google tracking
+     * template
+     */
     public Optional<String> urlTags() {
         return Optional.ofNullable(this.urlTags);
     }
@@ -398,6 +440,9 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCreative withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -440,6 +485,9 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * (reference to AdsGroup)
+     */
     public PropertyAdsReportMetricsCreative withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -464,6 +512,9 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * references Commerce Item ID (reference to CommerceItem)
+     */
     public PropertyAdsReportMetricsCreative withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
@@ -476,6 +527,9 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * Destination URL for creatives with links
+     */
     public PropertyAdsReportMetricsCreative withLinkUrl(@Nullable String linkUrl) {
         this.linkUrl = linkUrl;
         return this;
@@ -494,12 +548,18 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * Display URL path 1 (Microsoft RSA Path1)
+     */
     public PropertyAdsReportMetricsCreative withPath1(@Nullable String path1) {
         this.path1 = path1;
         return this;
     }
 
 
+    /**
+     * Display URL path 2 (Microsoft RSA Path2)
+     */
     public PropertyAdsReportMetricsCreative withPath2(@Nullable String path2) {
         this.path2 = path2;
         return this;
@@ -536,12 +596,19 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCreative withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Appended URL tracking params (e.g. utm_source=..&amp;utm_medium=..); Meta url_tags, Google tracking
+     * template
+     */
     public PropertyAdsReportMetricsCreative withUrlTags(@Nullable String urlTags) {
         this.urlTags = urlTags;
         return this;
@@ -737,6 +804,9 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -772,6 +842,9 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * (reference to AdsGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -792,6 +865,9 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * references Commerce Item ID (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
@@ -802,6 +878,9 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * Destination URL for creatives with links
+         */
         public Builder linkUrl(@Nullable String linkUrl) {
             this.linkUrl = linkUrl;
             return this;
@@ -817,11 +896,17 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * Display URL path 1 (Microsoft RSA Path1)
+         */
         public Builder path1(@Nullable String path1) {
             this.path1 = path1;
             return this;
         }
 
+        /**
+         * Display URL path 2 (Microsoft RSA Path2)
+         */
         public Builder path2(@Nullable String path2) {
             this.path2 = path2;
             return this;
@@ -852,11 +937,18 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Appended URL tracking params (e.g. utm_source=..&amp;utm_medium=..); Meta url_tags, Google tracking
+         * template
+         */
         public Builder urlTags(@Nullable String urlTags) {
             this.urlTags = urlTags;
             return this;

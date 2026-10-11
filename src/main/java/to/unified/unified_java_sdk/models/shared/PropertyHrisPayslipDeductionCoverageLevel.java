@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyHrisPayslipDeductionCoverageLevel
+ * 
+ * <p>Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
+ */
 public class PropertyHrisPayslipDeductionCoverageLevel {
 
     public static final PropertyHrisPayslipDeductionCoverageLevel EMPLOYEE_ONLY = new PropertyHrisPayslipDeductionCoverageLevel("EMPLOYEE_ONLY");

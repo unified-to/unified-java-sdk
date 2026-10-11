@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyAdsReportMetricsCampaignEffectiveStatus
+ * 
+ * <p>read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+ * status
+ */
 public class PropertyAdsReportMetricsCampaignEffectiveStatus {
 
     public static final PropertyAdsReportMetricsCampaignEffectiveStatus UNSPECIFIED = new PropertyAdsReportMetricsCampaignEffectiveStatus("UNSPECIFIED");

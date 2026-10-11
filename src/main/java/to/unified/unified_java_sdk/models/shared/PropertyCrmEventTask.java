@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>The task object, when type = task
  */
 public class PropertyCrmEventTask {
-
+    /**
+     * The event task's descriptionnote
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
 
-
+    /**
+     * The event task's nametitle/subject
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -40,7 +46,9 @@ public class PropertyCrmEventTask {
     @JsonProperty("priority")
     private Priority priority;
 
-
+    /**
+     * The event task's status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private PropertyCrmEventTaskStatus status;
@@ -64,14 +72,23 @@ public class PropertyCrmEventTask {
             null, null);
     }
 
+    /**
+     * The event task's descriptionnote
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
 
+    /**
+     * The event task's nametitle/subject
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +97,9 @@ public class PropertyCrmEventTask {
         return Optional.ofNullable(this.priority);
     }
 
+    /**
+     * The event task's status
+     */
     public Optional<PropertyCrmEventTaskStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -89,18 +109,27 @@ public class PropertyCrmEventTask {
     }
 
 
+    /**
+     * The event task's descriptionnote
+     */
     public PropertyCrmEventTask withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyCrmEventTask withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
     }
 
 
+    /**
+     * The event task's nametitle/subject
+     */
     public PropertyCrmEventTask withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -113,6 +142,9 @@ public class PropertyCrmEventTask {
     }
 
 
+    /**
+     * The event task's status
+     */
     public PropertyCrmEventTask withStatus(@Nullable PropertyCrmEventTaskStatus status) {
         this.status = status;
         return this;
@@ -170,16 +202,25 @@ public class PropertyCrmEventTask {
           // force use of static builder() method
         }
 
+        /**
+         * The event task's descriptionnote
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
         }
 
+        /**
+         * The event task's nametitle/subject
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -190,6 +231,9 @@ public class PropertyCrmEventTask {
             return this;
         }
 
+        /**
+         * The event task's status
+         */
         public Builder status(@Nullable PropertyCrmEventTaskStatus status) {
             this.status = status;
             return this;

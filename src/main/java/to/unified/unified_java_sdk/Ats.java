@@ -36,6 +36,9 @@ import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsCandidateResponse;
@@ -163,6 +166,7 @@ import to.unified.unified_java_sdk.operations.CreateAtsJob;
 import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
 import to.unified.unified_java_sdk.operations.GetAtsApplication;
+import to.unified.unified_java_sdk.operations.GetAtsApplicationstatus;
 import to.unified.unified_java_sdk.operations.GetAtsCandidate;
 import to.unified.unified_java_sdk.operations.GetAtsCompany;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
@@ -441,6 +445,28 @@ public class Ats {
     public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
               = new GetAtsApplication.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @return The call builder
+     */
+    public GetAtsApplicationstatusRequestBuilder getAtsApplicationstatus() {
+        return new GetAtsApplicationstatusRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAtsApplicationstatusResponse getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        RequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
+              = new GetAtsApplicationstatus.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

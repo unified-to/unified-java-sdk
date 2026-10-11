@@ -31,7 +31,9 @@ public class ScimPhoto {
     @JsonProperty("type")
     private ScimPhotoType type;
 
-
+    /**
+     * URL
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private String value;
@@ -65,6 +67,9 @@ public class ScimPhoto {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * URL
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -92,6 +97,9 @@ public class ScimPhoto {
     }
 
 
+    /**
+     * URL
+     */
     public ScimPhoto withValue(@Nullable String value) {
         this.value = value;
         return this;
@@ -160,6 +168,9 @@ public class ScimPhoto {
             return this;
         }
 
+        /**
+         * URL
+         */
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;

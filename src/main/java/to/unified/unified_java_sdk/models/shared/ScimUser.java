@@ -151,7 +151,10 @@ public class ScimUser {
     @JsonProperty("userName")
     private String userName;
 
-
+    /**
+     * 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager',
+     * 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userType")
     private String userType;
@@ -344,6 +347,10 @@ public class ScimUser {
         return Optional.ofNullable(this.userName);
     }
 
+    /**
+     * 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager',
+     * 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
+     */
     public Optional<String> userType() {
         return Optional.ofNullable(this.userType);
     }
@@ -519,6 +526,10 @@ public class ScimUser {
     }
 
 
+    /**
+     * 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager',
+     * 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
+     */
     public ScimUser withUserType(@Nullable String userType) {
         this.userType = userType;
         return this;
@@ -818,6 +829,10 @@ public class ScimUser {
             return this;
         }
 
+        /**
+         * 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager',
+         * 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
+         */
         public Builder userType(@Nullable String userType) {
             this.userType = userType;
             return this;

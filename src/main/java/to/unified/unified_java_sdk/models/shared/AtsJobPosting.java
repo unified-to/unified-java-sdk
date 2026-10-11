@@ -24,12 +24,16 @@ public class AtsJobPosting {
     @JsonProperty("address")
     private PropertyAtsJobPostingAddress address;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * job-post-specific description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -44,12 +48,16 @@ public class AtsJobPosting {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * job-post-specific location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private String location;
 
-
+    /**
+     * job-post-specific name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -59,7 +67,9 @@ public class AtsJobPosting {
     @JsonProperty("posting_url")
     private String postingUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -99,10 +109,16 @@ public class AtsJobPosting {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * job-post-specific description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -115,10 +131,16 @@ public class AtsJobPosting {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * job-post-specific location
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * job-post-specific name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -127,6 +149,9 @@ public class AtsJobPosting {
         return Optional.ofNullable(this.postingUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -145,12 +170,18 @@ public class AtsJobPosting {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJobPosting withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * job-post-specific description
+     */
     public AtsJobPosting withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -169,12 +200,18 @@ public class AtsJobPosting {
     }
 
 
+    /**
+     * job-post-specific location
+     */
     public AtsJobPosting withLocation(@Nullable String location) {
         this.location = location;
         return this;
     }
 
 
+    /**
+     * job-post-specific name
+     */
     public AtsJobPosting withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -187,6 +224,9 @@ public class AtsJobPosting {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJobPosting withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -269,11 +309,17 @@ public class AtsJobPosting {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * job-post-specific description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -289,11 +335,17 @@ public class AtsJobPosting {
             return this;
         }
 
+        /**
+         * job-post-specific location
+         */
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
+        /**
+         * job-post-specific name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -304,6 +356,9 @@ public class AtsJobPosting {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

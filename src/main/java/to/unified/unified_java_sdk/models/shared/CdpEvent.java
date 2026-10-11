@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpEvent {
-
+    /**
+     * The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Unique identifier for this event object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -43,37 +47,51 @@ public class CdpEvent {
     @JsonProperty("metadata")
     private List<CdpMetadata> metadata;
 
-
+    /**
+     * The specific event name (eg. "Product Purchased")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     private OffsetDateTime occurredAt;
 
-
+    /**
+     * The profile this event is associated with; points to CdpProfile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_id")
     private String profileId;
 
-
+    /**
+     * The raw data returned by the integration for this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The source that produced this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
 
-
+    /**
+     * The cdp_source this event originated from; points to CdpSource
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     private String sourceId;
 
-
+    /**
+     * The unified structural category of the event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private CdpEventType type;
@@ -111,10 +129,16 @@ public class CdpEvent {
             null, null);
     }
 
+    /**
+     * The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Unique identifier for this event object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -133,30 +157,51 @@ public class CdpEvent {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The specific event name (eg. "Product Purchased")
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> occurredAt() {
         return Optional.ofNullable(this.occurredAt);
     }
 
+    /**
+     * The profile this event is associated with; points to CdpProfile
+     */
     public Optional<String> profileId() {
         return Optional.ofNullable(this.profileId);
     }
 
+    /**
+     * The raw data returned by the integration for this event
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The source that produced this event
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 
+    /**
+     * The cdp_source this event originated from; points to CdpSource
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
 
+    /**
+     * The unified structural category of the event
+     */
     public Optional<CdpEventType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -166,12 +211,18 @@ public class CdpEvent {
     }
 
 
+    /**
+     * The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this event object
+     */
     public CdpEvent withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -196,42 +247,63 @@ public class CdpEvent {
     }
 
 
+    /**
+     * The specific event name (eg. "Product Purchased")
+     */
     public CdpEvent withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpEvent withOccurredAt(@Nullable OffsetDateTime occurredAt) {
         this.occurredAt = occurredAt;
         return this;
     }
 
 
+    /**
+     * The profile this event is associated with; points to CdpProfile
+     */
     public CdpEvent withProfileId(@Nullable String profileId) {
         this.profileId = profileId;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this event
+     */
     public CdpEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The source that produced this event
+     */
     public CdpEvent withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
 
+    /**
+     * The cdp_source this event originated from; points to CdpSource
+     */
     public CdpEvent withSourceId(@Nullable String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
 
 
+    /**
+     * The unified structural category of the event
+     */
     public CdpEvent withType(@Nullable CdpEventType type) {
         this.type = type;
         return this;
@@ -315,11 +387,17 @@ public class CdpEvent {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Unique identifier for this event object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -341,36 +419,57 @@ public class CdpEvent {
             return this;
         }
 
+        /**
+         * The specific event name (eg. "Product Purchased")
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder occurredAt(@Nullable OffsetDateTime occurredAt) {
             this.occurredAt = occurredAt;
             return this;
         }
 
+        /**
+         * The profile this event is associated with; points to CdpProfile
+         */
         public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this event
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The source that produced this event
+         */
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
+        /**
+         * The cdp_source this event originated from; points to CdpSource
+         */
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * The unified structural category of the event
+         */
         public Builder type(@Nullable CdpEventType type) {
             this.type = type;
             return this;

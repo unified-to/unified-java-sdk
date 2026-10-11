@@ -35,12 +35,16 @@ public class Integration {
     @JsonProperty("api")
     private Api api;
 
-
+    /**
+     * The URL of the integration's API documentation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_docs_url")
     private String apiDocsUrl;
 
-
+    /**
+     * This integration is new and is still considered "beta"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beta")
     private Boolean beta;
@@ -51,12 +55,16 @@ public class Integration {
     @JsonProperty("categories")
     private List<PropertyIntegrationCategories> categories;
 
-
+    /**
+     * button background color for AUTH
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     private String color;
 
-
+    /**
+     * Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
@@ -66,7 +74,9 @@ public class Integration {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * font-awesome icon
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fa_icon")
     private String faIcon;
@@ -76,12 +86,16 @@ public class Integration {
     @JsonProperty("featured")
     private Boolean featured;
 
-
+    /**
+     * If this integration is not yet available as it is currently being built by unified.to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress")
     private Boolean inProgress;
 
-
+    /**
+     * Is this integration active in this workspace
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
@@ -91,12 +105,16 @@ public class Integration {
     @JsonProperty("is_hidden")
     private Boolean isHidden;
 
-
+    /**
+     * The URL of the integration's logo
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private String logoUrl;
 
-
+    /**
+     * The integration's name
+     */
     @JsonProperty("name")
     private String name;
 
@@ -115,7 +133,9 @@ public class Integration {
     @JsonProperty("rate_limit_description")
     private String rateLimitDescription;
 
-
+    /**
+     * OAuth requires a custom API domain (CNAME) for provider verification
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requires_cname")
     private Boolean requiresCname;
@@ -135,12 +155,16 @@ public class Integration {
     @JsonProperty("support")
     private Map<String, IntegrationSupport> support;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tested_at")
     private OffsetDateTime testedAt;
 
-
+    /**
+     * text color for AUTH
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_color")
     private String textColor;
@@ -159,16 +183,22 @@ public class Integration {
     @JsonProperty("token_names")
     private List<String> tokenNames;
 
-
+    /**
+     * Identifier for this integration
+     */
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
 
-
+    /**
+     * URL for the software vendor
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     private String webUrl;
@@ -262,10 +292,16 @@ public class Integration {
         return Optional.ofNullable(this.api);
     }
 
+    /**
+     * The URL of the integration's API documentation
+     */
     public Optional<String> apiDocsUrl() {
         return Optional.ofNullable(this.apiDocsUrl);
     }
 
+    /**
+     * This integration is new and is still considered "beta"
+     */
     public Optional<Boolean> beta() {
         return Optional.ofNullable(this.beta);
     }
@@ -277,10 +313,16 @@ public class Integration {
         return this.categories;
     }
 
+    /**
+     * button background color for AUTH
+     */
     public Optional<String> color() {
         return Optional.ofNullable(this.color);
     }
 
+    /**
+     * Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -289,6 +331,9 @@ public class Integration {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * font-awesome icon
+     */
     public Optional<String> faIcon() {
         return Optional.ofNullable(this.faIcon);
     }
@@ -297,10 +342,16 @@ public class Integration {
         return Optional.ofNullable(this.featured);
     }
 
+    /**
+     * If this integration is not yet available as it is currently being built by unified.to
+     */
     public Optional<Boolean> inProgress() {
         return Optional.ofNullable(this.inProgress);
     }
 
+    /**
+     * Is this integration active in this workspace
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -309,10 +360,16 @@ public class Integration {
         return Optional.ofNullable(this.isHidden);
     }
 
+    /**
+     * The URL of the integration's logo
+     */
     public Optional<String> logoUrl() {
         return Optional.ofNullable(this.logoUrl);
     }
 
+    /**
+     * The integration's name
+     */
     public String name() {
         return this.name;
     }
@@ -329,6 +386,9 @@ public class Integration {
         return Optional.ofNullable(this.rateLimitDescription);
     }
 
+    /**
+     * OAuth requires a custom API domain (CNAME) for provider verification
+     */
     public Optional<Boolean> requiresCname() {
         return Optional.ofNullable(this.requiresCname);
     }
@@ -345,10 +405,16 @@ public class Integration {
         return Optional.ofNullable(this.support);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> testedAt() {
         return Optional.ofNullable(this.testedAt);
     }
 
+    /**
+     * text color for AUTH
+     */
     public Optional<String> textColor() {
         return Optional.ofNullable(this.textColor);
     }
@@ -367,14 +433,23 @@ public class Integration {
         return Optional.ofNullable(this.tokenNames);
     }
 
+    /**
+     * Identifier for this integration
+     */
     public String type() {
         return this.type;
     }
 
+    /**
+     * YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * URL for the software vendor
+     */
     public Optional<String> webUrl() {
         return Optional.ofNullable(this.webUrl);
     }
@@ -396,12 +471,18 @@ public class Integration {
     }
 
 
+    /**
+     * The URL of the integration's API documentation
+     */
     public Integration withApiDocsUrl(@Nullable String apiDocsUrl) {
         this.apiDocsUrl = apiDocsUrl;
         return this;
     }
 
 
+    /**
+     * This integration is new and is still considered "beta"
+     */
     public Integration withBeta(@Nullable Boolean beta) {
         this.beta = beta;
         return this;
@@ -417,12 +498,18 @@ public class Integration {
     }
 
 
+    /**
+     * button background color for AUTH
+     */
     public Integration withColor(@Nullable String color) {
         this.color = color;
         return this;
     }
 
 
+    /**
+     * Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Integration withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -435,6 +522,9 @@ public class Integration {
     }
 
 
+    /**
+     * font-awesome icon
+     */
     public Integration withFaIcon(@Nullable String faIcon) {
         this.faIcon = faIcon;
         return this;
@@ -447,12 +537,18 @@ public class Integration {
     }
 
 
+    /**
+     * If this integration is not yet available as it is currently being built by unified.to
+     */
     public Integration withInProgress(@Nullable Boolean inProgress) {
         this.inProgress = inProgress;
         return this;
     }
 
 
+    /**
+     * Is this integration active in this workspace
+     */
     public Integration withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -465,12 +561,18 @@ public class Integration {
     }
 
 
+    /**
+     * The URL of the integration's logo
+     */
     public Integration withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
     }
 
 
+    /**
+     * The integration's name
+     */
     public Integration withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
@@ -495,6 +597,9 @@ public class Integration {
     }
 
 
+    /**
+     * OAuth requires a custom API domain (CNAME) for provider verification
+     */
     public Integration withRequiresCname(@Nullable Boolean requiresCname) {
         this.requiresCname = requiresCname;
         return this;
@@ -519,12 +624,18 @@ public class Integration {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Integration withTestedAt(@Nullable OffsetDateTime testedAt) {
         this.testedAt = testedAt;
         return this;
     }
 
 
+    /**
+     * text color for AUTH
+     */
     public Integration withTextColor(@Nullable String textColor) {
         this.textColor = textColor;
         return this;
@@ -549,18 +660,27 @@ public class Integration {
     }
 
 
+    /**
+     * Identifier for this integration
+     */
     public Integration withType(@Nonnull String type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
     }
 
 
+    /**
+     * YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Integration withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * URL for the software vendor
+     */
     public Integration withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
@@ -732,11 +852,17 @@ public class Integration {
             return this;
         }
 
+        /**
+         * The URL of the integration's API documentation
+         */
         public Builder apiDocsUrl(@Nullable String apiDocsUrl) {
             this.apiDocsUrl = apiDocsUrl;
             return this;
         }
 
+        /**
+         * This integration is new and is still considered "beta"
+         */
         public Builder beta(@Nullable Boolean beta) {
             this.beta = beta;
             return this;
@@ -750,11 +876,17 @@ public class Integration {
             return this;
         }
 
+        /**
+         * button background color for AUTH
+         */
         public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
 
+        /**
+         * Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -765,6 +897,9 @@ public class Integration {
             return this;
         }
 
+        /**
+         * font-awesome icon
+         */
         public Builder faIcon(@Nullable String faIcon) {
             this.faIcon = faIcon;
             return this;
@@ -775,11 +910,17 @@ public class Integration {
             return this;
         }
 
+        /**
+         * If this integration is not yet available as it is currently being built by unified.to
+         */
         public Builder inProgress(@Nullable Boolean inProgress) {
             this.inProgress = inProgress;
             return this;
         }
 
+        /**
+         * Is this integration active in this workspace
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
@@ -790,11 +931,17 @@ public class Integration {
             return this;
         }
 
+        /**
+         * The URL of the integration's logo
+         */
         public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
         }
 
+        /**
+         * The integration's name
+         */
         public Builder name(@Nonnull String name) {
             this.name = Utils.checkNotNull(name, "name");
             return this;
@@ -815,6 +962,9 @@ public class Integration {
             return this;
         }
 
+        /**
+         * OAuth requires a custom API domain (CNAME) for provider verification
+         */
         public Builder requiresCname(@Nullable Boolean requiresCname) {
             this.requiresCname = requiresCname;
             return this;
@@ -835,11 +985,17 @@ public class Integration {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder testedAt(@Nullable OffsetDateTime testedAt) {
             this.testedAt = testedAt;
             return this;
         }
 
+        /**
+         * text color for AUTH
+         */
         public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
@@ -861,16 +1017,25 @@ public class Integration {
             return this;
         }
 
+        /**
+         * Identifier for this integration
+         */
         public Builder type(@Nonnull String type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
+        /**
+         * YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * URL for the software vendor
+         */
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;

@@ -18,12 +18,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CalendarEventRecurrence {
-
+    /**
+     * how many occurrences, defaults to undefined (no limit)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     private Double count;
 
-
+    /**
+     * until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -47,7 +51,9 @@ public class CalendarEventRecurrence {
     @JsonProperty("included_dates")
     private List<String> includedDates;
 
-
+    /**
+     * how many "units" between occurrences, defaults to 1
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     private Double interval;
@@ -89,12 +95,16 @@ public class CalendarEventRecurrence {
     @JsonProperty("on_year_days")
     private List<Double> onYearDays;
 
-
+    /**
+     * timezone, defaults to undefined (no timezone)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * week start day, defaults to undefined (no week start day)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week_start")
     private WeekStart weekStart;
@@ -137,10 +147,16 @@ public class CalendarEventRecurrence {
             null);
     }
 
+    /**
+     * how many occurrences, defaults to undefined (no limit)
+     */
     public Optional<Double> count() {
         return Optional.ofNullable(this.count);
     }
 
+    /**
+     * until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -163,6 +179,9 @@ public class CalendarEventRecurrence {
         return Optional.ofNullable(this.includedDates);
     }
 
+    /**
+     * how many "units" between occurrences, defaults to 1
+     */
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -204,10 +223,16 @@ public class CalendarEventRecurrence {
         return Optional.ofNullable(this.onYearDays);
     }
 
+    /**
+     * timezone, defaults to undefined (no timezone)
+     */
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * week start day, defaults to undefined (no week start day)
+     */
     public Optional<WeekStart> weekStart() {
         return Optional.ofNullable(this.weekStart);
     }
@@ -217,12 +242,18 @@ public class CalendarEventRecurrence {
     }
 
 
+    /**
+     * how many occurrences, defaults to undefined (no limit)
+     */
     public CalendarEventRecurrence withCount(@Nullable Double count) {
         this.count = count;
         return this;
     }
 
 
+    /**
+     * until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarEventRecurrence withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -253,6 +284,9 @@ public class CalendarEventRecurrence {
     }
 
 
+    /**
+     * how many "units" between occurrences, defaults to 1
+     */
     public CalendarEventRecurrence withInterval(@Nullable Double interval) {
         this.interval = interval;
         return this;
@@ -306,12 +340,18 @@ public class CalendarEventRecurrence {
     }
 
 
+    /**
+     * timezone, defaults to undefined (no timezone)
+     */
     public CalendarEventRecurrence withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
 
+    /**
+     * week start day, defaults to undefined (no week start day)
+     */
     public CalendarEventRecurrence withWeekStart(@Nullable WeekStart weekStart) {
         this.weekStart = weekStart;
         return this;
@@ -404,11 +444,17 @@ public class CalendarEventRecurrence {
           // force use of static builder() method
         }
 
+        /**
+         * how many occurrences, defaults to undefined (no limit)
+         */
         public Builder count(@Nullable Double count) {
             this.count = count;
             return this;
         }
 
+        /**
+         * until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -435,6 +481,9 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+        /**
+         * how many "units" between occurrences, defaults to 1
+         */
         public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
@@ -482,11 +531,17 @@ public class CalendarEventRecurrence {
             return this;
         }
 
+        /**
+         * timezone, defaults to undefined (no timezone)
+         */
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
+        /**
+         * week start day, defaults to undefined (no week start day)
+         */
         public Builder weekStart(@Nullable WeekStart weekStart) {
             this.weekStart = weekStart;
             return this;

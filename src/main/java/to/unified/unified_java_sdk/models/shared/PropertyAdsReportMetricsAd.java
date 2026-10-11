@@ -39,7 +39,9 @@ public class PropertyAdsReportMetricsAd {
     @JsonProperty("campaign_id")
     private String campaignId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -74,7 +76,9 @@ public class PropertyAdsReportMetricsAd {
     @JsonProperty("final_url")
     private String finalUrl;
 
-
+    /**
+     * (reference to AdsGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -129,7 +133,9 @@ public class PropertyAdsReportMetricsAd {
     @JsonProperty("status")
     private PropertyAdsReportMetricsAdStatus status;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -211,6 +217,9 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.campaignId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -239,6 +248,9 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.finalUrl);
     }
 
+    /**
+     * (reference to AdsGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -283,6 +295,9 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -316,6 +331,9 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsAd withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -358,6 +376,9 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    /**
+     * (reference to AdsGroup)
+     */
     public PropertyAdsReportMetricsAd withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -424,6 +445,9 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsAd withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -579,6 +603,9 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -614,6 +641,9 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        /**
+         * (reference to AdsGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -669,6 +699,9 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

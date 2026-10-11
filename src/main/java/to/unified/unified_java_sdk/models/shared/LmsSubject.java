@@ -21,7 +21,9 @@ public class LmsSubject {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Depth of this subject in the provider's topic hierarchy (0 = top level)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     private Double rank;
@@ -42,6 +44,9 @@ public class LmsSubject {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Depth of this subject in the provider's topic hierarchy (0 = top level)
+     */
     public Optional<Double> rank() {
         return Optional.ofNullable(this.rank);
     }
@@ -57,6 +62,9 @@ public class LmsSubject {
     }
 
 
+    /**
+     * Depth of this subject in the provider's topic hierarchy (0 = top level)
+     */
     public LmsSubject withRank(@Nullable Double rank) {
         this.rank = rank;
         return this;
@@ -106,6 +114,9 @@ public class LmsSubject {
             return this;
         }
 
+        /**
+         * Depth of this subject in the provider's topic hierarchy (0 = top level)
+         */
         public Builder rank(@Nullable Double rank) {
             this.rank = rank;
             return this;

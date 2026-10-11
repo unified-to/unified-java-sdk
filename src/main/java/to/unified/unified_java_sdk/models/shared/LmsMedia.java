@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class LmsMedia {
-
+    /**
+     * Inline text/HTML/markdown content (use when url is empty or for embedded content)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
@@ -77,6 +79,9 @@ public class LmsMedia {
             null);
     }
 
+    /**
+     * Inline text/HTML/markdown content (use when url is empty or for embedded content)
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
@@ -113,6 +118,9 @@ public class LmsMedia {
     }
 
 
+    /**
+     * Inline text/HTML/markdown content (use when url is empty or for embedded content)
+     */
     public LmsMedia withContent(@Nullable String content) {
         this.content = content;
         return this;
@@ -218,6 +226,9 @@ public class LmsMedia {
           // force use of static builder() method
         }
 
+        /**
+         * Inline text/HTML/markdown content (use when url is empty or for embedded content)
+         */
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;

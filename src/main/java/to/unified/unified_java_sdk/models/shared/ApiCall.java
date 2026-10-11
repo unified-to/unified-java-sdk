@@ -26,7 +26,9 @@ public class ApiCall {
     @JsonProperty("connection_id")
     private String connectionId;
 
-
+    /**
+     * The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -41,22 +43,30 @@ public class ApiCall {
     @JsonProperty("environment")
     private String environment;
 
-
+    /**
+     * The error description (if status code is &gt;= 400)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     private String error;
 
-
+    /**
+     * your customer's user ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_xref")
     private String externalXref;
 
-
+    /**
+     * Unique identifier for this API call
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The integration type
+     */
     @JsonProperty("integration_type")
     private String integrationType;
 
@@ -74,24 +84,34 @@ public class ApiCall {
     @JsonProperty("method")
     private String method;
 
-
+    /**
+     * The called name of the API method
+     */
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
+     */
     @JsonProperty("path")
     private String path;
 
-
+    /**
+     * The size of the response
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Double size;
 
-
+    /**
+     * The resulting HTTP status code (200)
+     */
     @JsonProperty("status")
     private String status;
 
-
+    /**
+     * The type of API Call being logged
+     */
     @JsonProperty("type")
     private ApiCallType type;
 
@@ -110,7 +130,9 @@ public class ApiCall {
     @JsonProperty("webhook_id")
     private String webhookId;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -186,6 +208,9 @@ public class ApiCall {
         return Optional.ofNullable(this.connectionId);
     }
 
+    /**
+     * The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -198,18 +223,30 @@ public class ApiCall {
         return Optional.ofNullable(this.environment);
     }
 
+    /**
+     * The error description (if status code is &gt;= 400)
+     */
     public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
 
+    /**
+     * your customer's user ID
+     */
     public Optional<String> externalXref() {
         return Optional.ofNullable(this.externalXref);
     }
 
+    /**
+     * Unique identifier for this API call
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The integration type
+     */
     public String integrationType() {
         return this.integrationType;
     }
@@ -226,22 +263,37 @@ public class ApiCall {
         return this.method;
     }
 
+    /**
+     * The called name of the API method
+     */
     public String name() {
         return this.name;
     }
 
+    /**
+     * The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
+     */
     public String path() {
         return this.path;
     }
 
+    /**
+     * The size of the response
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
 
+    /**
+     * The resulting HTTP status code (200)
+     */
     public String status() {
         return this.status;
     }
 
+    /**
+     * The type of API Call being logged
+     */
     public ApiCallType type() {
         return this.type;
     }
@@ -258,6 +310,9 @@ public class ApiCall {
         return Optional.ofNullable(this.webhookId);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -273,6 +328,9 @@ public class ApiCall {
     }
 
 
+    /**
+     * The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ApiCall withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -291,24 +349,36 @@ public class ApiCall {
     }
 
 
+    /**
+     * The error description (if status code is &gt;= 400)
+     */
     public ApiCall withError(@Nullable String error) {
         this.error = error;
         return this;
     }
 
 
+    /**
+     * your customer's user ID
+     */
     public ApiCall withExternalXref(@Nullable String externalXref) {
         this.externalXref = externalXref;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this API call
+     */
     public ApiCall withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The integration type
+     */
     public ApiCall withIntegrationType(@Nonnull String integrationType) {
         this.integrationType = Utils.checkNotNull(integrationType, "integrationType");
         return this;
@@ -333,30 +403,45 @@ public class ApiCall {
     }
 
 
+    /**
+     * The called name of the API method
+     */
     public ApiCall withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
+    /**
+     * The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
+     */
     public ApiCall withPath(@Nonnull String path) {
         this.path = Utils.checkNotNull(path, "path");
         return this;
     }
 
 
+    /**
+     * The size of the response
+     */
     public ApiCall withSize(@Nullable Double size) {
         this.size = size;
         return this;
     }
 
 
+    /**
+     * The resulting HTTP status code (200)
+     */
     public ApiCall withStatus(@Nonnull String status) {
         this.status = Utils.checkNotNull(status, "status");
         return this;
     }
 
 
+    /**
+     * The type of API Call being logged
+     */
     public ApiCall withType(@Nonnull ApiCallType type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
@@ -381,6 +466,9 @@ public class ApiCall {
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public ApiCall withWorkspaceId(@Nullable String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -508,6 +596,9 @@ public class ApiCall {
             return this;
         }
 
+        /**
+         * The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -523,21 +614,33 @@ public class ApiCall {
             return this;
         }
 
+        /**
+         * The error description (if status code is &gt;= 400)
+         */
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
+        /**
+         * your customer's user ID
+         */
         public Builder externalXref(@Nullable String externalXref) {
             this.externalXref = externalXref;
             return this;
         }
 
+        /**
+         * Unique identifier for this API call
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The integration type
+         */
         public Builder integrationType(@Nonnull String integrationType) {
             this.integrationType = Utils.checkNotNull(integrationType, "integrationType");
             return this;
@@ -558,26 +661,41 @@ public class ApiCall {
             return this;
         }
 
+        /**
+         * The called name of the API method
+         */
         public Builder name(@Nonnull String name) {
             this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
+        /**
+         * The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
+         */
         public Builder path(@Nonnull String path) {
             this.path = Utils.checkNotNull(path, "path");
             return this;
         }
 
+        /**
+         * The size of the response
+         */
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
+        /**
+         * The resulting HTTP status code (200)
+         */
         public Builder status(@Nonnull String status) {
             this.status = Utils.checkNotNull(status, "status");
             return this;
         }
 
+        /**
+         * The type of API Call being logged
+         */
         public Builder type(@Nonnull ApiCallType type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;
@@ -598,6 +716,9 @@ public class ApiCall {
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;

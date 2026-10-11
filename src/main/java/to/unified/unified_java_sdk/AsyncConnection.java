@@ -7,11 +7,14 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedConnectionsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionReauthRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionReauthResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedConnectionRequestBuilder;
@@ -25,6 +28,7 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnecti
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.CreateUnifiedConnectionReauth;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
 import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
@@ -56,7 +60,9 @@ public class AsyncConnection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
      * 
      * @return The async call builder
      */
@@ -67,7 +73,9 @@ public class AsyncConnection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUnifiedConnectionResponse>} - The async response
@@ -75,6 +83,37 @@ public class AsyncConnection {
     public CompletableFuture<CreateUnifiedConnectionResponse> createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request) {
         AsyncRequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @return The async call builder
+     */
+    public CreateUnifiedConnectionReauthRequestBuilder createUnifiedConnectionReauth() {
+        return new CreateUnifiedConnectionReauthRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUnifiedConnectionReauthResponse>} - The async response
+     */
+    public CompletableFuture<CreateUnifiedConnectionReauthResponse> createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        AsyncRequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
+              = new CreateUnifiedConnectionReauth.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

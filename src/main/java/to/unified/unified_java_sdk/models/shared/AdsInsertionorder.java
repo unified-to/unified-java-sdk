@@ -41,7 +41,9 @@ public class AdsInsertionorder {
     @JsonProperty("campaign_id")
     private String campaignId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -81,7 +83,9 @@ public class AdsInsertionorder {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * client's reference ID for the insertion order
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
@@ -91,7 +95,9 @@ public class AdsInsertionorder {
     @JsonProperty("status")
     private AdsInsertionorderStatus status;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -157,6 +163,9 @@ public class AdsInsertionorder {
         return Optional.ofNullable(this.campaignId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -189,6 +198,9 @@ public class AdsInsertionorder {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * client's reference ID for the insertion order
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -197,6 +209,9 @@ public class AdsInsertionorder {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -233,6 +248,9 @@ public class AdsInsertionorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsInsertionorder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -281,6 +299,9 @@ public class AdsInsertionorder {
     }
 
 
+    /**
+     * client's reference ID for the insertion order
+     */
     public AdsInsertionorder withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
@@ -293,6 +314,9 @@ public class AdsInsertionorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsInsertionorder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -416,6 +440,9 @@ public class AdsInsertionorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -456,6 +483,9 @@ public class AdsInsertionorder {
             return this;
         }
 
+        /**
+         * client's reference ID for the insertion order
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
@@ -466,6 +496,9 @@ public class AdsInsertionorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

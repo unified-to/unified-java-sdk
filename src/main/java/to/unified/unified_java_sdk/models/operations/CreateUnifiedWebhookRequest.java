@@ -17,7 +17,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUnifiedWebhookRequest {
     /**
-     * A webhook is used to POST new/updated information to your server.
+     * A webhook is used to POST new, updated, or deleted records to your server.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private Webhook webhook;
@@ -43,7 +43,7 @@ public class CreateUnifiedWebhookRequest {
     }
 
     /**
-     * A webhook is used to POST new/updated information to your server.
+     * A webhook is used to POST new, updated, or deleted records to your server.
      */
     public Webhook webhook() {
         return this.webhook;
@@ -62,7 +62,7 @@ public class CreateUnifiedWebhookRequest {
 
 
     /**
-     * A webhook is used to POST new/updated information to your server.
+     * A webhook is used to POST new, updated, or deleted records to your server.
      */
     public CreateUnifiedWebhookRequest withWebhook(@Nonnull Webhook webhook) {
         this.webhook = Utils.checkNotNull(webhook, "webhook");
@@ -118,7 +118,7 @@ public class CreateUnifiedWebhookRequest {
         }
 
         /**
-         * A webhook is used to POST new/updated information to your server.
+         * A webhook is used to POST new, updated, or deleted records to your server.
          */
         public Builder webhook(@Nonnull Webhook webhook) {
             this.webhook = Utils.checkNotNull(webhook, "webhook");

@@ -9,27 +9,51 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsJobsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsJob;
+import to.unified.unified_java_sdk.operations.CreateHrisJob;
 import to.unified.unified_java_sdk.operations.GetAtsJob;
+import to.unified.unified_java_sdk.operations.GetHrisJob;
 import to.unified.unified_java_sdk.operations.ListAtsJobs;
+import to.unified.unified_java_sdk.operations.ListHrisJobs;
 import to.unified.unified_java_sdk.operations.PatchAtsJob;
+import to.unified.unified_java_sdk.operations.PatchHrisJob;
 import to.unified.unified_java_sdk.operations.RemoveAtsJob;
+import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
+import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -75,6 +99,28 @@ public class Job {
     }
 
     /**
+     * Create a job
+     * 
+     * @return The call builder
+     */
+    public CreateHrisJobRequestBuilder createHrisJob() {
+        return new CreateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        RequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
+              = new CreateHrisJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a job
      * 
      * @return The call builder
@@ -93,6 +139,28 @@ public class Job {
     public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * @return The call builder
+     */
+    public GetHrisJobRequestBuilder getHrisJob() {
+        return new GetHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request) {
+        RequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
+              = new GetHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -119,6 +187,28 @@ public class Job {
     }
 
     /**
+     * List all jobs
+     * 
+     * @return The call builder
+     */
+    public ListHrisJobsRequestBuilder listHrisJobs() {
+        return new ListHrisJobsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        RequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
+              = new ListHrisJobs.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a job
      * 
      * @return The call builder
@@ -137,6 +227,28 @@ public class Job {
     public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a job
+     * 
+     * @return The call builder
+     */
+    public PatchHrisJobRequestBuilder patchHrisJob() {
+        return new PatchHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        RequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
+              = new PatchHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,6 +275,28 @@ public class Job {
     }
 
     /**
+     * Remove a job
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisJobRequestBuilder removeHrisJob() {
+        return new RemoveHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        RequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
+              = new RemoveHrisJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a job
      * 
      * @return The call builder
@@ -181,6 +315,28 @@ public class Job {
     public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a job
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisJobRequestBuilder updateHrisJob() {
+        return new UpdateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        RequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
+              = new UpdateHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

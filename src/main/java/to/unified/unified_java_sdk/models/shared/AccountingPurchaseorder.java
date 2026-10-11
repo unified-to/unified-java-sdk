@@ -20,10 +20,17 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingPurchaseorder {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachments")
+    private List<AccountingAttachment> attachments;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -35,12 +42,16 @@ public class AccountingPurchaseorder {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -70,7 +81,9 @@ public class AccountingPurchaseorder {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
@@ -95,7 +108,9 @@ public class AccountingPurchaseorder {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -103,6 +118,7 @@ public class AccountingPurchaseorder {
     @JsonCreator
     public AccountingPurchaseorder(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("attachments") @Nullable List<AccountingAttachment> attachments,
             @JsonProperty("billing_address") @Nullable PropertyAccountingPurchaseorderBillingAddress billingAddress,
             @JsonProperty("category_ids") @Nullable List<String> categoryIds,
             @JsonProperty("contact_id") @Nullable String contactId,
@@ -119,6 +135,7 @@ public class AccountingPurchaseorder {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.attachments = attachments;
         this.billingAddress = billingAddress;
         this.categoryIds = categoryIds;
         this.contactId = contactId;
@@ -142,11 +159,18 @@ public class AccountingPurchaseorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<List<AccountingAttachment>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     public Optional<PropertyAccountingPurchaseorderBillingAddress> billingAddress() {
@@ -157,10 +181,16 @@ public class AccountingPurchaseorder {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -185,6 +215,9 @@ public class AccountingPurchaseorder {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
@@ -205,6 +238,9 @@ public class AccountingPurchaseorder {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -214,8 +250,17 @@ public class AccountingPurchaseorder {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingPurchaseorder withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    public AccountingPurchaseorder withAttachments(@Nullable List<AccountingAttachment> attachments) {
+        this.attachments = attachments;
         return this;
     }
 
@@ -232,12 +277,18 @@ public class AccountingPurchaseorder {
     }
 
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public AccountingPurchaseorder withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPurchaseorder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -274,6 +325,9 @@ public class AccountingPurchaseorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPurchaseorder withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -304,6 +358,9 @@ public class AccountingPurchaseorder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPurchaseorder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -321,6 +378,7 @@ public class AccountingPurchaseorder {
         AccountingPurchaseorder other = (AccountingPurchaseorder) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.billingAddress, other.billingAddress) &&
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
@@ -341,18 +399,19 @@ public class AccountingPurchaseorder {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, billingAddress, categoryIds,
-            contactId, createdAt, currency,
-            id, lineitems, metadata,
-            organizationId, postedAt, raw,
-            shippingAddress, status, totalAmount,
-            updatedAt);
+            accountId, attachments, billingAddress,
+            categoryIds, contactId, createdAt,
+            currency, id, lineitems,
+            metadata, organizationId, postedAt,
+            raw, shippingAddress, status,
+            totalAmount, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AccountingPurchaseorder.class,
                 "accountId", accountId,
+                "attachments", attachments,
                 "billingAddress", billingAddress,
                 "categoryIds", categoryIds,
                 "contactId", contactId,
@@ -374,6 +433,8 @@ public class AccountingPurchaseorder {
     public final static class Builder {
 
         private String accountId;
+
+        private List<AccountingAttachment> attachments;
 
         private PropertyAccountingPurchaseorderBillingAddress billingAddress;
 
@@ -409,8 +470,16 @@ public class AccountingPurchaseorder {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        public Builder attachments(@Nullable List<AccountingAttachment> attachments) {
+            this.attachments = attachments;
             return this;
         }
 
@@ -424,11 +493,17 @@ public class AccountingPurchaseorder {
             return this;
         }
 
+        /**
+         * Customer, Supplier (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -459,6 +534,9 @@ public class AccountingPurchaseorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -484,6 +562,9 @@ public class AccountingPurchaseorder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -491,12 +572,12 @@ public class AccountingPurchaseorder {
 
         public AccountingPurchaseorder build() {
             return new AccountingPurchaseorder(
-                accountId, billingAddress, categoryIds,
-                contactId, createdAt, currency,
-                id, lineitems, metadata,
-                organizationId, postedAt, raw,
-                shippingAddress, status, totalAmount,
-                updatedAt);
+                accountId, attachments, billingAddress,
+                categoryIds, contactId, createdAt,
+                currency, id, lineitems,
+                metadata, organizationId, postedAt,
+                raw, shippingAddress, status,
+                totalAmount, updatedAt);
         }
 
     }

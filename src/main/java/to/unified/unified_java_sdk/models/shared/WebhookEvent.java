@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * WebhookEvent
+ * 
+ * <p>The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where
+ * the integration supports it. Check the integration's Feature Support tab.
+ */
 public class WebhookEvent {
 
     public static final WebhookEvent UPDATED = new WebhookEvent("updated");

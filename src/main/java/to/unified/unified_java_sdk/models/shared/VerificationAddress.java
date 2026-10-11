@@ -35,7 +35,9 @@ public class VerificationAddress {
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * Country code for the country, in ISO 3166 A-2 format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private String countryCode;
@@ -45,12 +47,19 @@ public class VerificationAddress {
     @JsonProperty("postal_code")
     private String postalCode;
 
-
+    /**
+     * Regional area of the employee's address. For example, in the U.S., the region is the employee's
+     * state; in Canada, the region is the employee’s province.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private String region;
 
-
+    /**
+     * Short form for the regional area of the employee's address. For example, in the U.S., the region
+     * code is the two-letter abbreviation for the employee’s state; in Canada, the region is the
+     * two-letter abbreviation for the employee's province.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
     private String regionCode;
@@ -97,6 +106,9 @@ public class VerificationAddress {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * Country code for the country, in ISO 3166 A-2 format
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -105,10 +117,19 @@ public class VerificationAddress {
         return Optional.ofNullable(this.postalCode);
     }
 
+    /**
+     * Regional area of the employee's address. For example, in the U.S., the region is the employee's
+     * state; in Canada, the region is the employee’s province.
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * Short form for the regional area of the employee's address. For example, in the U.S., the region
+     * code is the two-letter abbreviation for the employee’s state; in Canada, the region is the
+     * two-letter abbreviation for the employee's province.
+     */
     public Optional<String> regionCode() {
         return Optional.ofNullable(this.regionCode);
     }
@@ -142,6 +163,9 @@ public class VerificationAddress {
     }
 
 
+    /**
+     * Country code for the country, in ISO 3166 A-2 format
+     */
     public VerificationAddress withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -154,12 +178,21 @@ public class VerificationAddress {
     }
 
 
+    /**
+     * Regional area of the employee's address. For example, in the U.S., the region is the employee's
+     * state; in Canada, the region is the employee’s province.
+     */
     public VerificationAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
 
+    /**
+     * Short form for the regional area of the employee's address. For example, in the U.S., the region
+     * code is the two-letter abbreviation for the employee’s state; in Canada, the region is the
+     * two-letter abbreviation for the employee's province.
+     */
     public VerificationAddress withRegionCode(@Nullable String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -250,6 +283,9 @@ public class VerificationAddress {
             return this;
         }
 
+        /**
+         * Country code for the country, in ISO 3166 A-2 format
+         */
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
@@ -260,11 +296,20 @@ public class VerificationAddress {
             return this;
         }
 
+        /**
+         * Regional area of the employee's address. For example, in the U.S., the region is the employee's
+         * state; in Canada, the region is the employee’s province.
+         */
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
+        /**
+         * Short form for the regional area of the employee's address. For example, in the U.S., the region
+         * code is the two-letter abbreviation for the employee’s state; in Canada, the region is the
+         * two-letter abbreviation for the employee's province.
+         */
         public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = regionCode;
             return this;

@@ -100,11 +100,13 @@ public class ListAccountingExpensesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
     private String startGte;
 
-    /**
-     * The status to filter by
-     */
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     private String status;
+
+
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private String type;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
@@ -137,6 +139,7 @@ public class ListAccountingExpensesRequest {
             @Nullable String sort,
             @Nullable String startGte,
             @Nullable String status,
+            @Nullable String type,
             @Nullable String updatedGte,
             @Nullable String userId) {
         this.approverUserId = approverUserId;
@@ -156,6 +159,7 @@ public class ListAccountingExpensesRequest {
         this.sort = sort;
         this.startGte = startGte;
         this.status = status;
+        this.type = type;
         this.updatedGte = updatedGte;
         this.userId = userId;
     }
@@ -167,7 +171,8 @@ public class ListAccountingExpensesRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -265,11 +270,12 @@ public class ListAccountingExpensesRequest {
         return Optional.ofNullable(this.startGte);
     }
 
-    /**
-     * The status to filter by
-     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<String> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -417,11 +423,14 @@ public class ListAccountingExpensesRequest {
     }
 
 
-    /**
-     * The status to filter by
-     */
     public ListAccountingExpensesRequest withStatus(@Nullable String status) {
         this.status = status;
+        return this;
+    }
+
+
+    public ListAccountingExpensesRequest withType(@Nullable String type) {
+        this.type = type;
         return this;
     }
 
@@ -471,6 +480,7 @@ public class ListAccountingExpensesRequest {
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -483,7 +493,8 @@ public class ListAccountingExpensesRequest {
             groupId, limit, offset,
             order, orgId, query,
             raw, sort, startGte,
-            status, updatedGte, userId);
+            status, type, updatedGte,
+            userId);
     }
     
     @Override
@@ -505,6 +516,7 @@ public class ListAccountingExpensesRequest {
                 "sort", sort,
                 "startGte", startGte,
                 "status", status,
+                "type", type,
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
@@ -543,6 +555,8 @@ public class ListAccountingExpensesRequest {
         private String startGte;
 
         private String status;
+
+        private String type;
 
         private String updatedGte;
 
@@ -662,11 +676,13 @@ public class ListAccountingExpensesRequest {
             return this;
         }
 
-        /**
-         * The status to filter by
-         */
         public Builder status(@Nullable String status) {
             this.status = status;
+            return this;
+        }
+
+        public Builder type(@Nullable String type) {
+            this.type = type;
             return this;
         }
 
@@ -694,7 +710,8 @@ public class ListAccountingExpensesRequest {
                 groupId, limit, offset,
                 order, orgId, query,
                 raw, sort, startGte,
-                status, updatedGte, userId);
+                status, type, updatedGte,
+                userId);
         }
 
     }

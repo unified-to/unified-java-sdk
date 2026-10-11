@@ -27,6 +27,8 @@ public class HrisCompensationFrequency {
     public static final HrisCompensationFrequency HOUR = new HrisCompensationFrequency("HOUR");
     public static final HrisCompensationFrequency MONTH = new HrisCompensationFrequency("MONTH");
     public static final HrisCompensationFrequency WEEK = new HrisCompensationFrequency("WEEK");
+    public static final HrisCompensationFrequency BIWEEKLY = new HrisCompensationFrequency("BIWEEKLY");
+    public static final HrisCompensationFrequency SEMIMONTHLY = new HrisCompensationFrequency("SEMIMONTHLY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +109,8 @@ public class HrisCompensationFrequency {
         map.put("HOUR", HOUR);
         map.put("MONTH", MONTH);
         map.put("WEEK", WEEK);
+        map.put("BIWEEKLY", BIWEEKLY);
+        map.put("SEMIMONTHLY", SEMIMONTHLY);
         return map;
     }
 
@@ -119,6 +123,8 @@ public class HrisCompensationFrequency {
         map.put("HOUR", HrisCompensationFrequencyEnum.HOUR);
         map.put("MONTH", HrisCompensationFrequencyEnum.MONTH);
         map.put("WEEK", HrisCompensationFrequencyEnum.WEEK);
+        map.put("BIWEEKLY", HrisCompensationFrequencyEnum.BIWEEKLY);
+        map.put("SEMIMONTHLY", HrisCompensationFrequencyEnum.SEMIMONTHLY);
         return map;
     }
     
@@ -131,7 +137,9 @@ public class HrisCompensationFrequency {
         YEAR("YEAR"),
         HOUR("HOUR"),
         MONTH("MONTH"),
-        WEEK("WEEK"),;
+        WEEK("WEEK"),
+        BIWEEKLY("BIWEEKLY"),
+        SEMIMONTHLY("SEMIMONTHLY"),;
 
         private final String value;
 

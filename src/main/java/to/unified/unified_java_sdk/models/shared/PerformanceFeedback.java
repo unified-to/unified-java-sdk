@@ -21,12 +21,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PerformanceFeedback {
-
+    /**
+     * the HR Employee that gave this feedback (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_user_id")
     private String authorUserId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -36,7 +40,9 @@ public class PerformanceFeedback {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * true when publicly visible (e.g. praise wall); false when private or manager-only
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_visible")
     private Boolean isVisible;
@@ -58,17 +64,23 @@ public class PerformanceFeedback {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * praise/recognition, constructive feedback, or a response to a feedback request
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private PerformanceFeedbackType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * the HR Employee that this feedback is about (reference to HrisEmployee)
+     */
     @JsonProperty("user_id")
     private String userId;
 
@@ -105,10 +117,16 @@ public class PerformanceFeedback {
             userId);
     }
 
+    /**
+     * the HR Employee that gave this feedback (reference to HrisEmployee)
+     */
     public Optional<String> authorUserId() {
         return Optional.ofNullable(this.authorUserId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -117,6 +135,9 @@ public class PerformanceFeedback {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * true when publicly visible (e.g. praise wall); false when private or manager-only
+     */
     public Optional<Boolean> isVisible() {
         return Optional.ofNullable(this.isVisible);
     }
@@ -136,14 +157,23 @@ public class PerformanceFeedback {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * praise/recognition, constructive feedback, or a response to a feedback request
+     */
     public Optional<PerformanceFeedbackType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * the HR Employee that this feedback is about (reference to HrisEmployee)
+     */
     public String userId() {
         return this.userId;
     }
@@ -153,12 +183,18 @@ public class PerformanceFeedback {
     }
 
 
+    /**
+     * the HR Employee that gave this feedback (reference to HrisEmployee)
+     */
     public PerformanceFeedback withAuthorUserId(@Nullable String authorUserId) {
         this.authorUserId = authorUserId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceFeedback withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -171,6 +207,9 @@ public class PerformanceFeedback {
     }
 
 
+    /**
+     * true when publicly visible (e.g. praise wall); false when private or manager-only
+     */
     public PerformanceFeedback withIsVisible(@Nullable Boolean isVisible) {
         this.isVisible = isVisible;
         return this;
@@ -198,18 +237,27 @@ public class PerformanceFeedback {
     }
 
 
+    /**
+     * praise/recognition, constructive feedback, or a response to a feedback request
+     */
     public PerformanceFeedback withType(@Nullable PerformanceFeedbackType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceFeedback withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * the HR Employee that this feedback is about (reference to HrisEmployee)
+     */
     public PerformanceFeedback withUserId(@Nonnull String userId) {
         this.userId = Utils.checkNotNull(userId, "userId");
         return this;
@@ -289,11 +337,17 @@ public class PerformanceFeedback {
           // force use of static builder() method
         }
 
+        /**
+         * the HR Employee that gave this feedback (reference to HrisEmployee)
+         */
         public Builder authorUserId(@Nullable String authorUserId) {
             this.authorUserId = authorUserId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -304,6 +358,9 @@ public class PerformanceFeedback {
             return this;
         }
 
+        /**
+         * true when publicly visible (e.g. praise wall); false when private or manager-only
+         */
         public Builder isVisible(@Nullable Boolean isVisible) {
             this.isVisible = isVisible;
             return this;
@@ -327,16 +384,25 @@ public class PerformanceFeedback {
             return this;
         }
 
+        /**
+         * praise/recognition, constructive feedback, or a response to a feedback request
+         */
         public Builder type(@Nullable PerformanceFeedbackType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * the HR Employee that this feedback is about (reference to HrisEmployee)
+         */
         public Builder userId(@Nonnull String userId) {
             this.userId = Utils.checkNotNull(userId, "userId");
             return this;

@@ -41,17 +41,23 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonProperty("budget_unit")
     private PropertyAdsReportMetricsCampaignBudgetUnit budgetUnit;
 
-
+    /**
+     * Resource name for existing/shared budget (Google)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_budget_identifier")
     private String campaignBudgetIdentifier;
 
-
+    /**
+     * Housing, employment, credit, NONE (Meta)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     private String category;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -61,12 +67,17 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+     * status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_status")
     private PropertyAdsReportMetricsCampaignEffectiveStatus effectiveStatus;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -121,7 +132,9 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -141,7 +154,9 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonProperty("total_spend_amount")
     private Double totalSpendAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -228,14 +243,23 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.budgetUnit);
     }
 
+    /**
+     * Resource name for existing/shared budget (Google)
+     */
     public Optional<String> campaignBudgetIdentifier() {
         return Optional.ofNullable(this.campaignBudgetIdentifier);
     }
 
+    /**
+     * Housing, employment, credit, NONE (Meta)
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -244,10 +268,17 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+     * status
+     */
     public Optional<PropertyAdsReportMetricsCampaignEffectiveStatus> effectiveStatus() {
         return Optional.ofNullable(this.effectiveStatus);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -292,6 +323,9 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -308,6 +342,9 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.totalSpendAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -341,18 +378,27 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    /**
+     * Resource name for existing/shared budget (Google)
+     */
     public PropertyAdsReportMetricsCampaign withCampaignBudgetIdentifier(@Nullable String campaignBudgetIdentifier) {
         this.campaignBudgetIdentifier = campaignBudgetIdentifier;
         return this;
     }
 
 
+    /**
+     * Housing, employment, credit, NONE (Meta)
+     */
     public PropertyAdsReportMetricsCampaign withCategory(@Nullable String category) {
         this.category = category;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCampaign withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -365,12 +411,19 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    /**
+     * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+     * status
+     */
     public PropertyAdsReportMetricsCampaign withEffectiveStatus(@Nullable PropertyAdsReportMetricsCampaignEffectiveStatus effectiveStatus) {
         this.effectiveStatus = effectiveStatus;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCampaign withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -437,6 +490,9 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCampaign withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -461,6 +517,9 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsCampaign withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -625,16 +684,25 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        /**
+         * Resource name for existing/shared budget (Google)
+         */
         public Builder campaignBudgetIdentifier(@Nullable String campaignBudgetIdentifier) {
             this.campaignBudgetIdentifier = campaignBudgetIdentifier;
             return this;
         }
 
+        /**
+         * Housing, employment, credit, NONE (Meta)
+         */
         public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -645,11 +713,18 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        /**
+         * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+         * status
+         */
         public Builder effectiveStatus(@Nullable PropertyAdsReportMetricsCampaignEffectiveStatus effectiveStatus) {
             this.effectiveStatus = effectiveStatus;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -705,6 +780,9 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -725,6 +803,9 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

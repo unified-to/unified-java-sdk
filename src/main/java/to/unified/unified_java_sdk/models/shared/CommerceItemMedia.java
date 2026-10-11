@@ -38,7 +38,9 @@ public class CommerceItemMedia {
     @JsonProperty("metadata")
     private List<CommerceMetadata> metadata;
 
-
+    /**
+     * 1 is the first
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     private Double position;
@@ -101,6 +103,9 @@ public class CommerceItemMedia {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * 1 is the first
+     */
     public Optional<Double> position() {
         return Optional.ofNullable(this.position);
     }
@@ -146,6 +151,9 @@ public class CommerceItemMedia {
     }
 
 
+    /**
+     * 1 is the first
+     */
     public CommerceItemMedia withPosition(@Nullable Double position) {
         this.position = position;
         return this;
@@ -254,6 +262,9 @@ public class CommerceItemMedia {
             return this;
         }
 
+        /**
+         * 1 is the first
+         */
         public Builder position(@Nullable Double position) {
             this.position = position;
             return this;

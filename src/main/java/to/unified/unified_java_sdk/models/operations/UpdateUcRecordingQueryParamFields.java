@@ -23,6 +23,7 @@ public enum UpdateUcRecordingQueryParamFields {
     USER_NAME("user_name"),
     USER_PHONE("user_phone"),
     TYPE("type"),
+    CONVERSATION_IDENTIFIER("conversation_identifier"),
     RAW("raw");
 
     @JsonValue

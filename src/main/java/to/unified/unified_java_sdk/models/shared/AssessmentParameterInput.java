@@ -21,7 +21,9 @@ public class AssessmentParameterInput {
     @JsonProperty("inputs")
     private List<String> inputs;
 
-
+    /**
+     * Name of parameter
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -49,6 +51,9 @@ public class AssessmentParameterInput {
         return Optional.ofNullable(this.inputs);
     }
 
+    /**
+     * Name of parameter
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +73,9 @@ public class AssessmentParameterInput {
     }
 
 
+    /**
+     * Name of parameter
+     */
     public AssessmentParameterInput withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -127,6 +135,9 @@ public class AssessmentParameterInput {
             return this;
         }
 
+        /**
+         * Name of parameter
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

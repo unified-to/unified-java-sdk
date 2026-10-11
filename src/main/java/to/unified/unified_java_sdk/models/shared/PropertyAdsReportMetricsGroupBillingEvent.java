@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyAdsReportMetricsGroupBillingEvent
+ * 
+ * <p>Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as
+ * pass-through)
+ */
 public class PropertyAdsReportMetricsGroupBillingEvent {
 
     public static final PropertyAdsReportMetricsGroupBillingEvent IMPRESSIONS = new PropertyAdsReportMetricsGroupBillingEvent("IMPRESSIONS");

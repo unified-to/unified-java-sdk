@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class DatastoreRecord {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * source Database ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_id")
     private String databaseId;
@@ -49,12 +53,16 @@ public class DatastoreRecord {
     @JsonProperty("row_number")
     private Double rowNumber;
 
-
+    /**
+     * source Database Table ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table_id")
     private String tableId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -88,10 +96,16 @@ public class DatastoreRecord {
             null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * source Database ID
+     */
     public Optional<String> databaseId() {
         return Optional.ofNullable(this.databaseId);
     }
@@ -112,10 +126,16 @@ public class DatastoreRecord {
         return Optional.ofNullable(this.rowNumber);
     }
 
+    /**
+     * source Database Table ID
+     */
     public Optional<String> tableId() {
         return Optional.ofNullable(this.tableId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -125,12 +145,18 @@ public class DatastoreRecord {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public DatastoreRecord withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * source Database ID
+     */
     public DatastoreRecord withDatabaseId(@Nullable String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -161,12 +187,18 @@ public class DatastoreRecord {
     }
 
 
+    /**
+     * source Database Table ID
+     */
     public DatastoreRecord withTableId(@Nullable String tableId) {
         this.tableId = tableId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public DatastoreRecord withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -237,11 +269,17 @@ public class DatastoreRecord {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * source Database ID
+         */
         public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = databaseId;
             return this;
@@ -267,11 +305,17 @@ public class DatastoreRecord {
             return this;
         }
 
+        /**
+         * source Database Table ID
+         */
         public Builder tableId(@Nullable String tableId) {
             this.tableId = tableId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

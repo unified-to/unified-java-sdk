@@ -19,62 +19,86 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpActivation {
-
+    /**
+     * The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The cdp_destination the data is sent to; points to CdpDestination
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination_id")
     private String destinationId;
 
-
+    /**
+     * Unique identifier for this activation object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the activation is active/enabled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     private Boolean isEnabled;
 
-
+    /**
+     * When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_at")
     private OffsetDateTime lastRunAt;
 
-
+    /**
+     * The name of the activation/sync job
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this activation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The activation schedule or mode (eg. cron, interval, realtime, batch)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     private String schedule;
 
-
+    /**
+     * The cdp_segment being activated; points to CdpSegment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment_id")
     private String segmentId;
 
-
+    /**
+     * The cdp_source the data originates from; points to CdpSource
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_id")
     private String sourceId;
 
-
+    /**
+     * The current status of the activation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private CdpActivationStatus status;
 
-
+    /**
+     * The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -114,50 +138,86 @@ public class CdpActivation {
             null, null, null);
     }
 
+    /**
+     * The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The cdp_destination the data is sent to; points to CdpDestination
+     */
     public Optional<String> destinationId() {
         return Optional.ofNullable(this.destinationId);
     }
 
+    /**
+     * Unique identifier for this activation object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the activation is active/enabled
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
 
+    /**
+     * When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastRunAt() {
         return Optional.ofNullable(this.lastRunAt);
     }
 
+    /**
+     * The name of the activation/sync job
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this activation
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The activation schedule or mode (eg. cron, interval, realtime, batch)
+     */
     public Optional<String> schedule() {
         return Optional.ofNullable(this.schedule);
     }
 
+    /**
+     * The cdp_segment being activated; points to CdpSegment
+     */
     public Optional<String> segmentId() {
         return Optional.ofNullable(this.segmentId);
     }
 
+    /**
+     * The cdp_source the data originates from; points to CdpSource
+     */
     public Optional<String> sourceId() {
         return Optional.ofNullable(this.sourceId);
     }
 
+    /**
+     * The current status of the activation
+     */
     public Optional<CdpActivationStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -167,72 +227,108 @@ public class CdpActivation {
     }
 
 
+    /**
+     * The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpActivation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The cdp_destination the data is sent to; points to CdpDestination
+     */
     public CdpActivation withDestinationId(@Nullable String destinationId) {
         this.destinationId = destinationId;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this activation object
+     */
     public CdpActivation withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the activation is active/enabled
+     */
     public CdpActivation withIsEnabled(@Nullable Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
 
 
+    /**
+     * When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpActivation withLastRunAt(@Nullable OffsetDateTime lastRunAt) {
         this.lastRunAt = lastRunAt;
         return this;
     }
 
 
+    /**
+     * The name of the activation/sync job
+     */
     public CdpActivation withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this activation
+     */
     public CdpActivation withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The activation schedule or mode (eg. cron, interval, realtime, batch)
+     */
     public CdpActivation withSchedule(@Nullable String schedule) {
         this.schedule = schedule;
         return this;
     }
 
 
+    /**
+     * The cdp_segment being activated; points to CdpSegment
+     */
     public CdpActivation withSegmentId(@Nullable String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
 
 
+    /**
+     * The cdp_source the data originates from; points to CdpSource
+     */
     public CdpActivation withSourceId(@Nullable String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
 
 
+    /**
+     * The current status of the activation
+     */
     public CdpActivation withStatus(@Nullable CdpActivationStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CdpActivation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -320,61 +416,97 @@ public class CdpActivation {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The cdp_destination the data is sent to; points to CdpDestination
+         */
         public Builder destinationId(@Nullable String destinationId) {
             this.destinationId = destinationId;
             return this;
         }
 
+        /**
+         * Unique identifier for this activation object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the activation is active/enabled
+         */
         public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastRunAt(@Nullable OffsetDateTime lastRunAt) {
             this.lastRunAt = lastRunAt;
             return this;
         }
 
+        /**
+         * The name of the activation/sync job
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this activation
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The activation schedule or mode (eg. cron, interval, realtime, batch)
+         */
         public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
+        /**
+         * The cdp_segment being activated; points to CdpSegment
+         */
         public Builder segmentId(@Nullable String segmentId) {
             this.segmentId = segmentId;
             return this;
         }
 
+        /**
+         * The cdp_source the data originates from; points to CdpSource
+         */
         public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * The current status of the activation
+         */
         public Builder status(@Nullable CdpActivationStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

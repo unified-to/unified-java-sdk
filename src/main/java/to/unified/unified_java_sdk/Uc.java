@@ -27,6 +27,12 @@ import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
@@ -39,6 +45,12 @@ import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
@@ -73,10 +85,14 @@ import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
+import to.unified.unified_java_sdk.operations.GetUcScorecard;
+import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.ListUcContacts;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
+import to.unified.unified_java_sdk.operations.ListUcScorecards;
+import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
@@ -263,6 +279,50 @@ public class Uc {
     }
 
     /**
+     * Retrieve a scorecard
+     * 
+     * @return The call builder
+     */
+    public GetUcScorecardRequestBuilder getUcScorecard() {
+        return new GetUcScorecardRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        RequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
+              = new GetUcScorecard.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * @return The call builder
+     */
+    public GetUcScorecardtemplateRequestBuilder getUcScorecardtemplate() {
+        return new GetUcScorecardtemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecardtemplate
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardtemplateResponse getUcScorecardtemplate(@Nonnull GetUcScorecardtemplateRequest request) {
+        RequestOperation<GetUcScorecardtemplateRequest, GetUcScorecardtemplateResponse> operation
+              = new GetUcScorecardtemplate.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all calls
      * 
      * @return The call builder
@@ -347,6 +407,50 @@ public class Uc {
     public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @return The call builder
+     */
+    public ListUcScorecardsRequestBuilder listUcScorecards() {
+        return new ListUcScorecardsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        RequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
+              = new ListUcScorecards.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * @return The call builder
+     */
+    public ListUcScorecardtemplatesRequestBuilder listUcScorecardtemplates() {
+        return new ListUcScorecardtemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecardtemplates
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardtemplatesResponse listUcScorecardtemplates(@Nonnull ListUcScorecardtemplatesRequest request) {
+        RequestOperation<ListUcScorecardtemplatesRequest, ListUcScorecardtemplatesResponse> operation
+              = new ListUcScorecardtemplates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

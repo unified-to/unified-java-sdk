@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Category
+ * 
+ * <p>STANDARD (days-based) or DATE_DRIVEN (month-based)
+ */
 public class Category {
 
     public static final Category STANDARD = new Category("STANDARD");

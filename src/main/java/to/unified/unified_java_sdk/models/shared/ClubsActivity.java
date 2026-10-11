@@ -24,217 +24,303 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>ClubActivity (getClubActivitiesById, NO id) and the full DetailedActivity (getActivityById).
  */
 public class ClubsActivity {
-
+    /**
+     * The number of achievements gained during this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("achievement_count")
     private Double achievementCount;
 
-
+    /**
+     * The number of athletes that took part in this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("athlete_count")
     private Double athleteCount;
 
-
+    /**
+     * The id of the athlete who performed the activity (DetailedActivity only)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("athlete_id")
     private String athleteId;
 
-
+    /**
+     * The full name of the athlete
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("athlete_name")
     private String athleteName;
 
-
+    /**
+     * The activity's average cadence
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_cadence")
     private Double averageCadence;
 
-
+    /**
+     * The activity's average heart rate, in beats per minute
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_heartrate")
     private Double averageHeartrate;
 
-
+    /**
+     * The activity's average speed, in meters per second
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_speed")
     private Double averageSpeed;
 
-
+    /**
+     * The activity's average power output, in watts
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_watts")
     private Double averageWatts;
 
-
+    /**
+     * The number of kilocalories consumed during this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calories")
     private Double calories;
 
-
+    /**
+     * The number of comments for this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment_count")
     private Double commentCount;
 
-
+    /**
+     * The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The description of the activity (DetailedActivity only)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The activity's distance, in meters
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     private Double distance;
 
-
+    /**
+     * The activity's elapsed time, in seconds
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsed_time")
     private Double elapsedTime;
 
-
+    /**
+     * The activity's highest elevation, in meters (DetailedActivity only)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation_high")
     private Double elevationHigh;
 
-
+    /**
+     * The activity's lowest elevation, in meters (DetailedActivity only)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation_low")
     private Double elevationLow;
 
-
+    /**
+     * The group this activity was listed under (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
 
-
+    /**
+     * Whether the activity has heart rate data
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_heartrate")
     private Boolean hasHeartrate;
 
-
+    /**
+     * Unique identifier for this activity (not provided by ClubActivity)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether this activity is a commute
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_commute")
     private Boolean isCommute;
 
-
+    /**
+     * Whether this activity was created manually
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_manual")
     private Boolean isManual;
 
-
+    /**
+     * Whether this activity is private
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Boolean isPrivate;
 
-
+    /**
+     * Whether this activity was recorded on a training machine
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_trainer")
     private Boolean isTrainer;
 
-
+    /**
+     * The total work done, in kilojoules
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kilojoules")
     private Double kilojoules;
 
-
+    /**
+     * The number of kudos given for this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kudos_count")
     private Double kudosCount;
 
-
+    /**
+     * The detailed polyline of the activity's map
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("map_polyline")
     private String mapPolyline;
 
-
+    /**
+     * The summary polyline of the activity's map
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("map_summary_polyline")
     private String mapSummaryPolyline;
 
-
+    /**
+     * The activity's max heart rate, in beats per minute
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_heartrate")
     private Double maxHeartrate;
 
-
+    /**
+     * The activity's max speed, in meters per second
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_speed")
     private Double maxSpeed;
 
-
+    /**
+     * The activity's max power output, in watts
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_watts")
     private Double maxWatts;
 
-
+    /**
+     * The activity's moving time, in seconds
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moving_time")
     private Double movingTime;
 
-
+    /**
+     * The name of the activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The number of Instagram photos for this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photo_count")
     private Double photoCount;
 
-
+    /**
+     * The number of personal records set during this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pr_count")
     private Double prCount;
 
-
+    /**
+     * The raw data returned by the integration for this activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * The activity's relative effort score
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffer_score")
     private Double sufferScore;
 
-
+    /**
+     * The timezone of the activity
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * The activity's total elevation gain, in meters
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_elevation_gain")
     private Double totalElevationGain;
 
-
+    /**
+     * The activity type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private ClubsActivityType type;
 
-
+    /**
+     * The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The activity's weighted average power output, in watts
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weighted_average_watts")
     private Double weightedAverageWatts;
 
-
+    /**
+     * The activity's workout type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workout_type")
     private Double workoutType;
@@ -347,174 +433,303 @@ public class ClubsActivity {
             null);
     }
 
+    /**
+     * The number of achievements gained during this activity
+     */
     public Optional<Double> achievementCount() {
         return Optional.ofNullable(this.achievementCount);
     }
 
+    /**
+     * The number of athletes that took part in this activity
+     */
     public Optional<Double> athleteCount() {
         return Optional.ofNullable(this.athleteCount);
     }
 
+    /**
+     * The id of the athlete who performed the activity (DetailedActivity only)
+     */
     public Optional<String> athleteId() {
         return Optional.ofNullable(this.athleteId);
     }
 
+    /**
+     * The full name of the athlete
+     */
     public Optional<String> athleteName() {
         return Optional.ofNullable(this.athleteName);
     }
 
+    /**
+     * The activity's average cadence
+     */
     public Optional<Double> averageCadence() {
         return Optional.ofNullable(this.averageCadence);
     }
 
+    /**
+     * The activity's average heart rate, in beats per minute
+     */
     public Optional<Double> averageHeartrate() {
         return Optional.ofNullable(this.averageHeartrate);
     }
 
+    /**
+     * The activity's average speed, in meters per second
+     */
     public Optional<Double> averageSpeed() {
         return Optional.ofNullable(this.averageSpeed);
     }
 
+    /**
+     * The activity's average power output, in watts
+     */
     public Optional<Double> averageWatts() {
         return Optional.ofNullable(this.averageWatts);
     }
 
+    /**
+     * The number of kilocalories consumed during this activity
+     */
     public Optional<Double> calories() {
         return Optional.ofNullable(this.calories);
     }
 
+    /**
+     * The number of comments for this activity
+     */
     public Optional<Double> commentCount() {
         return Optional.ofNullable(this.commentCount);
     }
 
+    /**
+     * The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The description of the activity (DetailedActivity only)
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The activity's distance, in meters
+     */
     public Optional<Double> distance() {
         return Optional.ofNullable(this.distance);
     }
 
+    /**
+     * The activity's elapsed time, in seconds
+     */
     public Optional<Double> elapsedTime() {
         return Optional.ofNullable(this.elapsedTime);
     }
 
+    /**
+     * The activity's highest elevation, in meters (DetailedActivity only)
+     */
     public Optional<Double> elevationHigh() {
         return Optional.ofNullable(this.elevationHigh);
     }
 
+    /**
+     * The activity's lowest elevation, in meters (DetailedActivity only)
+     */
     public Optional<Double> elevationLow() {
         return Optional.ofNullable(this.elevationLow);
     }
 
+    /**
+     * The group this activity was listed under (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
 
+    /**
+     * Whether the activity has heart rate data
+     */
     public Optional<Boolean> hasHeartrate() {
         return Optional.ofNullable(this.hasHeartrate);
     }
 
+    /**
+     * Unique identifier for this activity (not provided by ClubActivity)
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether this activity is a commute
+     */
     public Optional<Boolean> isCommute() {
         return Optional.ofNullable(this.isCommute);
     }
 
+    /**
+     * Whether this activity was created manually
+     */
     public Optional<Boolean> isManual() {
         return Optional.ofNullable(this.isManual);
     }
 
+    /**
+     * Whether this activity is private
+     */
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
 
+    /**
+     * Whether this activity was recorded on a training machine
+     */
     public Optional<Boolean> isTrainer() {
         return Optional.ofNullable(this.isTrainer);
     }
 
+    /**
+     * The total work done, in kilojoules
+     */
     public Optional<Double> kilojoules() {
         return Optional.ofNullable(this.kilojoules);
     }
 
+    /**
+     * The number of kudos given for this activity
+     */
     public Optional<Double> kudosCount() {
         return Optional.ofNullable(this.kudosCount);
     }
 
+    /**
+     * The detailed polyline of the activity's map
+     */
     public Optional<String> mapPolyline() {
         return Optional.ofNullable(this.mapPolyline);
     }
 
+    /**
+     * The summary polyline of the activity's map
+     */
     public Optional<String> mapSummaryPolyline() {
         return Optional.ofNullable(this.mapSummaryPolyline);
     }
 
+    /**
+     * The activity's max heart rate, in beats per minute
+     */
     public Optional<Double> maxHeartrate() {
         return Optional.ofNullable(this.maxHeartrate);
     }
 
+    /**
+     * The activity's max speed, in meters per second
+     */
     public Optional<Double> maxSpeed() {
         return Optional.ofNullable(this.maxSpeed);
     }
 
+    /**
+     * The activity's max power output, in watts
+     */
     public Optional<Double> maxWatts() {
         return Optional.ofNullable(this.maxWatts);
     }
 
+    /**
+     * The activity's moving time, in seconds
+     */
     public Optional<Double> movingTime() {
         return Optional.ofNullable(this.movingTime);
     }
 
+    /**
+     * The name of the activity
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The number of Instagram photos for this activity
+     */
     public Optional<Double> photoCount() {
         return Optional.ofNullable(this.photoCount);
     }
 
+    /**
+     * The number of personal records set during this activity
+     */
     public Optional<Double> prCount() {
         return Optional.ofNullable(this.prCount);
     }
 
+    /**
+     * The raw data returned by the integration for this activity
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * The activity's relative effort score
+     */
     public Optional<Double> sufferScore() {
         return Optional.ofNullable(this.sufferScore);
     }
 
+    /**
+     * The timezone of the activity
+     */
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * The activity's total elevation gain, in meters
+     */
     public Optional<Double> totalElevationGain() {
         return Optional.ofNullable(this.totalElevationGain);
     }
 
+    /**
+     * The activity type
+     */
     public Optional<ClubsActivityType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The activity's weighted average power output, in watts
+     */
     public Optional<Double> weightedAverageWatts() {
         return Optional.ofNullable(this.weightedAverageWatts);
     }
 
+    /**
+     * The activity's workout type
+     */
     public Optional<Double> workoutType() {
         return Optional.ofNullable(this.workoutType);
     }
@@ -524,258 +739,387 @@ public class ClubsActivity {
     }
 
 
+    /**
+     * The number of achievements gained during this activity
+     */
     public ClubsActivity withAchievementCount(@Nullable Double achievementCount) {
         this.achievementCount = achievementCount;
         return this;
     }
 
 
+    /**
+     * The number of athletes that took part in this activity
+     */
     public ClubsActivity withAthleteCount(@Nullable Double athleteCount) {
         this.athleteCount = athleteCount;
         return this;
     }
 
 
+    /**
+     * The id of the athlete who performed the activity (DetailedActivity only)
+     */
     public ClubsActivity withAthleteId(@Nullable String athleteId) {
         this.athleteId = athleteId;
         return this;
     }
 
 
+    /**
+     * The full name of the athlete
+     */
     public ClubsActivity withAthleteName(@Nullable String athleteName) {
         this.athleteName = athleteName;
         return this;
     }
 
 
+    /**
+     * The activity's average cadence
+     */
     public ClubsActivity withAverageCadence(@Nullable Double averageCadence) {
         this.averageCadence = averageCadence;
         return this;
     }
 
 
+    /**
+     * The activity's average heart rate, in beats per minute
+     */
     public ClubsActivity withAverageHeartrate(@Nullable Double averageHeartrate) {
         this.averageHeartrate = averageHeartrate;
         return this;
     }
 
 
+    /**
+     * The activity's average speed, in meters per second
+     */
     public ClubsActivity withAverageSpeed(@Nullable Double averageSpeed) {
         this.averageSpeed = averageSpeed;
         return this;
     }
 
 
+    /**
+     * The activity's average power output, in watts
+     */
     public ClubsActivity withAverageWatts(@Nullable Double averageWatts) {
         this.averageWatts = averageWatts;
         return this;
     }
 
 
+    /**
+     * The number of kilocalories consumed during this activity
+     */
     public ClubsActivity withCalories(@Nullable Double calories) {
         this.calories = calories;
         return this;
     }
 
 
+    /**
+     * The number of comments for this activity
+     */
     public ClubsActivity withCommentCount(@Nullable Double commentCount) {
         this.commentCount = commentCount;
         return this;
     }
 
 
+    /**
+     * The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsActivity withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The description of the activity (DetailedActivity only)
+     */
     public ClubsActivity withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The activity's distance, in meters
+     */
     public ClubsActivity withDistance(@Nullable Double distance) {
         this.distance = distance;
         return this;
     }
 
 
+    /**
+     * The activity's elapsed time, in seconds
+     */
     public ClubsActivity withElapsedTime(@Nullable Double elapsedTime) {
         this.elapsedTime = elapsedTime;
         return this;
     }
 
 
+    /**
+     * The activity's highest elevation, in meters (DetailedActivity only)
+     */
     public ClubsActivity withElevationHigh(@Nullable Double elevationHigh) {
         this.elevationHigh = elevationHigh;
         return this;
     }
 
 
+    /**
+     * The activity's lowest elevation, in meters (DetailedActivity only)
+     */
     public ClubsActivity withElevationLow(@Nullable Double elevationLow) {
         this.elevationLow = elevationLow;
         return this;
     }
 
 
+    /**
+     * The group this activity was listed under (reference to HrisGroup)
+     */
     public ClubsActivity withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
 
+    /**
+     * Whether the activity has heart rate data
+     */
     public ClubsActivity withHasHeartrate(@Nullable Boolean hasHeartrate) {
         this.hasHeartrate = hasHeartrate;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this activity (not provided by ClubActivity)
+     */
     public ClubsActivity withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether this activity is a commute
+     */
     public ClubsActivity withIsCommute(@Nullable Boolean isCommute) {
         this.isCommute = isCommute;
         return this;
     }
 
 
+    /**
+     * Whether this activity was created manually
+     */
     public ClubsActivity withIsManual(@Nullable Boolean isManual) {
         this.isManual = isManual;
         return this;
     }
 
 
+    /**
+     * Whether this activity is private
+     */
     public ClubsActivity withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
 
+    /**
+     * Whether this activity was recorded on a training machine
+     */
     public ClubsActivity withIsTrainer(@Nullable Boolean isTrainer) {
         this.isTrainer = isTrainer;
         return this;
     }
 
 
+    /**
+     * The total work done, in kilojoules
+     */
     public ClubsActivity withKilojoules(@Nullable Double kilojoules) {
         this.kilojoules = kilojoules;
         return this;
     }
 
 
+    /**
+     * The number of kudos given for this activity
+     */
     public ClubsActivity withKudosCount(@Nullable Double kudosCount) {
         this.kudosCount = kudosCount;
         return this;
     }
 
 
+    /**
+     * The detailed polyline of the activity's map
+     */
     public ClubsActivity withMapPolyline(@Nullable String mapPolyline) {
         this.mapPolyline = mapPolyline;
         return this;
     }
 
 
+    /**
+     * The summary polyline of the activity's map
+     */
     public ClubsActivity withMapSummaryPolyline(@Nullable String mapSummaryPolyline) {
         this.mapSummaryPolyline = mapSummaryPolyline;
         return this;
     }
 
 
+    /**
+     * The activity's max heart rate, in beats per minute
+     */
     public ClubsActivity withMaxHeartrate(@Nullable Double maxHeartrate) {
         this.maxHeartrate = maxHeartrate;
         return this;
     }
 
 
+    /**
+     * The activity's max speed, in meters per second
+     */
     public ClubsActivity withMaxSpeed(@Nullable Double maxSpeed) {
         this.maxSpeed = maxSpeed;
         return this;
     }
 
 
+    /**
+     * The activity's max power output, in watts
+     */
     public ClubsActivity withMaxWatts(@Nullable Double maxWatts) {
         this.maxWatts = maxWatts;
         return this;
     }
 
 
+    /**
+     * The activity's moving time, in seconds
+     */
     public ClubsActivity withMovingTime(@Nullable Double movingTime) {
         this.movingTime = movingTime;
         return this;
     }
 
 
+    /**
+     * The name of the activity
+     */
     public ClubsActivity withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The number of Instagram photos for this activity
+     */
     public ClubsActivity withPhotoCount(@Nullable Double photoCount) {
         this.photoCount = photoCount;
         return this;
     }
 
 
+    /**
+     * The number of personal records set during this activity
+     */
     public ClubsActivity withPrCount(@Nullable Double prCount) {
         this.prCount = prCount;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this activity
+     */
     public ClubsActivity withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsActivity withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * The activity's relative effort score
+     */
     public ClubsActivity withSufferScore(@Nullable Double sufferScore) {
         this.sufferScore = sufferScore;
         return this;
     }
 
 
+    /**
+     * The timezone of the activity
+     */
     public ClubsActivity withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
 
+    /**
+     * The activity's total elevation gain, in meters
+     */
     public ClubsActivity withTotalElevationGain(@Nullable Double totalElevationGain) {
         this.totalElevationGain = totalElevationGain;
         return this;
     }
 
 
+    /**
+     * The activity type
+     */
     public ClubsActivity withType(@Nullable ClubsActivityType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsActivity withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The activity's weighted average power output, in watts
+     */
     public ClubsActivity withWeightedAverageWatts(@Nullable Double weightedAverageWatts) {
         this.weightedAverageWatts = weightedAverageWatts;
         return this;
     }
 
 
+    /**
+     * The activity's workout type
+     */
     public ClubsActivity withWorkoutType(@Nullable Double workoutType) {
         this.workoutType = workoutType;
         return this;
@@ -998,216 +1342,345 @@ public class ClubsActivity {
           // force use of static builder() method
         }
 
+        /**
+         * The number of achievements gained during this activity
+         */
         public Builder achievementCount(@Nullable Double achievementCount) {
             this.achievementCount = achievementCount;
             return this;
         }
 
+        /**
+         * The number of athletes that took part in this activity
+         */
         public Builder athleteCount(@Nullable Double athleteCount) {
             this.athleteCount = athleteCount;
             return this;
         }
 
+        /**
+         * The id of the athlete who performed the activity (DetailedActivity only)
+         */
         public Builder athleteId(@Nullable String athleteId) {
             this.athleteId = athleteId;
             return this;
         }
 
+        /**
+         * The full name of the athlete
+         */
         public Builder athleteName(@Nullable String athleteName) {
             this.athleteName = athleteName;
             return this;
         }
 
+        /**
+         * The activity's average cadence
+         */
         public Builder averageCadence(@Nullable Double averageCadence) {
             this.averageCadence = averageCadence;
             return this;
         }
 
+        /**
+         * The activity's average heart rate, in beats per minute
+         */
         public Builder averageHeartrate(@Nullable Double averageHeartrate) {
             this.averageHeartrate = averageHeartrate;
             return this;
         }
 
+        /**
+         * The activity's average speed, in meters per second
+         */
         public Builder averageSpeed(@Nullable Double averageSpeed) {
             this.averageSpeed = averageSpeed;
             return this;
         }
 
+        /**
+         * The activity's average power output, in watts
+         */
         public Builder averageWatts(@Nullable Double averageWatts) {
             this.averageWatts = averageWatts;
             return this;
         }
 
+        /**
+         * The number of kilocalories consumed during this activity
+         */
         public Builder calories(@Nullable Double calories) {
             this.calories = calories;
             return this;
         }
 
+        /**
+         * The number of comments for this activity
+         */
         public Builder commentCount(@Nullable Double commentCount) {
             this.commentCount = commentCount;
             return this;
         }
 
+        /**
+         * The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The description of the activity (DetailedActivity only)
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The activity's distance, in meters
+         */
         public Builder distance(@Nullable Double distance) {
             this.distance = distance;
             return this;
         }
 
+        /**
+         * The activity's elapsed time, in seconds
+         */
         public Builder elapsedTime(@Nullable Double elapsedTime) {
             this.elapsedTime = elapsedTime;
             return this;
         }
 
+        /**
+         * The activity's highest elevation, in meters (DetailedActivity only)
+         */
         public Builder elevationHigh(@Nullable Double elevationHigh) {
             this.elevationHigh = elevationHigh;
             return this;
         }
 
+        /**
+         * The activity's lowest elevation, in meters (DetailedActivity only)
+         */
         public Builder elevationLow(@Nullable Double elevationLow) {
             this.elevationLow = elevationLow;
             return this;
         }
 
+        /**
+         * The group this activity was listed under (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
+        /**
+         * Whether the activity has heart rate data
+         */
         public Builder hasHeartrate(@Nullable Boolean hasHeartrate) {
             this.hasHeartrate = hasHeartrate;
             return this;
         }
 
+        /**
+         * Unique identifier for this activity (not provided by ClubActivity)
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether this activity is a commute
+         */
         public Builder isCommute(@Nullable Boolean isCommute) {
             this.isCommute = isCommute;
             return this;
         }
 
+        /**
+         * Whether this activity was created manually
+         */
         public Builder isManual(@Nullable Boolean isManual) {
             this.isManual = isManual;
             return this;
         }
 
+        /**
+         * Whether this activity is private
+         */
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
+        /**
+         * Whether this activity was recorded on a training machine
+         */
         public Builder isTrainer(@Nullable Boolean isTrainer) {
             this.isTrainer = isTrainer;
             return this;
         }
 
+        /**
+         * The total work done, in kilojoules
+         */
         public Builder kilojoules(@Nullable Double kilojoules) {
             this.kilojoules = kilojoules;
             return this;
         }
 
+        /**
+         * The number of kudos given for this activity
+         */
         public Builder kudosCount(@Nullable Double kudosCount) {
             this.kudosCount = kudosCount;
             return this;
         }
 
+        /**
+         * The detailed polyline of the activity's map
+         */
         public Builder mapPolyline(@Nullable String mapPolyline) {
             this.mapPolyline = mapPolyline;
             return this;
         }
 
+        /**
+         * The summary polyline of the activity's map
+         */
         public Builder mapSummaryPolyline(@Nullable String mapSummaryPolyline) {
             this.mapSummaryPolyline = mapSummaryPolyline;
             return this;
         }
 
+        /**
+         * The activity's max heart rate, in beats per minute
+         */
         public Builder maxHeartrate(@Nullable Double maxHeartrate) {
             this.maxHeartrate = maxHeartrate;
             return this;
         }
 
+        /**
+         * The activity's max speed, in meters per second
+         */
         public Builder maxSpeed(@Nullable Double maxSpeed) {
             this.maxSpeed = maxSpeed;
             return this;
         }
 
+        /**
+         * The activity's max power output, in watts
+         */
         public Builder maxWatts(@Nullable Double maxWatts) {
             this.maxWatts = maxWatts;
             return this;
         }
 
+        /**
+         * The activity's moving time, in seconds
+         */
         public Builder movingTime(@Nullable Double movingTime) {
             this.movingTime = movingTime;
             return this;
         }
 
+        /**
+         * The name of the activity
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The number of Instagram photos for this activity
+         */
         public Builder photoCount(@Nullable Double photoCount) {
             this.photoCount = photoCount;
             return this;
         }
 
+        /**
+         * The number of personal records set during this activity
+         */
         public Builder prCount(@Nullable Double prCount) {
             this.prCount = prCount;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this activity
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * The activity's relative effort score
+         */
         public Builder sufferScore(@Nullable Double sufferScore) {
             this.sufferScore = sufferScore;
             return this;
         }
 
+        /**
+         * The timezone of the activity
+         */
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
+        /**
+         * The activity's total elevation gain, in meters
+         */
         public Builder totalElevationGain(@Nullable Double totalElevationGain) {
             this.totalElevationGain = totalElevationGain;
             return this;
         }
 
+        /**
+         * The activity type
+         */
         public Builder type(@Nullable ClubsActivityType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The activity's weighted average power output, in watts
+         */
         public Builder weightedAverageWatts(@Nullable Double weightedAverageWatts) {
             this.weightedAverageWatts = weightedAverageWatts;
             return this;
         }
 
+        /**
+         * The activity's workout type
+         */
         public Builder workoutType(@Nullable Double workoutType) {
             this.workoutType = workoutType;
             return this;

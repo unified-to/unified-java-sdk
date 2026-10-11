@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -24,7 +25,9 @@ public class HrisBankaccount {
     @JsonProperty("account_number")
     private String accountNumber;
 
-
+    /**
+     * when full number not returned
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number_last4")
     private String accountNumberLast4;
@@ -39,47 +42,108 @@ public class HrisBankaccount {
     @JsonProperty("bank_name")
     private String bankName;
 
+    /**
+     * BIC / SWIFT code
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bic")
+    private String bic;
 
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
+    /**
+     * ISO 2-digit country code of the bank account
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("country_code")
+    private String countryCode;
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    private String currency;
+
+    /**
+     * International Bank Account Number (non-US accounts)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("iban")
+    private String iban;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * primary for direct deposit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_primary")
     private Boolean isPrimary;
 
-
+    /**
+     * account nickname (e.g. "BoA Checking")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
+
+    /**
+     * order in which split accounts are funded (1 = first)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("priority")
+    private Double priority;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * 9-digit US routing number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routing_number")
     private String routingNumber;
 
+    /**
+     * percentage (when split_type is PERCENTAGE) or money (when FIXED)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("split_amount")
+    private Double splitAmount;
 
+    /**
+     * how net pay is split into this account when an employee has several accounts
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("split_type")
+    private SplitType splitType;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * employee ID (required for listcreate) (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -90,26 +154,40 @@ public class HrisBankaccount {
             @JsonProperty("account_number_last4") @Nullable String accountNumberLast4,
             @JsonProperty("account_type") @Nullable HrisBankaccountAccountType accountType,
             @JsonProperty("bank_name") @Nullable String bankName,
+            @JsonProperty("bic") @Nullable String bic,
             @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("country_code") @Nullable String countryCode,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("iban") @Nullable String iban,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_primary") @Nullable Boolean isPrimary,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("priority") @Nullable Double priority,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("routing_number") @Nullable String routingNumber,
+            @JsonProperty("split_amount") @Nullable Double splitAmount,
+            @JsonProperty("split_type") @Nullable SplitType splitType,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.accountNumber = accountNumber;
         this.accountNumberLast4 = accountNumberLast4;
         this.accountType = accountType;
         this.bankName = bankName;
+        this.bic = bic;
         this.companyId = companyId;
+        this.countryCode = countryCode;
         this.createdAt = createdAt;
+        this.currency = currency;
+        this.iban = iban;
         this.id = id;
         this.isPrimary = isPrimary;
         this.name = name;
+        this.priority = priority;
         this.raw = raw;
         this.routingNumber = routingNumber;
+        this.splitAmount = splitAmount;
+        this.splitType = splitType;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -119,13 +197,18 @@ public class HrisBankaccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
     public Optional<String> accountNumber() {
         return Optional.ofNullable(this.accountNumber);
     }
 
+    /**
+     * when full number not returned
+     */
     public Optional<String> accountNumberLast4() {
         return Optional.ofNullable(this.accountNumberLast4);
     }
@@ -138,38 +221,105 @@ public class HrisBankaccount {
         return Optional.ofNullable(this.bankName);
     }
 
+    /**
+     * BIC / SWIFT code
+     */
+    public Optional<String> bic() {
+        return Optional.ofNullable(this.bic);
+    }
+
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * ISO 2-digit country code of the bank account
+     */
+    public Optional<String> countryCode() {
+        return Optional.ofNullable(this.countryCode);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    public Optional<String> currency() {
+        return Optional.ofNullable(this.currency);
+    }
+
+    /**
+     * International Bank Account Number (non-US accounts)
+     */
+    public Optional<String> iban() {
+        return Optional.ofNullable(this.iban);
     }
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * primary for direct deposit
+     */
     public Optional<Boolean> isPrimary() {
         return Optional.ofNullable(this.isPrimary);
     }
 
+    /**
+     * account nickname (e.g. "BoA Checking")
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * order in which split accounts are funded (1 = first)
+     */
+    public Optional<Double> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * 9-digit US routing number
+     */
     public Optional<String> routingNumber() {
         return Optional.ofNullable(this.routingNumber);
     }
 
+    /**
+     * percentage (when split_type is PERCENTAGE) or money (when FIXED)
+     */
+    public Optional<Double> splitAmount() {
+        return Optional.ofNullable(this.splitAmount);
+    }
+
+    /**
+     * how net pay is split into this account when an employee has several accounts
+     */
+    public Optional<SplitType> splitType() {
+        return Optional.ofNullable(this.splitType);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * employee ID (required for listcreate) (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -185,6 +335,9 @@ public class HrisBankaccount {
     }
 
 
+    /**
+     * when full number not returned
+     */
     public HrisBankaccount withAccountNumberLast4(@Nullable String accountNumberLast4) {
         this.accountNumberLast4 = accountNumberLast4;
         return this;
@@ -203,14 +356,53 @@ public class HrisBankaccount {
     }
 
 
+    /**
+     * BIC / SWIFT code
+     */
+    public HrisBankaccount withBic(@Nullable String bic) {
+        this.bic = bic;
+        return this;
+    }
+
+
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisBankaccount withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * ISO 2-digit country code of the bank account
+     */
+    public HrisBankaccount withCountryCode(@Nullable String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisBankaccount withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    public HrisBankaccount withCurrency(@Nullable String currency) {
+        this.currency = currency;
+        return this;
+    }
+
+
+    /**
+     * International Bank Account Number (non-US accounts)
+     */
+    public HrisBankaccount withIban(@Nullable String iban) {
+        this.iban = iban;
         return this;
     }
 
@@ -221,14 +413,29 @@ public class HrisBankaccount {
     }
 
 
+    /**
+     * primary for direct deposit
+     */
     public HrisBankaccount withIsPrimary(@Nullable Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
     }
 
 
+    /**
+     * account nickname (e.g. "BoA Checking")
+     */
     public HrisBankaccount withName(@Nullable String name) {
         this.name = name;
+        return this;
+    }
+
+
+    /**
+     * order in which split accounts are funded (1 = first)
+     */
+    public HrisBankaccount withPriority(@Nullable Double priority) {
+        this.priority = priority;
         return this;
     }
 
@@ -239,18 +446,45 @@ public class HrisBankaccount {
     }
 
 
+    /**
+     * 9-digit US routing number
+     */
     public HrisBankaccount withRoutingNumber(@Nullable String routingNumber) {
         this.routingNumber = routingNumber;
         return this;
     }
 
 
+    /**
+     * percentage (when split_type is PERCENTAGE) or money (when FIXED)
+     */
+    public HrisBankaccount withSplitAmount(@Nullable Double splitAmount) {
+        this.splitAmount = splitAmount;
+        return this;
+    }
+
+
+    /**
+     * how net pay is split into this account when an employee has several accounts
+     */
+    public HrisBankaccount withSplitType(@Nullable SplitType splitType) {
+        this.splitType = splitType;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisBankaccount withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * employee ID (required for listcreate) (reference to HrisEmployee)
+     */
     public HrisBankaccount withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -271,13 +505,20 @@ public class HrisBankaccount {
             Utils.enhancedDeepEquals(this.accountNumberLast4, other.accountNumberLast4) &&
             Utils.enhancedDeepEquals(this.accountType, other.accountType) &&
             Utils.enhancedDeepEquals(this.bankName, other.bankName) &&
+            Utils.enhancedDeepEquals(this.bic, other.bic) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
+            Utils.enhancedDeepEquals(this.countryCode, other.countryCode) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.iban, other.iban) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrimary, other.isPrimary) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.routingNumber, other.routingNumber) &&
+            Utils.enhancedDeepEquals(this.splitAmount, other.splitAmount) &&
+            Utils.enhancedDeepEquals(this.splitType, other.splitType) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -286,10 +527,12 @@ public class HrisBankaccount {
     public int hashCode() {
         return Utils.enhancedHash(
             accountNumber, accountNumberLast4, accountType,
-            bankName, companyId, createdAt,
-            id, isPrimary, name,
-            raw, routingNumber, updatedAt,
-            userId);
+            bankName, bic, companyId,
+            countryCode, createdAt, currency,
+            iban, id, isPrimary,
+            name, priority, raw,
+            routingNumber, splitAmount, splitType,
+            updatedAt, userId);
     }
     
     @Override
@@ -299,13 +542,20 @@ public class HrisBankaccount {
                 "accountNumberLast4", accountNumberLast4,
                 "accountType", accountType,
                 "bankName", bankName,
+                "bic", bic,
                 "companyId", companyId,
+                "countryCode", countryCode,
                 "createdAt", createdAt,
+                "currency", currency,
+                "iban", iban,
                 "id", id,
                 "isPrimary", isPrimary,
                 "name", name,
+                "priority", priority,
                 "raw", raw,
                 "routingNumber", routingNumber,
+                "splitAmount", splitAmount,
+                "splitType", splitType,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -321,9 +571,17 @@ public class HrisBankaccount {
 
         private String bankName;
 
+        private String bic;
+
         private String companyId;
 
+        private String countryCode;
+
         private OffsetDateTime createdAt;
+
+        private String currency;
+
+        private String iban;
 
         private String id;
 
@@ -331,9 +589,15 @@ public class HrisBankaccount {
 
         private String name;
 
+        private Double priority;
+
         private Map<String, Object> raw;
 
         private String routingNumber;
+
+        private Double splitAmount;
+
+        private SplitType splitType;
 
         private OffsetDateTime updatedAt;
 
@@ -348,6 +612,9 @@ public class HrisBankaccount {
             return this;
         }
 
+        /**
+         * when full number not returned
+         */
         public Builder accountNumberLast4(@Nullable String accountNumberLast4) {
             this.accountNumberLast4 = accountNumberLast4;
             return this;
@@ -363,13 +630,48 @@ public class HrisBankaccount {
             return this;
         }
 
+        /**
+         * BIC / SWIFT code
+         */
+        public Builder bic(@Nullable String bic) {
+            this.bic = bic;
+            return this;
+        }
+
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * ISO 2-digit country code of the bank account
+         */
+        public Builder countryCode(@Nullable String countryCode) {
+            this.countryCode = countryCode;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        public Builder currency(@Nullable String currency) {
+            this.currency = currency;
+            return this;
+        }
+
+        /**
+         * International Bank Account Number (non-US accounts)
+         */
+        public Builder iban(@Nullable String iban) {
+            this.iban = iban;
             return this;
         }
 
@@ -378,13 +680,27 @@ public class HrisBankaccount {
             return this;
         }
 
+        /**
+         * primary for direct deposit
+         */
         public Builder isPrimary(@Nullable Boolean isPrimary) {
             this.isPrimary = isPrimary;
             return this;
         }
 
+        /**
+         * account nickname (e.g. "BoA Checking")
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * order in which split accounts are funded (1 = first)
+         */
+        public Builder priority(@Nullable Double priority) {
+            this.priority = priority;
             return this;
         }
 
@@ -393,16 +709,41 @@ public class HrisBankaccount {
             return this;
         }
 
+        /**
+         * 9-digit US routing number
+         */
         public Builder routingNumber(@Nullable String routingNumber) {
             this.routingNumber = routingNumber;
             return this;
         }
 
+        /**
+         * percentage (when split_type is PERCENTAGE) or money (when FIXED)
+         */
+        public Builder splitAmount(@Nullable Double splitAmount) {
+            this.splitAmount = splitAmount;
+            return this;
+        }
+
+        /**
+         * how net pay is split into this account when an employee has several accounts
+         */
+        public Builder splitType(@Nullable SplitType splitType) {
+            this.splitType = splitType;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * employee ID (required for listcreate) (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -411,10 +752,12 @@ public class HrisBankaccount {
         public HrisBankaccount build() {
             return new HrisBankaccount(
                 accountNumber, accountNumberLast4, accountType,
-                bankName, companyId, createdAt,
-                id, isPrimary, name,
-                raw, routingNumber, updatedAt,
-                userId);
+                bankName, bic, companyId,
+                countryCode, createdAt, currency,
+                iban, id, isPrimary,
+                name, priority, raw,
+                routingNumber, splitAmount, splitType,
+                updatedAt, userId);
         }
 
     }

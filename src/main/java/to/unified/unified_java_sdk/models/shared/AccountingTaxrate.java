@@ -28,12 +28,16 @@ public class AccountingTaxrate {
     @JsonProperty("components")
     private List<AccountingTaxrateComponent> components;
 
-
+    /**
+     * Jurisdiction country
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -43,7 +47,9 @@ public class AccountingTaxrate {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Net effective rate in %, where it differs from the nominal rate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective_rate")
     private Double effectiveRate;
@@ -58,7 +64,9 @@ public class AccountingTaxrate {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * True when the rate stacks on top of other taxes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_compound")
     private Boolean isCompound;
@@ -78,7 +86,9 @@ public class AccountingTaxrate {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * %
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     private Double rate;
@@ -88,22 +98,30 @@ public class AccountingTaxrate {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Jurisdiction state / province
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private String region;
 
-
+    /**
+     * Sum of all components, in %
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_rate")
     private Double totalRate;
 
-
+    /**
+     * Whether the rate applies to sales, purchases, or both
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AccountingTaxrateType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -162,10 +180,16 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.components);
     }
 
+    /**
+     * Jurisdiction country
+     */
     public Optional<String> country() {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -174,6 +198,9 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Net effective rate in %, where it differs from the nominal rate
+     */
     public Optional<Double> effectiveRate() {
         return Optional.ofNullable(this.effectiveRate);
     }
@@ -186,6 +213,9 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * True when the rate stacks on top of other taxes
+     */
     public Optional<Boolean> isCompound() {
         return Optional.ofNullable(this.isCompound);
     }
@@ -202,6 +232,9 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * %
+     */
     public Optional<Double> rate() {
         return Optional.ofNullable(this.rate);
     }
@@ -210,18 +243,30 @@ public class AccountingTaxrate {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Jurisdiction state / province
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * Sum of all components, in %
+     */
     public Optional<Double> totalRate() {
         return Optional.ofNullable(this.totalRate);
     }
 
+    /**
+     * Whether the rate applies to sales, purchases, or both
+     */
     public Optional<AccountingTaxrateType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -240,12 +285,18 @@ public class AccountingTaxrate {
     }
 
 
+    /**
+     * Jurisdiction country
+     */
     public AccountingTaxrate withCountry(@Nullable String country) {
         this.country = country;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingTaxrate withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -258,6 +309,9 @@ public class AccountingTaxrate {
     }
 
 
+    /**
+     * Net effective rate in %, where it differs from the nominal rate
+     */
     public AccountingTaxrate withEffectiveRate(@Nullable Double effectiveRate) {
         this.effectiveRate = effectiveRate;
         return this;
@@ -276,6 +330,9 @@ public class AccountingTaxrate {
     }
 
 
+    /**
+     * True when the rate stacks on top of other taxes
+     */
     public AccountingTaxrate withIsCompound(@Nullable Boolean isCompound) {
         this.isCompound = isCompound;
         return this;
@@ -300,6 +357,9 @@ public class AccountingTaxrate {
     }
 
 
+    /**
+     * %
+     */
     public AccountingTaxrate withRate(@Nullable Double rate) {
         this.rate = rate;
         return this;
@@ -312,24 +372,36 @@ public class AccountingTaxrate {
     }
 
 
+    /**
+     * Jurisdiction state / province
+     */
     public AccountingTaxrate withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
 
+    /**
+     * Sum of all components, in %
+     */
     public AccountingTaxrate withTotalRate(@Nullable Double totalRate) {
         this.totalRate = totalRate;
         return this;
     }
 
 
+    /**
+     * Whether the rate applies to sales, purchases, or both
+     */
     public AccountingTaxrate withType(@Nullable AccountingTaxrateType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingTaxrate withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -447,11 +519,17 @@ public class AccountingTaxrate {
             return this;
         }
 
+        /**
+         * Jurisdiction country
+         */
         public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -462,6 +540,9 @@ public class AccountingTaxrate {
             return this;
         }
 
+        /**
+         * Net effective rate in %, where it differs from the nominal rate
+         */
         public Builder effectiveRate(@Nullable Double effectiveRate) {
             this.effectiveRate = effectiveRate;
             return this;
@@ -477,6 +558,9 @@ public class AccountingTaxrate {
             return this;
         }
 
+        /**
+         * True when the rate stacks on top of other taxes
+         */
         public Builder isCompound(@Nullable Boolean isCompound) {
             this.isCompound = isCompound;
             return this;
@@ -497,6 +581,9 @@ public class AccountingTaxrate {
             return this;
         }
 
+        /**
+         * %
+         */
         public Builder rate(@Nullable Double rate) {
             this.rate = rate;
             return this;
@@ -507,21 +594,33 @@ public class AccountingTaxrate {
             return this;
         }
 
+        /**
+         * Jurisdiction state / province
+         */
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
+        /**
+         * Sum of all components, in %
+         */
         public Builder totalRate(@Nullable Double totalRate) {
             this.totalRate = totalRate;
             return this;
         }
 
+        /**
+         * Whether the rate applies to sales, purchases, or both
+         */
         public Builder type(@Nullable AccountingTaxrateType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

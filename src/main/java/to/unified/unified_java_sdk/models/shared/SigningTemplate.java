@@ -19,42 +19,58 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SigningTemplate {
-
+    /**
+     * The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * User who created the template
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_id")
     private String creatorId;
 
-
+    /**
+     * Template description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Unique identifier for this template
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the template is active/available
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * Template name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -85,34 +101,58 @@ public class SigningTemplate {
             null, null);
     }
 
+    /**
+     * The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * User who created the template
+     */
     public Optional<String> creatorId() {
         return Optional.ofNullable(this.creatorId);
     }
 
+    /**
+     * Template description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Unique identifier for this template
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the template is active/available
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * Template name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -122,48 +162,72 @@ public class SigningTemplate {
     }
 
 
+    /**
+     * The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningTemplate withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * User who created the template
+     */
     public SigningTemplate withCreatorId(@Nullable String creatorId) {
         this.creatorId = creatorId;
         return this;
     }
 
 
+    /**
+     * Template description
+     */
     public SigningTemplate withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this template
+     */
     public SigningTemplate withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the template is active/available
+     */
     public SigningTemplate withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
 
+    /**
+     * Template name
+     */
     public SigningTemplate withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration
+     */
     public SigningTemplate withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningTemplate withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -234,41 +298,65 @@ public class SigningTemplate {
           // force use of static builder() method
         }
 
+        /**
+         * The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * User who created the template
+         */
         public Builder creatorId(@Nullable String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
 
+        /**
+         * Template description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Unique identifier for this template
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the template is active/available
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
+        /**
+         * Template name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

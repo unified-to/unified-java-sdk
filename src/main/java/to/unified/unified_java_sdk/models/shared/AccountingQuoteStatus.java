@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingQuoteStatus
+ * 
+ * <p>where EXPIRED is derived (expires_at &lt; now), the source status is preserved in raw
+ */
 public class AccountingQuoteStatus {
 
     public static final AccountingQuoteStatus DRAFT = new AccountingQuoteStatus("DRAFT");

@@ -34,7 +34,9 @@ public class PropertyMessagingEventMessageAuthorMember {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -68,6 +70,9 @@ public class PropertyMessagingEventMessageAuthorMember {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -95,6 +100,9 @@ public class PropertyMessagingEventMessageAuthorMember {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public PropertyMessagingEventMessageAuthorMember withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -163,6 +171,9 @@ public class PropertyMessagingEventMessageAuthorMember {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

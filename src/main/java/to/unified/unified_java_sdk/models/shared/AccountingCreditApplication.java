@@ -17,22 +17,31 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingCreditApplication {
-
+    /**
+     * The amount of credit applied to this object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_at")
     private OffsetDateTime appliedAt;
 
-
+    /**
+     * The id of the object this credit was applied to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_id")
     private String objectId;
 
-
+    /**
+     * The type of object this credit was applied to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_type")
     private ObjectType objectType;
@@ -54,18 +63,31 @@ public class AccountingCreditApplication {
             null);
     }
 
+    /**
+     * The amount of credit applied to this object
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> appliedAt() {
         return Optional.ofNullable(this.appliedAt);
     }
 
+    /**
+     * The id of the object this credit was applied to
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * The type of object this credit was applied to
+     */
     public Optional<ObjectType> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -75,24 +97,37 @@ public class AccountingCreditApplication {
     }
 
 
+    /**
+     * The amount of credit applied to this object
+     */
     public AccountingCreditApplication withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCreditApplication withAppliedAt(@Nullable OffsetDateTime appliedAt) {
         this.appliedAt = appliedAt;
         return this;
     }
 
 
+    /**
+     * The id of the object this credit was applied to
+     */
     public AccountingCreditApplication withObjectId(@Nullable String objectId) {
         this.objectId = objectId;
         return this;
     }
 
 
+    /**
+     * The type of object this credit was applied to
+     */
     public AccountingCreditApplication withObjectType(@Nullable ObjectType objectType) {
         this.objectType = objectType;
         return this;
@@ -146,21 +181,34 @@ public class AccountingCreditApplication {
           // force use of static builder() method
         }
 
+        /**
+         * The amount of credit applied to this object
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder appliedAt(@Nullable OffsetDateTime appliedAt) {
             this.appliedAt = appliedAt;
             return this;
         }
 
+        /**
+         * The id of the object this credit was applied to
+         */
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
+        /**
+         * The type of object this credit was applied to
+         */
         public Builder objectType(@Nullable ObjectType objectType) {
             this.objectType = objectType;
             return this;

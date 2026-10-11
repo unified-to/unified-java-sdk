@@ -17,7 +17,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingTransactionLineItem {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -47,12 +49,16 @@ public class AccountingTransactionLineItem {
     @JsonProperty("object_type")
     private String objectType;
 
-
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
 
-
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
@@ -98,6 +104,9 @@ public class AccountingTransactionLineItem {
             null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -122,10 +131,16 @@ public class AccountingTransactionLineItem {
         return Optional.ofNullable(this.objectType);
     }
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
     }
 
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
@@ -143,6 +158,9 @@ public class AccountingTransactionLineItem {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingTransactionLineItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -179,12 +197,18 @@ public class AccountingTransactionLineItem {
     }
 
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     public AccountingTransactionLineItem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
 
 
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     public AccountingTransactionLineItem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -276,6 +300,9 @@ public class AccountingTransactionLineItem {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -306,11 +333,17 @@ public class AccountingTransactionLineItem {
             return this;
         }
 
+        /**
+         * ref -&gt; AccountingTaxrate applied to the line
+         */
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
         }
 
+        /**
+         * will be a positive value for a debit and negative for a credit
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;

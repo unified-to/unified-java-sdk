@@ -30,7 +30,9 @@ public class HrisDevice {
     @JsonProperty("asset_tag")
     private String assetTag;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -70,17 +72,23 @@ public class HrisDevice {
     @JsonProperty("is_missing")
     private Boolean isMissing;
 
-
+    /**
+     * pointer to HR Location object (reference to HrisLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * device manufacturer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     private String manufacturer;
 
-
+    /**
+     * device model
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     private String model;
@@ -90,7 +98,9 @@ public class HrisDevice {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * operating system name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     private String os;
@@ -105,7 +115,9 @@ public class HrisDevice {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -117,7 +129,9 @@ public class HrisDevice {
     @JsonProperty("user_ids")
     private List<String> userIds;
 
-
+    /**
+     * device version
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     private String version;
@@ -184,6 +198,9 @@ public class HrisDevice {
         return Optional.ofNullable(this.assetTag);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -216,14 +233,23 @@ public class HrisDevice {
         return Optional.ofNullable(this.isMissing);
     }
 
+    /**
+     * pointer to HR Location object (reference to HrisLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * device manufacturer
+     */
     public Optional<String> manufacturer() {
         return Optional.ofNullable(this.manufacturer);
     }
 
+    /**
+     * device model
+     */
     public Optional<String> model() {
         return Optional.ofNullable(this.model);
     }
@@ -232,6 +258,9 @@ public class HrisDevice {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * operating system name
+     */
     public Optional<String> os() {
         return Optional.ofNullable(this.os);
     }
@@ -244,6 +273,9 @@ public class HrisDevice {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -255,6 +287,9 @@ public class HrisDevice {
         return Optional.ofNullable(this.userIds);
     }
 
+    /**
+     * device version
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -276,6 +311,9 @@ public class HrisDevice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisDevice withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -324,18 +362,27 @@ public class HrisDevice {
     }
 
 
+    /**
+     * pointer to HR Location object (reference to HrisLocation)
+     */
     public HrisDevice withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
 
+    /**
+     * device manufacturer
+     */
     public HrisDevice withManufacturer(@Nullable String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
     }
 
 
+    /**
+     * device model
+     */
     public HrisDevice withModel(@Nullable String model) {
         this.model = model;
         return this;
@@ -348,6 +395,9 @@ public class HrisDevice {
     }
 
 
+    /**
+     * operating system name
+     */
     public HrisDevice withOs(@Nullable String os) {
         this.os = os;
         return this;
@@ -366,6 +416,9 @@ public class HrisDevice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisDevice withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -381,6 +434,9 @@ public class HrisDevice {
     }
 
 
+    /**
+     * device version
+     */
     public HrisDevice withVersion(@Nullable String version) {
         this.version = version;
         return this;
@@ -513,6 +569,9 @@ public class HrisDevice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -553,16 +612,25 @@ public class HrisDevice {
             return this;
         }
 
+        /**
+         * pointer to HR Location object (reference to HrisLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
+        /**
+         * device manufacturer
+         */
         public Builder manufacturer(@Nullable String manufacturer) {
             this.manufacturer = manufacturer;
             return this;
         }
 
+        /**
+         * device model
+         */
         public Builder model(@Nullable String model) {
             this.model = model;
             return this;
@@ -573,6 +641,9 @@ public class HrisDevice {
             return this;
         }
 
+        /**
+         * operating system name
+         */
         public Builder os(@Nullable String os) {
             this.os = os;
             return this;
@@ -588,6 +659,9 @@ public class HrisDevice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -601,6 +675,9 @@ public class HrisDevice {
             return this;
         }
 
+        /**
+         * device version
+         */
         public Builder version(@Nullable String version) {
             this.version = version;
             return this;

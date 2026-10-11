@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * HrisBenefitFrequency
+ * 
+ * <p>Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For
+ * compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+ */
 public class HrisBenefitFrequency {
 
     public static final HrisBenefitFrequency ONE_TIME = new HrisBenefitFrequency("ONE_TIME");
@@ -27,6 +33,8 @@ public class HrisBenefitFrequency {
     public static final HrisBenefitFrequency HOUR = new HrisBenefitFrequency("HOUR");
     public static final HrisBenefitFrequency MONTH = new HrisBenefitFrequency("MONTH");
     public static final HrisBenefitFrequency WEEK = new HrisBenefitFrequency("WEEK");
+    public static final HrisBenefitFrequency BIWEEKLY = new HrisBenefitFrequency("BIWEEKLY");
+    public static final HrisBenefitFrequency SEMIMONTHLY = new HrisBenefitFrequency("SEMIMONTHLY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -107,6 +115,8 @@ public class HrisBenefitFrequency {
         map.put("HOUR", HOUR);
         map.put("MONTH", MONTH);
         map.put("WEEK", WEEK);
+        map.put("BIWEEKLY", BIWEEKLY);
+        map.put("SEMIMONTHLY", SEMIMONTHLY);
         return map;
     }
 
@@ -119,6 +129,8 @@ public class HrisBenefitFrequency {
         map.put("HOUR", HrisBenefitFrequencyEnum.HOUR);
         map.put("MONTH", HrisBenefitFrequencyEnum.MONTH);
         map.put("WEEK", HrisBenefitFrequencyEnum.WEEK);
+        map.put("BIWEEKLY", HrisBenefitFrequencyEnum.BIWEEKLY);
+        map.put("SEMIMONTHLY", HrisBenefitFrequencyEnum.SEMIMONTHLY);
         return map;
     }
     
@@ -131,7 +143,9 @@ public class HrisBenefitFrequency {
         YEAR("YEAR"),
         HOUR("HOUR"),
         MONTH("MONTH"),
-        WEEK("WEEK"),;
+        WEEK("WEEK"),
+        BIWEEKLY("BIWEEKLY"),
+        SEMIMONTHLY("SEMIMONTHLY"),;
 
         private final String value;
 

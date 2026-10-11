@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class TaskChangeItem {
-
+    /**
+     * unified field in ITaskTask
+     */
     @JsonProperty("field")
     private String field;
 
@@ -46,6 +48,9 @@ public class TaskChangeItem {
         this(field, null, null);
     }
 
+    /**
+     * unified field in ITaskTask
+     */
     public String field() {
         return this.field;
     }
@@ -63,6 +68,9 @@ public class TaskChangeItem {
     }
 
 
+    /**
+     * unified field in ITaskTask
+     */
     public TaskChangeItem withField(@Nonnull String field) {
         this.field = Utils.checkNotNull(field, "field");
         return this;
@@ -123,6 +131,9 @@ public class TaskChangeItem {
           // force use of static builder() method
         }
 
+        /**
+         * unified field in ITaskTask
+         */
         public Builder field(@Nonnull String field) {
             this.field = Utils.checkNotNull(field, "field");
             return this;

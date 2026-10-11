@@ -12,9 +12,15 @@ import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsScorecardResponse;
@@ -26,7 +32,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardRequestBu
 import to.unified.unified_java_sdk.models.operations.UpdateAtsScorecardResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
 import to.unified.unified_java_sdk.operations.GetAtsScorecard;
+import to.unified.unified_java_sdk.operations.GetUcScorecard;
 import to.unified.unified_java_sdk.operations.ListAtsScorecards;
+import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.PatchAtsScorecard;
 import to.unified.unified_java_sdk.operations.RemoveAtsScorecard;
 import to.unified.unified_java_sdk.operations.UpdateAtsScorecard;
@@ -97,6 +105,28 @@ public class Scorecard {
     }
 
     /**
+     * Retrieve a scorecard
+     * 
+     * @return The call builder
+     */
+    public GetUcScorecardRequestBuilder getUcScorecard() {
+        return new GetUcScorecardRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a scorecard
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcScorecardResponse getUcScorecard(@Nonnull GetUcScorecardRequest request) {
+        RequestOperation<GetUcScorecardRequest, GetUcScorecardResponse> operation
+              = new GetUcScorecard.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all scorecards
      * 
      * @return The call builder
@@ -115,6 +145,28 @@ public class Scorecard {
     public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @return The call builder
+     */
+    public ListUcScorecardsRequestBuilder listUcScorecards() {
+        return new ListUcScorecardsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all scorecards
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcScorecardsResponse listUcScorecards(@Nonnull ListUcScorecardsRequest request) {
+        RequestOperation<ListUcScorecardsRequest, ListUcScorecardsResponse> operation
+              = new ListUcScorecards.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

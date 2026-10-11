@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisPayslip {
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -42,12 +46,42 @@ public class HrisPayslip {
     @JsonProperty("deduction")
     private PropertyHrisPayslipDeduction deduction;
 
+    /**
+     * total employee deductions (pre and post-tax)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deduction_amount")
+    private Double deductionAmount;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     private List<HrisPayslipDetail> details;
 
+    /**
+     * total taxes withheld from the employee
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employee_tax_amount")
+    private Double employeeTaxAmount;
 
+    /**
+     * total employer benefit contributions
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employer_contribution_amount")
+    private Double employerContributionAmount;
+
+    /**
+     * total employer-paid taxes
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employer_tax_amount")
+    private Double employerTaxAmount;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -56,6 +90,27 @@ public class HrisPayslip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_amount")
     private Double grossAmount;
+
+    /**
+     * year-to-date gross pay as of this payslip
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("gross_ytd_amount")
+    private Double grossYtdAmount;
+
+    /**
+     * the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("group_id")
+    private String groupId;
+
+    /**
+     * total hours paid on this payslip
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hours")
+    private Double hours;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -67,7 +122,16 @@ public class HrisPayslip {
     @JsonProperty("net_amount")
     private Double netAmount;
 
+    /**
+     * year-to-date net pay as of this payslip
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("net_ytd_amount")
+    private Double netYtdAmount;
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
     private OffsetDateTime paidAt;
@@ -82,22 +146,40 @@ public class HrisPayslip {
     @JsonProperty("payment_type")
     private PaymentType paymentType;
 
+    /**
+     * the hris_payroll (pay run) this payslip belongs to
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payroll_id")
+    private String payrollId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private HrisPayslipType type;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * the employee (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -108,32 +190,52 @@ public class HrisPayslip {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("deduction") @Nullable PropertyHrisPayslipDeduction deduction,
+            @JsonProperty("deduction_amount") @Nullable Double deductionAmount,
             @JsonProperty("details") @Nullable List<HrisPayslipDetail> details,
+            @JsonProperty("employee_tax_amount") @Nullable Double employeeTaxAmount,
+            @JsonProperty("employer_contribution_amount") @Nullable Double employerContributionAmount,
+            @JsonProperty("employer_tax_amount") @Nullable Double employerTaxAmount,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("gross_amount") @Nullable Double grossAmount,
+            @JsonProperty("gross_ytd_amount") @Nullable Double grossYtdAmount,
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("hours") @Nullable Double hours,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("net_amount") @Nullable Double netAmount,
+            @JsonProperty("net_ytd_amount") @Nullable Double netYtdAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payment_reference") @Nullable String paymentReference,
             @JsonProperty("payment_type") @Nullable PaymentType paymentType,
+            @JsonProperty("payroll_id") @Nullable String payrollId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("type") @Nullable HrisPayslipType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
         this.deduction = deduction;
+        this.deductionAmount = deductionAmount;
         this.details = details;
+        this.employeeTaxAmount = employeeTaxAmount;
+        this.employerContributionAmount = employerContributionAmount;
+        this.employerTaxAmount = employerTaxAmount;
         this.endAt = endAt;
         this.grossAmount = grossAmount;
+        this.grossYtdAmount = grossYtdAmount;
+        this.groupId = groupId;
+        this.hours = hours;
         this.id = id;
         this.netAmount = netAmount;
+        this.netYtdAmount = netYtdAmount;
         this.paidAt = paidAt;
         this.paymentReference = paymentReference;
         this.paymentType = paymentType;
+        this.payrollId = payrollId;
         this.raw = raw;
         this.startAt = startAt;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -144,13 +246,22 @@ public class HrisPayslip {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -166,16 +277,68 @@ public class HrisPayslip {
         return Optional.ofNullable(this.deduction);
     }
 
+    /**
+     * total employee deductions (pre and post-tax)
+     */
+    public Optional<Double> deductionAmount() {
+        return Optional.ofNullable(this.deductionAmount);
+    }
+
     public Optional<List<HrisPayslipDetail>> details() {
         return Optional.ofNullable(this.details);
     }
 
+    /**
+     * total taxes withheld from the employee
+     */
+    public Optional<Double> employeeTaxAmount() {
+        return Optional.ofNullable(this.employeeTaxAmount);
+    }
+
+    /**
+     * total employer benefit contributions
+     */
+    public Optional<Double> employerContributionAmount() {
+        return Optional.ofNullable(this.employerContributionAmount);
+    }
+
+    /**
+     * total employer-paid taxes
+     */
+    public Optional<Double> employerTaxAmount() {
+        return Optional.ofNullable(this.employerTaxAmount);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
     public Optional<Double> grossAmount() {
         return Optional.ofNullable(this.grossAmount);
+    }
+
+    /**
+     * year-to-date gross pay as of this payslip
+     */
+    public Optional<Double> grossYtdAmount() {
+        return Optional.ofNullable(this.grossYtdAmount);
+    }
+
+    /**
+     * the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+     */
+    public Optional<String> groupId() {
+        return Optional.ofNullable(this.groupId);
+    }
+
+    /**
+     * total hours paid on this payslip
+     */
+    public Optional<Double> hours() {
+        return Optional.ofNullable(this.hours);
     }
 
     public Optional<String> id() {
@@ -186,6 +349,16 @@ public class HrisPayslip {
         return Optional.ofNullable(this.netAmount);
     }
 
+    /**
+     * year-to-date net pay as of this payslip
+     */
+    public Optional<Double> netYtdAmount() {
+        return Optional.ofNullable(this.netYtdAmount);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> paidAt() {
         return Optional.ofNullable(this.paidAt);
     }
@@ -198,18 +371,38 @@ public class HrisPayslip {
         return Optional.ofNullable(this.paymentType);
     }
 
+    /**
+     * the hris_payroll (pay run) this payslip belongs to
+     */
+    public Optional<String> payrollId() {
+        return Optional.ofNullable(this.payrollId);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    public Optional<HrisPayslipType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * the employee (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -219,12 +412,18 @@ public class HrisPayslip {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisPayslip withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisPayslip withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -246,12 +445,51 @@ public class HrisPayslip {
     }
 
 
+    /**
+     * total employee deductions (pre and post-tax)
+     */
+    public HrisPayslip withDeductionAmount(@Nullable Double deductionAmount) {
+        this.deductionAmount = deductionAmount;
+        return this;
+    }
+
+
     public HrisPayslip withDetails(@Nullable List<HrisPayslipDetail> details) {
         this.details = details;
         return this;
     }
 
 
+    /**
+     * total taxes withheld from the employee
+     */
+    public HrisPayslip withEmployeeTaxAmount(@Nullable Double employeeTaxAmount) {
+        this.employeeTaxAmount = employeeTaxAmount;
+        return this;
+    }
+
+
+    /**
+     * total employer benefit contributions
+     */
+    public HrisPayslip withEmployerContributionAmount(@Nullable Double employerContributionAmount) {
+        this.employerContributionAmount = employerContributionAmount;
+        return this;
+    }
+
+
+    /**
+     * total employer-paid taxes
+     */
+    public HrisPayslip withEmployerTaxAmount(@Nullable Double employerTaxAmount) {
+        this.employerTaxAmount = employerTaxAmount;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisPayslip withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -260,6 +498,33 @@ public class HrisPayslip {
 
     public HrisPayslip withGrossAmount(@Nullable Double grossAmount) {
         this.grossAmount = grossAmount;
+        return this;
+    }
+
+
+    /**
+     * year-to-date gross pay as of this payslip
+     */
+    public HrisPayslip withGrossYtdAmount(@Nullable Double grossYtdAmount) {
+        this.grossYtdAmount = grossYtdAmount;
+        return this;
+    }
+
+
+    /**
+     * the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+     */
+    public HrisPayslip withGroupId(@Nullable String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+
+
+    /**
+     * total hours paid on this payslip
+     */
+    public HrisPayslip withHours(@Nullable Double hours) {
+        this.hours = hours;
         return this;
     }
 
@@ -276,6 +541,18 @@ public class HrisPayslip {
     }
 
 
+    /**
+     * year-to-date net pay as of this payslip
+     */
+    public HrisPayslip withNetYtdAmount(@Nullable Double netYtdAmount) {
+        this.netYtdAmount = netYtdAmount;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisPayslip withPaidAt(@Nullable OffsetDateTime paidAt) {
         this.paidAt = paidAt;
         return this;
@@ -294,24 +571,48 @@ public class HrisPayslip {
     }
 
 
+    /**
+     * the hris_payroll (pay run) this payslip belongs to
+     */
+    public HrisPayslip withPayrollId(@Nullable String payrollId) {
+        this.payrollId = payrollId;
+        return this;
+    }
+
+
     public HrisPayslip withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisPayslip withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    public HrisPayslip withType(@Nullable HrisPayslipType type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisPayslip withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * the employee (reference to HrisEmployee)
+     */
     public HrisPayslip withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -332,16 +633,26 @@ public class HrisPayslip {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.deduction, other.deduction) &&
+            Utils.enhancedDeepEquals(this.deductionAmount, other.deductionAmount) &&
             Utils.enhancedDeepEquals(this.details, other.details) &&
+            Utils.enhancedDeepEquals(this.employeeTaxAmount, other.employeeTaxAmount) &&
+            Utils.enhancedDeepEquals(this.employerContributionAmount, other.employerContributionAmount) &&
+            Utils.enhancedDeepEquals(this.employerTaxAmount, other.employerTaxAmount) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.grossAmount, other.grossAmount) &&
+            Utils.enhancedDeepEquals(this.grossYtdAmount, other.grossYtdAmount) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
+            Utils.enhancedDeepEquals(this.hours, other.hours) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
+            Utils.enhancedDeepEquals(this.netYtdAmount, other.netYtdAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
             Utils.enhancedDeepEquals(this.paymentReference, other.paymentReference) &&
             Utils.enhancedDeepEquals(this.paymentType, other.paymentType) &&
+            Utils.enhancedDeepEquals(this.payrollId, other.payrollId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -350,11 +661,14 @@ public class HrisPayslip {
     public int hashCode() {
         return Utils.enhancedHash(
             companyId, createdAt, currency,
-            deduction, details, endAt,
-            grossAmount, id, netAmount,
-            paidAt, paymentReference, paymentType,
-            raw, startAt, updatedAt,
-            userId);
+            deduction, deductionAmount, details,
+            employeeTaxAmount, employerContributionAmount, employerTaxAmount,
+            endAt, grossAmount, grossYtdAmount,
+            groupId, hours, id,
+            netAmount, netYtdAmount, paidAt,
+            paymentReference, paymentType, payrollId,
+            raw, startAt, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -364,16 +678,26 @@ public class HrisPayslip {
                 "createdAt", createdAt,
                 "currency", currency,
                 "deduction", deduction,
+                "deductionAmount", deductionAmount,
                 "details", details,
+                "employeeTaxAmount", employeeTaxAmount,
+                "employerContributionAmount", employerContributionAmount,
+                "employerTaxAmount", employerTaxAmount,
                 "endAt", endAt,
                 "grossAmount", grossAmount,
+                "grossYtdAmount", grossYtdAmount,
+                "groupId", groupId,
+                "hours", hours,
                 "id", id,
                 "netAmount", netAmount,
+                "netYtdAmount", netYtdAmount,
                 "paidAt", paidAt,
                 "paymentReference", paymentReference,
                 "paymentType", paymentType,
+                "payrollId", payrollId,
                 "raw", raw,
                 "startAt", startAt,
+                "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -389,15 +713,31 @@ public class HrisPayslip {
 
         private PropertyHrisPayslipDeduction deduction;
 
+        private Double deductionAmount;
+
         private List<HrisPayslipDetail> details;
+
+        private Double employeeTaxAmount;
+
+        private Double employerContributionAmount;
+
+        private Double employerTaxAmount;
 
         private OffsetDateTime endAt;
 
         private Double grossAmount;
 
+        private Double grossYtdAmount;
+
+        private String groupId;
+
+        private Double hours;
+
         private String id;
 
         private Double netAmount;
+
+        private Double netYtdAmount;
 
         private OffsetDateTime paidAt;
 
@@ -405,9 +745,13 @@ public class HrisPayslip {
 
         private PaymentType paymentType;
 
+        private String payrollId;
+
         private Map<String, Object> raw;
 
         private OffsetDateTime startAt;
+
+        private HrisPayslipType type;
 
         private OffsetDateTime updatedAt;
 
@@ -417,11 +761,17 @@ public class HrisPayslip {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -440,11 +790,46 @@ public class HrisPayslip {
             return this;
         }
 
+        /**
+         * total employee deductions (pre and post-tax)
+         */
+        public Builder deductionAmount(@Nullable Double deductionAmount) {
+            this.deductionAmount = deductionAmount;
+            return this;
+        }
+
         public Builder details(@Nullable List<HrisPayslipDetail> details) {
             this.details = details;
             return this;
         }
 
+        /**
+         * total taxes withheld from the employee
+         */
+        public Builder employeeTaxAmount(@Nullable Double employeeTaxAmount) {
+            this.employeeTaxAmount = employeeTaxAmount;
+            return this;
+        }
+
+        /**
+         * total employer benefit contributions
+         */
+        public Builder employerContributionAmount(@Nullable Double employerContributionAmount) {
+            this.employerContributionAmount = employerContributionAmount;
+            return this;
+        }
+
+        /**
+         * total employer-paid taxes
+         */
+        public Builder employerTaxAmount(@Nullable Double employerTaxAmount) {
+            this.employerTaxAmount = employerTaxAmount;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -452,6 +837,30 @@ public class HrisPayslip {
 
         public Builder grossAmount(@Nullable Double grossAmount) {
             this.grossAmount = grossAmount;
+            return this;
+        }
+
+        /**
+         * year-to-date gross pay as of this payslip
+         */
+        public Builder grossYtdAmount(@Nullable Double grossYtdAmount) {
+            this.grossYtdAmount = grossYtdAmount;
+            return this;
+        }
+
+        /**
+         * the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+         */
+        public Builder groupId(@Nullable String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * total hours paid on this payslip
+         */
+        public Builder hours(@Nullable Double hours) {
+            this.hours = hours;
             return this;
         }
 
@@ -465,6 +874,17 @@ public class HrisPayslip {
             return this;
         }
 
+        /**
+         * year-to-date net pay as of this payslip
+         */
+        public Builder netYtdAmount(@Nullable Double netYtdAmount) {
+            this.netYtdAmount = netYtdAmount;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder paidAt(@Nullable OffsetDateTime paidAt) {
             this.paidAt = paidAt;
             return this;
@@ -480,21 +900,43 @@ public class HrisPayslip {
             return this;
         }
 
+        /**
+         * the hris_payroll (pay run) this payslip belongs to
+         */
+        public Builder payrollId(@Nullable String payrollId) {
+            this.payrollId = payrollId;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        public Builder type(@Nullable HrisPayslipType type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * the employee (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -503,11 +945,14 @@ public class HrisPayslip {
         public HrisPayslip build() {
             return new HrisPayslip(
                 companyId, createdAt, currency,
-                deduction, details, endAt,
-                grossAmount, id, netAmount,
-                paidAt, paymentReference, paymentType,
-                raw, startAt, updatedAt,
-                userId);
+                deduction, deductionAmount, details,
+                employeeTaxAmount, employerContributionAmount, employerTaxAmount,
+                endAt, grossAmount, grossYtdAmount,
+                groupId, hours, id,
+                netAmount, netYtdAmount, paidAt,
+                paymentReference, paymentType, payrollId,
+                raw, startAt, type,
+                updatedAt, userId);
         }
 
     }

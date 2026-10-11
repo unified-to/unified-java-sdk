@@ -33,7 +33,10 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("bid_strategy")
     private PropertyAdsReportMetricsGroupBidStrategy bidStrategy;
 
-
+    /**
+     * Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as
+     * pass-through)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_event")
     private PropertyAdsReportMetricsGroupBillingEvent billingEvent;
@@ -68,7 +71,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("campaign_id")
     private String campaignId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -78,7 +83,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("creative_ids")
     private List<String> creativeIds;
 
-
+    /**
+     * Creative rotation strategy (LinkedIn creativeSelection)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creative_selection")
     private PropertyAdsReportMetricsGroupCreativeSelection creativeSelection;
@@ -93,7 +100,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("effective_status")
     private PropertyAdsReportMetricsGroupEffectiveStatus effectiveStatus;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -118,7 +127,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("insertionorder_id")
     private String insertionorderId;
 
-
+    /**
+     * Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
     private String languageLocale;
@@ -128,7 +139,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimization_goal")
     private PropertyAdsReportMetricsGroupOptimizationGoal optimizationGoal;
@@ -158,7 +171,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -178,7 +193,9 @@ public class PropertyAdsReportMetricsGroup {
     @JsonProperty("type")
     private PropertyAdsReportMetricsGroupType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -276,6 +293,10 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.bidStrategy);
     }
 
+    /**
+     * Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as
+     * pass-through)
+     */
     public Optional<PropertyAdsReportMetricsGroupBillingEvent> billingEvent() {
         return Optional.ofNullable(this.billingEvent);
     }
@@ -304,6 +325,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.campaignId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -312,6 +336,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.creativeIds);
     }
 
+    /**
+     * Creative rotation strategy (LinkedIn creativeSelection)
+     */
     public Optional<PropertyAdsReportMetricsGroupCreativeSelection> creativeSelection() {
         return Optional.ofNullable(this.creativeSelection);
     }
@@ -324,6 +351,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.effectiveStatus);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -344,6 +374,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.insertionorderId);
     }
 
+    /**
+     * Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+     */
     public Optional<String> languageLocale() {
         return Optional.ofNullable(this.languageLocale);
     }
@@ -352,6 +385,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+     */
     public Optional<PropertyAdsReportMetricsGroupOptimizationGoal> optimizationGoal() {
         return Optional.ofNullable(this.optimizationGoal);
     }
@@ -376,6 +412,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -392,6 +431,9 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -416,6 +458,10 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as
+     * pass-through)
+     */
     public PropertyAdsReportMetricsGroup withBillingEvent(@Nullable PropertyAdsReportMetricsGroupBillingEvent billingEvent) {
         this.billingEvent = billingEvent;
         return this;
@@ -458,6 +504,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsGroup withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -470,6 +519,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * Creative rotation strategy (LinkedIn creativeSelection)
+     */
     public PropertyAdsReportMetricsGroup withCreativeSelection(@Nullable PropertyAdsReportMetricsGroupCreativeSelection creativeSelection) {
         this.creativeSelection = creativeSelection;
         return this;
@@ -488,6 +540,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsGroup withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -518,6 +573,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+     */
     public PropertyAdsReportMetricsGroup withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
@@ -530,6 +588,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+     */
     public PropertyAdsReportMetricsGroup withOptimizationGoal(@Nullable PropertyAdsReportMetricsGroupOptimizationGoal optimizationGoal) {
         this.optimizationGoal = optimizationGoal;
         return this;
@@ -566,6 +627,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsGroup withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -590,6 +654,9 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyAdsReportMetricsGroup withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -777,6 +844,10 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as
+         * pass-through)
+         */
         public Builder billingEvent(@Nullable PropertyAdsReportMetricsGroupBillingEvent billingEvent) {
             this.billingEvent = billingEvent;
             return this;
@@ -812,6 +883,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -822,6 +896,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * Creative rotation strategy (LinkedIn creativeSelection)
+         */
         public Builder creativeSelection(@Nullable PropertyAdsReportMetricsGroupCreativeSelection creativeSelection) {
             this.creativeSelection = creativeSelection;
             return this;
@@ -837,6 +914,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -862,6 +942,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+         */
         public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
@@ -872,6 +955,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+         */
         public Builder optimizationGoal(@Nullable PropertyAdsReportMetricsGroupOptimizationGoal optimizationGoal) {
             this.optimizationGoal = optimizationGoal;
             return this;
@@ -902,6 +988,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -922,6 +1011,9 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

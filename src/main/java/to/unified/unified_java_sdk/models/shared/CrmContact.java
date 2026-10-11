@@ -28,7 +28,9 @@ public class CrmContact {
     @JsonProperty("address")
     private PropertyCrmContactAddress address;
 
-
+    /**
+     * The companyorganization name  of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     private String company;
@@ -40,7 +42,9 @@ public class CrmContact {
     @JsonProperty("company_ids")
     private List<String> companyIds;
 
-
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -69,7 +73,9 @@ public class CrmContact {
     @JsonProperty("first_name")
     private String firstName;
 
-
+    /**
+     * Unique identifier for this contact object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -96,12 +102,16 @@ public class CrmContact {
     @JsonProperty("metadata")
     private List<CrmMetadata> metadata;
 
-
+    /**
+     * The name of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -113,17 +123,23 @@ public class CrmContact {
     @JsonProperty("telephones")
     private List<CrmTelephone> telephones;
 
-
+    /**
+     * The job title of the contact
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -184,6 +200,9 @@ public class CrmContact {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * The companyorganization name  of the contact
+     */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
     }
@@ -195,6 +214,9 @@ public class CrmContact {
         return Optional.ofNullable(this.companyIds);
     }
 
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -221,6 +243,9 @@ public class CrmContact {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * Unique identifier for this contact object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -244,10 +269,16 @@ public class CrmContact {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The name of the contact
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this contact
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -259,14 +290,23 @@ public class CrmContact {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * The job title of the contact
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -282,6 +322,9 @@ public class CrmContact {
     }
 
 
+    /**
+     * The companyorganization name  of the contact
+     */
     public CrmContact withCompany(@Nullable String company) {
         this.company = company;
         return this;
@@ -297,6 +340,9 @@ public class CrmContact {
     }
 
 
+    /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmContact withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -333,6 +379,9 @@ public class CrmContact {
     }
 
 
+    /**
+     * Unique identifier for this contact object
+     */
     public CrmContact withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -366,12 +415,18 @@ public class CrmContact {
     }
 
 
+    /**
+     * The name of the contact
+     */
     public CrmContact withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this contact
+     */
     public CrmContact withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -387,18 +442,27 @@ public class CrmContact {
     }
 
 
+    /**
+     * The job title of the contact
+     */
     public CrmContact withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmContact withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmContact withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -522,6 +586,9 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The companyorganization name  of the contact
+         */
         public Builder company(@Nullable String company) {
             this.company = company;
             return this;
@@ -535,6 +602,9 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -566,6 +636,9 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * Unique identifier for this contact object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -594,11 +667,17 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The name of the contact
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this contact
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -612,16 +691,25 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The job title of the contact
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

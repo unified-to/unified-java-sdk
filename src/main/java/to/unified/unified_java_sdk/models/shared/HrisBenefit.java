@@ -24,7 +24,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Company-wide benefit plans available to employees.
  */
 public class HrisBenefit {
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -34,7 +36,9 @@ public class HrisBenefit {
     @JsonProperty("coverage_level")
     private CoverageLevel coverageLevel;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -44,17 +48,23 @@ public class HrisBenefit {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * e.g. "Company 401(k) retirement plan"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * percentage or money
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_amount")
     private Double employerContributionAmount;
 
-
+    /**
+     * always money
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_max_amount")
     private Double employerContributionMaxAmount;
@@ -64,7 +74,10 @@ public class HrisBenefit {
     @JsonProperty("employer_contribution_type")
     private EmployerContributionType employerContributionType;
 
-
+    /**
+     * Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For
+     * compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     private HrisBenefitFrequency frequency;
@@ -79,7 +92,9 @@ public class HrisBenefit {
     @JsonProperty("is_active")
     private Boolean isActive;
 
-
+    /**
+     * e.g. "401(k) Plan"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -89,7 +104,9 @@ public class HrisBenefit {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Tax describes the tax treatment of the benefit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     private Tax tax;
@@ -99,7 +116,9 @@ public class HrisBenefit {
     @JsonProperty("type")
     private HrisBenefitType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,6 +168,9 @@ public class HrisBenefit {
             null);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -157,6 +179,9 @@ public class HrisBenefit {
         return Optional.ofNullable(this.coverageLevel);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -165,14 +190,23 @@ public class HrisBenefit {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * e.g. "Company 401(k) retirement plan"
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * percentage or money
+     */
     public Optional<Double> employerContributionAmount() {
         return Optional.ofNullable(this.employerContributionAmount);
     }
 
+    /**
+     * always money
+     */
     public Optional<Double> employerContributionMaxAmount() {
         return Optional.ofNullable(this.employerContributionMaxAmount);
     }
@@ -181,6 +215,10 @@ public class HrisBenefit {
         return Optional.ofNullable(this.employerContributionType);
     }
 
+    /**
+     * Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For
+     * compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+     */
     public Optional<HrisBenefitFrequency> frequency() {
         return Optional.ofNullable(this.frequency);
     }
@@ -193,6 +231,9 @@ public class HrisBenefit {
         return Optional.ofNullable(this.isActive);
     }
 
+    /**
+     * e.g. "401(k) Plan"
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -201,6 +242,9 @@ public class HrisBenefit {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Tax describes the tax treatment of the benefit
+     */
     public Optional<Tax> tax() {
         return Optional.ofNullable(this.tax);
     }
@@ -209,6 +253,9 @@ public class HrisBenefit {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -218,6 +265,9 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisBenefit withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -230,6 +280,9 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisBenefit withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -242,18 +295,27 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * e.g. "Company 401(k) retirement plan"
+     */
     public HrisBenefit withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * percentage or money
+     */
     public HrisBenefit withEmployerContributionAmount(@Nullable Double employerContributionAmount) {
         this.employerContributionAmount = employerContributionAmount;
         return this;
     }
 
 
+    /**
+     * always money
+     */
     public HrisBenefit withEmployerContributionMaxAmount(@Nullable Double employerContributionMaxAmount) {
         this.employerContributionMaxAmount = employerContributionMaxAmount;
         return this;
@@ -266,6 +328,10 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For
+     * compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+     */
     public HrisBenefit withFrequency(@Nullable HrisBenefitFrequency frequency) {
         this.frequency = frequency;
         return this;
@@ -284,6 +350,9 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * e.g. "401(k) Plan"
+     */
     public HrisBenefit withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -296,6 +365,9 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * Tax describes the tax treatment of the benefit
+     */
     public HrisBenefit withTax(@Nullable Tax tax) {
         this.tax = tax;
         return this;
@@ -308,6 +380,9 @@ public class HrisBenefit {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisBenefit withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -413,6 +488,9 @@ public class HrisBenefit {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -423,6 +501,9 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -433,16 +514,25 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * e.g. "Company 401(k) retirement plan"
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * percentage or money
+         */
         public Builder employerContributionAmount(@Nullable Double employerContributionAmount) {
             this.employerContributionAmount = employerContributionAmount;
             return this;
         }
 
+        /**
+         * always money
+         */
         public Builder employerContributionMaxAmount(@Nullable Double employerContributionMaxAmount) {
             this.employerContributionMaxAmount = employerContributionMaxAmount;
             return this;
@@ -453,6 +543,10 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For
+         * compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+         */
         public Builder frequency(@Nullable HrisBenefitFrequency frequency) {
             this.frequency = frequency;
             return this;
@@ -468,6 +562,9 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * e.g. "401(k) Plan"
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -478,6 +575,9 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * Tax describes the tax treatment of the benefit
+         */
         public Builder tax(@Nullable Tax tax) {
             this.tax = tax;
             return this;
@@ -488,6 +588,9 @@ public class HrisBenefit {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

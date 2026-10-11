@@ -31,7 +31,9 @@ public class HrisEmployee {
     @JsonProperty("bio")
     private String bio;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -41,7 +43,9 @@ public class HrisEmployee {
     @JsonProperty("compensation")
     private List<HrisCompensation> compensation;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -51,7 +55,9 @@ public class HrisEmployee {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * YYYYMM/DD
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
     private OffsetDateTime dateOfBirth;
@@ -61,7 +67,9 @@ public class HrisEmployee {
     @JsonProperty("emails")
     private List<HrisEmail> emails;
 
-
+    /**
+     * the company's ID for this employee
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_number")
     private String employeeNumber;
@@ -86,6 +94,13 @@ public class HrisEmployee {
     @JsonProperty("first_name")
     private String firstName;
 
+    /**
+     * US Fair Labor Standards Act classification
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("flsa_status")
+    private FlsaStatus flsaStatus;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
@@ -99,12 +114,16 @@ public class HrisEmployee {
     @JsonProperty("groups")
     private List<HrisGroup> groups;
 
-
+    /**
+     * does the user/employee have multi-factor authentication enabled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_mfa")
     private Boolean hasMfa;
 
-
+    /**
+     * The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hired_at")
     private OffsetDateTime hiredAt;
@@ -114,10 +133,19 @@ public class HrisEmployee {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * This link expires after 1 hour.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private String imageUrl;
+
+    /**
+     * the hris_job (position) this employee holds; their primary job when they hold more than one
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("job_id")
+    private String jobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -154,6 +182,13 @@ public class HrisEmployee {
     @JsonProperty("name")
     private String name;
 
+    /**
+     * how often the employee is paid (eg. BIWEEKLY)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pay_frequency")
+    private PayFrequency payFrequency;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pronouns")
@@ -171,7 +206,9 @@ public class HrisEmployee {
     @JsonProperty("relationships")
     private List<HrisEmployeerelationship> relationships;
 
-
+    /**
+     * Mr. Mrs. Ms.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salutation")
     private String salutation;
@@ -201,7 +238,9 @@ public class HrisEmployee {
     @JsonProperty("telephones")
     private List<HrisTelephone> telephones;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminated_at")
     private OffsetDateTime terminatedAt;
@@ -211,12 +250,16 @@ public class HrisEmployee {
     @JsonProperty("termination_reason")
     private String terminationReason;
 
-
+    /**
+     * Total time off allowance for the current leave period, in days (when reported by the provider)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoff_days_total")
     private Double timeoffDaysTotal;
 
-
+    /**
+     * Time off days used or booked in the current leave period (when reported by the provider)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoff_days_used")
     private Double timeoffDaysUsed;
@@ -231,7 +274,9 @@ public class HrisEmployee {
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -251,12 +296,14 @@ public class HrisEmployee {
             @JsonProperty("employment_status") @Nullable EmploymentStatus employmentStatus,
             @JsonProperty("employment_type") @Nullable HrisEmployeeEmploymentType employmentType,
             @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("flsa_status") @Nullable FlsaStatus flsaStatus,
             @JsonProperty("gender") @Nullable HrisEmployeeGender gender,
             @JsonProperty("groups") @Nullable List<HrisGroup> groups,
             @JsonProperty("has_mfa") @Nullable Boolean hasMfa,
             @JsonProperty("hired_at") @Nullable OffsetDateTime hiredAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("job_id") @Nullable String jobId,
             @JsonProperty("language_locale") @Nullable String languageLocale,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("locations") @Nullable List<HrisLocation> locations,
@@ -264,6 +311,7 @@ public class HrisEmployee {
             @JsonProperty("marital_status") @Nullable MaritalStatus maritalStatus,
             @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("pay_frequency") @Nullable PayFrequency payFrequency,
             @JsonProperty("pronouns") @Nullable String pronouns,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("relationships") @Nullable List<HrisEmployeerelationship> relationships,
@@ -293,12 +341,14 @@ public class HrisEmployee {
         this.employmentStatus = employmentStatus;
         this.employmentType = employmentType;
         this.firstName = firstName;
+        this.flsaStatus = flsaStatus;
         this.gender = gender;
         this.groups = groups;
         this.hasMfa = hasMfa;
         this.hiredAt = hiredAt;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.jobId = jobId;
         this.languageLocale = languageLocale;
         this.lastName = lastName;
         this.locations = locations;
@@ -306,6 +356,7 @@ public class HrisEmployee {
         this.maritalStatus = maritalStatus;
         this.metadata = metadata;
         this.name = name;
+        this.payFrequency = payFrequency;
         this.pronouns = pronouns;
         this.raw = raw;
         this.relationships = relationships;
@@ -338,6 +389,7 @@ public class HrisEmployee {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null, null, null);
     }
 
@@ -349,6 +401,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.bio);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -357,6 +412,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.compensation);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -365,6 +423,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * YYYYMM/DD
+     */
     public Optional<OffsetDateTime> dateOfBirth() {
         return Optional.ofNullable(this.dateOfBirth);
     }
@@ -373,6 +434,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.emails);
     }
 
+    /**
+     * the company's ID for this employee
+     */
     public Optional<String> employeeNumber() {
         return Optional.ofNullable(this.employeeNumber);
     }
@@ -393,6 +457,13 @@ public class HrisEmployee {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * US Fair Labor Standards Act classification
+     */
+    public Optional<FlsaStatus> flsaStatus() {
+        return Optional.ofNullable(this.flsaStatus);
+    }
+
     public Optional<HrisEmployeeGender> gender() {
         return Optional.ofNullable(this.gender);
     }
@@ -405,10 +476,16 @@ public class HrisEmployee {
         return Optional.ofNullable(this.groups);
     }
 
+    /**
+     * does the user/employee have multi-factor authentication enabled
+     */
     public Optional<Boolean> hasMfa() {
         return Optional.ofNullable(this.hasMfa);
     }
 
+    /**
+     * The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> hiredAt() {
         return Optional.ofNullable(this.hiredAt);
     }
@@ -417,8 +494,18 @@ public class HrisEmployee {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * This link expires after 1 hour.
+     */
     public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
+    }
+
+    /**
+     * the hris_job (position) this employee holds; their primary job when they hold more than one
+     */
+    public Optional<String> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     public Optional<String> languageLocale() {
@@ -449,6 +536,13 @@ public class HrisEmployee {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * how often the employee is paid (eg. BIWEEKLY)
+     */
+    public Optional<PayFrequency> payFrequency() {
+        return Optional.ofNullable(this.payFrequency);
+    }
+
     public Optional<String> pronouns() {
         return Optional.ofNullable(this.pronouns);
     }
@@ -464,6 +558,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.relationships);
     }
 
+    /**
+     * Mr. Mrs. Ms.
+     */
     public Optional<String> salutation() {
         return Optional.ofNullable(this.salutation);
     }
@@ -488,6 +585,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> terminatedAt() {
         return Optional.ofNullable(this.terminatedAt);
     }
@@ -496,10 +596,16 @@ public class HrisEmployee {
         return Optional.ofNullable(this.terminationReason);
     }
 
+    /**
+     * Total time off allowance for the current leave period, in days (when reported by the provider)
+     */
     public Optional<Double> timeoffDaysTotal() {
         return Optional.ofNullable(this.timeoffDaysTotal);
     }
 
+    /**
+     * Time off days used or booked in the current leave period (when reported by the provider)
+     */
     public Optional<Double> timeoffDaysUsed() {
         return Optional.ofNullable(this.timeoffDaysUsed);
     }
@@ -512,6 +618,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -533,6 +642,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisEmployee withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -545,6 +657,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisEmployee withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -557,6 +672,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * YYYYMM/DD
+     */
     public HrisEmployee withDateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -569,6 +687,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * the company's ID for this employee
+     */
     public HrisEmployee withEmployeeNumber(@Nullable String employeeNumber) {
         this.employeeNumber = employeeNumber;
         return this;
@@ -599,6 +720,15 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * US Fair Labor Standards Act classification
+     */
+    public HrisEmployee withFlsaStatus(@Nullable FlsaStatus flsaStatus) {
+        this.flsaStatus = flsaStatus;
+        return this;
+    }
+
+
     public HrisEmployee withGender(@Nullable HrisEmployeeGender gender) {
         this.gender = gender;
         return this;
@@ -615,12 +745,18 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * does the user/employee have multi-factor authentication enabled
+     */
     public HrisEmployee withHasMfa(@Nullable Boolean hasMfa) {
         this.hasMfa = hasMfa;
         return this;
     }
 
 
+    /**
+     * The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisEmployee withHiredAt(@Nullable OffsetDateTime hiredAt) {
         this.hiredAt = hiredAt;
         return this;
@@ -633,8 +769,20 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * This link expires after 1 hour.
+     */
     public HrisEmployee withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
+        return this;
+    }
+
+
+    /**
+     * the hris_job (position) this employee holds; their primary job when they hold more than one
+     */
+    public HrisEmployee withJobId(@Nullable String jobId) {
+        this.jobId = jobId;
         return this;
     }
 
@@ -681,6 +829,15 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * how often the employee is paid (eg. BIWEEKLY)
+     */
+    public HrisEmployee withPayFrequency(@Nullable PayFrequency payFrequency) {
+        this.payFrequency = payFrequency;
+        return this;
+    }
+
+
     public HrisEmployee withPronouns(@Nullable String pronouns) {
         this.pronouns = pronouns;
         return this;
@@ -702,6 +859,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * Mr. Mrs. Ms.
+     */
     public HrisEmployee withSalutation(@Nullable String salutation) {
         this.salutation = salutation;
         return this;
@@ -738,6 +898,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisEmployee withTerminatedAt(@Nullable OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
         return this;
@@ -750,12 +913,18 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * Total time off allowance for the current leave period, in days (when reported by the provider)
+     */
     public HrisEmployee withTimeoffDaysTotal(@Nullable Double timeoffDaysTotal) {
         this.timeoffDaysTotal = timeoffDaysTotal;
         return this;
     }
 
 
+    /**
+     * Time off days used or booked in the current leave period (when reported by the provider)
+     */
     public HrisEmployee withTimeoffDaysUsed(@Nullable Double timeoffDaysUsed) {
         this.timeoffDaysUsed = timeoffDaysUsed;
         return this;
@@ -774,6 +943,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisEmployee withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -803,12 +975,14 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.employmentStatus, other.employmentStatus) &&
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
+            Utils.enhancedDeepEquals(this.flsaStatus, other.flsaStatus) &&
             Utils.enhancedDeepEquals(this.gender, other.gender) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
             Utils.enhancedDeepEquals(this.hasMfa, other.hasMfa) &&
             Utils.enhancedDeepEquals(this.hiredAt, other.hiredAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
@@ -816,6 +990,7 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.maritalStatus, other.maritalStatus) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.payFrequency, other.payFrequency) &&
             Utils.enhancedDeepEquals(this.pronouns, other.pronouns) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.relationships, other.relationships) &&
@@ -841,11 +1016,12 @@ public class HrisEmployee {
             compensation, createdAt, currency,
             dateOfBirth, emails, employeeNumber,
             employeeRoles, employmentStatus, employmentType,
-            firstName, gender, groups,
-            hasMfa, hiredAt, id,
-            imageUrl, languageLocale, lastName,
-            locations, managerId, maritalStatus,
-            metadata, name, pronouns,
+            firstName, flsaStatus, gender,
+            groups, hasMfa, hiredAt,
+            id, imageUrl, jobId,
+            languageLocale, lastName, locations,
+            managerId, maritalStatus, metadata,
+            name, payFrequency, pronouns,
             raw, relationships, salutation,
             ssnSin, storageQuotaAllocated, storageQuotaAvailable,
             storageQuotaUsed, telephones, terminatedAt,
@@ -869,12 +1045,14 @@ public class HrisEmployee {
                 "employmentStatus", employmentStatus,
                 "employmentType", employmentType,
                 "firstName", firstName,
+                "flsaStatus", flsaStatus,
                 "gender", gender,
                 "groups", groups,
                 "hasMfa", hasMfa,
                 "hiredAt", hiredAt,
                 "id", id,
                 "imageUrl", imageUrl,
+                "jobId", jobId,
                 "languageLocale", languageLocale,
                 "lastName", lastName,
                 "locations", locations,
@@ -882,6 +1060,7 @@ public class HrisEmployee {
                 "maritalStatus", maritalStatus,
                 "metadata", metadata,
                 "name", name,
+                "payFrequency", payFrequency,
                 "pronouns", pronouns,
                 "raw", raw,
                 "relationships", relationships,
@@ -929,6 +1108,8 @@ public class HrisEmployee {
 
         private String firstName;
 
+        private FlsaStatus flsaStatus;
+
         private HrisEmployeeGender gender;
 
         private List<HrisGroup> groups;
@@ -940,6 +1121,8 @@ public class HrisEmployee {
         private String id;
 
         private String imageUrl;
+
+        private String jobId;
 
         private String languageLocale;
 
@@ -954,6 +1137,8 @@ public class HrisEmployee {
         private List<HrisMetadata> metadata;
 
         private String name;
+
+        private PayFrequency payFrequency;
 
         private String pronouns;
 
@@ -1001,6 +1186,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -1011,6 +1199,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -1021,6 +1212,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * YYYYMM/DD
+         */
         public Builder dateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
             return this;
@@ -1031,6 +1225,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * the company's ID for this employee
+         */
         public Builder employeeNumber(@Nullable String employeeNumber) {
             this.employeeNumber = employeeNumber;
             return this;
@@ -1056,6 +1253,14 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * US Fair Labor Standards Act classification
+         */
+        public Builder flsaStatus(@Nullable FlsaStatus flsaStatus) {
+            this.flsaStatus = flsaStatus;
+            return this;
+        }
+
         public Builder gender(@Nullable HrisEmployeeGender gender) {
             this.gender = gender;
             return this;
@@ -1070,11 +1275,17 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * does the user/employee have multi-factor authentication enabled
+         */
         public Builder hasMfa(@Nullable Boolean hasMfa) {
             this.hasMfa = hasMfa;
             return this;
         }
 
+        /**
+         * The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder hiredAt(@Nullable OffsetDateTime hiredAt) {
             this.hiredAt = hiredAt;
             return this;
@@ -1085,8 +1296,19 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * This link expires after 1 hour.
+         */
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+        /**
+         * the hris_job (position) this employee holds; their primary job when they hold more than one
+         */
+        public Builder jobId(@Nullable String jobId) {
+            this.jobId = jobId;
             return this;
         }
 
@@ -1125,6 +1347,14 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * how often the employee is paid (eg. BIWEEKLY)
+         */
+        public Builder payFrequency(@Nullable PayFrequency payFrequency) {
+            this.payFrequency = payFrequency;
+            return this;
+        }
+
         public Builder pronouns(@Nullable String pronouns) {
             this.pronouns = pronouns;
             return this;
@@ -1143,6 +1373,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * Mr. Mrs. Ms.
+         */
         public Builder salutation(@Nullable String salutation) {
             this.salutation = salutation;
             return this;
@@ -1173,6 +1406,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder terminatedAt(@Nullable OffsetDateTime terminatedAt) {
             this.terminatedAt = terminatedAt;
             return this;
@@ -1183,11 +1419,17 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * Total time off allowance for the current leave period, in days (when reported by the provider)
+         */
         public Builder timeoffDaysTotal(@Nullable Double timeoffDaysTotal) {
             this.timeoffDaysTotal = timeoffDaysTotal;
             return this;
         }
 
+        /**
+         * Time off days used or booked in the current leave period (when reported by the provider)
+         */
         public Builder timeoffDaysUsed(@Nullable Double timeoffDaysUsed) {
             this.timeoffDaysUsed = timeoffDaysUsed;
             return this;
@@ -1203,6 +1445,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -1214,11 +1459,12 @@ public class HrisEmployee {
                 compensation, createdAt, currency,
                 dateOfBirth, emails, employeeNumber,
                 employeeRoles, employmentStatus, employmentType,
-                firstName, gender, groups,
-                hasMfa, hiredAt, id,
-                imageUrl, languageLocale, lastName,
-                locations, managerId, maritalStatus,
-                metadata, name, pronouns,
+                firstName, flsaStatus, gender,
+                groups, hasMfa, hiredAt,
+                id, imageUrl, jobId,
+                languageLocale, lastName, locations,
+                managerId, maritalStatus, metadata,
+                name, payFrequency, pronouns,
                 raw, relationships, salutation,
                 ssnSin, storageQuotaAllocated, storageQuotaAvailable,
                 storageQuotaUsed, telephones, terminatedAt,

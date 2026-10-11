@@ -17,32 +17,45 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentAllocation {
-
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocated_at")
     private OffsetDateTime allocatedAt;
 
-
+    /**
+     * The amount of the payment applied to this object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * ISO 4217 currency code of the applied amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * The exchange rate at the time the payment was applied, for multi-currency
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
 
-
+    /**
+     * The id of the object this payment was applied to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_id")
     private String objectId;
 
-
+    /**
+     * The type of object this payment was applied to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_type")
     private PaymentAllocationObjectType objectType;
@@ -68,26 +81,45 @@ public class PaymentAllocation {
             null, null, null);
     }
 
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> allocatedAt() {
         return Optional.ofNullable(this.allocatedAt);
     }
 
+    /**
+     * The amount of the payment applied to this object
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * ISO 4217 currency code of the applied amount
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * The exchange rate at the time the payment was applied, for multi-currency
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
 
+    /**
+     * The id of the object this payment was applied to
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * The type of object this payment was applied to
+     */
     public Optional<PaymentAllocationObjectType> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -97,36 +129,55 @@ public class PaymentAllocation {
     }
 
 
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentAllocation withAllocatedAt(@Nullable OffsetDateTime allocatedAt) {
         this.allocatedAt = allocatedAt;
         return this;
     }
 
 
+    /**
+     * The amount of the payment applied to this object
+     */
     public PaymentAllocation withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * ISO 4217 currency code of the applied amount
+     */
     public PaymentAllocation withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * The exchange rate at the time the payment was applied, for multi-currency
+     */
     public PaymentAllocation withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
     }
 
 
+    /**
+     * The id of the object this payment was applied to
+     */
     public PaymentAllocation withObjectId(@Nullable String objectId) {
         this.objectId = objectId;
         return this;
     }
 
 
+    /**
+     * The type of object this payment was applied to
+     */
     public PaymentAllocation withObjectType(@Nullable PaymentAllocationObjectType objectType) {
         this.objectType = objectType;
         return this;
@@ -188,31 +239,50 @@ public class PaymentAllocation {
           // force use of static builder() method
         }
 
+        /**
+         * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder allocatedAt(@Nullable OffsetDateTime allocatedAt) {
             this.allocatedAt = allocatedAt;
             return this;
         }
 
+        /**
+         * The amount of the payment applied to this object
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * ISO 4217 currency code of the applied amount
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * The exchange rate at the time the payment was applied, for multi-currency
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
         }
 
+        /**
+         * The id of the object this payment was applied to
+         */
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
+        /**
+         * The type of object this payment was applied to
+         */
         public Builder objectType(@Nullable PaymentAllocationObjectType objectType) {
             this.objectType = objectType;
             return this;

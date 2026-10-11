@@ -20,17 +20,23 @@ public class AccountingFee {
     @JsonProperty("amount")
     private double amount;
 
-
+    /**
+     * ISO 4217 currency code, e.g. USD
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * The provider's original fee label, e.g. "VAT" or a shipping carrier name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_type")
     private String originalType;
 
-
+    /**
+     * Unified fee category
+     */
     @JsonProperty("type")
     private AccountingFeeType type;
 
@@ -58,14 +64,23 @@ public class AccountingFee {
         return this.amount;
     }
 
+    /**
+     * ISO 4217 currency code, e.g. USD
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * The provider's original fee label, e.g. "VAT" or a shipping carrier name
+     */
     public Optional<String> originalType() {
         return Optional.ofNullable(this.originalType);
     }
 
+    /**
+     * Unified fee category
+     */
     public AccountingFeeType type() {
         return this.type;
     }
@@ -81,18 +96,27 @@ public class AccountingFee {
     }
 
 
+    /**
+     * ISO 4217 currency code, e.g. USD
+     */
     public AccountingFee withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * The provider's original fee label, e.g. "VAT" or a shipping carrier name
+     */
     public AccountingFee withOriginalType(@Nullable String originalType) {
         this.originalType = originalType;
         return this;
     }
 
 
+    /**
+     * Unified fee category
+     */
     public AccountingFee withType(@Nonnull AccountingFeeType type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
@@ -151,16 +175,25 @@ public class AccountingFee {
             return this;
         }
 
+        /**
+         * ISO 4217 currency code, e.g. USD
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * The provider's original fee label, e.g. "VAT" or a shipping carrier name
+         */
         public Builder originalType(@Nullable String originalType) {
             this.originalType = originalType;
             return this;
         }
 
+        /**
+         * Unified fee category
+         */
         public Builder type(@Nonnull AccountingFeeType type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;

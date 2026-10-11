@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertySocialPostCallToActionType
+ * 
+ * <p>The call-to-action button type
+ */
 public class PropertySocialPostCallToActionType {
 
     public static final PropertySocialPostCallToActionType BOOK = new PropertySocialPostCallToActionType("BOOK");

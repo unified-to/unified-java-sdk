@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Insurance details
  */
 public class PropertyShippingShipmentInsurance {
-
+    /**
+     * Coverage amount (may differ from insured_value)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_amount")
     private Double coverageAmount;
@@ -35,7 +37,9 @@ public class PropertyShippingShipmentInsurance {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Cost of insurance
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_cost")
     private Double insuranceCost;
@@ -45,17 +49,23 @@ public class PropertyShippingShipmentInsurance {
     @JsonProperty("insurance_cost_currency")
     private String insuranceCostCurrency;
 
-
+    /**
+     * Insurance provider name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_provider")
     private String insuranceProvider;
 
-
+    /**
+     * Provider code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_provider_code")
     private String insuranceProviderCode;
 
-
+    /**
+     * Insured value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insured_value")
     private Double insuredValue;
@@ -86,6 +96,9 @@ public class PropertyShippingShipmentInsurance {
             null, null);
     }
 
+    /**
+     * Coverage amount (may differ from insured_value)
+     */
     public Optional<Double> coverageAmount() {
         return Optional.ofNullable(this.coverageAmount);
     }
@@ -98,6 +111,9 @@ public class PropertyShippingShipmentInsurance {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Cost of insurance
+     */
     public Optional<Double> insuranceCost() {
         return Optional.ofNullable(this.insuranceCost);
     }
@@ -106,14 +122,23 @@ public class PropertyShippingShipmentInsurance {
         return Optional.ofNullable(this.insuranceCostCurrency);
     }
 
+    /**
+     * Insurance provider name
+     */
     public Optional<String> insuranceProvider() {
         return Optional.ofNullable(this.insuranceProvider);
     }
 
+    /**
+     * Provider code
+     */
     public Optional<String> insuranceProviderCode() {
         return Optional.ofNullable(this.insuranceProviderCode);
     }
 
+    /**
+     * Insured value
+     */
     public Optional<Double> insuredValue() {
         return Optional.ofNullable(this.insuredValue);
     }
@@ -123,6 +148,9 @@ public class PropertyShippingShipmentInsurance {
     }
 
 
+    /**
+     * Coverage amount (may differ from insured_value)
+     */
     public PropertyShippingShipmentInsurance withCoverageAmount(@Nullable Double coverageAmount) {
         this.coverageAmount = coverageAmount;
         return this;
@@ -141,6 +169,9 @@ public class PropertyShippingShipmentInsurance {
     }
 
 
+    /**
+     * Cost of insurance
+     */
     public PropertyShippingShipmentInsurance withInsuranceCost(@Nullable Double insuranceCost) {
         this.insuranceCost = insuranceCost;
         return this;
@@ -153,18 +184,27 @@ public class PropertyShippingShipmentInsurance {
     }
 
 
+    /**
+     * Insurance provider name
+     */
     public PropertyShippingShipmentInsurance withInsuranceProvider(@Nullable String insuranceProvider) {
         this.insuranceProvider = insuranceProvider;
         return this;
     }
 
 
+    /**
+     * Provider code
+     */
     public PropertyShippingShipmentInsurance withInsuranceProviderCode(@Nullable String insuranceProviderCode) {
         this.insuranceProviderCode = insuranceProviderCode;
         return this;
     }
 
 
+    /**
+     * Insured value
+     */
     public PropertyShippingShipmentInsurance withInsuredValue(@Nullable Double insuredValue) {
         this.insuredValue = insuredValue;
         return this;
@@ -235,6 +275,9 @@ public class PropertyShippingShipmentInsurance {
           // force use of static builder() method
         }
 
+        /**
+         * Coverage amount (may differ from insured_value)
+         */
         public Builder coverageAmount(@Nullable Double coverageAmount) {
             this.coverageAmount = coverageAmount;
             return this;
@@ -250,6 +293,9 @@ public class PropertyShippingShipmentInsurance {
             return this;
         }
 
+        /**
+         * Cost of insurance
+         */
         public Builder insuranceCost(@Nullable Double insuranceCost) {
             this.insuranceCost = insuranceCost;
             return this;
@@ -260,16 +306,25 @@ public class PropertyShippingShipmentInsurance {
             return this;
         }
 
+        /**
+         * Insurance provider name
+         */
         public Builder insuranceProvider(@Nullable String insuranceProvider) {
             this.insuranceProvider = insuranceProvider;
             return this;
         }
 
+        /**
+         * Provider code
+         */
         public Builder insuranceProviderCode(@Nullable String insuranceProviderCode) {
             this.insuranceProviderCode = insuranceProviderCode;
             return this;
         }
 
+        /**
+         * Insured value
+         */
         public Builder insuredValue(@Nullable Double insuredValue) {
             this.insuredValue = insuredValue;
             return this;

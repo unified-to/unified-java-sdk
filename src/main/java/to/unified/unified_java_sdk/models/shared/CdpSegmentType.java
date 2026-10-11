@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpSegmentType
+ * 
+ * <p>The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+ */
 public class CdpSegmentType {
 
     public static final CdpSegmentType USERS = new CdpSegmentType("USERS");

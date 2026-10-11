@@ -38,14 +38,16 @@ public class PropertyMessagingEventMessage {
     private List<MessagingButton> buttons;
 
     /**
-     * Represents the names of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * Represents all channels to which the message is sent. Identifies the channels where the message is
+     * posted. To send to the "Draft" channel/folder, use a channel ID "DRAFT".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     private List<MessagingReference> channels;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -101,12 +103,17 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("message_markdown")
     private String messageMarkdown;
 
-
+    /**
+     * the opaque identifier for the first message in a thread
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_thread_identifier")
     private String messageThreadIdentifier;
 
-
+    /**
+     * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
+     * to which the current message directly replies.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
@@ -121,7 +128,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("reactions")
     private List<MessagingReaction> reactions;
 
-
+    /**
+     * eg. RFC822 MessageID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
@@ -131,7 +140,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("subject")
     private String subject;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -216,13 +227,16 @@ public class PropertyMessagingEventMessage {
     }
 
     /**
-     * Represents the names of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * Represents all channels to which the message is sent. Identifies the channels where the message is
+     * posted. To send to the "Draft" channel/folder, use a channel ID "DRAFT".
      */
     public Optional<List<MessagingReference>> channels() {
         return Optional.ofNullable(this.channels);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -272,10 +286,17 @@ public class PropertyMessagingEventMessage {
         return Optional.ofNullable(this.messageMarkdown);
     }
 
+    /**
+     * the opaque identifier for the first message in a thread
+     */
     public Optional<String> messageThreadIdentifier() {
         return Optional.ofNullable(this.messageThreadIdentifier);
     }
 
+    /**
+     * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
+     * to which the current message directly replies.
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
@@ -288,6 +309,9 @@ public class PropertyMessagingEventMessage {
         return Optional.ofNullable(this.reactions);
     }
 
+    /**
+     * eg. RFC822 MessageID
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -296,6 +320,9 @@ public class PropertyMessagingEventMessage {
         return Optional.ofNullable(this.subject);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -331,8 +358,8 @@ public class PropertyMessagingEventMessage {
 
 
     /**
-     * Represents the names of all channels to which the message is sent. Identifies the channels where the
-     * message is posted.
+     * Represents all channels to which the message is sent. Identifies the channels where the message is
+     * posted. To send to the "Draft" channel/folder, use a channel ID "DRAFT".
      */
     public PropertyMessagingEventMessage withChannels(@Nullable List<MessagingReference> channels) {
         this.channels = channels;
@@ -340,6 +367,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyMessagingEventMessage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -409,12 +439,19 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * the opaque identifier for the first message in a thread
+     */
     public PropertyMessagingEventMessage withMessageThreadIdentifier(@Nullable String messageThreadIdentifier) {
         this.messageThreadIdentifier = messageThreadIdentifier;
         return this;
     }
 
 
+    /**
+     * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
+     * to which the current message directly replies.
+     */
     public PropertyMessagingEventMessage withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -433,6 +470,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * eg. RFC822 MessageID
+     */
     public PropertyMessagingEventMessage withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
@@ -445,6 +485,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PropertyMessagingEventMessage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -601,14 +644,17 @@ public class PropertyMessagingEventMessage {
         }
 
         /**
-         * Represents the names of all channels to which the message is sent. Identifies the channels where the
-         * message is posted.
+         * Represents all channels to which the message is sent. Identifies the channels where the message is
+         * posted. To send to the "Draft" channel/folder, use a channel ID "DRAFT".
          */
         public Builder channels(@Nullable List<MessagingReference> channels) {
             this.channels = channels;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -668,11 +714,18 @@ public class PropertyMessagingEventMessage {
             return this;
         }
 
+        /**
+         * the opaque identifier for the first message in a thread
+         */
         public Builder messageThreadIdentifier(@Nullable String messageThreadIdentifier) {
             this.messageThreadIdentifier = messageThreadIdentifier;
             return this;
         }
 
+        /**
+         * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
+         * to which the current message directly replies.
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -688,6 +741,9 @@ public class PropertyMessagingEventMessage {
             return this;
         }
 
+        /**
+         * eg. RFC822 MessageID
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
@@ -698,6 +754,9 @@ public class PropertyMessagingEventMessage {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

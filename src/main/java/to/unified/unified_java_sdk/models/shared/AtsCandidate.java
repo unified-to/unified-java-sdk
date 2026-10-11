@@ -24,17 +24,23 @@ public class AtsCandidate {
     @JsonProperty("address")
     private PropertyAtsCandidateAddress address;
 
-
+    /**
+     * (reference to AtsCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * Name of company where candidate currently works
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private String companyName;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -127,7 +133,9 @@ public class AtsCandidate {
     @JsonProperty("sources")
     private List<String> sources;
 
-
+    /**
+     * Personal / professional bio
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
@@ -142,17 +150,23 @@ public class AtsCandidate {
     @JsonProperty("telephones")
     private List<AtsTelephone> telephones;
 
-
+    /**
+     * Candidate’s current job title
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -248,14 +262,23 @@ public class AtsCandidate {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * (reference to AtsCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * Name of company where candidate currently works
+     */
     public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -332,6 +355,9 @@ public class AtsCandidate {
         return Optional.ofNullable(this.sources);
     }
 
+    /**
+     * Personal / professional bio
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -344,14 +370,23 @@ public class AtsCandidate {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * Candidate’s current job title
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -378,18 +413,27 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * (reference to AtsCompany)
+     */
     public AtsCandidate withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * Name of company where candidate currently works
+     */
     public AtsCandidate withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsCandidate withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -502,6 +546,9 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * Personal / professional bio
+     */
     public AtsCandidate withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
@@ -520,18 +567,27 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * Candidate’s current job title
+     */
     public AtsCandidate withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsCandidate withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
+     */
     public AtsCandidate withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -713,16 +769,25 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * (reference to AtsCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * Name of company where candidate currently works
+         */
         public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -817,6 +882,9 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * Personal / professional bio
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
@@ -832,16 +900,25 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * Candidate’s current job title
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

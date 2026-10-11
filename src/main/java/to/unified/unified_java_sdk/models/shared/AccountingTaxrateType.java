@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingTaxrateType
+ * 
+ * <p>Whether the rate applies to sales, purchases, or both
+ */
 public class AccountingTaxrateType {
 
     public static final AccountingTaxrateType SALES = new AccountingTaxrateType("SALES");

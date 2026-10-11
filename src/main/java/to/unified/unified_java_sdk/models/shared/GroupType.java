@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * GroupType
+ * 
+ * <p>The group type
+ */
 public class GroupType {
 
     public static final GroupType CASUAL_CLUB = new GroupType("CASUAL_CLUB");

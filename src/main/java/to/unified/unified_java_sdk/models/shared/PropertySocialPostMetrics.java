@@ -20,32 +20,44 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Engagement metrics for the post
  */
 public class PropertySocialPostMetrics {
-
+    /**
+     * Number of bookmarks/saves
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookmark_count")
     private Double bookmarkCount;
 
-
+    /**
+     * Number of comments/replies
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment_count")
     private Double commentCount;
 
-
+    /**
+     * Number of likes/reactions
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("like_count")
     private Double likeCount;
 
-
+    /**
+     * Number of quotes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_count")
     private Double quoteCount;
 
-
+    /**
+     * Number of shares/reposts
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("share_count")
     private Double shareCount;
 
-
+    /**
+     * Number of views/impressions
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_count")
     private Double viewCount;
@@ -71,26 +83,44 @@ public class PropertySocialPostMetrics {
             null, null, null);
     }
 
+    /**
+     * Number of bookmarks/saves
+     */
     public Optional<Double> bookmarkCount() {
         return Optional.ofNullable(this.bookmarkCount);
     }
 
+    /**
+     * Number of comments/replies
+     */
     public Optional<Double> commentCount() {
         return Optional.ofNullable(this.commentCount);
     }
 
+    /**
+     * Number of likes/reactions
+     */
     public Optional<Double> likeCount() {
         return Optional.ofNullable(this.likeCount);
     }
 
+    /**
+     * Number of quotes
+     */
     public Optional<Double> quoteCount() {
         return Optional.ofNullable(this.quoteCount);
     }
 
+    /**
+     * Number of shares/reposts
+     */
     public Optional<Double> shareCount() {
         return Optional.ofNullable(this.shareCount);
     }
 
+    /**
+     * Number of views/impressions
+     */
     public Optional<Double> viewCount() {
         return Optional.ofNullable(this.viewCount);
     }
@@ -100,36 +130,54 @@ public class PropertySocialPostMetrics {
     }
 
 
+    /**
+     * Number of bookmarks/saves
+     */
     public PropertySocialPostMetrics withBookmarkCount(@Nullable Double bookmarkCount) {
         this.bookmarkCount = bookmarkCount;
         return this;
     }
 
 
+    /**
+     * Number of comments/replies
+     */
     public PropertySocialPostMetrics withCommentCount(@Nullable Double commentCount) {
         this.commentCount = commentCount;
         return this;
     }
 
 
+    /**
+     * Number of likes/reactions
+     */
     public PropertySocialPostMetrics withLikeCount(@Nullable Double likeCount) {
         this.likeCount = likeCount;
         return this;
     }
 
 
+    /**
+     * Number of quotes
+     */
     public PropertySocialPostMetrics withQuoteCount(@Nullable Double quoteCount) {
         this.quoteCount = quoteCount;
         return this;
     }
 
 
+    /**
+     * Number of shares/reposts
+     */
     public PropertySocialPostMetrics withShareCount(@Nullable Double shareCount) {
         this.shareCount = shareCount;
         return this;
     }
 
 
+    /**
+     * Number of views/impressions
+     */
     public PropertySocialPostMetrics withViewCount(@Nullable Double viewCount) {
         this.viewCount = viewCount;
         return this;
@@ -191,31 +239,49 @@ public class PropertySocialPostMetrics {
           // force use of static builder() method
         }
 
+        /**
+         * Number of bookmarks/saves
+         */
         public Builder bookmarkCount(@Nullable Double bookmarkCount) {
             this.bookmarkCount = bookmarkCount;
             return this;
         }
 
+        /**
+         * Number of comments/replies
+         */
         public Builder commentCount(@Nullable Double commentCount) {
             this.commentCount = commentCount;
             return this;
         }
 
+        /**
+         * Number of likes/reactions
+         */
         public Builder likeCount(@Nullable Double likeCount) {
             this.likeCount = likeCount;
             return this;
         }
 
+        /**
+         * Number of quotes
+         */
         public Builder quoteCount(@Nullable Double quoteCount) {
             this.quoteCount = quoteCount;
             return this;
         }
 
+        /**
+         * Number of shares/reposts
+         */
         public Builder shareCount(@Nullable Double shareCount) {
             this.shareCount = shareCount;
             return this;
         }
 
+        /**
+         * Number of views/impressions
+         */
         public Builder viewCount(@Nullable Double viewCount) {
             this.viewCount = viewCount;
             return this;

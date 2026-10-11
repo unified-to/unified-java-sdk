@@ -17,21 +17,29 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ScimGroup {
-
+    /**
+     * The group's display name
+     */
     @JsonProperty("displayName")
     private String displayName;
 
-
+    /**
+     * A groups id in an external system
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     private String externalId;
 
-
+    /**
+     * Organization [NOT STANDARD]
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
     private String groupType;
 
-
+    /**
+     * The group's unique id
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -81,18 +89,30 @@ public class ScimGroup {
             null);
     }
 
+    /**
+     * The group's display name
+     */
     public String displayName() {
         return this.displayName;
     }
 
+    /**
+     * A groups id in an external system
+     */
     public Optional<String> externalId() {
         return Optional.ofNullable(this.externalId);
     }
 
+    /**
+     * Organization [NOT STANDARD]
+     */
     public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
 
+    /**
+     * The group's unique id
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -120,24 +140,36 @@ public class ScimGroup {
     }
 
 
+    /**
+     * The group's display name
+     */
     public ScimGroup withDisplayName(@Nonnull String displayName) {
         this.displayName = Utils.checkNotNull(displayName, "displayName");
         return this;
     }
 
 
+    /**
+     * A groups id in an external system
+     */
     public ScimGroup withExternalId(@Nullable String externalId) {
         this.externalId = externalId;
         return this;
     }
 
 
+    /**
+     * Organization [NOT STANDARD]
+     */
     public ScimGroup withGroupType(@Nullable String groupType) {
         this.groupType = groupType;
         return this;
     }
 
 
+    /**
+     * The group's unique id
+     */
     public ScimGroup withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -228,21 +260,33 @@ public class ScimGroup {
           // force use of static builder() method
         }
 
+        /**
+         * The group's display name
+         */
         public Builder displayName(@Nonnull String displayName) {
             this.displayName = Utils.checkNotNull(displayName, "displayName");
             return this;
         }
 
+        /**
+         * A groups id in an external system
+         */
         public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
+        /**
+         * Organization [NOT STANDARD]
+         */
         public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
 
+        /**
+         * The group's unique id
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;

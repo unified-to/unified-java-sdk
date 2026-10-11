@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class TaskProject {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -35,12 +37,16 @@ public class TaskProject {
     @JsonProperty("group_ids")
     private List<String> groupIds;
 
-
+    /**
+     * If this project has children folders / lists
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
     private Boolean hasChildren;
 
-
+    /**
+     * If you can use this project ID to list tasks. Default is true.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_tasks")
     private Boolean hasTasks;
@@ -70,7 +76,9 @@ public class TaskProject {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -115,6 +123,9 @@ public class TaskProject {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -127,10 +138,16 @@ public class TaskProject {
         return Optional.ofNullable(this.groupIds);
     }
 
+    /**
+     * If this project has children folders / lists
+     */
     public Optional<Boolean> hasChildren() {
         return Optional.ofNullable(this.hasChildren);
     }
 
+    /**
+     * If you can use this project ID to list tasks. Default is true.
+     */
     public Optional<Boolean> hasTasks() {
         return Optional.ofNullable(this.hasTasks);
     }
@@ -155,6 +172,9 @@ public class TaskProject {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -168,6 +188,9 @@ public class TaskProject {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskProject withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -186,12 +209,18 @@ public class TaskProject {
     }
 
 
+    /**
+     * If this project has children folders / lists
+     */
     public TaskProject withHasChildren(@Nullable Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
     }
 
 
+    /**
+     * If you can use this project ID to list tasks. Default is true.
+     */
     public TaskProject withHasTasks(@Nullable Boolean hasTasks) {
         this.hasTasks = hasTasks;
         return this;
@@ -228,6 +257,9 @@ public class TaskProject {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public TaskProject withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -321,6 +353,9 @@ public class TaskProject {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -336,11 +371,17 @@ public class TaskProject {
             return this;
         }
 
+        /**
+         * If this project has children folders / lists
+         */
         public Builder hasChildren(@Nullable Boolean hasChildren) {
             this.hasChildren = hasChildren;
             return this;
         }
 
+        /**
+         * If you can use this project ID to list tasks. Default is true.
+         */
         public Builder hasTasks(@Nullable Boolean hasTasks) {
             this.hasTasks = hasTasks;
             return this;
@@ -371,6 +412,9 @@ public class TaskProject {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

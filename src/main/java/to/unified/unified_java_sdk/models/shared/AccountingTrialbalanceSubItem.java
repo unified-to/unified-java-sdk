@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingTrialbalanceSubItem {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -45,6 +47,9 @@ public class AccountingTrialbalanceSubItem {
         this(null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -62,6 +67,9 @@ public class AccountingTrialbalanceSubItem {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingTrialbalanceSubItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -122,6 +130,9 @@ public class AccountingTrialbalanceSubItem {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;

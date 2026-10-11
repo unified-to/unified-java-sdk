@@ -12,18 +12,23 @@
 * [getGenaiAgent](#getgenaiagent) - Retrieve an agent
 * [getGenaiModel](#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](#getgenaiorganization) - Retrieve an organization
+* [getGenaiSkill](#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](#getgenaitask) - Retrieve a task
 * [listGenaiAgents](#listgenaiagents) - List all agents
 * [listGenaiModels](#listgenaimodels) - List all models
 * [listGenaiOrganizations](#listgenaiorganizations) - List all organizations
+* [listGenaiSkills](#listgenaiskills) - List all skills
 * [listGenaiTasks](#listgenaitasks) - List all tasks
 * [patchGenaiAgent](#patchgenaiagent) - Update an agent
 * [patchGenaiOrganization](#patchgenaiorganization) - Update an organization
+* [patchGenaiTask](#patchgenaitask) - Update a task
 * [removeGenaiAgent](#removegenaiagent) - Remove an agent
 * [removeGenaiOrganization](#removegenaiorganization) - Remove an organization
+* [removeGenaiSkill](#removegenaiskill) - Remove a skill
 * [removeGenaiTask](#removegenaitask) - Remove a task
 * [updateGenaiAgent](#updategenaiagent) - Update an agent
 * [updateGenaiOrganization](#updategenaiorganization) - Update an organization
+* [updateGenaiTask](#updategenaitask) - Update a task
 
 ## createGenaiAgent
 
@@ -57,11 +62,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("eecd9967-8ffb-4fc8-9387-fe795c805bd3")
+                    .id("08bfc443-c346-47a1-8912-e15df508d4aa")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-09-20T16:27:57.260Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T04:35:20.472Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -129,7 +134,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Est.")
                     .encondingFormat(EncondingFormat.FLOAT)
-                    .id("cca4d4fc-2849-4a2f-a78c-7c28952c326c")
+                    .id("e2c08e06-56c1-48bf-af2b-b24b11985b27")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")
@@ -196,10 +201,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("9942ae74-f1b5-48d6-a941-810141e8c41f")
+                    .id("e3f4425c-aaf8-41db-832a-aa3bf1eba493")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-15T04:21:51.211Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-22T16:30:20.583Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -260,6 +265,23 @@ public class Application {
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
                 .genaiPrompt(GenaiPrompt.builder()
+                    .answers(List.of(
+                        GenaiAnswer.builder()
+                            .id("TeZpueFB")
+                            .type(GenaiAnswerType.CHOICE)
+                            .confidence(0.5384309098590165)
+                            .probabilities(List.of(
+                                GenaiAnswerProbability.builder()
+                                    .option("veniam")
+                                    .probability(0.05683182482607663)
+                                    .build(),
+                                GenaiAnswerProbability.builder()
+                                    .option("comes")
+                                    .probability(0.1404057613108307)
+                                    .build()))
+                            .score(0.05974147981032729)
+                            .value("summisse")
+                            .build()))
                     .maxTokens(0.4677782787475735)
                     .mcpAuthorizationToken("f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4")
                     .mcpDeferredTools(List.of())
@@ -267,11 +289,41 @@ public class Application {
                     .messages(List.of(
                         GenaiContent.builder()
                             .content("Aegre repudiandae verecundia facere statua.")
+                            .images(List.of())
                             .role(Role.ASSISTANT)
                             .build(),
                         GenaiContent.builder()
                             .content("Speciosus xiphias soleo trepide crinis.")
+                            .images(List.of())
                             .role(Role.SYSTEM)
+                            .build()))
+                    .questions(List.of(
+                        GenaiQuestion.builder()
+                            .id("KtvbYiEq")
+                            .instructions("Admiratio cura contabesco subvenio venustas architecto vacuus summopere.")
+                            .type(GenaiQuestionType.BOOLEAN)
+                            .options(List.of(
+                                "vulnero",
+                                "quasi",
+                                "tolero"))
+                            .build(),
+                        GenaiQuestion.builder()
+                            .id("oV6IURtv")
+                            .instructions("Celer deleniti ventus ipsam tendo odit.")
+                            .type(GenaiQuestionType.CHOICE)
+                            .options(List.of(
+                                "nulla",
+                                "aspicio",
+                                "tero"))
+                            .build(),
+                        GenaiQuestion.builder()
+                            .id("60dBZk2K")
+                            .instructions("Decretum vesica amet repudiandae.")
+                            .type(GenaiQuestionType.BOOLEAN)
+                            .options(List.of(
+                                "ducimus",
+                                "civis",
+                                "alter"))
                             .build()))
                     .responses(List.of(
                         "Balbus vobis circumvenio una."))
@@ -338,28 +390,29 @@ public class Application {
 
         CreateGenaiTaskRequest req = CreateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-09-06T13:57:38.078Z"))
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.745Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("968cf408-0894-4133-a538-3598570fa578")
+                    .id("29e10421-e909-4556-95f3-15cbb6f8aadd")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
                     .messages(List.of(
                         GenaiContent.builder()
                             .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
                             .role(Role.ASSISTANT)
                             .build()))
                     .name("connect multi-byte port")
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-03T13:35:15.218Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.422Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-14T14:26:48.799Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.031Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -559,6 +612,64 @@ public class Application {
 ### Response
 
 **[GetGenaiOrganizationResponse](../../models/operations/GetGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getGenaiSkill
+
+Retrieve a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getGenaiSkill" method="get" path="/genai/{connection_id}/skill/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiSkillResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetGenaiSkillRequest req = GetGenaiSkillRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetGenaiSkillResponse res = sdk.genai().getGenaiSkill()
+                .request(req)
+                .call();
+
+        if (res.genaiSkill().isPresent()) {
+            System.out.println(res.genaiSkill().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetGenaiSkillRequest](../../models/operations/GetGenaiSkillRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetGenaiSkillResponse](../../models/operations/GetGenaiSkillResponse.md)**
 
 ### Errors
 
@@ -795,6 +906,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listGenaiSkills
+
+List all skills
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listGenaiSkills" method="get" path="/genai/{connection_id}/skill" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListGenaiSkillsRequest req = ListGenaiSkillsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListGenaiSkillsResponse res = sdk.genai().listGenaiSkills()
+                .request(req)
+                .call();
+
+        if (res.genaiSkills().isPresent()) {
+            System.out.println(res.genaiSkills().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListGenaiSkillsRequest](../../models/operations/ListGenaiSkillsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListGenaiSkillsResponse](../../models/operations/ListGenaiSkillsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listGenaiTasks
 
 List all tasks
@@ -884,11 +1052,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("e9c89654-7de4-4cb3-9713-6a5249260a61")
+                    .id("425ae9f5-6097-4f84-915f-0fca94c2bd50")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-09-20T16:27:57.270Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T04:35:20.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -953,10 +1121,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("b1da2f82-66e6-44ab-8556-dccd964b2224")
+                    .id("ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-15T04:21:51.214Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-22T16:30:20.585Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -982,6 +1150,92 @@ public class Application {
 ### Response
 
 **[PatchGenaiOrganizationResponse](../../models/operations/PatchGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchGenaiTaskRequest req = PatchGenaiTaskRequest.builder()
+                .genaiTask(GenaiTask.builder()
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.763Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
+                    .filesChanged(19d)
+                    .id("90014b59-c502-4956-b3c4-7c91f99182b8")
+                    .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
+                    .linesAdded(244d)
+                    .linesDeleted(118d)
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
+                            .role(Role.ASSISTANT)
+                            .build()))
+                    .name("connect multi-byte port")
+                    .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
+                    .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
+                    .sourceBranchIdentifier("main")
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.435Z"))
+                    .status(GenaiTaskStatus.BLOCKED)
+                    .summary("Cur aeternus cogito vesper.")
+                    .targetBranchIdentifier("agent/joshingly-ignorance")
+                    .tokensUsed(2165d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.040Z"))
+                    .webUrl("https://inexperienced-adrenalin.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchGenaiTaskResponse res = sdk.genai().patchGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [PatchGenaiTaskRequest](../../models/operations/PatchGenaiTaskRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[PatchGenaiTaskResponse](../../models/operations/PatchGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -1101,6 +1355,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeGenaiSkill
+
+Remove a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeGenaiSkill" method="delete" path="/genai/{connection_id}/skill/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveGenaiSkillRequest req = RemoveGenaiSkillRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveGenaiSkillResponse res = sdk.genai().removeGenaiSkill()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveGenaiSkillRequest](../../models/operations/RemoveGenaiSkillRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveGenaiSkillResponse](../../models/operations/RemoveGenaiSkillResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeGenaiTask
 
 Remove a task
@@ -1189,11 +1499,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("e9c89654-7de4-4cb3-9713-6a5249260a61")
+                    .id("425ae9f5-6097-4f84-915f-0fca94c2bd50")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-09-20T16:27:57.270Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-07T04:35:20.482Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1258,10 +1568,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("b1da2f82-66e6-44ab-8556-dccd964b2224")
+                    .id("ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-15T04:21:51.214Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-22T16:30:20.585Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1287,6 +1597,92 @@ public class Application {
 ### Response
 
 **[UpdateGenaiOrganizationResponse](../../models/operations/UpdateGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateGenaiTaskRequest req = UpdateGenaiTaskRequest.builder()
+                .genaiTask(GenaiTask.builder()
+                    .completedAt(OffsetDateTime.parse("2025-09-23T01:00:16.763Z"))
+                    .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
+                    .filesChanged(19d)
+                    .id("90014b59-c502-4956-b3c4-7c91f99182b8")
+                    .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
+                    .linesAdded(244d)
+                    .linesDeleted(118d)
+                    .messages(List.of(
+                        GenaiContent.builder()
+                            .content("Stultus esse cursim stabilis tenetur amet contigo tristis.")
+                            .images(List.of())
+                            .role(Role.ASSISTANT)
+                            .build()))
+                    .name("connect multi-byte port")
+                    .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
+                    .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
+                    .sourceBranchIdentifier("main")
+                    .startedAt(OffsetDateTime.parse("2024-05-15T11:27:28.435Z"))
+                    .status(GenaiTaskStatus.BLOCKED)
+                    .summary("Cur aeternus cogito vesper.")
+                    .targetBranchIdentifier("agent/joshingly-ignorance")
+                    .tokensUsed(2165d)
+                    .updatedAt(OffsetDateTime.parse("2023-02-22T09:36:18.040Z"))
+                    .webUrl("https://inexperienced-adrenalin.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateGenaiTaskResponse res = sdk.genai().updateGenaiTask()
+                .request(req)
+                .call();
+
+        if (res.genaiTask().isPresent()) {
+            System.out.println(res.genaiTask().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [UpdateGenaiTaskRequest](../../models/operations/UpdateGenaiTaskRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[UpdateGenaiTaskResponse](../../models/operations/UpdateGenaiTaskResponse.md)**
 
 ### Errors
 

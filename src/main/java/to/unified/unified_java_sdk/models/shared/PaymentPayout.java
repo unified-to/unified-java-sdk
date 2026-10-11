@@ -20,17 +20,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentPayout {
-
+    /**
+     * ref -&gt; AccountingAccount; the destination account (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrival_at")
     private OffsetDateTime arrivalAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
@@ -40,7 +46,9 @@ public class PaymentPayout {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Processor fee deducted from the payout
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fee_amount")
     private Double feeAmount;
@@ -57,7 +65,9 @@ public class PaymentPayout {
     @JsonProperty("lineitems")
     private List<PaymentPayoutLineitem> lineitems;
 
-
+    /**
+     * total_amount minus fee_amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     private Double netAmount;
@@ -82,7 +92,9 @@ public class PaymentPayout {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
@@ -125,14 +137,23 @@ public class PaymentPayout {
             null);
     }
 
+    /**
+     * ref -&gt; AccountingAccount; the destination account (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> arrivalAt() {
         return Optional.ofNullable(this.arrivalAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -141,6 +162,9 @@ public class PaymentPayout {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Processor fee deducted from the payout
+     */
     public Optional<Double> feeAmount() {
         return Optional.ofNullable(this.feeAmount);
     }
@@ -156,6 +180,9 @@ public class PaymentPayout {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * total_amount minus fee_amount
+     */
     public Optional<Double> netAmount() {
         return Optional.ofNullable(this.netAmount);
     }
@@ -176,6 +203,9 @@ public class PaymentPayout {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -185,18 +215,27 @@ public class PaymentPayout {
     }
 
 
+    /**
+     * ref -&gt; AccountingAccount; the destination account (reference to AccountingAccount)
+     */
     public PaymentPayout withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayout withArrivalAt(@Nullable OffsetDateTime arrivalAt) {
         this.arrivalAt = arrivalAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayout withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -209,6 +248,9 @@ public class PaymentPayout {
     }
 
 
+    /**
+     * Processor fee deducted from the payout
+     */
     public PaymentPayout withFeeAmount(@Nullable Double feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -230,6 +272,9 @@ public class PaymentPayout {
     }
 
 
+    /**
+     * total_amount minus fee_amount
+     */
     public PaymentPayout withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
@@ -260,6 +305,9 @@ public class PaymentPayout {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayout withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -352,16 +400,25 @@ public class PaymentPayout {
           // force use of static builder() method
         }
 
+        /**
+         * ref -&gt; AccountingAccount; the destination account (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder arrivalAt(@Nullable OffsetDateTime arrivalAt) {
             this.arrivalAt = arrivalAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -372,6 +429,9 @@ public class PaymentPayout {
             return this;
         }
 
+        /**
+         * Processor fee deducted from the payout
+         */
         public Builder feeAmount(@Nullable Double feeAmount) {
             this.feeAmount = feeAmount;
             return this;
@@ -390,6 +450,9 @@ public class PaymentPayout {
             return this;
         }
 
+        /**
+         * total_amount minus fee_amount
+         */
         public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
@@ -415,6 +478,9 @@ public class PaymentPayout {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;

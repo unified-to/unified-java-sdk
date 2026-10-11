@@ -1,0 +1,31 @@
+# ListAccountingPurchasereceiptsQueryParamFields
+
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAccountingPurchasereceiptsQueryParamFields;
+
+ListAccountingPurchasereceiptsQueryParamFields value = ListAccountingPurchasereceiptsQueryParamFields.ID;
+```
+
+
+## Values
+
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `ID`               | id                 |
+| `CREATED_AT`       | created_at         |
+| `UPDATED_AT`       | updated_at         |
+| `ORGANIZATION_ID`  | organization_id    |
+| `METADATA`         | metadata           |
+| `RAW`              | raw                |
+| `RECEIPT_NUMBER`   | receipt_number     |
+| `CONTACT_ID`       | contact_id         |
+| `PURCHASEORDER_ID` | purchaseorder_id   |
+| `POSTED_AT`        | posted_at          |
+| `STATUS`           | status             |
+| `CURRENCY`         | currency           |
+| `TOTAL_AMOUNT`     | total_amount       |
+| `NOTES`            | notes              |
+| `LINEITEMS`        | lineitems          |
+| `ATTACHMENTS`      | attachments        |

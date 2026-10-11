@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * Metric
+ * 
+ * <p>The metric being reported
+ */
 public class Metric {
 
     public static final Metric FOLLOWERS = new Metric("FOLLOWERS");

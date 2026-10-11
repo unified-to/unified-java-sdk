@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ShippingTrackingStatus
+ * 
+ * <p>Current status of the shipment
+ */
 public class ShippingTrackingStatus {
 
     public static final ShippingTrackingStatus PENDING = new ShippingTrackingStatus("PENDING");

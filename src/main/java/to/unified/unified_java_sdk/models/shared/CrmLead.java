@@ -25,7 +25,9 @@ public class CrmLead {
     @JsonProperty("address")
     private PropertyCrmLeadAddress address;
 
-
+    /**
+     * (reference to CrmCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -35,17 +37,23 @@ public class CrmLead {
     @JsonProperty("company_name")
     private String companyName;
 
-
+    /**
+     * (reference to CrmContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     private String creatorUserId;
@@ -110,12 +118,23 @@ public class CrmLead {
     @JsonProperty("telephones")
     private List<CrmTelephone> telephones;
 
+    /**
+     * The job title of the lead
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    private String title;
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -140,6 +159,7 @@ public class CrmLead {
             @JsonProperty("source") @Nullable String source,
             @JsonProperty("status") @Nullable String status,
             @JsonProperty("telephones") @Nullable List<CrmTelephone> telephones,
+            @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.address = address;
@@ -160,6 +180,7 @@ public class CrmLead {
         this.source = source;
         this.status = status;
         this.telephones = telephones;
+        this.title = title;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -171,13 +192,16 @@ public class CrmLead {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyCrmLeadAddress> address() {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * (reference to CrmCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -186,14 +210,23 @@ public class CrmLead {
         return Optional.ofNullable(this.companyName);
     }
 
+    /**
+     * (reference to CrmContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> creatorUserId() {
         return Optional.ofNullable(this.creatorUserId);
     }
@@ -246,10 +279,23 @@ public class CrmLead {
         return Optional.ofNullable(this.telephones);
     }
 
+    /**
+     * The job title of the lead
+     */
+    public Optional<String> title() {
+        return Optional.ofNullable(this.title);
+    }
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -265,6 +311,9 @@ public class CrmLead {
     }
 
 
+    /**
+     * (reference to CrmCompany)
+     */
     public CrmLead withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -277,18 +326,27 @@ public class CrmLead {
     }
 
 
+    /**
+     * (reference to CrmContact)
+     */
     public CrmLead withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmLead withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmLead withCreatorUserId(@Nullable String creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
@@ -367,12 +425,27 @@ public class CrmLead {
     }
 
 
+    /**
+     * The job title of the lead
+     */
+    public CrmLead withTitle(@Nullable String title) {
+        this.title = title;
+        return this;
+    }
+
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmLead withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmLead withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -407,6 +480,7 @@ public class CrmLead {
             Utils.enhancedDeepEquals(this.source, other.source) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -420,7 +494,7 @@ public class CrmLead {
             isActive, lastName, linkUrls,
             metadata, name, raw,
             source, status, telephones,
-            updatedAt, userId);
+            title, updatedAt, userId);
     }
     
     @Override
@@ -444,6 +518,7 @@ public class CrmLead {
                 "source", source,
                 "status", status,
                 "telephones", telephones,
+                "title", title,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -487,6 +562,8 @@ public class CrmLead {
 
         private List<CrmTelephone> telephones;
 
+        private String title;
+
         private OffsetDateTime updatedAt;
 
         private String userId;
@@ -500,6 +577,9 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * (reference to CrmCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -510,16 +590,25 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * (reference to CrmContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder creatorUserId(@Nullable String creatorUserId) {
             this.creatorUserId = creatorUserId;
             return this;
@@ -585,11 +674,25 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * The job title of the lead
+         */
+        public Builder title(@Nullable String title) {
+            this.title = title;
+            return this;
+        }
+
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -603,7 +706,7 @@ public class CrmLead {
                 isActive, lastName, linkUrls,
                 metadata, name, raw,
                 source, status, telephones,
-                updatedAt, userId);
+                title, updatedAt, userId);
         }
 
     }

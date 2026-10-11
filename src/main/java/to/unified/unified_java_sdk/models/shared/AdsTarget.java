@@ -58,7 +58,10 @@ public class AdsTarget {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale,
+     * adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AdsTargetType type;
@@ -119,6 +122,10 @@ public class AdsTarget {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale,
+     * adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+     */
     public Optional<AdsTargetType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -170,6 +177,10 @@ public class AdsTarget {
     }
 
 
+    /**
+     * Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale,
+     * adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+     */
     public AdsTarget withType(@Nullable AdsTargetType type) {
         this.type = type;
         return this;
@@ -275,6 +286,10 @@ public class AdsTarget {
             return this;
         }
 
+        /**
+         * Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale,
+         * adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+         */
         public Builder type(@Nullable AdsTargetType type) {
             this.type = type;
             return this;

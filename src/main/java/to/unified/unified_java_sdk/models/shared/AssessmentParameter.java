@@ -46,7 +46,9 @@ public class AssessmentParameter {
     @JsonProperty("options")
     private List<String> options;
 
-
+    /**
+     * Question to ask the candidateuser
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_question")
     private String publicQuestion;
@@ -115,6 +117,9 @@ public class AssessmentParameter {
         return Optional.ofNullable(this.options);
     }
 
+    /**
+     * Question to ask the candidateuser
+     */
     public Optional<String> publicQuestion() {
         return Optional.ofNullable(this.publicQuestion);
     }
@@ -171,6 +176,9 @@ public class AssessmentParameter {
     }
 
 
+    /**
+     * Question to ask the candidateuser
+     */
     public AssessmentParameter withPublicQuestion(@Nullable String publicQuestion) {
         this.publicQuestion = publicQuestion;
         return this;
@@ -287,6 +295,9 @@ public class AssessmentParameter {
             return this;
         }
 
+        /**
+         * Question to ask the candidateuser
+         */
         public Builder publicQuestion(@Nullable String publicQuestion) {
             this.publicQuestion = publicQuestion;
             return this;

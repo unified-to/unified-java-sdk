@@ -20,7 +20,9 @@ public class CalendarAttachment {
     @JsonProperty("download_url")
     private String downloadUrl;
 
-
+    /**
+     * ID for the storage_fileget endpoint
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -56,6 +58,9 @@ public class CalendarAttachment {
         return Optional.ofNullable(this.downloadUrl);
     }
 
+    /**
+     * ID for the storage_fileget endpoint
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -79,6 +84,9 @@ public class CalendarAttachment {
     }
 
 
+    /**
+     * ID for the storage_fileget endpoint
+     */
     public CalendarAttachment withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -149,6 +157,9 @@ public class CalendarAttachment {
             return this;
         }
 
+        /**
+         * ID for the storage_fileget endpoint
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;

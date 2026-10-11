@@ -18,67 +18,93 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SigningDocument {
-
+    /**
+     * When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
-
+    /**
+     * The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * User who created the signing document
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_id")
     private String creatorId;
 
-
+    /**
+     * Message to signers
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * URL to download the signed document
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     private String downloadUrl;
 
-
+    /**
+     * Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     private OffsetDateTime expiresAt;
 
-
+    /**
+     * Unique identifier for this signing document
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Document/envelope title
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     private OffsetDateTime sentAt;
 
-
+    /**
+     * Current status of the signing document
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private SigningDocumentStatus status;
 
-
+    /**
+     * If created from a template; points to SigningTemplate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_id")
     private String templateId;
 
-
+    /**
+     * The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -121,54 +147,93 @@ public class SigningDocument {
             null);
     }
 
+    /**
+     * When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
 
+    /**
+     * The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * User who created the signing document
+     */
     public Optional<String> creatorId() {
         return Optional.ofNullable(this.creatorId);
     }
 
+    /**
+     * Message to signers
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * URL to download the signed document
+     */
     public Optional<String> downloadUrl() {
         return Optional.ofNullable(this.downloadUrl);
     }
 
+    /**
+     * Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> expiresAt() {
         return Optional.ofNullable(this.expiresAt);
     }
 
+    /**
+     * Unique identifier for this signing document
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Document/envelope title
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sentAt() {
         return Optional.ofNullable(this.sentAt);
     }
 
+    /**
+     * Current status of the signing document
+     */
     public Optional<SigningDocumentStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * If created from a template; points to SigningTemplate
+     */
     public Optional<String> templateId() {
         return Optional.ofNullable(this.templateId);
     }
 
+    /**
+     * The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -178,78 +243,117 @@ public class SigningDocument {
     }
 
 
+    /**
+     * When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningDocument withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
 
 
+    /**
+     * The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningDocument withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * User who created the signing document
+     */
     public SigningDocument withCreatorId(@Nullable String creatorId) {
         this.creatorId = creatorId;
         return this;
     }
 
 
+    /**
+     * Message to signers
+     */
     public SigningDocument withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * URL to download the signed document
+     */
     public SigningDocument withDownloadUrl(@Nullable String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
 
 
+    /**
+     * Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningDocument withExpiresAt(@Nullable OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this signing document
+     */
     public SigningDocument withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Document/envelope title
+     */
     public SigningDocument withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration
+     */
     public SigningDocument withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningDocument withSentAt(@Nullable OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
 
 
+    /**
+     * Current status of the signing document
+     */
     public SigningDocument withStatus(@Nullable SigningDocumentStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * If created from a template; points to SigningTemplate
+     */
     public SigningDocument withTemplateId(@Nullable String templateId) {
         this.templateId = templateId;
         return this;
     }
 
 
+    /**
+     * The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SigningDocument withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -342,66 +446,105 @@ public class SigningDocument {
           // force use of static builder() method
         }
 
+        /**
+         * When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * User who created the signing document
+         */
         public Builder creatorId(@Nullable String creatorId) {
             this.creatorId = creatorId;
             return this;
         }
 
+        /**
+         * Message to signers
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * URL to download the signed document
+         */
         public Builder downloadUrl(@Nullable String downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }
 
+        /**
+         * Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder expiresAt(@Nullable OffsetDateTime expiresAt) {
             this.expiresAt = expiresAt;
             return this;
         }
 
+        /**
+         * Unique identifier for this signing document
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Document/envelope title
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sentAt(@Nullable OffsetDateTime sentAt) {
             this.sentAt = sentAt;
             return this;
         }
 
+        /**
+         * Current status of the signing document
+         */
         public Builder status(@Nullable SigningDocumentStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * If created from a template; points to SigningTemplate
+         */
         public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }
 
+        /**
+         * The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

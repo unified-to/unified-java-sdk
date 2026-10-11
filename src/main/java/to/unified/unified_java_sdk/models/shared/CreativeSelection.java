@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CreativeSelection
+ * 
+ * <p>Creative rotation strategy (LinkedIn creativeSelection)
+ */
 public class CreativeSelection {
 
     public static final CreativeSelection OPTIMIZED = new CreativeSelection("OPTIMIZED");

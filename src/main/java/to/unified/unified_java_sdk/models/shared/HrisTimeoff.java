@@ -21,12 +21,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisTimeoff {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
     private OffsetDateTime approvedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
     private String approverUserId;
@@ -36,12 +40,16 @@ public class HrisTimeoff {
     @JsonProperty("comments")
     private String comments;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -56,7 +64,9 @@ public class HrisTimeoff {
     @JsonProperty("duration_type")
     private DurationType durationType;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -71,7 +81,9 @@ public class HrisTimeoff {
     @JsonProperty("is_paid")
     private Boolean isPaid;
 
-
+    /**
+     * integration leave-type label before normalization
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_type")
     private String originalType;
@@ -86,7 +98,9 @@ public class HrisTimeoff {
     @JsonProperty("reason")
     private String reason;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -101,12 +115,16 @@ public class HrisTimeoff {
     @JsonProperty("type")
     private HrisTimeoffType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     @JsonProperty("user_id")
     private String userId;
 
@@ -161,10 +179,16 @@ public class HrisTimeoff {
             null, null, userId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> approvedAt() {
         return Optional.ofNullable(this.approvedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
     }
@@ -173,10 +197,16 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.comments);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -189,6 +219,9 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.durationType);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -201,6 +234,9 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.isPaid);
     }
 
+    /**
+     * integration leave-type label before normalization
+     */
     public Optional<String> originalType() {
         return Optional.ofNullable(this.originalType);
     }
@@ -213,6 +249,9 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.reason);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -225,10 +264,16 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     public String userId() {
         return this.userId;
     }
@@ -238,12 +283,18 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeoff withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public HrisTimeoff withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
@@ -256,12 +307,18 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisTimeoff withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeoff withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -280,6 +337,9 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeoff withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -298,6 +358,9 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * integration leave-type label before normalization
+     */
     public HrisTimeoff withOriginalType(@Nullable String originalType) {
         this.originalType = originalType;
         return this;
@@ -316,6 +379,9 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeoff withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -334,12 +400,18 @@ public class HrisTimeoff {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeoff withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * employee ID (reference to HrisEmployee)
+     */
     public HrisTimeoff withUserId(@Nonnull String userId) {
         this.userId = Utils.checkNotNull(userId, "userId");
         return this;
@@ -453,11 +525,17 @@ public class HrisTimeoff {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
@@ -468,11 +546,17 @@ public class HrisTimeoff {
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -488,6 +572,9 @@ public class HrisTimeoff {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -503,6 +590,9 @@ public class HrisTimeoff {
             return this;
         }
 
+        /**
+         * integration leave-type label before normalization
+         */
         public Builder originalType(@Nullable String originalType) {
             this.originalType = originalType;
             return this;
@@ -518,6 +608,9 @@ public class HrisTimeoff {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -533,11 +626,17 @@ public class HrisTimeoff {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * employee ID (reference to HrisEmployee)
+         */
         public Builder userId(@Nonnull String userId) {
             this.userId = Utils.checkNotNull(userId, "userId");
             return this;

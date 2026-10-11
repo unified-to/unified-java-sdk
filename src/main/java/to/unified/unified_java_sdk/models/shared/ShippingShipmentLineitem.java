@@ -16,37 +16,51 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingShipmentLineitem {
-
+    /**
+     * Unique identifier for this fulfillment line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Reference to the CommerceItem being fulfilled (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
 
-
+    /**
+     * Item name (for display)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_name")
     private String itemName;
 
-
+    /**
+     * Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variant_id")
     private String itemVariantId;
 
-
+    /**
+     * The order line being fulfilled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_lineitem_id")
     private String orderLineitemId;
 
-
+    /**
+     * Units fulfilled on this line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     private Double quantity;
 
-
+    /**
+     * Item SKU
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     private String sku;
@@ -75,30 +89,51 @@ public class ShippingShipmentLineitem {
             null);
     }
 
+    /**
+     * Unique identifier for this fulfillment line
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Reference to the CommerceItem being fulfilled (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
 
+    /**
+     * Item name (for display)
+     */
     public Optional<String> itemName() {
         return Optional.ofNullable(this.itemName);
     }
 
+    /**
+     * Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
+     */
     public Optional<String> itemVariantId() {
         return Optional.ofNullable(this.itemVariantId);
     }
 
+    /**
+     * The order line being fulfilled
+     */
     public Optional<String> orderLineitemId() {
         return Optional.ofNullable(this.orderLineitemId);
     }
 
+    /**
+     * Units fulfilled on this line
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
 
+    /**
+     * Item SKU
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -108,42 +143,63 @@ public class ShippingShipmentLineitem {
     }
 
 
+    /**
+     * Unique identifier for this fulfillment line
+     */
     public ShippingShipmentLineitem withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Reference to the CommerceItem being fulfilled (reference to CommerceItem)
+     */
     public ShippingShipmentLineitem withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
     }
 
 
+    /**
+     * Item name (for display)
+     */
     public ShippingShipmentLineitem withItemName(@Nullable String itemName) {
         this.itemName = itemName;
         return this;
     }
 
 
+    /**
+     * Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
+     */
     public ShippingShipmentLineitem withItemVariantId(@Nullable String itemVariantId) {
         this.itemVariantId = itemVariantId;
         return this;
     }
 
 
+    /**
+     * The order line being fulfilled
+     */
     public ShippingShipmentLineitem withOrderLineitemId(@Nullable String orderLineitemId) {
         this.orderLineitemId = orderLineitemId;
         return this;
     }
 
 
+    /**
+     * Units fulfilled on this line
+     */
     public ShippingShipmentLineitem withQuantity(@Nullable Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
 
+    /**
+     * Item SKU
+     */
     public ShippingShipmentLineitem withSku(@Nullable String sku) {
         this.sku = sku;
         return this;
@@ -210,36 +266,57 @@ public class ShippingShipmentLineitem {
           // force use of static builder() method
         }
 
+        /**
+         * Unique identifier for this fulfillment line
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Reference to the CommerceItem being fulfilled (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
+        /**
+         * Item name (for display)
+         */
         public Builder itemName(@Nullable String itemName) {
             this.itemName = itemName;
             return this;
         }
 
+        /**
+         * Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
+         */
         public Builder itemVariantId(@Nullable String itemVariantId) {
             this.itemVariantId = itemVariantId;
             return this;
         }
 
+        /**
+         * The order line being fulfilled
+         */
         public Builder orderLineitemId(@Nullable String orderLineitemId) {
             this.orderLineitemId = orderLineitemId;
             return this;
         }
 
+        /**
+         * Units fulfilled on this line
+         */
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
+        /**
+         * Item SKU
+         */
         public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;

@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AdsOrganization {
-
+    /**
+     * Integration-specific account number distinct from id (Microsoft AccountNumber)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number")
     private String accountNumber;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -71,7 +75,9 @@ public class AdsOrganization {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -109,10 +115,16 @@ public class AdsOrganization {
             null, null);
     }
 
+    /**
+     * Integration-specific account number distinct from id (Microsoft AccountNumber)
+     */
     public Optional<String> accountNumber() {
         return Optional.ofNullable(this.accountNumber);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -152,6 +164,9 @@ public class AdsOrganization {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -161,12 +176,18 @@ public class AdsOrganization {
     }
 
 
+    /**
+     * Integration-specific account number distinct from id (Microsoft AccountNumber)
+     */
     public AdsOrganization withAccountNumber(@Nullable String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsOrganization withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -224,6 +245,9 @@ public class AdsOrganization {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsOrganization withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -307,11 +331,17 @@ public class AdsOrganization {
           // force use of static builder() method
         }
 
+        /**
+         * Integration-specific account number distinct from id (Microsoft AccountNumber)
+         */
         public Builder accountNumber(@Nullable String accountNumber) {
             this.accountNumber = accountNumber;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -360,6 +390,9 @@ public class AdsOrganization {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

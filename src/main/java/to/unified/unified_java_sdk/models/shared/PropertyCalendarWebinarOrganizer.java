@@ -41,7 +41,9 @@ public class PropertyCalendarWebinarOrganizer {
     @JsonProperty("status")
     private PropertyCalendarWebinarOrganizerStatus status;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -87,6 +89,9 @@ public class PropertyCalendarWebinarOrganizer {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -126,6 +131,9 @@ public class PropertyCalendarWebinarOrganizer {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public PropertyCalendarWebinarOrganizer withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -212,6 +220,9 @@ public class PropertyCalendarWebinarOrganizer {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

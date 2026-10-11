@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class UcCall {
-
+    /**
+     * The contact ID for call (reference to UcContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
@@ -30,17 +32,30 @@ public class UcCall {
     @JsonProperty("contacts")
     private List<UcContact> contacts;
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("conversation_identifier")
+    private String conversationIdentifier;
 
+    /**
+     * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * Unique identifier for this call object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -55,12 +70,16 @@ public class UcCall {
     @JsonProperty("metadata")
     private List<UcMetadata> metadata;
 
-
+    /**
+     * The raw data returned by the integration for this call
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -77,12 +96,16 @@ public class UcCall {
     @JsonProperty("type")
     private UcCallType type;
 
-
+    /**
+     * The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -101,6 +124,7 @@ public class UcCall {
     public UcCall(
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("contacts") @Nullable List<UcContact> contacts,
+            @JsonProperty("conversation_identifier") @Nullable String conversationIdentifier,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
@@ -116,6 +140,7 @@ public class UcCall {
             @JsonProperty("user_phone") @Nullable String userPhone) {
         this.contactId = contactId;
         this.contacts = contacts;
+        this.conversationIdentifier = conversationIdentifier;
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.id = id;
@@ -136,9 +161,13 @@ public class UcCall {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
+    /**
+     * The contact ID for call (reference to UcContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -147,14 +176,30 @@ public class UcCall {
         return Optional.ofNullable(this.contacts);
     }
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    public Optional<String> conversationIdentifier() {
+        return Optional.ofNullable(this.conversationIdentifier);
+    }
+
+    /**
+     * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * Unique identifier for this call object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -167,10 +212,16 @@ public class UcCall {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The raw data returned by the integration for this call
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -186,10 +237,16 @@ public class UcCall {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -207,6 +264,9 @@ public class UcCall {
     }
 
 
+    /**
+     * The contact ID for call (reference to UcContact)
+     */
     public UcCall withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -219,18 +279,36 @@ public class UcCall {
     }
 
 
+    /**
+     * opaque identifier shared across legs of one interaction
+     */
+    public UcCall withConversationIdentifier(@Nullable String conversationIdentifier) {
+        this.conversationIdentifier = conversationIdentifier;
+        return this;
+    }
+
+
+    /**
+     * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcCall withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcCall withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this call object
+     */
     public UcCall withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -249,12 +327,18 @@ public class UcCall {
     }
 
 
+    /**
+     * The raw data returned by the integration for this call
+     */
     public UcCall withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcCall withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -276,12 +360,18 @@ public class UcCall {
     }
 
 
+    /**
+     * The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public UcCall withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public UcCall withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -312,6 +402,7 @@ public class UcCall {
         return 
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
+            Utils.enhancedDeepEquals(this.conversationIdentifier, other.conversationIdentifier) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -330,11 +421,12 @@ public class UcCall {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contactId, contacts, createdAt,
-            endAt, id, isPrivate,
-            metadata, raw, startAt,
-            telephone, type, updatedAt,
-            userId, userName, userPhone);
+            contactId, contacts, conversationIdentifier,
+            createdAt, endAt, id,
+            isPrivate, metadata, raw,
+            startAt, telephone, type,
+            updatedAt, userId, userName,
+            userPhone);
     }
     
     @Override
@@ -342,6 +434,7 @@ public class UcCall {
         return Utils.toString(UcCall.class,
                 "contactId", contactId,
                 "contacts", contacts,
+                "conversationIdentifier", conversationIdentifier,
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "id", id,
@@ -363,6 +456,8 @@ public class UcCall {
         private String contactId;
 
         private List<UcContact> contacts;
+
+        private String conversationIdentifier;
 
         private OffsetDateTime createdAt;
 
@@ -394,6 +489,9 @@ public class UcCall {
           // force use of static builder() method
         }
 
+        /**
+         * The contact ID for call (reference to UcContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
@@ -404,16 +502,33 @@ public class UcCall {
             return this;
         }
 
+        /**
+         * opaque identifier shared across legs of one interaction
+         */
+        public Builder conversationIdentifier(@Nullable String conversationIdentifier) {
+            this.conversationIdentifier = conversationIdentifier;
+            return this;
+        }
+
+        /**
+         * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * Unique identifier for this call object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -429,11 +544,17 @@ public class UcCall {
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this call
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -452,11 +573,17 @@ public class UcCall {
             return this;
         }
 
+        /**
+         * The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
@@ -474,11 +601,12 @@ public class UcCall {
 
         public UcCall build() {
             return new UcCall(
-                contactId, contacts, createdAt,
-                endAt, id, isPrivate,
-                metadata, raw, startAt,
-                telephone, type, updatedAt,
-                userId, userName, userPhone);
+                contactId, contacts, conversationIdentifier,
+                createdAt, endAt, id,
+                isPrivate, metadata, raw,
+                startAt, telephone, type,
+                updatedAt, userId, userName,
+                userPhone);
         }
 
     }

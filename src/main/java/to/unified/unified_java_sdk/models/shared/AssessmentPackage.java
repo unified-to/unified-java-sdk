@@ -33,37 +33,51 @@ public class AssessmentPackage {
     @JsonProperty("aliases")
     private List<String> aliases;
 
-
+    /**
+     * Connection ID that this package belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_id")
     private String connectionId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Detailed description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Whether provider redirects user to complete assessment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_redirect_url")
     private Boolean hasRedirectUrl;
 
-
+    /**
+     * Where provider redirects user after completion
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_target_url")
     private Boolean hasTargetUrl;
 
-
+    /**
+     * Unique identifier for the assessment package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * URL to find additional information about this package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info_url")
     private String infoUrl;
@@ -75,17 +89,23 @@ public class AssessmentPackage {
     @JsonProperty("integration_types")
     private List<String> integrationTypes;
 
-
+    /**
+     * Maximum possible score if this assessment returns a score
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_score")
     private Double maxScore;
 
-
+    /**
+     * Name of the assessment package
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Whether IP address is required
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needs_ip_address")
     private Boolean needsIpAddress;
@@ -118,12 +138,16 @@ public class AssessmentPackage {
     @JsonProperty("type")
     private AssessmentPackageType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Workspace ID that this package belongs to (reference to KmsSpace)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace_id")
     private String workspaceId;
@@ -189,30 +213,51 @@ public class AssessmentPackage {
         return Optional.ofNullable(this.aliases);
     }
 
+    /**
+     * Connection ID that this package belongs to
+     */
     public Optional<String> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Detailed description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Whether provider redirects user to complete assessment
+     */
     public Optional<Boolean> hasRedirectUrl() {
         return Optional.ofNullable(this.hasRedirectUrl);
     }
 
+    /**
+     * Where provider redirects user after completion
+     */
     public Optional<Boolean> hasTargetUrl() {
         return Optional.ofNullable(this.hasTargetUrl);
     }
 
+    /**
+     * Unique identifier for the assessment package
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * URL to find additional information about this package
+     */
     public Optional<String> infoUrl() {
         return Optional.ofNullable(this.infoUrl);
     }
@@ -224,14 +269,23 @@ public class AssessmentPackage {
         return Optional.ofNullable(this.integrationTypes);
     }
 
+    /**
+     * Maximum possible score if this assessment returns a score
+     */
     public Optional<Double> maxScore() {
         return Optional.ofNullable(this.maxScore);
     }
 
+    /**
+     * Name of the assessment package
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Whether IP address is required
+     */
     public Optional<Boolean> needsIpAddress() {
         return Optional.ofNullable(this.needsIpAddress);
     }
@@ -262,10 +316,16 @@ public class AssessmentPackage {
         return this.type;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Workspace ID that this package belongs to (reference to KmsSpace)
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -284,42 +344,63 @@ public class AssessmentPackage {
     }
 
 
+    /**
+     * Connection ID that this package belongs to
+     */
     public AssessmentPackage withConnectionId(@Nullable String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentPackage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Detailed description
+     */
     public AssessmentPackage withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Whether provider redirects user to complete assessment
+     */
     public AssessmentPackage withHasRedirectUrl(@Nullable Boolean hasRedirectUrl) {
         this.hasRedirectUrl = hasRedirectUrl;
         return this;
     }
 
 
+    /**
+     * Where provider redirects user after completion
+     */
     public AssessmentPackage withHasTargetUrl(@Nullable Boolean hasTargetUrl) {
         this.hasTargetUrl = hasTargetUrl;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the assessment package
+     */
     public AssessmentPackage withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * URL to find additional information about this package
+     */
     public AssessmentPackage withInfoUrl(@Nullable String infoUrl) {
         this.infoUrl = infoUrl;
         return this;
@@ -335,18 +416,27 @@ public class AssessmentPackage {
     }
 
 
+    /**
+     * Maximum possible score if this assessment returns a score
+     */
     public AssessmentPackage withMaxScore(@Nullable Double maxScore) {
         this.maxScore = maxScore;
         return this;
     }
 
 
+    /**
+     * Name of the assessment package
+     */
     public AssessmentPackage withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Whether IP address is required
+     */
     public AssessmentPackage withNeedsIpAddress(@Nullable Boolean needsIpAddress) {
         this.needsIpAddress = needsIpAddress;
         return this;
@@ -389,12 +479,18 @@ public class AssessmentPackage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentPackage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Workspace ID that this package belongs to (reference to KmsSpace)
+     */
     public AssessmentPackage withWorkspaceId(@Nullable String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -521,36 +617,57 @@ public class AssessmentPackage {
             return this;
         }
 
+        /**
+         * Connection ID that this package belongs to
+         */
         public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Detailed description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Whether provider redirects user to complete assessment
+         */
         public Builder hasRedirectUrl(@Nullable Boolean hasRedirectUrl) {
             this.hasRedirectUrl = hasRedirectUrl;
             return this;
         }
 
+        /**
+         * Where provider redirects user after completion
+         */
         public Builder hasTargetUrl(@Nullable Boolean hasTargetUrl) {
             this.hasTargetUrl = hasTargetUrl;
             return this;
         }
 
+        /**
+         * Unique identifier for the assessment package
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * URL to find additional information about this package
+         */
         public Builder infoUrl(@Nullable String infoUrl) {
             this.infoUrl = infoUrl;
             return this;
@@ -564,16 +681,25 @@ public class AssessmentPackage {
             return this;
         }
 
+        /**
+         * Maximum possible score if this assessment returns a score
+         */
         public Builder maxScore(@Nullable Double maxScore) {
             this.maxScore = maxScore;
             return this;
         }
 
+        /**
+         * Name of the assessment package
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Whether IP address is required
+         */
         public Builder needsIpAddress(@Nullable Boolean needsIpAddress) {
             this.needsIpAddress = needsIpAddress;
             return this;
@@ -610,11 +736,17 @@ public class AssessmentPackage {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Workspace ID that this package belongs to (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;

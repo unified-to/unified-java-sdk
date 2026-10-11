@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AtsScorecardQuestion {
-
+    /**
+     * Candidate’s answer to the question
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     private String answer;
@@ -26,7 +28,9 @@ public class AtsScorecardQuestion {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The question to ask the interviewer
+     */
     @JsonProperty("text")
     private String text;
 
@@ -46,6 +50,9 @@ public class AtsScorecardQuestion {
         this(null, null, text);
     }
 
+    /**
+     * Candidate’s answer to the question
+     */
     public Optional<String> answer() {
         return Optional.ofNullable(this.answer);
     }
@@ -54,6 +61,9 @@ public class AtsScorecardQuestion {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The question to ask the interviewer
+     */
     public String text() {
         return this.text;
     }
@@ -63,6 +73,9 @@ public class AtsScorecardQuestion {
     }
 
 
+    /**
+     * Candidate’s answer to the question
+     */
     public AtsScorecardQuestion withAnswer(@Nullable String answer) {
         this.answer = answer;
         return this;
@@ -75,6 +88,9 @@ public class AtsScorecardQuestion {
     }
 
 
+    /**
+     * The question to ask the interviewer
+     */
     public AtsScorecardQuestion withText(@Nonnull String text) {
         this.text = Utils.checkNotNull(text, "text");
         return this;
@@ -123,6 +139,9 @@ public class AtsScorecardQuestion {
           // force use of static builder() method
         }
 
+        /**
+         * Candidate’s answer to the question
+         */
         public Builder answer(@Nullable String answer) {
             this.answer = answer;
             return this;
@@ -133,6 +152,9 @@ public class AtsScorecardQuestion {
             return this;
         }
 
+        /**
+         * The question to ask the interviewer
+         */
         public Builder text(@Nonnull String text) {
             this.text = Utils.checkNotNull(text, "text");
             return this;

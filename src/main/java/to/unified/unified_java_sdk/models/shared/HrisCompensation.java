@@ -31,7 +31,9 @@ public class HrisCompensation {
     @JsonProperty("frequency")
     private HrisCompensationFrequency frequency;
 
-
+    /**
+     * (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -79,6 +81,9 @@ public class HrisCompensation {
         return Optional.ofNullable(this.frequency);
     }
 
+    /**
+     * (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -114,6 +119,9 @@ public class HrisCompensation {
     }
 
 
+    /**
+     * (reference to HrisGroup)
+     */
     public HrisCompensation withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -202,6 +210,9 @@ public class HrisCompensation {
             return this;
         }
 
+        /**
+         * (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;

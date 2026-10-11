@@ -24,12 +24,16 @@ public class GenaiEmbedding {
     @JsonProperty("content")
     private List<GenaiEmbeddingContent> content;
 
-
+    /**
+     * 256, 512, 1024, and 1536
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     private Double dimension;
 
-
+    /**
+     * JSON string based off of the format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddings")
     private String embeddings;
@@ -64,7 +68,9 @@ public class GenaiEmbedding {
     @JsonProperty("tokens_used")
     private Double tokensUsed;
 
-
+    /**
+     * 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
@@ -104,10 +110,16 @@ public class GenaiEmbedding {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * 256, 512, 1024, and 1536
+     */
     public Optional<Double> dimension() {
         return Optional.ofNullable(this.dimension);
     }
 
+    /**
+     * JSON string based off of the format
+     */
     public Optional<String> embeddings() {
         return Optional.ofNullable(this.embeddings);
     }
@@ -136,6 +148,9 @@ public class GenaiEmbedding {
         return Optional.ofNullable(this.tokensUsed);
     }
 
+    /**
+     * 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -151,12 +166,18 @@ public class GenaiEmbedding {
     }
 
 
+    /**
+     * 256, 512, 1024, and 1536
+     */
     public GenaiEmbedding withDimension(@Nullable Double dimension) {
         this.dimension = dimension;
         return this;
     }
 
 
+    /**
+     * JSON string based off of the format
+     */
     public GenaiEmbedding withEmbeddings(@Nullable String embeddings) {
         this.embeddings = embeddings;
         return this;
@@ -199,6 +220,9 @@ public class GenaiEmbedding {
     }
 
 
+    /**
+     * 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
+     */
     public GenaiEmbedding withType(@Nullable String type) {
         this.type = type;
         return this;
@@ -283,11 +307,17 @@ public class GenaiEmbedding {
             return this;
         }
 
+        /**
+         * 256, 512, 1024, and 1536
+         */
         public Builder dimension(@Nullable Double dimension) {
             this.dimension = dimension;
             return this;
         }
 
+        /**
+         * JSON string based off of the format
+         */
         public Builder embeddings(@Nullable String embeddings) {
             this.embeddings = embeddings;
             return this;
@@ -323,6 +353,9 @@ public class GenaiEmbedding {
             return this;
         }
 
+        /**
+         * 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;

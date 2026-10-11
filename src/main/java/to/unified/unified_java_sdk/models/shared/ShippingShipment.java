@@ -21,17 +21,24 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingShipment {
-
+    /**
+     * Reference to the carrier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_id")
     private String carrierId;
 
-
+    /**
+     * Human-readable carrier/provider name when there is no carrier record to reference (e.g.
+     * commerce-platform fulfillments)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_name")
     private String carrierName;
 
-
+    /**
+     * The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -50,7 +57,9 @@ public class ShippingShipment {
     @JsonProperty("from_address")
     private PropertyShippingShipmentFromAddress fromAddress;
 
-
+    /**
+     * Unique identifier for this shipment object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -62,32 +71,44 @@ public class ShippingShipment {
     @JsonProperty("insurance")
     private PropertyShippingShipmentInsurance insurance;
 
-
+    /**
+     * Adult signature required
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_adult_signature_required")
     private Boolean isAdultSignatureRequired;
 
-
+    /**
+     * Whether shipment is international
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_international")
     private Boolean isInternational;
 
-
+    /**
+     * Whether delivery is guaranteed (from rate)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_rate_guaranteed")
     private Boolean isRateGuaranteed;
 
-
+    /**
+     * Whether this is a return shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_return")
     private Boolean isReturn;
 
-
+    /**
+     * Signature required on delivery
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_signature_required")
     private Boolean isSignatureRequired;
 
-
+    /**
+     * Optional reference to the shipping label
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_id")
     private String labelId;
@@ -99,17 +120,23 @@ public class ShippingShipment {
     @JsonProperty("lineitems")
     private List<ShippingShipmentLineitem> lineitems;
 
-
+    /**
+     * Reference to commerce_order or accounting_order
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     private String orderId;
 
-
+    /**
+     * ref -&gt; accounting Organization this shipment belongs to (multi-company ERPs)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * Reference to original shipment if return; points to ShippingShipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_shipment_id")
     private String originalShipmentId;
@@ -121,42 +148,58 @@ public class ShippingShipment {
     @JsonProperty("packages")
     private List<ShippingPackage> packages;
 
-
+    /**
+     * The rate amount used (may differ from shipping_cost due to adjustments)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_amount")
     private Double rateAmount;
 
-
+    /**
+     * Currency for rate_amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_currency")
     private String rateCurrency;
 
-
+    /**
+     * Estimated delivery days from the rate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_estimated_days")
     private Double rateEstimatedDays;
 
-
+    /**
+     * Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_estimated_delivery_at")
     private OffsetDateTime rateEstimatedDeliveryAt;
 
-
+    /**
+     * Optional reference to the selected rate (for traceability)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_id")
     private String rateId;
 
-
+    /**
+     * Service name from the rate (e.g., "Priority Mail")
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_service_name")
     private String rateServiceName;
 
-
+    /**
+     * The raw data returned by the integration for this shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Customer reference number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     private String referenceNumber;
@@ -168,27 +211,37 @@ public class ShippingShipment {
     @JsonProperty("return_address")
     private PropertyShippingShipmentReturnAddress returnAddress;
 
-
+    /**
+     * RMA number if return shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_authorization_number")
     private String returnAuthorizationNumber;
 
-
+    /**
+     * Reason for return
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_reason")
     private String returnReason;
 
-
+    /**
+     * Type of return
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_type")
     private ReturnType returnType;
 
-
+    /**
+     * Code for the shipping service used
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_code")
     private String serviceCode;
 
-
+    /**
+     * When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_at")
     private OffsetDateTime shippedAt;
@@ -200,7 +253,9 @@ public class ShippingShipment {
     @JsonProperty("special_instructions")
     private List<String> specialInstructions;
 
-
+    /**
+     * Current status of the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private ShippingShipmentStatus status;
@@ -212,27 +267,37 @@ public class ShippingShipment {
     @JsonProperty("to_address")
     private PropertyShippingShipmentToAddress toAddress;
 
-
+    /**
+     * Optional reference to the tracking information
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_id")
     private String trackingId;
 
-
+    /**
+     * Carrier tracking URL for this shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_url")
     private String trackingUrl;
 
-
+    /**
+     * The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Origin warehouselocation ID; points to CommerceLocation
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse_location_id")
     private String warehouseLocationId;
 
-
+    /**
+     * Origin warehouse location name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse_location_name")
     private String warehouseLocationName;
@@ -338,14 +403,24 @@ public class ShippingShipment {
             null);
     }
 
+    /**
+     * Reference to the carrier
+     */
     public Optional<String> carrierId() {
         return Optional.ofNullable(this.carrierId);
     }
 
+    /**
+     * Human-readable carrier/provider name when there is no carrier record to reference (e.g.
+     * commerce-platform fulfillments)
+     */
     public Optional<String> carrierName() {
         return Optional.ofNullable(this.carrierName);
     }
 
+    /**
+     * The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -364,6 +439,9 @@ public class ShippingShipment {
         return Optional.ofNullable(this.fromAddress);
     }
 
+    /**
+     * Unique identifier for this shipment object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -375,26 +453,44 @@ public class ShippingShipment {
         return Optional.ofNullable(this.insurance);
     }
 
+    /**
+     * Adult signature required
+     */
     public Optional<Boolean> isAdultSignatureRequired() {
         return Optional.ofNullable(this.isAdultSignatureRequired);
     }
 
+    /**
+     * Whether shipment is international
+     */
     public Optional<Boolean> isInternational() {
         return Optional.ofNullable(this.isInternational);
     }
 
+    /**
+     * Whether delivery is guaranteed (from rate)
+     */
     public Optional<Boolean> isRateGuaranteed() {
         return Optional.ofNullable(this.isRateGuaranteed);
     }
 
+    /**
+     * Whether this is a return shipment
+     */
     public Optional<Boolean> isReturn() {
         return Optional.ofNullable(this.isReturn);
     }
 
+    /**
+     * Signature required on delivery
+     */
     public Optional<Boolean> isSignatureRequired() {
         return Optional.ofNullable(this.isSignatureRequired);
     }
 
+    /**
+     * Optional reference to the shipping label
+     */
     public Optional<String> labelId() {
         return Optional.ofNullable(this.labelId);
     }
@@ -406,14 +502,23 @@ public class ShippingShipment {
         return Optional.ofNullable(this.lineitems);
     }
 
+    /**
+     * Reference to commerce_order or accounting_order
+     */
     public Optional<String> orderId() {
         return Optional.ofNullable(this.orderId);
     }
 
+    /**
+     * ref -&gt; accounting Organization this shipment belongs to (multi-company ERPs)
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * Reference to original shipment if return; points to ShippingShipment
+     */
     public Optional<String> originalShipmentId() {
         return Optional.ofNullable(this.originalShipmentId);
     }
@@ -425,34 +530,58 @@ public class ShippingShipment {
         return Optional.ofNullable(this.packages);
     }
 
+    /**
+     * The rate amount used (may differ from shipping_cost due to adjustments)
+     */
     public Optional<Double> rateAmount() {
         return Optional.ofNullable(this.rateAmount);
     }
 
+    /**
+     * Currency for rate_amount
+     */
     public Optional<String> rateCurrency() {
         return Optional.ofNullable(this.rateCurrency);
     }
 
+    /**
+     * Estimated delivery days from the rate
+     */
     public Optional<Double> rateEstimatedDays() {
         return Optional.ofNullable(this.rateEstimatedDays);
     }
 
+    /**
+     * Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> rateEstimatedDeliveryAt() {
         return Optional.ofNullable(this.rateEstimatedDeliveryAt);
     }
 
+    /**
+     * Optional reference to the selected rate (for traceability)
+     */
     public Optional<String> rateId() {
         return Optional.ofNullable(this.rateId);
     }
 
+    /**
+     * Service name from the rate (e.g., "Priority Mail")
+     */
     public Optional<String> rateServiceName() {
         return Optional.ofNullable(this.rateServiceName);
     }
 
+    /**
+     * The raw data returned by the integration for this shipment
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Customer reference number
+     */
     public Optional<String> referenceNumber() {
         return Optional.ofNullable(this.referenceNumber);
     }
@@ -464,22 +593,37 @@ public class ShippingShipment {
         return Optional.ofNullable(this.returnAddress);
     }
 
+    /**
+     * RMA number if return shipment
+     */
     public Optional<String> returnAuthorizationNumber() {
         return Optional.ofNullable(this.returnAuthorizationNumber);
     }
 
+    /**
+     * Reason for return
+     */
     public Optional<String> returnReason() {
         return Optional.ofNullable(this.returnReason);
     }
 
+    /**
+     * Type of return
+     */
     public Optional<ReturnType> returnType() {
         return Optional.ofNullable(this.returnType);
     }
 
+    /**
+     * Code for the shipping service used
+     */
     public Optional<String> serviceCode() {
         return Optional.ofNullable(this.serviceCode);
     }
 
+    /**
+     * When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> shippedAt() {
         return Optional.ofNullable(this.shippedAt);
     }
@@ -491,6 +635,9 @@ public class ShippingShipment {
         return Optional.ofNullable(this.specialInstructions);
     }
 
+    /**
+     * Current status of the shipment
+     */
     public Optional<ShippingShipmentStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -502,22 +649,37 @@ public class ShippingShipment {
         return Optional.ofNullable(this.toAddress);
     }
 
+    /**
+     * Optional reference to the tracking information
+     */
     public Optional<String> trackingId() {
         return Optional.ofNullable(this.trackingId);
     }
 
+    /**
+     * Carrier tracking URL for this shipment
+     */
     public Optional<String> trackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }
 
+    /**
+     * The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Origin warehouselocation ID; points to CommerceLocation
+     */
     public Optional<String> warehouseLocationId() {
         return Optional.ofNullable(this.warehouseLocationId);
     }
 
+    /**
+     * Origin warehouse location name
+     */
     public Optional<String> warehouseLocationName() {
         return Optional.ofNullable(this.warehouseLocationName);
     }
@@ -527,18 +689,28 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Reference to the carrier
+     */
     public ShippingShipment withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
 
 
+    /**
+     * Human-readable carrier/provider name when there is no carrier record to reference (e.g.
+     * commerce-platform fulfillments)
+     */
     public ShippingShipment withCarrierName(@Nullable String carrierName) {
         this.carrierName = carrierName;
         return this;
     }
 
 
+    /**
+     * The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingShipment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -563,6 +735,9 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Unique identifier for this shipment object
+     */
     public ShippingShipment withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -578,36 +753,54 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Adult signature required
+     */
     public ShippingShipment withIsAdultSignatureRequired(@Nullable Boolean isAdultSignatureRequired) {
         this.isAdultSignatureRequired = isAdultSignatureRequired;
         return this;
     }
 
 
+    /**
+     * Whether shipment is international
+     */
     public ShippingShipment withIsInternational(@Nullable Boolean isInternational) {
         this.isInternational = isInternational;
         return this;
     }
 
 
+    /**
+     * Whether delivery is guaranteed (from rate)
+     */
     public ShippingShipment withIsRateGuaranteed(@Nullable Boolean isRateGuaranteed) {
         this.isRateGuaranteed = isRateGuaranteed;
         return this;
     }
 
 
+    /**
+     * Whether this is a return shipment
+     */
     public ShippingShipment withIsReturn(@Nullable Boolean isReturn) {
         this.isReturn = isReturn;
         return this;
     }
 
 
+    /**
+     * Signature required on delivery
+     */
     public ShippingShipment withIsSignatureRequired(@Nullable Boolean isSignatureRequired) {
         this.isSignatureRequired = isSignatureRequired;
         return this;
     }
 
 
+    /**
+     * Optional reference to the shipping label
+     */
     public ShippingShipment withLabelId(@Nullable String labelId) {
         this.labelId = labelId;
         return this;
@@ -623,18 +816,27 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Reference to commerce_order or accounting_order
+     */
     public ShippingShipment withOrderId(@Nullable String orderId) {
         this.orderId = orderId;
         return this;
     }
 
 
+    /**
+     * ref -&gt; accounting Organization this shipment belongs to (multi-company ERPs)
+     */
     public ShippingShipment withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * Reference to original shipment if return; points to ShippingShipment
+     */
     public ShippingShipment withOriginalShipmentId(@Nullable String originalShipmentId) {
         this.originalShipmentId = originalShipmentId;
         return this;
@@ -650,48 +852,72 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * The rate amount used (may differ from shipping_cost due to adjustments)
+     */
     public ShippingShipment withRateAmount(@Nullable Double rateAmount) {
         this.rateAmount = rateAmount;
         return this;
     }
 
 
+    /**
+     * Currency for rate_amount
+     */
     public ShippingShipment withRateCurrency(@Nullable String rateCurrency) {
         this.rateCurrency = rateCurrency;
         return this;
     }
 
 
+    /**
+     * Estimated delivery days from the rate
+     */
     public ShippingShipment withRateEstimatedDays(@Nullable Double rateEstimatedDays) {
         this.rateEstimatedDays = rateEstimatedDays;
         return this;
     }
 
 
+    /**
+     * Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingShipment withRateEstimatedDeliveryAt(@Nullable OffsetDateTime rateEstimatedDeliveryAt) {
         this.rateEstimatedDeliveryAt = rateEstimatedDeliveryAt;
         return this;
     }
 
 
+    /**
+     * Optional reference to the selected rate (for traceability)
+     */
     public ShippingShipment withRateId(@Nullable String rateId) {
         this.rateId = rateId;
         return this;
     }
 
 
+    /**
+     * Service name from the rate (e.g., "Priority Mail")
+     */
     public ShippingShipment withRateServiceName(@Nullable String rateServiceName) {
         this.rateServiceName = rateServiceName;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this shipment
+     */
     public ShippingShipment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Customer reference number
+     */
     public ShippingShipment withReferenceNumber(@Nullable String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -707,30 +933,45 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * RMA number if return shipment
+     */
     public ShippingShipment withReturnAuthorizationNumber(@Nullable String returnAuthorizationNumber) {
         this.returnAuthorizationNumber = returnAuthorizationNumber;
         return this;
     }
 
 
+    /**
+     * Reason for return
+     */
     public ShippingShipment withReturnReason(@Nullable String returnReason) {
         this.returnReason = returnReason;
         return this;
     }
 
 
+    /**
+     * Type of return
+     */
     public ShippingShipment withReturnType(@Nullable ReturnType returnType) {
         this.returnType = returnType;
         return this;
     }
 
 
+    /**
+     * Code for the shipping service used
+     */
     public ShippingShipment withServiceCode(@Nullable String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
 
+    /**
+     * When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingShipment withShippedAt(@Nullable OffsetDateTime shippedAt) {
         this.shippedAt = shippedAt;
         return this;
@@ -746,6 +987,9 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Current status of the shipment
+     */
     public ShippingShipment withStatus(@Nullable ShippingShipmentStatus status) {
         this.status = status;
         return this;
@@ -761,30 +1005,45 @@ public class ShippingShipment {
     }
 
 
+    /**
+     * Optional reference to the tracking information
+     */
     public ShippingShipment withTrackingId(@Nullable String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
 
 
+    /**
+     * Carrier tracking URL for this shipment
+     */
     public ShippingShipment withTrackingUrl(@Nullable String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
 
 
+    /**
+     * The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingShipment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Origin warehouselocation ID; points to CommerceLocation
+     */
     public ShippingShipment withWarehouseLocationId(@Nullable String warehouseLocationId) {
         this.warehouseLocationId = warehouseLocationId;
         return this;
     }
 
 
+    /**
+     * Origin warehouse location name
+     */
     public ShippingShipment withWarehouseLocationName(@Nullable String warehouseLocationName) {
         this.warehouseLocationName = warehouseLocationName;
         return this;
@@ -994,16 +1253,26 @@ public class ShippingShipment {
           // force use of static builder() method
         }
 
+        /**
+         * Reference to the carrier
+         */
         public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
             return this;
         }
 
+        /**
+         * Human-readable carrier/provider name when there is no carrier record to reference (e.g.
+         * commerce-platform fulfillments)
+         */
         public Builder carrierName(@Nullable String carrierName) {
             this.carrierName = carrierName;
             return this;
         }
 
+        /**
+         * The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -1025,6 +1294,9 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Unique identifier for this shipment object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -1038,31 +1310,49 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Adult signature required
+         */
         public Builder isAdultSignatureRequired(@Nullable Boolean isAdultSignatureRequired) {
             this.isAdultSignatureRequired = isAdultSignatureRequired;
             return this;
         }
 
+        /**
+         * Whether shipment is international
+         */
         public Builder isInternational(@Nullable Boolean isInternational) {
             this.isInternational = isInternational;
             return this;
         }
 
+        /**
+         * Whether delivery is guaranteed (from rate)
+         */
         public Builder isRateGuaranteed(@Nullable Boolean isRateGuaranteed) {
             this.isRateGuaranteed = isRateGuaranteed;
             return this;
         }
 
+        /**
+         * Whether this is a return shipment
+         */
         public Builder isReturn(@Nullable Boolean isReturn) {
             this.isReturn = isReturn;
             return this;
         }
 
+        /**
+         * Signature required on delivery
+         */
         public Builder isSignatureRequired(@Nullable Boolean isSignatureRequired) {
             this.isSignatureRequired = isSignatureRequired;
             return this;
         }
 
+        /**
+         * Optional reference to the shipping label
+         */
         public Builder labelId(@Nullable String labelId) {
             this.labelId = labelId;
             return this;
@@ -1076,16 +1366,25 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Reference to commerce_order or accounting_order
+         */
         public Builder orderId(@Nullable String orderId) {
             this.orderId = orderId;
             return this;
         }
 
+        /**
+         * ref -&gt; accounting Organization this shipment belongs to (multi-company ERPs)
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * Reference to original shipment if return; points to ShippingShipment
+         */
         public Builder originalShipmentId(@Nullable String originalShipmentId) {
             this.originalShipmentId = originalShipmentId;
             return this;
@@ -1099,41 +1398,65 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * The rate amount used (may differ from shipping_cost due to adjustments)
+         */
         public Builder rateAmount(@Nullable Double rateAmount) {
             this.rateAmount = rateAmount;
             return this;
         }
 
+        /**
+         * Currency for rate_amount
+         */
         public Builder rateCurrency(@Nullable String rateCurrency) {
             this.rateCurrency = rateCurrency;
             return this;
         }
 
+        /**
+         * Estimated delivery days from the rate
+         */
         public Builder rateEstimatedDays(@Nullable Double rateEstimatedDays) {
             this.rateEstimatedDays = rateEstimatedDays;
             return this;
         }
 
+        /**
+         * Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder rateEstimatedDeliveryAt(@Nullable OffsetDateTime rateEstimatedDeliveryAt) {
             this.rateEstimatedDeliveryAt = rateEstimatedDeliveryAt;
             return this;
         }
 
+        /**
+         * Optional reference to the selected rate (for traceability)
+         */
         public Builder rateId(@Nullable String rateId) {
             this.rateId = rateId;
             return this;
         }
 
+        /**
+         * Service name from the rate (e.g., "Priority Mail")
+         */
         public Builder rateServiceName(@Nullable String rateServiceName) {
             this.rateServiceName = rateServiceName;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this shipment
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Customer reference number
+         */
         public Builder referenceNumber(@Nullable String referenceNumber) {
             this.referenceNumber = referenceNumber;
             return this;
@@ -1147,26 +1470,41 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * RMA number if return shipment
+         */
         public Builder returnAuthorizationNumber(@Nullable String returnAuthorizationNumber) {
             this.returnAuthorizationNumber = returnAuthorizationNumber;
             return this;
         }
 
+        /**
+         * Reason for return
+         */
         public Builder returnReason(@Nullable String returnReason) {
             this.returnReason = returnReason;
             return this;
         }
 
+        /**
+         * Type of return
+         */
         public Builder returnType(@Nullable ReturnType returnType) {
             this.returnType = returnType;
             return this;
         }
 
+        /**
+         * Code for the shipping service used
+         */
         public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
 
+        /**
+         * When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder shippedAt(@Nullable OffsetDateTime shippedAt) {
             this.shippedAt = shippedAt;
             return this;
@@ -1180,6 +1518,9 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Current status of the shipment
+         */
         public Builder status(@Nullable ShippingShipmentStatus status) {
             this.status = status;
             return this;
@@ -1193,26 +1534,41 @@ public class ShippingShipment {
             return this;
         }
 
+        /**
+         * Optional reference to the tracking information
+         */
         public Builder trackingId(@Nullable String trackingId) {
             this.trackingId = trackingId;
             return this;
         }
 
+        /**
+         * Carrier tracking URL for this shipment
+         */
         public Builder trackingUrl(@Nullable String trackingUrl) {
             this.trackingUrl = trackingUrl;
             return this;
         }
 
+        /**
+         * The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Origin warehouselocation ID; points to CommerceLocation
+         */
         public Builder warehouseLocationId(@Nullable String warehouseLocationId) {
             this.warehouseLocationId = warehouseLocationId;
             return this;
         }
 
+        /**
+         * Origin warehouse location name
+         */
         public Builder warehouseLocationName(@Nullable String warehouseLocationName) {
             this.warehouseLocationName = warehouseLocationName;
             return this;

@@ -25,17 +25,23 @@ public class PerformanceGoal {
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * pointer to the Performance Cycle object (goal cycle or timeframe)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle_id")
     private String cycleId;
@@ -45,7 +51,9 @@ public class PerformanceGoal {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
@@ -67,12 +75,16 @@ public class PerformanceGoal {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * id of the parent goal, for goal alignment / OKR trees
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
-
+    /**
+     * progress percentage from 0 to 100
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress")
     private Double progress;
@@ -82,7 +94,9 @@ public class PerformanceGoal {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -97,7 +111,9 @@ public class PerformanceGoal {
     @JsonProperty("type")
     private PerformanceGoalSchemasType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -109,7 +125,9 @@ public class PerformanceGoal {
     @JsonProperty("user_ids")
     private List<String> userIds;
 
-
+    /**
+     * the weight of this goal when the provider weighs goals in reviews
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     private Double weight;
@@ -167,14 +185,23 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * pointer to the Performance Cycle object (goal cycle or timeframe)
+     */
     public Optional<String> cycleId() {
         return Optional.ofNullable(this.cycleId);
     }
@@ -183,6 +210,9 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
@@ -202,10 +232,16 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * id of the parent goal, for goal alignment / OKR trees
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
 
+    /**
+     * progress percentage from 0 to 100
+     */
     public Optional<Double> progress() {
         return Optional.ofNullable(this.progress);
     }
@@ -214,6 +250,9 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -226,6 +265,9 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -237,6 +279,9 @@ public class PerformanceGoal {
         return Optional.ofNullable(this.userIds);
     }
 
+    /**
+     * the weight of this goal when the provider weighs goals in reviews
+     */
     public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -252,18 +297,27 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoal withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoal withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * pointer to the Performance Cycle object (goal cycle or timeframe)
+     */
     public PerformanceGoal withCycleId(@Nullable String cycleId) {
         this.cycleId = cycleId;
         return this;
@@ -276,6 +330,9 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoal withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -303,12 +360,18 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * id of the parent goal, for goal alignment / OKR trees
+     */
     public PerformanceGoal withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
 
+    /**
+     * progress percentage from 0 to 100
+     */
     public PerformanceGoal withProgress(@Nullable Double progress) {
         this.progress = progress;
         return this;
@@ -321,6 +384,9 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoal withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -339,6 +405,9 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoal withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -354,6 +423,9 @@ public class PerformanceGoal {
     }
 
 
+    /**
+     * the weight of this goal when the provider weighs goals in reviews
+     */
     public PerformanceGoal withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
@@ -472,16 +544,25 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * pointer to the Performance Cycle object (goal cycle or timeframe)
+         */
         public Builder cycleId(@Nullable String cycleId) {
             this.cycleId = cycleId;
             return this;
@@ -492,6 +573,9 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
@@ -515,11 +599,17 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * id of the parent goal, for goal alignment / OKR trees
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
+        /**
+         * progress percentage from 0 to 100
+         */
         public Builder progress(@Nullable Double progress) {
             this.progress = progress;
             return this;
@@ -530,6 +620,9 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -545,6 +638,9 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -558,6 +654,9 @@ public class PerformanceGoal {
             return this;
         }
 
+        /**
+         * the weight of this goal when the provider weighs goals in reviews
+         */
         public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * MembershipStatus
+ * 
+ * <p>The authenticated user's membership status
+ */
 public class MembershipStatus {
 
     public static final MembershipStatus MEMBER = new MembershipStatus("MEMBER");

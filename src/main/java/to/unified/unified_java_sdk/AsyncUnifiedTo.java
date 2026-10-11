@@ -39,6 +39,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncExpense expense;
 
+    private final AsyncExpensereport expensereport;
+
     private final AsyncInvoice invoice;
 
     private final AsyncJournal journal;
@@ -55,9 +57,13 @@ public class AsyncUnifiedTo {
 
     private final AsyncPurchaseorder purchaseorder;
 
+    private final AsyncPurchasereceipt purchasereceipt;
+
     private final AsyncQuote quote;
 
     private final AsyncSalesorder salesorder;
+
+    private final AsyncSalesreceipt salesreceipt;
 
     private final AsyncTaxrate taxrate;
 
@@ -207,6 +213,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncPrompt prompt;
 
+    private final AsyncSkill skill;
+
     private final AsyncTask task;
 
     private final AsyncHris hris;
@@ -221,7 +229,13 @@ public class AsyncUnifiedTo {
 
     private final AsyncDevice device;
 
+    private final AsyncEarning earning;
+
     private final AsyncEmployee employee;
+
+    private final AsyncPaycode paycode;
+
+    private final AsyncPayroll payroll;
 
     private final AsyncPayslip payslip;
 
@@ -335,6 +349,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncCall call;
 
+    private final AsyncScorecardtemplate scorecardtemplate;
+
     private final AsyncUnified unified;
 
     private final AsyncApicall apicall;
@@ -355,9 +371,9 @@ public class AsyncUnifiedTo {
 
     private final AsyncNotification notification;
 
-    private final AsyncWebhook webhook;
-
     private final AsyncSecretsmanager secretsmanager;
+
+    private final AsyncWebhook webhook;
 
     private final AsyncVerification verification;
 
@@ -415,6 +431,10 @@ public class AsyncUnifiedTo {
         return expense;
     }
 
+    public AsyncExpensereport expensereport() {
+        return expensereport;
+    }
+
     public AsyncInvoice invoice() {
         return invoice;
     }
@@ -447,12 +467,20 @@ public class AsyncUnifiedTo {
         return purchaseorder;
     }
 
+    public AsyncPurchasereceipt purchasereceipt() {
+        return purchasereceipt;
+    }
+
     public AsyncQuote quote() {
         return quote;
     }
 
     public AsyncSalesorder salesorder() {
         return salesorder;
+    }
+
+    public AsyncSalesreceipt salesreceipt() {
+        return salesreceipt;
     }
 
     public AsyncTaxrate taxrate() {
@@ -751,6 +779,10 @@ public class AsyncUnifiedTo {
         return prompt;
     }
 
+    public AsyncSkill skill() {
+        return skill;
+    }
+
     public AsyncTask task() {
         return task;
     }
@@ -779,8 +811,20 @@ public class AsyncUnifiedTo {
         return device;
     }
 
+    public AsyncEarning earning() {
+        return earning;
+    }
+
     public AsyncEmployee employee() {
         return employee;
+    }
+
+    public AsyncPaycode paycode() {
+        return paycode;
+    }
+
+    public AsyncPayroll payroll() {
+        return payroll;
     }
 
     public AsyncPayslip payslip() {
@@ -1007,6 +1051,10 @@ public class AsyncUnifiedTo {
         return call;
     }
 
+    public AsyncScorecardtemplate scorecardtemplate() {
+        return scorecardtemplate;
+    }
+
     public AsyncUnified unified() {
         return unified;
     }
@@ -1047,12 +1095,12 @@ public class AsyncUnifiedTo {
         return notification;
     }
 
-    public AsyncWebhook webhook() {
-        return webhook;
-    }
-
     public AsyncSecretsmanager secretsmanager() {
         return secretsmanager;
+    }
+
+    public AsyncWebhook webhook() {
+        return webhook;
     }
 
     public AsyncVerification verification() {
@@ -1082,6 +1130,7 @@ public class AsyncUnifiedTo {
         this.contact = new AsyncContact(syncSDK.contact(), sdkConfiguration);
         this.creditmemo = new AsyncCreditmemo(syncSDK.creditmemo(), sdkConfiguration);
         this.expense = new AsyncExpense(syncSDK.expense(), sdkConfiguration);
+        this.expensereport = new AsyncExpensereport(syncSDK.expensereport(), sdkConfiguration);
         this.invoice = new AsyncInvoice(syncSDK.invoice(), sdkConfiguration);
         this.journal = new AsyncJournal(syncSDK.journal(), sdkConfiguration);
         this.order = new AsyncOrder(syncSDK.order(), sdkConfiguration);
@@ -1090,8 +1139,10 @@ public class AsyncUnifiedTo {
         this.profitloss = new AsyncProfitloss(syncSDK.profitloss(), sdkConfiguration);
         this.project = new AsyncProject(syncSDK.project(), sdkConfiguration);
         this.purchaseorder = new AsyncPurchaseorder(syncSDK.purchaseorder(), sdkConfiguration);
+        this.purchasereceipt = new AsyncPurchasereceipt(syncSDK.purchasereceipt(), sdkConfiguration);
         this.quote = new AsyncQuote(syncSDK.quote(), sdkConfiguration);
         this.salesorder = new AsyncSalesorder(syncSDK.salesorder(), sdkConfiguration);
+        this.salesreceipt = new AsyncSalesreceipt(syncSDK.salesreceipt(), sdkConfiguration);
         this.taxrate = new AsyncTaxrate(syncSDK.taxrate(), sdkConfiguration);
         this.transaction = new AsyncTransaction(syncSDK.transaction(), sdkConfiguration);
         this.trialbalance = new AsyncTrialbalance(syncSDK.trialbalance(), sdkConfiguration);
@@ -1166,6 +1217,7 @@ public class AsyncUnifiedTo {
         this.embedding = new AsyncEmbedding(syncSDK.embedding(), sdkConfiguration);
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
+        this.skill = new AsyncSkill(syncSDK.skill(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
         this.attendance = new AsyncAttendance(syncSDK.attendance(), sdkConfiguration);
@@ -1173,7 +1225,10 @@ public class AsyncUnifiedTo {
         this.benefit = new AsyncBenefit(syncSDK.benefit(), sdkConfiguration);
         this.deduction = new AsyncDeduction(syncSDK.deduction(), sdkConfiguration);
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);
+        this.earning = new AsyncEarning(syncSDK.earning(), sdkConfiguration);
         this.employee = new AsyncEmployee(syncSDK.employee(), sdkConfiguration);
+        this.paycode = new AsyncPaycode(syncSDK.paycode(), sdkConfiguration);
+        this.payroll = new AsyncPayroll(syncSDK.payroll(), sdkConfiguration);
         this.payslip = new AsyncPayslip(syncSDK.payslip(), sdkConfiguration);
         this.timeoff = new AsyncTimeoff(syncSDK.timeoff(), sdkConfiguration);
         this.timeshift = new AsyncTimeshift(syncSDK.timeshift(), sdkConfiguration);
@@ -1230,6 +1285,7 @@ public class AsyncUnifiedTo {
         this.ticket = new AsyncTicket(syncSDK.ticket(), sdkConfiguration);
         this.uc = new AsyncUc(syncSDK.uc(), sdkConfiguration);
         this.call = new AsyncCall(syncSDK.call(), sdkConfiguration);
+        this.scorecardtemplate = new AsyncScorecardtemplate(syncSDK.scorecardtemplate(), sdkConfiguration);
         this.unified = new AsyncUnified(syncSDK.unified(), sdkConfiguration);
         this.apicall = new AsyncApicall(syncSDK.apicall(), sdkConfiguration);
         this.connection = new AsyncConnection(syncSDK.connection(), sdkConfiguration);
@@ -1240,8 +1296,8 @@ public class AsyncUnifiedTo {
         this.saml = new AsyncSaml(syncSDK.saml(), sdkConfiguration);
         this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.notification = new AsyncNotification(syncSDK.notification(), sdkConfiguration);
-        this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
         this.secretsmanager = new AsyncSecretsmanager(syncSDK.secretsmanager(), sdkConfiguration);
+        this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
         this.verification = new AsyncVerification(syncSDK.verification(), sdkConfiguration);
         this.request = new AsyncRequest(syncSDK.request(), sdkConfiguration);
     }

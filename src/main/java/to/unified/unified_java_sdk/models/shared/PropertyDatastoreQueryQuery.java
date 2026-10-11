@@ -64,7 +64,9 @@ public class PropertyDatastoreQueryQuery {
     @JsonProperty("sort_order")
     private SortOrder sortOrder;
 
-
+    /**
+     * Raw SQL – when set, executed directly (table_id optional)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sql")
     private String sql;
@@ -136,6 +138,9 @@ public class PropertyDatastoreQueryQuery {
         return Optional.ofNullable(this.sortOrder);
     }
 
+    /**
+     * Raw SQL – when set, executed directly (table_id optional)
+     */
     public Optional<String> sql() {
         return Optional.ofNullable(this.sql);
     }
@@ -199,6 +204,9 @@ public class PropertyDatastoreQueryQuery {
     }
 
 
+    /**
+     * Raw SQL – when set, executed directly (table_id optional)
+     */
     public PropertyDatastoreQueryQuery withSql(@Nullable String sql) {
         this.sql = sql;
         return this;
@@ -323,6 +331,9 @@ public class PropertyDatastoreQueryQuery {
             return this;
         }
 
+        /**
+         * Raw SQL – when set, executed directly (table_id optional)
+         */
         public Builder sql(@Nullable String sql) {
             this.sql = sql;
             return this;

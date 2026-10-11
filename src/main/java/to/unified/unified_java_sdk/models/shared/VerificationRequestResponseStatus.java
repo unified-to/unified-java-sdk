@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * VerificationRequestResponseStatus
+ * 
+ * <p>Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+ */
 public class VerificationRequestResponseStatus {
 
     public static final VerificationRequestResponseStatus COMPLETED = new VerificationRequestResponseStatus("COMPLETED");

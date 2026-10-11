@@ -22,7 +22,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentPayment {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -35,7 +37,9 @@ public class PaymentPayment {
     @JsonProperty("allocations")
     private List<PaymentAllocation> allocations;
 
-
+    /**
+     * references AccountingBill
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bill_id")
     private String billId;
@@ -57,12 +61,16 @@ public class PaymentPayment {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -72,17 +80,23 @@ public class PaymentPayment {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * POS terminal/register/device (hr device)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     private String deviceId;
 
-
+    /**
+     * Exchange rate to the base/home currency at the payment date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
 
-
+    /**
+     * processing/processor fee
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fee_amount")
     private Double feeAmount;
@@ -92,7 +106,9 @@ public class PaymentPayment {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * (reference to AccountingInvoice)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private String invoiceId;
@@ -102,12 +118,16 @@ public class PaymentPayment {
     @JsonProperty("link_id")
     private String linkId;
 
-
+    /**
+     * store/site where the payment was taken (commerce_location)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * total_amount minus fee_amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     private Double netAmount;
@@ -117,12 +137,16 @@ public class PaymentPayment {
     @JsonProperty("notes")
     private String notes;
 
-
+    /**
+     * reference to an AccountingOrganization
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
     private OffsetDateTime paidAt;
@@ -142,7 +166,9 @@ public class PaymentPayment {
     @JsonProperty("reference")
     private String reference;
 
-
+    /**
+     * reference to an AccountingSalesorder, e.g. the POS order this payment settled
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesorder_id")
     private String salesorderId;
@@ -152,7 +178,9 @@ public class PaymentPayment {
     @JsonProperty("status")
     private PaymentPaymentStatus status;
 
-
+    /**
+     * normalized tender category; the provider's original label stays in payment_method
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tender_type")
     private TenderType tenderType;
@@ -172,7 +200,9 @@ public class PaymentPayment {
     @JsonProperty("type")
     private PaymentPaymentType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -255,6 +285,9 @@ public class PaymentPayment {
             null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -267,6 +300,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.allocations);
     }
 
+    /**
+     * references AccountingBill
+     */
     public Optional<String> billId() {
         return Optional.ofNullable(this.billId);
     }
@@ -286,10 +322,16 @@ public class PaymentPayment {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -298,14 +340,23 @@ public class PaymentPayment {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * POS terminal/register/device (hr device)
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
 
+    /**
+     * Exchange rate to the base/home currency at the payment date
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
 
+    /**
+     * processing/processor fee
+     */
     public Optional<Double> feeAmount() {
         return Optional.ofNullable(this.feeAmount);
     }
@@ -314,6 +365,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * (reference to AccountingInvoice)
+     */
     public Optional<String> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
     }
@@ -322,10 +376,16 @@ public class PaymentPayment {
         return Optional.ofNullable(this.linkId);
     }
 
+    /**
+     * store/site where the payment was taken (commerce_location)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * total_amount minus fee_amount
+     */
     public Optional<Double> netAmount() {
         return Optional.ofNullable(this.netAmount);
     }
@@ -334,10 +394,16 @@ public class PaymentPayment {
         return Optional.ofNullable(this.notes);
     }
 
+    /**
+     * reference to an AccountingOrganization
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> paidAt() {
         return Optional.ofNullable(this.paidAt);
     }
@@ -354,6 +420,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.reference);
     }
 
+    /**
+     * reference to an AccountingSalesorder, e.g. the POS order this payment settled
+     */
     public Optional<String> salesorderId() {
         return Optional.ofNullable(this.salesorderId);
     }
@@ -362,6 +431,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * normalized tender category; the provider's original label stays in payment_method
+     */
     public Optional<TenderType> tenderType() {
         return Optional.ofNullable(this.tenderType);
     }
@@ -378,6 +450,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -387,6 +462,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public PaymentPayment withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -403,6 +481,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * references AccountingBill
+     */
     public PaymentPayment withBillId(@Nullable String billId) {
         this.billId = billId;
         return this;
@@ -430,12 +511,18 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public PaymentPayment withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -448,18 +535,27 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * POS terminal/register/device (hr device)
+     */
     public PaymentPayment withDeviceId(@Nullable String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
 
 
+    /**
+     * Exchange rate to the base/home currency at the payment date
+     */
     public PaymentPayment withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
     }
 
 
+    /**
+     * processing/processor fee
+     */
     public PaymentPayment withFeeAmount(@Nullable Double feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -472,6 +568,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * (reference to AccountingInvoice)
+     */
     public PaymentPayment withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -484,12 +583,18 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * store/site where the payment was taken (commerce_location)
+     */
     public PaymentPayment withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
 
+    /**
+     * total_amount minus fee_amount
+     */
     public PaymentPayment withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
@@ -502,12 +607,18 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * reference to an AccountingOrganization
+     */
     public PaymentPayment withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayment withPaidAt(@Nullable OffsetDateTime paidAt) {
         this.paidAt = paidAt;
         return this;
@@ -532,6 +643,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * reference to an AccountingSalesorder, e.g. the POS order this payment settled
+     */
     public PaymentPayment withSalesorderId(@Nullable String salesorderId) {
         this.salesorderId = salesorderId;
         return this;
@@ -544,6 +658,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * normalized tender category; the provider's original label stays in payment_method
+     */
     public PaymentPayment withTenderType(@Nullable TenderType tenderType) {
         this.tenderType = tenderType;
         return this;
@@ -568,6 +685,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentPayment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -733,6 +853,9 @@ public class PaymentPayment {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -747,6 +870,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * references AccountingBill
+         */
         public Builder billId(@Nullable String billId) {
             this.billId = billId;
             return this;
@@ -770,11 +896,17 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -785,16 +917,25 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * POS terminal/register/device (hr device)
+         */
         public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * Exchange rate to the base/home currency at the payment date
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
         }
 
+        /**
+         * processing/processor fee
+         */
         public Builder feeAmount(@Nullable Double feeAmount) {
             this.feeAmount = feeAmount;
             return this;
@@ -805,6 +946,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * (reference to AccountingInvoice)
+         */
         public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
@@ -815,11 +959,17 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * store/site where the payment was taken (commerce_location)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
+        /**
+         * total_amount minus fee_amount
+         */
         public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
@@ -830,11 +980,17 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * reference to an AccountingOrganization
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder paidAt(@Nullable OffsetDateTime paidAt) {
             this.paidAt = paidAt;
             return this;
@@ -855,6 +1011,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * reference to an AccountingSalesorder, e.g. the POS order this payment settled
+         */
         public Builder salesorderId(@Nullable String salesorderId) {
             this.salesorderId = salesorderId;
             return this;
@@ -865,6 +1024,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * normalized tender category; the provider's original label stays in payment_method
+         */
         public Builder tenderType(@Nullable TenderType tenderType) {
             this.tenderType = tenderType;
             return this;
@@ -885,6 +1047,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

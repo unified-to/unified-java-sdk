@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ShippingPackageSizeUnit
+ * 
+ * <p>Unit for dimensions (cm, inch)
+ */
 public class ShippingPackageSizeUnit {
 
     public static final ShippingPackageSizeUnit CM = new ShippingPackageSizeUnit("cm");

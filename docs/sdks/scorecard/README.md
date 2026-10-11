@@ -6,7 +6,9 @@
 
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
+* [getUcScorecard](#getucscorecard) - Retrieve a scorecard
 * [listAtsScorecards](#listatsscorecards) - List all scorecards
+* [listUcScorecards](#listucscorecards) - List all scorecards
 * [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
 * [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
@@ -43,7 +45,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("e2f4a5a4-e9bc-4405-9cfd-bd6b3f9cbd6c")
+                    .id("4344b5a0-af68-48c7-a37f-bdeb26e3d8cc")
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
                             .text("Aliquam.")
@@ -55,7 +57,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-05-28T07:14:55.859Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T19:29:44.467Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -145,6 +147,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getUcScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUcScorecardRequest req = GetUcScorecardRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetUcScorecardResponse res = sdk.scorecard().getUcScorecard()
+                .request(req)
+                .call();
+
+        if (res.ucScorecard().isPresent()) {
+            System.out.println(res.ucScorecard().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetUcScorecardRequest](../../models/operations/GetUcScorecardRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetUcScorecardResponse](../../models/operations/GetUcScorecardResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAtsScorecards
 
 List all scorecards
@@ -202,6 +262,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUcScorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUcScorecardsRequest req = ListUcScorecardsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListUcScorecardsResponse res = sdk.scorecard().listUcScorecards()
+                .request(req)
+                .call();
+
+        if (res.ucScorecards().isPresent()) {
+            System.out.println(res.ucScorecards().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListUcScorecardsRequest](../../models/operations/ListUcScorecardsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListUcScorecardsResponse](../../models/operations/ListUcScorecardsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAtsScorecard
 
 Update a scorecard
@@ -234,7 +351,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("a14934d1-1651-4216-999d-179416ae4bd7")
+                    .id("fc84d8e1-71a6-4d6c-a683-7da40edb6c5e")
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
                             .text("Aliquam.")
@@ -246,7 +363,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-05-28T07:14:55.862Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T19:29:44.470Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -367,7 +484,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("a14934d1-1651-4216-999d-179416ae4bd7")
+                    .id("fc84d8e1-71a6-4d6c-a683-7da40edb6c5e")
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
                             .text("Aliquam.")
@@ -379,7 +496,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-05-28T07:14:55.862Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-02T19:29:44.470Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

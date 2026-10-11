@@ -25,42 +25,60 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Chart of accounts
  */
 public class AccountingAccount {
-
+    /**
+     * Balance of the account.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     private Double balance;
 
-
+    /**
+     * Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined
+     * by the end-customer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_defined_code")
     private String customerDefinedCode;
 
-
+    /**
+     * Account description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Identifier used by the SaaS application to uniquely identify the Account
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * True if the account is an “accounts payable” account
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_payable")
     private Boolean isPayable;
 
-
+    /**
+     * Account name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -70,17 +88,23 @@ public class AccountingAccount {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * The parent account ID for this account
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
-
+    /**
+     * The original data from the integration's API
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Account status, such as ACTIVE or ARCHIVED
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private Status status;
@@ -90,12 +114,17 @@ public class AccountingAccount {
     @JsonProperty("taxonomy")
     private List<AccountingAccountTaxonomy> taxonomy;
 
-
+    /**
+     * Account type, such as BANK. EQUITY, ASSET,...
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Type type;
 
-
+    /**
+     * Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -142,34 +171,60 @@ public class AccountingAccount {
             null, null, null);
     }
 
+    /**
+     * Balance of the account.
+     */
     public Optional<Double> balance() {
         return Optional.ofNullable(this.balance);
     }
 
+    /**
+     * Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined
+     * by the end-customer
+     */
     public Optional<String> customerDefinedCode() {
         return Optional.ofNullable(this.customerDefinedCode);
     }
 
+    /**
+     * Account description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Identifier used by the SaaS application to uniquely identify the Account
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * True if the account is an “accounts payable” account
+     */
     public Optional<Boolean> isPayable() {
         return Optional.ofNullable(this.isPayable);
     }
 
+    /**
+     * Account name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -178,14 +233,23 @@ public class AccountingAccount {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * The parent account ID for this account
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
 
+    /**
+     * The original data from the integration's API
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Account status, such as ACTIVE or ARCHIVED
+     */
     public Optional<Status> status() {
         return Optional.ofNullable(this.status);
     }
@@ -194,10 +258,17 @@ public class AccountingAccount {
         return Optional.ofNullable(this.taxonomy);
     }
 
+    /**
+     * Account type, such as BANK. EQUITY, ASSET,...
+     */
     public Optional<Type> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -207,48 +278,74 @@ public class AccountingAccount {
     }
 
 
+    /**
+     * Balance of the account.
+     */
     public AccountingAccount withBalance(@Nullable Double balance) {
         this.balance = balance;
         return this;
     }
 
 
+    /**
+     * Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAccount withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
+     */
     public AccountingAccount withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined
+     * by the end-customer
+     */
     public AccountingAccount withCustomerDefinedCode(@Nullable String customerDefinedCode) {
         this.customerDefinedCode = customerDefinedCode;
         return this;
     }
 
 
+    /**
+     * Account description
+     */
     public AccountingAccount withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Identifier used by the SaaS application to uniquely identify the Account
+     */
     public AccountingAccount withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * True if the account is an “accounts payable” account
+     */
     public AccountingAccount withIsPayable(@Nullable Boolean isPayable) {
         this.isPayable = isPayable;
         return this;
     }
 
 
+    /**
+     * Account name
+     */
     public AccountingAccount withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -261,18 +358,27 @@ public class AccountingAccount {
     }
 
 
+    /**
+     * The parent account ID for this account
+     */
     public AccountingAccount withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
 
+    /**
+     * The original data from the integration's API
+     */
     public AccountingAccount withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Account status, such as ACTIVE or ARCHIVED
+     */
     public AccountingAccount withStatus(@Nullable Status status) {
         this.status = status;
         return this;
@@ -285,12 +391,19 @@ public class AccountingAccount {
     }
 
 
+    /**
+     * Account type, such as BANK. EQUITY, ASSET,...
+     */
     public AccountingAccount withType(@Nullable Type type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAccount withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -391,41 +504,67 @@ public class AccountingAccount {
           // force use of static builder() method
         }
 
+        /**
+         * Balance of the account.
+         */
         public Builder balance(@Nullable Double balance) {
             this.balance = balance;
             return this;
         }
 
+        /**
+         * Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined
+         * by the end-customer
+         */
         public Builder customerDefinedCode(@Nullable String customerDefinedCode) {
             this.customerDefinedCode = customerDefinedCode;
             return this;
         }
 
+        /**
+         * Account description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Identifier used by the SaaS application to uniquely identify the Account
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * True if the account is an “accounts payable” account
+         */
         public Builder isPayable(@Nullable Boolean isPayable) {
             this.isPayable = isPayable;
             return this;
         }
 
+        /**
+         * Account name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -436,16 +575,25 @@ public class AccountingAccount {
             return this;
         }
 
+        /**
+         * The parent account ID for this account
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
+        /**
+         * The original data from the integration's API
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Account status, such as ACTIVE or ARCHIVED
+         */
         public Builder status(@Nullable Status status) {
             this.status = status;
             return this;
@@ -456,11 +604,18 @@ public class AccountingAccount {
             return this;
         }
 
+        /**
+         * Account type, such as BANK. EQUITY, ASSET,...
+         */
         public Builder type(@Nullable Type type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

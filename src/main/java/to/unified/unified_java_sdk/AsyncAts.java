@@ -17,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsApplicationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
@@ -76,6 +77,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityRequest
 import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationstatusRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationstatusResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsCandidateResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsCompanyRequestBuilder;
@@ -164,6 +167,7 @@ import to.unified.unified_java_sdk.operations.CreateAtsJob;
 import to.unified.unified_java_sdk.operations.CreateAtsScorecard;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
 import to.unified.unified_java_sdk.operations.GetAtsApplication;
+import to.unified.unified_java_sdk.operations.GetAtsApplicationstatus;
 import to.unified.unified_java_sdk.operations.GetAtsCandidate;
 import to.unified.unified_java_sdk.operations.GetAtsCompany;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
@@ -451,6 +455,29 @@ public class AsyncAts {
     public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
               = new GetAtsApplication.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @return The async call builder
+     */
+    public GetAtsApplicationstatusRequestBuilder getAtsApplicationstatus() {
+        return new GetAtsApplicationstatusRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        AsyncRequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
+              = new GetAtsApplicationstatus.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -19,47 +19,65 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SocialReview {
-
+    /**
+     * Profile image URL of the reviewer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_avatar_url")
     private String authorAvatarUrl;
 
-
+    /**
+     * Free-text location of the reviewer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_location")
     private String authorLocation;
 
-
+    /**
+     * Display name of the reviewer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_name")
     private String authorName;
 
-
+    /**
+     * The review text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Unique identifier for the review
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The social profile (page/handle/listing) being reviewed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_id")
     private String profileId;
 
-
+    /**
+     * Star rating, typically 1-5
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     private Double rating;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -71,17 +89,23 @@ public class SocialReview {
     @JsonProperty("reply")
     private PropertySocialReviewReply reply;
 
-
+    /**
+     * Optional review title/headline
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Public permalink to the review
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -124,38 +148,65 @@ public class SocialReview {
             null);
     }
 
+    /**
+     * Profile image URL of the reviewer
+     */
     public Optional<String> authorAvatarUrl() {
         return Optional.ofNullable(this.authorAvatarUrl);
     }
 
+    /**
+     * Free-text location of the reviewer
+     */
     public Optional<String> authorLocation() {
         return Optional.ofNullable(this.authorLocation);
     }
 
+    /**
+     * Display name of the reviewer
+     */
     public Optional<String> authorName() {
         return Optional.ofNullable(this.authorName);
     }
 
+    /**
+     * The review text
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Unique identifier for the review
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The social profile (page/handle/listing) being reviewed
+     */
     public Optional<String> profileId() {
         return Optional.ofNullable(this.profileId);
     }
 
+    /**
+     * Star rating, typically 1-5
+     */
     public Optional<Double> rating() {
         return Optional.ofNullable(this.rating);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -167,14 +218,23 @@ public class SocialReview {
         return Optional.ofNullable(this.reply);
     }
 
+    /**
+     * Optional review title/headline
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Public permalink to the review
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -184,54 +244,81 @@ public class SocialReview {
     }
 
 
+    /**
+     * Profile image URL of the reviewer
+     */
     public SocialReview withAuthorAvatarUrl(@Nullable String authorAvatarUrl) {
         this.authorAvatarUrl = authorAvatarUrl;
         return this;
     }
 
 
+    /**
+     * Free-text location of the reviewer
+     */
     public SocialReview withAuthorLocation(@Nullable String authorLocation) {
         this.authorLocation = authorLocation;
         return this;
     }
 
 
+    /**
+     * Display name of the reviewer
+     */
     public SocialReview withAuthorName(@Nullable String authorName) {
         this.authorName = authorName;
         return this;
     }
 
 
+    /**
+     * The review text
+     */
     public SocialReview withContent(@Nullable String content) {
         this.content = content;
         return this;
     }
 
 
+    /**
+     * When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialReview withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the review
+     */
     public SocialReview withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The social profile (page/handle/listing) being reviewed
+     */
     public SocialReview withProfileId(@Nullable String profileId) {
         this.profileId = profileId;
         return this;
     }
 
 
+    /**
+     * Star rating, typically 1-5
+     */
     public SocialReview withRating(@Nullable Double rating) {
         this.rating = rating;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public SocialReview withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -247,18 +334,27 @@ public class SocialReview {
     }
 
 
+    /**
+     * Optional review title/headline
+     */
     public SocialReview withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
 
+    /**
+     * When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialReview withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Public permalink to the review
+     */
     public SocialReview withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -351,46 +447,73 @@ public class SocialReview {
           // force use of static builder() method
         }
 
+        /**
+         * Profile image URL of the reviewer
+         */
         public Builder authorAvatarUrl(@Nullable String authorAvatarUrl) {
             this.authorAvatarUrl = authorAvatarUrl;
             return this;
         }
 
+        /**
+         * Free-text location of the reviewer
+         */
         public Builder authorLocation(@Nullable String authorLocation) {
             this.authorLocation = authorLocation;
             return this;
         }
 
+        /**
+         * Display name of the reviewer
+         */
         public Builder authorName(@Nullable String authorName) {
             this.authorName = authorName;
             return this;
         }
 
+        /**
+         * The review text
+         */
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
+        /**
+         * When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Unique identifier for the review
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The social profile (page/handle/listing) being reviewed
+         */
         public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }
 
+        /**
+         * Star rating, typically 1-5
+         */
         public Builder rating(@Nullable Double rating) {
             this.rating = rating;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -404,16 +527,25 @@ public class SocialReview {
             return this;
         }
 
+        /**
+         * Optional review title/headline
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
+        /**
+         * When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Public permalink to the review
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

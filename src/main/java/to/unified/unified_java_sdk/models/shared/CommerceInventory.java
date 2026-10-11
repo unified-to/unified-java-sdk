@@ -29,7 +29,9 @@ public class CommerceInventory {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
@@ -39,12 +41,16 @@ public class CommerceInventory {
     @JsonProperty("item_option_id")
     private String itemOptionId;
 
-
+    /**
+     * (reference to CommerceCommerceItemvariant)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variant_id")
     private String itemVariantId;
 
-
+    /**
+     * (reference to CommerceLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -54,7 +60,9 @@ public class CommerceInventory {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -93,6 +101,9 @@ public class CommerceInventory {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -101,10 +112,16 @@ public class CommerceInventory {
         return Optional.ofNullable(this.itemOptionId);
     }
 
+    /**
+     * (reference to CommerceCommerceItemvariant)
+     */
     public Optional<String> itemVariantId() {
         return Optional.ofNullable(this.itemVariantId);
     }
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -113,6 +130,9 @@ public class CommerceInventory {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -134,6 +154,9 @@ public class CommerceInventory {
     }
 
 
+    /**
+     * (reference to CommerceItem)
+     */
     public CommerceInventory withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
@@ -146,12 +169,18 @@ public class CommerceInventory {
     }
 
 
+    /**
+     * (reference to CommerceCommerceItemvariant)
+     */
     public CommerceInventory withItemVariantId(@Nullable String itemVariantId) {
         this.itemVariantId = itemVariantId;
         return this;
     }
 
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public CommerceInventory withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -164,6 +193,9 @@ public class CommerceInventory {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceInventory withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -244,6 +276,9 @@ public class CommerceInventory {
             return this;
         }
 
+        /**
+         * (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
@@ -254,11 +289,17 @@ public class CommerceInventory {
             return this;
         }
 
+        /**
+         * (reference to CommerceCommerceItemvariant)
+         */
         public Builder itemVariantId(@Nullable String itemVariantId) {
             this.itemVariantId = itemVariantId;
             return this;
         }
 
+        /**
+         * (reference to CommerceLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -269,6 +310,9 @@ public class CommerceInventory {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

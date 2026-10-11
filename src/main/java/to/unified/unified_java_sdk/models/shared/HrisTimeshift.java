@@ -22,17 +22,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisTimeshift {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
     private OffsetDateTime approvedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
     private String approverUserId;
 
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -42,21 +48,29 @@ public class HrisTimeshift {
     @JsonProperty("compensation")
     private List<HrisCompensation> compensation;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonProperty("employee_user_id")
     private String employeeUserId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -76,7 +90,9 @@ public class HrisTimeshift {
     @JsonProperty("is_approved")
     private Boolean isApproved;
 
-
+    /**
+     * (reference to HrisLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -86,12 +102,16 @@ public class HrisTimeshift {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -140,14 +160,23 @@ public class HrisTimeshift {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> approvedAt() {
         return Optional.ofNullable(this.approvedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -156,18 +185,30 @@ public class HrisTimeshift {
         return Optional.ofNullable(this.compensation);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public String employeeUserId() {
         return this.employeeUserId;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -184,6 +225,9 @@ public class HrisTimeshift {
         return Optional.ofNullable(this.isApproved);
     }
 
+    /**
+     * (reference to HrisLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -192,10 +236,16 @@ public class HrisTimeshift {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -205,18 +255,27 @@ public class HrisTimeshift {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeshift withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public HrisTimeshift withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisTimeshift withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -229,24 +288,36 @@ public class HrisTimeshift {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeshift withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public HrisTimeshift withEmployeeUserId(@Nonnull String employeeUserId) {
         this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeshift withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * department, team, etc. (reference to HrisGroup)
+     */
     public HrisTimeshift withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -271,6 +342,9 @@ public class HrisTimeshift {
     }
 
 
+    /**
+     * (reference to HrisLocation)
+     */
     public HrisTimeshift withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -283,12 +357,18 @@ public class HrisTimeshift {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeshift withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisTimeshift withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -389,16 +469,25 @@ public class HrisTimeshift {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -409,21 +498,33 @@ public class HrisTimeshift {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder employeeUserId(@Nonnull String employeeUserId) {
             this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * department, team, etc. (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -444,6 +545,9 @@ public class HrisTimeshift {
             return this;
         }
 
+        /**
+         * (reference to HrisLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -454,11 +558,17 @@ public class HrisTimeshift {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

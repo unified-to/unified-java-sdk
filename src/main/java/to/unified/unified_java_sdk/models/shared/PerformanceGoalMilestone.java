@@ -29,7 +29,9 @@ public class PerformanceGoalMilestone {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
@@ -53,7 +55,9 @@ public class PerformanceGoalMilestone {
     @JsonProperty("target_value")
     private Double targetValue;
 
-
+    /**
+     * unit of the target/current values (e.g. %, USD, count)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     private String unit;
@@ -101,6 +105,9 @@ public class PerformanceGoalMilestone {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
@@ -121,6 +128,9 @@ public class PerformanceGoalMilestone {
         return Optional.ofNullable(this.targetValue);
     }
 
+    /**
+     * unit of the target/current values (e.g. %, USD, count)
+     */
     public Optional<String> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -146,6 +156,9 @@ public class PerformanceGoalMilestone {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PerformanceGoalMilestone withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
@@ -176,6 +189,9 @@ public class PerformanceGoalMilestone {
     }
 
 
+    /**
+     * unit of the target/current values (e.g. %, USD, count)
+     */
     public PerformanceGoalMilestone withUnit(@Nullable String unit) {
         this.unit = unit;
         return this;
@@ -266,6 +282,9 @@ public class PerformanceGoalMilestone {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
@@ -291,6 +310,9 @@ public class PerformanceGoalMilestone {
             return this;
         }
 
+        /**
+         * unit of the target/current values (e.g. %, USD, count)
+         */
         public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;

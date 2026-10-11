@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [createAtsJob](#createatsjob) - Create a job
+* [createHrisJob](#createhrisjob) - Create a job
 * [getAtsJob](#getatsjob) - Retrieve a job
+* [getHrisJob](#gethrisjob) - Retrieve a job
 * [listAtsJobs](#listatsjobs) - List all jobs
+* [listHrisJobs](#listhrisjobs) - List all jobs
 * [patchAtsJob](#patchatsjob) - Update a job
+* [patchHrisJob](#patchhrisjob) - Update a job
 * [removeAtsJob](#removeatsjob) - Remove a job
+* [removeHrisJob](#removehrisjob) - Remove a job
 * [updateAtsJob](#updateatsjob) - Update a job
+* [updateHrisJob](#updatehrisjob) - Update a job
 
 ## createAtsJob
 
@@ -71,21 +77,21 @@ public class Application {
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of(
                         AtsReference.builder()
-                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
-                            .name("Eloise Mueller PhD")
+                            .id("eb3bbf4e-4022-4122-9d44-39fd5b501e80")
+                            .name("Troy Greenholt")
                             .build()))
-                    .id("bfe00c1f-0367-472b-b451-951cde5374d2")
-                    .industry("Gorgeous Plastic Computer")
+                    .id("c62a2ee8-e727-4fef-a1fc-471e16433bac")
+                    .industry("Modern Granite Gloves")
                     .languageLocale("en")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("f06b5e9f-e154-42d3-b349-1266d7564239")
+                            .id("aa99fcf0-f085-47e7-ab94-cb696220e875")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(AtsMetadataValue.of("acceptus"))
+                            .value(AtsMetadataValue.of("vomica"))
                             .build()))
                     .minimumDegree("Bachelor")
                     .minimumExperienceYears(3d)
@@ -94,27 +100,27 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-05-12T05:40:01.586Z"))
+                            .openedAt(OffsetDateTime.parse("2026-05-30T00:05:48.189Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
                         AtsJobPosting.builder()
                             .address(PropertyAtsJobPostingAddress.builder()
-                                .address1("8460 Nils Trace")
-                                .city("West Mervinburgh")
+                                .address1("51372 Kshlerin Creek")
+                                .city("Logancester")
                                 .countryCode("US")
-                                .postalCode("14162")
-                                .region("Maine")
+                                .postalCode("85013-9865")
+                                .region("Vermont")
                                 .regionCode("MO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-07-05T00:15:10.014Z"))
-                            .description("Deduco cultellus alii terebro depono thesaurus.")
-                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .createdAt(OffsetDateTime.parse("2026-07-23T16:18:04.067Z"))
+                            .description("Provident turbo cunabula spoliatio agnitio.")
+                            .id("372178cd-2056-4388-870e-e7c199761c7c")
                             .isActive(false)
-                            .location("6788 Oxford Road")
-                            .name("Forward Security Orchestrator")
-                            .postingUrl("https://ajar-metabolite.net/")
-                            .updatedAt(OffsetDateTime.parse("2026-07-30T16:09:23.656Z"))
+                            .location("2925 Connie Green")
+                            .name("Lead Intranet Developer")
+                            .postingUrl("https://smart-summer.name/")
+                            .updatedAt(OffsetDateTime.parse("2026-08-18T18:31:19.157Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -125,6 +131,8 @@ public class Application {
                             .type(AtsJobQuestionType.TEXT)
                             .description("Trepide provident taceo rem.")
                             .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .maxLength(387d)
+                            .minLength(1d)
                             .options(List.of(
                                 "censura",
                                 "tum"))
@@ -132,30 +140,34 @@ public class Application {
                             .required(true)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .question("Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .id("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0")
+                            .maxLength(430d)
+                            .minLength(1d)
                             .options(List.of(
-                                "odit"))
-                            .prompt("Similique absque temeritas celebrer enim.")
+                                "aetas"))
+                            .prompt("Contra damno desolo suadeo utrimque cresco.")
                             .required(false)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .question("Vulticulus depono abstergo possimus quibusdam deinde amoveo.")
                             .type(AtsJobQuestionType.TEXT)
-                            .description("Abstergo possimus quibusdam deinde amoveo.")
-                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .description("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .id("060ed8c8-ab8a-417c-8b25-edf38cb19b1c")
+                            .maxLength(381d)
+                            .minLength(1d)
                             .options(List.of(
-                                "vallum"))
-                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                                "utroque"))
+                            .prompt("Vir crepusculum ait adeptio ait defendo cotidie porro uterque.")
                             .required(false)
                             .build()))
                     .skills(List.of(
-                        "amiculum",
-                        "crux"))
+                        "coaegresco",
+                        "appello"))
                     .status(AtsJobStatus.ARCHIVED)
-                    .summary("Amicitia vergo hic.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-03T05:06:46.724Z"))
+                    .summary("Iste sto communis.")
+                    .updatedAt(OffsetDateTime.parse("2026-02-19T08:08:04.953Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -180,6 +192,74 @@ public class Application {
 ### Response
 
 **[CreateAtsJobResponse](../../models/operations/CreateAtsJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisJob
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisJobRequest req = CreateHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("bb0fb822-230a-43a5-8b1b-4fd55b9ec014")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.073Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisJobResponse res = sdk.job().createHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [CreateHrisJobRequest](../../models/operations/CreateHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[CreateHrisJobResponse](../../models/operations/CreateHrisJobResponse.md)**
 
 ### Errors
 
@@ -245,6 +325,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHrisJob
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisJobRequest req = GetHrisJobRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisJobResponse res = sdk.job().getHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `request`                                                         | [GetHrisJobRequest](../../models/operations/GetHrisJobRequest.md) | :heavy_check_mark:                                                | The request object to use for the request.                        |
+
+### Response
+
+**[GetHrisJobResponse](../../models/operations/GetHrisJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAtsJobs
 
 List all jobs
@@ -295,6 +433,63 @@ public class Application {
 ### Response
 
 **[ListAtsJobsResponse](../../models/operations/ListAtsJobsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHrisJobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisJobsRequest req = ListHrisJobsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisJobsResponse res = sdk.job().listHrisJobs()
+                .request(req)
+                .call();
+
+        if (res.hrisJobs().isPresent()) {
+            System.out.println(res.hrisJobs().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [ListHrisJobsRequest](../../models/operations/ListHrisJobsRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[ListHrisJobsResponse](../../models/operations/ListHrisJobsResponse.md)**
 
 ### Errors
 
@@ -362,21 +557,21 @@ public class Application {
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of(
                         AtsReference.builder()
-                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
-                            .name("Eloise Mueller PhD")
+                            .id("eb3bbf4e-4022-4122-9d44-39fd5b501e80")
+                            .name("Troy Greenholt")
                             .build()))
-                    .id("1d252d32-7042-4fd0-9e94-32b0d0556bc1")
-                    .industry("Gorgeous Plastic Computer")
+                    .id("a7fa9c17-0a1d-4992-a384-01d53b722701")
+                    .industry("Modern Granite Gloves")
                     .languageLocale("en")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("1ea5c44a-7c54-4427-8992-8e5bb31c3c02")
+                            .id("7ff0b09c-050a-46d1-b304-b6c98db5254b")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(AtsMetadataValue.of("acceptus"))
+                            .value(AtsMetadataValue.of("vomica"))
                             .build()))
                     .minimumDegree("Bachelor")
                     .minimumExperienceYears(3d)
@@ -385,27 +580,27 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-05-12T05:40:01.623Z"))
+                            .openedAt(OffsetDateTime.parse("2026-05-30T00:05:48.254Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
                         AtsJobPosting.builder()
                             .address(PropertyAtsJobPostingAddress.builder()
-                                .address1("8460 Nils Trace")
-                                .city("West Mervinburgh")
+                                .address1("51372 Kshlerin Creek")
+                                .city("Logancester")
                                 .countryCode("US")
-                                .postalCode("14162")
-                                .region("Maine")
+                                .postalCode("85013-9865")
+                                .region("Vermont")
                                 .regionCode("MO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-07-05T00:15:10.052Z"))
-                            .description("Deduco cultellus alii terebro depono thesaurus.")
-                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .createdAt(OffsetDateTime.parse("2026-07-23T16:18:04.137Z"))
+                            .description("Provident turbo cunabula spoliatio agnitio.")
+                            .id("372178cd-2056-4388-870e-e7c199761c7c")
                             .isActive(false)
-                            .location("6788 Oxford Road")
-                            .name("Forward Security Orchestrator")
-                            .postingUrl("https://ajar-metabolite.net/")
-                            .updatedAt(OffsetDateTime.parse("2026-07-30T16:09:23.695Z"))
+                            .location("2925 Connie Green")
+                            .name("Lead Intranet Developer")
+                            .postingUrl("https://smart-summer.name/")
+                            .updatedAt(OffsetDateTime.parse("2026-08-18T18:31:19.229Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -416,6 +611,8 @@ public class Application {
                             .type(AtsJobQuestionType.TEXT)
                             .description("Trepide provident taceo rem.")
                             .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .maxLength(387d)
+                            .minLength(1d)
                             .options(List.of(
                                 "censura",
                                 "tum"))
@@ -423,30 +620,34 @@ public class Application {
                             .required(true)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .question("Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .id("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0")
+                            .maxLength(430d)
+                            .minLength(1d)
                             .options(List.of(
-                                "odit"))
-                            .prompt("Similique absque temeritas celebrer enim.")
+                                "aetas"))
+                            .prompt("Contra damno desolo suadeo utrimque cresco.")
                             .required(false)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .question("Vulticulus depono abstergo possimus quibusdam deinde amoveo.")
                             .type(AtsJobQuestionType.TEXT)
-                            .description("Abstergo possimus quibusdam deinde amoveo.")
-                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .description("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .id("060ed8c8-ab8a-417c-8b25-edf38cb19b1c")
+                            .maxLength(381d)
+                            .minLength(1d)
                             .options(List.of(
-                                "vallum"))
-                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                                "utroque"))
+                            .prompt("Vir crepusculum ait adeptio ait defendo cotidie porro uterque.")
                             .required(false)
                             .build()))
                     .skills(List.of(
-                        "amiculum",
-                        "crux"))
+                        "coaegresco",
+                        "appello"))
                     .status(AtsJobStatus.ARCHIVED)
-                    .summary("Amicitia vergo hic.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-03T05:06:46.757Z"))
+                    .summary("Iste sto communis.")
+                    .updatedAt(OffsetDateTime.parse("2026-02-19T08:08:05.013Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -472,6 +673,75 @@ public class Application {
 ### Response
 
 **[PatchAtsJobResponse](../../models/operations/PatchAtsJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisJobRequest req = PatchHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("69c74d53-aa9f-46fc-b7ae-68d6296eff97")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.112Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisJobResponse res = sdk.job().patchHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [PatchHrisJobRequest](../../models/operations/PatchHrisJobRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[PatchHrisJobResponse](../../models/operations/PatchHrisJobResponse.md)**
 
 ### Errors
 
@@ -528,6 +798,62 @@ public class Application {
 ### Response
 
 **[RemoveAtsJobResponse](../../models/operations/RemoveAtsJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisJob
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisJobRequest req = RemoveHrisJobRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisJobResponse res = sdk.job().removeHrisJob()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemoveHrisJobRequest](../../models/operations/RemoveHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[RemoveHrisJobResponse](../../models/operations/RemoveHrisJobResponse.md)**
 
 ### Errors
 
@@ -595,21 +921,21 @@ public class Application {
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of(
                         AtsReference.builder()
-                            .id("fd9852e3-9035-4f42-beb3-bbf4e4022122")
-                            .name("Eloise Mueller PhD")
+                            .id("eb3bbf4e-4022-4122-9d44-39fd5b501e80")
+                            .name("Troy Greenholt")
                             .build()))
-                    .id("1d252d32-7042-4fd0-9e94-32b0d0556bc1")
-                    .industry("Gorgeous Plastic Computer")
+                    .id("a7fa9c17-0a1d-4992-a384-01d53b722701")
+                    .industry("Modern Granite Gloves")
                     .languageLocale("en")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("1ea5c44a-7c54-4427-8992-8e5bb31c3c02")
+                            .id("7ff0b09c-050a-46d1-b304-b6c98db5254b")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(AtsMetadataValue.of("acceptus"))
+                            .value(AtsMetadataValue.of("vomica"))
                             .build()))
                     .minimumDegree("Bachelor")
                     .minimumExperienceYears(3d)
@@ -618,27 +944,27 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-05-12T05:40:01.623Z"))
+                            .openedAt(OffsetDateTime.parse("2026-05-30T00:05:48.254Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
                         AtsJobPosting.builder()
                             .address(PropertyAtsJobPostingAddress.builder()
-                                .address1("8460 Nils Trace")
-                                .city("West Mervinburgh")
+                                .address1("51372 Kshlerin Creek")
+                                .city("Logancester")
                                 .countryCode("US")
-                                .postalCode("14162")
-                                .region("Maine")
+                                .postalCode("85013-9865")
+                                .region("Vermont")
                                 .regionCode("MO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-07-05T00:15:10.052Z"))
-                            .description("Deduco cultellus alii terebro depono thesaurus.")
-                            .id("f6101769-deb3-4721-978c-d205638870ee")
+                            .createdAt(OffsetDateTime.parse("2026-07-23T16:18:04.137Z"))
+                            .description("Provident turbo cunabula spoliatio agnitio.")
+                            .id("372178cd-2056-4388-870e-e7c199761c7c")
                             .isActive(false)
-                            .location("6788 Oxford Road")
-                            .name("Forward Security Orchestrator")
-                            .postingUrl("https://ajar-metabolite.net/")
-                            .updatedAt(OffsetDateTime.parse("2026-07-30T16:09:23.695Z"))
+                            .location("2925 Connie Green")
+                            .name("Lead Intranet Developer")
+                            .postingUrl("https://smart-summer.name/")
+                            .updatedAt(OffsetDateTime.parse("2026-08-18T18:31:19.229Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -649,6 +975,8 @@ public class Application {
                             .type(AtsJobQuestionType.TEXT)
                             .description("Trepide provident taceo rem.")
                             .id("289f27c0-311c-41e5-ad9d-cbe2097332c2")
+                            .maxLength(387d)
+                            .minLength(1d)
                             .options(List.of(
                                 "censura",
                                 "tum"))
@@ -656,30 +984,34 @@ public class Application {
                             .required(true)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Vinitor sodalitas desino sollers viduo volo.")
+                            .question("Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("b3a0b53b-38f3-4e8d-84b9-f413a900d79b")
+                            .id("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0")
+                            .maxLength(430d)
+                            .minLength(1d)
                             .options(List.of(
-                                "odit"))
-                            .prompt("Similique absque temeritas celebrer enim.")
+                                "aetas"))
+                            .prompt("Contra damno desolo suadeo utrimque cresco.")
                             .required(false)
                             .build(),
                         AtsJobQuestion.builder()
-                            .question("Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.")
+                            .question("Vulticulus depono abstergo possimus quibusdam deinde amoveo.")
                             .type(AtsJobQuestionType.TEXT)
-                            .description("Abstergo possimus quibusdam deinde amoveo.")
-                            .id("568be61d-060e-4d8c-a8ab-8a17cb25edf3")
+                            .description("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                            .id("060ed8c8-ab8a-417c-8b25-edf38cb19b1c")
+                            .maxLength(381d)
+                            .minLength(1d)
                             .options(List.of(
-                                "vallum"))
-                            .prompt("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.")
+                                "utroque"))
+                            .prompt("Vir crepusculum ait adeptio ait defendo cotidie porro uterque.")
                             .required(false)
                             .build()))
                     .skills(List.of(
-                        "amiculum",
-                        "crux"))
+                        "coaegresco",
+                        "appello"))
                     .status(AtsJobStatus.ARCHIVED)
-                    .summary("Amicitia vergo hic.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-03T05:06:46.757Z"))
+                    .summary("Iste sto communis.")
+                    .updatedAt(OffsetDateTime.parse("2026-02-19T08:08:05.013Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -705,6 +1037,75 @@ public class Application {
 ### Response
 
 **[UpdateAtsJobResponse](../../models/operations/UpdateAtsJobResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisJobRequest req = UpdateHrisJobRequest.builder()
+                .hrisJob(HrisJob.builder()
+                    .code("P-05547")
+                    .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
+                    .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
+                    .employmentType(HrisJobEmploymentType.FREELANCE)
+                    .id("69c74d53-aa9f-46fc-b7ae-68d6296eff97")
+                    .isActive(false)
+                    .name("Internal Integration Specialist")
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:47:07.112Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisJobResponse res = sdk.job().updateHrisJob()
+                .request(req)
+                .call();
+
+        if (res.hrisJob().isPresent()) {
+            System.out.println(res.hrisJob().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [UpdateHrisJobRequest](../../models/operations/UpdateHrisJobRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[UpdateHrisJobResponse](../../models/operations/UpdateHrisJobResponse.md)**
 
 ### Errors
 

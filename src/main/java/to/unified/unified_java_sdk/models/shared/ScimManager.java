@@ -19,17 +19,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>"id" attribute of another User.
  */
 public class ScimManager {
-
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     private String dollarRef;
 
-
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     private String displayName;
 
-
+    /**
+     * alias for value?
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managerId")
     private String managerId;
@@ -39,7 +45,9 @@ public class ScimManager {
     @JsonProperty("type")
     private ScimManagerType type;
 
-
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private String value;
@@ -63,14 +71,23 @@ public class ScimManager {
             null, null);
     }
 
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     public Optional<String> dollarRef() {
         return Optional.ofNullable(this.dollarRef);
     }
 
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * alias for value?
+     */
     public Optional<String> managerId() {
         return Optional.ofNullable(this.managerId);
     }
@@ -79,6 +96,9 @@ public class ScimManager {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -88,18 +108,27 @@ public class ScimManager {
     }
 
 
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     public ScimManager withDollarRef(@Nullable String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
     }
 
 
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     public ScimManager withDisplayName(@Nullable String displayName) {
         this.displayName = displayName;
         return this;
     }
 
 
+    /**
+     * alias for value?
+     */
     public ScimManager withManagerId(@Nullable String managerId) {
         this.managerId = managerId;
         return this;
@@ -112,6 +141,9 @@ public class ScimManager {
     }
 
 
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     public ScimManager withValue(@Nullable String value) {
         this.value = value;
         return this;
@@ -169,16 +201,25 @@ public class ScimManager {
           // force use of static builder() method
         }
 
+        /**
+         * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+         */
         public Builder dollarRef(@Nullable String dollarRef) {
             this.dollarRef = dollarRef;
             return this;
         }
 
+        /**
+         * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+         */
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
+        /**
+         * alias for value?
+         */
         public Builder managerId(@Nullable String managerId) {
             this.managerId = managerId;
             return this;
@@ -189,6 +230,9 @@ public class ScimManager {
             return this;
         }
 
+        /**
+         * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+         */
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;

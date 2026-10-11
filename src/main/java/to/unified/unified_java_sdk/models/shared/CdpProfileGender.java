@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpProfileGender
+ * 
+ * <p>The gender of the profile
+ */
 public class CdpProfileGender {
 
     public static final CdpProfileGender MALE = new CdpProfileGender("MALE");

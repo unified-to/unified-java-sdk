@@ -20,7 +20,9 @@ public class CdpMetadata {
     @JsonProperty("extra_data")
     private CdpMetadataExtraData extraData;
 
-
+    /**
+     * The data type of the attribute value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private CdpMetadataFormat format;
@@ -30,17 +32,23 @@ public class CdpMetadata {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The scope or origin of the attribute (eg. computed, event, visitor)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * The attribute/trait key (eg. lifetime_value)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The attribute/trait value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private CdpMetadataValue value;
@@ -70,6 +78,9 @@ public class CdpMetadata {
         return Optional.ofNullable(this.extraData);
     }
 
+    /**
+     * The data type of the attribute value
+     */
     public Optional<CdpMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
@@ -78,14 +89,23 @@ public class CdpMetadata {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The scope or origin of the attribute (eg. computed, event, visitor)
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * The attribute/trait key (eg. lifetime_value)
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The attribute/trait value
+     */
     public Optional<CdpMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
@@ -101,6 +121,9 @@ public class CdpMetadata {
     }
 
 
+    /**
+     * The data type of the attribute value
+     */
     public CdpMetadata withFormat(@Nullable CdpMetadataFormat format) {
         this.format = format;
         return this;
@@ -113,18 +136,27 @@ public class CdpMetadata {
     }
 
 
+    /**
+     * The scope or origin of the attribute (eg. computed, event, visitor)
+     */
     public CdpMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
 
+    /**
+     * The attribute/trait key (eg. lifetime_value)
+     */
     public CdpMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The attribute/trait value
+     */
     public CdpMetadata withValue(@Nullable CdpMetadataValue value) {
         this.value = value;
         return this;
@@ -191,6 +223,9 @@ public class CdpMetadata {
             return this;
         }
 
+        /**
+         * The data type of the attribute value
+         */
         public Builder format(@Nullable CdpMetadataFormat format) {
             this.format = format;
             return this;
@@ -201,16 +236,25 @@ public class CdpMetadata {
             return this;
         }
 
+        /**
+         * The scope or origin of the attribute (eg. computed, event, visitor)
+         */
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
+        /**
+         * The attribute/trait key (eg. lifetime_value)
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The attribute/trait value
+         */
         public Builder value(@Nullable CdpMetadataValue value) {
             this.value = value;
             return this;

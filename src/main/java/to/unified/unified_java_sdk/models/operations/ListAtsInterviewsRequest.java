@@ -23,6 +23,12 @@ public class ListAtsInterviewsRequest {
     private String applicationId;
 
     /**
+     * The candidate ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    private String candidateId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -33,6 +39,12 @@ public class ListAtsInterviewsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListAtsInterviewsQueryParamFields> fields;
+
+    /**
+     * The job ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    private String jobId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -74,8 +86,10 @@ public class ListAtsInterviewsRequest {
     @JsonCreator
     public ListAtsInterviewsRequest(
             @Nullable String applicationId,
+            @Nullable String candidateId,
             @Nonnull String connectionId,
             @Nullable List<ListAtsInterviewsQueryParamFields> fields,
+            @Nullable String jobId,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -84,9 +98,11 @@ public class ListAtsInterviewsRequest {
             @Nullable String sort,
             @Nullable String updatedGte) {
         this.applicationId = applicationId;
+        this.candidateId = candidateId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
+        this.jobId = jobId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -98,10 +114,10 @@ public class ListAtsInterviewsRequest {
     
     public ListAtsInterviewsRequest(
             @Nonnull String connectionId) {
-        this(null, connectionId, null,
+        this(null, null, connectionId,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -109,6 +125,13 @@ public class ListAtsInterviewsRequest {
      */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
+    }
+
+    /**
+     * The candidate ID to filter by
+     */
+    public Optional<String> candidateId() {
+        return Optional.ofNullable(this.candidateId);
     }
 
     /**
@@ -123,6 +146,13 @@ public class ListAtsInterviewsRequest {
      */
     public Optional<List<ListAtsInterviewsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The job ID to filter by
+     */
+    public Optional<String> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     public Optional<Double> limit() {
@@ -180,6 +210,15 @@ public class ListAtsInterviewsRequest {
 
 
     /**
+     * The candidate ID to filter by
+     */
+    public ListAtsInterviewsRequest withCandidateId(@Nullable String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+
+
+    /**
      * ID of the connection
      */
     public ListAtsInterviewsRequest withConnectionId(@Nonnull String connectionId) {
@@ -193,6 +232,15 @@ public class ListAtsInterviewsRequest {
      */
     public ListAtsInterviewsRequest withFields(@Nullable List<ListAtsInterviewsQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The job ID to filter by
+     */
+    public ListAtsInterviewsRequest withJobId(@Nullable String jobId) {
+        this.jobId = jobId;
         return this;
     }
 
@@ -262,8 +310,10 @@ public class ListAtsInterviewsRequest {
         ListAtsInterviewsRequest other = (ListAtsInterviewsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.applicationId, other.applicationId) &&
+            Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -276,18 +326,20 @@ public class ListAtsInterviewsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            applicationId, connectionId, fields,
-            limit, offset, order,
-            query, raw, sort,
-            updatedGte);
+            applicationId, candidateId, connectionId,
+            fields, jobId, limit,
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAtsInterviewsRequest.class,
                 "applicationId", applicationId,
+                "candidateId", candidateId,
                 "connectionId", connectionId,
                 "fields", fields,
+                "jobId", jobId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -302,9 +354,13 @@ public class ListAtsInterviewsRequest {
 
         private String applicationId;
 
+        private String candidateId;
+
         private String connectionId;
 
         private List<ListAtsInterviewsQueryParamFields> fields;
+
+        private String jobId;
 
         private Double limit;
 
@@ -333,6 +389,14 @@ public class ListAtsInterviewsRequest {
         }
 
         /**
+         * The candidate ID to filter by
+         */
+        public Builder candidateId(@Nullable String candidateId) {
+            this.candidateId = candidateId;
+            return this;
+        }
+
+        /**
          * ID of the connection
          */
         public Builder connectionId(@Nonnull String connectionId) {
@@ -345,6 +409,14 @@ public class ListAtsInterviewsRequest {
          */
         public Builder fields(@Nullable List<ListAtsInterviewsQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The job ID to filter by
+         */
+        public Builder jobId(@Nullable String jobId) {
+            this.jobId = jobId;
             return this;
         }
 
@@ -397,10 +469,10 @@ public class ListAtsInterviewsRequest {
 
         public ListAtsInterviewsRequest build() {
             return new ListAtsInterviewsRequest(
-                applicationId, connectionId, fields,
-                limit, offset, order,
-                query, raw, sort,
-                updatedGte);
+                applicationId, candidateId, connectionId,
+                fields, jobId, limit,
+                offset, order, query,
+                raw, sort, updatedGte);
         }
 
     }

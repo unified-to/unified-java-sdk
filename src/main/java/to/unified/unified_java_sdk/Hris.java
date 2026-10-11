@@ -27,12 +27,18 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisEarningResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
@@ -66,15 +72,27 @@ import to.unified.unified_java_sdk.models.operations.GetHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisEarningRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisEarningResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisPaycodeRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPaycodeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisPaycodeResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayrollRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisPayrollResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
@@ -108,15 +126,27 @@ import to.unified.unified_java_sdk.models.operations.ListHrisDevicesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisEarningsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisEarningsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisEarningsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisEmployeesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisPaycodesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPaycodesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisPaycodesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisPayrollsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
@@ -150,12 +180,18 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEarningRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisEarningResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
@@ -186,12 +222,18 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEarningRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisEarningResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
@@ -222,12 +264,18 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisDeviceResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
@@ -244,8 +292,10 @@ import to.unified.unified_java_sdk.operations.CreateHrisCompany;
 import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
 import to.unified.unified_java_sdk.operations.CreateHrisDevice;
 import to.unified.unified_java_sdk.operations.CreateHrisDocument;
+import to.unified.unified_java_sdk.operations.CreateHrisEarning;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
+import to.unified.unified_java_sdk.operations.CreateHrisJob;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
@@ -257,9 +307,13 @@ import to.unified.unified_java_sdk.operations.GetHrisCompany;
 import to.unified.unified_java_sdk.operations.GetHrisDeduction;
 import to.unified.unified_java_sdk.operations.GetHrisDevice;
 import to.unified.unified_java_sdk.operations.GetHrisDocument;
+import to.unified.unified_java_sdk.operations.GetHrisEarning;
 import to.unified.unified_java_sdk.operations.GetHrisEmployee;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
+import to.unified.unified_java_sdk.operations.GetHrisJob;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.GetHrisPaycode;
+import to.unified.unified_java_sdk.operations.GetHrisPayroll;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
@@ -271,9 +325,13 @@ import to.unified.unified_java_sdk.operations.ListHrisCompanies;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.operations.ListHrisDevices;
 import to.unified.unified_java_sdk.operations.ListHrisDocuments;
+import to.unified.unified_java_sdk.operations.ListHrisEarnings;
 import to.unified.unified_java_sdk.operations.ListHrisEmployees;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
+import to.unified.unified_java_sdk.operations.ListHrisJobs;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
+import to.unified.unified_java_sdk.operations.ListHrisPaycodes;
+import to.unified.unified_java_sdk.operations.ListHrisPayrolls;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
@@ -285,8 +343,10 @@ import to.unified.unified_java_sdk.operations.PatchHrisCompany;
 import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
 import to.unified.unified_java_sdk.operations.PatchHrisDevice;
 import to.unified.unified_java_sdk.operations.PatchHrisDocument;
+import to.unified.unified_java_sdk.operations.PatchHrisEarning;
 import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
+import to.unified.unified_java_sdk.operations.PatchHrisJob;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
@@ -297,8 +357,10 @@ import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
 import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
 import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
+import to.unified.unified_java_sdk.operations.RemoveHrisEarning;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
+import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
@@ -309,8 +371,10 @@ import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
 import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
+import to.unified.unified_java_sdk.operations.UpdateHrisEarning;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
+import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
@@ -491,6 +555,28 @@ public class Hris {
     }
 
     /**
+     * Create an earning
+     * 
+     * @return The call builder
+     */
+    public CreateHrisEarningRequestBuilder createHrisEarning() {
+        return new CreateHrisEarningRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an earning
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisEarningResponse createHrisEarning(@Nonnull CreateHrisEarningRequest request) {
+        RequestOperation<CreateHrisEarningRequest, CreateHrisEarningResponse> operation
+              = new CreateHrisEarning.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Create an employee
      * 
      * @return The call builder
@@ -531,6 +617,28 @@ public class Hris {
     public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a job
+     * 
+     * @return The call builder
+     */
+    public CreateHrisJobRequestBuilder createHrisJob() {
+        return new CreateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisJobResponse createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        RequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
+              = new CreateHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -777,6 +885,28 @@ public class Hris {
     }
 
     /**
+     * Retrieve an earning
+     * 
+     * @return The call builder
+     */
+    public GetHrisEarningRequestBuilder getHrisEarning() {
+        return new GetHrisEarningRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an earning
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisEarningResponse getHrisEarning(@Nonnull GetHrisEarningRequest request) {
+        RequestOperation<GetHrisEarningRequest, GetHrisEarningResponse> operation
+              = new GetHrisEarning.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve an employee
      * 
      * @return The call builder
@@ -821,6 +951,28 @@ public class Hris {
     }
 
     /**
+     * Retrieve a job
+     * 
+     * @return The call builder
+     */
+    public GetHrisJobRequestBuilder getHrisJob() {
+        return new GetHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisJobResponse getHrisJob(@Nonnull GetHrisJobRequest request) {
+        RequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
+              = new GetHrisJob.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a location
      * 
      * @return The call builder
@@ -839,6 +991,50 @@ public class Hris {
     public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a paycode
+     * 
+     * @return The call builder
+     */
+    public GetHrisPaycodeRequestBuilder getHrisPaycode() {
+        return new GetHrisPaycodeRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a paycode
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPaycodeResponse getHrisPaycode(@Nonnull GetHrisPaycodeRequest request) {
+        RequestOperation<GetHrisPaycodeRequest, GetHrisPaycodeResponse> operation
+              = new GetHrisPaycode.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * @return The call builder
+     */
+    public GetHrisPayrollRequestBuilder getHrisPayroll() {
+        return new GetHrisPayrollRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a payroll
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisPayrollResponse getHrisPayroll(@Nonnull GetHrisPayrollRequest request) {
+        RequestOperation<GetHrisPayrollRequest, GetHrisPayrollResponse> operation
+              = new GetHrisPayroll.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1085,6 +1281,28 @@ public class Hris {
     }
 
     /**
+     * List all earnings
+     * 
+     * @return The call builder
+     */
+    public ListHrisEarningsRequestBuilder listHrisEarnings() {
+        return new ListHrisEarningsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all earnings
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisEarningsResponse listHrisEarnings(@Nonnull ListHrisEarningsRequest request) {
+        RequestOperation<ListHrisEarningsRequest, ListHrisEarningsResponse> operation
+              = new ListHrisEarnings.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all employees
      * 
      * @return The call builder
@@ -1129,6 +1347,28 @@ public class Hris {
     }
 
     /**
+     * List all jobs
+     * 
+     * @return The call builder
+     */
+    public ListHrisJobsRequestBuilder listHrisJobs() {
+        return new ListHrisJobsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisJobsResponse listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        RequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
+              = new ListHrisJobs.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all locations
      * 
      * @return The call builder
@@ -1147,6 +1387,50 @@ public class Hris {
     public ListHrisLocationsResponse listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
         RequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
               = new ListHrisLocations.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all paycodes
+     * 
+     * @return The call builder
+     */
+    public ListHrisPaycodesRequestBuilder listHrisPaycodes() {
+        return new ListHrisPaycodesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all paycodes
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPaycodesResponse listHrisPaycodes(@Nonnull ListHrisPaycodesRequest request) {
+        RequestOperation<ListHrisPaycodesRequest, ListHrisPaycodesResponse> operation
+              = new ListHrisPaycodes.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * @return The call builder
+     */
+    public ListHrisPayrollsRequestBuilder listHrisPayrolls() {
+        return new ListHrisPayrollsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all payrolls
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisPayrollsResponse listHrisPayrolls(@Nonnull ListHrisPayrollsRequest request) {
+        RequestOperation<ListHrisPayrollsRequest, ListHrisPayrollsResponse> operation
+              = new ListHrisPayrolls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1393,6 +1677,28 @@ public class Hris {
     }
 
     /**
+     * Update an earning
+     * 
+     * @return The call builder
+     */
+    public PatchHrisEarningRequestBuilder patchHrisEarning() {
+        return new PatchHrisEarningRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisEarningResponse patchHrisEarning(@Nonnull PatchHrisEarningRequest request) {
+        RequestOperation<PatchHrisEarningRequest, PatchHrisEarningResponse> operation
+              = new PatchHrisEarning.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an employee
      * 
      * @return The call builder
@@ -1433,6 +1739,28 @@ public class Hris {
     public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a job
+     * 
+     * @return The call builder
+     */
+    public PatchHrisJobRequestBuilder patchHrisJob() {
+        return new PatchHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisJobResponse patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        RequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
+              = new PatchHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1657,6 +1985,28 @@ public class Hris {
     }
 
     /**
+     * Remove an earning
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisEarningRequestBuilder removeHrisEarning() {
+        return new RemoveHrisEarningRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an earning
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisEarningResponse removeHrisEarning(@Nonnull RemoveHrisEarningRequest request) {
+        RequestOperation<RemoveHrisEarningRequest, RemoveHrisEarningResponse> operation
+              = new RemoveHrisEarning.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an employee
      * 
      * @return The call builder
@@ -1697,6 +2047,28 @@ public class Hris {
     public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a job
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisJobRequestBuilder removeHrisJob() {
+        return new RemoveHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisJobResponse removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        RequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
+              = new RemoveHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1921,6 +2293,28 @@ public class Hris {
     }
 
     /**
+     * Update an earning
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisEarningRequestBuilder updateHrisEarning() {
+        return new UpdateHrisEarningRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an earning
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisEarningResponse updateHrisEarning(@Nonnull UpdateHrisEarningRequest request) {
+        RequestOperation<UpdateHrisEarningRequest, UpdateHrisEarningResponse> operation
+              = new UpdateHrisEarning.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an employee
      * 
      * @return The call builder
@@ -1961,6 +2355,28 @@ public class Hris {
     public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a job
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisJobRequestBuilder updateHrisJob() {
+        return new UpdateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisJobResponse updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        RequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
+              = new UpdateHrisJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

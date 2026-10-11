@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class LmsClass {
-
+    /**
+     * (reference to Course)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("course_id")
     private String courseId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -69,7 +73,9 @@ public class LmsClass {
     @JsonProperty("students")
     private List<LmsReference> students;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -107,10 +113,16 @@ public class LmsClass {
             null, null);
     }
 
+    /**
+     * (reference to Course)
+     */
     public Optional<String> courseId() {
         return Optional.ofNullable(this.courseId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -147,6 +159,9 @@ public class LmsClass {
         return Optional.ofNullable(this.students);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -156,12 +171,18 @@ public class LmsClass {
     }
 
 
+    /**
+     * (reference to Course)
+     */
     public LmsClass withCourseId(@Nullable String courseId) {
         this.courseId = courseId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsClass withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -216,6 +237,9 @@ public class LmsClass {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public LmsClass withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -299,11 +323,17 @@ public class LmsClass {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to Course)
+         */
         public Builder courseId(@Nullable String courseId) {
             this.courseId = courseId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -349,6 +379,9 @@ public class LmsClass {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

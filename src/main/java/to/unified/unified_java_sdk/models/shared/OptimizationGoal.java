@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * OptimizationGoal
+ * 
+ * <p>Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+ */
 public class OptimizationGoal {
 
     public static final OptimizationGoal REACH = new OptimizationGoal("REACH");

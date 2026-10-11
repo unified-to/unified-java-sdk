@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HrisGroup {
-
+    /**
+     * (reference to HrisCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -55,10 +59,24 @@ public class HrisGroup {
     @JsonProperty("name")
     private String name;
 
+    /**
+     * next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("next_paid_at")
+    private OffsetDateTime nextPaidAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
+
+    /**
+     * pay cycle when type is PAY_GROUP
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("pay_frequency")
+    private HrisGroupPayFrequency payFrequency;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -70,7 +88,9 @@ public class HrisGroup {
     @JsonProperty("type")
     private HrisGroupType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -89,7 +109,9 @@ public class HrisGroup {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("manager_ids") @Nullable List<String> managerIds,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("next_paid_at") @Nullable OffsetDateTime nextPaidAt,
             @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("pay_frequency") @Nullable HrisGroupPayFrequency payFrequency,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable HrisGroupType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -101,7 +123,9 @@ public class HrisGroup {
         this.isActive = isActive;
         this.managerIds = managerIds;
         this.name = name;
+        this.nextPaidAt = nextPaidAt;
         this.parentId = parentId;
+        this.payFrequency = payFrequency;
         this.raw = raw;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -112,13 +136,20 @@ public class HrisGroup {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
+    /**
+     * (reference to HrisCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -143,8 +174,22 @@ public class HrisGroup {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> nextPaidAt() {
+        return Optional.ofNullable(this.nextPaidAt);
+    }
+
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
+    }
+
+    /**
+     * pay cycle when type is PAY_GROUP
+     */
+    public Optional<HrisGroupPayFrequency> payFrequency() {
+        return Optional.ofNullable(this.payFrequency);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -155,6 +200,9 @@ public class HrisGroup {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -168,12 +216,18 @@ public class HrisGroup {
     }
 
 
+    /**
+     * (reference to HrisCompany)
+     */
     public HrisGroup withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisGroup withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -210,8 +264,26 @@ public class HrisGroup {
     }
 
 
+    /**
+     * next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisGroup withNextPaidAt(@Nullable OffsetDateTime nextPaidAt) {
+        this.nextPaidAt = nextPaidAt;
+        return this;
+    }
+
+
     public HrisGroup withParentId(@Nullable String parentId) {
         this.parentId = parentId;
+        return this;
+    }
+
+
+    /**
+     * pay cycle when type is PAY_GROUP
+     */
+    public HrisGroup withPayFrequency(@Nullable HrisGroupPayFrequency payFrequency) {
+        this.payFrequency = payFrequency;
         return this;
     }
 
@@ -228,6 +300,9 @@ public class HrisGroup {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public HrisGroup withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -257,7 +332,9 @@ public class HrisGroup {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.managerIds, other.managerIds) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.nextPaidAt, other.nextPaidAt) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
+            Utils.enhancedDeepEquals(this.payFrequency, other.payFrequency) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -269,8 +346,9 @@ public class HrisGroup {
         return Utils.enhancedHash(
             companyId, createdAt, description,
             id, isActive, managerIds,
-            name, parentId, raw,
-            type, updatedAt, userIds);
+            name, nextPaidAt, parentId,
+            payFrequency, raw, type,
+            updatedAt, userIds);
     }
     
     @Override
@@ -283,7 +361,9 @@ public class HrisGroup {
                 "isActive", isActive,
                 "managerIds", managerIds,
                 "name", name,
+                "nextPaidAt", nextPaidAt,
                 "parentId", parentId,
+                "payFrequency", payFrequency,
                 "raw", raw,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -307,7 +387,11 @@ public class HrisGroup {
 
         private String name;
 
+        private OffsetDateTime nextPaidAt;
+
         private String parentId;
+
+        private HrisGroupPayFrequency payFrequency;
 
         private Map<String, Object> raw;
 
@@ -321,11 +405,17 @@ public class HrisGroup {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to HrisCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -356,8 +446,24 @@ public class HrisGroup {
             return this;
         }
 
+        /**
+         * next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder nextPaidAt(@Nullable OffsetDateTime nextPaidAt) {
+            this.nextPaidAt = nextPaidAt;
+            return this;
+        }
+
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
+            return this;
+        }
+
+        /**
+         * pay cycle when type is PAY_GROUP
+         */
+        public Builder payFrequency(@Nullable HrisGroupPayFrequency payFrequency) {
+            this.payFrequency = payFrequency;
             return this;
         }
 
@@ -371,6 +477,9 @@ public class HrisGroup {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -385,8 +494,9 @@ public class HrisGroup {
             return new HrisGroup(
                 companyId, createdAt, description,
                 id, isActive, managerIds,
-                name, parentId, raw,
-                type, updatedAt, userIds);
+                name, nextPaidAt, parentId,
+                payFrequency, raw, type,
+                updatedAt, userIds);
         }
 
     }

@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CommerceItemPrice {
-
+    /**
+     * The original price of the item before an adjustment or a sale.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compare_at_price")
     private Double compareAtPrice;
@@ -45,6 +47,9 @@ public class CommerceItemPrice {
         this(null, null, price);
     }
 
+    /**
+     * The original price of the item before an adjustment or a sale.
+     */
     public Optional<Double> compareAtPrice() {
         return Optional.ofNullable(this.compareAtPrice);
     }
@@ -62,6 +67,9 @@ public class CommerceItemPrice {
     }
 
 
+    /**
+     * The original price of the item before an adjustment or a sale.
+     */
     public CommerceItemPrice withCompareAtPrice(@Nullable Double compareAtPrice) {
         this.compareAtPrice = compareAtPrice;
         return this;
@@ -122,6 +130,9 @@ public class CommerceItemPrice {
           // force use of static builder() method
         }
 
+        /**
+         * The original price of the item before an adjustment or a sale.
+         */
         public Builder compareAtPrice(@Nullable Double compareAtPrice) {
             this.compareAtPrice = compareAtPrice;
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PropertyAdsReportMetricsGroupOptimizationGoal
+ * 
+ * <p>Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+ */
 public class PropertyAdsReportMetricsGroupOptimizationGoal {
 
     public static final PropertyAdsReportMetricsGroupOptimizationGoal REACH = new PropertyAdsReportMetricsGroupOptimizationGoal("REACH");

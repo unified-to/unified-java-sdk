@@ -17,7 +17,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AdSchedule {
-
+    /**
+     * 0.1-10.0
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bid_modifier")
     private Double bidModifier;
@@ -26,20 +28,28 @@ public class AdSchedule {
     @JsonProperty("day_of_week")
     private DayOfWeek dayOfWeek;
 
-
+    /**
+     * 0-24 (24 = end of day)
+     */
     @JsonProperty("end_hour")
     private double endHour;
 
-
+    /**
+     * 0, 15, 30, 45
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_minute")
     private Double endMinute;
 
-
+    /**
+     * 0-23
+     */
     @JsonProperty("start_hour")
     private double startHour;
 
-
+    /**
+     * 0, 15, 30, 45
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_minute")
     private Double startMinute;
@@ -69,6 +79,9 @@ public class AdSchedule {
             null, startHour, null);
     }
 
+    /**
+     * 0.1-10.0
+     */
     public Optional<Double> bidModifier() {
         return Optional.ofNullable(this.bidModifier);
     }
@@ -77,18 +90,30 @@ public class AdSchedule {
         return this.dayOfWeek;
     }
 
+    /**
+     * 0-24 (24 = end of day)
+     */
     public double endHour() {
         return this.endHour;
     }
 
+    /**
+     * 0, 15, 30, 45
+     */
     public Optional<Double> endMinute() {
         return Optional.ofNullable(this.endMinute);
     }
 
+    /**
+     * 0-23
+     */
     public double startHour() {
         return this.startHour;
     }
 
+    /**
+     * 0, 15, 30, 45
+     */
     public Optional<Double> startMinute() {
         return Optional.ofNullable(this.startMinute);
     }
@@ -98,6 +123,9 @@ public class AdSchedule {
     }
 
 
+    /**
+     * 0.1-10.0
+     */
     public AdSchedule withBidModifier(@Nullable Double bidModifier) {
         this.bidModifier = bidModifier;
         return this;
@@ -110,24 +138,36 @@ public class AdSchedule {
     }
 
 
+    /**
+     * 0-24 (24 = end of day)
+     */
     public AdSchedule withEndHour(double endHour) {
         this.endHour = endHour;
         return this;
     }
 
 
+    /**
+     * 0, 15, 30, 45
+     */
     public AdSchedule withEndMinute(@Nullable Double endMinute) {
         this.endMinute = endMinute;
         return this;
     }
 
 
+    /**
+     * 0-23
+     */
     public AdSchedule withStartHour(double startHour) {
         this.startHour = startHour;
         return this;
     }
 
 
+    /**
+     * 0, 15, 30, 45
+     */
     public AdSchedule withStartMinute(@Nullable Double startMinute) {
         this.startMinute = startMinute;
         return this;
@@ -189,6 +229,9 @@ public class AdSchedule {
           // force use of static builder() method
         }
 
+        /**
+         * 0.1-10.0
+         */
         public Builder bidModifier(@Nullable Double bidModifier) {
             this.bidModifier = bidModifier;
             return this;
@@ -199,21 +242,33 @@ public class AdSchedule {
             return this;
         }
 
+        /**
+         * 0-24 (24 = end of day)
+         */
         public Builder endHour(double endHour) {
             this.endHour = endHour;
             return this;
         }
 
+        /**
+         * 0, 15, 30, 45
+         */
         public Builder endMinute(@Nullable Double endMinute) {
             this.endMinute = endMinute;
             return this;
         }
 
+        /**
+         * 0-23
+         */
         public Builder startHour(double startHour) {
             this.startHour = startHour;
             return this;
         }
 
+        /**
+         * 0, 15, 30, 45
+         */
         public Builder startMinute(@Nullable Double startMinute) {
             this.startMinute = startMinute;
             return this;

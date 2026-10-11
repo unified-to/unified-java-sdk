@@ -35,6 +35,23 @@ public class Application {
 
         CreateGenaiPromptRequest req = CreateGenaiPromptRequest.builder()
                 .genaiPrompt(GenaiPrompt.builder()
+                    .answers(List.of(
+                        GenaiAnswer.builder()
+                            .id("TeZpueFB")
+                            .type(GenaiAnswerType.CHOICE)
+                            .confidence(0.5384309098590165)
+                            .probabilities(List.of(
+                                GenaiAnswerProbability.builder()
+                                    .option("veniam")
+                                    .probability(0.05683182482607663)
+                                    .build(),
+                                GenaiAnswerProbability.builder()
+                                    .option("comes")
+                                    .probability(0.1404057613108307)
+                                    .build()))
+                            .score(0.05974147981032729)
+                            .value("summisse")
+                            .build()))
                     .maxTokens(0.4677782787475735)
                     .mcpAuthorizationToken("f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4")
                     .mcpDeferredTools(List.of())
@@ -42,11 +59,41 @@ public class Application {
                     .messages(List.of(
                         GenaiContent.builder()
                             .content("Aegre repudiandae verecundia facere statua.")
+                            .images(List.of())
                             .role(Role.ASSISTANT)
                             .build(),
                         GenaiContent.builder()
                             .content("Speciosus xiphias soleo trepide crinis.")
+                            .images(List.of())
                             .role(Role.SYSTEM)
+                            .build()))
+                    .questions(List.of(
+                        GenaiQuestion.builder()
+                            .id("KtvbYiEq")
+                            .instructions("Admiratio cura contabesco subvenio venustas architecto vacuus summopere.")
+                            .type(GenaiQuestionType.BOOLEAN)
+                            .options(List.of(
+                                "vulnero",
+                                "quasi",
+                                "tolero"))
+                            .build(),
+                        GenaiQuestion.builder()
+                            .id("oV6IURtv")
+                            .instructions("Celer deleniti ventus ipsam tendo odit.")
+                            .type(GenaiQuestionType.CHOICE)
+                            .options(List.of(
+                                "nulla",
+                                "aspicio",
+                                "tero"))
+                            .build(),
+                        GenaiQuestion.builder()
+                            .id("60dBZk2K")
+                            .instructions("Decretum vesica amet repudiandae.")
+                            .type(GenaiQuestionType.BOOLEAN)
+                            .options(List.of(
+                                "ducimus",
+                                "civis",
+                                "alter"))
                             .build()))
                     .responses(List.of(
                         "Balbus vobis circumvenio una."))

@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingLineitem {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -29,12 +31,16 @@ public class AccountingLineitem {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -44,7 +50,9 @@ public class AccountingLineitem {
     @JsonProperty("discount_amount")
     private Double discountAmount;
 
-
+    /**
+     * The exchange rate applied to this line, for multi-currency documents
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
@@ -59,7 +67,9 @@ public class AccountingLineitem {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * True when the line is rebillable to a customer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     private Boolean isBillable;
@@ -69,7 +79,9 @@ public class AccountingLineitem {
     @JsonProperty("item_description")
     private String itemDescription;
 
-
+    /**
+     * (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
@@ -99,7 +111,9 @@ public class AccountingLineitem {
     @JsonProperty("notes")
     private String notes;
 
-
+    /**
+     * ref -&gt; AccountingProject; the project this line is coded to (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -109,7 +123,9 @@ public class AccountingLineitem {
     @JsonProperty("refund_amount")
     private Double refundAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private OffsetDateTime refundedAt;
@@ -124,7 +140,9 @@ public class AccountingLineitem {
     @JsonProperty("taxrate_id")
     private String taxrateId;
 
-
+    /**
+     * unit_quantity * unit_amount + tax_amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
@@ -139,7 +157,9 @@ public class AccountingLineitem {
     @JsonProperty("unit_quantity")
     private Double unitQuantity;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -210,6 +230,9 @@ public class AccountingLineitem {
             null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -218,10 +241,16 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -230,6 +259,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    /**
+     * The exchange rate applied to this line, for multi-currency documents
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
@@ -242,6 +274,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * True when the line is rebillable to a customer
+     */
     public Optional<Boolean> isBillable() {
         return Optional.ofNullable(this.isBillable);
     }
@@ -250,6 +285,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.itemDescription);
     }
 
+    /**
+     * (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -274,6 +312,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.notes);
     }
 
+    /**
+     * ref -&gt; AccountingProject; the project this line is coded to (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -282,6 +323,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.refundAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> refundedAt() {
         return Optional.ofNullable(this.refundedAt);
     }
@@ -294,6 +338,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.taxrateId);
     }
 
+    /**
+     * unit_quantity * unit_amount + tax_amount
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
@@ -306,6 +353,9 @@ public class AccountingLineitem {
         return Optional.ofNullable(this.unitQuantity);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -315,6 +365,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingLineitem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -327,12 +380,18 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingLineitem withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingLineitem withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -345,6 +404,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * The exchange rate applied to this line, for multi-currency documents
+     */
     public AccountingLineitem withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -363,6 +425,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * True when the line is rebillable to a customer
+     */
     public AccountingLineitem withIsBillable(@Nullable Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -375,6 +440,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * (reference to CommerceItem)
+     */
     public AccountingLineitem withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
@@ -411,6 +479,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * ref -&gt; AccountingProject; the project this line is coded to (reference to TaskProject)
+     */
     public AccountingLineitem withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -423,6 +494,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingLineitem withRefundedAt(@Nullable OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
@@ -441,6 +515,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * unit_quantity * unit_amount + tax_amount
+     */
     public AccountingLineitem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -459,6 +536,9 @@ public class AccountingLineitem {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingLineitem withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -603,6 +683,9 @@ public class AccountingLineitem {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -613,11 +696,17 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -628,6 +717,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * The exchange rate applied to this line, for multi-currency documents
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
@@ -643,6 +735,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * True when the line is rebillable to a customer
+         */
         public Builder isBillable(@Nullable Boolean isBillable) {
             this.isBillable = isBillable;
             return this;
@@ -653,6 +748,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
@@ -683,6 +781,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * ref -&gt; AccountingProject; the project this line is coded to (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -693,6 +794,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
             this.refundedAt = refundedAt;
             return this;
@@ -708,6 +812,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * unit_quantity * unit_amount + tax_amount
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
@@ -723,6 +830,9 @@ public class AccountingLineitem {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

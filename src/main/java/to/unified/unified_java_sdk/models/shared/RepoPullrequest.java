@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class RepoPullrequest {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
@@ -29,7 +31,9 @@ public class RepoPullrequest {
     @JsonProperty("commit_ids")
     private List<String> commitIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -54,7 +58,9 @@ public class RepoPullrequest {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (reference to RepoRepository)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_id")
     private String repoId;
@@ -79,7 +85,9 @@ public class RepoPullrequest {
     @JsonProperty("title")
     private String title;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -129,6 +137,9 @@ public class RepoPullrequest {
             null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
@@ -137,6 +148,9 @@ public class RepoPullrequest {
         return Optional.ofNullable(this.commitIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -157,6 +171,9 @@ public class RepoPullrequest {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (reference to RepoRepository)
+     */
     public Optional<String> repoId() {
         return Optional.ofNullable(this.repoId);
     }
@@ -177,6 +194,9 @@ public class RepoPullrequest {
         return Optional.ofNullable(this.title);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -190,6 +210,9 @@ public class RepoPullrequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoPullrequest withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -202,6 +225,9 @@ public class RepoPullrequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoPullrequest withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -232,6 +258,9 @@ public class RepoPullrequest {
     }
 
 
+    /**
+     * (reference to RepoRepository)
+     */
     public RepoPullrequest withRepoId(@Nullable String repoId) {
         this.repoId = repoId;
         return this;
@@ -262,6 +291,9 @@ public class RepoPullrequest {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public RepoPullrequest withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -364,6 +396,9 @@ public class RepoPullrequest {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
@@ -374,6 +409,9 @@ public class RepoPullrequest {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -399,6 +437,9 @@ public class RepoPullrequest {
             return this;
         }
 
+        /**
+         * (reference to RepoRepository)
+         */
         public Builder repoId(@Nullable String repoId) {
             this.repoId = repoId;
             return this;
@@ -424,6 +465,9 @@ public class RepoPullrequest {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

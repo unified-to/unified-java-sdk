@@ -17,17 +17,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingCashflowItem {
-
+    /**
+     * If attributable to a specific GL account (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
 
-
+    /**
+     * Positive = inflow, Negative = outflow
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * e.g. "Net Income", "Depreciation", "Equipment"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -63,14 +69,23 @@ public class AccountingCashflowItem {
             null, null);
     }
 
+    /**
+     * If attributable to a specific GL account (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * Positive = inflow, Negative = outflow
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * e.g. "Net Income", "Depreciation", "Equipment"
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,18 +106,27 @@ public class AccountingCashflowItem {
     }
 
 
+    /**
+     * If attributable to a specific GL account (reference to AccountingAccount)
+     */
     public AccountingCashflowItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
 
+    /**
+     * Positive = inflow, Negative = outflow
+     */
     public AccountingCashflowItem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * e.g. "Net Income", "Depreciation", "Equipment"
+     */
     public AccountingCashflowItem withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -175,16 +199,25 @@ public class AccountingCashflowItem {
           // force use of static builder() method
         }
 
+        /**
+         * If attributable to a specific GL account (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
+        /**
+         * Positive = inflow, Negative = outflow
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * e.g. "Net Income", "Depreciation", "Equipment"
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

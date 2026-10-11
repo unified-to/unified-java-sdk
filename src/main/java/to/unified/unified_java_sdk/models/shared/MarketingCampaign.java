@@ -19,22 +19,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class MarketingCampaign {
-
+    /**
+     * When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Sender email address
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_email")
     private String fromEmail;
 
-
+    /**
+     * Sender name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_name")
     private String fromName;
 
-
+    /**
+     * Unique identifier for the campaign
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -46,47 +54,65 @@ public class MarketingCampaign {
     @JsonProperty("list_ids")
     private List<String> listIds;
 
-
+    /**
+     * Campaign nametitle
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Email preview text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_text")
     private String previewText;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Reply-to email address
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reply_to_email")
     private String replyToEmail;
 
-
+    /**
+     * Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send_at")
     private OffsetDateTime sendAt;
 
-
+    /**
+     * Campaign status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private MarketingCampaignStatus status;
 
-
+    /**
+     * Email subject line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject_line")
     private String subjectLine;
 
-
+    /**
+     * Campaign type (e.g., regular, automation, ab_test)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private String type;
 
-
+    /**
+     * When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -131,18 +157,30 @@ public class MarketingCampaign {
             null, null);
     }
 
+    /**
+     * When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Sender email address
+     */
     public Optional<String> fromEmail() {
         return Optional.ofNullable(this.fromEmail);
     }
 
+    /**
+     * Sender name
+     */
     public Optional<String> fromName() {
         return Optional.ofNullable(this.fromName);
     }
 
+    /**
+     * Unique identifier for the campaign
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -154,38 +192,65 @@ public class MarketingCampaign {
         return Optional.ofNullable(this.listIds);
     }
 
+    /**
+     * Campaign nametitle
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Email preview text
+     */
     public Optional<String> previewText() {
         return Optional.ofNullable(this.previewText);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Reply-to email address
+     */
     public Optional<String> replyToEmail() {
         return Optional.ofNullable(this.replyToEmail);
     }
 
+    /**
+     * Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sendAt() {
         return Optional.ofNullable(this.sendAt);
     }
 
+    /**
+     * Campaign status
+     */
     public Optional<MarketingCampaignStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Email subject line
+     */
     public Optional<String> subjectLine() {
         return Optional.ofNullable(this.subjectLine);
     }
 
+    /**
+     * Campaign type (e.g., regular, automation, ab_test)
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -195,24 +260,36 @@ public class MarketingCampaign {
     }
 
 
+    /**
+     * When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingCampaign withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Sender email address
+     */
     public MarketingCampaign withFromEmail(@Nullable String fromEmail) {
         this.fromEmail = fromEmail;
         return this;
     }
 
 
+    /**
+     * Sender name
+     */
     public MarketingCampaign withFromName(@Nullable String fromName) {
         this.fromName = fromName;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the campaign
+     */
     public MarketingCampaign withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -228,54 +305,81 @@ public class MarketingCampaign {
     }
 
 
+    /**
+     * Campaign nametitle
+     */
     public MarketingCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Email preview text
+     */
     public MarketingCampaign withPreviewText(@Nullable String previewText) {
         this.previewText = previewText;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public MarketingCampaign withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Reply-to email address
+     */
     public MarketingCampaign withReplyToEmail(@Nullable String replyToEmail) {
         this.replyToEmail = replyToEmail;
         return this;
     }
 
 
+    /**
+     * Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingCampaign withSendAt(@Nullable OffsetDateTime sendAt) {
         this.sendAt = sendAt;
         return this;
     }
 
 
+    /**
+     * Campaign status
+     */
     public MarketingCampaign withStatus(@Nullable MarketingCampaignStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * Email subject line
+     */
     public MarketingCampaign withSubjectLine(@Nullable String subjectLine) {
         this.subjectLine = subjectLine;
         return this;
     }
 
 
+    /**
+     * Campaign type (e.g., regular, automation, ab_test)
+     */
     public MarketingCampaign withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingCampaign withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -372,21 +476,33 @@ public class MarketingCampaign {
           // force use of static builder() method
         }
 
+        /**
+         * When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Sender email address
+         */
         public Builder fromEmail(@Nullable String fromEmail) {
             this.fromEmail = fromEmail;
             return this;
         }
 
+        /**
+         * Sender name
+         */
         public Builder fromName(@Nullable String fromName) {
             this.fromName = fromName;
             return this;
         }
 
+        /**
+         * Unique identifier for the campaign
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -400,46 +516,73 @@ public class MarketingCampaign {
             return this;
         }
 
+        /**
+         * Campaign nametitle
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Email preview text
+         */
         public Builder previewText(@Nullable String previewText) {
             this.previewText = previewText;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Reply-to email address
+         */
         public Builder replyToEmail(@Nullable String replyToEmail) {
             this.replyToEmail = replyToEmail;
             return this;
         }
 
+        /**
+         * Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sendAt(@Nullable OffsetDateTime sendAt) {
             this.sendAt = sendAt;
             return this;
         }
 
+        /**
+         * Campaign status
+         */
         public Builder status(@Nullable MarketingCampaignStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * Email subject line
+         */
         public Builder subjectLine(@Nullable String subjectLine) {
             this.subjectLine = subjectLine;
             return this;
         }
 
+        /**
+         * Campaign type (e.g., regular, automation, ab_test)
+         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -19,32 +19,44 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ShippingTracking {
-
+    /**
+     * Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_delivery_at")
     private OffsetDateTime actualDeliveryAt;
 
-
+    /**
+     * Reference to the carrier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_id")
     private String carrierId;
 
-
+    /**
+     * Carrier's status code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_code")
     private String carrierStatusCode;
 
-
+    /**
+     * Carrier's status description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_description")
     private String carrierStatusDescription;
 
-
+    /**
+     * The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Estimated delivery date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery")
     private OffsetDateTime estimatedDelivery;
@@ -56,37 +68,51 @@ public class ShippingTracking {
     @JsonProperty("events")
     private List<ShippingTrackingEvent> events;
 
-
+    /**
+     * Unique identifier for this tracking object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The raw data returned by the integration for this tracking
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Reference to the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     private String shipmentId;
 
-
+    /**
+     * Current status of the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private ShippingTrackingStatus status;
 
-
+    /**
+     * Human-readable status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_description")
     private String statusDescription;
 
-
+    /**
+     * Tracking number for the shipment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
     private String trackingNumber;
 
-
+    /**
+     * The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -131,26 +157,44 @@ public class ShippingTracking {
             null, null);
     }
 
+    /**
+     * Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> actualDeliveryAt() {
         return Optional.ofNullable(this.actualDeliveryAt);
     }
 
+    /**
+     * Reference to the carrier
+     */
     public Optional<String> carrierId() {
         return Optional.ofNullable(this.carrierId);
     }
 
+    /**
+     * Carrier's status code
+     */
     public Optional<String> carrierStatusCode() {
         return Optional.ofNullable(this.carrierStatusCode);
     }
 
+    /**
+     * Carrier's status description
+     */
     public Optional<String> carrierStatusDescription() {
         return Optional.ofNullable(this.carrierStatusDescription);
     }
 
+    /**
+     * The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Estimated delivery date
+     */
     public Optional<OffsetDateTime> estimatedDelivery() {
         return Optional.ofNullable(this.estimatedDelivery);
     }
@@ -162,30 +206,51 @@ public class ShippingTracking {
         return Optional.ofNullable(this.events);
     }
 
+    /**
+     * Unique identifier for this tracking object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The raw data returned by the integration for this tracking
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Reference to the shipment
+     */
     public Optional<String> shipmentId() {
         return Optional.ofNullable(this.shipmentId);
     }
 
+    /**
+     * Current status of the shipment
+     */
     public Optional<ShippingTrackingStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Human-readable status
+     */
     public Optional<String> statusDescription() {
         return Optional.ofNullable(this.statusDescription);
     }
 
+    /**
+     * Tracking number for the shipment
+     */
     public Optional<String> trackingNumber() {
         return Optional.ofNullable(this.trackingNumber);
     }
 
+    /**
+     * The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -195,36 +260,54 @@ public class ShippingTracking {
     }
 
 
+    /**
+     * Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingTracking withActualDeliveryAt(@Nullable OffsetDateTime actualDeliveryAt) {
         this.actualDeliveryAt = actualDeliveryAt;
         return this;
     }
 
 
+    /**
+     * Reference to the carrier
+     */
     public ShippingTracking withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
 
 
+    /**
+     * Carrier's status code
+     */
     public ShippingTracking withCarrierStatusCode(@Nullable String carrierStatusCode) {
         this.carrierStatusCode = carrierStatusCode;
         return this;
     }
 
 
+    /**
+     * Carrier's status description
+     */
     public ShippingTracking withCarrierStatusDescription(@Nullable String carrierStatusDescription) {
         this.carrierStatusDescription = carrierStatusDescription;
         return this;
     }
 
 
+    /**
+     * The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingTracking withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Estimated delivery date
+     */
     public ShippingTracking withEstimatedDelivery(@Nullable OffsetDateTime estimatedDelivery) {
         this.estimatedDelivery = estimatedDelivery;
         return this;
@@ -240,42 +323,63 @@ public class ShippingTracking {
     }
 
 
+    /**
+     * Unique identifier for this tracking object
+     */
     public ShippingTracking withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this tracking
+     */
     public ShippingTracking withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Reference to the shipment
+     */
     public ShippingTracking withShipmentId(@Nullable String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
 
 
+    /**
+     * Current status of the shipment
+     */
     public ShippingTracking withStatus(@Nullable ShippingTrackingStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * Human-readable status
+     */
     public ShippingTracking withStatusDescription(@Nullable String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
     }
 
 
+    /**
+     * Tracking number for the shipment
+     */
     public ShippingTracking withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
 
+    /**
+     * The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ShippingTracking withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -372,31 +476,49 @@ public class ShippingTracking {
           // force use of static builder() method
         }
 
+        /**
+         * Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder actualDeliveryAt(@Nullable OffsetDateTime actualDeliveryAt) {
             this.actualDeliveryAt = actualDeliveryAt;
             return this;
         }
 
+        /**
+         * Reference to the carrier
+         */
         public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
             return this;
         }
 
+        /**
+         * Carrier's status code
+         */
         public Builder carrierStatusCode(@Nullable String carrierStatusCode) {
             this.carrierStatusCode = carrierStatusCode;
             return this;
         }
 
+        /**
+         * Carrier's status description
+         */
         public Builder carrierStatusDescription(@Nullable String carrierStatusDescription) {
             this.carrierStatusDescription = carrierStatusDescription;
             return this;
         }
 
+        /**
+         * The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Estimated delivery date
+         */
         public Builder estimatedDelivery(@Nullable OffsetDateTime estimatedDelivery) {
             this.estimatedDelivery = estimatedDelivery;
             return this;
@@ -410,36 +532,57 @@ public class ShippingTracking {
             return this;
         }
 
+        /**
+         * Unique identifier for this tracking object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this tracking
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Reference to the shipment
+         */
         public Builder shipmentId(@Nullable String shipmentId) {
             this.shipmentId = shipmentId;
             return this;
         }
 
+        /**
+         * Current status of the shipment
+         */
         public Builder status(@Nullable ShippingTrackingStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * Human-readable status
+         */
         public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
 
+        /**
+         * Tracking number for the shipment
+         */
         public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
+        /**
+         * The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

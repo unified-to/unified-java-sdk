@@ -20,22 +20,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GenaiTask {
-
+    /**
+     * id of the genai_agent (the reusable agent/preset configuration) that runs this task.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agent_id")
     private String agentId;
 
-
+    /**
+     * When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The failure description (when the status is FAILED).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     private String error;
@@ -50,7 +58,9 @@ public class GenaiTask {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The natural-language instructions given to the coding agent.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     private String instructions;
@@ -77,17 +87,23 @@ public class GenaiTask {
     @JsonProperty("model_id")
     private String modelId;
 
-
+    /**
+     * A short human-readable title for the coding agent task.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * id of the genai_organization (the organization or execution environment) that this task runs under.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * The pull/merge request that the coding agent opened for its work.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullrequest_url")
     private String pullrequestUrl;
@@ -97,17 +113,23 @@ public class GenaiTask {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The git repository that the coding agent works in.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_url")
     private String repoUrl;
 
-
+    /**
+     * The name of the branch that the coding agent starts its work from.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_branch_identifier")
     private String sourceBranchIdentifier;
 
-
+    /**
+     * When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     private OffsetDateTime startedAt;
@@ -117,12 +139,16 @@ public class GenaiTask {
     @JsonProperty("status")
     private GenaiTaskStatus status;
 
-
+    /**
+     * The coding agent's summary of the work that it performed.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
 
-
+    /**
+     * The name of the branch that the coding agent pushed its work to.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_branch_identifier")
     private String targetBranchIdentifier;
@@ -132,17 +158,23 @@ public class GenaiTask {
     @JsonProperty("tokens_used")
     private Double tokensUsed;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
 
-
+    /**
+     * The provider's own web page for this task.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
     private String webUrl;
@@ -213,18 +245,30 @@ public class GenaiTask {
             null);
     }
 
+    /**
+     * id of the genai_agent (the reusable agent/preset configuration) that runs this task.
+     */
     public Optional<String> agentId() {
         return Optional.ofNullable(this.agentId);
     }
 
+    /**
+     * When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> completedAt() {
         return Optional.ofNullable(this.completedAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The failure description (when the status is FAILED).
+     */
     public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
@@ -237,6 +281,9 @@ public class GenaiTask {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The natural-language instructions given to the coding agent.
+     */
     public Optional<String> instructions() {
         return Optional.ofNullable(this.instructions);
     }
@@ -260,14 +307,23 @@ public class GenaiTask {
         return Optional.ofNullable(this.modelId);
     }
 
+    /**
+     * A short human-readable title for the coding agent task.
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * id of the genai_organization (the organization or execution environment) that this task runs under.
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * The pull/merge request that the coding agent opened for its work.
+     */
     public Optional<String> pullrequestUrl() {
         return Optional.ofNullable(this.pullrequestUrl);
     }
@@ -276,14 +332,23 @@ public class GenaiTask {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The git repository that the coding agent works in.
+     */
     public Optional<String> repoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
 
+    /**
+     * The name of the branch that the coding agent starts its work from.
+     */
     public Optional<String> sourceBranchIdentifier() {
         return Optional.ofNullable(this.sourceBranchIdentifier);
     }
 
+    /**
+     * When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startedAt() {
         return Optional.ofNullable(this.startedAt);
     }
@@ -292,10 +357,16 @@ public class GenaiTask {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * The coding agent's summary of the work that it performed.
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
 
+    /**
+     * The name of the branch that the coding agent pushed its work to.
+     */
     public Optional<String> targetBranchIdentifier() {
         return Optional.ofNullable(this.targetBranchIdentifier);
     }
@@ -304,14 +375,23 @@ public class GenaiTask {
         return Optional.ofNullable(this.tokensUsed);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
 
+    /**
+     * The provider's own web page for this task.
+     */
     public Optional<String> webUrl() {
         return Optional.ofNullable(this.webUrl);
     }
@@ -321,24 +401,36 @@ public class GenaiTask {
     }
 
 
+    /**
+     * id of the genai_agent (the reusable agent/preset configuration) that runs this task.
+     */
     public GenaiTask withAgentId(@Nullable String agentId) {
         this.agentId = agentId;
         return this;
     }
 
 
+    /**
+     * When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiTask withCompletedAt(@Nullable OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiTask withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The failure description (when the status is FAILED).
+     */
     public GenaiTask withError(@Nullable String error) {
         this.error = error;
         return this;
@@ -357,6 +449,9 @@ public class GenaiTask {
     }
 
 
+    /**
+     * The natural-language instructions given to the coding agent.
+     */
     public GenaiTask withInstructions(@Nullable String instructions) {
         this.instructions = instructions;
         return this;
@@ -390,18 +485,27 @@ public class GenaiTask {
     }
 
 
+    /**
+     * A short human-readable title for the coding agent task.
+     */
     public GenaiTask withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * id of the genai_organization (the organization or execution environment) that this task runs under.
+     */
     public GenaiTask withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * The pull/merge request that the coding agent opened for its work.
+     */
     public GenaiTask withPullrequestUrl(@Nullable String pullrequestUrl) {
         this.pullrequestUrl = pullrequestUrl;
         return this;
@@ -414,18 +518,27 @@ public class GenaiTask {
     }
 
 
+    /**
+     * The git repository that the coding agent works in.
+     */
     public GenaiTask withRepoUrl(@Nullable String repoUrl) {
         this.repoUrl = repoUrl;
         return this;
     }
 
 
+    /**
+     * The name of the branch that the coding agent starts its work from.
+     */
     public GenaiTask withSourceBranchIdentifier(@Nullable String sourceBranchIdentifier) {
         this.sourceBranchIdentifier = sourceBranchIdentifier;
         return this;
     }
 
 
+    /**
+     * When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiTask withStartedAt(@Nullable OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -438,12 +551,18 @@ public class GenaiTask {
     }
 
 
+    /**
+     * The coding agent's summary of the work that it performed.
+     */
     public GenaiTask withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
     }
 
 
+    /**
+     * The name of the branch that the coding agent pushed its work to.
+     */
     public GenaiTask withTargetBranchIdentifier(@Nullable String targetBranchIdentifier) {
         this.targetBranchIdentifier = targetBranchIdentifier;
         return this;
@@ -456,18 +575,27 @@ public class GenaiTask {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public GenaiTask withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public GenaiTask withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
 
 
+    /**
+     * The provider's own web page for this task.
+     */
     public GenaiTask withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
@@ -612,21 +740,33 @@ public class GenaiTask {
           // force use of static builder() method
         }
 
+        /**
+         * id of the genai_agent (the reusable agent/preset configuration) that runs this task.
+         */
         public Builder agentId(@Nullable String agentId) {
             this.agentId = agentId;
             return this;
         }
 
+        /**
+         * When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The failure description (when the status is FAILED).
+         */
         public Builder error(@Nullable String error) {
             this.error = error;
             return this;
@@ -642,6 +782,9 @@ public class GenaiTask {
             return this;
         }
 
+        /**
+         * The natural-language instructions given to the coding agent.
+         */
         public Builder instructions(@Nullable String instructions) {
             this.instructions = instructions;
             return this;
@@ -670,16 +813,25 @@ public class GenaiTask {
             return this;
         }
 
+        /**
+         * A short human-readable title for the coding agent task.
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * id of the genai_organization (the organization or execution environment) that this task runs under.
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * The pull/merge request that the coding agent opened for its work.
+         */
         public Builder pullrequestUrl(@Nullable String pullrequestUrl) {
             this.pullrequestUrl = pullrequestUrl;
             return this;
@@ -690,16 +842,25 @@ public class GenaiTask {
             return this;
         }
 
+        /**
+         * The git repository that the coding agent works in.
+         */
         public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
+        /**
+         * The name of the branch that the coding agent starts its work from.
+         */
         public Builder sourceBranchIdentifier(@Nullable String sourceBranchIdentifier) {
             this.sourceBranchIdentifier = sourceBranchIdentifier;
             return this;
         }
 
+        /**
+         * When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startedAt(@Nullable OffsetDateTime startedAt) {
             this.startedAt = startedAt;
             return this;
@@ -710,11 +871,17 @@ public class GenaiTask {
             return this;
         }
 
+        /**
+         * The coding agent's summary of the work that it performed.
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
+        /**
+         * The name of the branch that the coding agent pushed its work to.
+         */
         public Builder targetBranchIdentifier(@Nullable String targetBranchIdentifier) {
             this.targetBranchIdentifier = targetBranchIdentifier;
             return this;
@@ -725,16 +892,25 @@ public class GenaiTask {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
+        /**
+         * The provider's own web page for this task.
+         */
         public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;

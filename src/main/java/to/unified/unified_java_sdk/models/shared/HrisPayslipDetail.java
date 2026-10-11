@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -22,8 +23,18 @@ public class HrisPayslipDetail {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("benefit_id")
+    private String benefitId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_amount")
     private Double companyAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("deduction_id")
+    private String deductionId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -37,33 +48,99 @@ public class HrisPayslipDetail {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hours")
+    private Double hours;
+
+    /**
+     * true when this line is paid by the employer (employer tax or contribution)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_employer")
+    private Boolean isEmployer;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_pre_tax")
+    private Boolean isPreTax;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
+
+    /**
+     * integration pay-code label before normalization
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("original_type")
+    private String originalType;
+
+    /**
+     * the hris_paycode for this line
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paycode_id")
+    private String paycodeId;
+
+    /**
+     * pay rate for hourly/unit-based lines
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rate_amount")
+    private Double rateAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HrisPayslipDetailType type;
 
+    /**
+     * year-to-date amount for this line
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ytd_amount")
+    private Double ytdAmount;
+
     @JsonCreator
     public HrisPayslipDetail(
             @JsonProperty("amount") double amount,
+            @JsonProperty("benefit_id") @Nullable String benefitId,
             @JsonProperty("company_amount") @Nullable Double companyAmount,
+            @JsonProperty("deduction_id") @Nullable String deductionId,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("employee_amount") @Nullable Double employeeAmount,
+            @JsonProperty("hours") @Nullable Double hours,
+            @JsonProperty("is_employer") @Nullable Boolean isEmployer,
+            @JsonProperty("is_pre_tax") @Nullable Boolean isPreTax,
             @JsonProperty("name") @Nullable String name,
-            @JsonProperty("type") @Nullable HrisPayslipDetailType type) {
+            @JsonProperty("original_type") @Nullable String originalType,
+            @JsonProperty("paycode_id") @Nullable String paycodeId,
+            @JsonProperty("rate_amount") @Nullable Double rateAmount,
+            @JsonProperty("type") @Nullable HrisPayslipDetailType type,
+            @JsonProperty("ytd_amount") @Nullable Double ytdAmount) {
         this.amount = amount;
+        this.benefitId = benefitId;
         this.companyAmount = companyAmount;
+        this.deductionId = deductionId;
         this.description = description;
         this.employeeAmount = employeeAmount;
+        this.hours = hours;
+        this.isEmployer = isEmployer;
+        this.isPreTax = isPreTax;
         this.name = name;
+        this.originalType = originalType;
+        this.paycodeId = paycodeId;
+        this.rateAmount = rateAmount;
         this.type = type;
+        this.ytdAmount = ytdAmount;
     }
     
     public HrisPayslipDetail(
             double amount) {
         this(amount, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
             null, null, null);
     }
 
@@ -71,8 +148,16 @@ public class HrisPayslipDetail {
         return this.amount;
     }
 
+    public Optional<String> benefitId() {
+        return Optional.ofNullable(this.benefitId);
+    }
+
     public Optional<Double> companyAmount() {
         return Optional.ofNullable(this.companyAmount);
+    }
+
+    public Optional<String> deductionId() {
+        return Optional.ofNullable(this.deductionId);
     }
 
     public Optional<String> description() {
@@ -83,12 +168,55 @@ public class HrisPayslipDetail {
         return Optional.ofNullable(this.employeeAmount);
     }
 
+    public Optional<Double> hours() {
+        return Optional.ofNullable(this.hours);
+    }
+
+    /**
+     * true when this line is paid by the employer (employer tax or contribution)
+     */
+    public Optional<Boolean> isEmployer() {
+        return Optional.ofNullable(this.isEmployer);
+    }
+
+    public Optional<Boolean> isPreTax() {
+        return Optional.ofNullable(this.isPreTax);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * integration pay-code label before normalization
+     */
+    public Optional<String> originalType() {
+        return Optional.ofNullable(this.originalType);
+    }
+
+    /**
+     * the hris_paycode for this line
+     */
+    public Optional<String> paycodeId() {
+        return Optional.ofNullable(this.paycodeId);
+    }
+
+    /**
+     * pay rate for hourly/unit-based lines
+     */
+    public Optional<Double> rateAmount() {
+        return Optional.ofNullable(this.rateAmount);
+    }
+
     public Optional<HrisPayslipDetailType> type() {
         return Optional.ofNullable(this.type);
+    }
+
+    /**
+     * year-to-date amount for this line
+     */
+    public Optional<Double> ytdAmount() {
+        return Optional.ofNullable(this.ytdAmount);
     }
 
     public static Builder builder() {
@@ -102,8 +230,20 @@ public class HrisPayslipDetail {
     }
 
 
+    public HrisPayslipDetail withBenefitId(@Nullable String benefitId) {
+        this.benefitId = benefitId;
+        return this;
+    }
+
+
     public HrisPayslipDetail withCompanyAmount(@Nullable Double companyAmount) {
         this.companyAmount = companyAmount;
+        return this;
+    }
+
+
+    public HrisPayslipDetail withDeductionId(@Nullable String deductionId) {
+        this.deductionId = deductionId;
         return this;
     }
 
@@ -120,14 +260,71 @@ public class HrisPayslipDetail {
     }
 
 
+    public HrisPayslipDetail withHours(@Nullable Double hours) {
+        this.hours = hours;
+        return this;
+    }
+
+
+    /**
+     * true when this line is paid by the employer (employer tax or contribution)
+     */
+    public HrisPayslipDetail withIsEmployer(@Nullable Boolean isEmployer) {
+        this.isEmployer = isEmployer;
+        return this;
+    }
+
+
+    public HrisPayslipDetail withIsPreTax(@Nullable Boolean isPreTax) {
+        this.isPreTax = isPreTax;
+        return this;
+    }
+
+
     public HrisPayslipDetail withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * integration pay-code label before normalization
+     */
+    public HrisPayslipDetail withOriginalType(@Nullable String originalType) {
+        this.originalType = originalType;
+        return this;
+    }
+
+
+    /**
+     * the hris_paycode for this line
+     */
+    public HrisPayslipDetail withPaycodeId(@Nullable String paycodeId) {
+        this.paycodeId = paycodeId;
+        return this;
+    }
+
+
+    /**
+     * pay rate for hourly/unit-based lines
+     */
+    public HrisPayslipDetail withRateAmount(@Nullable Double rateAmount) {
+        this.rateAmount = rateAmount;
+        return this;
+    }
+
+
     public HrisPayslipDetail withType(@Nullable HrisPayslipDetailType type) {
         this.type = type;
+        return this;
+    }
+
+
+    /**
+     * year-to-date amount for this line
+     */
+    public HrisPayslipDetail withYtdAmount(@Nullable Double ytdAmount) {
+        this.ytdAmount = ytdAmount;
         return this;
     }
 
@@ -143,29 +340,50 @@ public class HrisPayslipDetail {
         HrisPayslipDetail other = (HrisPayslipDetail) o;
         return 
             Utils.enhancedDeepEquals(this.amount, other.amount) &&
+            Utils.enhancedDeepEquals(this.benefitId, other.benefitId) &&
             Utils.enhancedDeepEquals(this.companyAmount, other.companyAmount) &&
+            Utils.enhancedDeepEquals(this.deductionId, other.deductionId) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.employeeAmount, other.employeeAmount) &&
+            Utils.enhancedDeepEquals(this.hours, other.hours) &&
+            Utils.enhancedDeepEquals(this.isEmployer, other.isEmployer) &&
+            Utils.enhancedDeepEquals(this.isPreTax, other.isPreTax) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
-            Utils.enhancedDeepEquals(this.type, other.type);
+            Utils.enhancedDeepEquals(this.originalType, other.originalType) &&
+            Utils.enhancedDeepEquals(this.paycodeId, other.paycodeId) &&
+            Utils.enhancedDeepEquals(this.rateAmount, other.rateAmount) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.ytdAmount, other.ytdAmount);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            amount, companyAmount, description,
-            employeeAmount, name, type);
+            amount, benefitId, companyAmount,
+            deductionId, description, employeeAmount,
+            hours, isEmployer, isPreTax,
+            name, originalType, paycodeId,
+            rateAmount, type, ytdAmount);
     }
     
     @Override
     public String toString() {
         return Utils.toString(HrisPayslipDetail.class,
                 "amount", amount,
+                "benefitId", benefitId,
                 "companyAmount", companyAmount,
+                "deductionId", deductionId,
                 "description", description,
                 "employeeAmount", employeeAmount,
+                "hours", hours,
+                "isEmployer", isEmployer,
+                "isPreTax", isPreTax,
                 "name", name,
-                "type", type);
+                "originalType", originalType,
+                "paycodeId", paycodeId,
+                "rateAmount", rateAmount,
+                "type", type,
+                "ytdAmount", ytdAmount);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -173,15 +391,33 @@ public class HrisPayslipDetail {
 
         private double amount;
 
+        private String benefitId;
+
         private Double companyAmount;
+
+        private String deductionId;
 
         private String description;
 
         private Double employeeAmount;
 
+        private Double hours;
+
+        private Boolean isEmployer;
+
+        private Boolean isPreTax;
+
         private String name;
 
+        private String originalType;
+
+        private String paycodeId;
+
+        private Double rateAmount;
+
         private HrisPayslipDetailType type;
+
+        private Double ytdAmount;
 
         private Builder() {
           // force use of static builder() method
@@ -192,8 +428,18 @@ public class HrisPayslipDetail {
             return this;
         }
 
+        public Builder benefitId(@Nullable String benefitId) {
+            this.benefitId = benefitId;
+            return this;
+        }
+
         public Builder companyAmount(@Nullable Double companyAmount) {
             this.companyAmount = companyAmount;
+            return this;
+        }
+
+        public Builder deductionId(@Nullable String deductionId) {
+            this.deductionId = deductionId;
             return this;
         }
 
@@ -207,8 +453,50 @@ public class HrisPayslipDetail {
             return this;
         }
 
+        public Builder hours(@Nullable Double hours) {
+            this.hours = hours;
+            return this;
+        }
+
+        /**
+         * true when this line is paid by the employer (employer tax or contribution)
+         */
+        public Builder isEmployer(@Nullable Boolean isEmployer) {
+            this.isEmployer = isEmployer;
+            return this;
+        }
+
+        public Builder isPreTax(@Nullable Boolean isPreTax) {
+            this.isPreTax = isPreTax;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * integration pay-code label before normalization
+         */
+        public Builder originalType(@Nullable String originalType) {
+            this.originalType = originalType;
+            return this;
+        }
+
+        /**
+         * the hris_paycode for this line
+         */
+        public Builder paycodeId(@Nullable String paycodeId) {
+            this.paycodeId = paycodeId;
+            return this;
+        }
+
+        /**
+         * pay rate for hourly/unit-based lines
+         */
+        public Builder rateAmount(@Nullable Double rateAmount) {
+            this.rateAmount = rateAmount;
             return this;
         }
 
@@ -217,10 +505,21 @@ public class HrisPayslipDetail {
             return this;
         }
 
+        /**
+         * year-to-date amount for this line
+         */
+        public Builder ytdAmount(@Nullable Double ytdAmount) {
+            this.ytdAmount = ytdAmount;
+            return this;
+        }
+
         public HrisPayslipDetail build() {
             return new HrisPayslipDetail(
-                amount, companyAmount, description,
-                employeeAmount, name, type);
+                amount, benefitId, companyAmount,
+                deductionId, description, employeeAmount,
+                hours, isEmployer, isPreTax,
+                name, originalType, paycodeId,
+                rateAmount, type, ytdAmount);
         }
 
     }

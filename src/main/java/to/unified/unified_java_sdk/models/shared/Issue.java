@@ -18,7 +18,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class Issue {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
@@ -33,7 +35,9 @@ public class Issue {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * 1-5, 1 is lowest
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importance")
     private Double importance;
@@ -43,7 +47,9 @@ public class Issue {
     @JsonProperty("resolution_time")
     private Double resolutionTime;
 
-
+    /**
+     * 1-5, 1 is lowest
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Double size;
@@ -65,7 +71,9 @@ public class Issue {
     @JsonProperty("type")
     private List<String> type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
@@ -75,7 +83,9 @@ public class Issue {
     @JsonProperty("url")
     private String url;
 
-
+    /**
+     * (reference to KmsSpace)
+     */
     @JsonProperty("workspace_id")
     private String workspaceId;
 
@@ -125,6 +135,9 @@ public class Issue {
             workspaceId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -137,6 +150,9 @@ public class Issue {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * 1-5, 1 is lowest
+     */
     public Optional<Double> importance() {
         return Optional.ofNullable(this.importance);
     }
@@ -145,6 +161,9 @@ public class Issue {
         return Optional.ofNullable(this.resolutionTime);
     }
 
+    /**
+     * 1-5, 1 is lowest
+     */
     public Optional<Double> size() {
         return Optional.ofNullable(this.size);
     }
@@ -165,6 +184,9 @@ public class Issue {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -173,6 +195,9 @@ public class Issue {
         return Optional.ofNullable(this.url);
     }
 
+    /**
+     * (reference to KmsSpace)
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -182,6 +207,9 @@ public class Issue {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Issue withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -200,6 +228,9 @@ public class Issue {
     }
 
 
+    /**
+     * 1-5, 1 is lowest
+     */
     public Issue withImportance(@Nullable Double importance) {
         this.importance = importance;
         return this;
@@ -212,6 +243,9 @@ public class Issue {
     }
 
 
+    /**
+     * 1-5, 1 is lowest
+     */
     public Issue withSize(@Nullable Double size) {
         this.size = size;
         return this;
@@ -242,6 +276,9 @@ public class Issue {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Issue withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -254,6 +291,9 @@ public class Issue {
     }
 
 
+    /**
+     * (reference to KmsSpace)
+     */
     public Issue withWorkspaceId(@Nonnull String workspaceId) {
         this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
         return this;
@@ -346,6 +386,9 @@ public class Issue {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -361,6 +404,9 @@ public class Issue {
             return this;
         }
 
+        /**
+         * 1-5, 1 is lowest
+         */
         public Builder importance(@Nullable Double importance) {
             this.importance = importance;
             return this;
@@ -371,6 +417,9 @@ public class Issue {
             return this;
         }
 
+        /**
+         * 1-5, 1 is lowest
+         */
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
@@ -396,6 +445,9 @@ public class Issue {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -406,6 +458,9 @@ public class Issue {
             return this;
         }
 
+        /**
+         * (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nonnull String workspaceId) {
             this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
             return this;

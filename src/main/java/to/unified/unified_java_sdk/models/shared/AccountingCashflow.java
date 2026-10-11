@@ -24,12 +24,16 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Sections
  */
 public class AccountingCashflow {
-
+    /**
+     * Cash at beginning of period
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_beginning_amount")
     private Double cashBeginningAmount;
 
-
+    /**
+     * Cash at end of period
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_ending_amount")
     private Double cashEndingAmount;
@@ -39,22 +43,30 @@ public class AccountingCashflow {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217, e.g. "USD"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -74,12 +86,16 @@ public class AccountingCashflow {
     @JsonProperty("investing_sections")
     private List<AccountingCashflowSection> investingSections;
 
-
+    /**
+     * e.g. "Cash Flow Statement Q1 2020"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Usually ending - beginning
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_change_in_cash_amount")
     private Double netChangeInCashAmount;
@@ -89,17 +105,23 @@ public class AccountingCashflow {
     @JsonProperty("operating_sections")
     private List<AccountingCashflowSection> operatingSections;
 
-
+    /**
+     * Original data from the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,10 +171,16 @@ public class AccountingCashflow {
             null);
     }
 
+    /**
+     * Cash at beginning of period
+     */
     public Optional<Double> cashBeginningAmount() {
         return Optional.ofNullable(this.cashBeginningAmount);
     }
 
+    /**
+     * Cash at end of period
+     */
     public Optional<Double> cashEndingAmount() {
         return Optional.ofNullable(this.cashEndingAmount);
     }
@@ -161,18 +189,30 @@ public class AccountingCashflow {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217, e.g. "USD"
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -189,10 +229,16 @@ public class AccountingCashflow {
         return Optional.ofNullable(this.investingSections);
     }
 
+    /**
+     * e.g. "Cash Flow Statement Q1 2020"
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Usually ending - beginning
+     */
     public Optional<Double> netChangeInCashAmount() {
         return Optional.ofNullable(this.netChangeInCashAmount);
     }
@@ -201,14 +247,23 @@ public class AccountingCashflow {
         return Optional.ofNullable(this.operatingSections);
     }
 
+    /**
+     * Original data from the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -218,12 +273,18 @@ public class AccountingCashflow {
     }
 
 
+    /**
+     * Cash at beginning of period
+     */
     public AccountingCashflow withCashBeginningAmount(@Nullable Double cashBeginningAmount) {
         this.cashBeginningAmount = cashBeginningAmount;
         return this;
     }
 
 
+    /**
+     * Cash at end of period
+     */
     public AccountingCashflow withCashEndingAmount(@Nullable Double cashEndingAmount) {
         this.cashEndingAmount = cashEndingAmount;
         return this;
@@ -236,24 +297,36 @@ public class AccountingCashflow {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingCashflow withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCashflow withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * ISO 4217, e.g. "USD"
+     */
     public AccountingCashflow withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCashflow withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -278,12 +351,18 @@ public class AccountingCashflow {
     }
 
 
+    /**
+     * e.g. "Cash Flow Statement Q1 2020"
+     */
     public AccountingCashflow withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Usually ending - beginning
+     */
     public AccountingCashflow withNetChangeInCashAmount(@Nullable Double netChangeInCashAmount) {
         this.netChangeInCashAmount = netChangeInCashAmount;
         return this;
@@ -296,18 +375,27 @@ public class AccountingCashflow {
     }
 
 
+    /**
+     * Original data from the integration
+     */
     public AccountingCashflow withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCashflow withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCashflow withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -413,11 +501,17 @@ public class AccountingCashflow {
           // force use of static builder() method
         }
 
+        /**
+         * Cash at beginning of period
+         */
         public Builder cashBeginningAmount(@Nullable Double cashBeginningAmount) {
             this.cashBeginningAmount = cashBeginningAmount;
             return this;
         }
 
+        /**
+         * Cash at end of period
+         */
         public Builder cashEndingAmount(@Nullable Double cashEndingAmount) {
             this.cashEndingAmount = cashEndingAmount;
             return this;
@@ -428,21 +522,33 @@ public class AccountingCashflow {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217, e.g. "USD"
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -463,11 +569,17 @@ public class AccountingCashflow {
             return this;
         }
 
+        /**
+         * e.g. "Cash Flow Statement Q1 2020"
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Usually ending - beginning
+         */
         public Builder netChangeInCashAmount(@Nullable Double netChangeInCashAmount) {
             this.netChangeInCashAmount = netChangeInCashAmount;
             return this;
@@ -478,16 +590,25 @@ public class AccountingCashflow {
             return this;
         }
 
+        /**
+         * Original data from the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

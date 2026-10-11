@@ -29,7 +29,9 @@ public class CalendarEvent {
     @JsonProperty("attendees")
     private List<CalendarAttendee> attendees;
 
-
+    /**
+     * (reference to CalendarCalendar)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_id")
     private String calendarId;
@@ -39,12 +41,16 @@ public class CalendarEvent {
     @JsonProperty("conference")
     private List<CalendarConference> conference;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private String endAt;
@@ -99,7 +105,9 @@ public class CalendarEvent {
     @JsonProperty("recurrence")
     private List<CalendarEventRecurrence> recurrence;
 
-
+    /**
+     * (reference to CalendarEvent)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring_event_id")
     private String recurringEventId;
@@ -109,7 +117,9 @@ public class CalendarEvent {
     @JsonProperty("send_notifications")
     private Boolean sendNotifications;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private String startAt;
@@ -129,7 +139,9 @@ public class CalendarEvent {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
@@ -210,6 +222,9 @@ public class CalendarEvent {
         return Optional.ofNullable(this.attendees);
     }
 
+    /**
+     * (reference to CalendarCalendar)
+     */
     public Optional<String> calendarId() {
         return Optional.ofNullable(this.calendarId);
     }
@@ -218,10 +233,16 @@ public class CalendarEvent {
         return Optional.ofNullable(this.conference);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -266,6 +287,9 @@ public class CalendarEvent {
         return Optional.ofNullable(this.recurrence);
     }
 
+    /**
+     * (reference to CalendarEvent)
+     */
     public Optional<String> recurringEventId() {
         return Optional.ofNullable(this.recurringEventId);
     }
@@ -274,6 +298,9 @@ public class CalendarEvent {
         return Optional.ofNullable(this.sendNotifications);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -290,6 +317,9 @@ public class CalendarEvent {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -315,6 +345,9 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * (reference to CalendarCalendar)
+     */
     public CalendarEvent withCalendarId(@Nullable String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -327,12 +360,18 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarEvent withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarEvent withEndAt(@Nullable String endAt) {
         this.endAt = endAt;
         return this;
@@ -399,6 +438,9 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * (reference to CalendarEvent)
+     */
     public CalendarEvent withRecurringEventId(@Nullable String recurringEventId) {
         this.recurringEventId = recurringEventId;
         return this;
@@ -411,6 +453,9 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarEvent withStartAt(@Nullable String startAt) {
         this.startAt = startAt;
         return this;
@@ -435,6 +480,9 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarEvent withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -590,6 +638,9 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * (reference to CalendarCalendar)
+         */
         public Builder calendarId(@Nullable String calendarId) {
             this.calendarId = calendarId;
             return this;
@@ -600,11 +651,17 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable String endAt) {
             this.endAt = endAt;
             return this;
@@ -660,6 +717,9 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * (reference to CalendarEvent)
+         */
         public Builder recurringEventId(@Nullable String recurringEventId) {
             this.recurringEventId = recurringEventId;
             return this;
@@ -670,6 +730,9 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable String startAt) {
             this.startAt = startAt;
             return this;
@@ -690,6 +753,9 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;

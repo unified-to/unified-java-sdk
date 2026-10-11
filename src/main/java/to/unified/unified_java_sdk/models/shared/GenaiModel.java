@@ -24,17 +24,38 @@ public class GenaiModel {
     @JsonProperty("description")
     private String description;
 
+    /**
+     * Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the
+     * typed questions of a prompt with answers instead of generating text responses.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_questions")
+    private Boolean hasQuestions;
 
+    /**
+     * Controls randomness of responses. A lower temperature leads to more predictable outputs while a
+     * higher temperature results in more varies and sometimes more creative outputs. 0-1
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_temperature")
     private Boolean hasTemperature;
+
+    /**
+     * Whether the model accepts images as input (see the images on each prompt message).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_vision")
+    private Boolean hasVision;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The maximum number of tokens that the model can process in a single response. This limits ensures
+     * computational efficiency and resource management.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
     private Double maxTokens;
@@ -57,14 +78,18 @@ public class GenaiModel {
     @JsonCreator
     public GenaiModel(
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("has_questions") @Nullable Boolean hasQuestions,
             @JsonProperty("has_temperature") @Nullable Boolean hasTemperature,
+            @JsonProperty("has_vision") @Nullable Boolean hasVision,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("max_tokens") @Nullable Double maxTokens,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.description = description;
+        this.hasQuestions = hasQuestions;
         this.hasTemperature = hasTemperature;
+        this.hasVision = hasVision;
         this.id = id;
         this.maxTokens = maxTokens;
         this.name = name;
@@ -75,21 +100,44 @@ public class GenaiModel {
     public GenaiModel() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the
+     * typed questions of a prompt with answers instead of generating text responses.
+     */
+    public Optional<Boolean> hasQuestions() {
+        return Optional.ofNullable(this.hasQuestions);
+    }
+
+    /**
+     * Controls randomness of responses. A lower temperature leads to more predictable outputs while a
+     * higher temperature results in more varies and sometimes more creative outputs. 0-1
+     */
     public Optional<Boolean> hasTemperature() {
         return Optional.ofNullable(this.hasTemperature);
+    }
+
+    /**
+     * Whether the model accepts images as input (see the images on each prompt message).
+     */
+    public Optional<Boolean> hasVision() {
+        return Optional.ofNullable(this.hasVision);
     }
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The maximum number of tokens that the model can process in a single response. This limits ensures
+     * computational efficiency and resource management.
+     */
     public Optional<Double> maxTokens() {
         return Optional.ofNullable(this.maxTokens);
     }
@@ -117,8 +165,31 @@ public class GenaiModel {
     }
 
 
+    /**
+     * Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the
+     * typed questions of a prompt with answers instead of generating text responses.
+     */
+    public GenaiModel withHasQuestions(@Nullable Boolean hasQuestions) {
+        this.hasQuestions = hasQuestions;
+        return this;
+    }
+
+
+    /**
+     * Controls randomness of responses. A lower temperature leads to more predictable outputs while a
+     * higher temperature results in more varies and sometimes more creative outputs. 0-1
+     */
     public GenaiModel withHasTemperature(@Nullable Boolean hasTemperature) {
         this.hasTemperature = hasTemperature;
+        return this;
+    }
+
+
+    /**
+     * Whether the model accepts images as input (see the images on each prompt message).
+     */
+    public GenaiModel withHasVision(@Nullable Boolean hasVision) {
+        this.hasVision = hasVision;
         return this;
     }
 
@@ -129,6 +200,10 @@ public class GenaiModel {
     }
 
 
+    /**
+     * The maximum number of tokens that the model can process in a single response. This limits ensures
+     * computational efficiency and resource management.
+     */
     public GenaiModel withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
         return this;
@@ -164,7 +239,9 @@ public class GenaiModel {
         GenaiModel other = (GenaiModel) o;
         return 
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.hasQuestions, other.hasQuestions) &&
             Utils.enhancedDeepEquals(this.hasTemperature, other.hasTemperature) &&
+            Utils.enhancedDeepEquals(this.hasVision, other.hasVision) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -175,16 +252,18 @@ public class GenaiModel {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description, hasTemperature, id,
-            maxTokens, name, raw,
-            webUrl);
+            description, hasQuestions, hasTemperature,
+            hasVision, id, maxTokens,
+            name, raw, webUrl);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiModel.class,
                 "description", description,
+                "hasQuestions", hasQuestions,
                 "hasTemperature", hasTemperature,
+                "hasVision", hasVision,
                 "id", id,
                 "maxTokens", maxTokens,
                 "name", name,
@@ -197,7 +276,11 @@ public class GenaiModel {
 
         private String description;
 
+        private Boolean hasQuestions;
+
         private Boolean hasTemperature;
+
+        private Boolean hasVision;
 
         private String id;
 
@@ -218,8 +301,29 @@ public class GenaiModel {
             return this;
         }
 
+        /**
+         * Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the
+         * typed questions of a prompt with answers instead of generating text responses.
+         */
+        public Builder hasQuestions(@Nullable Boolean hasQuestions) {
+            this.hasQuestions = hasQuestions;
+            return this;
+        }
+
+        /**
+         * Controls randomness of responses. A lower temperature leads to more predictable outputs while a
+         * higher temperature results in more varies and sometimes more creative outputs. 0-1
+         */
         public Builder hasTemperature(@Nullable Boolean hasTemperature) {
             this.hasTemperature = hasTemperature;
+            return this;
+        }
+
+        /**
+         * Whether the model accepts images as input (see the images on each prompt message).
+         */
+        public Builder hasVision(@Nullable Boolean hasVision) {
+            this.hasVision = hasVision;
             return this;
         }
 
@@ -228,6 +332,10 @@ public class GenaiModel {
             return this;
         }
 
+        /**
+         * The maximum number of tokens that the model can process in a single response. This limits ensures
+         * computational efficiency and resource management.
+         */
         public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
             return this;
@@ -250,9 +358,9 @@ public class GenaiModel {
 
         public GenaiModel build() {
             return new GenaiModel(
-                description, hasTemperature, id,
-                maxTokens, name, raw,
-                webUrl);
+                description, hasQuestions, hasTemperature,
+                hasVision, id, maxTokens,
+                name, raw, webUrl);
         }
 
     }

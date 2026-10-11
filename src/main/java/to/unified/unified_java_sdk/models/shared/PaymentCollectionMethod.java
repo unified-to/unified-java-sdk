@@ -18,6 +18,13 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * PaymentCollectionMethod
+ * 
+ * <p>When set to charging_automatically, an automated attempt will occur to pay this invoice using the
+ * default payment source attached to the contactcustomer. When set to send_invoice, an will email will
+ * be sent with this invoice to the contact/customer with payment instructions.
+ */
 public class PaymentCollectionMethod {
 
     public static final PaymentCollectionMethod SEND_INVOICE = new PaymentCollectionMethod("send_invoice");

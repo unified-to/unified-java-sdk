@@ -89,7 +89,9 @@ public class PropertyConnectionAuth {
     @JsonProperty("expiry_date")
     private OffsetDateTime expiryDate;
 
-
+    /**
+     * the private KEY X.509 certificate in Base64 ASCII format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     private String key;
@@ -112,7 +114,9 @@ public class PropertyConnectionAuth {
     @JsonProperty("other_auth_info")
     private List<String> otherAuthInfo;
 
-
+    /**
+     * the PEM X.509 certificate in Base64 ASCII format
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pem")
     private String pem;
@@ -152,7 +156,9 @@ public class PropertyConnectionAuth {
     @JsonProperty("token_url")
     private String tokenUrl;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -277,6 +283,9 @@ public class PropertyConnectionAuth {
         return Optional.ofNullable(this.expiryDate);
     }
 
+    /**
+     * the private KEY X.509 certificate in Base64 ASCII format
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -297,6 +306,9 @@ public class PropertyConnectionAuth {
         return Optional.ofNullable(this.otherAuthInfo);
     }
 
+    /**
+     * the PEM X.509 certificate in Base64 ASCII format
+     */
     public Optional<String> pem() {
         return Optional.ofNullable(this.pem);
     }
@@ -329,6 +341,9 @@ public class PropertyConnectionAuth {
         return Optional.ofNullable(this.tokenUrl);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -416,6 +431,9 @@ public class PropertyConnectionAuth {
     }
 
 
+    /**
+     * the private KEY X.509 certificate in Base64 ASCII format
+     */
     public PropertyConnectionAuth withKey(@Nullable String key) {
         this.key = key;
         return this;
@@ -444,6 +462,9 @@ public class PropertyConnectionAuth {
     }
 
 
+    /**
+     * the PEM X.509 certificate in Base64 ASCII format
+     */
     public PropertyConnectionAuth withPem(@Nullable String pem) {
         this.pem = pem;
         return this;
@@ -492,6 +513,9 @@ public class PropertyConnectionAuth {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public PropertyConnectionAuth withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -705,6 +729,9 @@ public class PropertyConnectionAuth {
             return this;
         }
 
+        /**
+         * the private KEY X.509 certificate in Base64 ASCII format
+         */
         public Builder key(@Nullable String key) {
             this.key = key;
             return this;
@@ -729,6 +756,9 @@ public class PropertyConnectionAuth {
             return this;
         }
 
+        /**
+         * the PEM X.509 certificate in Base64 ASCII format
+         */
         public Builder pem(@Nullable String pem) {
             this.pem = pem;
             return this;
@@ -769,6 +799,9 @@ public class PropertyConnectionAuth {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

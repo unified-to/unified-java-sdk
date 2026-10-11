@@ -17,36 +17,50 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class SocialMedia {
-
+    /**
+     * Accessibility caption / alt text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt")
     private String alt;
 
-
+    /**
+     * Media height in pixels
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     private Double height;
 
-
+    /**
+     * Provider media id, when the media is individually addressable
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Ordering of the media within the post; 1 is the first
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     private Double position;
 
-
+    /**
+     * Type of media
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private SocialMediaType type;
 
-
+    /**
+     * URL of the media asset
+     */
     @JsonProperty("url")
     private String url;
 
-
+    /**
+     * Media width in pixels
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     private Double width;
@@ -77,30 +91,51 @@ public class SocialMedia {
             null);
     }
 
+    /**
+     * Accessibility caption / alt text
+     */
     public Optional<String> alt() {
         return Optional.ofNullable(this.alt);
     }
 
+    /**
+     * Media height in pixels
+     */
     public Optional<Double> height() {
         return Optional.ofNullable(this.height);
     }
 
+    /**
+     * Provider media id, when the media is individually addressable
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Ordering of the media within the post; 1 is the first
+     */
     public Optional<Double> position() {
         return Optional.ofNullable(this.position);
     }
 
+    /**
+     * Type of media
+     */
     public Optional<SocialMediaType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * URL of the media asset
+     */
     public String url() {
         return this.url;
     }
 
+    /**
+     * Media width in pixels
+     */
     public Optional<Double> width() {
         return Optional.ofNullable(this.width);
     }
@@ -110,42 +145,63 @@ public class SocialMedia {
     }
 
 
+    /**
+     * Accessibility caption / alt text
+     */
     public SocialMedia withAlt(@Nullable String alt) {
         this.alt = alt;
         return this;
     }
 
 
+    /**
+     * Media height in pixels
+     */
     public SocialMedia withHeight(@Nullable Double height) {
         this.height = height;
         return this;
     }
 
 
+    /**
+     * Provider media id, when the media is individually addressable
+     */
     public SocialMedia withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Ordering of the media within the post; 1 is the first
+     */
     public SocialMedia withPosition(@Nullable Double position) {
         this.position = position;
         return this;
     }
 
 
+    /**
+     * Type of media
+     */
     public SocialMedia withType(@Nullable SocialMediaType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * URL of the media asset
+     */
     public SocialMedia withUrl(@Nonnull String url) {
         this.url = Utils.checkNotNull(url, "url");
         return this;
     }
 
 
+    /**
+     * Media width in pixels
+     */
     public SocialMedia withWidth(@Nullable Double width) {
         this.width = width;
         return this;
@@ -212,36 +268,57 @@ public class SocialMedia {
           // force use of static builder() method
         }
 
+        /**
+         * Accessibility caption / alt text
+         */
         public Builder alt(@Nullable String alt) {
             this.alt = alt;
             return this;
         }
 
+        /**
+         * Media height in pixels
+         */
         public Builder height(@Nullable Double height) {
             this.height = height;
             return this;
         }
 
+        /**
+         * Provider media id, when the media is individually addressable
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Ordering of the media within the post; 1 is the first
+         */
         public Builder position(@Nullable Double position) {
             this.position = position;
             return this;
         }
 
+        /**
+         * Type of media
+         */
         public Builder type(@Nullable SocialMediaType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * URL of the media asset
+         */
         public Builder url(@Nonnull String url) {
             this.url = Utils.checkNotNull(url, "url");
             return this;
         }
 
+        /**
+         * Media width in pixels
+         */
         public Builder width(@Nullable Double width) {
             this.width = width;
             return this;

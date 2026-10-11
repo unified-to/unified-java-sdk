@@ -39,102 +39,142 @@ public class ClubsGroup {
     @JsonProperty("address")
     private PropertyClubsGroupAddress address;
 
-
+    /**
+     * URL to the group's cover photo
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_image_url")
     private String coverImageUrl;
 
-
+    /**
+     * The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The group's description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The number of athletes the group follows
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following_count")
     private Double followingCount;
 
-
+    /**
+     * The group type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_type")
     private GroupType groupType;
 
-
+    /**
+     * Unique identifier for this group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the authenticated user is an admin of the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_admin")
     private Boolean isAdmin;
 
-
+    /**
+     * Whether the group is featured
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_featured")
     private Boolean isFeatured;
 
-
+    /**
+     * Whether the authenticated user is the owner of the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_owner")
     private Boolean isOwner;
 
-
+    /**
+     * Whether the group is private
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Boolean isPrivate;
 
-
+    /**
+     * Whether the group is verified
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
     private Boolean isVerified;
 
-
+    /**
+     * The number of members in the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_count")
     private Double memberCount;
 
-
+    /**
+     * The authenticated user's membership status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("membership_status")
     private MembershipStatus membershipStatus;
 
-
+    /**
+     * The group's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The number of posts in the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("post_count")
     private Double postCount;
 
-
+    /**
+     * URL to the group's profile picture
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_image_url")
     private String profileImageUrl;
 
-
+    /**
+     * The raw data returned by the integration for this group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The primary sport of the group
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sport_type")
     private SportType sportType;
 
-
+    /**
+     * The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The group's vanity URL
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -212,82 +252,142 @@ public class ClubsGroup {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * URL to the group's cover photo
+     */
     public Optional<String> coverImageUrl() {
         return Optional.ofNullable(this.coverImageUrl);
     }
 
+    /**
+     * The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The group's description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The number of athletes the group follows
+     */
     public Optional<Double> followingCount() {
         return Optional.ofNullable(this.followingCount);
     }
 
+    /**
+     * The group type
+     */
     public Optional<GroupType> groupType() {
         return Optional.ofNullable(this.groupType);
     }
 
+    /**
+     * Unique identifier for this group
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the authenticated user is an admin of the group
+     */
     public Optional<Boolean> isAdmin() {
         return Optional.ofNullable(this.isAdmin);
     }
 
+    /**
+     * Whether the group is featured
+     */
     public Optional<Boolean> isFeatured() {
         return Optional.ofNullable(this.isFeatured);
     }
 
+    /**
+     * Whether the authenticated user is the owner of the group
+     */
     public Optional<Boolean> isOwner() {
         return Optional.ofNullable(this.isOwner);
     }
 
+    /**
+     * Whether the group is private
+     */
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
 
+    /**
+     * Whether the group is verified
+     */
     public Optional<Boolean> isVerified() {
         return Optional.ofNullable(this.isVerified);
     }
 
+    /**
+     * The number of members in the group
+     */
     public Optional<Double> memberCount() {
         return Optional.ofNullable(this.memberCount);
     }
 
+    /**
+     * The authenticated user's membership status
+     */
     public Optional<MembershipStatus> membershipStatus() {
         return Optional.ofNullable(this.membershipStatus);
     }
 
+    /**
+     * The group's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The number of posts in the group
+     */
     public Optional<Double> postCount() {
         return Optional.ofNullable(this.postCount);
     }
 
+    /**
+     * URL to the group's profile picture
+     */
     public Optional<String> profileImageUrl() {
         return Optional.ofNullable(this.profileImageUrl);
     }
 
+    /**
+     * The raw data returned by the integration for this group
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The primary sport of the group
+     */
     public Optional<SportType> sportType() {
         return Optional.ofNullable(this.sportType);
     }
 
+    /**
+     * The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The group's vanity URL
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -315,120 +415,180 @@ public class ClubsGroup {
     }
 
 
+    /**
+     * URL to the group's cover photo
+     */
     public ClubsGroup withCoverImageUrl(@Nullable String coverImageUrl) {
         this.coverImageUrl = coverImageUrl;
         return this;
     }
 
 
+    /**
+     * The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsGroup withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The group's description
+     */
     public ClubsGroup withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The number of athletes the group follows
+     */
     public ClubsGroup withFollowingCount(@Nullable Double followingCount) {
         this.followingCount = followingCount;
         return this;
     }
 
 
+    /**
+     * The group type
+     */
     public ClubsGroup withGroupType(@Nullable GroupType groupType) {
         this.groupType = groupType;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this group
+     */
     public ClubsGroup withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the authenticated user is an admin of the group
+     */
     public ClubsGroup withIsAdmin(@Nullable Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
     }
 
 
+    /**
+     * Whether the group is featured
+     */
     public ClubsGroup withIsFeatured(@Nullable Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
     }
 
 
+    /**
+     * Whether the authenticated user is the owner of the group
+     */
     public ClubsGroup withIsOwner(@Nullable Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
     }
 
 
+    /**
+     * Whether the group is private
+     */
     public ClubsGroup withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
 
+    /**
+     * Whether the group is verified
+     */
     public ClubsGroup withIsVerified(@Nullable Boolean isVerified) {
         this.isVerified = isVerified;
         return this;
     }
 
 
+    /**
+     * The number of members in the group
+     */
     public ClubsGroup withMemberCount(@Nullable Double memberCount) {
         this.memberCount = memberCount;
         return this;
     }
 
 
+    /**
+     * The authenticated user's membership status
+     */
     public ClubsGroup withMembershipStatus(@Nullable MembershipStatus membershipStatus) {
         this.membershipStatus = membershipStatus;
         return this;
     }
 
 
+    /**
+     * The group's name
+     */
     public ClubsGroup withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The number of posts in the group
+     */
     public ClubsGroup withPostCount(@Nullable Double postCount) {
         this.postCount = postCount;
         return this;
     }
 
 
+    /**
+     * URL to the group's profile picture
+     */
     public ClubsGroup withProfileImageUrl(@Nullable String profileImageUrl) {
         this.profileImageUrl = profileImageUrl;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this group
+     */
     public ClubsGroup withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The primary sport of the group
+     */
     public ClubsGroup withSportType(@Nullable SportType sportType) {
         this.sportType = sportType;
         return this;
     }
 
 
+    /**
+     * The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsGroup withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The group's vanity URL
+     */
     public ClubsGroup withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -576,101 +736,161 @@ public class ClubsGroup {
             return this;
         }
 
+        /**
+         * URL to the group's cover photo
+         */
         public Builder coverImageUrl(@Nullable String coverImageUrl) {
             this.coverImageUrl = coverImageUrl;
             return this;
         }
 
+        /**
+         * The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The group's description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The number of athletes the group follows
+         */
         public Builder followingCount(@Nullable Double followingCount) {
             this.followingCount = followingCount;
             return this;
         }
 
+        /**
+         * The group type
+         */
         public Builder groupType(@Nullable GroupType groupType) {
             this.groupType = groupType;
             return this;
         }
 
+        /**
+         * Unique identifier for this group
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the authenticated user is an admin of the group
+         */
         public Builder isAdmin(@Nullable Boolean isAdmin) {
             this.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * Whether the group is featured
+         */
         public Builder isFeatured(@Nullable Boolean isFeatured) {
             this.isFeatured = isFeatured;
             return this;
         }
 
+        /**
+         * Whether the authenticated user is the owner of the group
+         */
         public Builder isOwner(@Nullable Boolean isOwner) {
             this.isOwner = isOwner;
             return this;
         }
 
+        /**
+         * Whether the group is private
+         */
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
+        /**
+         * Whether the group is verified
+         */
         public Builder isVerified(@Nullable Boolean isVerified) {
             this.isVerified = isVerified;
             return this;
         }
 
+        /**
+         * The number of members in the group
+         */
         public Builder memberCount(@Nullable Double memberCount) {
             this.memberCount = memberCount;
             return this;
         }
 
+        /**
+         * The authenticated user's membership status
+         */
         public Builder membershipStatus(@Nullable MembershipStatus membershipStatus) {
             this.membershipStatus = membershipStatus;
             return this;
         }
 
+        /**
+         * The group's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The number of posts in the group
+         */
         public Builder postCount(@Nullable Double postCount) {
             this.postCount = postCount;
             return this;
         }
 
+        /**
+         * URL to the group's profile picture
+         */
         public Builder profileImageUrl(@Nullable String profileImageUrl) {
             this.profileImageUrl = profileImageUrl;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this group
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The primary sport of the group
+         */
         public Builder sportType(@Nullable SportType sportType) {
             this.sportType = sportType;
             return this;
         }
 
+        /**
+         * The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The group's vanity URL
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

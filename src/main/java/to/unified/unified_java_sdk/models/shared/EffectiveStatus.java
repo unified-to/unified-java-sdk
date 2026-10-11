@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * EffectiveStatus
+ * 
+ * <p>read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed
+ * status
+ */
 public class EffectiveStatus {
 
     public static final EffectiveStatus UNSPECIFIED = new EffectiveStatus("UNSPECIFIED");

@@ -20,12 +20,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingCategory {
-
+    /**
+     * platform-side tracking code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     private String code;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -70,12 +74,16 @@ public class AccountingCategory {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The kind of dimension
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AccountingCategoryType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -115,10 +123,16 @@ public class AccountingCategory {
             null, null, null);
     }
 
+    /**
+     * platform-side tracking code
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -155,10 +169,16 @@ public class AccountingCategory {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The kind of dimension
+     */
     public Optional<AccountingCategoryType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -168,12 +188,18 @@ public class AccountingCategory {
     }
 
 
+    /**
+     * platform-side tracking code
+     */
     public AccountingCategory withCode(@Nullable String code) {
         this.code = code;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCategory withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -228,12 +254,18 @@ public class AccountingCategory {
     }
 
 
+    /**
+     * The kind of dimension
+     */
     public AccountingCategory withType(@Nullable AccountingCategoryType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingCategory withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -321,11 +353,17 @@ public class AccountingCategory {
           // force use of static builder() method
         }
 
+        /**
+         * platform-side tracking code
+         */
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -371,11 +409,17 @@ public class AccountingCategory {
             return this;
         }
 
+        /**
+         * The kind of dimension
+         */
         public Builder type(@Nullable AccountingCategoryType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

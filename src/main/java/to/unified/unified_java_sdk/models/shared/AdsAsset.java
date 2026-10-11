@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AdsAsset {
-
+    /**
+     * inbound create-only: base64-encoded image/media bytes to upload
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -39,7 +43,10 @@ public class AdsAsset {
     @JsonProperty("height")
     private Double height;
 
-
+    /**
+     * provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id,
+     * DV360 mediaId)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -69,12 +76,17 @@ public class AdsAsset {
     @JsonProperty("type")
     private AdsAssetType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not
+     * supplied
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -122,10 +134,16 @@ public class AdsAsset {
             null);
     }
 
+    /**
+     * inbound create-only: base64-encoded image/media bytes to upload
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -138,6 +156,10 @@ public class AdsAsset {
         return Optional.ofNullable(this.height);
     }
 
+    /**
+     * provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id,
+     * DV360 mediaId)
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -162,10 +184,17 @@ public class AdsAsset {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not
+     * supplied
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -179,12 +208,18 @@ public class AdsAsset {
     }
 
 
+    /**
+     * inbound create-only: base64-encoded image/media bytes to upload
+     */
     public AdsAsset withContent(@Nullable String content) {
         this.content = content;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsAsset withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -203,6 +238,10 @@ public class AdsAsset {
     }
 
 
+    /**
+     * provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id,
+     * DV360 mediaId)
+     */
     public AdsAsset withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -239,12 +278,19 @@ public class AdsAsset {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AdsAsset withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not
+     * supplied
+     */
     public AdsAsset withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -343,11 +389,17 @@ public class AdsAsset {
           // force use of static builder() method
         }
 
+        /**
+         * inbound create-only: base64-encoded image/media bytes to upload
+         */
         public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -363,6 +415,10 @@ public class AdsAsset {
             return this;
         }
 
+        /**
+         * provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id,
+         * DV360 mediaId)
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -393,11 +449,18 @@ public class AdsAsset {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not
+         * supplied
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

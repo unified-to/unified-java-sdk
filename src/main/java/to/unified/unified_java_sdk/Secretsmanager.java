@@ -4,24 +4,32 @@
 package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
+import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceSecretsmanagerRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceSecretsmanagerResponse;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerRequest;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerResponse;
-import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceSecretsmanagersRequest;
-import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceSecretsmanagersRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceSecretsmanagersResponse;
-import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerInstructionsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerInstructionsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.shared.SecretsManager;
-import to.unified.unified_java_sdk.operations.CreateUnifiedWorkspaceSecretsmanager;
-import to.unified.unified_java_sdk.operations.GetUnifiedWorkspaceSecretsmanager;
-import to.unified.unified_java_sdk.operations.ListUnifiedWorkspaceSecretsmanagers;
-import to.unified.unified_java_sdk.operations.RemoveUnifiedWorkspaceSecretsmanager;
+import to.unified.unified_java_sdk.operations.CreateUnifiedSecretsmanager;
+import to.unified.unified_java_sdk.operations.GetUnifiedSecretsmanager;
+import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerInstructions;
+import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerSecrets;
+import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
+import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -49,8 +57,8 @@ public class Secretsmanager {
      * 
      * @return The call builder
      */
-    public CreateUnifiedWorkspaceSecretsmanagerRequestBuilder createUnifiedWorkspaceSecretsmanager() {
-        return new CreateUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    public CreateUnifiedSecretsmanagerRequestBuilder createUnifiedSecretsmanager() {
+        return new CreateUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -60,9 +68,9 @@ public class Secretsmanager {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUnifiedWorkspaceSecretsmanagerResponse createUnifiedWorkspaceSecretsmanager(@Nonnull SecretsManager request) {
-        RequestOperation<SecretsManager, CreateUnifiedWorkspaceSecretsmanagerResponse> operation
-              = new CreateUnifiedWorkspaceSecretsmanager.Sync(sdkConfiguration, _headers);
+    public CreateUnifiedSecretsmanagerResponse createUnifiedSecretsmanager(@Nonnull SecretsManager request) {
+        RequestOperation<SecretsManager, CreateUnifiedSecretsmanagerResponse> operation
+              = new CreateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -71,8 +79,8 @@ public class Secretsmanager {
      * 
      * @return The call builder
      */
-    public GetUnifiedWorkspaceSecretsmanagerRequestBuilder getUnifiedWorkspaceSecretsmanager() {
-        return new GetUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    public GetUnifiedSecretsmanagerRequestBuilder getUnifiedSecretsmanager() {
+        return new GetUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -82,9 +90,52 @@ public class Secretsmanager {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedWorkspaceSecretsmanagerResponse getUnifiedWorkspaceSecretsmanager(@Nonnull GetUnifiedWorkspaceSecretsmanagerRequest request) {
-        RequestOperation<GetUnifiedWorkspaceSecretsmanagerRequest, GetUnifiedWorkspaceSecretsmanagerResponse> operation
-              = new GetUnifiedWorkspaceSecretsmanager.Sync(sdkConfiguration, _headers);
+    public GetUnifiedSecretsmanagerResponse getUnifiedSecretsmanager(@Nonnull GetUnifiedSecretsmanagerRequest request) {
+        RequestOperation<GetUnifiedSecretsmanagerRequest, GetUnifiedSecretsmanagerResponse> operation
+              = new GetUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedSecretsmanagerInstructionsRequestBuilder listUnifiedSecretsmanagerInstructions() {
+        return new ListUnifiedSecretsmanagerInstructionsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List secrets manager setup instructions
+     * 
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerInstructionsResponse listUnifiedSecretsmanagerInstructionsDirect() {
+        RequestlessOperation<ListUnifiedSecretsmanagerInstructionsResponse> operation
+            = new ListUnifiedSecretsmanagerInstructions.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest());
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @return The call builder
+     */
+    public ListUnifiedSecretsmanagerSecretsRequestBuilder listUnifiedSecretsmanagerSecrets() {
+        return new ListUnifiedSecretsmanagerSecretsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List secrets in a secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUnifiedSecretsmanagerSecretsResponse listUnifiedSecretsmanagerSecrets(@Nonnull ListUnifiedSecretsmanagerSecretsRequest request) {
+        RequestOperation<ListUnifiedSecretsmanagerSecretsRequest, ListUnifiedSecretsmanagerSecretsResponse> operation
+              = new ListUnifiedSecretsmanagerSecrets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -93,8 +144,8 @@ public class Secretsmanager {
      * 
      * @return The call builder
      */
-    public ListUnifiedWorkspaceSecretsmanagersRequestBuilder listUnifiedWorkspaceSecretsmanagers() {
-        return new ListUnifiedWorkspaceSecretsmanagersRequestBuilder(sdkConfiguration);
+    public ListUnifiedSecretsmanagersRequestBuilder listUnifiedSecretsmanagers() {
+        return new ListUnifiedSecretsmanagersRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -104,9 +155,9 @@ public class Secretsmanager {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedWorkspaceSecretsmanagersResponse listUnifiedWorkspaceSecretsmanagers(@Nonnull ListUnifiedWorkspaceSecretsmanagersRequest request) {
-        RequestOperation<ListUnifiedWorkspaceSecretsmanagersRequest, ListUnifiedWorkspaceSecretsmanagersResponse> operation
-              = new ListUnifiedWorkspaceSecretsmanagers.Sync(sdkConfiguration, _headers);
+    public ListUnifiedSecretsmanagersResponse listUnifiedSecretsmanagers(@Nonnull ListUnifiedSecretsmanagersRequest request) {
+        RequestOperation<ListUnifiedSecretsmanagersRequest, ListUnifiedSecretsmanagersResponse> operation
+              = new ListUnifiedSecretsmanagers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -115,8 +166,8 @@ public class Secretsmanager {
      * 
      * @return The call builder
      */
-    public RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder removeUnifiedWorkspaceSecretsmanager() {
-        return new RemoveUnifiedWorkspaceSecretsmanagerRequestBuilder(sdkConfiguration);
+    public RemoveUnifiedSecretsmanagerRequestBuilder removeUnifiedSecretsmanager() {
+        return new RemoveUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
     }
 
     /**
@@ -126,9 +177,9 @@ public class Secretsmanager {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUnifiedWorkspaceSecretsmanagerResponse removeUnifiedWorkspaceSecretsmanager(@Nonnull RemoveUnifiedWorkspaceSecretsmanagerRequest request) {
-        RequestOperation<RemoveUnifiedWorkspaceSecretsmanagerRequest, RemoveUnifiedWorkspaceSecretsmanagerResponse> operation
-              = new RemoveUnifiedWorkspaceSecretsmanager.Sync(sdkConfiguration, _headers);
+    public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
+        RequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
+              = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

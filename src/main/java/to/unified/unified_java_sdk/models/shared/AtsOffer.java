@@ -17,7 +17,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AtsOffer {
-
+    /**
+     * date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepted_at")
     private OffsetDateTime acceptedAt;
@@ -29,17 +31,23 @@ public class AtsOffer {
     @JsonProperty("compensation")
     private List<AtsCompensation> compensation;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * user id of the recruiter who created the offer (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
     private String creatorUserId;
 
-
+    /**
+     * newly hired employee id (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_user_id")
     private String employeeUserId;
@@ -49,17 +57,23 @@ public class AtsOffer {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
     private OffsetDateTime rejectedAt;
 
-
+    /**
+     * date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     private OffsetDateTime sentAt;
 
-
+    /**
+     * date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -69,7 +83,9 @@ public class AtsOffer {
     @JsonProperty("status")
     private AtsOfferStatus status;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -107,6 +123,9 @@ public class AtsOffer {
             null, null);
     }
 
+    /**
+     * date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> acceptedAt() {
         return Optional.ofNullable(this.acceptedAt);
     }
@@ -118,14 +137,23 @@ public class AtsOffer {
         return Optional.ofNullable(this.compensation);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * user id of the recruiter who created the offer (reference to HrisEmployee)
+     */
     public Optional<String> creatorUserId() {
         return Optional.ofNullable(this.creatorUserId);
     }
 
+    /**
+     * newly hired employee id (reference to HrisEmployee)
+     */
     public Optional<String> employeeUserId() {
         return Optional.ofNullable(this.employeeUserId);
     }
@@ -134,14 +162,23 @@ public class AtsOffer {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> rejectedAt() {
         return Optional.ofNullable(this.rejectedAt);
     }
 
+    /**
+     * date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sentAt() {
         return Optional.ofNullable(this.sentAt);
     }
 
+    /**
+     * date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -150,6 +187,9 @@ public class AtsOffer {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -159,6 +199,9 @@ public class AtsOffer {
     }
 
 
+    /**
+     * date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withAcceptedAt(@Nullable OffsetDateTime acceptedAt) {
         this.acceptedAt = acceptedAt;
         return this;
@@ -174,18 +217,27 @@ public class AtsOffer {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * user id of the recruiter who created the offer (reference to HrisEmployee)
+     */
     public AtsOffer withCreatorUserId(@Nullable String creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
     }
 
 
+    /**
+     * newly hired employee id (reference to HrisEmployee)
+     */
     public AtsOffer withEmployeeUserId(@Nullable String employeeUserId) {
         this.employeeUserId = employeeUserId;
         return this;
@@ -198,18 +250,27 @@ public class AtsOffer {
     }
 
 
+    /**
+     * date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withRejectedAt(@Nullable OffsetDateTime rejectedAt) {
         this.rejectedAt = rejectedAt;
         return this;
     }
 
 
+    /**
+     * date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withSentAt(@Nullable OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
 
 
+    /**
+     * date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -222,6 +283,9 @@ public class AtsOffer {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsOffer withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -305,6 +369,9 @@ public class AtsOffer {
           // force use of static builder() method
         }
 
+        /**
+         * date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder acceptedAt(@Nullable OffsetDateTime acceptedAt) {
             this.acceptedAt = acceptedAt;
             return this;
@@ -318,16 +385,25 @@ public class AtsOffer {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * user id of the recruiter who created the offer (reference to HrisEmployee)
+         */
         public Builder creatorUserId(@Nullable String creatorUserId) {
             this.creatorUserId = creatorUserId;
             return this;
         }
 
+        /**
+         * newly hired employee id (reference to HrisEmployee)
+         */
         public Builder employeeUserId(@Nullable String employeeUserId) {
             this.employeeUserId = employeeUserId;
             return this;
@@ -338,16 +414,25 @@ public class AtsOffer {
             return this;
         }
 
+        /**
+         * date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder rejectedAt(@Nullable OffsetDateTime rejectedAt) {
             this.rejectedAt = rejectedAt;
             return this;
         }
 
+        /**
+         * date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sentAt(@Nullable OffsetDateTime sentAt) {
             this.sentAt = sentAt;
             return this;
         }
 
+        /**
+         * date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -358,6 +443,9 @@ public class AtsOffer {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -26,12 +26,16 @@ public class AtsJob {
     @JsonProperty("addresses")
     private List<AtsAddress> addresses;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
     private OffsetDateTime closedAt;
 
-
+    /**
+     * id value of the company associated with the job in the ATS (reference to AtsCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
@@ -41,7 +45,9 @@ public class AtsJob {
     @JsonProperty("compensation")
     private List<AtsCompensation> compensation;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -83,7 +89,9 @@ public class AtsJob {
     @JsonProperty("industry")
     private String industry;
 
-
+    /**
+     * Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
     private String languageLocale;
@@ -108,7 +116,9 @@ public class AtsJob {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Number of openings for the job
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_openings")
     private Double numberOfOpenings;
@@ -162,17 +172,23 @@ public class AtsJob {
     @JsonProperty("status")
     private AtsJobStatus status;
 
-
+    /**
+     * Short job blurb (distinct from full description when both exist)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     private String summary;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -258,10 +274,16 @@ public class AtsJob {
         return Optional.ofNullable(this.addresses);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
     }
 
+    /**
+     * id value of the company associated with the job in the ATS (reference to AtsCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
@@ -270,6 +292,9 @@ public class AtsJob {
         return Optional.ofNullable(this.compensation);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -305,6 +330,9 @@ public class AtsJob {
         return Optional.ofNullable(this.industry);
     }
 
+    /**
+     * Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
+     */
     public Optional<String> languageLocale() {
         return Optional.ofNullable(this.languageLocale);
     }
@@ -325,6 +353,9 @@ public class AtsJob {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Number of openings for the job
+     */
     public Optional<Double> numberOfOpenings() {
         return Optional.ofNullable(this.numberOfOpenings);
     }
@@ -371,14 +402,23 @@ public class AtsJob {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Short job blurb (distinct from full description when both exist)
+     */
     public Optional<String> summary() {
         return Optional.ofNullable(this.summary);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -394,12 +434,18 @@ public class AtsJob {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJob withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
 
+    /**
+     * id value of the company associated with the job in the ATS (reference to AtsCompany)
+     */
     public AtsJob withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
@@ -412,6 +458,9 @@ public class AtsJob {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJob withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -463,6 +512,9 @@ public class AtsJob {
     }
 
 
+    /**
+     * Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
+     */
     public AtsJob withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
@@ -493,6 +545,9 @@ public class AtsJob {
     }
 
 
+    /**
+     * Number of openings for the job
+     */
     public AtsJob withNumberOfOpenings(@Nullable Double numberOfOpenings) {
         this.numberOfOpenings = numberOfOpenings;
         return this;
@@ -559,18 +614,27 @@ public class AtsJob {
     }
 
 
+    /**
+     * Short job blurb (distinct from full description when both exist)
+     */
     public AtsJob withSummary(@Nullable String summary) {
         this.summary = summary;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AtsJob withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
+     */
     public AtsJob withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -741,11 +805,17 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
+        /**
+         * id value of the company associated with the job in the ATS (reference to AtsCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
@@ -756,6 +826,9 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -799,6 +872,9 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
+         */
         public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
@@ -824,6 +900,9 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * Number of openings for the job
+         */
         public Builder numberOfOpenings(@Nullable Double numberOfOpenings) {
             this.numberOfOpenings = numberOfOpenings;
             return this;
@@ -880,16 +959,25 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * Short job blurb (distinct from full description when both exist)
+         */
         public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

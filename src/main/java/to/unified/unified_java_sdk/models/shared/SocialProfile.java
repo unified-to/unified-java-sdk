@@ -26,42 +26,58 @@ public class SocialProfile {
     @JsonProperty("address")
     private PropertySocialProfileAddress address;
 
-
+    /**
+     * Profile image URL
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     private String avatarUrl;
 
-
+    /**
+     * Primary category of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     private String category;
 
-
+    /**
+     * When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Bio or description of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Unique identifier for the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the profile is private/protected
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Boolean isPrivate;
 
-
+    /**
+     * Whether the profile is verified
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
     private Boolean isVerified;
 
-
+    /**
+     * Free-text location/locale string
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private String location;
@@ -73,42 +89,58 @@ public class SocialProfile {
     @JsonProperty("metrics")
     private PropertySocialProfileMetrics metrics;
 
-
+    /**
+     * Display name of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Parent profile id when profiles are nested (e.g. account → location)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
-
+    /**
+     * Contact phone number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     private String phone;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Public URL of the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
 
-
+    /**
+     * Handle/username/store code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     private String username;
 
-
+    /**
+     * External website linked from the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
     private String websiteUrl;
@@ -169,34 +201,58 @@ public class SocialProfile {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * Profile image URL
+     */
     public Optional<String> avatarUrl() {
         return Optional.ofNullable(this.avatarUrl);
     }
 
+    /**
+     * Primary category of the profile
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
 
+    /**
+     * When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Bio or description of the profile
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Unique identifier for the profile
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the profile is private/protected
+     */
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
 
+    /**
+     * Whether the profile is verified
+     */
     public Optional<Boolean> isVerified() {
         return Optional.ofNullable(this.isVerified);
     }
 
+    /**
+     * Free-text location/locale string
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -208,34 +264,58 @@ public class SocialProfile {
         return Optional.ofNullable(this.metrics);
     }
 
+    /**
+     * Display name of the profile
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Parent profile id when profiles are nested (e.g. account → location)
+     */
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
     }
 
+    /**
+     * Contact phone number
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Public URL of the profile
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
 
+    /**
+     * Handle/username/store code
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
 
+    /**
+     * External website linked from the profile
+     */
     public Optional<String> websiteUrl() {
         return Optional.ofNullable(this.websiteUrl);
     }
@@ -254,48 +334,72 @@ public class SocialProfile {
     }
 
 
+    /**
+     * Profile image URL
+     */
     public SocialProfile withAvatarUrl(@Nullable String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
     }
 
 
+    /**
+     * Primary category of the profile
+     */
     public SocialProfile withCategory(@Nullable String category) {
         this.category = category;
         return this;
     }
 
 
+    /**
+     * When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialProfile withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Bio or description of the profile
+     */
     public SocialProfile withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the profile
+     */
     public SocialProfile withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the profile is private/protected
+     */
     public SocialProfile withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
 
+    /**
+     * Whether the profile is verified
+     */
     public SocialProfile withIsVerified(@Nullable Boolean isVerified) {
         this.isVerified = isVerified;
         return this;
     }
 
 
+    /**
+     * Free-text location/locale string
+     */
     public SocialProfile withLocation(@Nullable String location) {
         this.location = location;
         return this;
@@ -311,48 +415,72 @@ public class SocialProfile {
     }
 
 
+    /**
+     * Display name of the profile
+     */
     public SocialProfile withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * Parent profile id when profiles are nested (e.g. account → location)
+     */
     public SocialProfile withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
 
+    /**
+     * Contact phone number
+     */
     public SocialProfile withPhone(@Nullable String phone) {
         this.phone = phone;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public SocialProfile withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public SocialProfile withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Public URL of the profile
+     */
     public SocialProfile withUrl(@Nullable String url) {
         this.url = url;
         return this;
     }
 
 
+    /**
+     * Handle/username/store code
+     */
     public SocialProfile withUsername(@Nullable String username) {
         this.username = username;
         return this;
     }
 
 
+    /**
+     * External website linked from the profile
+     */
     public SocialProfile withWebsiteUrl(@Nullable String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
@@ -474,41 +602,65 @@ public class SocialProfile {
             return this;
         }
 
+        /**
+         * Profile image URL
+         */
         public Builder avatarUrl(@Nullable String avatarUrl) {
             this.avatarUrl = avatarUrl;
             return this;
         }
 
+        /**
+         * Primary category of the profile
+         */
         public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
+        /**
+         * When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Bio or description of the profile
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * Unique identifier for the profile
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the profile is private/protected
+         */
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
+        /**
+         * Whether the profile is verified
+         */
         public Builder isVerified(@Nullable Boolean isVerified) {
             this.isVerified = isVerified;
             return this;
         }
 
+        /**
+         * Free-text location/locale string
+         */
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
@@ -522,41 +674,65 @@ public class SocialProfile {
             return this;
         }
 
+        /**
+         * Display name of the profile
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * Parent profile id when profiles are nested (e.g. account → location)
+         */
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
+        /**
+         * Contact phone number
+         */
         public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Public URL of the profile
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
+        /**
+         * Handle/username/store code
+         */
         public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }
 
+        /**
+         * External website linked from the profile
+         */
         public Builder websiteUrl(@Nullable String websiteUrl) {
             this.websiteUrl = websiteUrl;
             return this;

@@ -20,6 +20,11 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * CdpMetadataValue
+ * 
+ * <p>The attribute/trait value
+ */
 @JsonDeserialize(using = CdpMetadataValue._Deserializer.class)
 public class CdpMetadataValue {
 

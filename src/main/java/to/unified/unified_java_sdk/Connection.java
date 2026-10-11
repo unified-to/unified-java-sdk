@@ -6,6 +6,9 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
@@ -24,6 +27,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequ
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
+import to.unified.unified_java_sdk.operations.CreateUnifiedConnectionReauth;
 import to.unified.unified_java_sdk.operations.GetUnifiedConnection;
 import to.unified.unified_java_sdk.operations.ListUnifiedConnections;
 import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
@@ -54,7 +58,9 @@ public class Connection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
      * 
      * @return The call builder
      */
@@ -65,7 +71,9 @@ public class Connection {
     /**
      * Create connection
      * 
-     * <p>Used only to import existing customer credentials; use "Authorize new connection" instead
+     * <p>Used only to import existing customer credentials. To connect a new account, use the "Authorize or
+     * re-authorize a connection" auth URL instead. To change credentials on an existing connection, use
+     * "Update connection".
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -74,6 +82,36 @@ public class Connection {
     public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request) {
         RequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @return The call builder
+     */
+    public CreateUnifiedConnectionReauthRequestBuilder createUnifiedConnectionReauth() {
+        return new CreateUnifiedConnectionReauthRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a re-authorization token for a connection
+     * 
+     * <p>Returns a short-lived, single-use token that lets your end-user re-authorize this existing
+     * connection in place via the "Authorize or re-authorize a connection" URL with connection_id and
+     * reauth_token.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUnifiedConnectionReauthResponse createUnifiedConnectionReauth(@Nonnull CreateUnifiedConnectionReauthRequest request) {
+        RequestOperation<CreateUnifiedConnectionReauthRequest, CreateUnifiedConnectionReauthResponse> operation
+              = new CreateUnifiedConnectionReauth.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

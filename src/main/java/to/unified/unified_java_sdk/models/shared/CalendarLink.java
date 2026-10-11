@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CalendarLink {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private String createdAt;
@@ -30,7 +32,9 @@ public class CalendarLink {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * minutes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     private Double duration;
@@ -65,7 +69,9 @@ public class CalendarLink {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private String updatedAt;
@@ -109,6 +115,9 @@ public class CalendarLink {
             null, url);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -117,6 +126,9 @@ public class CalendarLink {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * minutes
+     */
     public Optional<Double> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -145,6 +157,9 @@ public class CalendarLink {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -158,6 +173,9 @@ public class CalendarLink {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarLink withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -170,6 +188,9 @@ public class CalendarLink {
     }
 
 
+    /**
+     * minutes
+     */
     public CalendarLink withDuration(@Nullable Double duration) {
         this.duration = duration;
         return this;
@@ -212,6 +233,9 @@ public class CalendarLink {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarLink withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -301,6 +325,9 @@ public class CalendarLink {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -311,6 +338,9 @@ public class CalendarLink {
             return this;
         }
 
+        /**
+         * minutes
+         */
         public Builder duration(@Nullable Double duration) {
             this.duration = duration;
             return this;
@@ -346,6 +376,9 @@ public class CalendarLink {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;

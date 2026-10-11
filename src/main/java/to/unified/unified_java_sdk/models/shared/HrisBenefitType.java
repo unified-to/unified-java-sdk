@@ -36,6 +36,10 @@ public class HrisBenefitType {
     public static final HrisBenefitType LOAN_REPAYMENT = new HrisBenefitType("LOAN_REPAYMENT");
     public static final HrisBenefitType CHARITABLE_CONTRIBUTION = new HrisBenefitType("CHARITABLE_CONTRIBUTION");
     public static final HrisBenefitType OTHER = new HrisBenefitType("OTHER");
+    public static final HrisBenefitType RETIREMENT_ROTH = new HrisBenefitType("RETIREMENT_ROTH");
+    public static final HrisBenefitType COMMUTER = new HrisBenefitType("COMMUTER");
+    public static final HrisBenefitType DEPENDENT_CARE = new HrisBenefitType("DEPENDENT_CARE");
+    public static final HrisBenefitType PENSION = new HrisBenefitType("PENSION");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +129,10 @@ public class HrisBenefitType {
         map.put("LOAN_REPAYMENT", LOAN_REPAYMENT);
         map.put("CHARITABLE_CONTRIBUTION", CHARITABLE_CONTRIBUTION);
         map.put("OTHER", OTHER);
+        map.put("RETIREMENT_ROTH", RETIREMENT_ROTH);
+        map.put("COMMUTER", COMMUTER);
+        map.put("DEPENDENT_CARE", DEPENDENT_CARE);
+        map.put("PENSION", PENSION);
         return map;
     }
 
@@ -146,6 +154,10 @@ public class HrisBenefitType {
         map.put("LOAN_REPAYMENT", HrisBenefitTypeEnum.LOAN_REPAYMENT);
         map.put("CHARITABLE_CONTRIBUTION", HrisBenefitTypeEnum.CHARITABLE_CONTRIBUTION);
         map.put("OTHER", HrisBenefitTypeEnum.OTHER);
+        map.put("RETIREMENT_ROTH", HrisBenefitTypeEnum.RETIREMENT_ROTH);
+        map.put("COMMUTER", HrisBenefitTypeEnum.COMMUTER);
+        map.put("DEPENDENT_CARE", HrisBenefitTypeEnum.DEPENDENT_CARE);
+        map.put("PENSION", HrisBenefitTypeEnum.PENSION);
         return map;
     }
     
@@ -167,7 +179,11 @@ public class HrisBenefitType {
         GARNISHMENT("GARNISHMENT"),
         LOAN_REPAYMENT("LOAN_REPAYMENT"),
         CHARITABLE_CONTRIBUTION("CHARITABLE_CONTRIBUTION"),
-        OTHER("OTHER"),;
+        OTHER("OTHER"),
+        RETIREMENT_ROTH("RETIREMENT_ROTH"),
+        COMMUTER("COMMUTER"),
+        DEPENDENT_CARE("DEPENDENT_CARE"),
+        PENSION("PENSION"),;
 
         private final String value;
 

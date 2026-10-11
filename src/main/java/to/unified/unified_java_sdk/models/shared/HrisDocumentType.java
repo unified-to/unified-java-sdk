@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * HrisDocumentType
+ * 
+ * <p>unified, normalized document type (OTHER when unmappable)
+ */
 public class HrisDocumentType {
 
     public static final HrisDocumentType CONTRACT = new HrisDocumentType("CONTRACT");

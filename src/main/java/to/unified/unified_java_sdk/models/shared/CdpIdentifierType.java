@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpIdentifierType
+ * 
+ * <p>The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+ */
 public class CdpIdentifierType {
 
     public static final CdpIdentifierType EMAIL = new CdpIdentifierType("EMAIL");

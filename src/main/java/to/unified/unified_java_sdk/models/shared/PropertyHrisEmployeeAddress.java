@@ -35,7 +35,9 @@ public class PropertyHrisEmployeeAddress {
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * ISO 2-digit country code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     private String countryCode;
@@ -97,6 +99,9 @@ public class PropertyHrisEmployeeAddress {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * ISO 2-digit country code
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
@@ -142,6 +147,9 @@ public class PropertyHrisEmployeeAddress {
     }
 
 
+    /**
+     * ISO 2-digit country code
+     */
     public PropertyHrisEmployeeAddress withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -250,6 +258,9 @@ public class PropertyHrisEmployeeAddress {
             return this;
         }
 
+        /**
+         * ISO 2-digit country code
+         */
         public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;

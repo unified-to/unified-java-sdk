@@ -11,10 +11,14 @@
 * [getUcComment](#getuccomment) - Retrieve a comment
 * [getUcContact](#getuccontact) - Retrieve a contact
 * [getUcRecording](#getucrecording) - Retrieve a recording
+* [getUcScorecard](#getucscorecard) - Retrieve a scorecard
+* [getUcScorecardtemplate](#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [listUcCalls](#listuccalls) - List all calls
 * [listUcComments](#listuccomments) - List all comments
 * [listUcContacts](#listuccontacts) - List all contacts
 * [listUcRecordings](#listucrecordings) - List all recordings
+* [listUcScorecards](#listucscorecards) - List all scorecards
+* [listUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
 * [patchUcComment](#patchuccomment) - Update a comment
 * [patchUcContact](#patchuccontact) - Update a contact
 * [patchUcRecording](#patchucrecording) - Update a recording
@@ -56,8 +60,8 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("323a249e-0cee-438f-80c8-aa82141e88d3")
-                    .updatedAt("2024-02-02T13:02:16.012Z")
+                    .id("b55bcbeb-d0d3-4f88-bf42-c9984245742e")
+                    .updatedAt("2024-02-07T08:39:05.491Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -127,7 +131,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("b6f1a80e-606a-4fd0-b071-56e392552c22")
+                    .id("71892722-5d88-40d7-bf99-7d405cd261d5")
                     .lastName("Rogahn")
                     .name("Luther Rogahn")
                     .telephones(List.of(
@@ -144,7 +148,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-11-20T17:22:46.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T11:47:51.993Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -207,32 +211,33 @@ public class Application {
         CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
+                    .conversationIdentifier("e92e4042-a800-41d5-9411-07742151d49f")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-04-23T01:24:44.941Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-03-31T08:30:10.212Z"))
-                    .id("16959603-31ff-4806-b696-fd3434fc2fa3")
+                    .endAt(OffsetDateTime.parse("2024-05-01T00:22:37.256Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-17T23:03:03.151Z"))
+                    .id("e92e4042-a800-41d5-9411-07742151d49f")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-03-21T13:03:13.755Z"))
+                            .endAt(OffsetDateTime.parse("2024-03-29T01:22:20.176Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-04-18T15:34:49.770Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-06T12:07:07.207Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-01-30T07:48:51.811Z"))
-                                    .startAt(OffsetDateTime.parse("2024-05-20T17:57:09.629Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-16T02:42:27.963Z"))
+                                    .startAt(OffsetDateTime.parse("2024-05-29T01:58:59.623Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-09-27T09:24:07.211Z"))
-                                    .startAt(OffsetDateTime.parse("2026-07-05T11:55:01.125Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-07T11:52:50.369Z"))
+                                    .startAt(OffsetDateTime.parse("2026-07-24T09:56:38.505Z"))
                                     .build()))
                             .build()))
-                    .startAt(OffsetDateTime.parse("2023-04-23T07:14:01.559Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-26T06:26:29.625Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:45:21.953Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-10T08:56:21.806Z"))
                     .userName("Melyna Larson")
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
@@ -499,6 +504,122 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getUcScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUcScorecardRequest req = GetUcScorecardRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetUcScorecardResponse res = sdk.uc().getUcScorecard()
+                .request(req)
+                .call();
+
+        if (res.ucScorecard().isPresent()) {
+            System.out.println(res.ucScorecard().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetUcScorecardRequest](../../models/operations/GetUcScorecardRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetUcScorecardResponse](../../models/operations/GetUcScorecardResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getUcScorecardtemplate
+
+Retrieve a scorecardtemplate
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUcScorecardtemplate" method="get" path="/uc/{connection_id}/scorecardtemplate/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUcScorecardtemplateRequest req = GetUcScorecardtemplateRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetUcScorecardtemplateResponse res = sdk.uc().getUcScorecardtemplate()
+                .request(req)
+                .call();
+
+        if (res.ucScorecardtemplate().isPresent()) {
+            System.out.println(res.ucScorecardtemplate().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetUcScorecardtemplateRequest](../../models/operations/GetUcScorecardtemplateRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[GetUcScorecardtemplateResponse](../../models/operations/GetUcScorecardtemplateResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listUcCalls
 
 List all calls
@@ -727,6 +848,120 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUcScorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUcScorecardsRequest req = ListUcScorecardsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListUcScorecardsResponse res = sdk.uc().listUcScorecards()
+                .request(req)
+                .call();
+
+        if (res.ucScorecards().isPresent()) {
+            System.out.println(res.ucScorecards().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListUcScorecardsRequest](../../models/operations/ListUcScorecardsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListUcScorecardsResponse](../../models/operations/ListUcScorecardsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listUcScorecardtemplates
+
+List all scorecardtemplates
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUcScorecardtemplates" method="get" path="/uc/{connection_id}/scorecardtemplate" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUcScorecardtemplatesRequest req = ListUcScorecardtemplatesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListUcScorecardtemplatesResponse res = sdk.uc().listUcScorecardtemplates()
+                .request(req)
+                .call();
+
+        if (res.ucScorecardtemplates().isPresent()) {
+            System.out.println(res.ucScorecardtemplates().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListUcScorecardtemplatesRequest](../../models/operations/ListUcScorecardtemplatesRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[ListUcScorecardtemplatesResponse](../../models/operations/ListUcScorecardtemplatesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchUcComment
 
 Update a comment
@@ -758,8 +993,8 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("45a743bf-a173-442a-a853-3c6d0c1433a2")
-                    .updatedAt("2024-02-02T13:02:16.014Z")
+                    .id("263c6302-731a-4748-9738-16c1097238e1")
+                    .updatedAt("2024-02-07T08:39:05.493Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -830,7 +1065,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("b02e5795-1218-412d-93ee-a303bcae9d79")
+                    .id("5c181c14-a751-42f2-89eb-22b7f876a2a5")
                     .lastName("Rogahn")
                     .name("Luther Rogahn")
                     .telephones(List.of(
@@ -847,7 +1082,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-11-20T17:22:46.775Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T11:47:52.001Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -911,32 +1146,33 @@ public class Application {
         PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
+                    .conversationIdentifier("7e7003c4-a24f-41d1-acca-86a24b27fc9d")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-04-23T01:24:44.948Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-03-31T08:30:10.228Z"))
-                    .id("446c53c1-07a1-4da2-a56d-a6b2d6bc43ed")
+                    .endAt(OffsetDateTime.parse("2024-05-01T00:22:37.266Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-17T23:03:03.175Z"))
+                    .id("7e7003c4-a24f-41d1-acca-86a24b27fc9d")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-03-21T13:03:13.761Z"))
+                            .endAt(OffsetDateTime.parse("2024-03-29T01:22:20.186Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-04-18T15:34:49.786Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-06T12:07:07.232Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-01-30T07:48:51.827Z"))
-                                    .startAt(OffsetDateTime.parse("2024-05-20T17:57:09.636Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-16T02:42:27.986Z"))
+                                    .startAt(OffsetDateTime.parse("2024-05-29T01:58:59.635Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-09-27T09:24:07.220Z"))
-                                    .startAt(OffsetDateTime.parse("2026-07-05T11:55:01.142Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-07T11:52:50.383Z"))
+                                    .startAt(OffsetDateTime.parse("2026-07-24T09:56:38.529Z"))
                                     .build()))
                             .build()))
-                    .startAt(OffsetDateTime.parse("2023-04-23T07:14:01.562Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-26T06:26:29.629Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:45:21.963Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-10T08:56:21.823Z"))
                     .userName("Melyna Larson")
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
@@ -1171,8 +1407,8 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("45a743bf-a173-442a-a853-3c6d0c1433a2")
-                    .updatedAt("2024-02-02T13:02:16.014Z")
+                    .id("263c6302-731a-4748-9738-16c1097238e1")
+                    .updatedAt("2024-02-07T08:39:05.493Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1243,7 +1479,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("b02e5795-1218-412d-93ee-a303bcae9d79")
+                    .id("5c181c14-a751-42f2-89eb-22b7f876a2a5")
                     .lastName("Rogahn")
                     .name("Luther Rogahn")
                     .telephones(List.of(
@@ -1260,7 +1496,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-11-20T17:22:46.775Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T11:47:52.001Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1324,32 +1560,33 @@ public class Application {
         UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
+                    .conversationIdentifier("7e7003c4-a24f-41d1-acca-86a24b27fc9d")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-04-23T01:24:44.948Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-03-31T08:30:10.228Z"))
-                    .id("446c53c1-07a1-4da2-a56d-a6b2d6bc43ed")
+                    .endAt(OffsetDateTime.parse("2024-05-01T00:22:37.266Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-17T23:03:03.175Z"))
+                    .id("7e7003c4-a24f-41d1-acca-86a24b27fc9d")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-03-21T13:03:13.761Z"))
+                            .endAt(OffsetDateTime.parse("2024-03-29T01:22:20.186Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-04-18T15:34:49.786Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-06T12:07:07.232Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-01-30T07:48:51.827Z"))
-                                    .startAt(OffsetDateTime.parse("2024-05-20T17:57:09.636Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-16T02:42:27.986Z"))
+                                    .startAt(OffsetDateTime.parse("2024-05-29T01:58:59.635Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-09-27T09:24:07.220Z"))
-                                    .startAt(OffsetDateTime.parse("2026-07-05T11:55:01.142Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-07T11:52:50.383Z"))
+                                    .startAt(OffsetDateTime.parse("2026-07-24T09:56:38.529Z"))
                                     .build()))
                             .build()))
-                    .startAt(OffsetDateTime.parse("2023-04-23T07:14:01.562Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-26T06:26:29.629Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-02-26T04:45:21.963Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-10T08:56:21.823Z"))
                     .userName("Melyna Larson")
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")

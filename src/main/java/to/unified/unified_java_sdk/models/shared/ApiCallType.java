@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ApiCallType
+ * 
+ * <p>The type of API Call being logged
+ */
 public class ApiCallType {
 
     public static final ApiCallType LOGIN = new ApiCallType("login");

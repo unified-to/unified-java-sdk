@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * TaxMode
+ * 
+ * <p>INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+ */
 public class TaxMode {
 
     public static final TaxMode INCLUSIVE = new TaxMode("INCLUSIVE");

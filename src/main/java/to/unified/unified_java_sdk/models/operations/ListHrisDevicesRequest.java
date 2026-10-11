@@ -23,10 +23,22 @@ public class ListHrisDevicesRequest {
     private String connectionId;
 
     /**
+     * The email address to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    private String email;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListHrisDevicesQueryParamFields> fields;
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    private String groupId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -74,7 +86,9 @@ public class ListHrisDevicesRequest {
     @JsonCreator
     public ListHrisDevicesRequest(
             @Nonnull String connectionId,
+            @Nullable String email,
             @Nullable List<ListHrisDevicesQueryParamFields> fields,
+            @Nullable String groupId,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -85,7 +99,9 @@ public class ListHrisDevicesRequest {
             @Nullable String userId) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.email = email;
         this.fields = fields;
+        this.groupId = groupId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -101,7 +117,7 @@ public class ListHrisDevicesRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -112,10 +128,24 @@ public class ListHrisDevicesRequest {
     }
 
     /**
+     * The email address to filter by
+     */
+    public Optional<String> email() {
+        return Optional.ofNullable(this.email);
+    }
+
+    /**
      * Fields to return
      */
     public Optional<List<ListHrisDevicesQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public Optional<String> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     public Optional<Double> limit() {
@@ -180,10 +210,28 @@ public class ListHrisDevicesRequest {
 
 
     /**
+     * The email address to filter by
+     */
+    public ListHrisDevicesRequest withEmail(@Nullable String email) {
+        this.email = email;
+        return this;
+    }
+
+
+    /**
      * Fields to return
      */
     public ListHrisDevicesRequest withFields(@Nullable List<ListHrisDevicesQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public ListHrisDevicesRequest withGroupId(@Nullable String groupId) {
+        this.groupId = groupId;
         return this;
     }
 
@@ -262,7 +310,9 @@ public class ListHrisDevicesRequest {
         ListHrisDevicesRequest other = (ListHrisDevicesRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.email, other.email) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -276,17 +326,19 @@ public class ListHrisDevicesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, updatedGte,
-            userId);
+            connectionId, email, fields,
+            groupId, limit, offset,
+            order, query, raw,
+            sort, updatedGte, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListHrisDevicesRequest.class,
                 "connectionId", connectionId,
+                "email", email,
                 "fields", fields,
+                "groupId", groupId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -302,7 +354,11 @@ public class ListHrisDevicesRequest {
 
         private String connectionId;
 
+        private String email;
+
         private List<ListHrisDevicesQueryParamFields> fields;
+
+        private String groupId;
 
         private Double limit;
 
@@ -333,10 +389,26 @@ public class ListHrisDevicesRequest {
         }
 
         /**
+         * The email address to filter by
+         */
+        public Builder email(@Nullable String email) {
+            this.email = email;
+            return this;
+        }
+
+        /**
          * Fields to return
          */
         public Builder fields(@Nullable List<ListHrisDevicesQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The group ID to filter by (reference to HrisGroup)
+         */
+        public Builder groupId(@Nullable String groupId) {
+            this.groupId = groupId;
             return this;
         }
 
@@ -397,10 +469,10 @@ public class ListHrisDevicesRequest {
 
         public ListHrisDevicesRequest build() {
             return new ListHrisDevicesRequest(
-                connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, updatedGte,
-                userId);
+                connectionId, email, fields,
+                groupId, limit, offset,
+                order, query, raw,
+                sort, updatedGte, userId);
         }
 
     }

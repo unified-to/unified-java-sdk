@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ComputeMode
+ * 
+ * <p>How the segment membership is computed (REALTIME or BATCH)
+ */
 public class ComputeMode {
 
     public static final ComputeMode REALTIME = new ComputeMode("REALTIME");

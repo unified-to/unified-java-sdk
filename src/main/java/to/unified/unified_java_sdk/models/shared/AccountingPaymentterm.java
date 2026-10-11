@@ -21,17 +21,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingPaymentterm {
-
+    /**
+     * STANDARD (days-based) or DATE_DRIVEN (month-based)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     private Category category;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (date-driven) day of month payment is due (1–31)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_month_due")
     private Double dayOfMonthDue;
@@ -41,27 +47,37 @@ public class AccountingPaymentterm {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (date-driven) pay before this day of month for the discount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_day_of_month")
     private Double discountDayOfMonth;
 
-
+    /**
+     * (standard) days within which an early-pay discount applies
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_days")
     private Double discountDays;
 
-
+    /**
+     * (standard) early-pay discount rate
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_percent")
     private Double discountPercent;
 
-
+    /**
+     * (standard) days until payment is due
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_days")
     private Double dueDays;
 
-
+    /**
+     * (date-driven) if invoiced within N days of month-end, due next month
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_next_month_days")
     private Double dueNextMonthDays;
@@ -81,7 +97,9 @@ public class AccountingPaymentterm {
     @JsonProperty("metadata")
     private List<AccountingMetadata> metadata;
 
-
+    /**
+     * term label, e.g. "Net 30"
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -101,7 +119,9 @@ public class AccountingPaymentterm {
     @JsonProperty("type")
     private AccountingPaymenttermType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -153,14 +173,23 @@ public class AccountingPaymentterm {
             null, null);
     }
 
+    /**
+     * STANDARD (days-based) or DATE_DRIVEN (month-based)
+     */
     public Optional<Category> category() {
         return Optional.ofNullable(this.category);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (date-driven) day of month payment is due (1–31)
+     */
     public Optional<Double> dayOfMonthDue() {
         return Optional.ofNullable(this.dayOfMonthDue);
     }
@@ -169,22 +198,37 @@ public class AccountingPaymentterm {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (date-driven) pay before this day of month for the discount
+     */
     public Optional<Double> discountDayOfMonth() {
         return Optional.ofNullable(this.discountDayOfMonth);
     }
 
+    /**
+     * (standard) days within which an early-pay discount applies
+     */
     public Optional<Double> discountDays() {
         return Optional.ofNullable(this.discountDays);
     }
 
+    /**
+     * (standard) early-pay discount rate
+     */
     public Optional<Double> discountPercent() {
         return Optional.ofNullable(this.discountPercent);
     }
 
+    /**
+     * (standard) days until payment is due
+     */
     public Optional<Double> dueDays() {
         return Optional.ofNullable(this.dueDays);
     }
 
+    /**
+     * (date-driven) if invoiced within N days of month-end, due next month
+     */
     public Optional<Double> dueNextMonthDays() {
         return Optional.ofNullable(this.dueNextMonthDays);
     }
@@ -201,6 +245,9 @@ public class AccountingPaymentterm {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * term label, e.g. "Net 30"
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -217,6 +264,9 @@ public class AccountingPaymentterm {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -226,18 +276,27 @@ public class AccountingPaymentterm {
     }
 
 
+    /**
+     * STANDARD (days-based) or DATE_DRIVEN (month-based)
+     */
     public AccountingPaymentterm withCategory(@Nullable Category category) {
         this.category = category;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPaymentterm withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (date-driven) day of month payment is due (1–31)
+     */
     public AccountingPaymentterm withDayOfMonthDue(@Nullable Double dayOfMonthDue) {
         this.dayOfMonthDue = dayOfMonthDue;
         return this;
@@ -250,30 +309,45 @@ public class AccountingPaymentterm {
     }
 
 
+    /**
+     * (date-driven) pay before this day of month for the discount
+     */
     public AccountingPaymentterm withDiscountDayOfMonth(@Nullable Double discountDayOfMonth) {
         this.discountDayOfMonth = discountDayOfMonth;
         return this;
     }
 
 
+    /**
+     * (standard) days within which an early-pay discount applies
+     */
     public AccountingPaymentterm withDiscountDays(@Nullable Double discountDays) {
         this.discountDays = discountDays;
         return this;
     }
 
 
+    /**
+     * (standard) early-pay discount rate
+     */
     public AccountingPaymentterm withDiscountPercent(@Nullable Double discountPercent) {
         this.discountPercent = discountPercent;
         return this;
     }
 
 
+    /**
+     * (standard) days until payment is due
+     */
     public AccountingPaymentterm withDueDays(@Nullable Double dueDays) {
         this.dueDays = dueDays;
         return this;
     }
 
 
+    /**
+     * (date-driven) if invoiced within N days of month-end, due next month
+     */
     public AccountingPaymentterm withDueNextMonthDays(@Nullable Double dueNextMonthDays) {
         this.dueNextMonthDays = dueNextMonthDays;
         return this;
@@ -298,6 +372,9 @@ public class AccountingPaymentterm {
     }
 
 
+    /**
+     * term label, e.g. "Net 30"
+     */
     public AccountingPaymentterm withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -322,6 +399,9 @@ public class AccountingPaymentterm {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPaymentterm withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -431,16 +511,25 @@ public class AccountingPaymentterm {
           // force use of static builder() method
         }
 
+        /**
+         * STANDARD (days-based) or DATE_DRIVEN (month-based)
+         */
         public Builder category(@Nullable Category category) {
             this.category = category;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (date-driven) day of month payment is due (1–31)
+         */
         public Builder dayOfMonthDue(@Nullable Double dayOfMonthDue) {
             this.dayOfMonthDue = dayOfMonthDue;
             return this;
@@ -451,26 +540,41 @@ public class AccountingPaymentterm {
             return this;
         }
 
+        /**
+         * (date-driven) pay before this day of month for the discount
+         */
         public Builder discountDayOfMonth(@Nullable Double discountDayOfMonth) {
             this.discountDayOfMonth = discountDayOfMonth;
             return this;
         }
 
+        /**
+         * (standard) days within which an early-pay discount applies
+         */
         public Builder discountDays(@Nullable Double discountDays) {
             this.discountDays = discountDays;
             return this;
         }
 
+        /**
+         * (standard) early-pay discount rate
+         */
         public Builder discountPercent(@Nullable Double discountPercent) {
             this.discountPercent = discountPercent;
             return this;
         }
 
+        /**
+         * (standard) days until payment is due
+         */
         public Builder dueDays(@Nullable Double dueDays) {
             this.dueDays = dueDays;
             return this;
         }
 
+        /**
+         * (date-driven) if invoiced within N days of month-end, due next month
+         */
         public Builder dueNextMonthDays(@Nullable Double dueNextMonthDays) {
             this.dueNextMonthDays = dueNextMonthDays;
             return this;
@@ -491,6 +595,9 @@ public class AccountingPaymentterm {
             return this;
         }
 
+        /**
+         * term label, e.g. "Net 30"
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -511,6 +618,9 @@ public class AccountingPaymentterm {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

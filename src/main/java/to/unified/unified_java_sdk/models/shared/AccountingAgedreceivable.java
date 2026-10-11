@@ -20,22 +20,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingAgedreceivable {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * synthetic, one row per currency / date window
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -55,7 +63,9 @@ public class AccountingAgedreceivable {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -65,17 +75,23 @@ public class AccountingAgedreceivable {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * open balances not yet past due; distinct from the first past-due period
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_current_amount")
     private Double totalCurrentAmount;
 
-
+    /**
+     * sum of open balances across all past-due periods
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_overdue_amount")
     private Double totalOverdueAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -115,18 +131,30 @@ public class AccountingAgedreceivable {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * synthetic, one row per currency / date window
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -143,6 +171,9 @@ public class AccountingAgedreceivable {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -151,14 +182,23 @@ public class AccountingAgedreceivable {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * open balances not yet past due; distinct from the first past-due period
+     */
     public Optional<Double> totalCurrentAmount() {
         return Optional.ofNullable(this.totalCurrentAmount);
     }
 
+    /**
+     * sum of open balances across all past-due periods
+     */
     public Optional<Double> totalOverdueAmount() {
         return Optional.ofNullable(this.totalOverdueAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -168,24 +208,36 @@ public class AccountingAgedreceivable {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAgedreceivable withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * ISO 4217
+     */
     public AccountingAgedreceivable withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAgedreceivable withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * synthetic, one row per currency / date window
+     */
     public AccountingAgedreceivable withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -210,6 +262,9 @@ public class AccountingAgedreceivable {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAgedreceivable withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -222,18 +277,27 @@ public class AccountingAgedreceivable {
     }
 
 
+    /**
+     * open balances not yet past due; distinct from the first past-due period
+     */
     public AccountingAgedreceivable withTotalCurrentAmount(@Nullable Double totalCurrentAmount) {
         this.totalCurrentAmount = totalCurrentAmount;
         return this;
     }
 
 
+    /**
+     * sum of open balances across all past-due periods
+     */
     public AccountingAgedreceivable withTotalOverdueAmount(@Nullable Double totalOverdueAmount) {
         this.totalOverdueAmount = totalOverdueAmount;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingAgedreceivable withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -321,21 +385,33 @@ public class AccountingAgedreceivable {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * synthetic, one row per currency / date window
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -356,6 +432,9 @@ public class AccountingAgedreceivable {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -366,16 +445,25 @@ public class AccountingAgedreceivable {
             return this;
         }
 
+        /**
+         * open balances not yet past due; distinct from the first past-due period
+         */
         public Builder totalCurrentAmount(@Nullable Double totalCurrentAmount) {
             this.totalCurrentAmount = totalCurrentAmount;
             return this;
         }
 
+        /**
+         * sum of open balances across all past-due periods
+         */
         public Builder totalOverdueAmount(@Nullable Double totalOverdueAmount) {
             this.totalOverdueAmount = totalOverdueAmount;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

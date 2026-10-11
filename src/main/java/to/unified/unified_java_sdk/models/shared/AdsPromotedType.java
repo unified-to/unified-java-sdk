@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AdsPromotedType
+ * 
+ * <p>Promoted entity types for ads_promoted list endpoint
+ */
 public class AdsPromotedType {
 
     public static final AdsPromotedType PAGE_ID = new AdsPromotedType("PAGE_ID");

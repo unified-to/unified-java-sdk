@@ -30,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
 import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetGenaiSkillResponse;
 import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiTaskResponse;
@@ -42,6 +45,9 @@ import to.unified.unified_java_sdk.models.operations.ListGenaiModelsResponse;
 import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsResponse;
 import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListGenaiTasksResponse;
@@ -51,12 +57,18 @@ import to.unified.unified_java_sdk.models.operations.PatchGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskResponse;
@@ -66,6 +78,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiAgent;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
 import to.unified.unified_java_sdk.operations.CreateGenaiOrganization;
@@ -74,18 +89,23 @@ import to.unified.unified_java_sdk.operations.CreateGenaiTask;
 import to.unified.unified_java_sdk.operations.GetGenaiAgent;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.GetGenaiOrganization;
+import to.unified.unified_java_sdk.operations.GetGenaiSkill;
 import to.unified.unified_java_sdk.operations.GetGenaiTask;
 import to.unified.unified_java_sdk.operations.ListGenaiAgents;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.operations.ListGenaiOrganizations;
+import to.unified.unified_java_sdk.operations.ListGenaiSkills;
 import to.unified.unified_java_sdk.operations.ListGenaiTasks;
 import to.unified.unified_java_sdk.operations.PatchGenaiAgent;
 import to.unified.unified_java_sdk.operations.PatchGenaiOrganization;
+import to.unified.unified_java_sdk.operations.PatchGenaiTask;
 import to.unified.unified_java_sdk.operations.RemoveGenaiAgent;
 import to.unified.unified_java_sdk.operations.RemoveGenaiOrganization;
+import to.unified.unified_java_sdk.operations.RemoveGenaiSkill;
 import to.unified.unified_java_sdk.operations.RemoveGenaiTask;
 import to.unified.unified_java_sdk.operations.UpdateGenaiAgent;
 import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
+import to.unified.unified_java_sdk.operations.UpdateGenaiTask;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -285,6 +305,28 @@ public class Genai {
     }
 
     /**
+     * Retrieve a skill
+     * 
+     * @return The call builder
+     */
+    public GetGenaiSkillRequestBuilder getGenaiSkill() {
+        return new GetGenaiSkillRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a skill
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetGenaiSkillResponse getGenaiSkill(@Nonnull GetGenaiSkillRequest request) {
+        RequestOperation<GetGenaiSkillRequest, GetGenaiSkillResponse> operation
+              = new GetGenaiSkill.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a task
      * 
      * @return The call builder
@@ -373,6 +415,28 @@ public class Genai {
     }
 
     /**
+     * List all skills
+     * 
+     * @return The call builder
+     */
+    public ListGenaiSkillsRequestBuilder listGenaiSkills() {
+        return new ListGenaiSkillsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all skills
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListGenaiSkillsResponse listGenaiSkills(@Nonnull ListGenaiSkillsRequest request) {
+        RequestOperation<ListGenaiSkillsRequest, ListGenaiSkillsResponse> operation
+              = new ListGenaiSkills.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all tasks
      * 
      * @return The call builder
@@ -439,6 +503,28 @@ public class Genai {
     }
 
     /**
+     * Update a task
+     * 
+     * @return The call builder
+     */
+    public PatchGenaiTaskRequestBuilder patchGenaiTask() {
+        return new PatchGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchGenaiTaskResponse patchGenaiTask(@Nonnull PatchGenaiTaskRequest request) {
+        RequestOperation<PatchGenaiTaskRequest, PatchGenaiTaskResponse> operation
+              = new PatchGenaiTask.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an agent
      * 
      * @return The call builder
@@ -479,6 +565,28 @@ public class Genai {
     public RemoveGenaiOrganizationResponse removeGenaiOrganization(@Nonnull RemoveGenaiOrganizationRequest request) {
         RequestOperation<RemoveGenaiOrganizationRequest, RemoveGenaiOrganizationResponse> operation
               = new RemoveGenaiOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a skill
+     * 
+     * @return The call builder
+     */
+    public RemoveGenaiSkillRequestBuilder removeGenaiSkill() {
+        return new RemoveGenaiSkillRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a skill
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveGenaiSkillResponse removeGenaiSkill(@Nonnull RemoveGenaiSkillRequest request) {
+        RequestOperation<RemoveGenaiSkillRequest, RemoveGenaiSkillResponse> operation
+              = new RemoveGenaiSkill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -545,6 +653,28 @@ public class Genai {
     public UpdateGenaiOrganizationResponse updateGenaiOrganization(@Nonnull UpdateGenaiOrganizationRequest request) {
         RequestOperation<UpdateGenaiOrganizationRequest, UpdateGenaiOrganizationResponse> operation
               = new UpdateGenaiOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a task
+     * 
+     * @return The call builder
+     */
+    public UpdateGenaiTaskRequestBuilder updateGenaiTask() {
+        return new UpdateGenaiTaskRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a task
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateGenaiTaskResponse updateGenaiTask(@Nonnull UpdateGenaiTaskRequest request) {
+        RequestOperation<UpdateGenaiTaskRequest, UpdateGenaiTaskResponse> operation
+              = new UpdateGenaiTask.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

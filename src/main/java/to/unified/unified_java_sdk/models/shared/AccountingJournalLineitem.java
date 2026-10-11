@@ -17,7 +17,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingJournalLineitem {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -27,7 +29,9 @@ public class AccountingJournalLineitem {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
@@ -37,7 +41,9 @@ public class AccountingJournalLineitem {
     @JsonProperty("credit_amount")
     private Double creditAmount;
 
-
+    /**
+     * will replace total_amount (absolute value)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debit_amount")
     private Double debitAmount;
@@ -47,7 +53,9 @@ public class AccountingJournalLineitem {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
@@ -57,22 +65,30 @@ public class AccountingJournalLineitem {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * (reference to AccountingInvoice)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
     private String invoiceId;
 
-
+    /**
+     * points to a AccountingOrganization
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * link to PaymentPayment (reference to PaymentPayment)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -82,12 +98,16 @@ public class AccountingJournalLineitem {
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
-
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
 
-
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
@@ -134,6 +154,9 @@ public class AccountingJournalLineitem {
             null, null, null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -142,6 +165,9 @@ public class AccountingJournalLineitem {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
@@ -150,6 +176,9 @@ public class AccountingJournalLineitem {
         return Optional.ofNullable(this.creditAmount);
     }
 
+    /**
+     * will replace total_amount (absolute value)
+     */
     public Optional<Double> debitAmount() {
         return Optional.ofNullable(this.debitAmount);
     }
@@ -158,6 +187,9 @@ public class AccountingJournalLineitem {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -166,18 +198,30 @@ public class AccountingJournalLineitem {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * (reference to AccountingInvoice)
+     */
     public Optional<String> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
     }
 
+    /**
+     * points to a AccountingOrganization
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * link to PaymentPayment (reference to PaymentPayment)
+     */
     public Optional<String> paymentId() {
         return Optional.ofNullable(this.paymentId);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -186,10 +230,16 @@ public class AccountingJournalLineitem {
         return Optional.ofNullable(this.taxAmount);
     }
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
     }
 
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
@@ -199,6 +249,9 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingJournalLineitem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -211,6 +264,9 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingJournalLineitem withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
@@ -223,6 +279,9 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * will replace total_amount (absolute value)
+     */
     public AccountingJournalLineitem withDebitAmount(@Nullable Double debitAmount) {
         this.debitAmount = debitAmount;
         return this;
@@ -235,6 +294,9 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * points to a HRIS Group (reference to HrisGroup)
+     */
     public AccountingJournalLineitem withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
@@ -247,24 +309,36 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * (reference to AccountingInvoice)
+     */
     public AccountingJournalLineitem withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
 
 
+    /**
+     * points to a AccountingOrganization
+     */
     public AccountingJournalLineitem withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
 
+    /**
+     * link to PaymentPayment (reference to PaymentPayment)
+     */
     public AccountingJournalLineitem withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public AccountingJournalLineitem withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -277,12 +351,18 @@ public class AccountingJournalLineitem {
     }
 
 
+    /**
+     * ref -&gt; AccountingTaxrate applied to the line
+     */
     public AccountingJournalLineitem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
 
 
+    /**
+     * will be a positive value for a debit and negative for a credit
+     */
     public AccountingJournalLineitem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -383,6 +463,9 @@ public class AccountingJournalLineitem {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -393,6 +476,9 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
@@ -403,6 +489,9 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        /**
+         * will replace total_amount (absolute value)
+         */
         public Builder debitAmount(@Nullable Double debitAmount) {
             this.debitAmount = debitAmount;
             return this;
@@ -413,6 +502,9 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        /**
+         * points to a HRIS Group (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
@@ -423,21 +515,33 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        /**
+         * (reference to AccountingInvoice)
+         */
         public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
         }
 
+        /**
+         * points to a AccountingOrganization
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * link to PaymentPayment (reference to PaymentPayment)
+         */
         public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -448,11 +552,17 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        /**
+         * ref -&gt; AccountingTaxrate applied to the line
+         */
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
         }
 
+        /**
+         * will be a positive value for a debit and negative for a credit
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;

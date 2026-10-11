@@ -21,7 +21,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Customs information
  */
 public class PropertyShippingShipmentCustoms {
-
+    /**
+     * Customs declared value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
@@ -36,7 +38,9 @@ public class PropertyShippingShipmentCustoms {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Explanation of contents
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -58,12 +62,16 @@ public class PropertyShippingShipmentCustoms {
     @JsonProperty("non_delivery_option")
     private NonDeliveryOption nonDeliveryOption;
 
-
+    /**
+     * Importer EORI number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_eori")
     private String recipientEori;
 
-
+    /**
+     * Importer tax ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_tax_number")
     private String recipientTaxNumber;
@@ -75,12 +83,16 @@ public class PropertyShippingShipmentCustoms {
     @JsonProperty("restrictions")
     private List<String> restrictions;
 
-
+    /**
+     * Exporter EORI number
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipper_eori")
     private String shipperEori;
 
-
+    /**
+     * Exporter tax ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipper_tax_number")
     private String shipperTaxNumber;
@@ -128,6 +140,9 @@ public class PropertyShippingShipmentCustoms {
             null);
     }
 
+    /**
+     * Customs declared value
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
@@ -140,6 +155,9 @@ public class PropertyShippingShipmentCustoms {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Explanation of contents
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -159,10 +177,16 @@ public class PropertyShippingShipmentCustoms {
         return Optional.ofNullable(this.nonDeliveryOption);
     }
 
+    /**
+     * Importer EORI number
+     */
     public Optional<String> recipientEori() {
         return Optional.ofNullable(this.recipientEori);
     }
 
+    /**
+     * Importer tax ID
+     */
     public Optional<String> recipientTaxNumber() {
         return Optional.ofNullable(this.recipientTaxNumber);
     }
@@ -174,10 +198,16 @@ public class PropertyShippingShipmentCustoms {
         return Optional.ofNullable(this.restrictions);
     }
 
+    /**
+     * Exporter EORI number
+     */
     public Optional<String> shipperEori() {
         return Optional.ofNullable(this.shipperEori);
     }
 
+    /**
+     * Exporter tax ID
+     */
     public Optional<String> shipperTaxNumber() {
         return Optional.ofNullable(this.shipperTaxNumber);
     }
@@ -191,6 +221,9 @@ public class PropertyShippingShipmentCustoms {
     }
 
 
+    /**
+     * Customs declared value
+     */
     public PropertyShippingShipmentCustoms withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
@@ -209,6 +242,9 @@ public class PropertyShippingShipmentCustoms {
     }
 
 
+    /**
+     * Explanation of contents
+     */
     public PropertyShippingShipmentCustoms withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -236,12 +272,18 @@ public class PropertyShippingShipmentCustoms {
     }
 
 
+    /**
+     * Importer EORI number
+     */
     public PropertyShippingShipmentCustoms withRecipientEori(@Nullable String recipientEori) {
         this.recipientEori = recipientEori;
         return this;
     }
 
 
+    /**
+     * Importer tax ID
+     */
     public PropertyShippingShipmentCustoms withRecipientTaxNumber(@Nullable String recipientTaxNumber) {
         this.recipientTaxNumber = recipientTaxNumber;
         return this;
@@ -257,12 +299,18 @@ public class PropertyShippingShipmentCustoms {
     }
 
 
+    /**
+     * Exporter EORI number
+     */
     public PropertyShippingShipmentCustoms withShipperEori(@Nullable String shipperEori) {
         this.shipperEori = shipperEori;
         return this;
     }
 
 
+    /**
+     * Exporter tax ID
+     */
     public PropertyShippingShipmentCustoms withShipperTaxNumber(@Nullable String shipperTaxNumber) {
         this.shipperTaxNumber = shipperTaxNumber;
         return this;
@@ -361,6 +409,9 @@ public class PropertyShippingShipmentCustoms {
           // force use of static builder() method
         }
 
+        /**
+         * Customs declared value
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
@@ -376,6 +427,9 @@ public class PropertyShippingShipmentCustoms {
             return this;
         }
 
+        /**
+         * Explanation of contents
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -399,11 +453,17 @@ public class PropertyShippingShipmentCustoms {
             return this;
         }
 
+        /**
+         * Importer EORI number
+         */
         public Builder recipientEori(@Nullable String recipientEori) {
             this.recipientEori = recipientEori;
             return this;
         }
 
+        /**
+         * Importer tax ID
+         */
         public Builder recipientTaxNumber(@Nullable String recipientTaxNumber) {
             this.recipientTaxNumber = recipientTaxNumber;
             return this;
@@ -417,11 +477,17 @@ public class PropertyShippingShipmentCustoms {
             return this;
         }
 
+        /**
+         * Exporter EORI number
+         */
         public Builder shipperEori(@Nullable String shipperEori) {
             this.shipperEori = shipperEori;
             return this;
         }
 
+        /**
+         * Exporter tax ID
+         */
         public Builder shipperTaxNumber(@Nullable String shipperTaxNumber) {
             this.shipperTaxNumber = shipperTaxNumber;
             return this;

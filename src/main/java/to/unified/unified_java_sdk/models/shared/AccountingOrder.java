@@ -24,7 +24,9 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>&#64;deprecated; use AccountingSalesorder or AccountingPurchaseorder
  */
 public class AccountingOrder {
-
+    /**
+     * (reference to AccountingAccount)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     private String accountId;
@@ -34,12 +36,16 @@ public class AccountingOrder {
     @JsonProperty("billing_address")
     private PropertyAccountingOrderBillingAddress billingAddress;
 
-
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -69,7 +75,9 @@ public class AccountingOrder {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
@@ -99,7 +107,9 @@ public class AccountingOrder {
     @JsonProperty("type")
     private AccountingOrderType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -149,6 +159,9 @@ public class AccountingOrder {
             null);
     }
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -157,10 +170,16 @@ public class AccountingOrder {
         return Optional.ofNullable(this.billingAddress);
     }
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -185,6 +204,9 @@ public class AccountingOrder {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
@@ -209,6 +231,9 @@ public class AccountingOrder {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -218,6 +243,9 @@ public class AccountingOrder {
     }
 
 
+    /**
+     * (reference to AccountingAccount)
+     */
     public AccountingOrder withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
@@ -230,12 +258,18 @@ public class AccountingOrder {
     }
 
 
+    /**
+     * Customer, Supplier (reference to AccountingContact)
+     */
     public AccountingOrder withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -272,6 +306,9 @@ public class AccountingOrder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrder withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -308,6 +345,9 @@ public class AccountingOrder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -413,6 +453,9 @@ public class AccountingOrder {
           // force use of static builder() method
         }
 
+        /**
+         * (reference to AccountingAccount)
+         */
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
@@ -423,11 +466,17 @@ public class AccountingOrder {
             return this;
         }
 
+        /**
+         * Customer, Supplier (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -458,6 +507,9 @@ public class AccountingOrder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -488,6 +540,9 @@ public class AccountingOrder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

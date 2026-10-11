@@ -5,15 +5,16 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
+* [createUnifiedSecretsmanager](#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
-* [createUnifiedWorkspaceSecretsmanager](#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
-* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
+* [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
-* [getUnifiedWorkspaceSecretsmanager](#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -21,22 +22,24 @@
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
 * [listUnifiedNotifications](#listunifiednotifications) - List event notifications
+* [listUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
-* [listUnifiedWorkspaceSecretsmanagers](#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
-* [removeUnifiedWorkspaceSecretsmanager](#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
 
 ## createUnifiedConnection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -87,6 +90,63 @@ public class Application {
 ### Response
 
 **[CreateUnifiedConnectionResponse](../../models/operations/CreateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createUnifiedConnectionReauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionReauthResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateUnifiedConnectionReauthRequest req = CreateUnifiedConnectionReauthRequest.builder()
+                .id("<id>")
+                .build();
+
+        CreateUnifiedConnectionReauthResponse res = sdk.unified().createUnifiedConnectionReauth()
+                .request(req)
+                .call();
+
+        if (res.connectionReauth().isPresent()) {
+            System.out.println(res.connectionReauth().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [CreateUnifiedConnectionReauthRequest](../../models/operations/CreateUnifiedConnectionReauthRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[CreateUnifiedConnectionReauthResponse](../../models/operations/CreateUnifiedConnectionReauthResponse.md)**
 
 ### Errors
 
@@ -150,6 +210,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createUnifiedSecretsmanager
+
+Create secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUnifiedSecretsmanager" method="post" path="/unified/secretsmanager" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        SecretsManager req = SecretsManager.builder()
+                .auth(Map.ofEntries(
+                    Map.entry("key", "<value>"),
+                    Map.entry("key1", "<value>")))
+                .name("<value>")
+                .type(SecretsManagerType.AKEYLESS)
+                .build();
+
+        CreateUnifiedSecretsmanagerResponse res = sdk.unified().createUnifiedSecretsmanager()
+                .request(req)
+                .call();
+
+        if (res.secretsManager().isPresent()) {
+            System.out.println(res.secretsManager().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                               | Type                                                    | Required                                                | Description                                             |
+| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| `request`                                               | [SecretsManager](../../models/shared/SecretsManager.md) | :heavy_check_mark:                                      | The request object to use for the request.              |
+
+### Response
+
+**[CreateUnifiedSecretsmanagerResponse](../../models/operations/CreateUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createUnifiedWebhook
 
 The data payload received by your server is described at https://docs.unified.to/unified/overview. The `interval` field can be set as low as 1 minute for paid accounts, and 60 minutes for free accounts.
@@ -204,66 +325,6 @@ public class Application {
 ### Response
 
 **[CreateUnifiedWebhookResponse](../../models/operations/CreateUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## createUnifiedWorkspaceSecretsmanager
-
-Create secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="createUnifiedWorkspaceSecretsmanager" method="post" path="/unified/workspace/secretsmanager" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import java.util.Map;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceSecretsmanagerResponse;
-import to.unified.unified_java_sdk.models.shared.*;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        SecretsManager req = SecretsManager.builder()
-                .auth(Map.ofEntries(
-                ))
-                .name("<value>")
-                .type(SecretsManagerType.HASHICORP)
-                .build();
-
-        CreateUnifiedWorkspaceSecretsmanagerResponse res = sdk.unified().createUnifiedWorkspaceSecretsmanager()
-                .request(req)
-                .call();
-
-        if (res.secretsManager().isPresent()) {
-            System.out.println(res.secretsManager().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                               | Type                                                    | Required                                                | Description                                             |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| `request`                                               | [SecretsManager](../../models/shared/SecretsManager.md) | :heavy_check_mark:                                      | The request object to use for the request.              |
-
-### Response
-
-**[CreateUnifiedWorkspaceSecretsmanagerResponse](../../models/operations/CreateUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 
@@ -387,7 +448,7 @@ public class Application {
 
 ## getUnifiedIntegrationAuth
 
-Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
 ### Example Usage
 
@@ -500,6 +561,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getUnifiedSecretsmanager
+
+Retrieve secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUnifiedSecretsmanager" method="get" path="/unified/secretsmanager/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUnifiedSecretsmanagerRequest req = GetUnifiedSecretsmanagerRequest.builder()
+                .id("<id>")
+                .build();
+
+        GetUnifiedSecretsmanagerResponse res = sdk.unified().getUnifiedSecretsmanager()
+                .request(req)
+                .call();
+
+        if (res.secretsManager().isPresent()) {
+            System.out.println(res.secretsManager().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [GetUnifiedSecretsmanagerRequest](../../models/operations/GetUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[GetUnifiedSecretsmanagerResponse](../../models/operations/GetUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getUnifiedWebhook
 
 Retrieve webhook by its ID
@@ -550,63 +668,6 @@ public class Application {
 ### Response
 
 **[GetUnifiedWebhookResponse](../../models/operations/GetUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getUnifiedWorkspaceSecretsmanager
-
-Retrieve secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getUnifiedWorkspaceSecretsmanager" method="get" path="/unified/workspace/secretsmanager/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerRequest;
-import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceSecretsmanagerResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetUnifiedWorkspaceSecretsmanagerRequest req = GetUnifiedWorkspaceSecretsmanagerRequest.builder()
-                .id("<id>")
-                .build();
-
-        GetUnifiedWorkspaceSecretsmanagerResponse res = sdk.unified().getUnifiedWorkspaceSecretsmanager()
-                .request(req)
-                .call();
-
-        if (res.secretsManager().isPresent()) {
-            System.out.println(res.secretsManager().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [GetUnifiedWorkspaceSecretsmanagerRequest](../../models/operations/GetUnifiedWorkspaceSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
-
-### Response
-
-**[GetUnifiedWorkspaceSecretsmanagerResponse](../../models/operations/GetUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 
@@ -971,6 +1032,159 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUnifiedSecretsmanagerInstructions
+
+List secrets manager setup instructions
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedSecretsmanagerInstructions" method="get" path="/unified/secretsmanager/instructions" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerInstructionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedSecretsmanagerInstructionsResponse res = sdk.unified().listUnifiedSecretsmanagerInstructions()
+                .call();
+
+        if (res.secretsManagerInstructionsList().isPresent()) {
+            System.out.println(res.secretsManagerInstructionsList().get());
+        }
+    }
+}
+```
+
+### Response
+
+**[ListUnifiedSecretsmanagerInstructionsResponse](../../models/operations/ListUnifiedSecretsmanagerInstructionsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listUnifiedSecretsmanagerSecrets
+
+List secrets in a secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedSecretsmanagerSecrets" method="get" path="/unified/secretsmanager/secrets" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedSecretsmanagerSecretsRequest req = ListUnifiedSecretsmanagerSecretsRequest.builder()
+                .secretsmanagerId("<id>")
+                .build();
+
+        ListUnifiedSecretsmanagerSecretsResponse res = sdk.unified().listUnifiedSecretsmanagerSecrets()
+                .request(req)
+                .call();
+
+        if (res.secretsManagerSecrets().isPresent()) {
+            System.out.println(res.secretsManagerSecrets().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [ListUnifiedSecretsmanagerSecretsRequest](../../models/operations/ListUnifiedSecretsmanagerSecretsRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[ListUnifiedSecretsmanagerSecretsResponse](../../models/operations/ListUnifiedSecretsmanagerSecretsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listUnifiedSecretsmanagers
+
+List secrets managers
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedSecretsmanagers" method="get" path="/unified/secretsmanager" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedSecretsmanagersResponse res = sdk.unified().listUnifiedSecretsmanagers()
+                .call();
+
+        if (res.secretsManagers().isPresent()) {
+            System.out.println(res.secretsManagers().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListUnifiedSecretsmanagersRequest](../../models/operations/ListUnifiedSecretsmanagersRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[ListUnifiedSecretsmanagersResponse](../../models/operations/ListUnifiedSecretsmanagersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listUnifiedWebhooks
 
 Returns all registered webhooks
@@ -1015,57 +1229,6 @@ public class Application {
 ### Response
 
 **[ListUnifiedWebhooksResponse](../../models/operations/ListUnifiedWebhooksResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## listUnifiedWorkspaceSecretsmanagers
-
-List secrets managers
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="listUnifiedWorkspaceSecretsmanagers" method="get" path="/unified/workspace/secretsmanager" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceSecretsmanagersResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        ListUnifiedWorkspaceSecretsmanagersResponse res = sdk.unified().listUnifiedWorkspaceSecretsmanagers()
-                .call();
-
-        if (res.secretsManagers().isPresent()) {
-            System.out.println(res.secretsManagers().get());
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [ListUnifiedWorkspaceSecretsmanagersRequest](../../models/operations/ListUnifiedWorkspaceSecretsmanagersRequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
-
-### Response
-
-**[ListUnifiedWorkspaceSecretsmanagersResponse](../../models/operations/ListUnifiedWorkspaceSecretsmanagersResponse.md)**
 
 ### Errors
 
@@ -1366,6 +1529,61 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeUnifiedSecretsmanager
+
+Remove secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUnifiedSecretsmanager" method="delete" path="/unified/secretsmanager/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUnifiedSecretsmanagerRequest req = RemoveUnifiedSecretsmanagerRequest.builder()
+                .id("<id>")
+                .build();
+
+        RemoveUnifiedSecretsmanagerResponse res = sdk.unified().removeUnifiedSecretsmanager()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [RemoveUnifiedSecretsmanagerRequest](../../models/operations/RemoveUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[RemoveUnifiedSecretsmanagerResponse](../../models/operations/RemoveUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeUnifiedWebhook
 
 Remove webhook subscription
@@ -1414,61 +1632,6 @@ public class Application {
 ### Response
 
 **[RemoveUnifiedWebhookResponse](../../models/operations/RemoveUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## removeUnifiedWorkspaceSecretsmanager
-
-Remove secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="removeUnifiedWorkspaceSecretsmanager" method="delete" path="/unified/workspace/secretsmanager/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerRequest;
-import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceSecretsmanagerResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        RemoveUnifiedWorkspaceSecretsmanagerRequest req = RemoveUnifiedWorkspaceSecretsmanagerRequest.builder()
-                .id("<id>")
-                .build();
-
-        RemoveUnifiedWorkspaceSecretsmanagerResponse res = sdk.unified().removeUnifiedWorkspaceSecretsmanager()
-                .request(req)
-                .call();
-
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [RemoveUnifiedWorkspaceSecretsmanagerRequest](../../models/operations/RemoveUnifiedWorkspaceSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
-
-### Response
-
-**[RemoveUnifiedWorkspaceSecretsmanagerResponse](../../models/operations/RemoveUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 

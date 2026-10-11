@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CommerceReservation {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
@@ -49,7 +53,9 @@ public class CommerceReservation {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
@@ -59,7 +65,9 @@ public class CommerceReservation {
     @JsonProperty("item_name")
     private String itemName;
 
-
+    /**
+     * (reference to CommerceLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -84,12 +92,16 @@ public class CommerceReservation {
     @JsonProperty("staff_name")
     private String staffName;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("staff_user_id")
     private String staffUserId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
@@ -99,7 +111,9 @@ public class CommerceReservation {
     @JsonProperty("status")
     private CommerceReservationStatus status;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -158,10 +172,16 @@ public class CommerceReservation {
             null, null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -182,6 +202,9 @@ public class CommerceReservation {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
@@ -190,6 +213,9 @@ public class CommerceReservation {
         return Optional.ofNullable(this.itemName);
     }
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -210,10 +236,16 @@ public class CommerceReservation {
         return Optional.ofNullable(this.staffName);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> staffUserId() {
         return Optional.ofNullable(this.staffUserId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
@@ -222,6 +254,9 @@ public class CommerceReservation {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -235,12 +270,18 @@ public class CommerceReservation {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReservation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReservation withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -271,6 +312,9 @@ public class CommerceReservation {
     }
 
 
+    /**
+     * (reference to CommerceItem)
+     */
     public CommerceReservation withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
@@ -283,6 +327,9 @@ public class CommerceReservation {
     }
 
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public CommerceReservation withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -313,12 +360,18 @@ public class CommerceReservation {
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CommerceReservation withStaffUserId(@Nullable String staffUserId) {
         this.staffUserId = staffUserId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReservation withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -331,6 +384,9 @@ public class CommerceReservation {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReservation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -450,11 +506,17 @@ public class CommerceReservation {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -480,6 +542,9 @@ public class CommerceReservation {
             return this;
         }
 
+        /**
+         * (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
@@ -490,6 +555,9 @@ public class CommerceReservation {
             return this;
         }
 
+        /**
+         * (reference to CommerceLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -515,11 +583,17 @@ public class CommerceReservation {
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder staffUserId(@Nullable String staffUserId) {
             this.staffUserId = staffUserId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
@@ -530,6 +604,9 @@ public class CommerceReservation {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

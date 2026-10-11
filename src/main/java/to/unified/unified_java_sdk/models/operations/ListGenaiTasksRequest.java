@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListGenaiTasksRequest {
     /**
+     * The agent ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agent_id")
+    private String agentId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -71,6 +77,7 @@ public class ListGenaiTasksRequest {
 
     @JsonCreator
     public ListGenaiTasksRequest(
+            @Nullable String agentId,
             @Nonnull String connectionId,
             @Nullable List<ListGenaiTasksQueryParamFields> fields,
             @Nullable Double limit,
@@ -81,6 +88,7 @@ public class ListGenaiTasksRequest {
             @Nullable String sort,
             @Nullable String status,
             @Nullable String updatedGte) {
+        this.agentId = agentId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
@@ -96,10 +104,17 @@ public class ListGenaiTasksRequest {
     
     public ListGenaiTasksRequest(
             @Nonnull String connectionId) {
-        this(connectionId, null, null,
+        this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
+    }
+
+    /**
+     * The agent ID to filter by
+     */
+    public Optional<String> agentId() {
+        return Optional.ofNullable(this.agentId);
     }
 
     /**
@@ -162,6 +177,15 @@ public class ListGenaiTasksRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The agent ID to filter by
+     */
+    public ListGenaiTasksRequest withAgentId(@Nullable String agentId) {
+        this.agentId = agentId;
+        return this;
     }
 
 
@@ -253,6 +277,7 @@ public class ListGenaiTasksRequest {
         }
         ListGenaiTasksRequest other = (ListGenaiTasksRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.agentId, other.agentId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -268,15 +293,16 @@ public class ListGenaiTasksRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, query,
-            raw, sort, status,
-            updatedGte);
+            agentId, connectionId, fields,
+            limit, offset, order,
+            query, raw, sort,
+            status, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListGenaiTasksRequest.class,
+                "agentId", agentId,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
@@ -291,6 +317,8 @@ public class ListGenaiTasksRequest {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String agentId;
 
         private String connectionId;
 
@@ -314,6 +342,14 @@ public class ListGenaiTasksRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The agent ID to filter by
+         */
+        public Builder agentId(@Nullable String agentId) {
+            this.agentId = agentId;
+            return this;
         }
 
         /**
@@ -386,10 +422,10 @@ public class ListGenaiTasksRequest {
 
         public ListGenaiTasksRequest build() {
             return new ListGenaiTasksRequest(
-                connectionId, fields, limit,
-                offset, order, query,
-                raw, sort, status,
-                updatedGte);
+                agentId, connectionId, fields,
+                limit, offset, order,
+                query, raw, sort,
+                status, updatedGte);
         }
 
     }

@@ -17,17 +17,24 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AccountingPaymentReference {
-
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocated_at")
     private OffsetDateTime allocatedAt;
 
-
+    /**
+     * amount of the payment applied to this object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * references a PaymentPayment that was applied to this object (reference to PaymentPayment)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
@@ -46,14 +53,24 @@ public class AccountingPaymentReference {
         this(null, null, null);
     }
 
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> allocatedAt() {
         return Optional.ofNullable(this.allocatedAt);
     }
 
+    /**
+     * amount of the payment applied to this object
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * references a PaymentPayment that was applied to this object (reference to PaymentPayment)
+     */
     public Optional<String> paymentId() {
         return Optional.ofNullable(this.paymentId);
     }
@@ -63,18 +80,28 @@ public class AccountingPaymentReference {
     }
 
 
+    /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingPaymentReference withAllocatedAt(@Nullable OffsetDateTime allocatedAt) {
         this.allocatedAt = allocatedAt;
         return this;
     }
 
 
+    /**
+     * amount of the payment applied to this object
+     */
     public AccountingPaymentReference withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * references a PaymentPayment that was applied to this object (reference to PaymentPayment)
+     */
     public AccountingPaymentReference withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -123,16 +150,26 @@ public class AccountingPaymentReference {
           // force use of static builder() method
         }
 
+        /**
+         * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder allocatedAt(@Nullable OffsetDateTime allocatedAt) {
             this.allocatedAt = allocatedAt;
             return this;
         }
 
+        /**
+         * amount of the payment applied to this object
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * references a PaymentPayment that was applied to this object (reference to PaymentPayment)
+         */
         public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;

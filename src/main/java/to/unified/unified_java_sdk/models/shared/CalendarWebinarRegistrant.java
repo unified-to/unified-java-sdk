@@ -26,7 +26,9 @@ public class CalendarWebinarRegistrant {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registered_at")
     private OffsetDateTime registeredAt;
@@ -68,6 +70,9 @@ public class CalendarWebinarRegistrant {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> registeredAt() {
         return Optional.ofNullable(this.registeredAt);
     }
@@ -97,6 +102,9 @@ public class CalendarWebinarRegistrant {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarWebinarRegistrant withRegisteredAt(@Nullable OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -176,6 +184,9 @@ public class CalendarWebinarRegistrant {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder registeredAt(@Nullable OffsetDateTime registeredAt) {
             this.registeredAt = registeredAt;
             return this;

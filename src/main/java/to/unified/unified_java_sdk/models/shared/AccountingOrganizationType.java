@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingOrganizationType
+ * 
+ * <p>Entity type within a consolidation hierarchy
+ */
 public class AccountingOrganizationType {
 
     public static final AccountingOrganizationType COMPANY = new AccountingOrganizationType("COMPANY");

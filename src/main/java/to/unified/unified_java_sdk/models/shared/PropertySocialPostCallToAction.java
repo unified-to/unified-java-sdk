@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Call-to-action button on the post
  */
 public class PropertySocialPostCallToAction {
-
+    /**
+     * The call-to-action button type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private PropertySocialPostCallToActionType type;
 
-
+    /**
+     * The URL the call-to-action points to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -41,10 +45,16 @@ public class PropertySocialPostCallToAction {
         this(null, null);
     }
 
+    /**
+     * The call-to-action button type
+     */
     public Optional<PropertySocialPostCallToActionType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The URL the call-to-action points to
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -54,12 +64,18 @@ public class PropertySocialPostCallToAction {
     }
 
 
+    /**
+     * The call-to-action button type
+     */
     public PropertySocialPostCallToAction withType(@Nullable PropertySocialPostCallToActionType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The URL the call-to-action points to
+     */
     public PropertySocialPostCallToAction withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -104,11 +120,17 @@ public class PropertySocialPostCallToAction {
           // force use of static builder() method
         }
 
+        /**
+         * The call-to-action button type
+         */
         public Builder type(@Nullable PropertySocialPostCallToActionType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The URL the call-to-action points to
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

@@ -25,22 +25,31 @@ public class AccountingOrganization {
     @JsonProperty("address")
     private PropertyAccountingOrganizationAddress address;
 
-
+    /**
+     * Company-wide books close / lock date; transactions on or before this date fall in a closed
+     * accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("books_close_at")
     private OffsetDateTime booksCloseAt;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiscal_year_end_month")
     private Double fiscalYearEndMonth;
@@ -50,7 +59,9 @@ public class AccountingOrganization {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * True for consolidation/elimination entities
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_elimination")
     private Boolean isElimination;
@@ -65,7 +76,10 @@ public class AccountingOrganization {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Identifier for tracking and categorizing organizations for reporting or analysis purposes that is
+     * defined by the end-customer
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_code")
     private String organizationCode;
@@ -80,7 +94,10 @@ public class AccountingOrganization {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Organization's tax number. For example, in the U.S., this is an Employer Identification Number
+     * (EIN).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
     private String taxNumber;
@@ -90,12 +107,16 @@ public class AccountingOrganization {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * Entity type within a consolidation hierarchy
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AccountingOrganizationType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -156,18 +177,31 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * Company-wide books close / lock date; transactions on or before this date fall in a closed
+     * accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> booksCloseAt() {
         return Optional.ofNullable(this.booksCloseAt);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
+     */
     public Optional<Double> fiscalYearEndMonth() {
         return Optional.ofNullable(this.fiscalYearEndMonth);
     }
@@ -176,6 +210,9 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * True for consolidation/elimination entities
+     */
     public Optional<Boolean> isElimination() {
         return Optional.ofNullable(this.isElimination);
     }
@@ -188,6 +225,10 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Identifier for tracking and categorizing organizations for reporting or analysis purposes that is
+     * defined by the end-customer
+     */
     public Optional<String> organizationCode() {
         return Optional.ofNullable(this.organizationCode);
     }
@@ -200,6 +241,10 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Organization's tax number. For example, in the U.S., this is an Employer Identification Number
+     * (EIN).
+     */
     public Optional<String> taxNumber() {
         return Optional.ofNullable(this.taxNumber);
     }
@@ -208,10 +253,16 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * Entity type within a consolidation hierarchy
+     */
     public Optional<AccountingOrganizationType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -231,24 +282,37 @@ public class AccountingOrganization {
     }
 
 
+    /**
+     * Company-wide books close / lock date; transactions on or before this date fall in a closed
+     * accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrganization withBooksCloseAt(@Nullable OffsetDateTime booksCloseAt) {
         this.booksCloseAt = booksCloseAt;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrganization withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
+     */
     public AccountingOrganization withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
+     */
     public AccountingOrganization withFiscalYearEndMonth(@Nullable Double fiscalYearEndMonth) {
         this.fiscalYearEndMonth = fiscalYearEndMonth;
         return this;
@@ -261,6 +325,9 @@ public class AccountingOrganization {
     }
 
 
+    /**
+     * True for consolidation/elimination entities
+     */
     public AccountingOrganization withIsElimination(@Nullable Boolean isElimination) {
         this.isElimination = isElimination;
         return this;
@@ -279,6 +346,10 @@ public class AccountingOrganization {
     }
 
 
+    /**
+     * Identifier for tracking and categorizing organizations for reporting or analysis purposes that is
+     * defined by the end-customer
+     */
     public AccountingOrganization withOrganizationCode(@Nullable String organizationCode) {
         this.organizationCode = organizationCode;
         return this;
@@ -297,6 +368,10 @@ public class AccountingOrganization {
     }
 
 
+    /**
+     * Organization's tax number. For example, in the U.S., this is an Employer Identification Number
+     * (EIN).
+     */
     public AccountingOrganization withTaxNumber(@Nullable String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
@@ -309,12 +384,18 @@ public class AccountingOrganization {
     }
 
 
+    /**
+     * Entity type within a consolidation hierarchy
+     */
     public AccountingOrganization withType(@Nullable AccountingOrganizationType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingOrganization withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -435,21 +516,34 @@ public class AccountingOrganization {
             return this;
         }
 
+        /**
+         * Company-wide books close / lock date; transactions on or before this date fall in a closed
+         * accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder booksCloseAt(@Nullable OffsetDateTime booksCloseAt) {
             this.booksCloseAt = booksCloseAt;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
+         */
         public Builder fiscalYearEndMonth(@Nullable Double fiscalYearEndMonth) {
             this.fiscalYearEndMonth = fiscalYearEndMonth;
             return this;
@@ -460,6 +554,9 @@ public class AccountingOrganization {
             return this;
         }
 
+        /**
+         * True for consolidation/elimination entities
+         */
         public Builder isElimination(@Nullable Boolean isElimination) {
             this.isElimination = isElimination;
             return this;
@@ -475,6 +572,10 @@ public class AccountingOrganization {
             return this;
         }
 
+        /**
+         * Identifier for tracking and categorizing organizations for reporting or analysis purposes that is
+         * defined by the end-customer
+         */
         public Builder organizationCode(@Nullable String organizationCode) {
             this.organizationCode = organizationCode;
             return this;
@@ -490,6 +591,10 @@ public class AccountingOrganization {
             return this;
         }
 
+        /**
+         * Organization's tax number. For example, in the U.S., this is an Employer Identification Number
+         * (EIN).
+         */
         public Builder taxNumber(@Nullable String taxNumber) {
             this.taxNumber = taxNumber;
             return this;
@@ -500,11 +605,17 @@ public class AccountingOrganization {
             return this;
         }
 
+        /**
+         * Entity type within a consolidation hierarchy
+         */
         public Builder type(@Nullable AccountingOrganizationType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

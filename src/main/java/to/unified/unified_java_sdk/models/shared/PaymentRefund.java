@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentRefund {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -39,7 +41,9 @@ public class PaymentRefund {
     @JsonProperty("notes")
     private String notes;
 
-
+    /**
+     * (reference to PaymentPayment)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
@@ -49,7 +53,9 @@ public class PaymentRefund {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Why the refund was issued
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     private Reason reason;
@@ -59,7 +65,9 @@ public class PaymentRefund {
     @JsonProperty("reference")
     private String reference;
 
-
+    /**
+     * Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private OffsetDateTime refundedAt;
@@ -69,7 +77,9 @@ public class PaymentRefund {
     @JsonProperty("status")
     private PaymentRefundStatus status;
 
-
+    /**
+     * Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tender_type")
     private PaymentRefundTenderType tenderType;
@@ -79,7 +89,9 @@ public class PaymentRefund {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -122,6 +134,9 @@ public class PaymentRefund {
             null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -138,6 +153,9 @@ public class PaymentRefund {
         return Optional.ofNullable(this.notes);
     }
 
+    /**
+     * (reference to PaymentPayment)
+     */
     public Optional<String> paymentId() {
         return Optional.ofNullable(this.paymentId);
     }
@@ -146,6 +164,9 @@ public class PaymentRefund {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Why the refund was issued
+     */
     public Optional<Reason> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -154,6 +175,9 @@ public class PaymentRefund {
         return Optional.ofNullable(this.reference);
     }
 
+    /**
+     * Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> refundedAt() {
         return Optional.ofNullable(this.refundedAt);
     }
@@ -162,6 +186,9 @@ public class PaymentRefund {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
+     */
     public Optional<PaymentRefundTenderType> tenderType() {
         return Optional.ofNullable(this.tenderType);
     }
@@ -170,6 +197,9 @@ public class PaymentRefund {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -179,6 +209,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentRefund withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -203,6 +236,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * (reference to PaymentPayment)
+     */
     public PaymentRefund withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -215,6 +251,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * Why the refund was issued
+     */
     public PaymentRefund withReason(@Nullable Reason reason) {
         this.reason = reason;
         return this;
@@ -227,6 +266,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentRefund withRefundedAt(@Nullable OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
@@ -239,6 +281,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
+     */
     public PaymentRefund withTenderType(@Nullable PaymentRefundTenderType tenderType) {
         this.tenderType = tenderType;
         return this;
@@ -251,6 +296,9 @@ public class PaymentRefund {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public PaymentRefund withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -343,6 +391,9 @@ public class PaymentRefund {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -363,6 +414,9 @@ public class PaymentRefund {
             return this;
         }
 
+        /**
+         * (reference to PaymentPayment)
+         */
         public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
@@ -373,6 +427,9 @@ public class PaymentRefund {
             return this;
         }
 
+        /**
+         * Why the refund was issued
+         */
         public Builder reason(@Nullable Reason reason) {
             this.reason = reason;
             return this;
@@ -383,6 +440,9 @@ public class PaymentRefund {
             return this;
         }
 
+        /**
+         * Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
             this.refundedAt = refundedAt;
             return this;
@@ -393,6 +453,9 @@ public class PaymentRefund {
             return this;
         }
 
+        /**
+         * Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
+         */
         public Builder tenderType(@Nullable PaymentRefundTenderType tenderType) {
             this.tenderType = tenderType;
             return this;
@@ -403,6 +466,9 @@ public class PaymentRefund {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

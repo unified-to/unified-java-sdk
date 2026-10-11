@@ -8,29 +8,53 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsJobsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisJobsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsJobRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsJobsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisJobsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisJobsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsJobResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisJobRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisJobResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsJob;
+import to.unified.unified_java_sdk.operations.CreateHrisJob;
 import to.unified.unified_java_sdk.operations.GetAtsJob;
+import to.unified.unified_java_sdk.operations.GetHrisJob;
 import to.unified.unified_java_sdk.operations.ListAtsJobs;
+import to.unified.unified_java_sdk.operations.ListHrisJobs;
 import to.unified.unified_java_sdk.operations.PatchAtsJob;
+import to.unified.unified_java_sdk.operations.PatchHrisJob;
 import to.unified.unified_java_sdk.operations.RemoveAtsJob;
+import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateAtsJob;
+import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -78,6 +102,29 @@ public class AsyncJob {
 
 
     /**
+     * Create a job
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisJobRequestBuilder createHrisJob() {
+        return new CreateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisJobResponse> createHrisJob(@Nonnull CreateHrisJobRequest request) {
+        AsyncRequestOperation<CreateHrisJobRequest, CreateHrisJobResponse> operation
+              = new CreateHrisJob.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a job
      * 
      * @return The async call builder
@@ -95,6 +142,29 @@ public class AsyncJob {
     public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a job
+     * 
+     * @return The async call builder
+     */
+    public GetHrisJobRequestBuilder getHrisJob() {
+        return new GetHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisJobResponse> getHrisJob(@Nonnull GetHrisJobRequest request) {
+        AsyncRequestOperation<GetHrisJobRequest, GetHrisJobResponse> operation
+              = new GetHrisJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -124,6 +194,29 @@ public class AsyncJob {
 
 
     /**
+     * List all jobs
+     * 
+     * @return The async call builder
+     */
+    public ListHrisJobsRequestBuilder listHrisJobs() {
+        return new ListHrisJobsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all jobs
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisJobsResponse> listHrisJobs(@Nonnull ListHrisJobsRequest request) {
+        AsyncRequestOperation<ListHrisJobsRequest, ListHrisJobsResponse> operation
+              = new ListHrisJobs.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a job
      * 
      * @return The async call builder
@@ -141,6 +234,29 @@ public class AsyncJob {
     public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a job
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisJobRequestBuilder patchHrisJob() {
+        return new PatchHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisJobResponse> patchHrisJob(@Nonnull PatchHrisJobRequest request) {
+        AsyncRequestOperation<PatchHrisJobRequest, PatchHrisJobResponse> operation
+              = new PatchHrisJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -170,6 +286,29 @@ public class AsyncJob {
 
 
     /**
+     * Remove a job
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisJobRequestBuilder removeHrisJob() {
+        return new RemoveHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisJobResponse> removeHrisJob(@Nonnull RemoveHrisJobRequest request) {
+        AsyncRequestOperation<RemoveHrisJobRequest, RemoveHrisJobResponse> operation
+              = new RemoveHrisJob.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a job
      * 
      * @return The async call builder
@@ -187,6 +326,29 @@ public class AsyncJob {
     public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a job
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisJobRequestBuilder updateHrisJob() {
+        return new UpdateHrisJobRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a job
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisJobResponse> updateHrisJob(@Nonnull UpdateHrisJobRequest request) {
+        AsyncRequestOperation<UpdateHrisJobRequest, UpdateHrisJobResponse> operation
+              = new UpdateHrisJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

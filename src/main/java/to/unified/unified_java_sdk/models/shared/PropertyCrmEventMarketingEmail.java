@@ -21,7 +21,9 @@ public class PropertyCrmEventMarketingEmail {
     @JsonProperty("attachment_file_ids")
     private List<String> attachmentFileIds;
 
-
+    /**
+     * The event email's body
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     private String body;
@@ -33,7 +35,9 @@ public class PropertyCrmEventMarketingEmail {
     @JsonProperty("cc")
     private List<String> cc;
 
-
+    /**
+     * The event email's from name &amp; email address (name &lt;test@test.com&gt;)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     private String from;
@@ -43,7 +47,9 @@ public class PropertyCrmEventMarketingEmail {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The event email's subject
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     private String subject;
@@ -83,6 +89,9 @@ public class PropertyCrmEventMarketingEmail {
         return Optional.ofNullable(this.attachmentFileIds);
     }
 
+    /**
+     * The event email's body
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
@@ -94,6 +103,9 @@ public class PropertyCrmEventMarketingEmail {
         return Optional.ofNullable(this.cc);
     }
 
+    /**
+     * The event email's from name &amp; email address (name &lt;test@test.com&gt;)
+     */
     public Optional<String> from() {
         return Optional.ofNullable(this.from);
     }
@@ -102,6 +114,9 @@ public class PropertyCrmEventMarketingEmail {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The event email's subject
+     */
     public Optional<String> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -124,6 +139,9 @@ public class PropertyCrmEventMarketingEmail {
     }
 
 
+    /**
+     * The event email's body
+     */
     public PropertyCrmEventMarketingEmail withBody(@Nullable String body) {
         this.body = body;
         return this;
@@ -139,6 +157,9 @@ public class PropertyCrmEventMarketingEmail {
     }
 
 
+    /**
+     * The event email's from name &amp; email address (name &lt;test@test.com&gt;)
+     */
     public PropertyCrmEventMarketingEmail withFrom(@Nullable String from) {
         this.from = from;
         return this;
@@ -151,6 +172,9 @@ public class PropertyCrmEventMarketingEmail {
     }
 
 
+    /**
+     * The event email's subject
+     */
     public PropertyCrmEventMarketingEmail withSubject(@Nullable String subject) {
         this.subject = subject;
         return this;
@@ -231,6 +255,9 @@ public class PropertyCrmEventMarketingEmail {
             return this;
         }
 
+        /**
+         * The event email's body
+         */
         public Builder body(@Nullable String body) {
             this.body = body;
             return this;
@@ -244,6 +271,9 @@ public class PropertyCrmEventMarketingEmail {
             return this;
         }
 
+        /**
+         * The event email's from name &amp; email address (name &lt;test@test.com&gt;)
+         */
         public Builder from(@Nullable String from) {
             this.from = from;
             return this;
@@ -254,6 +284,9 @@ public class PropertyCrmEventMarketingEmail {
             return this;
         }
 
+        /**
+         * The event email's subject
+         */
         public Builder subject(@Nullable String subject) {
             this.subject = subject;
             return this;

@@ -28,52 +28,72 @@ public class ClubsLocation {
     @JsonProperty("address")
     private PropertyClubsLocationAddress address;
 
-
+    /**
+     * The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The group this location is associated with (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
 
-
+    /**
+     * Unique identifier for this location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The latitude
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     private Double latitude;
 
-
+    /**
+     * The longitude
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     private Double longitude;
 
-
+    /**
+     * The location name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * A contact phone number for the location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
     private String telephone;
 
-
+    /**
+     * The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * A URL for the location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -115,42 +135,72 @@ public class ClubsLocation {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The group this location is associated with (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
 
+    /**
+     * Unique identifier for this location
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The latitude
+     */
     public Optional<Double> latitude() {
         return Optional.ofNullable(this.latitude);
     }
 
+    /**
+     * The longitude
+     */
     public Optional<Double> longitude() {
         return Optional.ofNullable(this.longitude);
     }
 
+    /**
+     * The location name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this location
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * A contact phone number for the location
+     */
     public Optional<String> telephone() {
         return Optional.ofNullable(this.telephone);
     }
 
+    /**
+     * The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * A URL for the location
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -166,60 +216,90 @@ public class ClubsLocation {
     }
 
 
+    /**
+     * The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsLocation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * The group this location is associated with (reference to HrisGroup)
+     */
     public ClubsLocation withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this location
+     */
     public ClubsLocation withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The latitude
+     */
     public ClubsLocation withLatitude(@Nullable Double latitude) {
         this.latitude = latitude;
         return this;
     }
 
 
+    /**
+     * The longitude
+     */
     public ClubsLocation withLongitude(@Nullable Double longitude) {
         this.longitude = longitude;
         return this;
     }
 
 
+    /**
+     * The location name
+     */
     public ClubsLocation withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this location
+     */
     public ClubsLocation withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * A contact phone number for the location
+     */
     public ClubsLocation withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
     }
 
 
+    /**
+     * The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsLocation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * A URL for the location
+     */
     public ClubsLocation withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -308,51 +388,81 @@ public class ClubsLocation {
             return this;
         }
 
+        /**
+         * The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * The group this location is associated with (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
+        /**
+         * Unique identifier for this location
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The latitude
+         */
         public Builder latitude(@Nullable Double latitude) {
             this.latitude = latitude;
             return this;
         }
 
+        /**
+         * The longitude
+         */
         public Builder longitude(@Nullable Double longitude) {
             this.longitude = longitude;
             return this;
         }
 
+        /**
+         * The location name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this location
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * A contact phone number for the location
+         */
         public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;
         }
 
+        /**
+         * The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * A URL for the location
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

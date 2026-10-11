@@ -33,7 +33,9 @@ public class FormAnswer {
     @JsonProperty("file_ids")
     private List<String> fileIds;
 
-
+    /**
+     * Can be string, number, boolean, array, etc.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private String value;
@@ -72,6 +74,9 @@ public class FormAnswer {
         return Optional.ofNullable(this.fileIds);
     }
 
+    /**
+     * Can be string, number, boolean, array, etc.
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -102,6 +107,9 @@ public class FormAnswer {
     }
 
 
+    /**
+     * Can be string, number, boolean, array, etc.
+     */
     public FormAnswer withValue(@Nullable String value) {
         this.value = value;
         return this;
@@ -173,6 +181,9 @@ public class FormAnswer {
             return this;
         }
 
+        /**
+         * Can be string, number, boolean, array, etc.
+         */
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;

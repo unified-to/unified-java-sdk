@@ -31,7 +31,9 @@ public class ScimUserGroups {
     @JsonProperty("type")
     private ScimUserGroupsType type;
 
-
+    /**
+     * ID
+     */
     @JsonProperty("value")
     private String value;
 
@@ -66,6 +68,9 @@ public class ScimUserGroups {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * ID
+     */
     public String value() {
         return this.value;
     }
@@ -93,6 +98,9 @@ public class ScimUserGroups {
     }
 
 
+    /**
+     * ID
+     */
     public ScimUserGroups withValue(@Nonnull String value) {
         this.value = Utils.checkNotNull(value, "value");
         return this;
@@ -161,6 +169,9 @@ public class ScimUserGroups {
             return this;
         }
 
+        /**
+         * ID
+         */
         public Builder value(@Nonnull String value) {
             this.value = Utils.checkNotNull(value, "value");
             return this;

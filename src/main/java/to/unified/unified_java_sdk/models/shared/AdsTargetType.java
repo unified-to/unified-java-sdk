@@ -18,6 +18,12 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AdsTargetType
+ * 
+ * <p>Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale,
+ * adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+ */
 public class AdsTargetType {
 
     public static final AdsTargetType INTEREST = new AdsTargetType("INTEREST");

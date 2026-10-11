@@ -7,9 +7,13 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationstatusRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsApplicationstatusesRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationstatusRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAtsApplicationstatusResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsApplicationstatusesResponse;
+import to.unified.unified_java_sdk.operations.GetAtsApplicationstatus;
 import to.unified.unified_java_sdk.operations.ListAtsApplicationstatuses;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -31,6 +35,29 @@ public class AsyncApplicationstatus {
      */
     public Applicationstatus sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @return The async call builder
+     */
+    public GetAtsApplicationstatusRequestBuilder getAtsApplicationstatus() {
+        return new GetAtsApplicationstatusRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an applicationstatus
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAtsApplicationstatusResponse>} - The async response
+     */
+    public CompletableFuture<GetAtsApplicationstatusResponse> getAtsApplicationstatus(@Nonnull GetAtsApplicationstatusRequest request) {
+        AsyncRequestOperation<GetAtsApplicationstatusRequest, GetAtsApplicationstatusResponse> operation
+              = new GetAtsApplicationstatus.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 

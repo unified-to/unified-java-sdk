@@ -19,12 +19,16 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class DatastoreTable {
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * source Database ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_id")
     private String databaseId;
@@ -64,7 +68,9 @@ public class DatastoreTable {
     @JsonProperty("relationships")
     private List<DatastoreRelationship> relationships;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -107,10 +113,16 @@ public class DatastoreTable {
             null, null);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * source Database ID
+     */
     public Optional<String> databaseId() {
         return Optional.ofNullable(this.databaseId);
     }
@@ -143,6 +155,9 @@ public class DatastoreTable {
         return Optional.ofNullable(this.relationships);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -156,12 +171,18 @@ public class DatastoreTable {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public DatastoreTable withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * source Database ID
+     */
     public DatastoreTable withDatabaseId(@Nullable String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -210,6 +231,9 @@ public class DatastoreTable {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public DatastoreTable withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -299,11 +323,17 @@ public class DatastoreTable {
           // force use of static builder() method
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * source Database ID
+         */
         public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = databaseId;
             return this;
@@ -344,6 +374,9 @@ public class DatastoreTable {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

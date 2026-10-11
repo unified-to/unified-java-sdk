@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpMetadataFormat
+ * 
+ * <p>The data type of the attribute value
+ */
 public class CdpMetadataFormat {
 
     public static final CdpMetadataFormat TEXT = new CdpMetadataFormat("TEXT");

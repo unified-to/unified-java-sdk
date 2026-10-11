@@ -51,7 +51,9 @@ public class CommerceReview {
     @JsonProperty("content")
     private String content;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -81,17 +83,23 @@ public class CommerceReview {
     @JsonProperty("is_verified")
     private Boolean isVerified;
 
-
+    /**
+     * Reference to the product being reviewed (reference to CommerceItem)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
 
-
+    /**
+     * Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variant_id")
     private String itemVariantId;
 
-
+    /**
+     * (reference to CommerceLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
@@ -108,12 +116,16 @@ public class CommerceReview {
     @JsonProperty("metadata")
     private List<CommerceMetadata> metadata;
 
-
+    /**
+     * 1-5 rating
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     private Double rating;
 
-
+    /**
+     * Original review data from source platform
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -133,7 +145,9 @@ public class CommerceReview {
     @JsonProperty("unhelpful_votes")
     private Double unhelpfulVotes;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -238,6 +252,9 @@ public class CommerceReview {
         return Optional.ofNullable(this.content);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -262,14 +279,23 @@ public class CommerceReview {
         return Optional.ofNullable(this.isVerified);
     }
 
+    /**
+     * Reference to the product being reviewed (reference to CommerceItem)
+     */
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
 
+    /**
+     * Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
+     */
     public Optional<String> itemVariantId() {
         return Optional.ofNullable(this.itemVariantId);
     }
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -285,10 +311,16 @@ public class CommerceReview {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * 1-5 rating
+     */
     public Optional<Double> rating() {
         return Optional.ofNullable(this.rating);
     }
 
+    /**
+     * Original review data from source platform
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -305,6 +337,9 @@ public class CommerceReview {
         return Optional.ofNullable(this.unhelpfulVotes);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -358,6 +393,9 @@ public class CommerceReview {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReview withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -394,18 +432,27 @@ public class CommerceReview {
     }
 
 
+    /**
+     * Reference to the product being reviewed (reference to CommerceItem)
+     */
     public CommerceReview withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
     }
 
 
+    /**
+     * Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
+     */
     public CommerceReview withItemVariantId(@Nullable String itemVariantId) {
         this.itemVariantId = itemVariantId;
         return this;
     }
 
 
+    /**
+     * (reference to CommerceLocation)
+     */
     public CommerceReview withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
@@ -427,12 +474,18 @@ public class CommerceReview {
     }
 
 
+    /**
+     * 1-5 rating
+     */
     public CommerceReview withRating(@Nullable Double rating) {
         this.rating = rating;
         return this;
     }
 
 
+    /**
+     * Original review data from source platform
+     */
     public CommerceReview withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -457,6 +510,9 @@ public class CommerceReview {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceReview withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -643,6 +699,9 @@ public class CommerceReview {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -673,16 +732,25 @@ public class CommerceReview {
             return this;
         }
 
+        /**
+         * Reference to the product being reviewed (reference to CommerceItem)
+         */
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
+        /**
+         * Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
+         */
         public Builder itemVariantId(@Nullable String itemVariantId) {
             this.itemVariantId = itemVariantId;
             return this;
         }
 
+        /**
+         * (reference to CommerceLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
@@ -701,11 +769,17 @@ public class CommerceReview {
             return this;
         }
 
+        /**
+         * 1-5 rating
+         */
         public Builder rating(@Nullable Double rating) {
             this.rating = rating;
             return this;
         }
 
+        /**
+         * Original review data from source platform
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -726,6 +800,9 @@ public class CommerceReview {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

@@ -16,7 +16,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CreateHrisAttendanceRequest {
-
+    /**
+     * Also called timesheets
+     */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private HrisAttendance hrisAttendance;
 
@@ -61,6 +63,9 @@ public class CreateHrisAttendanceRequest {
             null);
     }
 
+    /**
+     * Also called timesheets
+     */
     public HrisAttendance hrisAttendance() {
         return this.hrisAttendance;
     }
@@ -93,6 +98,9 @@ public class CreateHrisAttendanceRequest {
     }
 
 
+    /**
+     * Also called timesheets
+     */
     public CreateHrisAttendanceRequest withHrisAttendance(@Nonnull HrisAttendance hrisAttendance) {
         this.hrisAttendance = Utils.checkNotNull(hrisAttendance, "hrisAttendance");
         return this;
@@ -175,6 +183,9 @@ public class CreateHrisAttendanceRequest {
           // force use of static builder() method
         }
 
+        /**
+         * Also called timesheets
+         */
         public Builder hrisAttendance(@Nonnull HrisAttendance hrisAttendance) {
             this.hrisAttendance = Utils.checkNotNull(hrisAttendance, "hrisAttendance");
             return this;

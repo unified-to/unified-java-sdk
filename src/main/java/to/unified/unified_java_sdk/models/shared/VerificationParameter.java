@@ -46,7 +46,9 @@ public class VerificationParameter {
     @JsonProperty("options")
     private List<String> options;
 
-
+    /**
+     * question to ask the human
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_question")
     private String publicQuestion;
@@ -117,6 +119,9 @@ public class VerificationParameter {
         return Optional.ofNullable(this.options);
     }
 
+    /**
+     * question to ask the human
+     */
     public Optional<String> publicQuestion() {
         return Optional.ofNullable(this.publicQuestion);
     }
@@ -173,6 +178,9 @@ public class VerificationParameter {
     }
 
 
+    /**
+     * question to ask the human
+     */
     public VerificationParameter withPublicQuestion(@Nullable String publicQuestion) {
         this.publicQuestion = publicQuestion;
         return this;
@@ -289,6 +297,9 @@ public class VerificationParameter {
             return this;
         }
 
+        /**
+         * question to ask the human
+         */
         public Builder publicQuestion(@Nullable String publicQuestion) {
             this.publicQuestion = publicQuestion;
             return this;

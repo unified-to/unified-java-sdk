@@ -21,7 +21,9 @@ public class DatastoreRelationship {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * target Database Table ID
+     */
     @JsonProperty("table_id")
     private String tableId;
 
@@ -53,6 +55,9 @@ public class DatastoreRelationship {
         return this.name;
     }
 
+    /**
+     * target Database Table ID
+     */
     public String tableId() {
         return this.tableId;
     }
@@ -78,6 +83,9 @@ public class DatastoreRelationship {
     }
 
 
+    /**
+     * target Database Table ID
+     */
     public DatastoreRelationship withTableId(@Nonnull String tableId) {
         this.tableId = Utils.checkNotNull(tableId, "tableId");
         return this;
@@ -147,6 +155,9 @@ public class DatastoreRelationship {
             return this;
         }
 
+        /**
+         * target Database Table ID
+         */
         public Builder tableId(@Nonnull String tableId) {
             this.tableId = Utils.checkNotNull(tableId, "tableId");
             return this;

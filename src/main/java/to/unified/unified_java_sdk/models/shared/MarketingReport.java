@@ -20,77 +20,107 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class MarketingReport {
-
+    /**
+     * Number of abuse reports
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abuse_reports")
     private Double abuseReports;
 
-
+    /**
+     * Associated campaign ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_id")
     private String campaignId;
 
-
+    /**
+     * Click rate (decimal)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("click_rate")
     private Double clickRate;
 
-
+    /**
+     * Total clicks
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicks_total")
     private Double clicksTotal;
 
-
+    /**
+     * Total emails sent
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails_sent")
     private Double emailsSent;
 
-
+    /**
+     * End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * Forward count
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwards_count")
     private Double forwardsCount;
 
-
+    /**
+     * Forwards opened
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwards_opens")
     private Double forwardsOpens;
 
-
+    /**
+     * Hard bounce count
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hard_bounces")
     private Double hardBounces;
 
-
+    /**
+     * Open rate (decimal) excluding automated/bot/proxy opens
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("human_open_rate")
     private Double humanOpenRate;
 
-
+    /**
+     * Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("human_opens_total")
     private Double humanOpensTotal;
 
-
+    /**
+     * Unique opens excluding automated/bot/proxy opens
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("human_unique_opens")
     private Double humanUniqueOpens;
 
-
+    /**
+     * Unique identifier for the campaign report
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_click_at")
     private OffsetDateTime lastClickAt;
 
-
+    /**
+     * Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_open_at")
     private OffsetDateTime lastOpenAt;
@@ -102,62 +132,86 @@ public class MarketingReport {
     @JsonProperty("links")
     private List<MarketingReportLink> links;
 
-
+    /**
+     * Associated list ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_id")
     private String listId;
 
-
+    /**
+     * Open rate (decimal)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open_rate")
     private Double openRate;
 
-
+    /**
+     * Total opens
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opens_total")
     private Double opensTotal;
 
-
+    /**
+     * Raw data from integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sent_at")
     private OffsetDateTime sentAt;
 
-
+    /**
+     * Soft bounce count
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soft_bounces")
     private Double softBounces;
 
-
+    /**
+     * Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * Syntax error count
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syntax_errors")
     private Double syntaxErrors;
 
-
+    /**
+     * Unique clicks
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique_clicks")
     private Double uniqueClicks;
 
-
+    /**
+     * Unique opens
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique_opens")
     private Double uniqueOpens;
 
-
+    /**
+     * Unique subscriber clicks
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique_subscriber_clicks")
     private Double uniqueSubscriberClicks;
 
-
+    /**
+     * Number of unsubscribes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsubscribed")
     private Double unsubscribed;
@@ -235,62 +289,107 @@ public class MarketingReport {
             null);
     }
 
+    /**
+     * Number of abuse reports
+     */
     public Optional<Double> abuseReports() {
         return Optional.ofNullable(this.abuseReports);
     }
 
+    /**
+     * Associated campaign ID
+     */
     public Optional<String> campaignId() {
         return Optional.ofNullable(this.campaignId);
     }
 
+    /**
+     * Click rate (decimal)
+     */
     public Optional<Double> clickRate() {
         return Optional.ofNullable(this.clickRate);
     }
 
+    /**
+     * Total clicks
+     */
     public Optional<Double> clicksTotal() {
         return Optional.ofNullable(this.clicksTotal);
     }
 
+    /**
+     * Total emails sent
+     */
     public Optional<Double> emailsSent() {
         return Optional.ofNullable(this.emailsSent);
     }
 
+    /**
+     * End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * Forward count
+     */
     public Optional<Double> forwardsCount() {
         return Optional.ofNullable(this.forwardsCount);
     }
 
+    /**
+     * Forwards opened
+     */
     public Optional<Double> forwardsOpens() {
         return Optional.ofNullable(this.forwardsOpens);
     }
 
+    /**
+     * Hard bounce count
+     */
     public Optional<Double> hardBounces() {
         return Optional.ofNullable(this.hardBounces);
     }
 
+    /**
+     * Open rate (decimal) excluding automated/bot/proxy opens
+     */
     public Optional<Double> humanOpenRate() {
         return Optional.ofNullable(this.humanOpenRate);
     }
 
+    /**
+     * Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
+     */
     public Optional<Double> humanOpensTotal() {
         return Optional.ofNullable(this.humanOpensTotal);
     }
 
+    /**
+     * Unique opens excluding automated/bot/proxy opens
+     */
     public Optional<Double> humanUniqueOpens() {
         return Optional.ofNullable(this.humanUniqueOpens);
     }
 
+    /**
+     * Unique identifier for the campaign report
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastClickAt() {
         return Optional.ofNullable(this.lastClickAt);
     }
 
+    /**
+     * Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> lastOpenAt() {
         return Optional.ofNullable(this.lastOpenAt);
     }
@@ -302,50 +401,86 @@ public class MarketingReport {
         return Optional.ofNullable(this.links);
     }
 
+    /**
+     * Associated list ID
+     */
     public Optional<String> listId() {
         return Optional.ofNullable(this.listId);
     }
 
+    /**
+     * Open rate (decimal)
+     */
     public Optional<Double> openRate() {
         return Optional.ofNullable(this.openRate);
     }
 
+    /**
+     * Total opens
+     */
     public Optional<Double> opensTotal() {
         return Optional.ofNullable(this.opensTotal);
     }
 
+    /**
+     * Raw data from integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> sentAt() {
         return Optional.ofNullable(this.sentAt);
     }
 
+    /**
+     * Soft bounce count
+     */
     public Optional<Double> softBounces() {
         return Optional.ofNullable(this.softBounces);
     }
 
+    /**
+     * Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * Syntax error count
+     */
     public Optional<Double> syntaxErrors() {
         return Optional.ofNullable(this.syntaxErrors);
     }
 
+    /**
+     * Unique clicks
+     */
     public Optional<Double> uniqueClicks() {
         return Optional.ofNullable(this.uniqueClicks);
     }
 
+    /**
+     * Unique opens
+     */
     public Optional<Double> uniqueOpens() {
         return Optional.ofNullable(this.uniqueOpens);
     }
 
+    /**
+     * Unique subscriber clicks
+     */
     public Optional<Double> uniqueSubscriberClicks() {
         return Optional.ofNullable(this.uniqueSubscriberClicks);
     }
 
+    /**
+     * Number of unsubscribes
+     */
     public Optional<Double> unsubscribed() {
         return Optional.ofNullable(this.unsubscribed);
     }
@@ -355,90 +490,135 @@ public class MarketingReport {
     }
 
 
+    /**
+     * Number of abuse reports
+     */
     public MarketingReport withAbuseReports(@Nullable Double abuseReports) {
         this.abuseReports = abuseReports;
         return this;
     }
 
 
+    /**
+     * Associated campaign ID
+     */
     public MarketingReport withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
 
 
+    /**
+     * Click rate (decimal)
+     */
     public MarketingReport withClickRate(@Nullable Double clickRate) {
         this.clickRate = clickRate;
         return this;
     }
 
 
+    /**
+     * Total clicks
+     */
     public MarketingReport withClicksTotal(@Nullable Double clicksTotal) {
         this.clicksTotal = clicksTotal;
         return this;
     }
 
 
+    /**
+     * Total emails sent
+     */
     public MarketingReport withEmailsSent(@Nullable Double emailsSent) {
         this.emailsSent = emailsSent;
         return this;
     }
 
 
+    /**
+     * End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReport withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * Forward count
+     */
     public MarketingReport withForwardsCount(@Nullable Double forwardsCount) {
         this.forwardsCount = forwardsCount;
         return this;
     }
 
 
+    /**
+     * Forwards opened
+     */
     public MarketingReport withForwardsOpens(@Nullable Double forwardsOpens) {
         this.forwardsOpens = forwardsOpens;
         return this;
     }
 
 
+    /**
+     * Hard bounce count
+     */
     public MarketingReport withHardBounces(@Nullable Double hardBounces) {
         this.hardBounces = hardBounces;
         return this;
     }
 
 
+    /**
+     * Open rate (decimal) excluding automated/bot/proxy opens
+     */
     public MarketingReport withHumanOpenRate(@Nullable Double humanOpenRate) {
         this.humanOpenRate = humanOpenRate;
         return this;
     }
 
 
+    /**
+     * Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
+     */
     public MarketingReport withHumanOpensTotal(@Nullable Double humanOpensTotal) {
         this.humanOpensTotal = humanOpensTotal;
         return this;
     }
 
 
+    /**
+     * Unique opens excluding automated/bot/proxy opens
+     */
     public MarketingReport withHumanUniqueOpens(@Nullable Double humanUniqueOpens) {
         this.humanUniqueOpens = humanUniqueOpens;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the campaign report
+     */
     public MarketingReport withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReport withLastClickAt(@Nullable OffsetDateTime lastClickAt) {
         this.lastClickAt = lastClickAt;
         return this;
     }
 
 
+    /**
+     * Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReport withLastOpenAt(@Nullable OffsetDateTime lastOpenAt) {
         this.lastOpenAt = lastOpenAt;
         return this;
@@ -454,72 +634,108 @@ public class MarketingReport {
     }
 
 
+    /**
+     * Associated list ID
+     */
     public MarketingReport withListId(@Nullable String listId) {
         this.listId = listId;
         return this;
     }
 
 
+    /**
+     * Open rate (decimal)
+     */
     public MarketingReport withOpenRate(@Nullable Double openRate) {
         this.openRate = openRate;
         return this;
     }
 
 
+    /**
+     * Total opens
+     */
     public MarketingReport withOpensTotal(@Nullable Double opensTotal) {
         this.opensTotal = opensTotal;
         return this;
     }
 
 
+    /**
+     * Raw data from integration
+     */
     public MarketingReport withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReport withSentAt(@Nullable OffsetDateTime sentAt) {
         this.sentAt = sentAt;
         return this;
     }
 
 
+    /**
+     * Soft bounce count
+     */
     public MarketingReport withSoftBounces(@Nullable Double softBounces) {
         this.softBounces = softBounces;
         return this;
     }
 
 
+    /**
+     * Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public MarketingReport withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * Syntax error count
+     */
     public MarketingReport withSyntaxErrors(@Nullable Double syntaxErrors) {
         this.syntaxErrors = syntaxErrors;
         return this;
     }
 
 
+    /**
+     * Unique clicks
+     */
     public MarketingReport withUniqueClicks(@Nullable Double uniqueClicks) {
         this.uniqueClicks = uniqueClicks;
         return this;
     }
 
 
+    /**
+     * Unique opens
+     */
     public MarketingReport withUniqueOpens(@Nullable Double uniqueOpens) {
         this.uniqueOpens = uniqueOpens;
         return this;
     }
 
 
+    /**
+     * Unique subscriber clicks
+     */
     public MarketingReport withUniqueSubscriberClicks(@Nullable Double uniqueSubscriberClicks) {
         this.uniqueSubscriberClicks = uniqueSubscriberClicks;
         return this;
     }
 
 
+    /**
+     * Number of unsubscribes
+     */
     public MarketingReport withUnsubscribed(@Nullable Double unsubscribed) {
         this.unsubscribed = unsubscribed;
         return this;
@@ -677,76 +893,121 @@ public class MarketingReport {
           // force use of static builder() method
         }
 
+        /**
+         * Number of abuse reports
+         */
         public Builder abuseReports(@Nullable Double abuseReports) {
             this.abuseReports = abuseReports;
             return this;
         }
 
+        /**
+         * Associated campaign ID
+         */
         public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
         }
 
+        /**
+         * Click rate (decimal)
+         */
         public Builder clickRate(@Nullable Double clickRate) {
             this.clickRate = clickRate;
             return this;
         }
 
+        /**
+         * Total clicks
+         */
         public Builder clicksTotal(@Nullable Double clicksTotal) {
             this.clicksTotal = clicksTotal;
             return this;
         }
 
+        /**
+         * Total emails sent
+         */
         public Builder emailsSent(@Nullable Double emailsSent) {
             this.emailsSent = emailsSent;
             return this;
         }
 
+        /**
+         * End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * Forward count
+         */
         public Builder forwardsCount(@Nullable Double forwardsCount) {
             this.forwardsCount = forwardsCount;
             return this;
         }
 
+        /**
+         * Forwards opened
+         */
         public Builder forwardsOpens(@Nullable Double forwardsOpens) {
             this.forwardsOpens = forwardsOpens;
             return this;
         }
 
+        /**
+         * Hard bounce count
+         */
         public Builder hardBounces(@Nullable Double hardBounces) {
             this.hardBounces = hardBounces;
             return this;
         }
 
+        /**
+         * Open rate (decimal) excluding automated/bot/proxy opens
+         */
         public Builder humanOpenRate(@Nullable Double humanOpenRate) {
             this.humanOpenRate = humanOpenRate;
             return this;
         }
 
+        /**
+         * Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
+         */
         public Builder humanOpensTotal(@Nullable Double humanOpensTotal) {
             this.humanOpensTotal = humanOpensTotal;
             return this;
         }
 
+        /**
+         * Unique opens excluding automated/bot/proxy opens
+         */
         public Builder humanUniqueOpens(@Nullable Double humanUniqueOpens) {
             this.humanUniqueOpens = humanUniqueOpens;
             return this;
         }
 
+        /**
+         * Unique identifier for the campaign report
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastClickAt(@Nullable OffsetDateTime lastClickAt) {
             this.lastClickAt = lastClickAt;
             return this;
         }
 
+        /**
+         * Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder lastOpenAt(@Nullable OffsetDateTime lastOpenAt) {
             this.lastOpenAt = lastOpenAt;
             return this;
@@ -760,61 +1021,97 @@ public class MarketingReport {
             return this;
         }
 
+        /**
+         * Associated list ID
+         */
         public Builder listId(@Nullable String listId) {
             this.listId = listId;
             return this;
         }
 
+        /**
+         * Open rate (decimal)
+         */
         public Builder openRate(@Nullable Double openRate) {
             this.openRate = openRate;
             return this;
         }
 
+        /**
+         * Total opens
+         */
         public Builder opensTotal(@Nullable Double opensTotal) {
             this.opensTotal = opensTotal;
             return this;
         }
 
+        /**
+         * Raw data from integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder sentAt(@Nullable OffsetDateTime sentAt) {
             this.sentAt = sentAt;
             return this;
         }
 
+        /**
+         * Soft bounce count
+         */
         public Builder softBounces(@Nullable Double softBounces) {
             this.softBounces = softBounces;
             return this;
         }
 
+        /**
+         * Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * Syntax error count
+         */
         public Builder syntaxErrors(@Nullable Double syntaxErrors) {
             this.syntaxErrors = syntaxErrors;
             return this;
         }
 
+        /**
+         * Unique clicks
+         */
         public Builder uniqueClicks(@Nullable Double uniqueClicks) {
             this.uniqueClicks = uniqueClicks;
             return this;
         }
 
+        /**
+         * Unique opens
+         */
         public Builder uniqueOpens(@Nullable Double uniqueOpens) {
             this.uniqueOpens = uniqueOpens;
             return this;
         }
 
+        /**
+         * Unique subscriber clicks
+         */
         public Builder uniqueSubscriberClicks(@Nullable Double uniqueSubscriberClicks) {
             this.uniqueSubscriberClicks = uniqueSubscriberClicks;
             return this;
         }
 
+        /**
+         * Number of unsubscribes
+         */
         public Builder unsubscribed(@Nullable Double unsubscribed) {
             this.unsubscribed = unsubscribed;
             return this;

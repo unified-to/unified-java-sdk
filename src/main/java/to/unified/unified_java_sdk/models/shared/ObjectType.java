@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * ObjectType
+ * 
+ * <p>The type of object this credit was applied to
+ */
 public class ObjectType {
 
     public static final ObjectType INVOICE = new ObjectType("INVOICE");

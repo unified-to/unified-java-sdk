@@ -16,32 +16,44 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PaymentPayoutLineitem {
-
+    /**
+     * Gross amount of this line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     private Double amount;
 
-
+    /**
+     * ISO 4217 currency code of the line amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Processor fee attributed to this line
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fee_amount")
     private Double feeAmount;
 
-
+    /**
+     * amount minus fee_amount
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     private Double netAmount;
 
-
+    /**
+     * id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_id")
     private String objectId;
 
-
+    /**
+     * What this payout line settles
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_type")
     private PaymentPayoutLineitemObjectType objectType;
@@ -67,26 +79,44 @@ public class PaymentPayoutLineitem {
             null, null, null);
     }
 
+    /**
+     * Gross amount of this line
+     */
     public Optional<Double> amount() {
         return Optional.ofNullable(this.amount);
     }
 
+    /**
+     * ISO 4217 currency code of the line amount
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Processor fee attributed to this line
+     */
     public Optional<Double> feeAmount() {
         return Optional.ofNullable(this.feeAmount);
     }
 
+    /**
+     * amount minus fee_amount
+     */
     public Optional<Double> netAmount() {
         return Optional.ofNullable(this.netAmount);
     }
 
+    /**
+     * id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * What this payout line settles
+     */
     public Optional<PaymentPayoutLineitemObjectType> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -96,36 +126,54 @@ public class PaymentPayoutLineitem {
     }
 
 
+    /**
+     * Gross amount of this line
+     */
     public PaymentPayoutLineitem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
 
+    /**
+     * ISO 4217 currency code of the line amount
+     */
     public PaymentPayoutLineitem withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * Processor fee attributed to this line
+     */
     public PaymentPayoutLineitem withFeeAmount(@Nullable Double feeAmount) {
         this.feeAmount = feeAmount;
         return this;
     }
 
 
+    /**
+     * amount minus fee_amount
+     */
     public PaymentPayoutLineitem withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
     }
 
 
+    /**
+     * id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
+     */
     public PaymentPayoutLineitem withObjectId(@Nullable String objectId) {
         this.objectId = objectId;
         return this;
     }
 
 
+    /**
+     * What this payout line settles
+     */
     public PaymentPayoutLineitem withObjectType(@Nullable PaymentPayoutLineitemObjectType objectType) {
         this.objectType = objectType;
         return this;
@@ -187,31 +235,49 @@ public class PaymentPayoutLineitem {
           // force use of static builder() method
         }
 
+        /**
+         * Gross amount of this line
+         */
         public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
+        /**
+         * ISO 4217 currency code of the line amount
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * Processor fee attributed to this line
+         */
         public Builder feeAmount(@Nullable Double feeAmount) {
             this.feeAmount = feeAmount;
             return this;
         }
 
+        /**
+         * amount minus fee_amount
+         */
         public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
         }
 
+        /**
+         * id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
+         */
         public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
+        /**
+         * What this payout line settles
+         */
         public Builder objectType(@Nullable PaymentPayoutLineitemObjectType objectType) {
             this.objectType = objectType;
             return this;

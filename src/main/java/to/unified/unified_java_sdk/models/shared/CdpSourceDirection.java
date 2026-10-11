@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CdpSourceDirection
+ * 
+ * <p>SOURCE, or BIDIRECTIONAL for import+export connectors
+ */
 public class CdpSourceDirection {
 
     public static final CdpSourceDirection SOURCE = new CdpSourceDirection("SOURCE");

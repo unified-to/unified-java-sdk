@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AccountingBankfeedaccountStatus
+ * 
+ * <p>feed state: ACTIVE, INACTIVE
+ */
 public class AccountingBankfeedaccountStatus {
 
     public static final AccountingBankfeedaccountStatus ACTIVE = new AccountingBankfeedaccountStatus("ACTIVE");

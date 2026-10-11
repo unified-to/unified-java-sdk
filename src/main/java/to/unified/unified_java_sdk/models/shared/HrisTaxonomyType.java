@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * HrisTaxonomyType
+ * 
+ * <p>the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+ */
 public class HrisTaxonomyType {
 
     public static final HrisTaxonomyType SKILL = new HrisTaxonomyType("SKILL");

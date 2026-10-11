@@ -37,7 +37,9 @@ public class CrmCompany {
     @JsonProperty("contact_ids")
     private List<String> contactIds;
 
-
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -69,7 +71,9 @@ public class CrmCompany {
     @JsonProperty("employees")
     private Double employees;
 
-
+    /**
+     * Unique identifier for this company object
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -96,12 +100,16 @@ public class CrmCompany {
     @JsonProperty("metadata")
     private List<CrmMetadata> metadata;
 
-
+    /**
+     * The name of the company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The raw data returned by the integration for this company
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -121,12 +129,16 @@ public class CrmCompany {
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * (reference to HrisEmployee)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
@@ -203,6 +215,9 @@ public class CrmCompany {
         return Optional.ofNullable(this.contactIds);
     }
 
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -230,6 +245,9 @@ public class CrmCompany {
         return Optional.ofNullable(this.employees);
     }
 
+    /**
+     * Unique identifier for this company object
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -253,10 +271,16 @@ public class CrmCompany {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The name of the company
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The raw data returned by the integration for this company
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -273,10 +297,16 @@ public class CrmCompany {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -305,6 +335,9 @@ public class CrmCompany {
     }
 
 
+    /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmCompany withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -344,6 +377,9 @@ public class CrmCompany {
     }
 
 
+    /**
+     * Unique identifier for this company object
+     */
     public CrmCompany withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -377,12 +413,18 @@ public class CrmCompany {
     }
 
 
+    /**
+     * The name of the company
+     */
     public CrmCompany withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this company
+     */
     public CrmCompany withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -407,12 +449,18 @@ public class CrmCompany {
     }
 
 
+    /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CrmCompany withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * (reference to HrisEmployee)
+     */
     public CrmCompany withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
@@ -558,6 +606,9 @@ public class CrmCompany {
             return this;
         }
 
+        /**
+         * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -591,6 +642,9 @@ public class CrmCompany {
             return this;
         }
 
+        /**
+         * Unique identifier for this company object
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -619,11 +673,17 @@ public class CrmCompany {
             return this;
         }
 
+        /**
+         * The name of the company
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this company
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -644,11 +704,17 @@ public class CrmCompany {
             return this;
         }
 
+        /**
+         * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * (reference to HrisEmployee)
+         */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;

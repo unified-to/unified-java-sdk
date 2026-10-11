@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * EnrichPersonGender
+ * 
+ * <p>The gender of the person
+ */
 public class EnrichPersonGender {
 
     public static final EnrichPersonGender MALE = new EnrichPersonGender("MALE");

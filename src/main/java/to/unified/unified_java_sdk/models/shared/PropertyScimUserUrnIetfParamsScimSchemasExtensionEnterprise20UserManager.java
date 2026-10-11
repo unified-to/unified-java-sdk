@@ -19,17 +19,23 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>"id" attribute of another User.
  */
 public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager {
-
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
     private String dollarRef;
 
-
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     private String displayName;
 
-
+    /**
+     * alias for value?
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managerId")
     private String managerId;
@@ -39,7 +45,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     @JsonProperty("type")
     private PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType type;
 
-
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private String value;
@@ -63,14 +71,23 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             null, null);
     }
 
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     public Optional<String> dollarRef() {
         return Optional.ofNullable(this.dollarRef);
     }
 
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * alias for value?
+     */
     public Optional<String> managerId() {
         return Optional.ofNullable(this.managerId);
     }
@@ -79,6 +96,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -88,18 +108,27 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     }
 
 
+    /**
+     * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withDollarRef(@Nullable String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
     }
 
 
+    /**
+     * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withDisplayName(@Nullable String displayName) {
         this.displayName = displayName;
         return this;
     }
 
 
+    /**
+     * alias for value?
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withManagerId(@Nullable String managerId) {
         this.managerId = managerId;
         return this;
@@ -112,6 +141,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
     }
 
 
+    /**
+     * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+     */
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager withValue(@Nullable String value) {
         this.value = value;
         return this;
@@ -169,16 +201,25 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
           // force use of static builder() method
         }
 
+        /**
+         * The URI of the SCIM resource representing the User's manager. RECOMMENDED.
+         */
         public Builder dollarRef(@Nullable String dollarRef) {
             this.dollarRef = dollarRef;
             return this;
         }
 
+        /**
+         * The displayName of the user's manager. This attribute is OPTIONAL, and mutability is "readOnly".
+         */
         public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
+        /**
+         * alias for value?
+         */
         public Builder managerId(@Nullable String managerId) {
             this.managerId = managerId;
             return this;
@@ -189,6 +230,9 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserMa
             return this;
         }
 
+        /**
+         * The "id" of the SCIM resource representing the user's manager. RECOMMENDED.
+         */
         public Builder value(@Nullable String value) {
             this.value = value;
             return this;

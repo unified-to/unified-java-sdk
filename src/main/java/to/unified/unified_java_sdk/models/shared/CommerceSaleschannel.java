@@ -27,7 +27,9 @@ public class CommerceSaleschannel {
     @JsonProperty("collections")
     private List<CommerceReference> collections;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -52,12 +54,16 @@ public class CommerceSaleschannel {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * maps to code (name)  a stable identifier per channel
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -95,6 +101,9 @@ public class CommerceSaleschannel {
         return Optional.ofNullable(this.collections);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -115,10 +124,16 @@ public class CommerceSaleschannel {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * maps to code (name)  a stable identifier per channel
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -137,6 +152,9 @@ public class CommerceSaleschannel {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceSaleschannel withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -167,12 +185,18 @@ public class CommerceSaleschannel {
     }
 
 
+    /**
+     * maps to code (name)  a stable identifier per channel
+     */
     public CommerceSaleschannel withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CommerceSaleschannel withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -251,6 +275,9 @@ public class CommerceSaleschannel {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -276,11 +303,17 @@ public class CommerceSaleschannel {
             return this;
         }
 
+        /**
+         * maps to code (name)  a stable identifier per channel
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

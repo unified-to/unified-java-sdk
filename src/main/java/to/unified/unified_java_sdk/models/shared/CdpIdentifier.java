@@ -17,27 +17,37 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CdpIdentifier {
-
+    /**
+     * The encoding of the identifier value (eg. raw, sha256)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encoding")
     private String encoding;
 
-
+    /**
+     * Whether this is the primary identifier for the profile
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_primary")
     private Boolean isPrimary;
 
-
+    /**
+     * The source that provided this identifier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private String source;
 
-
+    /**
+     * The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private CdpIdentifierType type;
 
-
+    /**
+     * The identifier value that resolves to the profile
+     */
     @JsonProperty("value")
     private String value;
 
@@ -62,22 +72,37 @@ public class CdpIdentifier {
             null, value);
     }
 
+    /**
+     * The encoding of the identifier value (eg. raw, sha256)
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
 
+    /**
+     * Whether this is the primary identifier for the profile
+     */
     public Optional<Boolean> isPrimary() {
         return Optional.ofNullable(this.isPrimary);
     }
 
+    /**
+     * The source that provided this identifier
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
 
+    /**
+     * The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+     */
     public Optional<CdpIdentifierType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The identifier value that resolves to the profile
+     */
     public String value() {
         return this.value;
     }
@@ -87,30 +112,45 @@ public class CdpIdentifier {
     }
 
 
+    /**
+     * The encoding of the identifier value (eg. raw, sha256)
+     */
     public CdpIdentifier withEncoding(@Nullable String encoding) {
         this.encoding = encoding;
         return this;
     }
 
 
+    /**
+     * Whether this is the primary identifier for the profile
+     */
     public CdpIdentifier withIsPrimary(@Nullable Boolean isPrimary) {
         this.isPrimary = isPrimary;
         return this;
     }
 
 
+    /**
+     * The source that provided this identifier
+     */
     public CdpIdentifier withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
 
+    /**
+     * The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+     */
     public CdpIdentifier withType(@Nullable CdpIdentifierType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The identifier value that resolves to the profile
+     */
     public CdpIdentifier withValue(@Nonnull String value) {
         this.value = Utils.checkNotNull(value, "value");
         return this;
@@ -168,26 +208,41 @@ public class CdpIdentifier {
           // force use of static builder() method
         }
 
+        /**
+         * The encoding of the identifier value (eg. raw, sha256)
+         */
         public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
+        /**
+         * Whether this is the primary identifier for the profile
+         */
         public Builder isPrimary(@Nullable Boolean isPrimary) {
             this.isPrimary = isPrimary;
             return this;
         }
 
+        /**
+         * The source that provided this identifier
+         */
         public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
+        /**
+         * The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+         */
         public Builder type(@Nullable CdpIdentifierType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The identifier value that resolves to the profile
+         */
         public Builder value(@Nonnull String value) {
             this.value = Utils.checkNotNull(value, "value");
             return this;

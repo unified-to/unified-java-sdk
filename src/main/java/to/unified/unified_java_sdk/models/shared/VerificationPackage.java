@@ -34,12 +34,16 @@ public class VerificationPackage {
     @JsonProperty("average_processing_times")
     private List<VerificationTime> averageProcessingTimes;
 
-
+    /**
+     * Cost-related information
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_amount")
     private Double costAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -49,7 +53,9 @@ public class VerificationPackage {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * Detailed description
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -59,27 +65,37 @@ public class VerificationPackage {
     @JsonProperty("has_redirect_url")
     private Boolean hasRedirectUrl;
 
-
+    /**
+     * where the provider will redirect the user to after the verification
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_target_url")
     private Boolean hasTargetUrl;
 
-
+    /**
+     * Unique identifier for the verification type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * where to find additional information
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info_url")
     private String infoUrl;
 
-
+    /**
+     * if this verification returns a score, what is the maximum?
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_score")
     private Double maxScore;
 
-
+    /**
+     * Name of the verification type
+     */
     @JsonProperty("name")
     private String name;
 
@@ -111,7 +127,9 @@ public class VerificationPackage {
     @JsonProperty("type")
     private VerificationPackageType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -190,10 +208,16 @@ public class VerificationPackage {
         return Optional.ofNullable(this.averageProcessingTimes);
     }
 
+    /**
+     * Cost-related information
+     */
     public Optional<Double> costAmount() {
         return Optional.ofNullable(this.costAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -202,6 +226,9 @@ public class VerificationPackage {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * Detailed description
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -210,22 +237,37 @@ public class VerificationPackage {
         return Optional.ofNullable(this.hasRedirectUrl);
     }
 
+    /**
+     * where the provider will redirect the user to after the verification
+     */
     public Optional<Boolean> hasTargetUrl() {
         return Optional.ofNullable(this.hasTargetUrl);
     }
 
+    /**
+     * Unique identifier for the verification type
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * where to find additional information
+     */
     public Optional<String> infoUrl() {
         return Optional.ofNullable(this.infoUrl);
     }
 
+    /**
+     * if this verification returns a score, what is the maximum?
+     */
     public Optional<Double> maxScore() {
         return Optional.ofNullable(this.maxScore);
     }
 
+    /**
+     * Name of the verification type
+     */
     public String name() {
         return this.name;
     }
@@ -256,6 +298,9 @@ public class VerificationPackage {
         return this.type;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -287,12 +332,18 @@ public class VerificationPackage {
     }
 
 
+    /**
+     * Cost-related information
+     */
     public VerificationPackage withCostAmount(@Nullable Double costAmount) {
         this.costAmount = costAmount;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationPackage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -305,6 +356,9 @@ public class VerificationPackage {
     }
 
 
+    /**
+     * Detailed description
+     */
     public VerificationPackage withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -317,30 +371,45 @@ public class VerificationPackage {
     }
 
 
+    /**
+     * where the provider will redirect the user to after the verification
+     */
     public VerificationPackage withHasTargetUrl(@Nullable Boolean hasTargetUrl) {
         this.hasTargetUrl = hasTargetUrl;
         return this;
     }
 
 
+    /**
+     * Unique identifier for the verification type
+     */
     public VerificationPackage withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * where to find additional information
+     */
     public VerificationPackage withInfoUrl(@Nullable String infoUrl) {
         this.infoUrl = infoUrl;
         return this;
     }
 
 
+    /**
+     * if this verification returns a score, what is the maximum?
+     */
     public VerificationPackage withMaxScore(@Nullable Double maxScore) {
         this.maxScore = maxScore;
         return this;
     }
 
 
+    /**
+     * Name of the verification type
+     */
     public VerificationPackage withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
@@ -383,6 +452,9 @@ public class VerificationPackage {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public VerificationPackage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -523,11 +595,17 @@ public class VerificationPackage {
             return this;
         }
 
+        /**
+         * Cost-related information
+         */
         public Builder costAmount(@Nullable Double costAmount) {
             this.costAmount = costAmount;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -538,6 +616,9 @@ public class VerificationPackage {
             return this;
         }
 
+        /**
+         * Detailed description
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -548,26 +629,41 @@ public class VerificationPackage {
             return this;
         }
 
+        /**
+         * where the provider will redirect the user to after the verification
+         */
         public Builder hasTargetUrl(@Nullable Boolean hasTargetUrl) {
             this.hasTargetUrl = hasTargetUrl;
             return this;
         }
 
+        /**
+         * Unique identifier for the verification type
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * where to find additional information
+         */
         public Builder infoUrl(@Nullable String infoUrl) {
             this.infoUrl = infoUrl;
             return this;
         }
 
+        /**
+         * if this verification returns a score, what is the maximum?
+         */
         public Builder maxScore(@Nullable Double maxScore) {
             this.maxScore = maxScore;
             return this;
         }
 
+        /**
+         * Name of the verification type
+         */
         public Builder name(@Nonnull String name) {
             this.name = Utils.checkNotNull(name, "name");
             return this;
@@ -604,6 +700,9 @@ public class VerificationPackage {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;

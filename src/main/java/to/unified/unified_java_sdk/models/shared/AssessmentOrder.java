@@ -21,31 +21,43 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class AssessmentOrder {
-
+    /**
+     * ATS application ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     private String applicationId;
 
-
+    /**
+     * ATS candidate ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private String candidateId;
 
-
+    /**
+     * ATS company ID (reference to AtsCompany)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * Connection ID that this order belongs to
+     */
     @JsonProperty("connection_id")
     private String connectionId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ATS employee ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     private String employeeId;
@@ -55,12 +67,16 @@ public class AssessmentOrder {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * ATS job ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private String jobId;
 
-
+    /**
+     * Assessment package ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_id")
     private String packageId;
@@ -77,7 +93,9 @@ public class AssessmentOrder {
     @JsonProperty("profile_addresses")
     private List<AssessmentAddress> profileAddresses;
 
-
+    /**
+     * YYYY-MM-DD
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_date_of_birth")
     private String profileDateOfBirth;
@@ -97,7 +115,9 @@ public class AssessmentOrder {
     @JsonProperty("profile_gender")
     private ProfileGender profileGender;
 
-
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_ip_address")
     private String profileIpAddress;
@@ -137,7 +157,9 @@ public class AssessmentOrder {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * ATS-specific reference ID
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     private String reference;
@@ -149,7 +171,9 @@ public class AssessmentOrder {
     @JsonProperty("response_attributes")
     private List<AssessmentAttribute> responseAttributes;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_completed_at")
     private OffsetDateTime responseCompletedAt;
@@ -166,27 +190,37 @@ public class AssessmentOrder {
     @JsonProperty("response_download_urls")
     private List<String> responseDownloadUrls;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_expires_at")
     private OffsetDateTime responseExpiresAt;
 
-
+    /**
+     * Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_issued_at")
     private OffsetDateTime responseIssuedAt;
 
-
+    /**
+     * Maximum possible score
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_max_score")
     private Double responseMaxScore;
 
-
+    /**
+     * URL to redirect the user to complete assessment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_redirect_url")
     private String responseRedirectUrl;
 
-
+    /**
+     * Assessment score (e.g., 0-100)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_score")
     private Double responseScore;
@@ -201,7 +235,9 @@ public class AssessmentOrder {
     @JsonProperty("response_status")
     private ResponseStatus responseStatus;
 
-
+    /**
+     * URL to view detailed results
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_url")
     private String responseUrl;
@@ -211,22 +247,30 @@ public class AssessmentOrder {
     @JsonProperty("status")
     private AssessmentOrderStatus status;
 
-
+    /**
+     * URL to redirect user to after assessment
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_url")
     private String targetUrl;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * Webhook ID that this order belongs to
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_id")
     private String webhookId;
 
-
+    /**
+     * Workspace ID that this order belongs to (reference to KmsSpace)
+     */
     @JsonProperty("workspace_id")
     private String workspaceId;
 
@@ -337,26 +381,44 @@ public class AssessmentOrder {
             null, workspaceId);
     }
 
+    /**
+     * ATS application ID
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * ATS candidate ID
+     */
     public Optional<String> candidateId() {
         return Optional.ofNullable(this.candidateId);
     }
 
+    /**
+     * ATS company ID (reference to AtsCompany)
+     */
     public Optional<String> companyId() {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * Connection ID that this order belongs to
+     */
     public String connectionId() {
         return this.connectionId;
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ATS employee ID
+     */
     public Optional<String> employeeId() {
         return Optional.ofNullable(this.employeeId);
     }
@@ -365,10 +427,16 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * ATS job ID
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
 
+    /**
+     * Assessment package ID
+     */
     public Optional<String> packageId() {
         return Optional.ofNullable(this.packageId);
     }
@@ -384,6 +452,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.profileAddresses);
     }
 
+    /**
+     * YYYY-MM-DD
+     */
     public Optional<String> profileDateOfBirth() {
         return Optional.ofNullable(this.profileDateOfBirth);
     }
@@ -400,6 +471,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.profileGender);
     }
 
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     public Optional<String> profileIpAddress() {
         return Optional.ofNullable(this.profileIpAddress);
     }
@@ -432,6 +506,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * ATS-specific reference ID
+     */
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -443,6 +520,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.responseAttributes);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseCompletedAt() {
         return Optional.ofNullable(this.responseCompletedAt);
     }
@@ -458,22 +538,37 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.responseDownloadUrls);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseExpiresAt() {
         return Optional.ofNullable(this.responseExpiresAt);
     }
 
+    /**
+     * Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> responseIssuedAt() {
         return Optional.ofNullable(this.responseIssuedAt);
     }
 
+    /**
+     * Maximum possible score
+     */
     public Optional<Double> responseMaxScore() {
         return Optional.ofNullable(this.responseMaxScore);
     }
 
+    /**
+     * URL to redirect the user to complete assessment
+     */
     public Optional<String> responseRedirectUrl() {
         return Optional.ofNullable(this.responseRedirectUrl);
     }
 
+    /**
+     * Assessment score (e.g., 0-100)
+     */
     public Optional<Double> responseScore() {
         return Optional.ofNullable(this.responseScore);
     }
@@ -486,6 +581,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.responseStatus);
     }
 
+    /**
+     * URL to view detailed results
+     */
     public Optional<String> responseUrl() {
         return Optional.ofNullable(this.responseUrl);
     }
@@ -494,18 +592,30 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * URL to redirect user to after assessment
+     */
     public Optional<String> targetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * Webhook ID that this order belongs to
+     */
     public Optional<String> webhookId() {
         return Optional.ofNullable(this.webhookId);
     }
 
+    /**
+     * Workspace ID that this order belongs to (reference to KmsSpace)
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
@@ -515,36 +625,54 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * ATS application ID
+     */
     public AssessmentOrder withApplicationId(@Nullable String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
 
 
+    /**
+     * ATS candidate ID
+     */
     public AssessmentOrder withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
 
+    /**
+     * ATS company ID (reference to AtsCompany)
+     */
     public AssessmentOrder withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
 
+    /**
+     * Connection ID that this order belongs to
+     */
     public AssessmentOrder withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentOrder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * ATS employee ID
+     */
     public AssessmentOrder withEmployeeId(@Nullable String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -557,12 +685,18 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * ATS job ID
+     */
     public AssessmentOrder withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
     }
 
 
+    /**
+     * Assessment package ID
+     */
     public AssessmentOrder withPackageId(@Nullable String packageId) {
         this.packageId = packageId;
         return this;
@@ -584,6 +718,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * YYYY-MM-DD
+     */
     public AssessmentOrder withProfileDateOfBirth(@Nullable String profileDateOfBirth) {
         this.profileDateOfBirth = profileDateOfBirth;
         return this;
@@ -608,6 +745,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * XXX.XXX.XXX.XXX
+     */
     public AssessmentOrder withProfileIpAddress(@Nullable String profileIpAddress) {
         this.profileIpAddress = profileIpAddress;
         return this;
@@ -656,6 +796,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * ATS-specific reference ID
+     */
     public AssessmentOrder withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
@@ -671,6 +814,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentOrder withResponseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
         this.responseCompletedAt = responseCompletedAt;
         return this;
@@ -692,30 +838,45 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentOrder withResponseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
         this.responseExpiresAt = responseExpiresAt;
         return this;
     }
 
 
+    /**
+     * Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentOrder withResponseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
         this.responseIssuedAt = responseIssuedAt;
         return this;
     }
 
 
+    /**
+     * Maximum possible score
+     */
     public AssessmentOrder withResponseMaxScore(@Nullable Double responseMaxScore) {
         this.responseMaxScore = responseMaxScore;
         return this;
     }
 
 
+    /**
+     * URL to redirect the user to complete assessment
+     */
     public AssessmentOrder withResponseRedirectUrl(@Nullable String responseRedirectUrl) {
         this.responseRedirectUrl = responseRedirectUrl;
         return this;
     }
 
 
+    /**
+     * Assessment score (e.g., 0-100)
+     */
     public AssessmentOrder withResponseScore(@Nullable Double responseScore) {
         this.responseScore = responseScore;
         return this;
@@ -734,6 +895,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * URL to view detailed results
+     */
     public AssessmentOrder withResponseUrl(@Nullable String responseUrl) {
         this.responseUrl = responseUrl;
         return this;
@@ -746,24 +910,36 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * URL to redirect user to after assessment
+     */
     public AssessmentOrder withTargetUrl(@Nullable String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AssessmentOrder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * Webhook ID that this order belongs to
+     */
     public AssessmentOrder withWebhookId(@Nullable String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
 
 
+    /**
+     * Workspace ID that this order belongs to (reference to KmsSpace)
+     */
     public AssessmentOrder withWorkspaceId(@Nonnull String workspaceId) {
         this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
         return this;
@@ -977,31 +1153,49 @@ public class AssessmentOrder {
           // force use of static builder() method
         }
 
+        /**
+         * ATS application ID
+         */
         public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * ATS candidate ID
+         */
         public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
+        /**
+         * ATS company ID (reference to AtsCompany)
+         */
         public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
+        /**
+         * Connection ID that this order belongs to
+         */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ATS employee ID
+         */
         public Builder employeeId(@Nullable String employeeId) {
             this.employeeId = employeeId;
             return this;
@@ -1012,11 +1206,17 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * ATS job ID
+         */
         public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
+        /**
+         * Assessment package ID
+         */
         public Builder packageId(@Nullable String packageId) {
             this.packageId = packageId;
             return this;
@@ -1035,6 +1235,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * YYYY-MM-DD
+         */
         public Builder profileDateOfBirth(@Nullable String profileDateOfBirth) {
             this.profileDateOfBirth = profileDateOfBirth;
             return this;
@@ -1055,6 +1258,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * XXX.XXX.XXX.XXX
+         */
         public Builder profileIpAddress(@Nullable String profileIpAddress) {
             this.profileIpAddress = profileIpAddress;
             return this;
@@ -1095,6 +1301,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * ATS-specific reference ID
+         */
         public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
@@ -1108,6 +1317,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
             this.responseCompletedAt = responseCompletedAt;
             return this;
@@ -1126,26 +1338,41 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
             this.responseExpiresAt = responseExpiresAt;
             return this;
         }
 
+        /**
+         * Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder responseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
             this.responseIssuedAt = responseIssuedAt;
             return this;
         }
 
+        /**
+         * Maximum possible score
+         */
         public Builder responseMaxScore(@Nullable Double responseMaxScore) {
             this.responseMaxScore = responseMaxScore;
             return this;
         }
 
+        /**
+         * URL to redirect the user to complete assessment
+         */
         public Builder responseRedirectUrl(@Nullable String responseRedirectUrl) {
             this.responseRedirectUrl = responseRedirectUrl;
             return this;
         }
 
+        /**
+         * Assessment score (e.g., 0-100)
+         */
         public Builder responseScore(@Nullable Double responseScore) {
             this.responseScore = responseScore;
             return this;
@@ -1161,6 +1388,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * URL to view detailed results
+         */
         public Builder responseUrl(@Nullable String responseUrl) {
             this.responseUrl = responseUrl;
             return this;
@@ -1171,21 +1401,33 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * URL to redirect user to after assessment
+         */
         public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * Webhook ID that this order belongs to
+         */
         public Builder webhookId(@Nullable String webhookId) {
             this.webhookId = webhookId;
             return this;
         }
 
+        /**
+         * Workspace ID that this order belongs to (reference to KmsSpace)
+         */
         public Builder workspaceId(@Nonnull String workspaceId) {
             this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
             return this;

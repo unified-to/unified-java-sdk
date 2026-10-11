@@ -31,7 +31,9 @@ public class AccountingInvoice {
     @JsonProperty("balance_amount")
     private Double balanceAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelled_at")
     private OffsetDateTime cancelledAt;
@@ -41,12 +43,16 @@ public class AccountingInvoice {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (reference to AccountingContact)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -61,12 +67,16 @@ public class AccountingInvoice {
     @JsonProperty("discount_amount")
     private Double discountAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_at")
     private OffsetDateTime dueAt;
 
-
+    /**
+     * Exchange rate to the base/home currency at the document date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
@@ -81,12 +91,16 @@ public class AccountingInvoice {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * External identifier (ie. reference) for this invoice
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_number")
     private String invoiceNumber;
 
-
+    /**
+     * True when the document amounts already include tax
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_inclusive_of_tax")
     private Boolean isInclusiveOfTax;
@@ -116,12 +130,18 @@ public class AccountingInvoice {
     @JsonProperty("paid_amount")
     private Double paidAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
     private OffsetDateTime paidAt;
 
-
+    /**
+     * When set to charging_automatically, an automated attempt will occur to pay this invoice using the
+     * default payment source attached to the contactcustomer. When set to send_invoice, an will email will
+     * be sent with this invoice to the contact/customer with payment instructions.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_collection_method")
     private AccountingInvoicePaymentCollectionMethod paymentCollectionMethod;
@@ -143,12 +163,16 @@ public class AccountingInvoice {
     @JsonProperty("paymentterm_id")
     private String paymenttermId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -173,7 +197,9 @@ public class AccountingInvoice {
     @JsonProperty("refund_reason")
     private String refundReason;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
     private OffsetDateTime refundedAt;
@@ -195,7 +221,9 @@ public class AccountingInvoice {
     @JsonProperty("status")
     private AccountingInvoiceStatus status;
 
-
+    /**
+     * Total before tax
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_total_amount")
     private Double subTotalAmount;
@@ -205,7 +233,9 @@ public class AccountingInvoice {
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
-
+    /**
+     * &#64;deprecated use payment_terms instead
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     private AccountingInvoiceTerm term;
@@ -215,17 +245,23 @@ public class AccountingInvoice {
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AccountingInvoiceType type;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * The public URL for the invoice to send to a customer to view or pay.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -341,6 +377,9 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.balanceAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> cancelledAt() {
         return Optional.ofNullable(this.cancelledAt);
     }
@@ -349,10 +388,16 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (reference to AccountingContact)
+     */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -365,10 +410,16 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.discountAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> dueAt() {
         return Optional.ofNullable(this.dueAt);
     }
 
+    /**
+     * Exchange rate to the base/home currency at the document date
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
@@ -381,10 +432,16 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * External identifier (ie. reference) for this invoice
+     */
     public Optional<String> invoiceNumber() {
         return Optional.ofNullable(this.invoiceNumber);
     }
 
+    /**
+     * True when the document amounts already include tax
+     */
     public Optional<Boolean> isInclusiveOfTax() {
         return Optional.ofNullable(this.isInclusiveOfTax);
     }
@@ -409,10 +466,18 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.paidAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> paidAt() {
         return Optional.ofNullable(this.paidAt);
     }
 
+    /**
+     * When set to charging_automatically, an automated attempt will occur to pay this invoice using the
+     * default payment source attached to the contactcustomer. When set to send_invoice, an will email will
+     * be sent with this invoice to the contact/customer with payment instructions.
+     */
     public Optional<AccountingInvoicePaymentCollectionMethod> paymentCollectionMethod() {
         return Optional.ofNullable(this.paymentCollectionMethod);
     }
@@ -432,10 +497,16 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.paymenttermId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -456,6 +527,9 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.refundReason);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> refundedAt() {
         return Optional.ofNullable(this.refundedAt);
     }
@@ -475,6 +549,9 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Total before tax
+     */
     public Optional<Double> subTotalAmount() {
         return Optional.ofNullable(this.subTotalAmount);
     }
@@ -483,6 +560,9 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.taxAmount);
     }
 
+    /**
+     * &#64;deprecated use payment_terms instead
+     */
     public Optional<AccountingInvoiceTerm> term() {
         return Optional.ofNullable(this.term);
     }
@@ -491,14 +571,23 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
+     */
     public Optional<AccountingInvoiceType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * The public URL for the invoice to send to a customer to view or pay.
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -520,6 +609,9 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withCancelledAt(@Nullable OffsetDateTime cancelledAt) {
         this.cancelledAt = cancelledAt;
         return this;
@@ -532,12 +624,18 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (reference to AccountingContact)
+     */
     public AccountingInvoice withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -556,12 +654,18 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withDueAt(@Nullable OffsetDateTime dueAt) {
         this.dueAt = dueAt;
         return this;
     }
 
 
+    /**
+     * Exchange rate to the base/home currency at the document date
+     */
     public AccountingInvoice withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -580,12 +684,18 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * External identifier (ie. reference) for this invoice
+     */
     public AccountingInvoice withInvoiceNumber(@Nullable String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
     }
 
 
+    /**
+     * True when the document amounts already include tax
+     */
     public AccountingInvoice withIsInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
         this.isInclusiveOfTax = isInclusiveOfTax;
         return this;
@@ -622,12 +732,20 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withPaidAt(@Nullable OffsetDateTime paidAt) {
         this.paidAt = paidAt;
         return this;
     }
 
 
+    /**
+     * When set to charging_automatically, an automated attempt will occur to pay this invoice using the
+     * default payment source attached to the contactcustomer. When set to send_invoice, an will email will
+     * be sent with this invoice to the contact/customer with payment instructions.
+     */
     public AccountingInvoice withPaymentCollectionMethod(@Nullable AccountingInvoicePaymentCollectionMethod paymentCollectionMethod) {
         this.paymentCollectionMethod = paymentCollectionMethod;
         return this;
@@ -655,12 +773,18 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public AccountingInvoice withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -691,6 +815,9 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withRefundedAt(@Nullable OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
@@ -718,6 +845,9 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * Total before tax
+     */
     public AccountingInvoice withSubTotalAmount(@Nullable Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -730,6 +860,9 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * &#64;deprecated use payment_terms instead
+     */
     public AccountingInvoice withTerm(@Nullable AccountingInvoiceTerm term) {
         this.term = term;
         return this;
@@ -742,18 +875,27 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
+     */
     public AccountingInvoice withType(@Nullable AccountingInvoiceType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingInvoice withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * The public URL for the invoice to send to a customer to view or pay.
+     */
     public AccountingInvoice withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -977,6 +1119,9 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder cancelledAt(@Nullable OffsetDateTime cancelledAt) {
             this.cancelledAt = cancelledAt;
             return this;
@@ -987,11 +1132,17 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (reference to AccountingContact)
+         */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -1007,11 +1158,17 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder dueAt(@Nullable OffsetDateTime dueAt) {
             this.dueAt = dueAt;
             return this;
         }
 
+        /**
+         * Exchange rate to the base/home currency at the document date
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
@@ -1027,11 +1184,17 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * External identifier (ie. reference) for this invoice
+         */
         public Builder invoiceNumber(@Nullable String invoiceNumber) {
             this.invoiceNumber = invoiceNumber;
             return this;
         }
 
+        /**
+         * True when the document amounts already include tax
+         */
         public Builder isInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
             this.isInclusiveOfTax = isInclusiveOfTax;
             return this;
@@ -1062,11 +1225,19 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder paidAt(@Nullable OffsetDateTime paidAt) {
             this.paidAt = paidAt;
             return this;
         }
 
+        /**
+         * When set to charging_automatically, an automated attempt will occur to pay this invoice using the
+         * default payment source attached to the contactcustomer. When set to send_invoice, an will email will
+         * be sent with this invoice to the contact/customer with payment instructions.
+         */
         public Builder paymentCollectionMethod(@Nullable AccountingInvoicePaymentCollectionMethod paymentCollectionMethod) {
             this.paymentCollectionMethod = paymentCollectionMethod;
             return this;
@@ -1090,11 +1261,17 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -1120,6 +1297,9 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
             this.refundedAt = refundedAt;
             return this;
@@ -1143,6 +1323,9 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * Total before tax
+         */
         public Builder subTotalAmount(@Nullable Double subTotalAmount) {
             this.subTotalAmount = subTotalAmount;
             return this;
@@ -1153,6 +1336,9 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * &#64;deprecated use payment_terms instead
+         */
         public Builder term(@Nullable AccountingInvoiceTerm term) {
             this.term = term;
             return this;
@@ -1163,16 +1349,25 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
+         */
         public Builder type(@Nullable AccountingInvoiceType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * The public URL for the invoice to send to a customer to view or pay.
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

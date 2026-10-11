@@ -24,127 +24,177 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>(home-vs-away competitors with scores). Distinct from the fitness-oriented IClubsActivity.
  */
 public class ClubsEvent {
-
+    /**
+     * The away team's score
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("away_score")
     private Double awayScore;
 
-
+    /**
+     * The away team's name (homeaway providers)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("away_team_name")
     private String awayTeamName;
 
-
+    /**
+     * The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * A description or notes for the event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * The scheduled duration, in minutes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration_minutes")
     private Double durationMinutes;
 
-
+    /**
+     * When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
-
+    /**
+     * The group this event belongs to (reference to HrisGroup)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     private String groupId;
 
-
+    /**
+     * The home team's score
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_score")
     private Double homeScore;
 
-
+    /**
+     * The home team's name (homeaway providers)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("home_team_name")
     private String homeTeamName;
 
-
+    /**
+     * Unique identifier for this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether the connected groupteam is the home side
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_home")
     private Boolean isHome;
 
-
+    /**
+     * The id of the location for this event (reference to ClubsLocation)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * The name of the location for this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_name")
     private String locationName;
 
-
+    /**
+     * The event name (or a "Home vs Away" matchup label)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The id of the opposing team (single-opponent providers)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opponent_id")
     private String opponentId;
 
-
+    /**
+     * The name of the opposing team
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opponent_name")
     private String opponentName;
 
-
+    /**
+     * The raw data returned by the integration for this event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The opponent's score (team-vs-opponent providers)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score_against")
     private Double scoreAgainst;
 
-
+    /**
+     * The connected groupteam's score (team-vs-opponent providers)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score_for")
     private Double scoreFor;
 
-
+    /**
+     * When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-
+    /**
+     * The event status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private ClubsEventStatus status;
 
-
+    /**
+     * The timezone of the event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
-
+    /**
+     * The event type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private ClubsEventType type;
 
-
+    /**
+     * The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
-
+    /**
+     * A URL to the event
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
@@ -215,102 +265,177 @@ public class ClubsEvent {
             null);
     }
 
+    /**
+     * The away team's score
+     */
     public Optional<Double> awayScore() {
         return Optional.ofNullable(this.awayScore);
     }
 
+    /**
+     * The away team's name (homeaway providers)
+     */
     public Optional<String> awayTeamName() {
         return Optional.ofNullable(this.awayTeamName);
     }
 
+    /**
+     * The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * A description or notes for the event
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * The scheduled duration, in minutes
+     */
     public Optional<Double> durationMinutes() {
         return Optional.ofNullable(this.durationMinutes);
     }
 
+    /**
+     * When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
 
+    /**
+     * The group this event belongs to (reference to HrisGroup)
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
 
+    /**
+     * The home team's score
+     */
     public Optional<Double> homeScore() {
         return Optional.ofNullable(this.homeScore);
     }
 
+    /**
+     * The home team's name (homeaway providers)
+     */
     public Optional<String> homeTeamName() {
         return Optional.ofNullable(this.homeTeamName);
     }
 
+    /**
+     * Unique identifier for this event
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the connected groupteam is the home side
+     */
     public Optional<Boolean> isHome() {
         return Optional.ofNullable(this.isHome);
     }
 
+    /**
+     * The id of the location for this event (reference to ClubsLocation)
+     */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * The name of the location for this event
+     */
     public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
     }
 
+    /**
+     * The event name (or a "Home vs Away" matchup label)
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The id of the opposing team (single-opponent providers)
+     */
     public Optional<String> opponentId() {
         return Optional.ofNullable(this.opponentId);
     }
 
+    /**
+     * The name of the opposing team
+     */
     public Optional<String> opponentName() {
         return Optional.ofNullable(this.opponentName);
     }
 
+    /**
+     * The raw data returned by the integration for this event
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The opponent's score (team-vs-opponent providers)
+     */
     public Optional<Double> scoreAgainst() {
         return Optional.ofNullable(this.scoreAgainst);
     }
 
+    /**
+     * The connected groupteam's score (team-vs-opponent providers)
+     */
     public Optional<Double> scoreFor() {
         return Optional.ofNullable(this.scoreFor);
     }
 
+    /**
+     * When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
     }
 
+    /**
+     * The event status
+     */
     public Optional<ClubsEventStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * The timezone of the event
+     */
     public Optional<String> timezone() {
         return Optional.ofNullable(this.timezone);
     }
 
+    /**
+     * The event type
+     */
     public Optional<ClubsEventType> type() {
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
+    /**
+     * A URL to the event
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -320,150 +445,225 @@ public class ClubsEvent {
     }
 
 
+    /**
+     * The away team's score
+     */
     public ClubsEvent withAwayScore(@Nullable Double awayScore) {
         this.awayScore = awayScore;
         return this;
     }
 
 
+    /**
+     * The away team's name (homeaway providers)
+     */
     public ClubsEvent withAwayTeamName(@Nullable String awayTeamName) {
         this.awayTeamName = awayTeamName;
         return this;
     }
 
 
+    /**
+     * The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
 
+    /**
+     * A description or notes for the event
+     */
     public ClubsEvent withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * The scheduled duration, in minutes
+     */
     public ClubsEvent withDurationMinutes(@Nullable Double durationMinutes) {
         this.durationMinutes = durationMinutes;
         return this;
     }
 
 
+    /**
+     * When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsEvent withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
 
+    /**
+     * The group this event belongs to (reference to HrisGroup)
+     */
     public ClubsEvent withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
 
+    /**
+     * The home team's score
+     */
     public ClubsEvent withHomeScore(@Nullable Double homeScore) {
         this.homeScore = homeScore;
         return this;
     }
 
 
+    /**
+     * The home team's name (homeaway providers)
+     */
     public ClubsEvent withHomeTeamName(@Nullable String homeTeamName) {
         this.homeTeamName = homeTeamName;
         return this;
     }
 
 
+    /**
+     * Unique identifier for this event
+     */
     public ClubsEvent withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * Whether the connected groupteam is the home side
+     */
     public ClubsEvent withIsHome(@Nullable Boolean isHome) {
         this.isHome = isHome;
         return this;
     }
 
 
+    /**
+     * The id of the location for this event (reference to ClubsLocation)
+     */
     public ClubsEvent withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
 
+    /**
+     * The name of the location for this event
+     */
     public ClubsEvent withLocationName(@Nullable String locationName) {
         this.locationName = locationName;
         return this;
     }
 
 
+    /**
+     * The event name (or a "Home vs Away" matchup label)
+     */
     public ClubsEvent withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The id of the opposing team (single-opponent providers)
+     */
     public ClubsEvent withOpponentId(@Nullable String opponentId) {
         this.opponentId = opponentId;
         return this;
     }
 
 
+    /**
+     * The name of the opposing team
+     */
     public ClubsEvent withOpponentName(@Nullable String opponentName) {
         this.opponentName = opponentName;
         return this;
     }
 
 
+    /**
+     * The raw data returned by the integration for this event
+     */
     public ClubsEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * The opponent's score (team-vs-opponent providers)
+     */
     public ClubsEvent withScoreAgainst(@Nullable Double scoreAgainst) {
         this.scoreAgainst = scoreAgainst;
         return this;
     }
 
 
+    /**
+     * The connected groupteam's score (team-vs-opponent providers)
+     */
     public ClubsEvent withScoreFor(@Nullable Double scoreFor) {
         this.scoreFor = scoreFor;
         return this;
     }
 
 
+    /**
+     * When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsEvent withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
 
+    /**
+     * The event status
+     */
     public ClubsEvent withStatus(@Nullable ClubsEventStatus status) {
         this.status = status;
         return this;
     }
 
 
+    /**
+     * The timezone of the event
+     */
     public ClubsEvent withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
 
+    /**
+     * The event type
+     */
     public ClubsEvent withType(@Nullable ClubsEventType type) {
         this.type = type;
         return this;
     }
 
 
+    /**
+     * The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public ClubsEvent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
 
+    /**
+     * A URL to the event
+     */
     public ClubsEvent withUrl(@Nullable String url) {
         this.url = url;
         return this;
@@ -608,126 +808,201 @@ public class ClubsEvent {
           // force use of static builder() method
         }
 
+        /**
+         * The away team's score
+         */
         public Builder awayScore(@Nullable Double awayScore) {
             this.awayScore = awayScore;
             return this;
         }
 
+        /**
+         * The away team's name (homeaway providers)
+         */
         public Builder awayTeamName(@Nullable String awayTeamName) {
             this.awayTeamName = awayTeamName;
             return this;
         }
 
+        /**
+         * The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * A description or notes for the event
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * The scheduled duration, in minutes
+         */
         public Builder durationMinutes(@Nullable Double durationMinutes) {
             this.durationMinutes = durationMinutes;
             return this;
         }
 
+        /**
+         * When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
+        /**
+         * The group this event belongs to (reference to HrisGroup)
+         */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
+        /**
+         * The home team's score
+         */
         public Builder homeScore(@Nullable Double homeScore) {
             this.homeScore = homeScore;
             return this;
         }
 
+        /**
+         * The home team's name (homeaway providers)
+         */
         public Builder homeTeamName(@Nullable String homeTeamName) {
             this.homeTeamName = homeTeamName;
             return this;
         }
 
+        /**
+         * Unique identifier for this event
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * Whether the connected groupteam is the home side
+         */
         public Builder isHome(@Nullable Boolean isHome) {
             this.isHome = isHome;
             return this;
         }
 
+        /**
+         * The id of the location for this event (reference to ClubsLocation)
+         */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
+        /**
+         * The name of the location for this event
+         */
         public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }
 
+        /**
+         * The event name (or a "Home vs Away" matchup label)
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The id of the opposing team (single-opponent providers)
+         */
         public Builder opponentId(@Nullable String opponentId) {
             this.opponentId = opponentId;
             return this;
         }
 
+        /**
+         * The name of the opposing team
+         */
         public Builder opponentName(@Nullable String opponentName) {
             this.opponentName = opponentName;
             return this;
         }
 
+        /**
+         * The raw data returned by the integration for this event
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * The opponent's score (team-vs-opponent providers)
+         */
         public Builder scoreAgainst(@Nullable Double scoreAgainst) {
             this.scoreAgainst = scoreAgainst;
             return this;
         }
 
+        /**
+         * The connected groupteam's score (team-vs-opponent providers)
+         */
         public Builder scoreFor(@Nullable Double scoreFor) {
             this.scoreFor = scoreFor;
             return this;
         }
 
+        /**
+         * When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
+        /**
+         * The event status
+         */
         public Builder status(@Nullable ClubsEventStatus status) {
             this.status = status;
             return this;
         }
 
+        /**
+         * The timezone of the event
+         */
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
+        /**
+         * The event type
+         */
         public Builder type(@Nullable ClubsEventType type) {
             this.type = type;
             return this;
         }
 
+        /**
+         * The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
+        /**
+         * A URL to the event
+         */
         public Builder url(@Nullable String url) {
             this.url = url;
             return this;

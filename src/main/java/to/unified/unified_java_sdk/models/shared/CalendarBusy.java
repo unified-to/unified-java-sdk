@@ -24,7 +24,9 @@ public class CalendarBusy {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
@@ -38,7 +40,9 @@ public class CalendarBusy {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
@@ -76,6 +80,9 @@ public class CalendarBusy {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public OffsetDateTime endAt() {
         return this.endAt;
     }
@@ -88,6 +95,9 @@ public class CalendarBusy {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public OffsetDateTime startAt() {
         return this.startAt;
     }
@@ -107,6 +117,9 @@ public class CalendarBusy {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarBusy withEndAt(@Nonnull OffsetDateTime endAt) {
         this.endAt = Utils.checkNotNull(endAt, "endAt");
         return this;
@@ -125,6 +138,9 @@ public class CalendarBusy {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public CalendarBusy withStartAt(@Nonnull OffsetDateTime startAt) {
         this.startAt = Utils.checkNotNull(startAt, "startAt");
         return this;
@@ -197,6 +213,9 @@ public class CalendarBusy {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder endAt(@Nonnull OffsetDateTime endAt) {
             this.endAt = Utils.checkNotNull(endAt, "endAt");
             return this;
@@ -212,6 +231,9 @@ public class CalendarBusy {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder startAt(@Nonnull OffsetDateTime startAt) {
             this.startAt = Utils.checkNotNull(startAt, "startAt");
             return this;

@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * WeekStart
+ * 
+ * <p>week start day, defaults to undefined (no week start day)
+ */
 public class WeekStart {
 
     public static final WeekStart SU = new WeekStart("SU");

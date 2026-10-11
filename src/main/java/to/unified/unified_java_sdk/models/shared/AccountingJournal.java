@@ -31,7 +31,9 @@ public class AccountingJournal {
     @JsonProperty("category_ids")
     private List<String> categoryIds;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
@@ -46,7 +48,9 @@ public class AccountingJournal {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * Exchange rate to the base/home currency at the posting date
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange_rate")
     private Double exchangeRate;
@@ -56,7 +60,9 @@ public class AccountingJournal {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * True when the line amounts already include tax
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_inclusive_of_tax")
     private Boolean isInclusiveOfTax;
@@ -73,12 +79,16 @@ public class AccountingJournal {
     @JsonProperty("organization_id")
     private String organizationId;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
-
+    /**
+     * (reference to TaskProject)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     private String projectId;
@@ -98,7 +108,9 @@ public class AccountingJournal {
     @JsonProperty("source")
     private String source;
 
-
+    /**
+     * Posting state of the journal entry
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AccountingJournalStatus status;
@@ -113,12 +125,16 @@ public class AccountingJournal {
     @JsonProperty("taxrate_id")
     private String taxrateId;
 
-
+    /**
+     * Total of the debit lines; equals the total of the credit lines
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
@@ -185,6 +201,9 @@ public class AccountingJournal {
         return Optional.ofNullable(this.categoryIds);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -197,6 +216,9 @@ public class AccountingJournal {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Exchange rate to the base/home currency at the posting date
+     */
     public Optional<Double> exchangeRate() {
         return Optional.ofNullable(this.exchangeRate);
     }
@@ -205,6 +227,9 @@ public class AccountingJournal {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * True when the line amounts already include tax
+     */
     public Optional<Boolean> isInclusiveOfTax() {
         return Optional.ofNullable(this.isInclusiveOfTax);
     }
@@ -220,10 +245,16 @@ public class AccountingJournal {
         return Optional.ofNullable(this.organizationId);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> postedAt() {
         return Optional.ofNullable(this.postedAt);
     }
 
+    /**
+     * (reference to TaskProject)
+     */
     public Optional<String> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -240,6 +271,9 @@ public class AccountingJournal {
         return Optional.ofNullable(this.source);
     }
 
+    /**
+     * Posting state of the journal entry
+     */
     public Optional<AccountingJournalStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -252,10 +286,16 @@ public class AccountingJournal {
         return Optional.ofNullable(this.taxrateId);
     }
 
+    /**
+     * Total of the debit lines; equals the total of the credit lines
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -277,6 +317,9 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingJournal withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -295,6 +338,9 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * Exchange rate to the base/home currency at the posting date
+     */
     public AccountingJournal withExchangeRate(@Nullable Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -307,6 +353,9 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * True when the line amounts already include tax
+     */
     public AccountingJournal withIsInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
         this.isInclusiveOfTax = isInclusiveOfTax;
         return this;
@@ -328,12 +377,18 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingJournal withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
 
+    /**
+     * (reference to TaskProject)
+     */
     public AccountingJournal withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
@@ -358,6 +413,9 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * Posting state of the journal entry
+     */
     public AccountingJournal withStatus(@Nullable AccountingJournalStatus status) {
         this.status = status;
         return this;
@@ -376,12 +434,18 @@ public class AccountingJournal {
     }
 
 
+    /**
+     * Total of the debit lines; equals the total of the credit lines
+     */
     public AccountingJournal withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
 
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
     public AccountingJournal withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -514,6 +578,9 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
@@ -529,6 +596,9 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * Exchange rate to the base/home currency at the posting date
+         */
         public Builder exchangeRate(@Nullable Double exchangeRate) {
             this.exchangeRate = exchangeRate;
             return this;
@@ -539,6 +609,9 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * True when the line amounts already include tax
+         */
         public Builder isInclusiveOfTax(@Nullable Boolean isInclusiveOfTax) {
             this.isInclusiveOfTax = isInclusiveOfTax;
             return this;
@@ -557,11 +630,17 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
+        /**
+         * (reference to TaskProject)
+         */
         public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
@@ -582,6 +661,9 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * Posting state of the journal entry
+         */
         public Builder status(@Nullable AccountingJournalStatus status) {
             this.status = status;
             return this;
@@ -597,11 +679,17 @@ public class AccountingJournal {
             return this;
         }
 
+        /**
+         * Total of the debit lines; equals the total of the credit lines
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
+        /**
+         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
