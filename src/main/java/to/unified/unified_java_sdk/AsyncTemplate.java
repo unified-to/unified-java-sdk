@@ -7,14 +7,38 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetComputeTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListComputeTemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListComputeTemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningTemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateComputeTemplateResponse;
+import to.unified.unified_java_sdk.operations.CreateComputeTemplate;
+import to.unified.unified_java_sdk.operations.GetComputeTemplate;
 import to.unified.unified_java_sdk.operations.GetSigningTemplate;
+import to.unified.unified_java_sdk.operations.ListComputeTemplates;
 import to.unified.unified_java_sdk.operations.ListSigningTemplates;
+import to.unified.unified_java_sdk.operations.PatchComputeTemplate;
+import to.unified.unified_java_sdk.operations.RemoveComputeTemplate;
+import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -35,6 +59,52 @@ public class AsyncTemplate {
      */
     public Template sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a template
+     * 
+     * @return The async call builder
+     */
+    public CreateComputeTemplateRequestBuilder createComputeTemplate() {
+        return new CreateComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<CreateComputeTemplateResponse> createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        AsyncRequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
+              = new CreateComputeTemplate.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a template
+     * 
+     * @return The async call builder
+     */
+    public GetComputeTemplateRequestBuilder getComputeTemplate() {
+        return new GetComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<GetComputeTemplateResponse> getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        AsyncRequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
+              = new GetComputeTemplate.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -66,6 +136,29 @@ public class AsyncTemplate {
      * 
      * @return The async call builder
      */
+    public ListComputeTemplatesRequestBuilder listComputeTemplates() {
+        return new ListComputeTemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all templates
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
+     */
+    public CompletableFuture<ListComputeTemplatesResponse> listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        AsyncRequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
+              = new ListComputeTemplates.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all templates
+     * 
+     * @return The async call builder
+     */
     public ListSigningTemplatesRequestBuilder listSigningTemplates() {
         return new ListSigningTemplatesRequestBuilder(sdkConfiguration);
     }
@@ -79,6 +172,75 @@ public class AsyncTemplate {
     public CompletableFuture<ListSigningTemplatesResponse> listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
         AsyncRequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
               = new ListSigningTemplates.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a template
+     * 
+     * @return The async call builder
+     */
+    public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
+        return new PatchComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeTemplateResponse> patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        AsyncRequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
+              = new PatchComputeTemplate.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a template
+     * 
+     * @return The async call builder
+     */
+    public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
+        return new RemoveComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<RemoveComputeTemplateResponse> removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        AsyncRequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
+              = new RemoveComputeTemplate.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a template
+     * 
+     * @return The async call builder
+     */
+    public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
+        return new UpdateComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeTemplateResponse> updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        AsyncRequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
+              = new UpdateComputeTemplate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

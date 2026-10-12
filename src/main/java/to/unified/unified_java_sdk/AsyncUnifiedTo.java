@@ -173,6 +173,32 @@ public class AsyncUnifiedTo {
 
     private final AsyncSaleschannel saleschannel;
 
+    private final AsyncCompute compute;
+
+    private final AsyncDeployment deployment;
+
+    private final AsyncDomain domain;
+
+    private final AsyncEnvvar envvar;
+
+    private final AsyncGputype gputype;
+
+    private final AsyncInstance instance;
+
+    private final AsyncKey key;
+
+    private final AsyncRegion region;
+
+    private final AsyncService service;
+
+    private final AsyncSnapshot snapshot;
+
+    private final AsyncTemplate template;
+
+    private final AsyncUsage usage;
+
+    private final AsyncVolume volume;
+
     private final AsyncCrm crm;
 
     private final AsyncDeal deal;
@@ -217,6 +243,28 @@ public class AsyncUnifiedTo {
 
     private final AsyncTask task;
 
+    private final AsyncHealthcare healthcare;
+
+    private final AsyncAllergy allergy;
+
+    private final AsyncAppointment appointment;
+
+    private final AsyncCondition condition;
+
+    private final AsyncEncounter encounter;
+
+    private final AsyncImmunization immunization;
+
+    private final AsyncMedication medication;
+
+    private final AsyncObservation observation;
+
+    private final AsyncPatient patient;
+
+    private final AsyncPractitioner practitioner;
+
+    private final AsyncSlot slot;
+
     private final AsyncHris hris;
 
     private final AsyncAttendance attendance;
@@ -250,6 +298,14 @@ public class AsyncUnifiedTo {
     private final AsyncPage page;
 
     private final AsyncSpace space;
+
+    private final AsyncLegal legal;
+
+    private final AsyncMatter matter;
+
+    private final AsyncPracticearea practicearea;
+
+    private final AsyncTimeentry timeentry;
 
     private final AsyncLms lms;
 
@@ -322,8 +378,6 @@ public class AsyncUnifiedTo {
     private final AsyncSigning signing;
 
     private final AsyncSignatory signatory;
-
-    private final AsyncTemplate template;
 
     private final AsyncSocial social;
 
@@ -699,6 +753,58 @@ public class AsyncUnifiedTo {
         return saleschannel;
     }
 
+    public AsyncCompute compute() {
+        return compute;
+    }
+
+    public AsyncDeployment deployment() {
+        return deployment;
+    }
+
+    public AsyncDomain domain() {
+        return domain;
+    }
+
+    public AsyncEnvvar envvar() {
+        return envvar;
+    }
+
+    public AsyncGputype gputype() {
+        return gputype;
+    }
+
+    public AsyncInstance instance() {
+        return instance;
+    }
+
+    public AsyncKey key() {
+        return key;
+    }
+
+    public AsyncRegion region() {
+        return region;
+    }
+
+    public AsyncService service() {
+        return service;
+    }
+
+    public AsyncSnapshot snapshot() {
+        return snapshot;
+    }
+
+    public AsyncTemplate template() {
+        return template;
+    }
+
+    public AsyncUsage usage() {
+        return usage;
+    }
+
+    public AsyncVolume volume() {
+        return volume;
+    }
+
     public AsyncCrm crm() {
         return crm;
     }
@@ -787,6 +893,50 @@ public class AsyncUnifiedTo {
         return task;
     }
 
+    public AsyncHealthcare healthcare() {
+        return healthcare;
+    }
+
+    public AsyncAllergy allergy() {
+        return allergy;
+    }
+
+    public AsyncAppointment appointment() {
+        return appointment;
+    }
+
+    public AsyncCondition condition() {
+        return condition;
+    }
+
+    public AsyncEncounter encounter() {
+        return encounter;
+    }
+
+    public AsyncImmunization immunization() {
+        return immunization;
+    }
+
+    public AsyncMedication medication() {
+        return medication;
+    }
+
+    public AsyncObservation observation() {
+        return observation;
+    }
+
+    public AsyncPatient patient() {
+        return patient;
+    }
+
+    public AsyncPractitioner practitioner() {
+        return practitioner;
+    }
+
+    public AsyncSlot slot() {
+        return slot;
+    }
+
     public AsyncHris hris() {
         return hris;
     }
@@ -853,6 +1003,22 @@ public class AsyncUnifiedTo {
 
     public AsyncSpace space() {
         return space;
+    }
+
+    public AsyncLegal legal() {
+        return legal;
+    }
+
+    public AsyncMatter matter() {
+        return matter;
+    }
+
+    public AsyncPracticearea practicearea() {
+        return practicearea;
+    }
+
+    public AsyncTimeentry timeentry() {
+        return timeentry;
     }
 
     public AsyncLms lms() {
@@ -997,10 +1163,6 @@ public class AsyncUnifiedTo {
 
     public AsyncSignatory signatory() {
         return signatory;
-    }
-
-    public AsyncTemplate template() {
-        return template;
     }
 
     public AsyncSocial social() {
@@ -1197,6 +1359,19 @@ public class AsyncUnifiedTo {
         this.reservation = new AsyncReservation(syncSDK.reservation(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
+        this.compute = new AsyncCompute(syncSDK.compute(), sdkConfiguration);
+        this.deployment = new AsyncDeployment(syncSDK.deployment(), sdkConfiguration);
+        this.domain = new AsyncDomain(syncSDK.domain(), sdkConfiguration);
+        this.envvar = new AsyncEnvvar(syncSDK.envvar(), sdkConfiguration);
+        this.gputype = new AsyncGputype(syncSDK.gputype(), sdkConfiguration);
+        this.instance = new AsyncInstance(syncSDK.instance(), sdkConfiguration);
+        this.key = new AsyncKey(syncSDK.key(), sdkConfiguration);
+        this.region = new AsyncRegion(syncSDK.region(), sdkConfiguration);
+        this.service = new AsyncService(syncSDK.service(), sdkConfiguration);
+        this.snapshot = new AsyncSnapshot(syncSDK.snapshot(), sdkConfiguration);
+        this.template = new AsyncTemplate(syncSDK.template(), sdkConfiguration);
+        this.usage = new AsyncUsage(syncSDK.usage(), sdkConfiguration);
+        this.volume = new AsyncVolume(syncSDK.volume(), sdkConfiguration);
         this.crm = new AsyncCrm(syncSDK.crm(), sdkConfiguration);
         this.deal = new AsyncDeal(syncSDK.deal(), sdkConfiguration);
         this.lead = new AsyncLead(syncSDK.lead(), sdkConfiguration);
@@ -1219,6 +1394,17 @@ public class AsyncUnifiedTo {
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
         this.skill = new AsyncSkill(syncSDK.skill(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);
+        this.healthcare = new AsyncHealthcare(syncSDK.healthcare(), sdkConfiguration);
+        this.allergy = new AsyncAllergy(syncSDK.allergy(), sdkConfiguration);
+        this.appointment = new AsyncAppointment(syncSDK.appointment(), sdkConfiguration);
+        this.condition = new AsyncCondition(syncSDK.condition(), sdkConfiguration);
+        this.encounter = new AsyncEncounter(syncSDK.encounter(), sdkConfiguration);
+        this.immunization = new AsyncImmunization(syncSDK.immunization(), sdkConfiguration);
+        this.medication = new AsyncMedication(syncSDK.medication(), sdkConfiguration);
+        this.observation = new AsyncObservation(syncSDK.observation(), sdkConfiguration);
+        this.patient = new AsyncPatient(syncSDK.patient(), sdkConfiguration);
+        this.practitioner = new AsyncPractitioner(syncSDK.practitioner(), sdkConfiguration);
+        this.slot = new AsyncSlot(syncSDK.slot(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
         this.attendance = new AsyncAttendance(syncSDK.attendance(), sdkConfiguration);
         this.bankaccount = new AsyncBankaccount(syncSDK.bankaccount(), sdkConfiguration);
@@ -1236,6 +1422,10 @@ public class AsyncUnifiedTo {
         this.comment = new AsyncComment(syncSDK.comment(), sdkConfiguration);
         this.page = new AsyncPage(syncSDK.page(), sdkConfiguration);
         this.space = new AsyncSpace(syncSDK.space(), sdkConfiguration);
+        this.legal = new AsyncLegal(syncSDK.legal(), sdkConfiguration);
+        this.matter = new AsyncMatter(syncSDK.matter(), sdkConfiguration);
+        this.practicearea = new AsyncPracticearea(syncSDK.practicearea(), sdkConfiguration);
+        this.timeentry = new AsyncTimeentry(syncSDK.timeentry(), sdkConfiguration);
         this.lms = new AsyncLms(syncSDK.lms(), sdkConfiguration);
         this.class_ = new AsyncClass(syncSDK.class_(), sdkConfiguration);
         this.content = new AsyncContent(syncSDK.content(), sdkConfiguration);
@@ -1272,7 +1462,6 @@ public class AsyncUnifiedTo {
         this.tracking = new AsyncTracking(syncSDK.tracking(), sdkConfiguration);
         this.signing = new AsyncSigning(syncSDK.signing(), sdkConfiguration);
         this.signatory = new AsyncSignatory(syncSDK.signatory(), sdkConfiguration);
-        this.template = new AsyncTemplate(syncSDK.template(), sdkConfiguration);
         this.social = new AsyncSocial(syncSDK.social(), sdkConfiguration);
         this.insight = new AsyncInsight(syncSDK.insight(), sdkConfiguration);
         this.post = new AsyncPost(syncSDK.post(), sdkConfiguration);

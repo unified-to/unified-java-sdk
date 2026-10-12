@@ -210,6 +210,33 @@ public class WebhookObjectType {
     public static final WebhookObjectType SOCIAL_PROFILE = new WebhookObjectType("social_profile");
     public static final WebhookObjectType SOCIAL_REVIEW = new WebhookObjectType("social_review");
     public static final WebhookObjectType SOCIAL_INSIGHT = new WebhookObjectType("social_insight");
+    public static final WebhookObjectType LEGAL_MATTER = new WebhookObjectType("legal_matter");
+    public static final WebhookObjectType LEGAL_PRACTICEAREA = new WebhookObjectType("legal_practicearea");
+    public static final WebhookObjectType LEGAL_TIMEENTRY = new WebhookObjectType("legal_timeentry");
+    public static final WebhookObjectType LEGAL_EXPENSE = new WebhookObjectType("legal_expense");
+    public static final WebhookObjectType COMPUTE_INSTANCE = new WebhookObjectType("compute_instance");
+    public static final WebhookObjectType COMPUTE_TEMPLATE = new WebhookObjectType("compute_template");
+    public static final WebhookObjectType COMPUTE_GPUTYPE = new WebhookObjectType("compute_gputype");
+    public static final WebhookObjectType COMPUTE_REGION = new WebhookObjectType("compute_region");
+    public static final WebhookObjectType COMPUTE_VOLUME = new WebhookObjectType("compute_volume");
+    public static final WebhookObjectType COMPUTE_SNAPSHOT = new WebhookObjectType("compute_snapshot");
+    public static final WebhookObjectType COMPUTE_USAGE = new WebhookObjectType("compute_usage");
+    public static final WebhookObjectType COMPUTE_KEY = new WebhookObjectType("compute_key");
+    public static final WebhookObjectType COMPUTE_SERVICE = new WebhookObjectType("compute_service");
+    public static final WebhookObjectType COMPUTE_DEPLOYMENT = new WebhookObjectType("compute_deployment");
+    public static final WebhookObjectType COMPUTE_DOMAIN = new WebhookObjectType("compute_domain");
+    public static final WebhookObjectType COMPUTE_ENVVAR = new WebhookObjectType("compute_envvar");
+    public static final WebhookObjectType HEALTHCARE_PATIENT = new WebhookObjectType("healthcare_patient");
+    public static final WebhookObjectType HEALTHCARE_PRACTITIONER = new WebhookObjectType("healthcare_practitioner");
+    public static final WebhookObjectType HEALTHCARE_LOCATION = new WebhookObjectType("healthcare_location");
+    public static final WebhookObjectType HEALTHCARE_APPOINTMENT = new WebhookObjectType("healthcare_appointment");
+    public static final WebhookObjectType HEALTHCARE_SLOT = new WebhookObjectType("healthcare_slot");
+    public static final WebhookObjectType HEALTHCARE_ENCOUNTER = new WebhookObjectType("healthcare_encounter");
+    public static final WebhookObjectType HEALTHCARE_CONDITION = new WebhookObjectType("healthcare_condition");
+    public static final WebhookObjectType HEALTHCARE_ALLERGY = new WebhookObjectType("healthcare_allergy");
+    public static final WebhookObjectType HEALTHCARE_MEDICATION = new WebhookObjectType("healthcare_medication");
+    public static final WebhookObjectType HEALTHCARE_OBSERVATION = new WebhookObjectType("healthcare_observation");
+    public static final WebhookObjectType HEALTHCARE_IMMUNIZATION = new WebhookObjectType("healthcare_immunization");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -468,6 +495,33 @@ public class WebhookObjectType {
         map.put("social_profile", SOCIAL_PROFILE);
         map.put("social_review", SOCIAL_REVIEW);
         map.put("social_insight", SOCIAL_INSIGHT);
+        map.put("legal_matter", LEGAL_MATTER);
+        map.put("legal_practicearea", LEGAL_PRACTICEAREA);
+        map.put("legal_timeentry", LEGAL_TIMEENTRY);
+        map.put("legal_expense", LEGAL_EXPENSE);
+        map.put("compute_instance", COMPUTE_INSTANCE);
+        map.put("compute_template", COMPUTE_TEMPLATE);
+        map.put("compute_gputype", COMPUTE_GPUTYPE);
+        map.put("compute_region", COMPUTE_REGION);
+        map.put("compute_volume", COMPUTE_VOLUME);
+        map.put("compute_snapshot", COMPUTE_SNAPSHOT);
+        map.put("compute_usage", COMPUTE_USAGE);
+        map.put("compute_key", COMPUTE_KEY);
+        map.put("compute_service", COMPUTE_SERVICE);
+        map.put("compute_deployment", COMPUTE_DEPLOYMENT);
+        map.put("compute_domain", COMPUTE_DOMAIN);
+        map.put("compute_envvar", COMPUTE_ENVVAR);
+        map.put("healthcare_patient", HEALTHCARE_PATIENT);
+        map.put("healthcare_practitioner", HEALTHCARE_PRACTITIONER);
+        map.put("healthcare_location", HEALTHCARE_LOCATION);
+        map.put("healthcare_appointment", HEALTHCARE_APPOINTMENT);
+        map.put("healthcare_slot", HEALTHCARE_SLOT);
+        map.put("healthcare_encounter", HEALTHCARE_ENCOUNTER);
+        map.put("healthcare_condition", HEALTHCARE_CONDITION);
+        map.put("healthcare_allergy", HEALTHCARE_ALLERGY);
+        map.put("healthcare_medication", HEALTHCARE_MEDICATION);
+        map.put("healthcare_observation", HEALTHCARE_OBSERVATION);
+        map.put("healthcare_immunization", HEALTHCARE_IMMUNIZATION);
         return map;
     }
 
@@ -658,6 +712,33 @@ public class WebhookObjectType {
         map.put("social_profile", WebhookObjectTypeEnum.SOCIAL_PROFILE);
         map.put("social_review", WebhookObjectTypeEnum.SOCIAL_REVIEW);
         map.put("social_insight", WebhookObjectTypeEnum.SOCIAL_INSIGHT);
+        map.put("legal_matter", WebhookObjectTypeEnum.LEGAL_MATTER);
+        map.put("legal_practicearea", WebhookObjectTypeEnum.LEGAL_PRACTICEAREA);
+        map.put("legal_timeentry", WebhookObjectTypeEnum.LEGAL_TIMEENTRY);
+        map.put("legal_expense", WebhookObjectTypeEnum.LEGAL_EXPENSE);
+        map.put("compute_instance", WebhookObjectTypeEnum.COMPUTE_INSTANCE);
+        map.put("compute_template", WebhookObjectTypeEnum.COMPUTE_TEMPLATE);
+        map.put("compute_gputype", WebhookObjectTypeEnum.COMPUTE_GPUTYPE);
+        map.put("compute_region", WebhookObjectTypeEnum.COMPUTE_REGION);
+        map.put("compute_volume", WebhookObjectTypeEnum.COMPUTE_VOLUME);
+        map.put("compute_snapshot", WebhookObjectTypeEnum.COMPUTE_SNAPSHOT);
+        map.put("compute_usage", WebhookObjectTypeEnum.COMPUTE_USAGE);
+        map.put("compute_key", WebhookObjectTypeEnum.COMPUTE_KEY);
+        map.put("compute_service", WebhookObjectTypeEnum.COMPUTE_SERVICE);
+        map.put("compute_deployment", WebhookObjectTypeEnum.COMPUTE_DEPLOYMENT);
+        map.put("compute_domain", WebhookObjectTypeEnum.COMPUTE_DOMAIN);
+        map.put("compute_envvar", WebhookObjectTypeEnum.COMPUTE_ENVVAR);
+        map.put("healthcare_patient", WebhookObjectTypeEnum.HEALTHCARE_PATIENT);
+        map.put("healthcare_practitioner", WebhookObjectTypeEnum.HEALTHCARE_PRACTITIONER);
+        map.put("healthcare_location", WebhookObjectTypeEnum.HEALTHCARE_LOCATION);
+        map.put("healthcare_appointment", WebhookObjectTypeEnum.HEALTHCARE_APPOINTMENT);
+        map.put("healthcare_slot", WebhookObjectTypeEnum.HEALTHCARE_SLOT);
+        map.put("healthcare_encounter", WebhookObjectTypeEnum.HEALTHCARE_ENCOUNTER);
+        map.put("healthcare_condition", WebhookObjectTypeEnum.HEALTHCARE_CONDITION);
+        map.put("healthcare_allergy", WebhookObjectTypeEnum.HEALTHCARE_ALLERGY);
+        map.put("healthcare_medication", WebhookObjectTypeEnum.HEALTHCARE_MEDICATION);
+        map.put("healthcare_observation", WebhookObjectTypeEnum.HEALTHCARE_OBSERVATION);
+        map.put("healthcare_immunization", WebhookObjectTypeEnum.HEALTHCARE_IMMUNIZATION);
         return map;
     }
     
@@ -848,7 +929,34 @@ public class WebhookObjectType {
         SOCIAL_POST("social_post"),
         SOCIAL_PROFILE("social_profile"),
         SOCIAL_REVIEW("social_review"),
-        SOCIAL_INSIGHT("social_insight"),;
+        SOCIAL_INSIGHT("social_insight"),
+        LEGAL_MATTER("legal_matter"),
+        LEGAL_PRACTICEAREA("legal_practicearea"),
+        LEGAL_TIMEENTRY("legal_timeentry"),
+        LEGAL_EXPENSE("legal_expense"),
+        COMPUTE_INSTANCE("compute_instance"),
+        COMPUTE_TEMPLATE("compute_template"),
+        COMPUTE_GPUTYPE("compute_gputype"),
+        COMPUTE_REGION("compute_region"),
+        COMPUTE_VOLUME("compute_volume"),
+        COMPUTE_SNAPSHOT("compute_snapshot"),
+        COMPUTE_USAGE("compute_usage"),
+        COMPUTE_KEY("compute_key"),
+        COMPUTE_SERVICE("compute_service"),
+        COMPUTE_DEPLOYMENT("compute_deployment"),
+        COMPUTE_DOMAIN("compute_domain"),
+        COMPUTE_ENVVAR("compute_envvar"),
+        HEALTHCARE_PATIENT("healthcare_patient"),
+        HEALTHCARE_PRACTITIONER("healthcare_practitioner"),
+        HEALTHCARE_LOCATION("healthcare_location"),
+        HEALTHCARE_APPOINTMENT("healthcare_appointment"),
+        HEALTHCARE_SLOT("healthcare_slot"),
+        HEALTHCARE_ENCOUNTER("healthcare_encounter"),
+        HEALTHCARE_CONDITION("healthcare_condition"),
+        HEALTHCARE_ALLERGY("healthcare_allergy"),
+        HEALTHCARE_MEDICATION("healthcare_medication"),
+        HEALTHCARE_OBSERVATION("healthcare_observation"),
+        HEALTHCARE_IMMUNIZATION("healthcare_immunization"),;
 
         private final String value;
 

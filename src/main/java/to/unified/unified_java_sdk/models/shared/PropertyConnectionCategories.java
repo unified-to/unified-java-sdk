@@ -55,6 +55,9 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories CDP = new PropertyConnectionCategories("cdp");
     public static final PropertyConnectionCategories PERFORMANCE = new PropertyConnectionCategories("performance");
     public static final PropertyConnectionCategories SOCIAL = new PropertyConnectionCategories("social");
+    public static final PropertyConnectionCategories LEGAL = new PropertyConnectionCategories("legal");
+    public static final PropertyConnectionCategories COMPUTE = new PropertyConnectionCategories("compute");
+    public static final PropertyConnectionCategories HEALTHCARE = new PropertyConnectionCategories("healthcare");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -163,6 +166,9 @@ public class PropertyConnectionCategories {
         map.put("cdp", CDP);
         map.put("performance", PERFORMANCE);
         map.put("social", SOCIAL);
+        map.put("legal", LEGAL);
+        map.put("compute", COMPUTE);
+        map.put("healthcare", HEALTHCARE);
         return map;
     }
 
@@ -203,6 +209,9 @@ public class PropertyConnectionCategories {
         map.put("cdp", PropertyConnectionCategoriesEnum.CDP);
         map.put("performance", PropertyConnectionCategoriesEnum.PERFORMANCE);
         map.put("social", PropertyConnectionCategoriesEnum.SOCIAL);
+        map.put("legal", PropertyConnectionCategoriesEnum.LEGAL);
+        map.put("compute", PropertyConnectionCategoriesEnum.COMPUTE);
+        map.put("healthcare", PropertyConnectionCategoriesEnum.HEALTHCARE);
         return map;
     }
     
@@ -243,7 +252,10 @@ public class PropertyConnectionCategories {
         DATASTORE("datastore"),
         CDP("cdp"),
         PERFORMANCE("performance"),
-        SOCIAL("social"),;
+        SOCIAL("social"),
+        LEGAL("legal"),
+        COMPUTE("compute"),
+        HEALTHCARE("healthcare"),;
 
         private final String value;
 

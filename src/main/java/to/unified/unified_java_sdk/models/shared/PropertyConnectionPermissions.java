@@ -363,6 +363,57 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SOCIAL_REVIEW_WRITE = new PropertyConnectionPermissions("social_review_write");
     public static final PropertyConnectionPermissions SOCIAL_INSIGHT_READ = new PropertyConnectionPermissions("social_insight_read");
     public static final PropertyConnectionPermissions SOCIAL_INSIGHT_WRITE = new PropertyConnectionPermissions("social_insight_write");
+    public static final PropertyConnectionPermissions LEGAL_MATTER_READ = new PropertyConnectionPermissions("legal_matter_read");
+    public static final PropertyConnectionPermissions LEGAL_MATTER_WRITE = new PropertyConnectionPermissions("legal_matter_write");
+    public static final PropertyConnectionPermissions LEGAL_PRACTICEAREA_READ = new PropertyConnectionPermissions("legal_practicearea_read");
+    public static final PropertyConnectionPermissions LEGAL_PRACTICEAREA_WRITE = new PropertyConnectionPermissions("legal_practicearea_write");
+    public static final PropertyConnectionPermissions LEGAL_TIMEENTRY_READ = new PropertyConnectionPermissions("legal_timeentry_read");
+    public static final PropertyConnectionPermissions LEGAL_TIMEENTRY_WRITE = new PropertyConnectionPermissions("legal_timeentry_write");
+    public static final PropertyConnectionPermissions LEGAL_EXPENSE_READ = new PropertyConnectionPermissions("legal_expense_read");
+    public static final PropertyConnectionPermissions LEGAL_EXPENSE_WRITE = new PropertyConnectionPermissions("legal_expense_write");
+    public static final PropertyConnectionPermissions COMPUTE_INSTANCE_READ = new PropertyConnectionPermissions("compute_instance_read");
+    public static final PropertyConnectionPermissions COMPUTE_INSTANCE_WRITE = new PropertyConnectionPermissions("compute_instance_write");
+    public static final PropertyConnectionPermissions COMPUTE_TEMPLATE_READ = new PropertyConnectionPermissions("compute_template_read");
+    public static final PropertyConnectionPermissions COMPUTE_TEMPLATE_WRITE = new PropertyConnectionPermissions("compute_template_write");
+    public static final PropertyConnectionPermissions COMPUTE_GPUTYPE_READ = new PropertyConnectionPermissions("compute_gputype_read");
+    public static final PropertyConnectionPermissions COMPUTE_REGION_READ = new PropertyConnectionPermissions("compute_region_read");
+    public static final PropertyConnectionPermissions COMPUTE_VOLUME_READ = new PropertyConnectionPermissions("compute_volume_read");
+    public static final PropertyConnectionPermissions COMPUTE_VOLUME_WRITE = new PropertyConnectionPermissions("compute_volume_write");
+    public static final PropertyConnectionPermissions COMPUTE_SNAPSHOT_READ = new PropertyConnectionPermissions("compute_snapshot_read");
+    public static final PropertyConnectionPermissions COMPUTE_SNAPSHOT_WRITE = new PropertyConnectionPermissions("compute_snapshot_write");
+    public static final PropertyConnectionPermissions COMPUTE_USAGE_READ = new PropertyConnectionPermissions("compute_usage_read");
+    public static final PropertyConnectionPermissions COMPUTE_KEY_READ = new PropertyConnectionPermissions("compute_key_read");
+    public static final PropertyConnectionPermissions COMPUTE_KEY_WRITE = new PropertyConnectionPermissions("compute_key_write");
+    public static final PropertyConnectionPermissions COMPUTE_SERVICE_READ = new PropertyConnectionPermissions("compute_service_read");
+    public static final PropertyConnectionPermissions COMPUTE_SERVICE_WRITE = new PropertyConnectionPermissions("compute_service_write");
+    public static final PropertyConnectionPermissions COMPUTE_DEPLOYMENT_READ = new PropertyConnectionPermissions("compute_deployment_read");
+    public static final PropertyConnectionPermissions COMPUTE_DEPLOYMENT_WRITE = new PropertyConnectionPermissions("compute_deployment_write");
+    public static final PropertyConnectionPermissions COMPUTE_DOMAIN_READ = new PropertyConnectionPermissions("compute_domain_read");
+    public static final PropertyConnectionPermissions COMPUTE_DOMAIN_WRITE = new PropertyConnectionPermissions("compute_domain_write");
+    public static final PropertyConnectionPermissions COMPUTE_ENVVAR_READ = new PropertyConnectionPermissions("compute_envvar_read");
+    public static final PropertyConnectionPermissions COMPUTE_ENVVAR_WRITE = new PropertyConnectionPermissions("compute_envvar_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_PATIENT_READ = new PropertyConnectionPermissions("healthcare_patient_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_PATIENT_WRITE = new PropertyConnectionPermissions("healthcare_patient_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_PRACTITIONER_READ = new PropertyConnectionPermissions("healthcare_practitioner_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_PRACTITIONER_WRITE = new PropertyConnectionPermissions("healthcare_practitioner_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_LOCATION_READ = new PropertyConnectionPermissions("healthcare_location_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_LOCATION_WRITE = new PropertyConnectionPermissions("healthcare_location_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_APPOINTMENT_READ = new PropertyConnectionPermissions("healthcare_appointment_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_APPOINTMENT_WRITE = new PropertyConnectionPermissions("healthcare_appointment_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_SLOT_READ = new PropertyConnectionPermissions("healthcare_slot_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_SLOT_WRITE = new PropertyConnectionPermissions("healthcare_slot_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_ENCOUNTER_READ = new PropertyConnectionPermissions("healthcare_encounter_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_ENCOUNTER_WRITE = new PropertyConnectionPermissions("healthcare_encounter_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_CONDITION_READ = new PropertyConnectionPermissions("healthcare_condition_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_CONDITION_WRITE = new PropertyConnectionPermissions("healthcare_condition_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_ALLERGY_READ = new PropertyConnectionPermissions("healthcare_allergy_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_ALLERGY_WRITE = new PropertyConnectionPermissions("healthcare_allergy_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_MEDICATION_READ = new PropertyConnectionPermissions("healthcare_medication_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_MEDICATION_WRITE = new PropertyConnectionPermissions("healthcare_medication_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_OBSERVATION_READ = new PropertyConnectionPermissions("healthcare_observation_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_OBSERVATION_WRITE = new PropertyConnectionPermissions("healthcare_observation_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_IMMUNIZATION_READ = new PropertyConnectionPermissions("healthcare_immunization_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_IMMUNIZATION_WRITE = new PropertyConnectionPermissions("healthcare_immunization_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -779,6 +830,57 @@ public class PropertyConnectionPermissions {
         map.put("social_review_write", SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", SOCIAL_INSIGHT_WRITE);
+        map.put("legal_matter_read", LEGAL_MATTER_READ);
+        map.put("legal_matter_write", LEGAL_MATTER_WRITE);
+        map.put("legal_practicearea_read", LEGAL_PRACTICEAREA_READ);
+        map.put("legal_practicearea_write", LEGAL_PRACTICEAREA_WRITE);
+        map.put("legal_timeentry_read", LEGAL_TIMEENTRY_READ);
+        map.put("legal_timeentry_write", LEGAL_TIMEENTRY_WRITE);
+        map.put("legal_expense_read", LEGAL_EXPENSE_READ);
+        map.put("legal_expense_write", LEGAL_EXPENSE_WRITE);
+        map.put("compute_instance_read", COMPUTE_INSTANCE_READ);
+        map.put("compute_instance_write", COMPUTE_INSTANCE_WRITE);
+        map.put("compute_template_read", COMPUTE_TEMPLATE_READ);
+        map.put("compute_template_write", COMPUTE_TEMPLATE_WRITE);
+        map.put("compute_gputype_read", COMPUTE_GPUTYPE_READ);
+        map.put("compute_region_read", COMPUTE_REGION_READ);
+        map.put("compute_volume_read", COMPUTE_VOLUME_READ);
+        map.put("compute_volume_write", COMPUTE_VOLUME_WRITE);
+        map.put("compute_snapshot_read", COMPUTE_SNAPSHOT_READ);
+        map.put("compute_snapshot_write", COMPUTE_SNAPSHOT_WRITE);
+        map.put("compute_usage_read", COMPUTE_USAGE_READ);
+        map.put("compute_key_read", COMPUTE_KEY_READ);
+        map.put("compute_key_write", COMPUTE_KEY_WRITE);
+        map.put("compute_service_read", COMPUTE_SERVICE_READ);
+        map.put("compute_service_write", COMPUTE_SERVICE_WRITE);
+        map.put("compute_deployment_read", COMPUTE_DEPLOYMENT_READ);
+        map.put("compute_deployment_write", COMPUTE_DEPLOYMENT_WRITE);
+        map.put("compute_domain_read", COMPUTE_DOMAIN_READ);
+        map.put("compute_domain_write", COMPUTE_DOMAIN_WRITE);
+        map.put("compute_envvar_read", COMPUTE_ENVVAR_READ);
+        map.put("compute_envvar_write", COMPUTE_ENVVAR_WRITE);
+        map.put("healthcare_patient_read", HEALTHCARE_PATIENT_READ);
+        map.put("healthcare_patient_write", HEALTHCARE_PATIENT_WRITE);
+        map.put("healthcare_practitioner_read", HEALTHCARE_PRACTITIONER_READ);
+        map.put("healthcare_practitioner_write", HEALTHCARE_PRACTITIONER_WRITE);
+        map.put("healthcare_location_read", HEALTHCARE_LOCATION_READ);
+        map.put("healthcare_location_write", HEALTHCARE_LOCATION_WRITE);
+        map.put("healthcare_appointment_read", HEALTHCARE_APPOINTMENT_READ);
+        map.put("healthcare_appointment_write", HEALTHCARE_APPOINTMENT_WRITE);
+        map.put("healthcare_slot_read", HEALTHCARE_SLOT_READ);
+        map.put("healthcare_slot_write", HEALTHCARE_SLOT_WRITE);
+        map.put("healthcare_encounter_read", HEALTHCARE_ENCOUNTER_READ);
+        map.put("healthcare_encounter_write", HEALTHCARE_ENCOUNTER_WRITE);
+        map.put("healthcare_condition_read", HEALTHCARE_CONDITION_READ);
+        map.put("healthcare_condition_write", HEALTHCARE_CONDITION_WRITE);
+        map.put("healthcare_allergy_read", HEALTHCARE_ALLERGY_READ);
+        map.put("healthcare_allergy_write", HEALTHCARE_ALLERGY_WRITE);
+        map.put("healthcare_medication_read", HEALTHCARE_MEDICATION_READ);
+        map.put("healthcare_medication_write", HEALTHCARE_MEDICATION_WRITE);
+        map.put("healthcare_observation_read", HEALTHCARE_OBSERVATION_READ);
+        map.put("healthcare_observation_write", HEALTHCARE_OBSERVATION_WRITE);
+        map.put("healthcare_immunization_read", HEALTHCARE_IMMUNIZATION_READ);
+        map.put("healthcare_immunization_write", HEALTHCARE_IMMUNIZATION_WRITE);
         return map;
     }
 
@@ -1127,6 +1229,57 @@ public class PropertyConnectionPermissions {
         map.put("social_review_write", PropertyConnectionPermissionsEnum.SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_WRITE);
+        map.put("legal_matter_read", PropertyConnectionPermissionsEnum.LEGAL_MATTER_READ);
+        map.put("legal_matter_write", PropertyConnectionPermissionsEnum.LEGAL_MATTER_WRITE);
+        map.put("legal_practicearea_read", PropertyConnectionPermissionsEnum.LEGAL_PRACTICEAREA_READ);
+        map.put("legal_practicearea_write", PropertyConnectionPermissionsEnum.LEGAL_PRACTICEAREA_WRITE);
+        map.put("legal_timeentry_read", PropertyConnectionPermissionsEnum.LEGAL_TIMEENTRY_READ);
+        map.put("legal_timeentry_write", PropertyConnectionPermissionsEnum.LEGAL_TIMEENTRY_WRITE);
+        map.put("legal_expense_read", PropertyConnectionPermissionsEnum.LEGAL_EXPENSE_READ);
+        map.put("legal_expense_write", PropertyConnectionPermissionsEnum.LEGAL_EXPENSE_WRITE);
+        map.put("compute_instance_read", PropertyConnectionPermissionsEnum.COMPUTE_INSTANCE_READ);
+        map.put("compute_instance_write", PropertyConnectionPermissionsEnum.COMPUTE_INSTANCE_WRITE);
+        map.put("compute_template_read", PropertyConnectionPermissionsEnum.COMPUTE_TEMPLATE_READ);
+        map.put("compute_template_write", PropertyConnectionPermissionsEnum.COMPUTE_TEMPLATE_WRITE);
+        map.put("compute_gputype_read", PropertyConnectionPermissionsEnum.COMPUTE_GPUTYPE_READ);
+        map.put("compute_region_read", PropertyConnectionPermissionsEnum.COMPUTE_REGION_READ);
+        map.put("compute_volume_read", PropertyConnectionPermissionsEnum.COMPUTE_VOLUME_READ);
+        map.put("compute_volume_write", PropertyConnectionPermissionsEnum.COMPUTE_VOLUME_WRITE);
+        map.put("compute_snapshot_read", PropertyConnectionPermissionsEnum.COMPUTE_SNAPSHOT_READ);
+        map.put("compute_snapshot_write", PropertyConnectionPermissionsEnum.COMPUTE_SNAPSHOT_WRITE);
+        map.put("compute_usage_read", PropertyConnectionPermissionsEnum.COMPUTE_USAGE_READ);
+        map.put("compute_key_read", PropertyConnectionPermissionsEnum.COMPUTE_KEY_READ);
+        map.put("compute_key_write", PropertyConnectionPermissionsEnum.COMPUTE_KEY_WRITE);
+        map.put("compute_service_read", PropertyConnectionPermissionsEnum.COMPUTE_SERVICE_READ);
+        map.put("compute_service_write", PropertyConnectionPermissionsEnum.COMPUTE_SERVICE_WRITE);
+        map.put("compute_deployment_read", PropertyConnectionPermissionsEnum.COMPUTE_DEPLOYMENT_READ);
+        map.put("compute_deployment_write", PropertyConnectionPermissionsEnum.COMPUTE_DEPLOYMENT_WRITE);
+        map.put("compute_domain_read", PropertyConnectionPermissionsEnum.COMPUTE_DOMAIN_READ);
+        map.put("compute_domain_write", PropertyConnectionPermissionsEnum.COMPUTE_DOMAIN_WRITE);
+        map.put("compute_envvar_read", PropertyConnectionPermissionsEnum.COMPUTE_ENVVAR_READ);
+        map.put("compute_envvar_write", PropertyConnectionPermissionsEnum.COMPUTE_ENVVAR_WRITE);
+        map.put("healthcare_patient_read", PropertyConnectionPermissionsEnum.HEALTHCARE_PATIENT_READ);
+        map.put("healthcare_patient_write", PropertyConnectionPermissionsEnum.HEALTHCARE_PATIENT_WRITE);
+        map.put("healthcare_practitioner_read", PropertyConnectionPermissionsEnum.HEALTHCARE_PRACTITIONER_READ);
+        map.put("healthcare_practitioner_write", PropertyConnectionPermissionsEnum.HEALTHCARE_PRACTITIONER_WRITE);
+        map.put("healthcare_location_read", PropertyConnectionPermissionsEnum.HEALTHCARE_LOCATION_READ);
+        map.put("healthcare_location_write", PropertyConnectionPermissionsEnum.HEALTHCARE_LOCATION_WRITE);
+        map.put("healthcare_appointment_read", PropertyConnectionPermissionsEnum.HEALTHCARE_APPOINTMENT_READ);
+        map.put("healthcare_appointment_write", PropertyConnectionPermissionsEnum.HEALTHCARE_APPOINTMENT_WRITE);
+        map.put("healthcare_slot_read", PropertyConnectionPermissionsEnum.HEALTHCARE_SLOT_READ);
+        map.put("healthcare_slot_write", PropertyConnectionPermissionsEnum.HEALTHCARE_SLOT_WRITE);
+        map.put("healthcare_encounter_read", PropertyConnectionPermissionsEnum.HEALTHCARE_ENCOUNTER_READ);
+        map.put("healthcare_encounter_write", PropertyConnectionPermissionsEnum.HEALTHCARE_ENCOUNTER_WRITE);
+        map.put("healthcare_condition_read", PropertyConnectionPermissionsEnum.HEALTHCARE_CONDITION_READ);
+        map.put("healthcare_condition_write", PropertyConnectionPermissionsEnum.HEALTHCARE_CONDITION_WRITE);
+        map.put("healthcare_allergy_read", PropertyConnectionPermissionsEnum.HEALTHCARE_ALLERGY_READ);
+        map.put("healthcare_allergy_write", PropertyConnectionPermissionsEnum.HEALTHCARE_ALLERGY_WRITE);
+        map.put("healthcare_medication_read", PropertyConnectionPermissionsEnum.HEALTHCARE_MEDICATION_READ);
+        map.put("healthcare_medication_write", PropertyConnectionPermissionsEnum.HEALTHCARE_MEDICATION_WRITE);
+        map.put("healthcare_observation_read", PropertyConnectionPermissionsEnum.HEALTHCARE_OBSERVATION_READ);
+        map.put("healthcare_observation_write", PropertyConnectionPermissionsEnum.HEALTHCARE_OBSERVATION_WRITE);
+        map.put("healthcare_immunization_read", PropertyConnectionPermissionsEnum.HEALTHCARE_IMMUNIZATION_READ);
+        map.put("healthcare_immunization_write", PropertyConnectionPermissionsEnum.HEALTHCARE_IMMUNIZATION_WRITE);
         return map;
     }
     
@@ -1475,7 +1628,58 @@ public class PropertyConnectionPermissions {
         SOCIAL_REVIEW_READ("social_review_read"),
         SOCIAL_REVIEW_WRITE("social_review_write"),
         SOCIAL_INSIGHT_READ("social_insight_read"),
-        SOCIAL_INSIGHT_WRITE("social_insight_write"),;
+        SOCIAL_INSIGHT_WRITE("social_insight_write"),
+        LEGAL_MATTER_READ("legal_matter_read"),
+        LEGAL_MATTER_WRITE("legal_matter_write"),
+        LEGAL_PRACTICEAREA_READ("legal_practicearea_read"),
+        LEGAL_PRACTICEAREA_WRITE("legal_practicearea_write"),
+        LEGAL_TIMEENTRY_READ("legal_timeentry_read"),
+        LEGAL_TIMEENTRY_WRITE("legal_timeentry_write"),
+        LEGAL_EXPENSE_READ("legal_expense_read"),
+        LEGAL_EXPENSE_WRITE("legal_expense_write"),
+        COMPUTE_INSTANCE_READ("compute_instance_read"),
+        COMPUTE_INSTANCE_WRITE("compute_instance_write"),
+        COMPUTE_TEMPLATE_READ("compute_template_read"),
+        COMPUTE_TEMPLATE_WRITE("compute_template_write"),
+        COMPUTE_GPUTYPE_READ("compute_gputype_read"),
+        COMPUTE_REGION_READ("compute_region_read"),
+        COMPUTE_VOLUME_READ("compute_volume_read"),
+        COMPUTE_VOLUME_WRITE("compute_volume_write"),
+        COMPUTE_SNAPSHOT_READ("compute_snapshot_read"),
+        COMPUTE_SNAPSHOT_WRITE("compute_snapshot_write"),
+        COMPUTE_USAGE_READ("compute_usage_read"),
+        COMPUTE_KEY_READ("compute_key_read"),
+        COMPUTE_KEY_WRITE("compute_key_write"),
+        COMPUTE_SERVICE_READ("compute_service_read"),
+        COMPUTE_SERVICE_WRITE("compute_service_write"),
+        COMPUTE_DEPLOYMENT_READ("compute_deployment_read"),
+        COMPUTE_DEPLOYMENT_WRITE("compute_deployment_write"),
+        COMPUTE_DOMAIN_READ("compute_domain_read"),
+        COMPUTE_DOMAIN_WRITE("compute_domain_write"),
+        COMPUTE_ENVVAR_READ("compute_envvar_read"),
+        COMPUTE_ENVVAR_WRITE("compute_envvar_write"),
+        HEALTHCARE_PATIENT_READ("healthcare_patient_read"),
+        HEALTHCARE_PATIENT_WRITE("healthcare_patient_write"),
+        HEALTHCARE_PRACTITIONER_READ("healthcare_practitioner_read"),
+        HEALTHCARE_PRACTITIONER_WRITE("healthcare_practitioner_write"),
+        HEALTHCARE_LOCATION_READ("healthcare_location_read"),
+        HEALTHCARE_LOCATION_WRITE("healthcare_location_write"),
+        HEALTHCARE_APPOINTMENT_READ("healthcare_appointment_read"),
+        HEALTHCARE_APPOINTMENT_WRITE("healthcare_appointment_write"),
+        HEALTHCARE_SLOT_READ("healthcare_slot_read"),
+        HEALTHCARE_SLOT_WRITE("healthcare_slot_write"),
+        HEALTHCARE_ENCOUNTER_READ("healthcare_encounter_read"),
+        HEALTHCARE_ENCOUNTER_WRITE("healthcare_encounter_write"),
+        HEALTHCARE_CONDITION_READ("healthcare_condition_read"),
+        HEALTHCARE_CONDITION_WRITE("healthcare_condition_write"),
+        HEALTHCARE_ALLERGY_READ("healthcare_allergy_read"),
+        HEALTHCARE_ALLERGY_WRITE("healthcare_allergy_write"),
+        HEALTHCARE_MEDICATION_READ("healthcare_medication_read"),
+        HEALTHCARE_MEDICATION_WRITE("healthcare_medication_write"),
+        HEALTHCARE_OBSERVATION_READ("healthcare_observation_read"),
+        HEALTHCARE_OBSERVATION_WRITE("healthcare_observation_write"),
+        HEALTHCARE_IMMUNIZATION_READ("healthcare_immunization_read"),
+        HEALTHCARE_IMMUNIZATION_WRITE("healthcare_immunization_write"),;
 
         private final String value;
 

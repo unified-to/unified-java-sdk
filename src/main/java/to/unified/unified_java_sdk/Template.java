@@ -6,14 +6,38 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.GetComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetComputeTemplateResponse;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSigningTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListComputeTemplatesResponse;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSigningTemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveComputeTemplateResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateResponse;
+import to.unified.unified_java_sdk.operations.CreateComputeTemplate;
+import to.unified.unified_java_sdk.operations.GetComputeTemplate;
 import to.unified.unified_java_sdk.operations.GetSigningTemplate;
+import to.unified.unified_java_sdk.operations.ListComputeTemplates;
 import to.unified.unified_java_sdk.operations.ListSigningTemplates;
+import to.unified.unified_java_sdk.operations.PatchComputeTemplate;
+import to.unified.unified_java_sdk.operations.RemoveComputeTemplate;
+import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -34,6 +58,50 @@ public class Template {
      */
     public AsyncTemplate async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a template
+     * 
+     * @return The call builder
+     */
+    public CreateComputeTemplateRequestBuilder createComputeTemplate() {
+        return new CreateComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateComputeTemplateResponse createComputeTemplate(@Nonnull CreateComputeTemplateRequest request) {
+        RequestOperation<CreateComputeTemplateRequest, CreateComputeTemplateResponse> operation
+              = new CreateComputeTemplate.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * @return The call builder
+     */
+    public GetComputeTemplateRequestBuilder getComputeTemplate() {
+        return new GetComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetComputeTemplateResponse getComputeTemplate(@Nonnull GetComputeTemplateRequest request) {
+        RequestOperation<GetComputeTemplateRequest, GetComputeTemplateResponse> operation
+              = new GetComputeTemplate.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -63,6 +131,28 @@ public class Template {
      * 
      * @return The call builder
      */
+    public ListComputeTemplatesRequestBuilder listComputeTemplates() {
+        return new ListComputeTemplatesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all templates
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListComputeTemplatesResponse listComputeTemplates(@Nonnull ListComputeTemplatesRequest request) {
+        RequestOperation<ListComputeTemplatesRequest, ListComputeTemplatesResponse> operation
+              = new ListComputeTemplates.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all templates
+     * 
+     * @return The call builder
+     */
     public ListSigningTemplatesRequestBuilder listSigningTemplates() {
         return new ListSigningTemplatesRequestBuilder(sdkConfiguration);
     }
@@ -77,6 +167,72 @@ public class Template {
     public ListSigningTemplatesResponse listSigningTemplates(@Nonnull ListSigningTemplatesRequest request) {
         RequestOperation<ListSigningTemplatesRequest, ListSigningTemplatesResponse> operation
               = new ListSigningTemplates.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a template
+     * 
+     * @return The call builder
+     */
+    public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
+        return new PatchComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeTemplateResponse patchComputeTemplate(@Nonnull PatchComputeTemplateRequest request) {
+        RequestOperation<PatchComputeTemplateRequest, PatchComputeTemplateResponse> operation
+              = new PatchComputeTemplate.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a template
+     * 
+     * @return The call builder
+     */
+    public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
+        return new RemoveComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveComputeTemplateResponse removeComputeTemplate(@Nonnull RemoveComputeTemplateRequest request) {
+        RequestOperation<RemoveComputeTemplateRequest, RemoveComputeTemplateResponse> operation
+              = new RemoveComputeTemplate.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a template
+     * 
+     * @return The call builder
+     */
+    public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
+        return new UpdateComputeTemplateRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a template
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeTemplateResponse updateComputeTemplate(@Nonnull UpdateComputeTemplateRequest request) {
+        RequestOperation<UpdateComputeTemplateRequest, UpdateComputeTemplateResponse> operation
+              = new UpdateComputeTemplate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

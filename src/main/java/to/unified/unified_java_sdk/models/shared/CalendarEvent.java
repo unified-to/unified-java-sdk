@@ -85,6 +85,13 @@ public class CalendarEvent {
     @JsonProperty("location")
     private String location;
 
+    /**
+     * pointer to Legal Matter
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("matter_id")
+    private String matterId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
@@ -165,6 +172,7 @@ public class CalendarEvent {
             @JsonProperty("is_free") @Nullable Boolean isFree,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("location") @Nullable String location,
+            @JsonProperty("matter_id") @Nullable String matterId,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organizer") @Nullable PropertyCalendarEventOrganizer organizer,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -189,6 +197,7 @@ public class CalendarEvent {
         this.isFree = isFree;
         this.isPrivate = isPrivate;
         this.location = location;
+        this.matterId = matterId;
         this.notes = notes;
         this.organizer = organizer;
         this.raw = raw;
@@ -211,7 +220,8 @@ public class CalendarEvent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<CalendarAttachment>> attachments() {
@@ -269,6 +279,13 @@ public class CalendarEvent {
 
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    /**
+     * pointer to Legal Matter
+     */
+    public Optional<String> matterId() {
+        return Optional.ofNullable(this.matterId);
     }
 
     public Optional<String> notes() {
@@ -414,6 +431,15 @@ public class CalendarEvent {
     }
 
 
+    /**
+     * pointer to Legal Matter
+     */
+    public CalendarEvent withMatterId(@Nullable String matterId) {
+        this.matterId = matterId;
+        return this;
+    }
+
+
     public CalendarEvent withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -517,6 +543,7 @@ public class CalendarEvent {
             Utils.enhancedDeepEquals(this.isFree, other.isFree) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.matterId, other.matterId) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizer, other.organizer) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -538,10 +565,11 @@ public class CalendarEvent {
             conference, createdAt, endAt,
             hasConference, id, isAllDay,
             isFree, isPrivate, location,
-            notes, organizer, raw,
-            recurrence, recurringEventId, sendNotifications,
-            startAt, status, subject,
-            timezone, updatedAt, webUrl);
+            matterId, notes, organizer,
+            raw, recurrence, recurringEventId,
+            sendNotifications, startAt, status,
+            subject, timezone, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -559,6 +587,7 @@ public class CalendarEvent {
                 "isFree", isFree,
                 "isPrivate", isPrivate,
                 "location", location,
+                "matterId", matterId,
                 "notes", notes,
                 "organizer", organizer,
                 "raw", raw,
@@ -599,6 +628,8 @@ public class CalendarEvent {
         private Boolean isPrivate;
 
         private String location;
+
+        private String matterId;
 
         private String notes;
 
@@ -697,6 +728,14 @@ public class CalendarEvent {
             return this;
         }
 
+        /**
+         * pointer to Legal Matter
+         */
+        public Builder matterId(@Nullable String matterId) {
+            this.matterId = matterId;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -772,10 +811,11 @@ public class CalendarEvent {
                 conference, createdAt, endAt,
                 hasConference, id, isAllDay,
                 isFree, isPrivate, location,
-                notes, organizer, raw,
-                recurrence, recurringEventId, sendNotifications,
-                startAt, status, subject,
-                timezone, updatedAt, webUrl);
+                matterId, notes, organizer,
+                raw, recurrence, recurringEventId,
+                sendNotifications, startAt, status,
+                subject, timezone, updatedAt,
+                webUrl);
         }
 
     }

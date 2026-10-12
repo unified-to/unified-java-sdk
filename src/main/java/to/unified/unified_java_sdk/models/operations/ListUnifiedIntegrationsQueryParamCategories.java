@@ -43,7 +43,10 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     DATASTORE("datastore"),
     CDP("cdp"),
     PERFORMANCE("performance"),
-    SOCIAL("social");
+    SOCIAL("social"),
+    LEGAL("legal"),
+    COMPUTE("compute"),
+    HEALTHCARE("healthcare");
 
     @JsonValue
     private final String value;

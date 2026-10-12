@@ -55,6 +55,9 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories CDP = new PropertyIntegrationCategories("cdp");
     public static final PropertyIntegrationCategories PERFORMANCE = new PropertyIntegrationCategories("performance");
     public static final PropertyIntegrationCategories SOCIAL = new PropertyIntegrationCategories("social");
+    public static final PropertyIntegrationCategories LEGAL = new PropertyIntegrationCategories("legal");
+    public static final PropertyIntegrationCategories COMPUTE = new PropertyIntegrationCategories("compute");
+    public static final PropertyIntegrationCategories HEALTHCARE = new PropertyIntegrationCategories("healthcare");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -163,6 +166,9 @@ public class PropertyIntegrationCategories {
         map.put("cdp", CDP);
         map.put("performance", PERFORMANCE);
         map.put("social", SOCIAL);
+        map.put("legal", LEGAL);
+        map.put("compute", COMPUTE);
+        map.put("healthcare", HEALTHCARE);
         return map;
     }
 
@@ -203,6 +209,9 @@ public class PropertyIntegrationCategories {
         map.put("cdp", PropertyIntegrationCategoriesEnum.CDP);
         map.put("performance", PropertyIntegrationCategoriesEnum.PERFORMANCE);
         map.put("social", PropertyIntegrationCategoriesEnum.SOCIAL);
+        map.put("legal", PropertyIntegrationCategoriesEnum.LEGAL);
+        map.put("compute", PropertyIntegrationCategoriesEnum.COMPUTE);
+        map.put("healthcare", PropertyIntegrationCategoriesEnum.HEALTHCARE);
         return map;
     }
     
@@ -243,7 +252,10 @@ public class PropertyIntegrationCategories {
         DATASTORE("datastore"),
         CDP("cdp"),
         PERFORMANCE("performance"),
-        SOCIAL("social"),;
+        SOCIAL("social"),
+        LEGAL("legal"),
+        COMPUTE("compute"),
+        HEALTHCARE("healthcare"),;
 
         private final String value;
 

@@ -281,6 +281,45 @@ public class UnifiedTo {
     private final Saleschannel saleschannel;
 
 
+    private final Compute compute;
+
+
+    private final Deployment deployment;
+
+
+    private final Domain domain;
+
+
+    private final Envvar envvar;
+
+
+    private final Gputype gputype;
+
+
+    private final Instance instance;
+
+
+    private final Key key;
+
+
+    private final Region region;
+
+
+    private final Service service;
+
+
+    private final Snapshot snapshot;
+
+
+    private final Template template;
+
+
+    private final Usage usage;
+
+
+    private final Volume volume;
+
+
     private final Crm crm;
 
 
@@ -347,6 +386,39 @@ public class UnifiedTo {
     private final Task task;
 
 
+    private final Healthcare healthcare;
+
+
+    private final Allergy allergy;
+
+
+    private final Appointment appointment;
+
+
+    private final Condition condition;
+
+
+    private final Encounter encounter;
+
+
+    private final Immunization immunization;
+
+
+    private final Medication medication;
+
+
+    private final Observation observation;
+
+
+    private final Patient patient;
+
+
+    private final Practitioner practitioner;
+
+
+    private final Slot slot;
+
+
     private final Hris hris;
 
 
@@ -396,6 +468,18 @@ public class UnifiedTo {
 
 
     private final Space space;
+
+
+    private final Legal legal;
+
+
+    private final Matter matter;
+
+
+    private final Practicearea practicearea;
+
+
+    private final Timeentry timeentry;
 
 
     private final Lms lms;
@@ -504,9 +588,6 @@ public class UnifiedTo {
 
 
     private final Signatory signatory;
-
-
-    private final Template template;
 
 
     private final Social social;
@@ -990,6 +1071,71 @@ public class UnifiedTo {
     }
 
 
+    public Compute compute() {
+        return compute;
+    }
+
+
+    public Deployment deployment() {
+        return deployment;
+    }
+
+
+    public Domain domain() {
+        return domain;
+    }
+
+
+    public Envvar envvar() {
+        return envvar;
+    }
+
+
+    public Gputype gputype() {
+        return gputype;
+    }
+
+
+    public Instance instance() {
+        return instance;
+    }
+
+
+    public Key key() {
+        return key;
+    }
+
+
+    public Region region() {
+        return region;
+    }
+
+
+    public Service service() {
+        return service;
+    }
+
+
+    public Snapshot snapshot() {
+        return snapshot;
+    }
+
+
+    public Template template() {
+        return template;
+    }
+
+
+    public Usage usage() {
+        return usage;
+    }
+
+
+    public Volume volume() {
+        return volume;
+    }
+
+
     public Crm crm() {
         return crm;
     }
@@ -1100,6 +1246,61 @@ public class UnifiedTo {
     }
 
 
+    public Healthcare healthcare() {
+        return healthcare;
+    }
+
+
+    public Allergy allergy() {
+        return allergy;
+    }
+
+
+    public Appointment appointment() {
+        return appointment;
+    }
+
+
+    public Condition condition() {
+        return condition;
+    }
+
+
+    public Encounter encounter() {
+        return encounter;
+    }
+
+
+    public Immunization immunization() {
+        return immunization;
+    }
+
+
+    public Medication medication() {
+        return medication;
+    }
+
+
+    public Observation observation() {
+        return observation;
+    }
+
+
+    public Patient patient() {
+        return patient;
+    }
+
+
+    public Practitioner practitioner() {
+        return practitioner;
+    }
+
+
+    public Slot slot() {
+        return slot;
+    }
+
+
     public Hris hris() {
         return hris;
     }
@@ -1182,6 +1383,26 @@ public class UnifiedTo {
 
     public Space space() {
         return space;
+    }
+
+
+    public Legal legal() {
+        return legal;
+    }
+
+
+    public Matter matter() {
+        return matter;
+    }
+
+
+    public Practicearea practicearea() {
+        return practicearea;
+    }
+
+
+    public Timeentry timeentry() {
+        return timeentry;
     }
 
 
@@ -1362,11 +1583,6 @@ public class UnifiedTo {
 
     public Signatory signatory() {
         return signatory;
-    }
-
-
-    public Template template() {
-        return template;
     }
 
 
@@ -1721,6 +1937,19 @@ public class UnifiedTo {
         this.reservation = new Reservation(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
+        this.compute = new Compute(sdkConfiguration);
+        this.deployment = new Deployment(sdkConfiguration);
+        this.domain = new Domain(sdkConfiguration);
+        this.envvar = new Envvar(sdkConfiguration);
+        this.gputype = new Gputype(sdkConfiguration);
+        this.instance = new Instance(sdkConfiguration);
+        this.key = new Key(sdkConfiguration);
+        this.region = new Region(sdkConfiguration);
+        this.service = new Service(sdkConfiguration);
+        this.snapshot = new Snapshot(sdkConfiguration);
+        this.template = new Template(sdkConfiguration);
+        this.usage = new Usage(sdkConfiguration);
+        this.volume = new Volume(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);
         this.deal = new Deal(sdkConfiguration);
         this.lead = new Lead(sdkConfiguration);
@@ -1743,6 +1972,17 @@ public class UnifiedTo {
         this.prompt = new Prompt(sdkConfiguration);
         this.skill = new Skill(sdkConfiguration);
         this.task = new Task(sdkConfiguration);
+        this.healthcare = new Healthcare(sdkConfiguration);
+        this.allergy = new Allergy(sdkConfiguration);
+        this.appointment = new Appointment(sdkConfiguration);
+        this.condition = new Condition(sdkConfiguration);
+        this.encounter = new Encounter(sdkConfiguration);
+        this.immunization = new Immunization(sdkConfiguration);
+        this.medication = new Medication(sdkConfiguration);
+        this.observation = new Observation(sdkConfiguration);
+        this.patient = new Patient(sdkConfiguration);
+        this.practitioner = new Practitioner(sdkConfiguration);
+        this.slot = new Slot(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
         this.attendance = new Attendance(sdkConfiguration);
         this.bankaccount = new Bankaccount(sdkConfiguration);
@@ -1760,6 +2000,10 @@ public class UnifiedTo {
         this.comment = new Comment(sdkConfiguration);
         this.page = new Page(sdkConfiguration);
         this.space = new Space(sdkConfiguration);
+        this.legal = new Legal(sdkConfiguration);
+        this.matter = new Matter(sdkConfiguration);
+        this.practicearea = new Practicearea(sdkConfiguration);
+        this.timeentry = new Timeentry(sdkConfiguration);
         this.lms = new Lms(sdkConfiguration);
         this.class_ = new Class(sdkConfiguration);
         this.content = new Content(sdkConfiguration);
@@ -1796,7 +2040,6 @@ public class UnifiedTo {
         this.tracking = new Tracking(sdkConfiguration);
         this.signing = new Signing(sdkConfiguration);
         this.signatory = new Signatory(sdkConfiguration);
-        this.template = new Template(sdkConfiguration);
         this.social = new Social(sdkConfiguration);
         this.insight = new Insight(sdkConfiguration);
         this.post = new Post(sdkConfiguration);

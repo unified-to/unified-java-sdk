@@ -51,3 +51,6 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `CDP`          | cdp            |
 | `PERFORMANCE`  | performance    |
 | `SOCIAL`       | social         |
+| `LEGAL`        | legal          |
+| `COMPUTE`      | compute        |
+| `HEALTHCARE`   | healthcare     |

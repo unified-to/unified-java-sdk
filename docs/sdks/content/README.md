@@ -48,7 +48,7 @@ public class Application {
                     .difficulty("Beginner")
                     .durationMinutes(19d)
                     .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
-                    .id("79533768-dc14-4cb3-8c8f-c817d1281d6f")
+                    .id("2c418a71-b6cb-449b-8fbc-ac88cf7fbab6")
                     .instructors(List.of(
                         LmsReference.builder()
                             .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
@@ -117,7 +117,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-09-30T22:38:26.543Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-01T05:30:07.685Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -301,7 +301,7 @@ public class Application {
                     .difficulty("Beginner")
                     .durationMinutes(19d)
                     .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
-                    .id("b703274f-42b3-4544-b5fe-2c9e10424ca3")
+                    .id("35b43159-d375-4ded-b684-ff950244e8a1")
                     .instructors(List.of(
                         LmsReference.builder()
                             .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
@@ -370,7 +370,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-09-30T22:38:26.550Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-01T05:30:07.693Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -496,7 +496,7 @@ public class Application {
                     .difficulty("Beginner")
                     .durationMinutes(19d)
                     .externalReference("0d230e31-a9c4-4a35-a5b9-9168e91ffff5")
-                    .id("b703274f-42b3-4544-b5fe-2c9e10424ca3")
+                    .id("35b43159-d375-4ded-b684-ff950244e8a1")
                     .instructors(List.of(
                         LmsReference.builder()
                             .id("91a23b20-a7a3-4323-9548-0897c09eb49e")
@@ -565,7 +565,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-09-30T22:38:26.550Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-01T05:30:07.693Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

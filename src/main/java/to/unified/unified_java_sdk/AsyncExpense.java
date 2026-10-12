@@ -8,29 +8,53 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingExpensesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLegalExpensesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLegalExpensesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLegalExpenseResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
+import to.unified.unified_java_sdk.operations.CreateLegalExpense;
 import to.unified.unified_java_sdk.operations.GetAccountingExpense;
+import to.unified.unified_java_sdk.operations.GetLegalExpense;
 import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
+import to.unified.unified_java_sdk.operations.ListLegalExpenses;
 import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
+import to.unified.unified_java_sdk.operations.PatchLegalExpense;
 import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
+import to.unified.unified_java_sdk.operations.RemoveLegalExpense;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
+import to.unified.unified_java_sdk.operations.UpdateLegalExpense;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -78,6 +102,29 @@ public class AsyncExpense {
 
 
     /**
+     * Create an expense
+     * 
+     * @return The async call builder
+     */
+    public CreateLegalExpenseRequestBuilder createLegalExpense() {
+        return new CreateLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<CreateLegalExpenseResponse> createLegalExpense(@Nonnull CreateLegalExpenseRequest request) {
+        AsyncRequestOperation<CreateLegalExpenseRequest, CreateLegalExpenseResponse> operation
+              = new CreateLegalExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve an expense
      * 
      * @return The async call builder
@@ -95,6 +142,29 @@ public class AsyncExpense {
     public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
         AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
               = new GetAccountingExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an expense
+     * 
+     * @return The async call builder
+     */
+    public GetLegalExpenseRequestBuilder getLegalExpense() {
+        return new GetLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<GetLegalExpenseResponse> getLegalExpense(@Nonnull GetLegalExpenseRequest request) {
+        AsyncRequestOperation<GetLegalExpenseRequest, GetLegalExpenseResponse> operation
+              = new GetLegalExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -124,6 +194,29 @@ public class AsyncExpense {
 
 
     /**
+     * List all expenses
+     * 
+     * @return The async call builder
+     */
+    public ListLegalExpensesRequestBuilder listLegalExpenses() {
+        return new ListLegalExpensesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListLegalExpensesResponse>} - The async response
+     */
+    public CompletableFuture<ListLegalExpensesResponse> listLegalExpenses(@Nonnull ListLegalExpensesRequest request) {
+        AsyncRequestOperation<ListLegalExpensesRequest, ListLegalExpensesResponse> operation
+              = new ListLegalExpenses.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an expense
      * 
      * @return The async call builder
@@ -141,6 +234,29 @@ public class AsyncExpense {
     public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an expense
+     * 
+     * @return The async call builder
+     */
+    public PatchLegalExpenseRequestBuilder patchLegalExpense() {
+        return new PatchLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<PatchLegalExpenseResponse> patchLegalExpense(@Nonnull PatchLegalExpenseRequest request) {
+        AsyncRequestOperation<PatchLegalExpenseRequest, PatchLegalExpenseResponse> operation
+              = new PatchLegalExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -170,6 +286,29 @@ public class AsyncExpense {
 
 
     /**
+     * Remove an expense
+     * 
+     * @return The async call builder
+     */
+    public RemoveLegalExpenseRequestBuilder removeLegalExpense() {
+        return new RemoveLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLegalExpenseResponse> removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request) {
+        AsyncRequestOperation<RemoveLegalExpenseRequest, RemoveLegalExpenseResponse> operation
+              = new RemoveLegalExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an expense
      * 
      * @return The async call builder
@@ -187,6 +326,29 @@ public class AsyncExpense {
     public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an expense
+     * 
+     * @return The async call builder
+     */
+    public UpdateLegalExpenseRequestBuilder updateLegalExpense() {
+        return new UpdateLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateLegalExpenseResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLegalExpenseResponse> updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request) {
+        AsyncRequestOperation<UpdateLegalExpenseRequest, UpdateLegalExpenseResponse> operation
+              = new UpdateLegalExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

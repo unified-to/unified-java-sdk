@@ -18,6 +18,9 @@ import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
@@ -27,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsResponse;
@@ -52,9 +58,11 @@ import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
+import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
+import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
@@ -177,6 +185,28 @@ public class Location {
      * 
      * @return The call builder
      */
+    public GetHealthcareLocationRequestBuilder getHealthcareLocation() {
+        return new GetHealthcareLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareLocationResponse getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request) {
+        RequestOperation<GetHealthcareLocationRequest, GetHealthcareLocationResponse> operation
+              = new GetHealthcareLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @return The call builder
+     */
     public GetHrisLocationRequestBuilder getHrisLocation() {
         return new GetHrisLocationRequestBuilder(sdkConfiguration);
     }
@@ -235,6 +265,28 @@ public class Location {
     public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
               = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all locations
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareLocationsRequestBuilder listHealthcareLocations() {
+        return new ListHealthcareLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareLocationsResponse listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request) {
+        RequestOperation<ListHealthcareLocationsRequest, ListHealthcareLocationsResponse> operation
+              = new ListHealthcareLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

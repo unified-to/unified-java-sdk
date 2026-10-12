@@ -1,0 +1,13 @@
+# LegalMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `extraData`                                                                        | [Optional\<LegalMetadataExtraData>](../../models/shared/LegalMetadataExtraData.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `format`                                                                           | [Optional\<LegalMetadataFormat>](../../models/shared/LegalMetadataFormat.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `id`                                                                               | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `namespace`                                                                        | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `slug`                                                                             | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `value`                                                                            | [Optional\<LegalMetadataValue>](../../models/shared/LegalMetadataValue.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |

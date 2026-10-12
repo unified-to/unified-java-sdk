@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [createAccountingExpense](#createaccountingexpense) - Create an expense
+* [createLegalExpense](#createlegalexpense) - Create an expense
 * [getAccountingExpense](#getaccountingexpense) - Retrieve an expense
+* [getLegalExpense](#getlegalexpense) - Retrieve an expense
 * [listAccountingExpenses](#listaccountingexpenses) - List all expenses
+* [listLegalExpenses](#listlegalexpenses) - List all expenses
 * [patchAccountingExpense](#patchaccountingexpense) - Update an expense
+* [patchLegalExpense](#patchlegalexpense) - Update an expense
 * [removeAccountingExpense](#removeaccountingexpense) - Remove an expense
+* [removeLegalExpense](#removelegalexpense) - Remove an expense
 * [updateAccountingExpense](#updateaccountingexpense) - Update an expense
+* [updateLegalExpense](#updatelegalexpense) - Update an expense
 
 ## createAccountingExpense
 
@@ -41,11 +47,11 @@ public class Application {
 
         CreateAccountingExpenseRequest req = CreateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.731Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-06-01T06:50:29.682Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("2d3e86aa-a965-4d39-95a0-62dbc6d206a8")
+                            .id("cf8cc5be-0413-422c-b84c-79fd08e3fd5f")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -53,10 +59,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("f2122bc2-cfb5-4623-850e-6715ad47d337")
+                    .id("7521ce66-7153-4bff-b5bb-0aa64e9279fa")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("75904edd-1d58-4000-90ed-90de804f6b9d")
+                            .id("fdb3259a-209f-40cb-83aa-41de61dec257")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -69,13 +75,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.552Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T22:42:45.258Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
                     .type(AccountingExpenseType.USER)
-                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.731Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-01T06:50:29.682Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -100,6 +106,80 @@ public class Application {
 ### Response
 
 **[CreateAccountingExpenseResponse](../../models/operations/CreateAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createLegalExpense
+
+Create an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createLegalExpense" method="post" path="/legal/{connection_id}/expense" example="legal_expense" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateLegalExpenseRequest req = CreateLegalExpenseRequest.builder()
+                .legalExpense(LegalExpense.builder()
+                    .category("Kids")
+                    .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .currency("MVR")
+                    .description("Temporibus agnitio sui.")
+                    .id("4b5483e3-7b1c-4b1b-9ae2-53a8db8258ba")
+                    .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .isBilled(false)
+                    .metadata(List.of())
+                    .priceAmount(100d)
+                    .quantity(3d)
+                    .totalAmount(300d)
+                    .type(LegalExpenseType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2024-03-25T18:37:19.750Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateLegalExpenseResponse res = sdk.expense().createLegalExpense()
+                .request(req)
+                .call();
+
+        if (res.legalExpense().isPresent()) {
+            System.out.println(res.legalExpense().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [CreateLegalExpenseRequest](../../models/operations/CreateLegalExpenseRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[CreateLegalExpenseResponse](../../models/operations/CreateLegalExpenseResponse.md)**
 
 ### Errors
 
@@ -165,6 +245,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getLegalExpense
+
+Retrieve an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getLegalExpense" method="get" path="/legal/{connection_id}/expense/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetLegalExpenseRequest req = GetLegalExpenseRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetLegalExpenseResponse res = sdk.expense().getLegalExpense()
+                .request(req)
+                .call();
+
+        if (res.legalExpense().isPresent()) {
+            System.out.println(res.legalExpense().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetLegalExpenseRequest](../../models/operations/GetLegalExpenseRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetLegalExpenseResponse](../../models/operations/GetLegalExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAccountingExpenses
 
 List all expenses
@@ -222,6 +360,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listLegalExpenses
+
+List all expenses
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listLegalExpenses" method="get" path="/legal/{connection_id}/expense" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListLegalExpensesRequest req = ListLegalExpensesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListLegalExpensesResponse res = sdk.expense().listLegalExpenses()
+                .request(req)
+                .call();
+
+        if (res.legalExpenses().isPresent()) {
+            System.out.println(res.legalExpenses().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListLegalExpensesRequest](../../models/operations/ListLegalExpensesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListLegalExpensesResponse](../../models/operations/ListLegalExpensesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAccountingExpense
 
 Update an expense
@@ -252,11 +447,11 @@ public class Application {
 
         PatchAccountingExpenseRequest req = PatchAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-06-01T06:50:29.731Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88")
+                            .id("10bdc6d0-bbb0-4f94-8eb8-8dc39e300a93")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -264,10 +459,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("acbe7639-ea60-46a9-9bec-90ec8c83fa2b")
+                    .id("d82e9dbc-1802-4664-bfa1-ea3c2e55d8aa")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("65c7f906-1e52-4a2c-857f-498f4a43dfe7")
+                            .id("c0b40d0c-a495-4b53-ac84-bdeedb1abfd0")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -280,13 +475,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.557Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T22:42:45.266Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
                     .type(AccountingExpenseType.USER)
-                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-01T06:50:29.731Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -312,6 +507,81 @@ public class Application {
 ### Response
 
 **[PatchAccountingExpenseResponse](../../models/operations/PatchAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchLegalExpense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchLegalExpense" method="patch" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchLegalExpenseRequest req = PatchLegalExpenseRequest.builder()
+                .legalExpense(LegalExpense.builder()
+                    .category("Kids")
+                    .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .currency("MVR")
+                    .description("Temporibus agnitio sui.")
+                    .id("a1d1574a-5f4f-401d-8178-fff5cfce7fc4")
+                    .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .isBilled(false)
+                    .metadata(List.of())
+                    .priceAmount(100d)
+                    .quantity(3d)
+                    .totalAmount(300d)
+                    .type(LegalExpenseType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2024-03-25T18:37:19.762Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchLegalExpenseResponse res = sdk.expense().patchLegalExpense()
+                .request(req)
+                .call();
+
+        if (res.legalExpense().isPresent()) {
+            System.out.println(res.legalExpense().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchLegalExpenseRequest](../../models/operations/PatchLegalExpenseRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchLegalExpenseResponse](../../models/operations/PatchLegalExpenseResponse.md)**
 
 ### Errors
 
@@ -375,6 +645,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeLegalExpense
+
+Remove an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeLegalExpense" method="delete" path="/legal/{connection_id}/expense/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveLegalExpenseRequest req = RemoveLegalExpenseRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveLegalExpenseResponse res = sdk.expense().removeLegalExpense()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveLegalExpenseRequest](../../models/operations/RemoveLegalExpenseRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveLegalExpenseResponse](../../models/operations/RemoveLegalExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateAccountingExpense
 
 Update an expense
@@ -405,11 +731,11 @@ public class Application {
 
         UpdateAccountingExpenseRequest req = UpdateAccountingExpenseRequest.builder()
                 .accountingExpense(AccountingExpense.builder()
-                    .approvedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
+                    .approvedAt(OffsetDateTime.parse("2026-06-01T06:50:29.731Z"))
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://ripe-napkin.biz/")
-                            .id("fc0f7439-3fa7-4e31-89cc-d5f4a93d3c88")
+                            .id("10bdc6d0-bbb0-4f94-8eb8-8dc39e300a93")
                             .mimeType("annus")
                             .name("cohibeo")
                             .build()))
@@ -417,10 +743,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("SSP")
                     .externalNumber("necessitatibus")
-                    .id("acbe7639-ea60-46a9-9bec-90ec8c83fa2b")
+                    .id("d82e9dbc-1802-4664-bfa1-ea3c2e55d8aa")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("65c7f906-1e52-4a2c-857f-498f4a43dfe7")
+                            .id("c0b40d0c-a495-4b53-ac84-bdeedb1abfd0")
                             .itemDescription("Innovative Table featuring left technology and Rubber construction")
                             .itemName("Luxurious Cotton Pizza")
                             .itemSku("978-0-8324-6620-5")
@@ -433,13 +759,13 @@ public class Application {
                     .metadata(List.of())
                     .name("Refined Steel Shoes")
                     .paymentMethod("CASH")
-                    .postedAt(OffsetDateTime.parse("2021-06-07T19:24:37.557Z"))
+                    .postedAt(OffsetDateTime.parse("2021-06-07T22:42:45.266Z"))
                     .reimbursedAmount(1833d)
                     .status(AccountingExpenseStatus.SUBMITTED)
                     .taxAmount(2602d)
                     .totalAmount(3580d)
                     .type(AccountingExpenseType.USER)
-                    .updatedAt(OffsetDateTime.parse("2026-05-31T10:56:02.763Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-01T06:50:29.731Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -465,6 +791,81 @@ public class Application {
 ### Response
 
 **[UpdateAccountingExpenseResponse](../../models/operations/UpdateAccountingExpenseResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateLegalExpense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateLegalExpense" method="put" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateLegalExpenseRequest req = UpdateLegalExpenseRequest.builder()
+                .legalExpense(LegalExpense.builder()
+                    .category("Kids")
+                    .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .currency("MVR")
+                    .description("Temporibus agnitio sui.")
+                    .id("a1d1574a-5f4f-401d-8178-fff5cfce7fc4")
+                    .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
+                    .isBilled(false)
+                    .metadata(List.of())
+                    .priceAmount(100d)
+                    .quantity(3d)
+                    .totalAmount(300d)
+                    .type(LegalExpenseType.OTHER)
+                    .updatedAt(OffsetDateTime.parse("2024-03-25T18:37:19.762Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateLegalExpenseResponse res = sdk.expense().updateLegalExpense()
+                .request(req)
+                .call();
+
+        if (res.legalExpense().isPresent()) {
+            System.out.println(res.legalExpense().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateLegalExpenseRequest](../../models/operations/UpdateLegalExpenseRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateLegalExpenseResponse](../../models/operations/UpdateLegalExpenseResponse.md)**
 
 ### Errors
 

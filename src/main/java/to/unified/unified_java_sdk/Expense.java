@@ -9,27 +9,51 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesResponse;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListLegalExpensesResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveLegalExpenseResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateLegalExpenseResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingExpense;
+import to.unified.unified_java_sdk.operations.CreateLegalExpense;
 import to.unified.unified_java_sdk.operations.GetAccountingExpense;
+import to.unified.unified_java_sdk.operations.GetLegalExpense;
 import to.unified.unified_java_sdk.operations.ListAccountingExpenses;
+import to.unified.unified_java_sdk.operations.ListLegalExpenses;
 import to.unified.unified_java_sdk.operations.PatchAccountingExpense;
+import to.unified.unified_java_sdk.operations.PatchLegalExpense;
 import to.unified.unified_java_sdk.operations.RemoveAccountingExpense;
+import to.unified.unified_java_sdk.operations.RemoveLegalExpense;
 import to.unified.unified_java_sdk.operations.UpdateAccountingExpense;
+import to.unified.unified_java_sdk.operations.UpdateLegalExpense;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -75,6 +99,28 @@ public class Expense {
     }
 
     /**
+     * Create an expense
+     * 
+     * @return The call builder
+     */
+    public CreateLegalExpenseRequestBuilder createLegalExpense() {
+        return new CreateLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateLegalExpenseResponse createLegalExpense(@Nonnull CreateLegalExpenseRequest request) {
+        RequestOperation<CreateLegalExpenseRequest, CreateLegalExpenseResponse> operation
+              = new CreateLegalExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve an expense
      * 
      * @return The call builder
@@ -93,6 +139,28 @@ public class Expense {
     public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
         RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
               = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * @return The call builder
+     */
+    public GetLegalExpenseRequestBuilder getLegalExpense() {
+        return new GetLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetLegalExpenseResponse getLegalExpense(@Nonnull GetLegalExpenseRequest request) {
+        RequestOperation<GetLegalExpenseRequest, GetLegalExpenseResponse> operation
+              = new GetLegalExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -119,6 +187,28 @@ public class Expense {
     }
 
     /**
+     * List all expenses
+     * 
+     * @return The call builder
+     */
+    public ListLegalExpensesRequestBuilder listLegalExpenses() {
+        return new ListLegalExpensesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all expenses
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListLegalExpensesResponse listLegalExpenses(@Nonnull ListLegalExpensesRequest request) {
+        RequestOperation<ListLegalExpensesRequest, ListLegalExpensesResponse> operation
+              = new ListLegalExpenses.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an expense
      * 
      * @return The call builder
@@ -137,6 +227,28 @@ public class Expense {
     public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @return The call builder
+     */
+    public PatchLegalExpenseRequestBuilder patchLegalExpense() {
+        return new PatchLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchLegalExpenseResponse patchLegalExpense(@Nonnull PatchLegalExpenseRequest request) {
+        RequestOperation<PatchLegalExpenseRequest, PatchLegalExpenseResponse> operation
+              = new PatchLegalExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,6 +275,28 @@ public class Expense {
     }
 
     /**
+     * Remove an expense
+     * 
+     * @return The call builder
+     */
+    public RemoveLegalExpenseRequestBuilder removeLegalExpense() {
+        return new RemoveLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveLegalExpenseResponse removeLegalExpense(@Nonnull RemoveLegalExpenseRequest request) {
+        RequestOperation<RemoveLegalExpenseRequest, RemoveLegalExpenseResponse> operation
+              = new RemoveLegalExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update an expense
      * 
      * @return The call builder
@@ -181,6 +315,28 @@ public class Expense {
     public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @return The call builder
+     */
+    public UpdateLegalExpenseRequestBuilder updateLegalExpense() {
+        return new UpdateLegalExpenseRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an expense
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateLegalExpenseResponse updateLegalExpense(@Nonnull UpdateLegalExpenseRequest request) {
+        RequestOperation<UpdateLegalExpenseRequest, UpdateLegalExpenseResponse> operation
+              = new UpdateLegalExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.18'
+implementation 'to.unified:unified-java-sdk:0.49.19'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.18</version>
+    <version>0.49.19</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -115,7 +115,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -162,7 +162,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -178,7 +178,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -465,6 +465,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeGenaiAgent](docs/sdks/agent/README.md#removegenaiagent) - Remove an agent
 * [updateGenaiAgent](docs/sdks/agent/README.md#updategenaiagent) - Update an agent
 
+### [Allergy](docs/sdks/allergy/README.md)
+
+* [getHealthcareAllergy](docs/sdks/allergy/README.md#gethealthcareallergy) - Retrieve an allergy
+* [listHealthcareAllergies](docs/sdks/allergy/README.md#listhealthcareallergies) - List all allergies
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [createAnalyticsEvent](docs/sdks/analytics/README.md#createanalyticsevent) - Create an event
@@ -504,6 +509,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getAtsApplicationstatus](docs/sdks/applicationstatus/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
+
+### [Appointment](docs/sdks/appointment/README.md)
+
+* [createHealthcareAppointment](docs/sdks/appointment/README.md#createhealthcareappointment) - Create an appointment
+* [getHealthcareAppointment](docs/sdks/appointment/README.md#gethealthcareappointment) - Retrieve an appointment
+* [listHealthcareAppointments](docs/sdks/appointment/README.md#listhealthcareappointments) - List all appointments
+* [patchHealthcareAppointment](docs/sdks/appointment/README.md#patchhealthcareappointment) - Update an appointment
+* [removeHealthcareAppointment](docs/sdks/appointment/README.md#removehealthcareappointment) - Remove an appointment
+* [updateHealthcareAppointment](docs/sdks/appointment/README.md#updatehealthcareappointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
@@ -937,6 +951,71 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [updateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
+### [Compute](docs/sdks/compute/README.md)
+
+* [createComputeDeployment](docs/sdks/compute/README.md#createcomputedeployment) - Create a deployment
+* [createComputeDomain](docs/sdks/compute/README.md#createcomputedomain) - Create a domain
+* [createComputeEnvvar](docs/sdks/compute/README.md#createcomputeenvvar) - Create an envvar
+* [createComputeInstance](docs/sdks/compute/README.md#createcomputeinstance) - Create an instance
+* [createComputeKey](docs/sdks/compute/README.md#createcomputekey) - Create a key
+* [createComputeService](docs/sdks/compute/README.md#createcomputeservice) - Create a service
+* [createComputeSnapshot](docs/sdks/compute/README.md#createcomputesnapshot) - Create a snapshot
+* [createComputeTemplate](docs/sdks/compute/README.md#createcomputetemplate) - Create a template
+* [createComputeVolume](docs/sdks/compute/README.md#createcomputevolume) - Create a volume
+* [getComputeDeployment](docs/sdks/compute/README.md#getcomputedeployment) - Retrieve a deployment
+* [getComputeDomain](docs/sdks/compute/README.md#getcomputedomain) - Retrieve a domain
+* [getComputeEnvvar](docs/sdks/compute/README.md#getcomputeenvvar) - Retrieve an envvar
+* [getComputeGputype](docs/sdks/compute/README.md#getcomputegputype) - Retrieve a gputype
+* [getComputeInstance](docs/sdks/compute/README.md#getcomputeinstance) - Retrieve an instance
+* [getComputeKey](docs/sdks/compute/README.md#getcomputekey) - Retrieve a key
+* [getComputeRegion](docs/sdks/compute/README.md#getcomputeregion) - Retrieve a region
+* [getComputeService](docs/sdks/compute/README.md#getcomputeservice) - Retrieve a service
+* [getComputeSnapshot](docs/sdks/compute/README.md#getcomputesnapshot) - Retrieve a snapshot
+* [getComputeTemplate](docs/sdks/compute/README.md#getcomputetemplate) - Retrieve a template
+* [getComputeVolume](docs/sdks/compute/README.md#getcomputevolume) - Retrieve a volume
+* [listComputeDeployments](docs/sdks/compute/README.md#listcomputedeployments) - List all deployments
+* [listComputeDomains](docs/sdks/compute/README.md#listcomputedomains) - List all domains
+* [listComputeEnvvars](docs/sdks/compute/README.md#listcomputeenvvars) - List all envvars
+* [listComputeGputypes](docs/sdks/compute/README.md#listcomputegputypes) - List all gputypes
+* [listComputeInstances](docs/sdks/compute/README.md#listcomputeinstances) - List all instances
+* [listComputeKeys](docs/sdks/compute/README.md#listcomputekeys) - List all keys
+* [listComputeRegions](docs/sdks/compute/README.md#listcomputeregions) - List all regions
+* [listComputeServices](docs/sdks/compute/README.md#listcomputeservices) - List all services
+* [listComputeSnapshots](docs/sdks/compute/README.md#listcomputesnapshots) - List all snapshots
+* [listComputeTemplates](docs/sdks/compute/README.md#listcomputetemplates) - List all templates
+* [listComputeUsages](docs/sdks/compute/README.md#listcomputeusages) - List all usages
+* [listComputeVolumes](docs/sdks/compute/README.md#listcomputevolumes) - List all volumes
+* [patchComputeDeployment](docs/sdks/compute/README.md#patchcomputedeployment) - Update a deployment
+* [patchComputeDomain](docs/sdks/compute/README.md#patchcomputedomain) - Update a domain
+* [patchComputeEnvvar](docs/sdks/compute/README.md#patchcomputeenvvar) - Update an envvar
+* [patchComputeInstance](docs/sdks/compute/README.md#patchcomputeinstance) - Update an instance
+* [patchComputeKey](docs/sdks/compute/README.md#patchcomputekey) - Update a key
+* [patchComputeService](docs/sdks/compute/README.md#patchcomputeservice) - Update a service
+* [patchComputeTemplate](docs/sdks/compute/README.md#patchcomputetemplate) - Update a template
+* [patchComputeVolume](docs/sdks/compute/README.md#patchcomputevolume) - Update a volume
+* [removeComputeDeployment](docs/sdks/compute/README.md#removecomputedeployment) - Remove a deployment
+* [removeComputeDomain](docs/sdks/compute/README.md#removecomputedomain) - Remove a domain
+* [removeComputeEnvvar](docs/sdks/compute/README.md#removecomputeenvvar) - Remove an envvar
+* [removeComputeInstance](docs/sdks/compute/README.md#removecomputeinstance) - Remove an instance
+* [removeComputeKey](docs/sdks/compute/README.md#removecomputekey) - Remove a key
+* [removeComputeService](docs/sdks/compute/README.md#removecomputeservice) - Remove a service
+* [removeComputeSnapshot](docs/sdks/compute/README.md#removecomputesnapshot) - Remove a snapshot
+* [removeComputeTemplate](docs/sdks/compute/README.md#removecomputetemplate) - Remove a template
+* [removeComputeVolume](docs/sdks/compute/README.md#removecomputevolume) - Remove a volume
+* [updateComputeDeployment](docs/sdks/compute/README.md#updatecomputedeployment) - Update a deployment
+* [updateComputeDomain](docs/sdks/compute/README.md#updatecomputedomain) - Update a domain
+* [updateComputeEnvvar](docs/sdks/compute/README.md#updatecomputeenvvar) - Update an envvar
+* [updateComputeInstance](docs/sdks/compute/README.md#updatecomputeinstance) - Update an instance
+* [updateComputeKey](docs/sdks/compute/README.md#updatecomputekey) - Update a key
+* [updateComputeService](docs/sdks/compute/README.md#updatecomputeservice) - Update a service
+* [updateComputeTemplate](docs/sdks/compute/README.md#updatecomputetemplate) - Update a template
+* [updateComputeVolume](docs/sdks/compute/README.md#updatecomputevolume) - Update a volume
+
+### [Condition](docs/sdks/condition/README.md)
+
+* [getHealthcareCondition](docs/sdks/condition/README.md#gethealthcarecondition) - Retrieve a condition
+* [listHealthcareConditions](docs/sdks/condition/README.md#listhealthcareconditions) - List all conditions
+
 ### [Connection](docs/sdks/connection/README.md)
 
 * [createUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
@@ -1107,6 +1186,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
 * [updateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
 
+### [Deployment](docs/sdks/deployment/README.md)
+
+* [createComputeDeployment](docs/sdks/deployment/README.md#createcomputedeployment) - Create a deployment
+* [getComputeDeployment](docs/sdks/deployment/README.md#getcomputedeployment) - Retrieve a deployment
+* [listComputeDeployments](docs/sdks/deployment/README.md#listcomputedeployments) - List all deployments
+* [patchComputeDeployment](docs/sdks/deployment/README.md#patchcomputedeployment) - Update a deployment
+* [removeComputeDeployment](docs/sdks/deployment/README.md#removecomputedeployment) - Remove a deployment
+* [updateComputeDeployment](docs/sdks/deployment/README.md#updatecomputedeployment) - Update a deployment
+
 ### [Destination](docs/sdks/destination/README.md)
 
 * [createCdpDestination](docs/sdks/destination/README.md#createcdpdestination) - Create a destination
@@ -1146,6 +1234,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [updateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
+### [Domain](docs/sdks/domain/README.md)
+
+* [createComputeDomain](docs/sdks/domain/README.md#createcomputedomain) - Create a domain
+* [getComputeDomain](docs/sdks/domain/README.md#getcomputedomain) - Retrieve a domain
+* [listComputeDomains](docs/sdks/domain/README.md#listcomputedomains) - List all domains
+* [patchComputeDomain](docs/sdks/domain/README.md#patchcomputedomain) - Update a domain
+* [removeComputeDomain](docs/sdks/domain/README.md#removecomputedomain) - Remove a domain
+* [updateComputeDomain](docs/sdks/domain/README.md#updatecomputedomain) - Update a domain
+
 ### [Earning](docs/sdks/earning/README.md)
 
 * [createHrisEarning](docs/sdks/earning/README.md#createhrisearning) - Create an earning
@@ -1168,6 +1265,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
 * [updateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
+### [Encounter](docs/sdks/encounter/README.md)
+
+* [getHealthcareEncounter](docs/sdks/encounter/README.md#gethealthcareencounter) - Retrieve an encounter
+* [listHealthcareEncounters](docs/sdks/encounter/README.md#listhealthcareencounters) - List all encounters
+
 ### [Enrich](docs/sdks/enrich/README.md)
 
 * [listEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
@@ -1178,6 +1280,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment) - Create new environments
 * [listUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments) - Returns all environments
 * [removeUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment) - Remove an environment
+
+### [Envvar](docs/sdks/envvar/README.md)
+
+* [createComputeEnvvar](docs/sdks/envvar/README.md#createcomputeenvvar) - Create an envvar
+* [getComputeEnvvar](docs/sdks/envvar/README.md#getcomputeenvvar) - Retrieve an envvar
+* [listComputeEnvvars](docs/sdks/envvar/README.md#listcomputeenvvars) - List all envvars
+* [patchComputeEnvvar](docs/sdks/envvar/README.md#patchcomputeenvvar) - Update an envvar
+* [removeComputeEnvvar](docs/sdks/envvar/README.md#removecomputeenvvar) - Remove an envvar
+* [updateComputeEnvvar](docs/sdks/envvar/README.md#updatecomputeenvvar) - Update an envvar
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -1210,11 +1321,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Expense](docs/sdks/expense/README.md)
 
 * [createAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
+* [createLegalExpense](docs/sdks/expense/README.md#createlegalexpense) - Create an expense
 * [getAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
+* [getLegalExpense](docs/sdks/expense/README.md#getlegalexpense) - Retrieve an expense
 * [listAccountingExpenses](docs/sdks/expense/README.md#listaccountingexpenses) - List all expenses
+* [listLegalExpenses](docs/sdks/expense/README.md#listlegalexpenses) - List all expenses
 * [patchAccountingExpense](docs/sdks/expense/README.md#patchaccountingexpense) - Update an expense
+* [patchLegalExpense](docs/sdks/expense/README.md#patchlegalexpense) - Update an expense
 * [removeAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
+* [removeLegalExpense](docs/sdks/expense/README.md#removelegalexpense) - Remove an expense
 * [updateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
+* [updateLegalExpense](docs/sdks/expense/README.md#updatelegalexpense) - Update an expense
 
 ### [Expensereport](docs/sdks/expensereport/README.md)
 
@@ -1297,6 +1414,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
 * [updatePerformanceGoal](docs/sdks/goal/README.md#updateperformancegoal) - Update a goal
 
+### [Gputype](docs/sdks/gputype/README.md)
+
+* [getComputeGputype](docs/sdks/gputype/README.md#getcomputegputype) - Retrieve a gputype
+* [listComputeGputypes](docs/sdks/gputype/README.md#listcomputegputypes) - List all gputypes
+
 ### [Group](docs/sdks/group/README.md)
 
 * [createAdsGroup](docs/sdks/group/README.md#createadsgroup) - Create a group
@@ -1319,6 +1441,39 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAdsGroup](docs/sdks/group/README.md#updateadsgroup) - Update a group
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [updateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
+
+### [Healthcare](docs/sdks/healthcare/README.md)
+
+* [createHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
+* [createHealthcareObservation](docs/sdks/healthcare/README.md#createhealthcareobservation) - Create an observation
+* [createHealthcarePatient](docs/sdks/healthcare/README.md#createhealthcarepatient) - Create a patient
+* [getHealthcareAllergy](docs/sdks/healthcare/README.md#gethealthcareallergy) - Retrieve an allergy
+* [getHealthcareAppointment](docs/sdks/healthcare/README.md#gethealthcareappointment) - Retrieve an appointment
+* [getHealthcareCondition](docs/sdks/healthcare/README.md#gethealthcarecondition) - Retrieve a condition
+* [getHealthcareEncounter](docs/sdks/healthcare/README.md#gethealthcareencounter) - Retrieve an encounter
+* [getHealthcareImmunization](docs/sdks/healthcare/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [getHealthcareLocation](docs/sdks/healthcare/README.md#gethealthcarelocation) - Retrieve a location
+* [getHealthcareMedication](docs/sdks/healthcare/README.md#gethealthcaremedication) - Retrieve a medication
+* [getHealthcareObservation](docs/sdks/healthcare/README.md#gethealthcareobservation) - Retrieve an observation
+* [getHealthcarePatient](docs/sdks/healthcare/README.md#gethealthcarepatient) - Retrieve a patient
+* [getHealthcarePractitioner](docs/sdks/healthcare/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [getHealthcareSlot](docs/sdks/healthcare/README.md#gethealthcareslot) - Retrieve a slot
+* [listHealthcareAllergies](docs/sdks/healthcare/README.md#listhealthcareallergies) - List all allergies
+* [listHealthcareAppointments](docs/sdks/healthcare/README.md#listhealthcareappointments) - List all appointments
+* [listHealthcareConditions](docs/sdks/healthcare/README.md#listhealthcareconditions) - List all conditions
+* [listHealthcareEncounters](docs/sdks/healthcare/README.md#listhealthcareencounters) - List all encounters
+* [listHealthcareImmunizations](docs/sdks/healthcare/README.md#listhealthcareimmunizations) - List all immunizations
+* [listHealthcareLocations](docs/sdks/healthcare/README.md#listhealthcarelocations) - List all locations
+* [listHealthcareMedications](docs/sdks/healthcare/README.md#listhealthcaremedications) - List all medications
+* [listHealthcareObservations](docs/sdks/healthcare/README.md#listhealthcareobservations) - List all observations
+* [listHealthcarePatients](docs/sdks/healthcare/README.md#listhealthcarepatients) - List all patients
+* [listHealthcarePractitioners](docs/sdks/healthcare/README.md#listhealthcarepractitioners) - List all practitioners
+* [listHealthcareSlots](docs/sdks/healthcare/README.md#listhealthcareslots) - List all slots
+* [patchHealthcareAppointment](docs/sdks/healthcare/README.md#patchhealthcareappointment) - Update an appointment
+* [patchHealthcarePatient](docs/sdks/healthcare/README.md#patchhealthcarepatient) - Update a patient
+* [removeHealthcareAppointment](docs/sdks/healthcare/README.md#removehealthcareappointment) - Remove an appointment
+* [updateHealthcareAppointment](docs/sdks/healthcare/README.md#updatehealthcareappointment) - Update an appointment
+* [updateHealthcarePatient](docs/sdks/healthcare/README.md#updatehealthcarepatient) - Update a patient
 
 ### [Hris](docs/sdks/hris/README.md)
 
@@ -1416,6 +1571,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
+### [Immunization](docs/sdks/immunization/README.md)
+
+* [getHealthcareImmunization](docs/sdks/immunization/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [listHealthcareImmunizations](docs/sdks/immunization/README.md#listhealthcareimmunizations) - List all immunizations
+
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
 
 * [createAdsInsertionorder](docs/sdks/insertionorder/README.md#createadsinsertionorder) - Create an insertionorder
@@ -1429,6 +1589,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
 * [listSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
+
+### [Instance](docs/sdks/instance/README.md)
+
+* [createComputeInstance](docs/sdks/instance/README.md#createcomputeinstance) - Create an instance
+* [getComputeInstance](docs/sdks/instance/README.md#getcomputeinstance) - Retrieve an instance
+* [listComputeInstances](docs/sdks/instance/README.md#listcomputeinstances) - List all instances
+* [patchComputeInstance](docs/sdks/instance/README.md#patchcomputeinstance) - Update an instance
+* [removeComputeInstance](docs/sdks/instance/README.md#removecomputeinstance) - Remove an instance
+* [updateComputeInstance](docs/sdks/instance/README.md#updatecomputeinstance) - Update an instance
 
 ### [Instructor](docs/sdks/instructor/README.md)
 
@@ -1519,6 +1688,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingJournal](docs/sdks/journal/README.md#removeaccountingjournal) - Remove a journal
 * [updateAccountingJournal](docs/sdks/journal/README.md#updateaccountingjournal) - Update a journal
 
+### [Key](docs/sdks/key/README.md)
+
+* [createComputeKey](docs/sdks/key/README.md#createcomputekey) - Create a key
+* [getComputeKey](docs/sdks/key/README.md#getcomputekey) - Retrieve a key
+* [listComputeKeys](docs/sdks/key/README.md#listcomputekeys) - List all keys
+* [patchComputeKey](docs/sdks/key/README.md#patchcomputekey) - Update a key
+* [removeComputeKey](docs/sdks/key/README.md#removecomputekey) - Remove a key
+* [updateComputeKey](docs/sdks/key/README.md#updatecomputekey) - Update a key
+
 ### [Kms](docs/sdks/kms/README.md)
 
 * [createKmsComment](docs/sdks/kms/README.md#createkmscomment) - Create a comment
@@ -1557,6 +1735,33 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchCrmLead](docs/sdks/lead/README.md#patchcrmlead) - Update a lead
 * [removeCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
 * [updateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
+
+### [Legal](docs/sdks/legal/README.md)
+
+* [createLegalExpense](docs/sdks/legal/README.md#createlegalexpense) - Create an expense
+* [createLegalMatter](docs/sdks/legal/README.md#createlegalmatter) - Create a matter
+* [createLegalPracticearea](docs/sdks/legal/README.md#createlegalpracticearea) - Create a practicearea
+* [createLegalTimeentry](docs/sdks/legal/README.md#createlegaltimeentry) - Create a timeentry
+* [getLegalExpense](docs/sdks/legal/README.md#getlegalexpense) - Retrieve an expense
+* [getLegalMatter](docs/sdks/legal/README.md#getlegalmatter) - Retrieve a matter
+* [getLegalPracticearea](docs/sdks/legal/README.md#getlegalpracticearea) - Retrieve a practicearea
+* [getLegalTimeentry](docs/sdks/legal/README.md#getlegaltimeentry) - Retrieve a timeentry
+* [listLegalExpenses](docs/sdks/legal/README.md#listlegalexpenses) - List all expenses
+* [listLegalMatters](docs/sdks/legal/README.md#listlegalmatters) - List all matters
+* [listLegalPracticeareas](docs/sdks/legal/README.md#listlegalpracticeareas) - List all practiceareas
+* [listLegalTimeentries](docs/sdks/legal/README.md#listlegaltimeentries) - List all timeentries
+* [patchLegalExpense](docs/sdks/legal/README.md#patchlegalexpense) - Update an expense
+* [patchLegalMatter](docs/sdks/legal/README.md#patchlegalmatter) - Update a matter
+* [patchLegalPracticearea](docs/sdks/legal/README.md#patchlegalpracticearea) - Update a practicearea
+* [patchLegalTimeentry](docs/sdks/legal/README.md#patchlegaltimeentry) - Update a timeentry
+* [removeLegalExpense](docs/sdks/legal/README.md#removelegalexpense) - Remove an expense
+* [removeLegalMatter](docs/sdks/legal/README.md#removelegalmatter) - Remove a matter
+* [removeLegalPracticearea](docs/sdks/legal/README.md#removelegalpracticearea) - Remove a practicearea
+* [removeLegalTimeentry](docs/sdks/legal/README.md#removelegaltimeentry) - Remove a timeentry
+* [updateLegalExpense](docs/sdks/legal/README.md#updatelegalexpense) - Update an expense
+* [updateLegalMatter](docs/sdks/legal/README.md#updatelegalmatter) - Update a matter
+* [updateLegalPracticearea](docs/sdks/legal/README.md#updatelegalpracticearea) - Update a practicearea
+* [updateLegalTimeentry](docs/sdks/legal/README.md#updatelegaltimeentry) - Update a timeentry
 
 ### [Link](docs/sdks/link/README.md)
 
@@ -1633,9 +1838,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
 * [getClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [getCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
+* [getHealthcareLocation](docs/sdks/location/README.md#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
 * [listClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [listCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
+* [listHealthcareLocations](docs/sdks/location/README.md#listhealthcarelocations) - List all locations
 * [listHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [patchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
 * [patchHrisLocation](docs/sdks/location/README.md#patchhrislocation) - Update a location
@@ -1669,6 +1876,20 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateMartechCampaign](docs/sdks/martech/README.md#updatemartechcampaign) - Update a campaign
 * [updateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [updateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
+
+### [Matter](docs/sdks/matter/README.md)
+
+* [createLegalMatter](docs/sdks/matter/README.md#createlegalmatter) - Create a matter
+* [getLegalMatter](docs/sdks/matter/README.md#getlegalmatter) - Retrieve a matter
+* [listLegalMatters](docs/sdks/matter/README.md#listlegalmatters) - List all matters
+* [patchLegalMatter](docs/sdks/matter/README.md#patchlegalmatter) - Update a matter
+* [removeLegalMatter](docs/sdks/matter/README.md#removelegalmatter) - Remove a matter
+* [updateLegalMatter](docs/sdks/matter/README.md#updatelegalmatter) - Update a matter
+
+### [Medication](docs/sdks/medication/README.md)
+
+* [getHealthcareMedication](docs/sdks/medication/README.md#gethealthcaremedication) - Retrieve a medication
+* [listHealthcareMedications](docs/sdks/medication/README.md#listhealthcaremedications) - List all medications
 
 ### [Member](docs/sdks/member/README.md)
 
@@ -1733,6 +1954,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Notification](docs/sdks/notification/README.md)
 
 * [listUnifiedNotifications](docs/sdks/notification/README.md#listunifiednotifications) - List event notifications
+
+### [Observation](docs/sdks/observation/README.md)
+
+* [createHealthcareObservation](docs/sdks/observation/README.md#createhealthcareobservation) - Create an observation
+* [getHealthcareObservation](docs/sdks/observation/README.md#gethealthcareobservation) - Retrieve an observation
+* [listHealthcareObservations](docs/sdks/observation/README.md#listhealthcareobservations) - List all observations
 
 ### [Order](docs/sdks/order/README.md)
 
@@ -1800,6 +2027,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [updatePassthroughJson](docs/sdks/passthrough/README.md#updatepassthroughjson) - Passthrough PUT
 * [updatePassthroughRaw](docs/sdks/passthrough/README.md#updatepassthroughraw) - Passthrough PUT
+
+### [Patient](docs/sdks/patient/README.md)
+
+* [createHealthcarePatient](docs/sdks/patient/README.md#createhealthcarepatient) - Create a patient
+* [getHealthcarePatient](docs/sdks/patient/README.md#gethealthcarepatient) - Retrieve a patient
+* [listHealthcarePatients](docs/sdks/patient/README.md#listhealthcarepatients) - List all patients
+* [patchHealthcarePatient](docs/sdks/patient/README.md#patchhealthcarepatient) - Update a patient
+* [updateHealthcarePatient](docs/sdks/patient/README.md#updatehealthcarepatient) - Update a patient
 
 ### [Paycode](docs/sdks/paycode/README.md)
 
@@ -1892,6 +2127,20 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchSocialPost](docs/sdks/post/README.md#patchsocialpost) - Update a post
 * [removeSocialPost](docs/sdks/post/README.md#removesocialpost) - Remove a post
 * [updateSocialPost](docs/sdks/post/README.md#updatesocialpost) - Update a post
+
+### [Practicearea](docs/sdks/practicearea/README.md)
+
+* [createLegalPracticearea](docs/sdks/practicearea/README.md#createlegalpracticearea) - Create a practicearea
+* [getLegalPracticearea](docs/sdks/practicearea/README.md#getlegalpracticearea) - Retrieve a practicearea
+* [listLegalPracticeareas](docs/sdks/practicearea/README.md#listlegalpracticeareas) - List all practiceareas
+* [patchLegalPracticearea](docs/sdks/practicearea/README.md#patchlegalpracticearea) - Update a practicearea
+* [removeLegalPracticearea](docs/sdks/practicearea/README.md#removelegalpracticearea) - Remove a practicearea
+* [updateLegalPracticearea](docs/sdks/practicearea/README.md#updatelegalpracticearea) - Update a practicearea
+
+### [Practitioner](docs/sdks/practitioner/README.md)
+
+* [getHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [listHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -2006,6 +2255,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [listPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
+
+### [Region](docs/sdks/region/README.md)
+
+* [getComputeRegion](docs/sdks/region/README.md#getcomputeregion) - Retrieve a region
+* [listComputeRegions](docs/sdks/region/README.md#listcomputeregions) - List all regions
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2164,6 +2418,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeCdpSegment](docs/sdks/segment/README.md#removecdpsegment) - Remove a segment
 * [updateCdpSegment](docs/sdks/segment/README.md#updatecdpsegment) - Update a segment
 
+### [Service](docs/sdks/service/README.md)
+
+* [createComputeService](docs/sdks/service/README.md#createcomputeservice) - Create a service
+* [getComputeService](docs/sdks/service/README.md#getcomputeservice) - Retrieve a service
+* [listComputeServices](docs/sdks/service/README.md#listcomputeservices) - List all services
+* [patchComputeService](docs/sdks/service/README.md#patchcomputeservice) - Update a service
+* [removeComputeService](docs/sdks/service/README.md#removecomputeservice) - Remove a service
+* [updateComputeService](docs/sdks/service/README.md#updatecomputeservice) - Update a service
+
 ### [Session](docs/sdks/session/README.md)
 
 * [getAnalyticsSession](docs/sdks/session/README.md#getanalyticssession) - Retrieve a session
@@ -2229,6 +2492,18 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getGenaiSkill](docs/sdks/skill/README.md#getgenaiskill) - Retrieve a skill
 * [listGenaiSkills](docs/sdks/skill/README.md#listgenaiskills) - List all skills
 * [removeGenaiSkill](docs/sdks/skill/README.md#removegenaiskill) - Remove a skill
+
+### [Slot](docs/sdks/slot/README.md)
+
+* [getHealthcareSlot](docs/sdks/slot/README.md#gethealthcareslot) - Retrieve a slot
+* [listHealthcareSlots](docs/sdks/slot/README.md#listhealthcareslots) - List all slots
+
+### [Snapshot](docs/sdks/snapshot/README.md)
+
+* [createComputeSnapshot](docs/sdks/snapshot/README.md#createcomputesnapshot) - Create a snapshot
+* [getComputeSnapshot](docs/sdks/snapshot/README.md#getcomputesnapshot) - Retrieve a snapshot
+* [listComputeSnapshots](docs/sdks/snapshot/README.md#listcomputesnapshots) - List all snapshots
+* [removeComputeSnapshot](docs/sdks/snapshot/README.md#removecomputesnapshot) - Remove a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2358,8 +2633,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Template](docs/sdks/template/README.md)
 
+* [createComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
+* [getComputeTemplate](docs/sdks/template/README.md#getcomputetemplate) - Retrieve a template
 * [getSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
+* [listComputeTemplates](docs/sdks/template/README.md#listcomputetemplates) - List all templates
 * [listSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
+* [patchComputeTemplate](docs/sdks/template/README.md#patchcomputetemplate) - Update a template
+* [removeComputeTemplate](docs/sdks/template/README.md#removecomputetemplate) - Remove a template
+* [updateComputeTemplate](docs/sdks/template/README.md#updatecomputetemplate) - Update a template
 
 ### [Ticket](docs/sdks/ticket/README.md)
 
@@ -2396,6 +2677,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateTicketingCustomer](docs/sdks/ticketing/README.md#updateticketingcustomer) - Update a customer
 * [updateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [updateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
+
+### [Timeentry](docs/sdks/timeentry/README.md)
+
+* [createLegalTimeentry](docs/sdks/timeentry/README.md#createlegaltimeentry) - Create a timeentry
+* [getLegalTimeentry](docs/sdks/timeentry/README.md#getlegaltimeentry) - Retrieve a timeentry
+* [listLegalTimeentries](docs/sdks/timeentry/README.md#listlegaltimeentries) - List all timeentries
+* [patchLegalTimeentry](docs/sdks/timeentry/README.md#patchlegaltimeentry) - Update a timeentry
+* [removeLegalTimeentry](docs/sdks/timeentry/README.md#removelegaltimeentry) - Remove a timeentry
+* [updateLegalTimeentry](docs/sdks/timeentry/README.md#updatelegaltimeentry) - Update a timeentry
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
@@ -2496,6 +2786,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+### [Usage](docs/sdks/usage/README.md)
+
+* [listComputeUsages](docs/sdks/usage/README.md#listcomputeusages) - List all usages
+
 ### [User](docs/sdks/user/README.md)
 
 * [createScimUsers](docs/sdks/user/README.md#createscimusers) - Create user
@@ -2533,6 +2827,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAnalyticsVisitor](docs/sdks/visitor/README.md#patchanalyticsvisitor) - Update a visitor
 * [removeAnalyticsVisitor](docs/sdks/visitor/README.md#removeanalyticsvisitor) - Remove a visitor
 * [updateAnalyticsVisitor](docs/sdks/visitor/README.md#updateanalyticsvisitor) - Update a visitor
+
+### [Volume](docs/sdks/volume/README.md)
+
+* [createComputeVolume](docs/sdks/volume/README.md#createcomputevolume) - Create a volume
+* [getComputeVolume](docs/sdks/volume/README.md#getcomputevolume) - Retrieve a volume
+* [listComputeVolumes](docs/sdks/volume/README.md#listcomputevolumes) - List all volumes
+* [patchComputeVolume](docs/sdks/volume/README.md#patchcomputevolume) - Update a volume
+* [removeComputeVolume](docs/sdks/volume/README.md#removecomputevolume) - Remove a volume
+* [updateComputeVolume](docs/sdks/volume/README.md#updatecomputevolume) - Update a volume
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
@@ -2603,7 +2906,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2619,7 +2922,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2667,7 +2970,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2683,7 +2986,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2750,7 +3053,7 @@ public class Application {
                         .currency("BOB")
                         .customerDefinedCode("quo")
                         .description("Spoliatio comedo vilitas harum cupiditate.")
-                        .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                        .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                         .isPayable(true)
                         .name("Electronic Aluminum Tuna")
                         .status(Status.ARCHIVED)
@@ -2766,7 +3069,7 @@ public class Application {
                                 .originalType("adamo")
                                 .build()))
                         .type(Type.BANK)
-                        .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -2921,7 +3224,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("56991dac-50de-4353-86e2-c684b15fcb69")
+                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2937,7 +3240,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T21:03:45.510Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

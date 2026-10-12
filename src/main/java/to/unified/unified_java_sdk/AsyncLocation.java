@@ -11,9 +11,11 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationReque
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
@@ -29,12 +31,16 @@ import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationReque
 import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceLocationRequestBuilder;
@@ -53,9 +59,11 @@ import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
+import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
+import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
@@ -183,6 +191,29 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
+    public GetHealthcareLocationRequestBuilder getHealthcareLocation() {
+        return new GetHealthcareLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareLocationResponse> getHealthcareLocation(@Nonnull GetHealthcareLocationRequest request) {
+        AsyncRequestOperation<GetHealthcareLocationRequest, GetHealthcareLocationResponse> operation
+              = new GetHealthcareLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a location
+     * 
+     * @return The async call builder
+     */
     public GetHrisLocationRequestBuilder getHrisLocation() {
         return new GetHrisLocationRequestBuilder(sdkConfiguration);
     }
@@ -242,6 +273,29 @@ public class AsyncLocation {
     public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
         AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
               = new ListCommerceLocations.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all locations
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareLocationsRequestBuilder listHealthcareLocations() {
+        return new ListHealthcareLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareLocationsResponse> listHealthcareLocations(@Nonnull ListHealthcareLocationsRequest request) {
+        AsyncRequestOperation<ListHealthcareLocationsRequest, ListHealthcareLocationsResponse> operation
+              = new ListHealthcareLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

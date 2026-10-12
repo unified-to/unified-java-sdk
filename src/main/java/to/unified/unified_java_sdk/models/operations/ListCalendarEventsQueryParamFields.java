@@ -32,6 +32,7 @@ public enum ListCalendarEventsQueryParamFields {
     CONFERENCE("conference"),
     ATTACHMENTS("attachments"),
     SEND_NOTIFICATIONS("send_notifications"),
+    MATTER_ID("matter_id"),
     RAW("raw");
 
     @JsonValue

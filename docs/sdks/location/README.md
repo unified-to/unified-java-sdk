@@ -8,9 +8,11 @@
 * [createHrisLocation](#createhrislocation) - Create a location
 * [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
 * [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
+* [listHealthcareLocations](#listhealthcarelocations) - List all locations
 * [listHrisLocations](#listhrislocations) - List all locations
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
 * [patchHrisLocation](#patchhrislocation) - Update a location
@@ -61,7 +63,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("3d7eb4c9-224d-4192-909a-ffee9511a2d6")
+                    .id("7ac92ab4-ae41-4514-96d1-478c8c218613")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -73,10 +75,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("81a94236-8cdf-4d10-b3f3-892e5a415dd9")
+                            .id("eb8db84d-c9b5-4ebd-ac27-a79341a5b150")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("369a99a4-0314-496e-b8fb-b6dd2cc284e0")
+                                    .id("08495af3-76ce-408d-858d-95e28e72981e")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -97,7 +99,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-17T07:27:52.972Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-17T14:43:33.537Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -172,8 +174,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("a95fb085-1de2-4952-a92c-4b2d394ad136")
-                    .id("71d77c71-c403-4af9-b84d-9873ee590086")
+                    .externalIdentifier("54889f3b-64bd-4c03-87a4-3046c3f40499")
+                    .id("d23bc217-59a3-4e73-a3a3-155cbeeb1978")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -192,7 +194,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.024Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T18:25:17.217Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -333,6 +335,64 @@ public class Application {
 ### Response
 
 **[GetCommerceLocationResponse](../../models/operations/GetCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareLocation" method="get" path="/healthcare/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareLocationRequest req = GetHealthcareLocationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareLocationResponse res = sdk.location().getHealthcareLocation()
+                .request(req)
+                .call();
+
+        if (res.healthcareLocation().isPresent()) {
+            System.out.println(res.healthcareLocation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetHealthcareLocationRequest](../../models/operations/GetHealthcareLocationRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetHealthcareLocationResponse](../../models/operations/GetHealthcareLocationResponse.md)**
 
 ### Errors
 
@@ -512,6 +572,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHealthcareLocations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareLocations" method="get" path="/healthcare/{connection_id}/location" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareLocationsRequest req = ListHealthcareLocationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareLocationsResponse res = sdk.location().listHealthcareLocations()
+                .request(req)
+                .call();
+
+        if (res.healthcareLocations().isPresent()) {
+            System.out.println(res.healthcareLocations().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListHealthcareLocationsRequest](../../models/operations/ListHealthcareLocationsRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListHealthcareLocationsResponse](../../models/operations/ListHealthcareLocationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisLocations
 
 List all locations
@@ -611,7 +728,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("807edb13-f876-457a-98dd-258282cc6997")
+                    .id("602a4d92-5d65-4016-978b-8b03bed67fd9")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -623,10 +740,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("4c1f73b2-fee9-4130-a73e-8e0f227a6cf0")
+                            .id("05e11113-6be6-45df-8796-c425ccecdcfc")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0a9a7714-e2ce-49e5-9936-149141d0e05f")
+                                    .id("5c08a4a3-7827-44f7-b4a6-7d08143fe585")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -647,7 +764,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-17T07:27:52.982Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-17T14:43:33.549Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -723,8 +840,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("019aebc6-abcb-41bd-842e-f9315e842363")
-                    .id("bf9eb454-3fd7-45f7-8a51-2b1635dfe888")
+                    .externalIdentifier("0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc")
+                    .id("d71ba7b1-de46-43ab-a5c9-6f86497eaac1")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -743,7 +860,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.030Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T18:25:17.222Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -930,7 +1047,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("807edb13-f876-457a-98dd-258282cc6997")
+                    .id("602a4d92-5d65-4016-978b-8b03bed67fd9")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -942,10 +1059,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("4c1f73b2-fee9-4130-a73e-8e0f227a6cf0")
+                            .id("05e11113-6be6-45df-8796-c425ccecdcfc")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0a9a7714-e2ce-49e5-9936-149141d0e05f")
+                                    .id("5c08a4a3-7827-44f7-b4a6-7d08143fe585")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -966,7 +1083,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-17T07:27:52.982Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-17T14:43:33.549Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -1042,8 +1159,8 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MUR")
                     .description("Acervus caries.")
-                    .externalIdentifier("019aebc6-abcb-41bd-842e-f9315e842363")
-                    .id("bf9eb454-3fd7-45f7-8a51-2b1635dfe888")
+                    .externalIdentifier("0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc")
+                    .id("d71ba7b1-de46-43ab-a5c9-6f86497eaac1")
                     .isActive(true)
                     .isHq(false)
                     .languageLocale("fr")
@@ -1062,7 +1179,7 @@ public class Application {
                             .type(HrisTelephoneType.FAX)
                             .build()))
                     .timezone("America/Guyana")
-                    .updatedAt(OffsetDateTime.parse("2023-06-17T10:41:43.030Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-17T18:25:17.222Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

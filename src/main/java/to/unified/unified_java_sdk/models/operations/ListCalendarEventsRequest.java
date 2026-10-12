@@ -51,6 +51,12 @@ public class ListCalendarEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
 
+    /**
+     * The matter ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matter_id")
+    private String matterId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Double offset;
@@ -98,6 +104,7 @@ public class ListCalendarEventsRequest {
             @Nullable Boolean expand,
             @Nullable List<ListCalendarEventsQueryParamFields> fields,
             @Nullable Double limit,
+            @Nullable String matterId,
             @Nullable Double offset,
             @Nullable String order,
             @Nullable String query,
@@ -112,6 +119,7 @@ public class ListCalendarEventsRequest {
         this.expand = expand;
         this.fields = fields;
         this.limit = limit;
+        this.matterId = matterId;
         this.offset = offset;
         this.order = order;
         this.query = query;
@@ -127,7 +135,7 @@ public class ListCalendarEventsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -167,6 +175,13 @@ public class ListCalendarEventsRequest {
 
     public Optional<Double> limit() {
         return Optional.ofNullable(this.limit);
+    }
+
+    /**
+     * The matter ID to filter by
+     */
+    public Optional<String> matterId() {
+        return Optional.ofNullable(this.matterId);
     }
 
     public Optional<Double> offset() {
@@ -268,6 +283,15 @@ public class ListCalendarEventsRequest {
     }
 
 
+    /**
+     * The matter ID to filter by
+     */
+    public ListCalendarEventsRequest withMatterId(@Nullable String matterId) {
+        this.matterId = matterId;
+        return this;
+    }
+
+
     public ListCalendarEventsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
@@ -341,6 +365,7 @@ public class ListCalendarEventsRequest {
             Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.matterId, other.matterId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
@@ -355,9 +380,9 @@ public class ListCalendarEventsRequest {
         return Utils.enhancedHash(
             calendarId, connectionId, endLt,
             expand, fields, limit,
-            offset, order, query,
-            raw, sort, startGte,
-            updatedGte);
+            matterId, offset, order,
+            query, raw, sort,
+            startGte, updatedGte);
     }
     
     @Override
@@ -369,6 +394,7 @@ public class ListCalendarEventsRequest {
                 "expand", expand,
                 "fields", fields,
                 "limit", limit,
+                "matterId", matterId,
                 "offset", offset,
                 "order", order,
                 "query", query,
@@ -392,6 +418,8 @@ public class ListCalendarEventsRequest {
         private List<ListCalendarEventsQueryParamFields> fields;
 
         private Double limit;
+
+        private String matterId;
 
         private Double offset;
 
@@ -456,6 +484,14 @@ public class ListCalendarEventsRequest {
             return this;
         }
 
+        /**
+         * The matter ID to filter by
+         */
+        public Builder matterId(@Nullable String matterId) {
+            this.matterId = matterId;
+            return this;
+        }
+
         public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
@@ -510,9 +546,9 @@ public class ListCalendarEventsRequest {
             return new ListCalendarEventsRequest(
                 calendarId, connectionId, endLt,
                 expand, fields, limit,
-                offset, order, query,
-                raw, sort, startGte,
-                updatedGte);
+                matterId, offset, order,
+                query, raw, sort,
+                startGte, updatedGte);
         }
 
     }
