@@ -55,7 +55,9 @@ public class HealthcareSlot {
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -182,6 +184,9 @@ public class HealthcareSlot {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -285,6 +290,9 @@ public class HealthcareSlot {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareSlot withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -480,6 +488,9 @@ public class HealthcareSlot {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

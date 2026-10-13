@@ -20,6 +20,11 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * HealthcareMetadataValue
+ * 
+ * <p>The custom field value
+ */
 @JsonDeserialize(using = HealthcareMetadataValue._Deserializer.class)
 public class HealthcareMetadataValue {
 

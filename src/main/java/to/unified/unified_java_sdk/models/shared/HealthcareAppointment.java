@@ -61,7 +61,9 @@ public class HealthcareAppointment {
     @JsonProperty("location_id")
     private String locationId;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -225,6 +227,9 @@ public class HealthcareAppointment {
         return Optional.ofNullable(this.locationId);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -358,6 +363,9 @@ public class HealthcareAppointment {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareAppointment withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -605,6 +613,9 @@ public class HealthcareAppointment {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

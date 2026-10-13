@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * BillingMethod
+ * 
+ * <p>how the matter is billed
+ */
 public class BillingMethod {
 
     public static final BillingMethod HOURLY = new BillingMethod("HOURLY");

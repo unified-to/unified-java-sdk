@@ -27,7 +27,7 @@ public class ComputeRegion {
     private String country;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -69,7 +69,7 @@ public class ComputeRegion {
     private Map<String, Object> raw;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -109,7 +109,7 @@ public class ComputeRegion {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
@@ -151,7 +151,7 @@ public class ComputeRegion {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -172,7 +172,7 @@ public class ComputeRegion {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ComputeRegion withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -226,7 +226,7 @@ public class ComputeRegion {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ComputeRegion withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -307,7 +307,7 @@ public class ComputeRegion {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
@@ -355,7 +355,7 @@ public class ComputeRegion {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;

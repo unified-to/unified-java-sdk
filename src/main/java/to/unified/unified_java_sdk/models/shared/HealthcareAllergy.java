@@ -54,7 +54,9 @@ public class HealthcareAllergy {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -218,6 +220,9 @@ public class HealthcareAllergy {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -349,6 +354,9 @@ public class HealthcareAllergy {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareAllergy withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -597,6 +605,9 @@ public class HealthcareAllergy {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

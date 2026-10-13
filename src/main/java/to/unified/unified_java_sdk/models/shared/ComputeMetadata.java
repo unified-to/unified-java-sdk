@@ -15,7 +15,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class ComputeMetadata {
-
+    /**
+     * Additional data about the value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
     private ComputeMetadataExtraData extraData;
@@ -27,7 +29,9 @@ public class ComputeMetadata {
     @JsonProperty("format")
     private ComputeMetadataFormat format;
 
-
+    /**
+     * The label, tag or metadata identifier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -74,6 +78,9 @@ public class ComputeMetadata {
             null, null, null);
     }
 
+    /**
+     * Additional data about the value
+     */
     public Optional<ComputeMetadataExtraData> extraData() {
         return Optional.ofNullable(this.extraData);
     }
@@ -85,6 +92,9 @@ public class ComputeMetadata {
         return Optional.ofNullable(this.format);
     }
 
+    /**
+     * The label, tag or metadata identifier
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -115,6 +125,9 @@ public class ComputeMetadata {
     }
 
 
+    /**
+     * Additional data about the value
+     */
     public ComputeMetadata withExtraData(@Nullable ComputeMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
@@ -130,6 +143,9 @@ public class ComputeMetadata {
     }
 
 
+    /**
+     * The label, tag or metadata identifier
+     */
     public ComputeMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -218,6 +234,9 @@ public class ComputeMetadata {
           // force use of static builder() method
         }
 
+        /**
+         * Additional data about the value
+         */
         public Builder extraData(@Nullable ComputeMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
@@ -231,6 +250,9 @@ public class ComputeMetadata {
             return this;
         }
 
+        /**
+         * The label, tag or metadata identifier
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;

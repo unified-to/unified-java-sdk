@@ -69,7 +69,9 @@ public class HealthcareObservation {
     @JsonProperty("issued_at")
     private OffsetDateTime issuedAt;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -270,6 +272,9 @@ public class HealthcareObservation {
         return Optional.ofNullable(this.issuedAt);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -433,6 +438,9 @@ public class HealthcareObservation {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareObservation withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -732,6 +740,9 @@ public class HealthcareObservation {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

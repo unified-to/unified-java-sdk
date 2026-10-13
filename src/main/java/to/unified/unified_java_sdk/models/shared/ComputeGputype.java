@@ -42,7 +42,7 @@ public class ComputeGputype {
     private Double cpuCount;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
@@ -126,7 +126,7 @@ public class ComputeGputype {
     private String sku;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -199,7 +199,7 @@ public class ComputeGputype {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
@@ -283,7 +283,7 @@ public class ComputeGputype {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -322,7 +322,7 @@ public class ComputeGputype {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ComputeGputype withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -430,7 +430,7 @@ public class ComputeGputype {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public ComputeGputype withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -562,7 +562,7 @@ public class ComputeGputype {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
@@ -658,7 +658,7 @@ public class ComputeGputype {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;

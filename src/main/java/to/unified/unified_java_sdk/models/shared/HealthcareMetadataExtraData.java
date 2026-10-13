@@ -20,6 +20,11 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * HealthcareMetadataExtraData
+ * 
+ * <p>Additional data about the custom field
+ */
 @JsonDeserialize(using = HealthcareMetadataExtraData._Deserializer.class)
 public class HealthcareMetadataExtraData {
 

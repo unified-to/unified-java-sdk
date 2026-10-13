@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * HealthcareTelephoneType
+ * 
+ * <p>The kind of telephone number (work, home, mobile, fax or other)
+ */
 public class HealthcareTelephoneType {
 
     public static final HealthcareTelephoneType WORK = new HealthcareTelephoneType("WORK");

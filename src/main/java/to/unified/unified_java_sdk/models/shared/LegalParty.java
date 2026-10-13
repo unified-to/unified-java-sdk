@@ -36,7 +36,9 @@ public class LegalParty {
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * the party role on the matter
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     private LegalPartyRole role;
@@ -79,6 +81,9 @@ public class LegalParty {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * the party role on the matter
+     */
     public Optional<LegalPartyRole> role() {
         return Optional.ofNullable(this.role);
     }
@@ -115,6 +120,9 @@ public class LegalParty {
     }
 
 
+    /**
+     * the party role on the matter
+     */
     public LegalParty withRole(@Nullable LegalPartyRole role) {
         this.role = role;
         return this;
@@ -192,6 +200,9 @@ public class LegalParty {
             return this;
         }
 
+        /**
+         * the party role on the matter
+         */
         public Builder role(@Nullable LegalPartyRole role) {
             this.role = role;
             return this;

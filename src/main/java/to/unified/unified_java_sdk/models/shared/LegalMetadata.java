@@ -15,32 +15,44 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class LegalMetadata {
-
+    /**
+     * additional data about the custom field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
     private LegalMetadataExtraData extraData;
 
-
+    /**
+     * the data type of the value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private LegalMetadataFormat format;
 
-
+    /**
+     * the custom field identifier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * the scope or origin of the custom field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * the custom field key
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * the custom field value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private LegalMetadataValue value;
@@ -66,26 +78,44 @@ public class LegalMetadata {
             null, null, null);
     }
 
+    /**
+     * additional data about the custom field
+     */
     public Optional<LegalMetadataExtraData> extraData() {
         return Optional.ofNullable(this.extraData);
     }
 
+    /**
+     * the data type of the value
+     */
     public Optional<LegalMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
 
+    /**
+     * the custom field identifier
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * the scope or origin of the custom field
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * the custom field key
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * the custom field value
+     */
     public Optional<LegalMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
@@ -95,36 +125,54 @@ public class LegalMetadata {
     }
 
 
+    /**
+     * additional data about the custom field
+     */
     public LegalMetadata withExtraData(@Nullable LegalMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
 
+    /**
+     * the data type of the value
+     */
     public LegalMetadata withFormat(@Nullable LegalMetadataFormat format) {
         this.format = format;
         return this;
     }
 
 
+    /**
+     * the custom field identifier
+     */
     public LegalMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * the scope or origin of the custom field
+     */
     public LegalMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
 
+    /**
+     * the custom field key
+     */
     public LegalMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * the custom field value
+     */
     public LegalMetadata withValue(@Nullable LegalMetadataValue value) {
         this.value = value;
         return this;
@@ -186,31 +234,49 @@ public class LegalMetadata {
           // force use of static builder() method
         }
 
+        /**
+         * additional data about the custom field
+         */
         public Builder extraData(@Nullable LegalMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
+        /**
+         * the data type of the value
+         */
         public Builder format(@Nullable LegalMetadataFormat format) {
             this.format = format;
             return this;
         }
 
+        /**
+         * the custom field identifier
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * the scope or origin of the custom field
+         */
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
+        /**
+         * the custom field key
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * the custom field value
+         */
         public Builder value(@Nullable LegalMetadataValue value) {
             this.value = value;
             return this;

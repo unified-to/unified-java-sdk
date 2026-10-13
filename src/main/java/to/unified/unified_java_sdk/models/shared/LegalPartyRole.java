@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * LegalPartyRole
+ * 
+ * <p>the party role on the matter
+ */
 public class LegalPartyRole {
 
     public static final LegalPartyRole CLIENT = new LegalPartyRole("CLIENT");

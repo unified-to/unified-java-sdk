@@ -75,7 +75,9 @@ public class HealthcareImmunization {
     @JsonProperty("lot_number")
     private String lotNumber;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -230,6 +232,9 @@ public class HealthcareImmunization {
         return Optional.ofNullable(this.lotNumber);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -360,6 +365,9 @@ public class HealthcareImmunization {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareImmunization withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -592,6 +600,9 @@ public class HealthcareImmunization {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

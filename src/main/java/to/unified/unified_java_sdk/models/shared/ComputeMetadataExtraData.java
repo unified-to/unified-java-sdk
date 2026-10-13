@@ -20,6 +20,11 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * ComputeMetadataExtraData
+ * 
+ * <p>Additional data about the value
+ */
 @JsonDeserialize(using = ComputeMetadataExtraData._Deserializer.class)
 public class ComputeMetadataExtraData {
 

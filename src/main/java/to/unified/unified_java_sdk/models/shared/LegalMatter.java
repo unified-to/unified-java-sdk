@@ -20,7 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class LegalMatter {
-
+    /**
+     * how the matter is billed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_method")
     private BillingMethod billingMethod;
@@ -33,7 +35,7 @@ public class LegalMatter {
     private String clientReference;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
@@ -54,28 +56,36 @@ public class LegalMatter {
     private List<String> contactIds;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217 currency code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * free-text description of the matter
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * unique identifier for the matter
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * whether the matter is billable
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     private Boolean isBillable;
@@ -87,7 +97,9 @@ public class LegalMatter {
     @JsonProperty("metadata")
     private List<LegalMetadata> metadata;
 
-
+    /**
+     * the matter name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -100,7 +112,7 @@ public class LegalMatter {
     private String number;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opened_at")
@@ -121,7 +133,7 @@ public class LegalMatter {
     private List<LegalParty> parties;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pending_at")
@@ -134,7 +146,9 @@ public class LegalMatter {
     @JsonProperty("practicearea_id")
     private String practiceareaId;
 
-
+    /**
+     * raw data from the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -146,20 +160,22 @@ public class LegalMatter {
     @JsonProperty("stage")
     private String stage;
 
-
+    /**
+     * the matter status
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private LegalMatterStatus status;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statute_of_limitations_at")
     private OffsetDateTime statuteOfLimitationsAt;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -245,6 +261,9 @@ public class LegalMatter {
             null);
     }
 
+    /**
+     * how the matter is billed
+     */
     public Optional<BillingMethod> billingMethod() {
         return Optional.ofNullable(this.billingMethod);
     }
@@ -257,7 +276,7 @@ public class LegalMatter {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> closedAt() {
         return Optional.ofNullable(this.closedAt);
@@ -278,24 +297,36 @@ public class LegalMatter {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217 currency code
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * free-text description of the matter
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * unique identifier for the matter
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * whether the matter is billable
+     */
     public Optional<Boolean> isBillable() {
         return Optional.ofNullable(this.isBillable);
     }
@@ -307,6 +338,9 @@ public class LegalMatter {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * the matter name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -319,7 +353,7 @@ public class LegalMatter {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> openedAt() {
         return Optional.ofNullable(this.openedAt);
@@ -340,7 +374,7 @@ public class LegalMatter {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> pendingAt() {
         return Optional.ofNullable(this.pendingAt);
@@ -353,6 +387,9 @@ public class LegalMatter {
         return Optional.ofNullable(this.practiceareaId);
     }
 
+    /**
+     * raw data from the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -364,19 +401,22 @@ public class LegalMatter {
         return Optional.ofNullable(this.stage);
     }
 
+    /**
+     * the matter status
+     */
     public Optional<LegalMatterStatus> status() {
         return Optional.ofNullable(this.status);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> statuteOfLimitationsAt() {
         return Optional.ofNullable(this.statuteOfLimitationsAt);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -401,6 +441,9 @@ public class LegalMatter {
     }
 
 
+    /**
+     * how the matter is billed
+     */
     public LegalMatter withBillingMethod(@Nullable BillingMethod billingMethod) {
         this.billingMethod = billingMethod;
         return this;
@@ -417,7 +460,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
@@ -444,7 +487,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -452,24 +495,36 @@ public class LegalMatter {
     }
 
 
+    /**
+     * ISO 4217 currency code
+     */
     public LegalMatter withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * free-text description of the matter
+     */
     public LegalMatter withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * unique identifier for the matter
+     */
     public LegalMatter withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * whether the matter is billable
+     */
     public LegalMatter withIsBillable(@Nullable Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -485,6 +540,9 @@ public class LegalMatter {
     }
 
 
+    /**
+     * the matter name
+     */
     public LegalMatter withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -501,7 +559,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withOpenedAt(@Nullable OffsetDateTime openedAt) {
         this.openedAt = openedAt;
@@ -528,7 +586,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withPendingAt(@Nullable OffsetDateTime pendingAt) {
         this.pendingAt = pendingAt;
@@ -545,6 +603,9 @@ public class LegalMatter {
     }
 
 
+    /**
+     * raw data from the integration
+     */
     public LegalMatter withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -560,6 +621,9 @@ public class LegalMatter {
     }
 
 
+    /**
+     * the matter status
+     */
     public LegalMatter withStatus(@Nullable LegalMatterStatus status) {
         this.status = status;
         return this;
@@ -567,7 +631,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withStatuteOfLimitationsAt(@Nullable OffsetDateTime statuteOfLimitationsAt) {
         this.statuteOfLimitationsAt = statuteOfLimitationsAt;
@@ -576,7 +640,7 @@ public class LegalMatter {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalMatter withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -740,6 +804,9 @@ public class LegalMatter {
           // force use of static builder() method
         }
 
+        /**
+         * how the matter is billed
+         */
         public Builder billingMethod(@Nullable BillingMethod billingMethod) {
             this.billingMethod = billingMethod;
             return this;
@@ -754,7 +821,7 @@ public class LegalMatter {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
@@ -778,28 +845,40 @@ public class LegalMatter {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217 currency code
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * free-text description of the matter
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * unique identifier for the matter
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * whether the matter is billable
+         */
         public Builder isBillable(@Nullable Boolean isBillable) {
             this.isBillable = isBillable;
             return this;
@@ -813,6 +892,9 @@ public class LegalMatter {
             return this;
         }
 
+        /**
+         * the matter name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -827,7 +909,7 @@ public class LegalMatter {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder openedAt(@Nullable OffsetDateTime openedAt) {
             this.openedAt = openedAt;
@@ -851,7 +933,7 @@ public class LegalMatter {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder pendingAt(@Nullable OffsetDateTime pendingAt) {
             this.pendingAt = pendingAt;
@@ -866,6 +948,9 @@ public class LegalMatter {
             return this;
         }
 
+        /**
+         * raw data from the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -879,13 +964,16 @@ public class LegalMatter {
             return this;
         }
 
+        /**
+         * the matter status
+         */
         public Builder status(@Nullable LegalMatterStatus status) {
             this.status = status;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder statuteOfLimitationsAt(@Nullable OffsetDateTime statuteOfLimitationsAt) {
             this.statuteOfLimitationsAt = statuteOfLimitationsAt;
@@ -893,7 +981,7 @@ public class LegalMatter {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;

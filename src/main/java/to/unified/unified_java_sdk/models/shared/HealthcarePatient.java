@@ -111,7 +111,9 @@ public class HealthcarePatient {
     @JsonProperty("last_name")
     private String lastName;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -294,6 +296,9 @@ public class HealthcarePatient {
         return Optional.ofNullable(this.lastName);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -455,6 +460,9 @@ public class HealthcarePatient {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcarePatient withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -722,6 +730,9 @@ public class HealthcarePatient {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

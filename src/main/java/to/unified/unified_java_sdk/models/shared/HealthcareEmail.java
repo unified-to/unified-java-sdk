@@ -16,11 +16,15 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HealthcareEmail {
-
+    /**
+     * The email address
+     */
     @JsonProperty("email")
     private String email;
 
-
+    /**
+     * The kind of email address (work, home or other)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HealthcareEmailType type;
@@ -39,10 +43,16 @@ public class HealthcareEmail {
         this(email, null);
     }
 
+    /**
+     * The email address
+     */
     public String email() {
         return this.email;
     }
 
+    /**
+     * The kind of email address (work, home or other)
+     */
     public Optional<HealthcareEmailType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -52,12 +62,18 @@ public class HealthcareEmail {
     }
 
 
+    /**
+     * The email address
+     */
     public HealthcareEmail withEmail(@Nonnull String email) {
         this.email = Utils.checkNotNull(email, "email");
         return this;
     }
 
 
+    /**
+     * The kind of email address (work, home or other)
+     */
     public HealthcareEmail withType(@Nullable HealthcareEmailType type) {
         this.type = type;
         return this;
@@ -102,11 +118,17 @@ public class HealthcareEmail {
           // force use of static builder() method
         }
 
+        /**
+         * The email address
+         */
         public Builder email(@Nonnull String email) {
             this.email = Utils.checkNotNull(email, "email");
             return this;
         }
 
+        /**
+         * The kind of email address (work, home or other)
+         */
         public Builder type(@Nullable HealthcareEmailType type) {
             this.type = type;
             return this;

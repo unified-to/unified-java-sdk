@@ -29,18 +29,22 @@ public class LegalExpense {
     private String category;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217 currency code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * free-text description of the expense
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -52,7 +56,9 @@ public class LegalExpense {
     @JsonProperty("expense_code")
     private String expenseCode;
 
-
+    /**
+     * unique identifier for the expense
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -71,12 +77,16 @@ public class LegalExpense {
     @JsonProperty("invoice_id")
     private String invoiceId;
 
-
+    /**
+     * whether the expense is billable
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     private Boolean isBillable;
 
-
+    /**
+     * whether the expense has been billed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billed")
     private Boolean isBilled;
@@ -102,28 +112,36 @@ public class LegalExpense {
     @JsonProperty("price_amount")
     private Double priceAmount;
 
-
+    /**
+     * number of units
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     private Double quantity;
 
-
+    /**
+     * raw data from the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * total amount of the expense
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
-
+    /**
+     * hard cost, soft cost or other
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private LegalExpenseType type;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -196,16 +214,22 @@ public class LegalExpense {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217 currency code
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * free-text description of the expense
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -217,6 +241,9 @@ public class LegalExpense {
         return Optional.ofNullable(this.expenseCode);
     }
 
+    /**
+     * unique identifier for the expense
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -235,10 +262,16 @@ public class LegalExpense {
         return Optional.ofNullable(this.invoiceId);
     }
 
+    /**
+     * whether the expense is billable
+     */
     public Optional<Boolean> isBillable() {
         return Optional.ofNullable(this.isBillable);
     }
 
+    /**
+     * whether the expense has been billed
+     */
     public Optional<Boolean> isBilled() {
         return Optional.ofNullable(this.isBilled);
     }
@@ -264,24 +297,36 @@ public class LegalExpense {
         return Optional.ofNullable(this.priceAmount);
     }
 
+    /**
+     * number of units
+     */
     public Optional<Double> quantity() {
         return Optional.ofNullable(this.quantity);
     }
 
+    /**
+     * raw data from the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * total amount of the expense
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    /**
+     * hard cost, soft cost or other
+     */
     public Optional<LegalExpenseType> type() {
         return Optional.ofNullable(this.type);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -309,7 +354,7 @@ public class LegalExpense {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalExpense withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -317,12 +362,18 @@ public class LegalExpense {
     }
 
 
+    /**
+     * ISO 4217 currency code
+     */
     public LegalExpense withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * free-text description of the expense
+     */
     public LegalExpense withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -338,6 +389,9 @@ public class LegalExpense {
     }
 
 
+    /**
+     * unique identifier for the expense
+     */
     public LegalExpense withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -362,12 +416,18 @@ public class LegalExpense {
     }
 
 
+    /**
+     * whether the expense is billable
+     */
     public LegalExpense withIsBillable(@Nullable Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
     }
 
 
+    /**
+     * whether the expense has been billed
+     */
     public LegalExpense withIsBilled(@Nullable Boolean isBilled) {
         this.isBilled = isBilled;
         return this;
@@ -401,24 +461,36 @@ public class LegalExpense {
     }
 
 
+    /**
+     * number of units
+     */
     public LegalExpense withQuantity(@Nullable Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
 
+    /**
+     * raw data from the integration
+     */
     public LegalExpense withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * total amount of the expense
+     */
     public LegalExpense withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
 
+    /**
+     * hard cost, soft cost or other
+     */
     public LegalExpense withType(@Nullable LegalExpenseType type) {
         this.type = type;
         return this;
@@ -426,7 +498,7 @@ public class LegalExpense {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalExpense withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -564,18 +636,24 @@ public class LegalExpense {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217 currency code
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * free-text description of the expense
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -589,6 +667,9 @@ public class LegalExpense {
             return this;
         }
 
+        /**
+         * unique identifier for the expense
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -610,11 +691,17 @@ public class LegalExpense {
             return this;
         }
 
+        /**
+         * whether the expense is billable
+         */
         public Builder isBillable(@Nullable Boolean isBillable) {
             this.isBillable = isBillable;
             return this;
         }
 
+        /**
+         * whether the expense has been billed
+         */
         public Builder isBilled(@Nullable Boolean isBilled) {
             this.isBilled = isBilled;
             return this;
@@ -644,28 +731,40 @@ public class LegalExpense {
             return this;
         }
 
+        /**
+         * number of units
+         */
         public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
+        /**
+         * raw data from the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * total amount of the expense
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
+        /**
+         * hard cost, soft cost or other
+         */
         public Builder type(@Nullable LegalExpenseType type) {
             this.type = type;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;

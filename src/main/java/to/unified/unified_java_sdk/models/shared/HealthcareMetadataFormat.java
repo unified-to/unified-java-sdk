@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * HealthcareMetadataFormat
+ * 
+ * <p>The data type of the value
+ */
 public class HealthcareMetadataFormat {
 
     public static final HealthcareMetadataFormat TEXT = new HealthcareMetadataFormat("TEXT");

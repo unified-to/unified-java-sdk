@@ -27,7 +27,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("b096adb6-85c6-43bd-8b65-9908676ad8f8")
+                    .id("8a78fa88-db34-41aa-9f18-f5395ebc3ade")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -43,7 +43,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T23:34:54.694Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T01:49:49.264Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

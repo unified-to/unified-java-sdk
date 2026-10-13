@@ -47,7 +47,9 @@ public class HealthcareCondition {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -202,6 +204,9 @@ public class HealthcareCondition {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -324,6 +329,9 @@ public class HealthcareCondition {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareCondition withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -560,6 +568,9 @@ public class HealthcareCondition {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

@@ -16,11 +16,15 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HealthcareTelephone {
-
+    /**
+     * The telephone number
+     */
     @JsonProperty("telephone")
     private String telephone;
 
-
+    /**
+     * The kind of telephone number (work, home, mobile, fax or other)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HealthcareTelephoneType type;
@@ -39,10 +43,16 @@ public class HealthcareTelephone {
         this(telephone, null);
     }
 
+    /**
+     * The telephone number
+     */
     public String telephone() {
         return this.telephone;
     }
 
+    /**
+     * The kind of telephone number (work, home, mobile, fax or other)
+     */
     public Optional<HealthcareTelephoneType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -52,12 +62,18 @@ public class HealthcareTelephone {
     }
 
 
+    /**
+     * The telephone number
+     */
     public HealthcareTelephone withTelephone(@Nonnull String telephone) {
         this.telephone = Utils.checkNotNull(telephone, "telephone");
         return this;
     }
 
 
+    /**
+     * The kind of telephone number (work, home, mobile, fax or other)
+     */
     public HealthcareTelephone withType(@Nullable HealthcareTelephoneType type) {
         this.type = type;
         return this;
@@ -102,11 +118,17 @@ public class HealthcareTelephone {
           // force use of static builder() method
         }
 
+        /**
+         * The telephone number
+         */
         public Builder telephone(@Nonnull String telephone) {
             this.telephone = Utils.checkNotNull(telephone, "telephone");
             return this;
         }
 
+        /**
+         * The kind of telephone number (work, home, mobile, fax or other)
+         */
         public Builder type(@Nullable HealthcareTelephoneType type) {
             this.type = type;
             return this;

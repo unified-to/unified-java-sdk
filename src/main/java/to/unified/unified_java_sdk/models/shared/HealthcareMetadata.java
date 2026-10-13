@@ -15,32 +15,44 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class HealthcareMetadata {
-
+    /**
+     * Additional data about the custom field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
     private HealthcareMetadataExtraData extraData;
 
-
+    /**
+     * The data type of the value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private HealthcareMetadataFormat format;
 
-
+    /**
+     * Identifier of the custom field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The scope or origin of the custom field
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * The custom field key
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The custom field value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private HealthcareMetadataValue value;
@@ -66,26 +78,44 @@ public class HealthcareMetadata {
             null, null, null);
     }
 
+    /**
+     * Additional data about the custom field
+     */
     public Optional<HealthcareMetadataExtraData> extraData() {
         return Optional.ofNullable(this.extraData);
     }
 
+    /**
+     * The data type of the value
+     */
     public Optional<HealthcareMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
 
+    /**
+     * Identifier of the custom field
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The scope or origin of the custom field
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * The custom field key
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The custom field value
+     */
     public Optional<HealthcareMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
@@ -95,36 +125,54 @@ public class HealthcareMetadata {
     }
 
 
+    /**
+     * Additional data about the custom field
+     */
     public HealthcareMetadata withExtraData(@Nullable HealthcareMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
 
+    /**
+     * The data type of the value
+     */
     public HealthcareMetadata withFormat(@Nullable HealthcareMetadataFormat format) {
         this.format = format;
         return this;
     }
 
 
+    /**
+     * Identifier of the custom field
+     */
     public HealthcareMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * The scope or origin of the custom field
+     */
     public HealthcareMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
 
+    /**
+     * The custom field key
+     */
     public HealthcareMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The custom field value
+     */
     public HealthcareMetadata withValue(@Nullable HealthcareMetadataValue value) {
         this.value = value;
         return this;
@@ -186,31 +234,49 @@ public class HealthcareMetadata {
           // force use of static builder() method
         }
 
+        /**
+         * Additional data about the custom field
+         */
         public Builder extraData(@Nullable HealthcareMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
+        /**
+         * The data type of the value
+         */
         public Builder format(@Nullable HealthcareMetadataFormat format) {
             this.format = format;
             return this;
         }
 
+        /**
+         * Identifier of the custom field
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * The scope or origin of the custom field
+         */
         public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
+        /**
+         * The custom field key
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The custom field value
+         */
         public Builder value(@Nullable HealthcareMetadataValue value) {
             this.value = value;
             return this;

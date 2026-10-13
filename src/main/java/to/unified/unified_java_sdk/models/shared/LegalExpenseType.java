@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * LegalExpenseType
+ * 
+ * <p>hard cost, soft cost or other
+ */
 public class LegalExpenseType {
 
     public static final LegalExpenseType HARD_COST = new LegalExpenseType("HARD_COST");

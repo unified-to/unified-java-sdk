@@ -84,7 +84,9 @@ public class HealthcareLocation {
     @JsonProperty("longitude")
     private Double longitude;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -239,6 +241,9 @@ public class HealthcareLocation {
         return Optional.ofNullable(this.longitude);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -371,6 +376,9 @@ public class HealthcareLocation {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareLocation withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -602,6 +610,9 @@ public class HealthcareLocation {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

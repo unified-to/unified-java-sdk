@@ -20,24 +20,30 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class LegalPracticearea {
-
+    /**
+     * the practice area code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     private String code;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * unique identifier for the practice area
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * whether the practice area is active
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
@@ -49,23 +55,29 @@ public class LegalPracticearea {
     @JsonProperty("metadata")
     private List<LegalMetadata> metadata;
 
-
+    /**
+     * the practice area name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * raw data from the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * the normalized practice area type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private LegalPracticeareaType type;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -99,21 +111,30 @@ public class LegalPracticearea {
             null, null, null);
     }
 
+    /**
+     * the practice area code
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * unique identifier for the practice area
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * whether the practice area is active
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
@@ -125,20 +146,29 @@ public class LegalPracticearea {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * the practice area name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * raw data from the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * the normalized practice area type
+     */
     public Optional<LegalPracticeareaType> type() {
         return Optional.ofNullable(this.type);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -149,6 +179,9 @@ public class LegalPracticearea {
     }
 
 
+    /**
+     * the practice area code
+     */
     public LegalPracticearea withCode(@Nullable String code) {
         this.code = code;
         return this;
@@ -156,7 +189,7 @@ public class LegalPracticearea {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalPracticearea withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -164,12 +197,18 @@ public class LegalPracticearea {
     }
 
 
+    /**
+     * unique identifier for the practice area
+     */
     public LegalPracticearea withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * whether the practice area is active
+     */
     public LegalPracticearea withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -185,18 +224,27 @@ public class LegalPracticearea {
     }
 
 
+    /**
+     * the practice area name
+     */
     public LegalPracticearea withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * raw data from the integration
+     */
     public LegalPracticearea withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    /**
+     * the normalized practice area type
+     */
     public LegalPracticearea withType(@Nullable LegalPracticeareaType type) {
         this.type = type;
         return this;
@@ -204,7 +252,7 @@ public class LegalPracticearea {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalPracticearea withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -280,24 +328,33 @@ public class LegalPracticearea {
           // force use of static builder() method
         }
 
+        /**
+         * the practice area code
+         */
         public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * unique identifier for the practice area
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * whether the practice area is active
+         */
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
@@ -311,23 +368,32 @@ public class LegalPracticearea {
             return this;
         }
 
+        /**
+         * the practice area name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * raw data from the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        /**
+         * the normalized practice area type
+         */
         public Builder type(@Nullable LegalPracticeareaType type) {
             this.type = type;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;

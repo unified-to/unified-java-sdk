@@ -69,7 +69,9 @@ public class HealthcareMedication {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Custom field values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<HealthcareMetadata> metadata;
@@ -233,6 +235,9 @@ public class HealthcareMedication {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Custom field values
+     */
     public Optional<List<HealthcareMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -368,6 +373,9 @@ public class HealthcareMedication {
     }
 
 
+    /**
+     * Custom field values
+     */
     public HealthcareMedication withMetadata(@Nullable List<HealthcareMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -614,6 +622,9 @@ public class HealthcareMedication {
             return this;
         }
 
+        /**
+         * Custom field values
+         */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
             this.metadata = metadata;
             return this;

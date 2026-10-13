@@ -19,32 +19,44 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Home address of the patient
  */
 public class PropertyHealthcarePatientAddress {
-
+    /**
+     * First line of the street address
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
     private String address1;
 
-
+    /**
+     * Second line of the street address
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     private String address2;
 
-
+    /**
+     * City or locality
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     private String city;
 
-
+    /**
+     * Country
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     private String country;
 
-
+    /**
+     * Postal or ZIP code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     private String postalCode;
 
-
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     private String region;
@@ -70,26 +82,44 @@ public class PropertyHealthcarePatientAddress {
             null, null, null);
     }
 
+    /**
+     * First line of the street address
+     */
     public Optional<String> address1() {
         return Optional.ofNullable(this.address1);
     }
 
+    /**
+     * Second line of the street address
+     */
     public Optional<String> address2() {
         return Optional.ofNullable(this.address2);
     }
 
+    /**
+     * City or locality
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
 
+    /**
+     * Country
+     */
     public Optional<String> country() {
         return Optional.ofNullable(this.country);
     }
 
+    /**
+     * Postal or ZIP code
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
 
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -99,36 +129,54 @@ public class PropertyHealthcarePatientAddress {
     }
 
 
+    /**
+     * First line of the street address
+     */
     public PropertyHealthcarePatientAddress withAddress1(@Nullable String address1) {
         this.address1 = address1;
         return this;
     }
 
 
+    /**
+     * Second line of the street address
+     */
     public PropertyHealthcarePatientAddress withAddress2(@Nullable String address2) {
         this.address2 = address2;
         return this;
     }
 
 
+    /**
+     * City or locality
+     */
     public PropertyHealthcarePatientAddress withCity(@Nullable String city) {
         this.city = city;
         return this;
     }
 
 
+    /**
+     * Country
+     */
     public PropertyHealthcarePatientAddress withCountry(@Nullable String country) {
         this.country = country;
         return this;
     }
 
 
+    /**
+     * Postal or ZIP code
+     */
     public PropertyHealthcarePatientAddress withPostalCode(@Nullable String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
 
+    /**
+     * Regional area (e.g., state in the U.S., province in Canada)
+     */
     public PropertyHealthcarePatientAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
@@ -190,31 +238,49 @@ public class PropertyHealthcarePatientAddress {
           // force use of static builder() method
         }
 
+        /**
+         * First line of the street address
+         */
         public Builder address1(@Nullable String address1) {
             this.address1 = address1;
             return this;
         }
 
+        /**
+         * Second line of the street address
+         */
         public Builder address2(@Nullable String address2) {
             this.address2 = address2;
             return this;
         }
 
+        /**
+         * City or locality
+         */
         public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
+        /**
+         * Country
+         */
         public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
 
+        /**
+         * Postal or ZIP code
+         */
         public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * Regional area (e.g., state in the U.S., province in Canada)
+         */
         public Builder region(@Nullable String region) {
             this.region = region;
             return this;

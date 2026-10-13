@@ -36,23 +36,29 @@ public class LegalTimeentry {
     private Double billableMinutes;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * ISO 4217 currency code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * description of the work performed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
-
+    /**
+     * unique identifier for the time entry
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -64,12 +70,16 @@ public class LegalTimeentry {
     @JsonProperty("invoice_id")
     private String invoiceId;
 
-
+    /**
+     * whether the time entry is billable
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     private Boolean isBillable;
 
-
+    /**
+     * whether the time entry has been billed
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billed")
     private Boolean isBilled;
@@ -102,7 +112,9 @@ public class LegalTimeentry {
     @JsonProperty("rate_amount")
     private Double rateAmount;
 
-
+    /**
+     * raw data from the integration
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
@@ -114,13 +126,15 @@ public class LegalTimeentry {
     @JsonProperty("task_code")
     private String taskCode;
 
-
+    /**
+     * total amount of the time entry
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
@@ -207,20 +221,29 @@ public class LegalTimeentry {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * ISO 4217 currency code
+     */
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * description of the work performed
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * unique identifier for the time entry
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -232,10 +255,16 @@ public class LegalTimeentry {
         return Optional.ofNullable(this.invoiceId);
     }
 
+    /**
+     * whether the time entry is billable
+     */
     public Optional<Boolean> isBillable() {
         return Optional.ofNullable(this.isBillable);
     }
 
+    /**
+     * whether the time entry has been billed
+     */
     public Optional<Boolean> isBilled() {
         return Optional.ofNullable(this.isBilled);
     }
@@ -268,6 +297,9 @@ public class LegalTimeentry {
         return Optional.ofNullable(this.rateAmount);
     }
 
+    /**
+     * raw data from the integration
+     */
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -279,12 +311,15 @@ public class LegalTimeentry {
         return Optional.ofNullable(this.taskCode);
     }
 
+    /**
+     * total amount of the time entry
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
@@ -328,7 +363,7 @@ public class LegalTimeentry {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalTimeentry withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
@@ -336,18 +371,27 @@ public class LegalTimeentry {
     }
 
 
+    /**
+     * ISO 4217 currency code
+     */
     public LegalTimeentry withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
 
+    /**
+     * description of the work performed
+     */
     public LegalTimeentry withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
+    /**
+     * unique identifier for the time entry
+     */
     public LegalTimeentry withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -363,12 +407,18 @@ public class LegalTimeentry {
     }
 
 
+    /**
+     * whether the time entry is billable
+     */
     public LegalTimeentry withIsBillable(@Nullable Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
     }
 
 
+    /**
+     * whether the time entry has been billed
+     */
     public LegalTimeentry withIsBilled(@Nullable Boolean isBilled) {
         this.isBilled = isBilled;
         return this;
@@ -411,6 +461,9 @@ public class LegalTimeentry {
     }
 
 
+    /**
+     * raw data from the integration
+     */
     public LegalTimeentry withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -426,6 +479,9 @@ public class LegalTimeentry {
     }
 
 
+    /**
+     * total amount of the time entry
+     */
     public LegalTimeentry withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -433,7 +489,7 @@ public class LegalTimeentry {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public LegalTimeentry withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
@@ -588,23 +644,32 @@ public class LegalTimeentry {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * ISO 4217 currency code
+         */
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
+        /**
+         * description of the work performed
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
+        /**
+         * unique identifier for the time entry
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -618,11 +683,17 @@ public class LegalTimeentry {
             return this;
         }
 
+        /**
+         * whether the time entry is billable
+         */
         public Builder isBillable(@Nullable Boolean isBillable) {
             this.isBillable = isBillable;
             return this;
         }
 
+        /**
+         * whether the time entry has been billed
+         */
         public Builder isBilled(@Nullable Boolean isBilled) {
             this.isBilled = isBilled;
             return this;
@@ -660,6 +731,9 @@ public class LegalTimeentry {
             return this;
         }
 
+        /**
+         * raw data from the integration
+         */
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -673,13 +747,16 @@ public class LegalTimeentry {
             return this;
         }
 
+        /**
+         * total amount of the time entry
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
