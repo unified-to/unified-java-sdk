@@ -44,10 +44,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("89549a05-c497-4dc7-8f33-16d4b2ebc536")
+                    .id("22b0ba9d-0d47-44b9-b26b-0d949074f00c")
                     .isSecret(true)
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-06-28T09:08:46.937Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T03:08:12.940Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -227,10 +227,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("ddf81e2e-6c3f-49fc-93bb-9376dc35f471")
+                    .id("bdfc4472-ce6b-416d-aa25-367c056694cc")
                     .isSecret(true)
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-06-28T09:08:46.944Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T03:08:12.946Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -352,10 +352,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("ddf81e2e-6c3f-49fc-93bb-9376dc35f471")
+                    .id("bdfc4472-ce6b-416d-aa25-367c056694cc")
                     .isSecret(true)
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-06-28T09:08:46.944Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-29T03:08:12.946Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.21'
+implementation 'to.unified:unified-java-sdk:0.49.22'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.21</version>
+    <version>0.49.22</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                    .id("15362da2-d4f4-440f-8934-a59757987d97")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -115,7 +115,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -162,7 +162,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                    .id("15362da2-d4f4-440f-8934-a59757987d97")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -178,7 +178,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2906,7 +2906,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                    .id("15362da2-d4f4-440f-8934-a59757987d97")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2922,7 +2922,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2970,7 +2970,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                    .id("15362da2-d4f4-440f-8934-a59757987d97")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -2986,7 +2986,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3053,7 +3053,7 @@ public class Application {
                         .currency("BOB")
                         .customerDefinedCode("quo")
                         .description("Spoliatio comedo vilitas harum cupiditate.")
-                        .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                        .id("15362da2-d4f4-440f-8934-a59757987d97")
                         .isPayable(true)
                         .name("Electronic Aluminum Tuna")
                         .status(Status.ARCHIVED)
@@ -3069,7 +3069,7 @@ public class Application {
                                 .originalType("adamo")
                                 .build()))
                         .type(Type.BANK)
-                        .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3224,7 +3224,7 @@ public class Application {
                     .currency("BOB")
                     .customerDefinedCode("quo")
                     .description("Spoliatio comedo vilitas harum cupiditate.")
-                    .id("96e7619b-c2f1-40f1-870f-9a56fdd97e3f")
+                    .id("15362da2-d4f4-440f-8934-a59757987d97")
                     .isPayable(true)
                     .name("Electronic Aluminum Tuna")
                     .status(Status.ARCHIVED)
@@ -3240,7 +3240,7 @@ public class Application {
                             .originalType("adamo")
                             .build()))
                     .type(Type.BANK)
-                    .updatedAt(OffsetDateTime.parse("2023-01-06T05:44:26.711Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T08:36:19.355Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
