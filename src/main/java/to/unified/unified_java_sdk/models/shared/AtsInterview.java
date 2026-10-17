@@ -65,6 +65,13 @@ public class AtsInterview {
     @JsonProperty("location")
     private String location;
 
+    /**
+     * the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("meeting_url")
+    private String meetingUrl;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
@@ -104,6 +111,7 @@ public class AtsInterview {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("job_id") @Nullable String jobId,
             @JsonProperty("location") @Nullable String location,
+            @JsonProperty("meeting_url") @Nullable String meetingUrl,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable AtsInterviewStatus status,
@@ -117,6 +125,7 @@ public class AtsInterview {
         this.id = id;
         this.jobId = jobId;
         this.location = location;
+        this.meetingUrl = meetingUrl;
         this.raw = raw;
         this.startAt = startAt;
         this.status = status;
@@ -129,7 +138,7 @@ public class AtsInterview {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> applicationId() {
@@ -171,6 +180,13 @@ public class AtsInterview {
 
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    /**
+     * the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+     */
+    public Optional<String> meetingUrl() {
+        return Optional.ofNullable(this.meetingUrl);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -261,6 +277,15 @@ public class AtsInterview {
     }
 
 
+    /**
+     * the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+     */
+    public AtsInterview withMeetingUrl(@Nullable String meetingUrl) {
+        this.meetingUrl = meetingUrl;
+        return this;
+    }
+
+
     public AtsInterview withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -315,6 +340,7 @@ public class AtsInterview {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.meetingUrl, other.meetingUrl) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -327,9 +353,9 @@ public class AtsInterview {
         return Utils.enhancedHash(
             applicationId, candidateId, createdAt,
             endAt, externalEventXref, id,
-            jobId, location, raw,
-            startAt, status, updatedAt,
-            userIds);
+            jobId, location, meetingUrl,
+            raw, startAt, status,
+            updatedAt, userIds);
     }
     
     @Override
@@ -343,6 +369,7 @@ public class AtsInterview {
                 "id", id,
                 "jobId", jobId,
                 "location", location,
+                "meetingUrl", meetingUrl,
                 "raw", raw,
                 "startAt", startAt,
                 "status", status,
@@ -368,6 +395,8 @@ public class AtsInterview {
         private String jobId;
 
         private String location;
+
+        private String meetingUrl;
 
         private Map<String, Object> raw;
 
@@ -432,6 +461,14 @@ public class AtsInterview {
             return this;
         }
 
+        /**
+         * the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+         */
+        public Builder meetingUrl(@Nullable String meetingUrl) {
+            this.meetingUrl = meetingUrl;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -467,9 +504,9 @@ public class AtsInterview {
             return new AtsInterview(
                 applicationId, candidateId, createdAt,
                 endAt, externalEventXref, id,
-                jobId, location, raw,
-                startAt, status, updatedAt,
-                userIds);
+                jobId, location, meetingUrl,
+                raw, startAt, status,
+                updatedAt, userIds);
         }
 
     }

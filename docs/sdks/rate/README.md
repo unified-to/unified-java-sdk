@@ -37,7 +37,7 @@ public class Application {
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
                     .currency("USD")
-                    .id("66aed13f-8ddb-4618-a87c-8463737ec6f9")
+                    .id("119a2a4a-fdee-4f2f-a154-d047c1238d75")
                     .rates(List.of(
                         ShippingRateRate.builder()
                             .title("Turcotte Inc")
@@ -47,7 +47,7 @@ public class Application {
                             .deliveryDays(8d)
                             .description("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.")
                             .estimatedDays(10d)
-                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2024-02-14T07:20:51.129Z"))
+                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2024-02-14T20:18:14.006Z"))
                             .isGuaranteed(true)
                             .isNegotiatedRate(true)
                             .taxAmount(2.2701712837442756)
