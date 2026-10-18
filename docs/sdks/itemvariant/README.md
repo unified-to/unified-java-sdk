@@ -46,7 +46,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance")
                     .height(52d)
-                    .id("f2a4490c-43f0-41bd-a813-3698e5c40bc5")
+                    .id("55a88f9f-ffc7-479d-bfcb-f81134bd1539")
                     .isActive(false)
                     .isFeatured(false)
                     .isVisible(false)
@@ -56,10 +56,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/2007/3208")
                             .alt("Calcar delibero cursim summisse.")
                             .height(394d)
-                            .id("2d74d3e3-e553-462f-af29-669bf5d399f9")
+                            .id("a1ca6a63-a4e8-46dd-a001-8564ee24c851")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0bb1bbe3-03d7-4f56-a31e-a55125516a63")
+                                    .id("a5769787-1bcc-4f11-9775-e42ffa7d9f5e")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -71,10 +71,10 @@ public class Application {
                             .url("https://loremflickr.com/2230/1237?lock=8628070842159966")
                             .alt("Civitas acies substantia tergo.")
                             .height(351d)
-                            .id("d6aef210-b064-4057-a85b-cf563d1388a9")
+                            .id("ea76a381-b988-4c04-86bf-97671337f1fe")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("bfd079b9-5c34-4232-83d2-750530a21d02")
+                                    .id("aba16f0b-0f8a-4732-bfec-8976fd92c5b7")
                                     .slug("libero")
                                     .value(CommerceMetadataValue.of("capitulus"))
                                     .build()))
@@ -87,7 +87,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("c6be924e-1994-453f-8b43-2e1e666ad0be")
+                            .id("23da7b8d-d5db-4e6e-a5ee-a17e45a8b651")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("nihil"))
@@ -99,7 +99,7 @@ public class Application {
                             .values(List.of(
                                 "Granite",
                                 "Plastic"))
-                            .id("890dee88-9608-4615-add4-e2bbd49d0723")
+                            .id("9170e1c6-0b9d-42a4-840d-e2901eb11ba8")
                             .position(97d)
                             .build()))
                     .prices(List.of(
@@ -127,7 +127,7 @@ public class Application {
                         "vomito",
                         "custodia"))
                     .totalStock(929d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-14T04:47:05.469Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-14T20:59:11.623Z"))
                     .weight(61d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(26d)
@@ -312,7 +312,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance")
                     .height(52d)
-                    .id("16e2efa0-a597-4772-b2ed-b6e4edd795d7")
+                    .id("ddb326d3-3309-4ea8-a98f-3c7d9e899bc0")
                     .isActive(false)
                     .isFeatured(false)
                     .isVisible(false)
@@ -322,10 +322,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/2007/3208")
                             .alt("Calcar delibero cursim summisse.")
                             .height(394d)
-                            .id("86e05a3f-5aa6-44ce-9e84-86eb5086c081")
+                            .id("2d1da2d7-8396-4555-8db4-97e6d749ba85")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0a408c39-8655-495c-9069-269687012538")
+                                    .id("c5bbac17-81aa-452f-8d23-516b58e2e67d")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -337,10 +337,10 @@ public class Application {
                             .url("https://loremflickr.com/2230/1237?lock=8628070842159966")
                             .alt("Civitas acies substantia tergo.")
                             .height(351d)
-                            .id("50a926bd-1b0f-4d98-8003-9aed93598784")
+                            .id("14b5be47-8fee-4500-9feb-85efc2777ef8")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("f6de8bde-ad8d-4dc5-a0a7-a6ea0a0cc4cb")
+                                    .id("48e382a4-8f9d-4256-9ed3-80a29100a8c5")
                                     .slug("libero")
                                     .value(CommerceMetadataValue.of("capitulus"))
                                     .build()))
@@ -353,7 +353,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("9a746237-c1cd-496b-b7c2-eb697a719e92")
+                            .id("c67f7984-eeeb-4076-aced-38177aa27ac7")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("nihil"))
@@ -365,7 +365,7 @@ public class Application {
                             .values(List.of(
                                 "Granite",
                                 "Plastic"))
-                            .id("d9571040-3ad8-46b2-a73c-3db55a1e79dc")
+                            .id("14f93c37-2c5c-4e0e-92a4-ab4c5f7ed83f")
                             .position(97d)
                             .build()))
                     .prices(List.of(
@@ -393,7 +393,7 @@ public class Application {
                         "vomito",
                         "custodia"))
                     .totalStock(929d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-14T04:47:05.484Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-14T20:59:11.644Z"))
                     .weight(61d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(26d)
@@ -520,7 +520,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance")
                     .height(52d)
-                    .id("16e2efa0-a597-4772-b2ed-b6e4edd795d7")
+                    .id("ddb326d3-3309-4ea8-a98f-3c7d9e899bc0")
                     .isActive(false)
                     .isFeatured(false)
                     .isVisible(false)
@@ -530,10 +530,10 @@ public class Application {
                             .url("https://picsum.photos/seed/u0YdHqlRu/2007/3208")
                             .alt("Calcar delibero cursim summisse.")
                             .height(394d)
-                            .id("86e05a3f-5aa6-44ce-9e84-86eb5086c081")
+                            .id("2d1da2d7-8396-4555-8db4-97e6d749ba85")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0a408c39-8655-495c-9069-269687012538")
+                                    .id("c5bbac17-81aa-452f-8d23-516b58e2e67d")
                                     .slug("illo")
                                     .value(CommerceMetadataValue.of("quia"))
                                     .build()))
@@ -545,10 +545,10 @@ public class Application {
                             .url("https://loremflickr.com/2230/1237?lock=8628070842159966")
                             .alt("Civitas acies substantia tergo.")
                             .height(351d)
-                            .id("50a926bd-1b0f-4d98-8003-9aed93598784")
+                            .id("14b5be47-8fee-4500-9feb-85efc2777ef8")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("f6de8bde-ad8d-4dc5-a0a7-a6ea0a0cc4cb")
+                                    .id("48e382a4-8f9d-4256-9ed3-80a29100a8c5")
                                     .slug("libero")
                                     .value(CommerceMetadataValue.of("capitulus"))
                                     .build()))
@@ -561,7 +561,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("9a746237-c1cd-496b-b7c2-eb697a719e92")
+                            .id("c67f7984-eeeb-4076-aced-38177aa27ac7")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("nihil"))
@@ -573,7 +573,7 @@ public class Application {
                             .values(List.of(
                                 "Granite",
                                 "Plastic"))
-                            .id("d9571040-3ad8-46b2-a73c-3db55a1e79dc")
+                            .id("14f93c37-2c5c-4e0e-92a4-ab4c5f7ed83f")
                             .position(97d)
                             .build()))
                     .prices(List.of(
@@ -601,7 +601,7 @@ public class Application {
                         "vomito",
                         "custodia"))
                     .totalStock(929d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-14T04:47:05.484Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-14T20:59:11.644Z"))
                     .weight(61d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(26d)
