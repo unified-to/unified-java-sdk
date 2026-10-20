@@ -50,71 +50,24 @@ public class Application {
 
         CreateAtsActivityRequest req = CreateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
-                    .bcc(List.of(
-                        AtsEmail.builder()
-                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
-                            .name("Rochelle Franey-Bechtelar")
-                            .type(AtsEmailType.HOME)
-                            .build()))
-                    .cc(List.of(
-                        AtsEmail.builder()
-                            .email("Sasha24@hotmail.com")
-                            .name("Dr. Elbert Kuvalis")
-                            .type(AtsEmailType.HOME)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Rosetta_Donnelly@gmail.com")
-                            .name("Ramon Daniel")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Kathryne_Jast@yahoo.com")
-                            .name("Christian Jacobson")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Eldred95@yahoo.com")
-                            .name("Edna Bogan")
-                            .type(AtsEmailType.OTHER)
-                            .build()))
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
-                    .description("Amplus.")
-                    .from(PropertyAtsActivityFrom.builder()
-                        .email("Norwood.Wiza47@yahoo.com")
-                        .name("Toby Grant")
-                        .type(PropertyAtsActivityFromType.OTHER)
-                        .build())
-                    .id("f7a45f39-7f44-41d8-bd02-2203b7521bbe")
+                    .description("Sapiente.")
+                    .id("181b47f8-7fee-4b4b-b19d-7c9702d3148d")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("cbeb56b3-e2b6-4154-80dc-b5d45a3e4bdf")
+                            .id("0fe169ce-ce87-437b-b828-3880b0b87c3d")
                             .namespace("activity")
-                            .slug("acer")
-                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
-                            .build(),
-                        AtsMetadata.builder()
-                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
-                            )))
-                            .format(AtsMetadataFormat.TEXT)
-                            .id("fbcf0f56-f9e2-4be2-8fbd-c8073b95d8de")
-                            .namespace("activity")
-                            .slug("tremo")
-                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .slug("cimentarius")
+                            .value(AtsMetadataValue.of("Reprehenderit verto."))
                             .build()))
                     .subType("TASK")
-                    .title("Senior Interactions Manager")
-                    .to(List.of(
-                        AtsEmail.builder()
-                            .email("Sister91@hotmail.com")
-                            .name("Eddie Nienow PhD")
-                            .type(AtsEmailType.WORK)
-                            .build()))
+                    .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T11:31:31.077Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T05:23:27.798Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,6 +111,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
@@ -177,14 +131,15 @@ public class Application {
         CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2025-04-27T14:45:58.266Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-05T08:32:25.567Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("75c966d2-335f-46dc-9f95-d190cb5f7286")
+                    .id("db383c48-7eed-432c-a050-73806344e093")
                     .isCompleted(true)
+                    .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T13:03:24.559Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T01:52:43.462Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-30T17:27:46.521Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -592,71 +547,24 @@ public class Application {
 
         PatchAtsActivityRequest req = PatchAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
-                    .bcc(List.of(
-                        AtsEmail.builder()
-                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
-                            .name("Rochelle Franey-Bechtelar")
-                            .type(AtsEmailType.HOME)
-                            .build()))
-                    .cc(List.of(
-                        AtsEmail.builder()
-                            .email("Sasha24@hotmail.com")
-                            .name("Dr. Elbert Kuvalis")
-                            .type(AtsEmailType.HOME)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Rosetta_Donnelly@gmail.com")
-                            .name("Ramon Daniel")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Kathryne_Jast@yahoo.com")
-                            .name("Christian Jacobson")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Eldred95@yahoo.com")
-                            .name("Edna Bogan")
-                            .type(AtsEmailType.OTHER)
-                            .build()))
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
-                    .description("Amplus.")
-                    .from(PropertyAtsActivityFrom.builder()
-                        .email("Norwood.Wiza47@yahoo.com")
-                        .name("Toby Grant")
-                        .type(PropertyAtsActivityFromType.OTHER)
-                        .build())
-                    .id("f81ac907-60b6-4bf0-a013-b6f2cd0a68c1")
+                    .description("Sapiente.")
+                    .id("4bf692bc-a5fd-4795-b457-1f4cd6e8d88e")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("be11d3ee-1c65-4386-873f-41743d7c1f91")
+                            .id("05d37ef5-53a2-43bd-ac97-f5ba636e376d")
                             .namespace("activity")
-                            .slug("acer")
-                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
-                            .build(),
-                        AtsMetadata.builder()
-                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
-                            )))
-                            .format(AtsMetadataFormat.TEXT)
-                            .id("232a8064-12a2-4b3e-8918-88a54a5d4c5a")
-                            .namespace("activity")
-                            .slug("tremo")
-                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .slug("cimentarius")
+                            .value(AtsMetadataValue.of("Reprehenderit verto."))
                             .build()))
                     .subType("TASK")
-                    .title("Senior Interactions Manager")
-                    .to(List.of(
-                        AtsEmail.builder()
-                            .email("Sister91@hotmail.com")
-                            .name("Eddie Nienow PhD")
-                            .type(AtsEmailType.WORK)
-                            .build()))
+                    .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T11:31:31.114Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T05:23:27.833Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -701,6 +609,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
@@ -720,14 +629,15 @@ public class Application {
         PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2025-04-27T14:45:58.270Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-05T08:32:25.574Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("990d8a66-d0a5-4b99-ad4a-2f1817c2e02c")
+                    .id("34616479-7892-4b46-b5f4-93d93eb2baa1")
                     .isCompleted(true)
+                    .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T13:03:24.561Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T01:52:43.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-30T17:27:46.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -903,71 +813,24 @@ public class Application {
 
         UpdateAtsActivityRequest req = UpdateAtsActivityRequest.builder()
                 .atsActivity(AtsActivity.builder()
-                    .bcc(List.of(
-                        AtsEmail.builder()
-                            .email("Mabel_Schuppe-Schowalter42@hotmail.com")
-                            .name("Rochelle Franey-Bechtelar")
-                            .type(AtsEmailType.HOME)
-                            .build()))
-                    .cc(List.of(
-                        AtsEmail.builder()
-                            .email("Sasha24@hotmail.com")
-                            .name("Dr. Elbert Kuvalis")
-                            .type(AtsEmailType.HOME)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Rosetta_Donnelly@gmail.com")
-                            .name("Ramon Daniel")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Kathryne_Jast@yahoo.com")
-                            .name("Christian Jacobson")
-                            .type(AtsEmailType.OTHER)
-                            .build(),
-                        AtsEmail.builder()
-                            .email("Eldred95@yahoo.com")
-                            .name("Edna Bogan")
-                            .type(AtsEmailType.OTHER)
-                            .build()))
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
-                    .description("Amplus.")
-                    .from(PropertyAtsActivityFrom.builder()
-                        .email("Norwood.Wiza47@yahoo.com")
-                        .name("Toby Grant")
-                        .type(PropertyAtsActivityFromType.OTHER)
-                        .build())
-                    .id("f81ac907-60b6-4bf0-a013-b6f2cd0a68c1")
+                    .description("Sapiente.")
+                    .id("4bf692bc-a5fd-4795-b457-1f4cd6e8d88e")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("be11d3ee-1c65-4386-873f-41743d7c1f91")
+                            .id("05d37ef5-53a2-43bd-ac97-f5ba636e376d")
                             .namespace("activity")
-                            .slug("acer")
-                            .value(AtsMetadataValue.of("Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo."))
-                            .build(),
-                        AtsMetadata.builder()
-                            .extraData(AtsMetadataExtraData.of(Map.ofEntries(
-                            )))
-                            .format(AtsMetadataFormat.TEXT)
-                            .id("232a8064-12a2-4b3e-8918-88a54a5d4c5a")
-                            .namespace("activity")
-                            .slug("tremo")
-                            .value(AtsMetadataValue.of("Amita delectus dicta temptatio utroque ex."))
+                            .slug("cimentarius")
+                            .value(AtsMetadataValue.of("Reprehenderit verto."))
                             .build()))
                     .subType("TASK")
-                    .title("Senior Interactions Manager")
-                    .to(List.of(
-                        AtsEmail.builder()
-                            .email("Sister91@hotmail.com")
-                            .name("Eddie Nienow PhD")
-                            .type(AtsEmailType.WORK)
-                            .build()))
+                    .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T11:31:31.114Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T05:23:27.833Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1012,6 +875,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
@@ -1031,14 +895,15 @@ public class Application {
         UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2025-04-27T14:45:58.270Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-05T08:32:25.574Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("990d8a66-d0a5-4b99-ad4a-2f1817c2e02c")
+                    .id("34616479-7892-4b46-b5f4-93d93eb2baa1")
                     .isCompleted(true)
+                    .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2023-12-24T04:54:05.825Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T13:03:24.561Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T01:52:43.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-30T17:27:46.523Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

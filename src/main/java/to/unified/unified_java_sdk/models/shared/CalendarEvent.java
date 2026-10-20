@@ -94,6 +94,11 @@ public class CalendarEvent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -173,6 +178,7 @@ public class CalendarEvent {
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("location") @Nullable String location,
             @JsonProperty("matter_id") @Nullable String matterId,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organizer") @Nullable PropertyCalendarEventOrganizer organizer,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -198,6 +204,7 @@ public class CalendarEvent {
         this.isPrivate = isPrivate;
         this.location = location;
         this.matterId = matterId;
+        this.metadata = metadata;
         this.notes = notes;
         this.organizer = organizer;
         this.raw = raw;
@@ -221,7 +228,7 @@ public class CalendarEvent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<CalendarAttachment>> attachments() {
@@ -286,6 +293,10 @@ public class CalendarEvent {
      */
     public Optional<String> matterId() {
         return Optional.ofNullable(this.matterId);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -440,6 +451,12 @@ public class CalendarEvent {
     }
 
 
+    public CalendarEvent withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarEvent withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -544,6 +561,7 @@ public class CalendarEvent {
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
             Utils.enhancedDeepEquals(this.matterId, other.matterId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizer, other.organizer) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -565,11 +583,11 @@ public class CalendarEvent {
             conference, createdAt, endAt,
             hasConference, id, isAllDay,
             isFree, isPrivate, location,
-            matterId, notes, organizer,
-            raw, recurrence, recurringEventId,
-            sendNotifications, startAt, status,
-            subject, timezone, updatedAt,
-            webUrl);
+            matterId, metadata, notes,
+            organizer, raw, recurrence,
+            recurringEventId, sendNotifications, startAt,
+            status, subject, timezone,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -588,6 +606,7 @@ public class CalendarEvent {
                 "isPrivate", isPrivate,
                 "location", location,
                 "matterId", matterId,
+                "metadata", metadata,
                 "notes", notes,
                 "organizer", organizer,
                 "raw", raw,
@@ -630,6 +649,8 @@ public class CalendarEvent {
         private String location;
 
         private String matterId;
+
+        private List<CalendarMetadata> metadata;
 
         private String notes;
 
@@ -736,6 +757,11 @@ public class CalendarEvent {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -811,11 +837,11 @@ public class CalendarEvent {
                 conference, createdAt, endAt,
                 hasConference, id, isAllDay,
                 isFree, isPrivate, location,
-                matterId, notes, organizer,
-                raw, recurrence, recurringEventId,
-                sendNotifications, startAt, status,
-                subject, timezone, updatedAt,
-                webUrl);
+                matterId, metadata, notes,
+                organizer, raw, recurrence,
+                recurringEventId, sendNotifications, startAt,
+                status, subject, timezone,
+                updatedAt, webUrl);
         }
 
     }

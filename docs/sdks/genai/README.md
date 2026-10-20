@@ -6,27 +6,33 @@
 
 * [createGenaiAgent](#creategenaiagent) - Create an agent
 * [createGenaiEmbedding](#creategenaiembedding) - Create an embedding
+* [createGenaiMemory](#creategenaimemory) - Create a memory
 * [createGenaiOrganization](#creategenaiorganization) - Create an organization
 * [createGenaiPrompt](#creategenaiprompt) - Create a prompt
 * [createGenaiTask](#creategenaitask) - Create a task
 * [getGenaiAgent](#getgenaiagent) - Retrieve an agent
+* [getGenaiMemory](#getgenaimemory) - Retrieve a memory
 * [getGenaiModel](#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](#getgenaiorganization) - Retrieve an organization
 * [getGenaiSkill](#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](#getgenaitask) - Retrieve a task
 * [listGenaiAgents](#listgenaiagents) - List all agents
+* [listGenaiMemories](#listgenaimemories) - List all memories
 * [listGenaiModels](#listgenaimodels) - List all models
 * [listGenaiOrganizations](#listgenaiorganizations) - List all organizations
 * [listGenaiSkills](#listgenaiskills) - List all skills
 * [listGenaiTasks](#listgenaitasks) - List all tasks
 * [patchGenaiAgent](#patchgenaiagent) - Update an agent
+* [patchGenaiMemory](#patchgenaimemory) - Update a memory
 * [patchGenaiOrganization](#patchgenaiorganization) - Update an organization
 * [patchGenaiTask](#patchgenaitask) - Update a task
 * [removeGenaiAgent](#removegenaiagent) - Remove an agent
+* [removeGenaiMemory](#removegenaimemory) - Remove a memory
 * [removeGenaiOrganization](#removegenaiorganization) - Remove an organization
 * [removeGenaiSkill](#removegenaiskill) - Remove a skill
 * [removeGenaiTask](#removegenaitask) - Remove a task
 * [updateGenaiAgent](#updategenaiagent) - Update an agent
+* [updateGenaiMemory](#updategenaimemory) - Update a memory
 * [updateGenaiOrganization](#updategenaiorganization) - Update an organization
 * [updateGenaiTask](#updategenaitask) - Update a task
 
@@ -62,11 +68,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("f3068863-55a0-4a18-b60e-127f2e95ec8d")
+                    .id("4ee42ddc-c1d9-4346-a771-a7a087f6d0c8")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T17:50:59.826Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:49:06.239Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -134,7 +140,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Est.")
                     .encondingFormat(EncondingFormat.FLOAT)
-                    .id("d8d7bb45-227b-4d80-98ca-b0c320410360")
+                    .id("afd3ced3-d8f9-47a5-9a88-f333637e3c63")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")
@@ -162,6 +168,85 @@ public class Application {
 ### Response
 
 **[CreateGenaiEmbeddingResponse](../../models/operations/CreateGenaiEmbeddingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createGenaiMemory
+
+Create a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateGenaiMemoryRequest req = CreateGenaiMemoryRequest.builder()
+                .genaiMemory(GenaiMemory.builder()
+                    .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
+                    .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
+                    .id("b8d72d2d-4793-417e-9295-3a912f831b9d")
+                    .metadata(List.of(
+                        GenaiMetadata.builder()
+                            .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(GenaiMetadataFormat.TEXT)
+                            .id("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e")
+                            .namespace("memory")
+                            .slug("cribro")
+                            .value(GenaiMetadataValue.of("aiunt"))
+                            .build()))
+                    .name("sponte.md")
+                    .type(GenaiMemoryType.MEMORY)
+                    .updatedAt(OffsetDateTime.parse("2023-04-25T12:43:28.198Z"))
+                    .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateGenaiMemoryResponse res = sdk.genai().createGenaiMemory()
+                .request(req)
+                .call();
+
+        if (res.genaiMemory().isPresent()) {
+            System.out.println(res.genaiMemory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateGenaiMemoryRequest](../../models/operations/CreateGenaiMemoryRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateGenaiMemoryResponse](../../models/operations/CreateGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -201,10 +286,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("e98256ad-81e4-406e-ab84-283c304c3135")
+                    .id("25f875b9-9bf5-4b27-812b-47cd0f3e53ac")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.636Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -390,10 +475,10 @@ public class Application {
 
         CreateGenaiTaskRequest req = CreateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-09-29T13:50:13.952Z"))
+                    .completedAt(OffsetDateTime.parse("2025-09-30T06:45:33.960Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("e9e3fafd-7580-48fe-a86e-eac279f564a4")
+                    .id("6599ee62-f68d-4af4-9401-9a20fa767411")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -407,12 +492,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-20T04:56:54.460Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-20T17:11:38.714Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-25T11:54:24.519Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-25T19:55:26.296Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -496,6 +581,64 @@ public class Application {
 ### Response
 
 **[GetGenaiAgentResponse](../../models/operations/GetGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getGenaiMemory
+
+Retrieve a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getGenaiMemory" method="get" path="/genai/{connection_id}/memory/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetGenaiMemoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiMemoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetGenaiMemoryRequest req = GetGenaiMemoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetGenaiMemoryResponse res = sdk.genai().getGenaiMemory()
+                .request(req)
+                .call();
+
+        if (res.genaiMemory().isPresent()) {
+            System.out.println(res.genaiMemory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetGenaiMemoryRequest](../../models/operations/GetGenaiMemoryRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetGenaiMemoryResponse](../../models/operations/GetGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -792,6 +935,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listGenaiMemories
+
+List all memories
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listGenaiMemories" method="get" path="/genai/{connection_id}/memory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListGenaiMemoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiMemoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListGenaiMemoriesRequest req = ListGenaiMemoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListGenaiMemoriesResponse res = sdk.genai().listGenaiMemories()
+                .request(req)
+                .call();
+
+        if (res.genaiMemories().isPresent()) {
+            System.out.println(res.genaiMemories().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListGenaiMemoriesRequest](../../models/operations/ListGenaiMemoriesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListGenaiMemoriesResponse](../../models/operations/ListGenaiMemoriesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listGenaiModels
 
 List all models
@@ -1052,11 +1252,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("6e8650da-eaaa-4562-a95d-ed8eeace1a67")
+                    .id("2a4b8b4d-0646-4c1f-aba0-b02af0aaad4f")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T17:50:59.830Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:49:06.254Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1082,6 +1282,86 @@ public class Application {
 ### Response
 
 **[PatchGenaiAgentResponse](../../models/operations/PatchGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiMemoryRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiMemoryResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchGenaiMemoryRequest req = PatchGenaiMemoryRequest.builder()
+                .genaiMemory(GenaiMemory.builder()
+                    .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
+                    .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
+                    .id("d619e504-17db-4cb6-a6b3-72ffea06738b")
+                    .metadata(List.of(
+                        GenaiMetadata.builder()
+                            .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(GenaiMetadataFormat.TEXT)
+                            .id("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e")
+                            .namespace("memory")
+                            .slug("cribro")
+                            .value(GenaiMetadataValue.of("aiunt"))
+                            .build()))
+                    .name("sponte.md")
+                    .type(GenaiMemoryType.MEMORY)
+                    .updatedAt(OffsetDateTime.parse("2023-04-25T12:43:28.202Z"))
+                    .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchGenaiMemoryResponse res = sdk.genai().patchGenaiMemory()
+                .request(req)
+                .call();
+
+        if (res.genaiMemory().isPresent()) {
+            System.out.println(res.genaiMemory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchGenaiMemoryRequest](../../models/operations/PatchGenaiMemoryRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchGenaiMemoryResponse](../../models/operations/PatchGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1121,10 +1401,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("bd7e2595-50fc-40d4-93ce-0ffdcf82e43a")
+                    .id("c82cf3bb-8fe3-46f6-b106-5852bc70beb5")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.891Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.640Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1187,10 +1467,10 @@ public class Application {
 
         PatchGenaiTaskRequest req = PatchGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-09-29T13:50:13.964Z"))
+                    .completedAt(OffsetDateTime.parse("2025-09-30T06:45:33.974Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("f360a1bb-f400-425f-bcdf-03463b0f6ffa")
+                    .id("cebad502-b835-4187-9429-67df7a8dfee7")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -1204,12 +1484,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-20T04:56:54.469Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-20T17:11:38.722Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-25T11:54:24.524Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-25T19:55:26.303Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1292,6 +1572,62 @@ public class Application {
 ### Response
 
 **[RemoveGenaiAgentResponse](../../models/operations/RemoveGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeGenaiMemory
+
+Remove a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeGenaiMemory" method="delete" path="/genai/{connection_id}/memory/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiMemoryRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiMemoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveGenaiMemoryRequest req = RemoveGenaiMemoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveGenaiMemoryResponse res = sdk.genai().removeGenaiMemory()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveGenaiMemoryRequest](../../models/operations/RemoveGenaiMemoryRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveGenaiMemoryResponse](../../models/operations/RemoveGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1499,11 +1835,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("6e8650da-eaaa-4562-a95d-ed8eeace1a67")
+                    .id("2a4b8b4d-0646-4c1f-aba0-b02af0aaad4f")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T17:50:59.830Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:49:06.254Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1529,6 +1865,86 @@ public class Application {
 ### Response
 
 **[UpdateGenaiAgentResponse](../../models/operations/UpdateGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiMemoryRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiMemoryResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateGenaiMemoryRequest req = UpdateGenaiMemoryRequest.builder()
+                .genaiMemory(GenaiMemory.builder()
+                    .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
+                    .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
+                    .id("d619e504-17db-4cb6-a6b3-72ffea06738b")
+                    .metadata(List.of(
+                        GenaiMetadata.builder()
+                            .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(GenaiMetadataFormat.TEXT)
+                            .id("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e")
+                            .namespace("memory")
+                            .slug("cribro")
+                            .value(GenaiMetadataValue.of("aiunt"))
+                            .build()))
+                    .name("sponte.md")
+                    .type(GenaiMemoryType.MEMORY)
+                    .updatedAt(OffsetDateTime.parse("2023-04-25T12:43:28.202Z"))
+                    .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateGenaiMemoryResponse res = sdk.genai().updateGenaiMemory()
+                .request(req)
+                .call();
+
+        if (res.genaiMemory().isPresent()) {
+            System.out.println(res.genaiMemory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateGenaiMemoryRequest](../../models/operations/UpdateGenaiMemoryRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateGenaiMemoryResponse](../../models/operations/UpdateGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1568,10 +1984,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("bd7e2595-50fc-40d4-93ce-0ffdcf82e43a")
+                    .id("c82cf3bb-8fe3-46f6-b106-5852bc70beb5")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.891Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.640Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1634,10 +2050,10 @@ public class Application {
 
         UpdateGenaiTaskRequest req = UpdateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-09-29T13:50:13.964Z"))
+                    .completedAt(OffsetDateTime.parse("2025-09-30T06:45:33.974Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("f360a1bb-f400-425f-bcdf-03463b0f6ffa")
+                    .id("cebad502-b835-4187-9429-67df7a8dfee7")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -1651,12 +2067,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-20T04:56:54.469Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-20T17:11:38.722Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-25T11:54:24.524Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-25T19:55:26.303Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")

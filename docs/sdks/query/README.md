@@ -35,6 +35,7 @@ public class Application {
 
         CreateDatastoreQueryRequest req = CreateDatastoreQueryRequest.builder()
                 .datastoreQuery(DatastoreQuery.builder()
+                    .metadata(List.of())
                     .query(PropertyDatastoreQueryQuery.builder()
                         .filter(PropertyDatastoreQueryQueryFilter.builder()
                             .type(PropertyDatastoreQueryQueryFilterType.OR)

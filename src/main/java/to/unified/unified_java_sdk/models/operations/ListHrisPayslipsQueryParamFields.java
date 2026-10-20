@@ -34,6 +34,7 @@ public enum ListHrisPayslipsQueryParamFields {
     EMPLOYER_CONTRIBUTION_AMOUNT("employer_contribution_amount"),
     GROSS_YTD_AMOUNT("gross_ytd_amount"),
     NET_YTD_AMOUNT("net_ytd_amount"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

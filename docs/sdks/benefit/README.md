@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
@@ -42,18 +43,19 @@ public class Application {
                 .hrisBenefit(HrisBenefit.builder()
                     .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
                     .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
-                    .currency("JOD")
+                    .currency("GBP")
                     .description("Vomito voluptas dolor sed.")
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("244f0594-3200-4daf-9e7d-266daf80d245")
+                    .id("2b78bd0f-c9b5-48cc-b206-6b981755117e")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-19T22:44:38.496Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-20T07:41:51.705Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,6 +214,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitResponse;
@@ -231,18 +234,19 @@ public class Application {
                 .hrisBenefit(HrisBenefit.builder()
                     .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
                     .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
-                    .currency("JOD")
+                    .currency("GBP")
                     .description("Vomito voluptas dolor sed.")
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("0996f6cc-6be2-4878-a224-bea7e56a7aa6")
+                    .id("1b213160-acda-43a2-aa6e-7c9a80a476b7")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-19T22:44:38.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-20T07:41:51.712Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -343,6 +347,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitResponse;
@@ -362,18 +367,19 @@ public class Application {
                 .hrisBenefit(HrisBenefit.builder()
                     .coverageLevel(CoverageLevel.EMPLOYEE_SPOUSE)
                     .createdAt(OffsetDateTime.parse("2020-06-11T01:24:05.654Z"))
-                    .currency("JOD")
+                    .currency("GBP")
                     .description("Vomito voluptas dolor sed.")
                     .employerContributionAmount(185006d)
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("0996f6cc-6be2-4878-a224-bea7e56a7aa6")
+                    .id("1b213160-acda-43a2-aa6e-7c9a80a476b7")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-19T22:44:38.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-20T07:41:51.712Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

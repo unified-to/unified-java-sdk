@@ -45,6 +45,11 @@ public class ShippingRate {
     @JsonProperty("id")
     private String id;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ShippingMetadata> metadata;
+
     /**
      * Multiple packages (alternative to package)
      */
@@ -89,6 +94,7 @@ public class ShippingRate {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("from_address") @Nullable PropertyShippingRateFromAddress fromAddress,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<ShippingMetadata> metadata,
             @JsonProperty("packages") @Nullable List<ShippingPackage> packages,
             @JsonProperty("rates") @Nullable List<ShippingRateRate> rates,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -99,6 +105,7 @@ public class ShippingRate {
         this.currency = currency;
         this.fromAddress = fromAddress;
         this.id = id;
+        this.metadata = metadata;
         this.packages = packages;
         this.rates = rates;
         this.raw = raw;
@@ -111,7 +118,7 @@ public class ShippingRate {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -137,6 +144,10 @@ public class ShippingRate {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<ShippingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -213,6 +224,12 @@ public class ShippingRate {
     }
 
 
+    public ShippingRate withMetadata(@Nullable List<ShippingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Multiple packages (alternative to package)
      */
@@ -275,6 +292,7 @@ public class ShippingRate {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.fromAddress, other.fromAddress) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.packages, other.packages) &&
             Utils.enhancedDeepEquals(this.rates, other.rates) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -287,9 +305,9 @@ public class ShippingRate {
     public int hashCode() {
         return Utils.enhancedHash(
             carrierId, currency, fromAddress,
-            id, packages, rates,
-            raw, shipByAt, shipmentId,
-            toAddress);
+            id, metadata, packages,
+            rates, raw, shipByAt,
+            shipmentId, toAddress);
     }
     
     @Override
@@ -299,6 +317,7 @@ public class ShippingRate {
                 "currency", currency,
                 "fromAddress", fromAddress,
                 "id", id,
+                "metadata", metadata,
                 "packages", packages,
                 "rates", rates,
                 "raw", raw,
@@ -317,6 +336,8 @@ public class ShippingRate {
         private PropertyShippingRateFromAddress fromAddress;
 
         private String id;
+
+        private List<ShippingMetadata> metadata;
 
         private List<ShippingPackage> packages;
 
@@ -360,6 +381,11 @@ public class ShippingRate {
          */
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<ShippingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -408,9 +434,9 @@ public class ShippingRate {
         public ShippingRate build() {
             return new ShippingRate(
                 carrierId, currency, fromAddress,
-                id, packages, rates,
-                raw, shipByAt, shipmentId,
-                toAddress);
+                id, metadata, packages,
+                rates, raw, shipByAt,
+                shipmentId, toAddress);
         }
 
     }

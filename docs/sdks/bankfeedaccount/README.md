@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBankfeedaccountResponse;
@@ -40,20 +41,20 @@ public class Application {
 
         CreateAccountingBankfeedaccountRequest req = CreateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
-                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
                     .accountNumber("30369722")
                     .accountNumberLast4("9722")
                     .accountType(AccountType.LOAN)
-                    .balance(90358d)
-                    .bankName("Weissnat Inc")
+                    .balance(49437d)
+                    .bankName("Wells Fargo")
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .currency("SSP")
+                    .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("f6fdae89-51df-4852-8f53-9bed7306720e")
-                    .name("Corwin, Donnelly and Connelly Savings")
-                    .routingNumber("667753156")
+                    .id("954100f7-52fa-497e-9b8e-c8d29e794869")
+                    .metadata(List.of())
+                    .name("Corwin, Donnelly and Connelly Checking")
+                    .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T01:28:59.657Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-23T09:07:53.499Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,6 +213,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingBankfeedaccountResponse;
@@ -229,20 +231,20 @@ public class Application {
 
         PatchAccountingBankfeedaccountRequest req = PatchAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
-                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
                     .accountNumber("30369722")
                     .accountNumberLast4("9722")
                     .accountType(AccountType.LOAN)
-                    .balance(90358d)
-                    .bankName("Weissnat Inc")
+                    .balance(49437d)
+                    .bankName("Wells Fargo")
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .currency("SSP")
+                    .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("00f7d964-4deb-455c-abb4-13ce2f501521")
-                    .name("Corwin, Donnelly and Connelly Savings")
-                    .routingNumber("667753156")
+                    .id("c2e29334-5bca-4fcf-aaba-93754dfc6228")
+                    .metadata(List.of())
+                    .name("Corwin, Donnelly and Connelly Checking")
+                    .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T01:28:59.661Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-23T09:07:53.506Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -343,6 +345,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingBankfeedaccountResponse;
@@ -360,20 +363,20 @@ public class Application {
 
         UpdateAccountingBankfeedaccountRequest req = UpdateAccountingBankfeedaccountRequest.builder()
                 .accountingBankfeedaccount(AccountingBankfeedaccount.builder()
-                    .accountId("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1")
                     .accountNumber("30369722")
                     .accountNumberLast4("9722")
                     .accountType(AccountType.LOAN)
-                    .balance(90358d)
-                    .bankName("Weissnat Inc")
+                    .balance(49437d)
+                    .bankName("Wells Fargo")
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .currency("SSP")
+                    .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("00f7d964-4deb-455c-abb4-13ce2f501521")
-                    .name("Corwin, Donnelly and Connelly Savings")
-                    .routingNumber("667753156")
+                    .id("c2e29334-5bca-4fcf-aaba-93754dfc6228")
+                    .metadata(List.of())
+                    .name("Corwin, Donnelly and Connelly Checking")
+                    .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T01:28:59.661Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-23T09:07:53.506Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -46,6 +46,11 @@ public class AccountingTrialbalance {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -89,6 +94,7 @@ public class AccountingTrialbalance {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -100,6 +106,7 @@ public class AccountingTrialbalance {
         this.currency = currency;
         this.endAt = endAt;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.startAt = startAt;
@@ -113,7 +120,7 @@ public class AccountingTrialbalance {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -136,6 +143,10 @@ public class AccountingTrialbalance {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -207,6 +218,12 @@ public class AccountingTrialbalance {
     }
 
 
+    public AccountingTrialbalance withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingTrialbalance withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -269,6 +286,7 @@ public class AccountingTrialbalance {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -282,9 +300,9 @@ public class AccountingTrialbalance {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, endAt,
-            id, name, raw,
-            startAt, subItems, totalCreditAmount,
-            totalDebitAmount, updatedAt);
+            id, metadata, name,
+            raw, startAt, subItems,
+            totalCreditAmount, totalDebitAmount, updatedAt);
     }
     
     @Override
@@ -294,6 +312,7 @@ public class AccountingTrialbalance {
                 "currency", currency,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "startAt", startAt,
@@ -313,6 +332,8 @@ public class AccountingTrialbalance {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -355,6 +376,11 @@ public class AccountingTrialbalance {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -402,9 +428,9 @@ public class AccountingTrialbalance {
         public AccountingTrialbalance build() {
             return new AccountingTrialbalance(
                 createdAt, currency, endAt,
-                id, name, raw,
-                startAt, subItems, totalCreditAmount,
-                totalDebitAmount, updatedAt);
+                id, metadata, name,
+                raw, startAt, subItems,
+                totalCreditAmount, totalDebitAmount, updatedAt);
         }
 
     }

@@ -56,6 +56,11 @@ public class HrisGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -108,6 +113,7 @@ public class HrisGroup {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("manager_ids") @Nullable List<String> managerIds,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("next_paid_at") @Nullable OffsetDateTime nextPaidAt,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -122,6 +128,7 @@ public class HrisGroup {
         this.id = id;
         this.isActive = isActive;
         this.managerIds = managerIds;
+        this.metadata = metadata;
         this.name = name;
         this.nextPaidAt = nextPaidAt;
         this.parentId = parentId;
@@ -137,7 +144,7 @@ public class HrisGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -168,6 +175,10 @@ public class HrisGroup {
 
     public Optional<List<String>> managerIds() {
         return Optional.ofNullable(this.managerIds);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -258,6 +269,12 @@ public class HrisGroup {
     }
 
 
+    public HrisGroup withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisGroup withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -331,6 +348,7 @@ public class HrisGroup {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.managerIds, other.managerIds) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.nextPaidAt, other.nextPaidAt) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -346,9 +364,9 @@ public class HrisGroup {
         return Utils.enhancedHash(
             companyId, createdAt, description,
             id, isActive, managerIds,
-            name, nextPaidAt, parentId,
-            payFrequency, raw, type,
-            updatedAt, userIds);
+            metadata, name, nextPaidAt,
+            parentId, payFrequency, raw,
+            type, updatedAt, userIds);
     }
     
     @Override
@@ -360,6 +378,7 @@ public class HrisGroup {
                 "id", id,
                 "isActive", isActive,
                 "managerIds", managerIds,
+                "metadata", metadata,
                 "name", name,
                 "nextPaidAt", nextPaidAt,
                 "parentId", parentId,
@@ -384,6 +403,8 @@ public class HrisGroup {
         private Boolean isActive;
 
         private List<String> managerIds;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -441,6 +462,11 @@ public class HrisGroup {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -494,9 +520,9 @@ public class HrisGroup {
             return new HrisGroup(
                 companyId, createdAt, description,
                 id, isActive, managerIds,
-                name, nextPaidAt, parentId,
-                payFrequency, raw, type,
-                updatedAt, userIds);
+                metadata, name, nextPaidAt,
+                parentId, payFrequency, raw,
+                type, updatedAt, userIds);
         }
 
     }

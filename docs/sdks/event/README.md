@@ -62,12 +62,13 @@ public class Application {
                 .analyticsEvent(AnalyticsEvent.builder()
                     .createdAt(OffsetDateTime.parse("2023-06-21T03:13:22.954Z"))
                     .eventType(EventType.SCREEN_VIEW)
-                    .id("bd7d08e5-0b92-4cd6-ab81-9566e7219cfb")
+                    .id("fb6f5a69-e1f9-45c6-9fc8-24592d669597")
                     .metadata(Map.ofEntries(
                         Map.entry("key", PropertyAnalyticsEventMetadata.builder()
                             .build())))
-                    .name("Xk707ttsb51v")
-                    .updatedAt(OffsetDateTime.parse("2023-09-24T12:29:46.911Z"))
+                    .name("page_view")
+                    .pageUrl("https://golden-carboxyl.biz")
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T14:06:27.235Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -132,44 +133,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.622Z")
-                    .id("24124db0-d539-45fa-8343-dccaddf86493")
+                    .endAt("2020-05-24T03:47:02.479Z")
+                    .hasConference(false)
+                    .id("4e3d114e-ba2b-441a-b39c-5c3f08d82d63")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.404Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.005Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.730Z",
-                                "2023-10-27T02:46:59.897Z",
-                                "2024-03-05T15:36:05.622Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.498Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:46.996Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.743Z",
+                                "2025-01-22T23:38:59.276Z",
+                                "2024-04-01T04:56:01.383Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -198,12 +202,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -426,48 +430,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.462Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.496Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.511Z",
-                                "2021-12-08T19:59:10.348Z",
-                                "2019-12-24T08:53:07.534Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -478,504 +478,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.915Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.962Z",
-                                "2021-09-16T09:03:04.247Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.738Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("25d321aa-65fc-445a-8347-c726c2a666c5")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.430Z")
+                    .startAt("2020-05-23T18:33:40.498Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.037Z")
+                    .updatedAt("2020-06-30T01:45:14.348Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -1080,6 +591,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
@@ -1100,12 +612,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-09T13:56:37.571Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-10T04:23:26.129Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("f6df7a44-dfe0-40f0-af09-f44dca0e3452")
+                    .id("007dbc50-0981-4467-94be-36d3cd65c1ea")
+                    .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-09T11:34:39.186Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-10T08:01:43.931Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1745,44 +1258,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.626Z")
-                    .id("e21fe861-256e-4822-825e-50871e841fba")
+                    .endAt("2020-05-24T03:47:02.484Z")
+                    .hasConference(false)
+                    .id("6c102b53-2d33-417d-851f-56457ddabd50")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.443Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.038Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.767Z",
-                                "2023-10-27T02:46:59.922Z",
-                                "2024-03-05T15:36:05.650Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.524Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:47.005Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.766Z",
+                                "2025-01-22T23:38:59.308Z",
+                                "2024-04-01T04:56:01.410Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -1811,12 +1327,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -2039,48 +1555,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.496Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.500Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.518Z",
-                                "2021-12-08T19:59:10.362Z",
-                                "2019-12-24T08:53:07.536Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -2091,504 +1603,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.922Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.983Z",
-                                "2021-09-16T09:03:04.260Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.768Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("8870d464-8470-48d6-90ea-37219ab25e06")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.434Z")
+                    .startAt("2020-05-23T18:33:40.503Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.042Z")
+                    .updatedAt("2020-06-30T01:45:14.353Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -2695,6 +1718,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventResponse;
@@ -2715,12 +1739,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-09T13:56:37.611Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-10T04:23:26.176Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("2cda0b36-cb70-4f8f-8de0-de0efae98b0b")
+                    .id("1e37c4ca-805c-4ac6-a935-d9235a179c75")
+                    .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-09T11:34:39.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-10T08:01:43.997Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2765,6 +1790,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchMessagingEventResponse;
@@ -2787,8 +1813,9 @@ public class Application {
                         .name("")
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
-                    .id("30cdea25-2d57-45c6-9b47-37e4b9c87f4a")
+                    .id("e20be20d-d152-4cb9-8138-1a3a3cd2619a")
                     .isReplacingOriginal(false)
+                    .metadata(List.of())
                     .type(MessagingEventType.BUTTON_CLICK)
                     .build())
                 .connectionId("<id>")
@@ -3023,44 +2050,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.626Z")
-                    .id("e21fe861-256e-4822-825e-50871e841fba")
+                    .endAt("2020-05-24T03:47:02.484Z")
+                    .hasConference(false)
+                    .id("6c102b53-2d33-417d-851f-56457ddabd50")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.443Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.038Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.767Z",
-                                "2023-10-27T02:46:59.922Z",
-                                "2024-03-05T15:36:05.650Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.524Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:47.005Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.766Z",
+                                "2025-01-22T23:38:59.308Z",
+                                "2024-04-01T04:56:01.410Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -3089,12 +2119,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -3317,48 +2347,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.496Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.500Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.518Z",
-                                "2021-12-08T19:59:10.362Z",
-                                "2019-12-24T08:53:07.536Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -3369,504 +2395,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.922Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.983Z",
-                                "2021-09-16T09:03:04.260Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.768Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("8870d464-8470-48d6-90ea-37219ab25e06")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.434Z")
+                    .startAt("2020-05-23T18:33:40.503Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.042Z")
+                    .updatedAt("2020-06-30T01:45:14.353Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -3973,6 +2510,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCrmEventResponse;
@@ -3993,12 +2531,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-09T13:56:37.611Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-10T04:23:26.176Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("2cda0b36-cb70-4f8f-8de0-de0efae98b0b")
+                    .id("1e37c4ca-805c-4ac6-a935-d9235a179c75")
+                    .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-09T11:34:39.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-10T08:01:43.997Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4043,6 +2582,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventResponse;
@@ -4065,8 +2605,9 @@ public class Application {
                         .name("")
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
-                    .id("30cdea25-2d57-45c6-9b47-37e4b9c87f4a")
+                    .id("e20be20d-d152-4cb9-8138-1a3a3cd2619a")
                     .isReplacingOriginal(false)
+                    .metadata(List.of())
                     .type(MessagingEventType.BUTTON_CLICK)
                     .build())
                 .connectionId("<id>")

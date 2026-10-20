@@ -1,0 +1,26 @@
+# ListGenaiMemoriesQueryParamFields
+
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListGenaiMemoriesQueryParamFields;
+
+ListGenaiMemoriesQueryParamFields value = ListGenaiMemoriesQueryParamFields.ID;
+```
+
+
+## Values
+
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `ID`              | id                |
+| `CREATED_AT`      | created_at        |
+| `UPDATED_AT`      | updated_at        |
+| `TYPE`            | type              |
+| `PARENT_ID`       | parent_id         |
+| `USER_IDENTIFIER` | user_identifier   |
+| `NAME`            | name              |
+| `CONTENT`         | content           |
+| `DESCRIPTION`     | description       |
+| `METADATA`        | metadata          |
+| `RAW`             | raw               |

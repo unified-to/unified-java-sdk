@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -53,6 +54,11 @@ public class CdpActivation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_at")
     private OffsetDateTime lastRunAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CdpMetadata> metadata;
 
     /**
      * The name of the activation/sync job
@@ -110,6 +116,7 @@ public class CdpActivation {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_enabled") @Nullable Boolean isEnabled,
             @JsonProperty("last_run_at") @Nullable OffsetDateTime lastRunAt,
+            @JsonProperty("metadata") @Nullable List<CdpMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("schedule") @Nullable String schedule,
@@ -122,6 +129,7 @@ public class CdpActivation {
         this.id = id;
         this.isEnabled = isEnabled;
         this.lastRunAt = lastRunAt;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.schedule = schedule;
@@ -135,7 +143,8 @@ public class CdpActivation {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -171,6 +180,10 @@ public class CdpActivation {
      */
     public Optional<OffsetDateTime> lastRunAt() {
         return Optional.ofNullable(this.lastRunAt);
+    }
+
+    public Optional<List<CdpMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -272,6 +285,12 @@ public class CdpActivation {
     }
 
 
+    public CdpActivation withMetadata(@Nullable List<CdpMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the activation/sync job
      */
@@ -350,6 +369,7 @@ public class CdpActivation {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isEnabled, other.isEnabled) &&
             Utils.enhancedDeepEquals(this.lastRunAt, other.lastRunAt) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.schedule, other.schedule) &&
@@ -363,9 +383,10 @@ public class CdpActivation {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, destinationId, id,
-            isEnabled, lastRunAt, name,
-            raw, schedule, segmentId,
-            sourceId, status, updatedAt);
+            isEnabled, lastRunAt, metadata,
+            name, raw, schedule,
+            segmentId, sourceId, status,
+            updatedAt);
     }
     
     @Override
@@ -376,6 +397,7 @@ public class CdpActivation {
                 "id", id,
                 "isEnabled", isEnabled,
                 "lastRunAt", lastRunAt,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "schedule", schedule,
@@ -397,6 +419,8 @@ public class CdpActivation {
         private Boolean isEnabled;
 
         private OffsetDateTime lastRunAt;
+
+        private List<CdpMetadata> metadata;
 
         private String name;
 
@@ -453,6 +477,11 @@ public class CdpActivation {
          */
         public Builder lastRunAt(@Nullable OffsetDateTime lastRunAt) {
             this.lastRunAt = lastRunAt;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<CdpMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -515,9 +544,10 @@ public class CdpActivation {
         public CdpActivation build() {
             return new CdpActivation(
                 createdAt, destinationId, id,
-                isEnabled, lastRunAt, name,
-                raw, schedule, segmentId,
-                sourceId, status, updatedAt);
+                isEnabled, lastRunAt, metadata,
+                name, raw, schedule,
+                segmentId, sourceId, status,
+                updatedAt);
         }
 
     }

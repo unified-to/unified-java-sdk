@@ -86,6 +86,11 @@ public class AccountingCashflow {
     @JsonProperty("investing_sections")
     private List<AccountingCashflowSection> investingSections;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
     /**
      * e.g. "Cash Flow Statement Q1 2020"
      */
@@ -138,6 +143,7 @@ public class AccountingCashflow {
             @JsonProperty("financing_sections") @Nullable List<AccountingCashflowSection> financingSections,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("investing_sections") @Nullable List<AccountingCashflowSection> investingSections,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("net_change_in_cash_amount") @Nullable Double netChangeInCashAmount,
             @JsonProperty("operating_sections") @Nullable List<AccountingCashflowSection> operatingSections,
@@ -154,6 +160,7 @@ public class AccountingCashflow {
         this.financingSections = financingSections;
         this.id = id;
         this.investingSections = investingSections;
+        this.metadata = metadata;
         this.name = name;
         this.netChangeInCashAmount = netChangeInCashAmount;
         this.operatingSections = operatingSections;
@@ -168,7 +175,7 @@ public class AccountingCashflow {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -227,6 +234,10 @@ public class AccountingCashflow {
 
     public Optional<List<AccountingCashflowSection>> investingSections() {
         return Optional.ofNullable(this.investingSections);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -351,6 +362,12 @@ public class AccountingCashflow {
     }
 
 
+    public AccountingCashflow withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * e.g. "Cash Flow Statement Q1 2020"
      */
@@ -422,6 +439,7 @@ public class AccountingCashflow {
             Utils.enhancedDeepEquals(this.financingSections, other.financingSections) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.investingSections, other.investingSections) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.netChangeInCashAmount, other.netChangeInCashAmount) &&
             Utils.enhancedDeepEquals(this.operatingSections, other.operatingSections) &&
@@ -436,9 +454,9 @@ public class AccountingCashflow {
             cashBeginningAmount, cashEndingAmount, categoryIds,
             contactId, createdAt, currency,
             endAt, financingSections, id,
-            investingSections, name, netChangeInCashAmount,
-            operatingSections, raw, startAt,
-            updatedAt);
+            investingSections, metadata, name,
+            netChangeInCashAmount, operatingSections, raw,
+            startAt, updatedAt);
     }
     
     @Override
@@ -454,6 +472,7 @@ public class AccountingCashflow {
                 "financingSections", financingSections,
                 "id", id,
                 "investingSections", investingSections,
+                "metadata", metadata,
                 "name", name,
                 "netChangeInCashAmount", netChangeInCashAmount,
                 "operatingSections", operatingSections,
@@ -484,6 +503,8 @@ public class AccountingCashflow {
         private String id;
 
         private List<AccountingCashflowSection> investingSections;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -569,6 +590,11 @@ public class AccountingCashflow {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * e.g. "Cash Flow Statement Q1 2020"
          */
@@ -619,9 +645,9 @@ public class AccountingCashflow {
                 cashBeginningAmount, cashEndingAmount, categoryIds,
                 contactId, createdAt, currency,
                 endAt, financingSections, id,
-                investingSections, name, netChangeInCashAmount,
-                operatingSections, raw, startAt,
-                updatedAt);
+                investingSections, metadata, name,
+                netChangeInCashAmount, operatingSections, raw,
+                startAt, updatedAt);
         }
 
     }

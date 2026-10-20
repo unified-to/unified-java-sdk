@@ -23,4 +23,5 @@ GetPerformanceCycleQueryParamFields value = GetPerformanceCycleQueryParamFields.
 | `START_AT`    | start_at      |
 | `END_AT`      | end_at        |
 | `DUE_AT`      | due_at        |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

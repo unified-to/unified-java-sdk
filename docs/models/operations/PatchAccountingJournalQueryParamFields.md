@@ -32,4 +32,5 @@ PatchAccountingJournalQueryParamFields value = PatchAccountingJournalQueryParamF
 | `EXCHANGE_RATE`       | exchange_rate         |
 | `STATUS`              | status                |
 | `IS_INCLUSIVE_OF_TAX` | is_inclusive_of_tax   |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

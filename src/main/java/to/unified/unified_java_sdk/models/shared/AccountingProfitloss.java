@@ -81,6 +81,11 @@ public class AccountingProfitloss {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -121,6 +126,7 @@ public class AccountingProfitloss {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("income_sections") @Nullable List<AccountingProfitlossSection> incomeSections,
             @JsonProperty("income_total_amount") @Nullable Double incomeTotalAmount,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("net_income_amount") @Nullable Double netIncomeAmount,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -137,6 +143,7 @@ public class AccountingProfitloss {
         this.id = id;
         this.incomeSections = incomeSections;
         this.incomeTotalAmount = incomeTotalAmount;
+        this.metadata = metadata;
         this.name = name;
         this.netIncomeAmount = netIncomeAmount;
         this.raw = raw;
@@ -150,7 +157,7 @@ public class AccountingProfitloss {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<String>> categoryIds() {
@@ -201,6 +208,10 @@ public class AccountingProfitloss {
 
     public Optional<Double> incomeTotalAmount() {
         return Optional.ofNullable(this.incomeTotalAmount);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -306,6 +317,12 @@ public class AccountingProfitloss {
     }
 
 
+    public AccountingProfitloss withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingProfitloss withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -363,6 +380,7 @@ public class AccountingProfitloss {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.incomeSections, other.incomeSections) &&
             Utils.enhancedDeepEquals(this.incomeTotalAmount, other.incomeTotalAmount) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.netIncomeAmount, other.netIncomeAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -376,9 +394,9 @@ public class AccountingProfitloss {
             categoryIds, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
             createdAt, currency, endAt,
             expensesSections, expensesTotalAmount, id,
-            incomeSections, incomeTotalAmount, name,
-            netIncomeAmount, raw, startAt,
-            updatedAt);
+            incomeSections, incomeTotalAmount, metadata,
+            name, netIncomeAmount, raw,
+            startAt, updatedAt);
     }
     
     @Override
@@ -395,6 +413,7 @@ public class AccountingProfitloss {
                 "id", id,
                 "incomeSections", incomeSections,
                 "incomeTotalAmount", incomeTotalAmount,
+                "metadata", metadata,
                 "name", name,
                 "netIncomeAmount", netIncomeAmount,
                 "raw", raw,
@@ -426,6 +445,8 @@ public class AccountingProfitloss {
         private List<AccountingProfitlossSection> incomeSections;
 
         private Double incomeTotalAmount;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -502,6 +523,11 @@ public class AccountingProfitloss {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -538,9 +564,9 @@ public class AccountingProfitloss {
                 categoryIds, costOfGoodsSoldSections, costOfGoodsSoldTotalAmount,
                 createdAt, currency, endAt,
                 expensesSections, expensesTotalAmount, id,
-                incomeSections, incomeTotalAmount, name,
-                netIncomeAmount, raw, startAt,
-                updatedAt);
+                incomeSections, incomeTotalAmount, metadata,
+                name, netIncomeAmount, raw,
+                startAt, updatedAt);
         }
 
     }

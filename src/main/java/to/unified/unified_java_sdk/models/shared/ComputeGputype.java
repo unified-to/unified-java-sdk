@@ -97,6 +97,11 @@ public class ComputeGputype {
     @JsonProperty("memory_mb")
     private Double memoryMb;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
+
     /**
      * Display name of the type
      */
@@ -145,6 +150,7 @@ public class ComputeGputype {
             @JsonProperty("gpu_model") @Nullable GpuModel gpuModel,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("memory_mb") @Nullable Double memoryMb,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("prices") @Nullable List<ComputePrice> prices,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -161,6 +167,7 @@ public class ComputeGputype {
         this.gpuModel = gpuModel;
         this.id = id;
         this.memoryMb = memoryMb;
+        this.metadata = metadata;
         this.name = name;
         this.prices = prices;
         this.raw = raw;
@@ -174,7 +181,7 @@ public class ComputeGputype {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -252,6 +259,10 @@ public class ComputeGputype {
      */
     public Optional<Double> memoryMb() {
         return Optional.ofNullable(this.memoryMb);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -393,6 +404,12 @@ public class ComputeGputype {
     }
 
 
+    public ComputeGputype withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Display name of the type
      */
@@ -459,6 +476,7 @@ public class ComputeGputype {
             Utils.enhancedDeepEquals(this.gpuModel, other.gpuModel) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.memoryMb, other.memoryMb) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.prices, other.prices) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -472,9 +490,9 @@ public class ComputeGputype {
             architecture, availability, cpuCount,
             createdAt, diskMb, gpuCount,
             gpuManufacturer, gpuMemoryMb, gpuModel,
-            id, memoryMb, name,
-            prices, raw, sku,
-            updatedAt);
+            id, memoryMb, metadata,
+            name, prices, raw,
+            sku, updatedAt);
     }
     
     @Override
@@ -491,6 +509,7 @@ public class ComputeGputype {
                 "gpuModel", gpuModel,
                 "id", id,
                 "memoryMb", memoryMb,
+                "metadata", metadata,
                 "name", name,
                 "prices", prices,
                 "raw", raw,
@@ -522,6 +541,8 @@ public class ComputeGputype {
         private String id;
 
         private Double memoryMb;
+
+        private List<ComputeMetadata> metadata;
 
         private String name;
 
@@ -625,6 +646,11 @@ public class ComputeGputype {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Display name of the type
          */
@@ -670,9 +696,9 @@ public class ComputeGputype {
                 architecture, availability, cpuCount,
                 createdAt, diskMb, gpuCount,
                 gpuManufacturer, gpuMemoryMb, gpuModel,
-                id, memoryMb, name,
-                prices, raw, sku,
-                updatedAt);
+                id, memoryMb, metadata,
+                name, prices, raw,
+                sku, updatedAt);
         }
 
     }

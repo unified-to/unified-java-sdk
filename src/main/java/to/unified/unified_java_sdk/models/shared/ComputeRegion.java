@@ -54,6 +54,11 @@ public class ComputeRegion {
     @JsonProperty("location")
     private String location;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
+
     /**
      * Display name of the region
      */
@@ -82,6 +87,7 @@ public class ComputeRegion {
             @JsonProperty("gpu_models") @Nullable List<PropertyComputeRegionGpuModels> gpuModels,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("location") @Nullable String location,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -90,6 +96,7 @@ public class ComputeRegion {
         this.gpuModels = gpuModels;
         this.id = id;
         this.location = location;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -98,7 +105,7 @@ public class ComputeRegion {
     public ComputeRegion() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -134,6 +141,10 @@ public class ComputeRegion {
      */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -207,6 +218,12 @@ public class ComputeRegion {
     }
 
 
+    public ComputeRegion withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Display name of the region
      */
@@ -249,6 +266,7 @@ public class ComputeRegion {
             Utils.enhancedDeepEquals(this.gpuModels, other.gpuModels) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -258,8 +276,8 @@ public class ComputeRegion {
     public int hashCode() {
         return Utils.enhancedHash(
             country, createdAt, gpuModels,
-            id, location, name,
-            raw, updatedAt);
+            id, location, metadata,
+            name, raw, updatedAt);
     }
     
     @Override
@@ -270,6 +288,7 @@ public class ComputeRegion {
                 "gpuModels", gpuModels,
                 "id", id,
                 "location", location,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt);
@@ -287,6 +306,8 @@ public class ComputeRegion {
         private String id;
 
         private String location;
+
+        private List<ComputeMetadata> metadata;
 
         private String name;
 
@@ -338,6 +359,11 @@ public class ComputeRegion {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Display name of the region
          */
@@ -365,8 +391,8 @@ public class ComputeRegion {
         public ComputeRegion build() {
             return new ComputeRegion(
                 country, createdAt, gpuModels,
-                id, location, name,
-                raw, updatedAt);
+                id, location, metadata,
+                name, raw, updatedAt);
         }
 
     }

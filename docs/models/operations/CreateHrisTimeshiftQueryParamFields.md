@@ -27,4 +27,5 @@ CreateHrisTimeshiftQueryParamFields value = CreateHrisTimeshiftQueryParamFields.
 | `APPROVED_AT`      | approved_at        |
 | `HOURS`            | hours              |
 | `IS_APPROVED`      | is_approved        |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

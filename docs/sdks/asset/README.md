@@ -20,6 +20,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
@@ -39,11 +40,12 @@ public class Application {
                 .adsAsset(AdsAsset.builder()
                     .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
                     .height(400d)
-                    .id("3dabb9cd-4f23-44ba-b43b-642aed586793")
+                    .id("d2f4b926-027c-48aa-bfef-645860b3b9dd")
+                    .metadata(List.of())
                     .mimeType("IMAGE_PNG")
                     .name("Lockman - DuBuque")
                     .type(AdsAssetType.IMAGE)
-                    .updatedAt(OffsetDateTime.parse("2022-03-24T13:37:15.088Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-03-24T19:50:57.885Z"))
                     .url("https://informal-perfection.com/")
                     .width(600d)
                     .build())

@@ -120,6 +120,11 @@ public class ShippingShipment {
     @JsonProperty("lineitems")
     private List<ShippingShipmentLineitem> lineitems;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ShippingMetadata> metadata;
+
     /**
      * Reference to commerce_order or accounting_order
      */
@@ -318,6 +323,7 @@ public class ShippingShipment {
             @JsonProperty("is_signature_required") @Nullable Boolean isSignatureRequired,
             @JsonProperty("label_id") @Nullable String labelId,
             @JsonProperty("lineitems") @Nullable List<ShippingShipmentLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<ShippingMetadata> metadata,
             @JsonProperty("order_id") @Nullable String orderId,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("original_shipment_id") @Nullable String originalShipmentId,
@@ -358,6 +364,7 @@ public class ShippingShipment {
         this.isSignatureRequired = isSignatureRequired;
         this.labelId = labelId;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.orderId = orderId;
         this.organizationId = organizationId;
         this.originalShipmentId = originalShipmentId;
@@ -400,7 +407,7 @@ public class ShippingShipment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -500,6 +507,10 @@ public class ShippingShipment {
      */
     public Optional<List<ShippingShipmentLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<ShippingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -816,6 +827,12 @@ public class ShippingShipment {
     }
 
 
+    public ShippingShipment withMetadata(@Nullable List<ShippingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Reference to commerce_order or accounting_order
      */
@@ -1074,6 +1091,7 @@ public class ShippingShipment {
             Utils.enhancedDeepEquals(this.isSignatureRequired, other.isSignatureRequired) &&
             Utils.enhancedDeepEquals(this.labelId, other.labelId) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.orderId, other.orderId) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.originalShipmentId, other.originalShipmentId) &&
@@ -1109,16 +1127,16 @@ public class ShippingShipment {
             customs, fromAddress, id,
             insurance, isAdultSignatureRequired, isInternational,
             isRateGuaranteed, isReturn, isSignatureRequired,
-            labelId, lineitems, orderId,
-            organizationId, originalShipmentId, packages,
-            rateAmount, rateCurrency, rateEstimatedDays,
-            rateEstimatedDeliveryAt, rateId, rateServiceName,
-            raw, referenceNumber, returnAddress,
-            returnAuthorizationNumber, returnReason, returnType,
-            serviceCode, shippedAt, specialInstructions,
-            status, toAddress, trackingId,
-            trackingUrl, updatedAt, warehouseLocationId,
-            warehouseLocationName);
+            labelId, lineitems, metadata,
+            orderId, organizationId, originalShipmentId,
+            packages, rateAmount, rateCurrency,
+            rateEstimatedDays, rateEstimatedDeliveryAt, rateId,
+            rateServiceName, raw, referenceNumber,
+            returnAddress, returnAuthorizationNumber, returnReason,
+            returnType, serviceCode, shippedAt,
+            specialInstructions, status, toAddress,
+            trackingId, trackingUrl, updatedAt,
+            warehouseLocationId, warehouseLocationName);
     }
     
     @Override
@@ -1138,6 +1156,7 @@ public class ShippingShipment {
                 "isSignatureRequired", isSignatureRequired,
                 "labelId", labelId,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "orderId", orderId,
                 "organizationId", organizationId,
                 "originalShipmentId", originalShipmentId,
@@ -1196,6 +1215,8 @@ public class ShippingShipment {
         private String labelId;
 
         private List<ShippingShipmentLineitem> lineitems;
+
+        private List<ShippingMetadata> metadata;
 
         private String orderId;
 
@@ -1363,6 +1384,11 @@ public class ShippingShipment {
          */
         public Builder lineitems(@Nullable List<ShippingShipmentLineitem> lineitems) {
             this.lineitems = lineitems;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<ShippingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -1580,16 +1606,16 @@ public class ShippingShipment {
                 customs, fromAddress, id,
                 insurance, isAdultSignatureRequired, isInternational,
                 isRateGuaranteed, isReturn, isSignatureRequired,
-                labelId, lineitems, orderId,
-                organizationId, originalShipmentId, packages,
-                rateAmount, rateCurrency, rateEstimatedDays,
-                rateEstimatedDeliveryAt, rateId, rateServiceName,
-                raw, referenceNumber, returnAddress,
-                returnAuthorizationNumber, returnReason, returnType,
-                serviceCode, shippedAt, specialInstructions,
-                status, toAddress, trackingId,
-                trackingUrl, updatedAt, warehouseLocationId,
-                warehouseLocationName);
+                labelId, lineitems, metadata,
+                orderId, organizationId, originalShipmentId,
+                packages, rateAmount, rateCurrency,
+                rateEstimatedDays, rateEstimatedDeliveryAt, rateId,
+                rateServiceName, raw, referenceNumber,
+                returnAddress, returnAuthorizationNumber, returnReason,
+                returnType, serviceCode, shippedAt,
+                specialInstructions, status, toAddress,
+                trackingId, trackingUrl, updatedAt,
+                warehouseLocationId, warehouseLocationName);
         }
 
     }

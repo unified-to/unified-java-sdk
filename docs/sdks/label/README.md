@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
@@ -41,16 +42,17 @@ public class Application {
         CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("1f602fc0-588f-41cb-af75-2473b09b2b2b")
+                    .id("48383374-4753-4aee-9411-320f7b6bf89d")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/48383374-4753-4aee-9411-320f7b6bf89d.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.242Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.432Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -209,6 +211,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
@@ -227,16 +230,17 @@ public class Application {
         PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("a8f792d0-7d18-44f0-9d74-267d1c1befe8")
+                    .id("bb30434d-bf4a-4b92-81c0-11e1fc3851de")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/bb30434d-bf4a-4b92-81c0-11e1fc3851de.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.246Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.440Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -337,6 +341,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
@@ -355,16 +360,17 @@ public class Application {
         UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("a8f792d0-7d18-44f0-9d74-267d1c1befe8")
+                    .id("bb30434d-bf4a-4b92-81c0-11e1fc3851de")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/bb30434d-bf4a-4b92-81c0-11e1fc3851de.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.246Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.440Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -19,6 +19,7 @@ public enum ListClubsLocationsQueryParamFields {
     LONGITUDE("longitude"),
     TELEPHONE("telephone"),
     URL("url"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

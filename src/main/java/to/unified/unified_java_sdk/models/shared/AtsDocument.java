@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -67,6 +68,11 @@ public class AtsDocument {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AtsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -99,6 +105,7 @@ public class AtsDocument {
             @JsonProperty("filename") @Nullable String filename,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable AtsDocumentType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -111,6 +118,7 @@ public class AtsDocument {
         this.filename = filename;
         this.id = id;
         this.jobId = jobId;
+        this.metadata = metadata;
         this.raw = raw;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -121,7 +129,8 @@ public class AtsDocument {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> applicationId() {
@@ -164,6 +173,10 @@ public class AtsDocument {
 
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
+    }
+
+    public Optional<List<AtsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -251,6 +264,12 @@ public class AtsDocument {
     }
 
 
+    public AtsDocument withMetadata(@Nullable List<AtsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AtsDocument withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -299,6 +318,7 @@ public class AtsDocument {
             Utils.enhancedDeepEquals(this.filename, other.filename) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -310,8 +330,9 @@ public class AtsDocument {
         return Utils.enhancedHash(
             applicationId, candidateId, createdAt,
             documentData, documentUrl, filename,
-            id, jobId, raw,
-            type, updatedAt, userId);
+            id, jobId, metadata,
+            raw, type, updatedAt,
+            userId);
     }
     
     @Override
@@ -325,6 +346,7 @@ public class AtsDocument {
                 "filename", filename,
                 "id", id,
                 "jobId", jobId,
+                "metadata", metadata,
                 "raw", raw,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -349,6 +371,8 @@ public class AtsDocument {
         private String id;
 
         private String jobId;
+
+        private List<AtsMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -412,6 +436,11 @@ public class AtsDocument {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -442,8 +471,9 @@ public class AtsDocument {
             return new AtsDocument(
                 applicationId, candidateId, createdAt,
                 documentData, documentUrl, filename,
-                id, jobId, raw,
-                type, updatedAt, userId);
+                id, jobId, metadata,
+                raw, type, updatedAt,
+                userId);
         }
 
     }

@@ -74,6 +74,11 @@ public class AssessmentOrder {
     @JsonProperty("job_id")
     private String jobId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AssessmentMetadata> metadata;
+
     /**
      * Assessment package ID
      */
@@ -284,6 +289,7 @@ public class AssessmentOrder {
             @JsonProperty("employee_id") @Nullable String employeeId,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AssessmentMetadata> metadata,
             @JsonProperty("package_id") @Nullable String packageId,
             @JsonProperty("parameters") @Nullable List<AssessmentParameterInput> parameters,
             @JsonProperty("profile_addresses") @Nullable List<AssessmentAddress> profileAddresses,
@@ -326,6 +332,7 @@ public class AssessmentOrder {
         this.employeeId = employeeId;
         this.id = id;
         this.jobId = jobId;
+        this.metadata = metadata;
         this.packageId = packageId;
         this.parameters = parameters;
         this.profileAddresses = profileAddresses;
@@ -378,7 +385,7 @@ public class AssessmentOrder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, workspaceId);
+            null, null, workspaceId);
     }
 
     /**
@@ -432,6 +439,10 @@ public class AssessmentOrder {
      */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
+    }
+
+    public Optional<List<AssessmentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -690,6 +701,12 @@ public class AssessmentOrder {
      */
     public AssessmentOrder withJobId(@Nullable String jobId) {
         this.jobId = jobId;
+        return this;
+    }
+
+
+    public AssessmentOrder withMetadata(@Nullable List<AssessmentMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -964,6 +981,7 @@ public class AssessmentOrder {
             Utils.enhancedDeepEquals(this.employeeId, other.employeeId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.packageId, other.packageId) &&
             Utils.enhancedDeepEquals(this.parameters, other.parameters) &&
             Utils.enhancedDeepEquals(this.profileAddresses, other.profileAddresses) &&
@@ -1004,18 +1022,18 @@ public class AssessmentOrder {
         return Utils.enhancedHash(
             applicationId, candidateId, companyId,
             connectionId, createdAt, employeeId,
-            id, jobId, packageId,
-            parameters, profileAddresses, profileDateOfBirth,
-            profileEmails, profileFirstName, profileGender,
-            profileIpAddress, profileLastName, profileName,
-            profileNationalIdentifier, profileResumeUrl, profileSocialMediaUrls,
-            profileTelephones, raw, reference,
-            responseAttributes, responseCompletedAt, responseDetails,
-            responseDownloadUrls, responseExpiresAt, responseIssuedAt,
-            responseMaxScore, responseRedirectUrl, responseScore,
-            responseSource, responseStatus, responseUrl,
-            status, targetUrl, updatedAt,
-            webhookId, workspaceId);
+            id, jobId, metadata,
+            packageId, parameters, profileAddresses,
+            profileDateOfBirth, profileEmails, profileFirstName,
+            profileGender, profileIpAddress, profileLastName,
+            profileName, profileNationalIdentifier, profileResumeUrl,
+            profileSocialMediaUrls, profileTelephones, raw,
+            reference, responseAttributes, responseCompletedAt,
+            responseDetails, responseDownloadUrls, responseExpiresAt,
+            responseIssuedAt, responseMaxScore, responseRedirectUrl,
+            responseScore, responseSource, responseStatus,
+            responseUrl, status, targetUrl,
+            updatedAt, webhookId, workspaceId);
     }
     
     @Override
@@ -1029,6 +1047,7 @@ public class AssessmentOrder {
                 "employeeId", employeeId,
                 "id", id,
                 "jobId", jobId,
+                "metadata", metadata,
                 "packageId", packageId,
                 "parameters", parameters,
                 "profileAddresses", profileAddresses,
@@ -1082,6 +1101,8 @@ public class AssessmentOrder {
         private String id;
 
         private String jobId;
+
+        private List<AssessmentMetadata> metadata;
 
         private String packageId;
 
@@ -1211,6 +1232,11 @@ public class AssessmentOrder {
          */
         public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AssessmentMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -1437,18 +1463,18 @@ public class AssessmentOrder {
             return new AssessmentOrder(
                 applicationId, candidateId, companyId,
                 connectionId, createdAt, employeeId,
-                id, jobId, packageId,
-                parameters, profileAddresses, profileDateOfBirth,
-                profileEmails, profileFirstName, profileGender,
-                profileIpAddress, profileLastName, profileName,
-                profileNationalIdentifier, profileResumeUrl, profileSocialMediaUrls,
-                profileTelephones, raw, reference,
-                responseAttributes, responseCompletedAt, responseDetails,
-                responseDownloadUrls, responseExpiresAt, responseIssuedAt,
-                responseMaxScore, responseRedirectUrl, responseScore,
-                responseSource, responseStatus, responseUrl,
-                status, targetUrl, updatedAt,
-                webhookId, workspaceId);
+                id, jobId, metadata,
+                packageId, parameters, profileAddresses,
+                profileDateOfBirth, profileEmails, profileFirstName,
+                profileGender, profileIpAddress, profileLastName,
+                profileName, profileNationalIdentifier, profileResumeUrl,
+                profileSocialMediaUrls, profileTelephones, raw,
+                reference, responseAttributes, responseCompletedAt,
+                responseDetails, responseDownloadUrls, responseExpiresAt,
+                responseIssuedAt, responseMaxScore, responseRedirectUrl,
+                responseScore, responseSource, responseStatus,
+                responseUrl, status, targetUrl,
+                updatedAt, webhookId, workspaceId);
         }
 
     }

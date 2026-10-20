@@ -37,6 +37,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
@@ -60,15 +61,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.497Z"))
-                    .id("ce9637c1-8881-49e5-b135-3a8ba3ac2921")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.472Z"))
+                    .id("66afa24f-ba44-48d9-8163-1a789393e926")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.272Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.652Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.104Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:49.945Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -112,6 +114,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
@@ -131,11 +134,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("698f1774-414c-42cc-810f-db4af0256475")
+                    .id("9141ba1d-1155-46c4-b4cc-6ae2a117f7eb")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-20T04:51:07.075Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-20T22:30:33.995Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -700,6 +704,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
@@ -723,15 +728,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.611Z"))
-                    .id("d77dab3a-559b-4871-8be2-c13a2cc9886f")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.627Z"))
+                    .id("869bae61-f58e-4402-b994-a312769b2578")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.380Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.798Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:50.000Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -776,6 +782,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
@@ -795,11 +802,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("bbbcc29c-fe32-452f-a3af-a902c0ed98fd")
+                    .id("198fa14a-90e2-4cb1-86b0-72a0bc757ec4")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-20T04:51:07.094Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-20T22:30:34.006Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1074,6 +1082,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
@@ -1097,15 +1106,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.611Z"))
-                    .id("d77dab3a-559b-4871-8be2-c13a2cc9886f")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.627Z"))
+                    .id("869bae61-f58e-4402-b994-a312769b2578")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.380Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.798Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:50.000Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1150,6 +1160,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
@@ -1169,11 +1180,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("bbbcc29c-fe32-452f-a3af-a902c0ed98fd")
+                    .id("198fa14a-90e2-4cb1-86b0-72a0bc757ec4")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-20T04:51:07.094Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-20T22:30:34.006Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

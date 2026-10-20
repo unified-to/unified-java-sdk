@@ -12,6 +12,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -26,6 +27,11 @@ public class CrmTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     private String label;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CrmMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -46,12 +52,14 @@ public class CrmTaxonomy {
     public CrmTaxonomy(
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("label") @Nullable String label,
+            @JsonProperty("metadata") @Nullable List<CrmMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable CrmTaxonomyType type) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.label = label;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.type = type;
@@ -60,7 +68,7 @@ public class CrmTaxonomy {
     public CrmTaxonomy(
             @Nonnull String id) {
         this(id, null, null,
-            null, null);
+            null, null, null);
     }
 
     public String id() {
@@ -69,6 +77,10 @@ public class CrmTaxonomy {
 
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
+    }
+
+    public Optional<List<CrmMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -96,6 +108,12 @@ public class CrmTaxonomy {
 
     public CrmTaxonomy withLabel(@Nullable String label) {
         this.label = label;
+        return this;
+    }
+
+
+    public CrmTaxonomy withMetadata(@Nullable List<CrmMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -130,6 +148,7 @@ public class CrmTaxonomy {
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.label, other.label) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type);
@@ -138,8 +157,8 @@ public class CrmTaxonomy {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, label, name,
-            raw, type);
+            id, label, metadata,
+            name, raw, type);
     }
     
     @Override
@@ -147,6 +166,7 @@ public class CrmTaxonomy {
         return Utils.toString(CrmTaxonomy.class,
                 "id", id,
                 "label", label,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "type", type);
@@ -158,6 +178,8 @@ public class CrmTaxonomy {
         private String id;
 
         private String label;
+
+        private List<CrmMetadata> metadata;
 
         private String name;
 
@@ -179,6 +201,11 @@ public class CrmTaxonomy {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CrmMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -196,8 +223,8 @@ public class CrmTaxonomy {
 
         public CrmTaxonomy build() {
             return new CrmTaxonomy(
-                id, label, name,
-                raw, type);
+                id, label, metadata,
+                name, raw, type);
         }
 
     }

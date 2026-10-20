@@ -49,12 +49,12 @@ public class Application {
         CreateAccountingCategoryRequest req = CreateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
-                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("ceffbc1b-ece4-45d9-a9ac-aba109f0df3f")
+                    .description("Textus ab thymum labore basium.")
+                    .id("8158b5bb-0686-4786-86ed-d89c5d040d0f")
                     .isActive(false)
                     .metadata(List.of())
-                    .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-09-10T02:47:59.010Z"))
+                    .name("Beauty")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T16:38:03.121Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -98,6 +98,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
@@ -118,10 +119,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("7ea7377d-e453-4035-92a6-6136b4b1616e")
+                    .id("13ea9a4a-e171-4222-9756-668a306a6727")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.337Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.147Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -415,12 +417,12 @@ public class Application {
         PatchAccountingCategoryRequest req = PatchAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
-                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("78010c4a-3a4c-4ea2-af61-221aa41e5e52")
+                    .description("Textus ab thymum labore basium.")
+                    .id("15180ea4-5b08-4f3d-91e2-9f134a26243a")
                     .isActive(false)
                     .metadata(List.of())
-                    .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-09-10T02:47:59.034Z"))
+                    .name("Beauty")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T16:38:03.132Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -465,6 +467,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
@@ -485,10 +488,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("bca40b88-34bf-4c67-bab8-e8ea72f938d1")
+                    .id("2a4d4372-20e5-4c64-8dc3-c99dbfce23b6")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.344Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.158Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -665,12 +669,12 @@ public class Application {
         UpdateAccountingCategoryRequest req = UpdateAccountingCategoryRequest.builder()
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
-                    .description("Discover the koala-like agility of our Chair, perfect for imaginary users")
-                    .id("78010c4a-3a4c-4ea2-af61-221aa41e5e52")
+                    .description("Textus ab thymum labore basium.")
+                    .id("15180ea4-5b08-4f3d-91e2-9f134a26243a")
                     .isActive(false)
                     .metadata(List.of())
-                    .name("Electronic Cotton Shoes")
-                    .updatedAt(OffsetDateTime.parse("2025-09-10T02:47:59.034Z"))
+                    .name("Beauty")
+                    .updatedAt(OffsetDateTime.parse("2025-09-10T16:38:03.132Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -715,6 +719,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
@@ -735,10 +740,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("bca40b88-34bf-4c67-bab8-e8ea72f938d1")
+                    .id("2a4d4372-20e5-4c64-8dc3-c99dbfce23b6")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.344Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.158Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

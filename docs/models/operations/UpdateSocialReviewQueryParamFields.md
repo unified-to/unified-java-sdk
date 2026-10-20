@@ -25,4 +25,5 @@ UpdateSocialReviewQueryParamFields value = UpdateSocialReviewQueryParamFields.ID
 | `AUTHOR_LOCATION`   | author_location     |
 | `REPLY`             | reply               |
 | `URL`               | url                 |
+| `METADATA`          | metadata            |
 | `RAW`               | raw                 |

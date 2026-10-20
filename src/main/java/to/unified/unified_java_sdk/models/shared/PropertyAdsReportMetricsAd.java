@@ -100,6 +100,11 @@ public class PropertyAdsReportMetricsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -157,6 +162,7 @@ public class PropertyAdsReportMetricsAd {
             @JsonProperty("headline") @Nullable String headline,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("logo_creative_id") @Nullable String logoCreativeId,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("path1") @Nullable String path1,
@@ -180,6 +186,7 @@ public class PropertyAdsReportMetricsAd {
         this.headline = headline;
         this.id = id;
         this.logoCreativeId = logoCreativeId;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.path1 = path1;
@@ -198,7 +205,7 @@ public class PropertyAdsReportMetricsAd {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> adCopy() {
@@ -265,6 +272,10 @@ public class PropertyAdsReportMetricsAd {
 
     public Optional<String> logoCreativeId() {
         return Optional.ofNullable(this.logoCreativeId);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -403,6 +414,12 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    public PropertyAdsReportMetricsAd withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsAd withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -479,6 +496,7 @@ public class PropertyAdsReportMetricsAd {
             Utils.enhancedDeepEquals(this.headline, other.headline) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.logoCreativeId, other.logoCreativeId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.path1, other.path1) &&
@@ -497,9 +515,9 @@ public class PropertyAdsReportMetricsAd {
             creativeIds, cta, description,
             displayUrl, finalUrl, groupId,
             headline, id, logoCreativeId,
-            name, organizationId, path1,
-            path2, promoted, raw,
-            status, updatedAt);
+            metadata, name, organizationId,
+            path1, path2, promoted,
+            raw, status, updatedAt);
     }
     
     @Override
@@ -520,6 +538,7 @@ public class PropertyAdsReportMetricsAd {
                 "headline", headline,
                 "id", id,
                 "logoCreativeId", logoCreativeId,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "path1", path1,
@@ -562,6 +581,8 @@ public class PropertyAdsReportMetricsAd {
         private String id;
 
         private String logoCreativeId;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -664,6 +685,11 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -714,9 +740,9 @@ public class PropertyAdsReportMetricsAd {
                 creativeIds, cta, description,
                 displayUrl, finalUrl, groupId,
                 headline, id, logoCreativeId,
-                name, organizationId, path1,
-                path2, promoted, raw,
-                status, updatedAt);
+                metadata, name, organizationId,
+                path1, path2, promoted,
+                raw, status, updatedAt);
         }
 
     }

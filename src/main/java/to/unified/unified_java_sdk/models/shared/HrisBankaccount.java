@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -94,6 +95,11 @@ public class HrisBankaccount {
     @JsonProperty("is_primary")
     private Boolean isPrimary;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * account nickname (e.g. "BoA Checking")
      */
@@ -162,6 +168,7 @@ public class HrisBankaccount {
             @JsonProperty("iban") @Nullable String iban,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_primary") @Nullable Boolean isPrimary,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("priority") @Nullable Double priority,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -182,6 +189,7 @@ public class HrisBankaccount {
         this.iban = iban;
         this.id = id;
         this.isPrimary = isPrimary;
+        this.metadata = metadata;
         this.name = name;
         this.priority = priority;
         this.raw = raw;
@@ -199,7 +207,7 @@ public class HrisBankaccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> accountNumber() {
@@ -269,6 +277,10 @@ public class HrisBankaccount {
      */
     public Optional<Boolean> isPrimary() {
         return Optional.ofNullable(this.isPrimary);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -422,6 +434,12 @@ public class HrisBankaccount {
     }
 
 
+    public HrisBankaccount withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * account nickname (e.g. "BoA Checking")
      */
@@ -513,6 +531,7 @@ public class HrisBankaccount {
             Utils.enhancedDeepEquals(this.iban, other.iban) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrimary, other.isPrimary) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -530,9 +549,9 @@ public class HrisBankaccount {
             bankName, bic, companyId,
             countryCode, createdAt, currency,
             iban, id, isPrimary,
-            name, priority, raw,
-            routingNumber, splitAmount, splitType,
-            updatedAt, userId);
+            metadata, name, priority,
+            raw, routingNumber, splitAmount,
+            splitType, updatedAt, userId);
     }
     
     @Override
@@ -550,6 +569,7 @@ public class HrisBankaccount {
                 "iban", iban,
                 "id", id,
                 "isPrimary", isPrimary,
+                "metadata", metadata,
                 "name", name,
                 "priority", priority,
                 "raw", raw,
@@ -586,6 +606,8 @@ public class HrisBankaccount {
         private String id;
 
         private Boolean isPrimary;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -688,6 +710,11 @@ public class HrisBankaccount {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * account nickname (e.g. "BoA Checking")
          */
@@ -755,9 +782,9 @@ public class HrisBankaccount {
                 bankName, bic, companyId,
                 countryCode, createdAt, currency,
                 iban, id, isPrimary,
-                name, priority, raw,
-                routingNumber, splitAmount, splitType,
-                updatedAt, userId);
+                metadata, name, priority,
+                raw, routingNumber, splitAmount,
+                splitType, updatedAt, userId);
         }
 
     }

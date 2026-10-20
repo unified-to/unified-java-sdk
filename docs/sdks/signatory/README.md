@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryResponse;
@@ -41,12 +42,13 @@ public class Application {
         CreateSigningSignatoryRequest req = CreateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("c94357a2-b409-4d90-a4d0-ee2b3891bc9b")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("c7ecbb94-a6a1-42fe-a577-48381c6494ca")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.718Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.209Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -205,6 +207,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryResponse;
@@ -223,12 +226,13 @@ public class Application {
         PatchSigningSignatoryRequest req = PatchSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("44e829f2-930c-46ab-a680-a43ade2cd23c")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("7996751b-99f6-460f-9fad-052bad50d6f3")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.727Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.217Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -329,6 +333,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryResponse;
@@ -347,12 +352,13 @@ public class Application {
         UpdateSigningSignatoryRequest req = UpdateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("44e829f2-930c-46ab-a680-a43ade2cd23c")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("7996751b-99f6-460f-9fad-052bad50d6f3")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.727Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.217Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

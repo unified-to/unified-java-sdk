@@ -95,6 +95,11 @@ public class CrmEvent {
     @JsonProperty("meeting")
     private PropertyCrmEventMeeting meeting;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CrmMetadata> metadata;
+
     /**
      * The note object, when type = note
      */
@@ -155,6 +160,7 @@ public class CrmEvent {
             @JsonProperty("lead_ids") @Nullable List<String> leadIds,
             @JsonProperty("marketing_email") @Nullable PropertyCrmEventMarketingEmail marketingEmail,
             @JsonProperty("meeting") @Nullable PropertyCrmEventMeeting meeting,
+            @JsonProperty("metadata") @Nullable List<CrmMetadata> metadata,
             @JsonProperty("note") @Nullable PropertyCrmEventNote note,
             @JsonProperty("page_view") @Nullable PropertyCrmEventPageView pageView,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -173,6 +179,7 @@ public class CrmEvent {
         this.leadIds = leadIds;
         this.marketingEmail = marketingEmail;
         this.meeting = meeting;
+        this.metadata = metadata;
         this.note = note;
         this.pageView = pageView;
         this.raw = raw;
@@ -188,7 +195,8 @@ public class CrmEvent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -257,6 +265,10 @@ public class CrmEvent {
      */
     public Optional<PropertyCrmEventMeeting> meeting() {
         return Optional.ofNullable(this.meeting);
+    }
+
+    public Optional<List<CrmMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -400,6 +412,12 @@ public class CrmEvent {
     }
 
 
+    public CrmEvent withMetadata(@Nullable List<CrmMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The note object, when type = note
      */
@@ -481,6 +499,7 @@ public class CrmEvent {
             Utils.enhancedDeepEquals(this.leadIds, other.leadIds) &&
             Utils.enhancedDeepEquals(this.marketingEmail, other.marketingEmail) &&
             Utils.enhancedDeepEquals(this.meeting, other.meeting) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.note, other.note) &&
             Utils.enhancedDeepEquals(this.pageView, other.pageView) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -496,9 +515,10 @@ public class CrmEvent {
             call, companyIds, contactIds,
             createdAt, dealIds, email,
             form, id, leadIds,
-            marketingEmail, meeting, note,
-            pageView, raw, task,
-            type, updatedAt, userId);
+            marketingEmail, meeting, metadata,
+            note, pageView, raw,
+            task, type, updatedAt,
+            userId);
     }
     
     @Override
@@ -515,6 +535,7 @@ public class CrmEvent {
                 "leadIds", leadIds,
                 "marketingEmail", marketingEmail,
                 "meeting", meeting,
+                "metadata", metadata,
                 "note", note,
                 "pageView", pageView,
                 "raw", raw,
@@ -548,6 +569,8 @@ public class CrmEvent {
         private PropertyCrmEventMarketingEmail marketingEmail;
 
         private PropertyCrmEventMeeting meeting;
+
+        private List<CrmMetadata> metadata;
 
         private PropertyCrmEventNote note;
 
@@ -646,6 +669,11 @@ public class CrmEvent {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CrmMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The note object, when type = note
          */
@@ -704,9 +732,10 @@ public class CrmEvent {
                 call, companyIds, contactIds,
                 createdAt, dealIds, email,
                 form, id, leadIds,
-                marketingEmail, meeting, note,
-                pageView, raw, task,
-                type, updatedAt, userId);
+                marketingEmail, meeting, metadata,
+                note, pageView, raw,
+                task, type, updatedAt,
+                userId);
         }
 
     }

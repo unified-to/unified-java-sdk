@@ -59,6 +59,11 @@ public class CalendarRecording {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -89,6 +94,7 @@ public class CalendarRecording {
             @JsonProperty("expires_at") @Nullable OffsetDateTime expiresAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("media") @Nullable List<CalendarRecordingMedia> media,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -99,6 +105,7 @@ public class CalendarRecording {
         this.expiresAt = expiresAt;
         this.id = id;
         this.media = media;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = startAt;
         this.updatedAt = updatedAt;
@@ -109,7 +116,7 @@ public class CalendarRecording {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -146,6 +153,10 @@ public class CalendarRecording {
 
     public Optional<List<CalendarRecordingMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -223,6 +234,12 @@ public class CalendarRecording {
     }
 
 
+    public CalendarRecording withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarRecording withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -269,6 +286,7 @@ public class CalendarRecording {
             Utils.enhancedDeepEquals(this.expiresAt, other.expiresAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -280,8 +298,8 @@ public class CalendarRecording {
         return Utils.enhancedHash(
             createdAt, endAt, eventId,
             expiresAt, id, media,
-            raw, startAt, updatedAt,
-            webUrl);
+            metadata, raw, startAt,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -293,6 +311,7 @@ public class CalendarRecording {
                 "expiresAt", expiresAt,
                 "id", id,
                 "media", media,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "updatedAt", updatedAt,
@@ -313,6 +332,8 @@ public class CalendarRecording {
         private String id;
 
         private List<CalendarRecordingMedia> media;
+
+        private List<CalendarMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -368,6 +389,11 @@ public class CalendarRecording {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -398,8 +424,8 @@ public class CalendarRecording {
             return new CalendarRecording(
                 createdAt, endAt, eventId,
                 expiresAt, id, media,
-                raw, startAt, updatedAt,
-                webUrl);
+                metadata, raw, startAt,
+                updatedAt, webUrl);
         }
 
     }

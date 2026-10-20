@@ -18,6 +18,7 @@ public enum CreateRepoRepositoryQueryParamFields {
     IS_PRIVATE("is_private"),
     WEB_URL("web_url"),
     ORG_ID("org_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

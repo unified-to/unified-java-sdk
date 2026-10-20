@@ -125,6 +125,11 @@ public class PaymentPayment {
     @JsonProperty("location_id")
     private String locationId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PaymentMetadata> metadata;
+
     /**
      * total_amount minus fee_amount
      */
@@ -225,6 +230,7 @@ public class PaymentPayment {
             @JsonProperty("invoice_id") @Nullable String invoiceId,
             @JsonProperty("link_id") @Nullable String linkId,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<PaymentMetadata> metadata,
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -256,6 +262,7 @@ public class PaymentPayment {
         this.invoiceId = invoiceId;
         this.linkId = linkId;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.netAmount = netAmount;
         this.notes = notes;
         this.organizationId = organizationId;
@@ -282,7 +289,8 @@ public class PaymentPayment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -381,6 +389,10 @@ public class PaymentPayment {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<PaymentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -592,6 +604,12 @@ public class PaymentPayment {
     }
 
 
+    public PaymentPayment withMetadata(@Nullable List<PaymentMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * total_amount minus fee_amount
      */
@@ -720,6 +738,7 @@ public class PaymentPayment {
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.linkId, other.linkId) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -744,11 +763,12 @@ public class PaymentPayment {
             contactId, createdAt, currency,
             deviceId, exchangeRate, feeAmount,
             id, invoiceId, linkId,
-            locationId, netAmount, notes,
-            organizationId, paidAt, paymentMethod,
-            raw, reference, salesorderId,
-            status, tenderType, tipAmount,
-            totalAmount, type, updatedAt);
+            locationId, metadata, netAmount,
+            notes, organizationId, paidAt,
+            paymentMethod, raw, reference,
+            salesorderId, status, tenderType,
+            tipAmount, totalAmount, type,
+            updatedAt);
     }
     
     @Override
@@ -770,6 +790,7 @@ public class PaymentPayment {
                 "invoiceId", invoiceId,
                 "linkId", linkId,
                 "locationId", locationId,
+                "metadata", metadata,
                 "netAmount", netAmount,
                 "notes", notes,
                 "organizationId", organizationId,
@@ -820,6 +841,8 @@ public class PaymentPayment {
         private String linkId;
 
         private String locationId;
+
+        private List<PaymentMetadata> metadata;
 
         private Double netAmount;
 
@@ -967,6 +990,11 @@ public class PaymentPayment {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PaymentMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * total_amount minus fee_amount
          */
@@ -1062,11 +1090,12 @@ public class PaymentPayment {
                 contactId, createdAt, currency,
                 deviceId, exchangeRate, feeAmount,
                 id, invoiceId, linkId,
-                locationId, netAmount, notes,
-                organizationId, paidAt, paymentMethod,
-                raw, reference, salesorderId,
-                status, tenderType, tipAmount,
-                totalAmount, type, updatedAt);
+                locationId, metadata, netAmount,
+                notes, organizationId, paidAt,
+                paymentMethod, raw, reference,
+                salesorderId, status, tenderType,
+                tipAmount, totalAmount, type,
+                updatedAt);
         }
 
 

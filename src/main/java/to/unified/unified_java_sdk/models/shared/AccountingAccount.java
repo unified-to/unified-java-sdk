@@ -76,6 +76,11 @@ public class AccountingAccount {
     @JsonProperty("is_payable")
     private Boolean isPayable;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
     /**
      * Account name
      */
@@ -138,6 +143,7 @@ public class AccountingAccount {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_payable") @Nullable Boolean isPayable,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -153,6 +159,7 @@ public class AccountingAccount {
         this.description = description;
         this.id = id;
         this.isPayable = isPayable;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.parentId = parentId;
@@ -168,7 +175,8 @@ public class AccountingAccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -220,6 +228,10 @@ public class AccountingAccount {
      */
     public Optional<Boolean> isPayable() {
         return Optional.ofNullable(this.isPayable);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -343,6 +355,12 @@ public class AccountingAccount {
     }
 
 
+    public AccountingAccount withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Account name
      */
@@ -427,6 +445,7 @@ public class AccountingAccount {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPayable, other.isPayable) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -442,9 +461,10 @@ public class AccountingAccount {
         return Utils.enhancedHash(
             balance, createdAt, currency,
             customerDefinedCode, description, id,
-            isPayable, name, organizationId,
-            parentId, raw, status,
-            taxonomy, type, updatedAt);
+            isPayable, metadata, name,
+            organizationId, parentId, raw,
+            status, taxonomy, type,
+            updatedAt);
     }
     
     @Override
@@ -457,6 +477,7 @@ public class AccountingAccount {
                 "description", description,
                 "id", id,
                 "isPayable", isPayable,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "parentId", parentId,
@@ -483,6 +504,8 @@ public class AccountingAccount {
         private String id;
 
         private Boolean isPayable;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -562,6 +585,11 @@ public class AccountingAccount {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Account name
          */
@@ -625,9 +653,10 @@ public class AccountingAccount {
             return new AccountingAccount(
                 balance, createdAt, currency,
                 customerDefinedCode, description, id,
-                isPayable, name, organizationId,
-                parentId, raw, status,
-                taxonomy, type, updatedAt);
+                isPayable, metadata, name,
+                organizationId, parentId, raw,
+                status, taxonomy, type,
+                updatedAt);
         }
 
     }

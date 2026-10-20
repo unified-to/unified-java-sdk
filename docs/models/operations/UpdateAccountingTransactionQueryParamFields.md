@@ -36,4 +36,5 @@ UpdateAccountingTransactionQueryParamFields value = UpdateAccountingTransactionQ
 | `TRANSACTION_AT`   | transaction_at     |
 | `EXCHANGE_RATE`    | exchange_rate      |
 | `STATUS`           | status             |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

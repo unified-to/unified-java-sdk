@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -40,6 +41,11 @@ public class DatastoreDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<DatastoreMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -79,6 +85,7 @@ public class DatastoreDatabase {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<DatastoreMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("password") @Nullable String password,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -89,6 +96,7 @@ public class DatastoreDatabase {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.password = password;
         this.raw = raw;
@@ -101,7 +109,7 @@ public class DatastoreDatabase {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -121,6 +129,10 @@ public class DatastoreDatabase {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<DatastoreMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -182,6 +194,12 @@ public class DatastoreDatabase {
     }
 
 
+    public DatastoreDatabase withMetadata(@Nullable List<DatastoreMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public DatastoreDatabase withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -235,6 +253,7 @@ public class DatastoreDatabase {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.password, other.password) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -247,9 +266,9 @@ public class DatastoreDatabase {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isActive, name, password,
-            raw, region, updatedAt,
-            webUrl);
+            isActive, metadata, name,
+            password, raw, region,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -259,6 +278,7 @@ public class DatastoreDatabase {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "password", password,
                 "raw", raw,
@@ -277,6 +297,8 @@ public class DatastoreDatabase {
         private String id;
 
         private Boolean isActive;
+
+        private List<DatastoreMetadata> metadata;
 
         private String name;
 
@@ -317,6 +339,11 @@ public class DatastoreDatabase {
             return this;
         }
 
+        public Builder metadata(@Nullable List<DatastoreMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -353,9 +380,9 @@ public class DatastoreDatabase {
         public DatastoreDatabase build() {
             return new DatastoreDatabase(
                 createdAt, description, id,
-                isActive, name, password,
-                raw, region, updatedAt,
-                webUrl);
+                isActive, metadata, name,
+                password, raw, region,
+                updatedAt, webUrl);
         }
 
     }

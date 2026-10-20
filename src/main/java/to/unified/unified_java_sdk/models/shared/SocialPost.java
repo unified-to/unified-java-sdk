@@ -61,6 +61,11 @@ public class SocialPost {
     @JsonProperty("media")
     private List<SocialMedia> media;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SocialMetadata> metadata;
+
     /**
      * Engagement metrics for the post
      */
@@ -139,6 +144,7 @@ public class SocialPost {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("language") @Nullable String language,
             @JsonProperty("media") @Nullable List<SocialMedia> media,
+            @JsonProperty("metadata") @Nullable List<SocialMetadata> metadata,
             @JsonProperty("metrics") @Nullable PropertySocialPostMetrics metrics,
             @JsonProperty("parent_post_id") @Nullable String parentPostId,
             @JsonProperty("profile_id") @Nullable String profileId,
@@ -155,6 +161,7 @@ public class SocialPost {
         this.id = id;
         this.language = language;
         this.media = media;
+        this.metadata = metadata;
         this.metrics = metrics;
         this.parentPostId = parentPostId;
         this.profileId = profileId;
@@ -173,7 +180,7 @@ public class SocialPost {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -216,6 +223,10 @@ public class SocialPost {
      */
     public Optional<List<SocialMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<SocialMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -347,6 +358,12 @@ public class SocialPost {
     }
 
 
+    public SocialPost withMetadata(@Nullable List<SocialMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Engagement metrics for the post
      */
@@ -453,6 +470,7 @@ public class SocialPost {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metrics, other.metrics) &&
             Utils.enhancedDeepEquals(this.parentPostId, other.parentPostId) &&
             Utils.enhancedDeepEquals(this.profileId, other.profileId) &&
@@ -470,10 +488,10 @@ public class SocialPost {
         return Utils.enhancedHash(
             body, callToAction, createdAt,
             id, language, media,
-            metrics, parentPostId, profileId,
-            raw, scheduledAt, status,
-            title, type, updatedAt,
-            url);
+            metadata, metrics, parentPostId,
+            profileId, raw, scheduledAt,
+            status, title, type,
+            updatedAt, url);
     }
     
     @Override
@@ -485,6 +503,7 @@ public class SocialPost {
                 "id", id,
                 "language", language,
                 "media", media,
+                "metadata", metadata,
                 "metrics", metrics,
                 "parentPostId", parentPostId,
                 "profileId", profileId,
@@ -511,6 +530,8 @@ public class SocialPost {
         private String language;
 
         private List<SocialMedia> media;
+
+        private List<SocialMetadata> metadata;
 
         private PropertySocialPostMetrics metrics;
 
@@ -581,6 +602,11 @@ public class SocialPost {
          */
         public Builder media(@Nullable List<SocialMedia> media) {
             this.media = media;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<SocialMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -668,10 +694,10 @@ public class SocialPost {
             return new SocialPost(
                 body, callToAction, createdAt,
                 id, language, media,
-                metrics, parentPostId, profileId,
-                raw, scheduledAt, status,
-                title, type, updatedAt,
-                url);
+                metadata, metrics, parentPostId,
+                profileId, raw, scheduledAt,
+                status, title, type,
+                updatedAt, url);
         }
 
     }

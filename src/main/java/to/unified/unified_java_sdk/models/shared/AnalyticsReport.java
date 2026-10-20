@@ -40,6 +40,11 @@ public class AnalyticsReport {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AnalyticsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     private List<AnalyticsReportMetrics> metrics;
 
@@ -74,6 +79,7 @@ public class AnalyticsReport {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AnalyticsMetadata> metadata,
             @JsonProperty("metrics") @Nullable List<AnalyticsReportMetrics> metrics,
             @JsonProperty("property_id") @Nullable String propertyId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -82,6 +88,7 @@ public class AnalyticsReport {
         this.createdAt = createdAt;
         this.endAt = endAt;
         this.id = id;
+        this.metadata = metadata;
         this.metrics = metrics;
         this.propertyId = propertyId;
         this.raw = raw;
@@ -92,7 +99,7 @@ public class AnalyticsReport {
     public AnalyticsReport() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -111,6 +118,10 @@ public class AnalyticsReport {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AnalyticsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<List<AnalyticsReportMetrics>> metrics() {
@@ -171,6 +182,12 @@ public class AnalyticsReport {
     }
 
 
+    public AnalyticsReport withMetadata(@Nullable List<AnalyticsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AnalyticsReport withMetrics(@Nullable List<AnalyticsReportMetrics> metrics) {
         this.metrics = metrics;
         return this;
@@ -223,6 +240,7 @@ public class AnalyticsReport {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metrics, other.metrics) &&
             Utils.enhancedDeepEquals(this.propertyId, other.propertyId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -234,8 +252,8 @@ public class AnalyticsReport {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, endAt, id,
-            metrics, propertyId, raw,
-            startAt, updatedAt);
+            metadata, metrics, propertyId,
+            raw, startAt, updatedAt);
     }
     
     @Override
@@ -244,6 +262,7 @@ public class AnalyticsReport {
                 "createdAt", createdAt,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "metrics", metrics,
                 "propertyId", propertyId,
                 "raw", raw,
@@ -259,6 +278,8 @@ public class AnalyticsReport {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<AnalyticsMetadata> metadata;
 
         private List<AnalyticsReportMetrics> metrics;
 
@@ -292,6 +313,11 @@ public class AnalyticsReport {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AnalyticsMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -332,8 +358,8 @@ public class AnalyticsReport {
         public AnalyticsReport build() {
             return new AnalyticsReport(
                 createdAt, endAt, id,
-                metrics, propertyId, raw,
-                startAt, updatedAt);
+                metadata, metrics, propertyId,
+                raw, startAt, updatedAt);
         }
 
     }

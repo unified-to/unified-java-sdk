@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -67,6 +68,11 @@ public class SigningDocument {
     @JsonProperty("id")
     private String id;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SigningMetadata> metadata;
+
     /**
      * Document/envelope title
      */
@@ -118,6 +124,7 @@ public class SigningDocument {
             @JsonProperty("download_url") @Nullable String downloadUrl,
             @JsonProperty("expires_at") @Nullable OffsetDateTime expiresAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<SigningMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("sent_at") @Nullable OffsetDateTime sentAt,
@@ -131,6 +138,7 @@ public class SigningDocument {
         this.downloadUrl = downloadUrl;
         this.expiresAt = expiresAt;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.sentAt = sentAt;
@@ -144,7 +152,7 @@ public class SigningDocument {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -194,6 +202,10 @@ public class SigningDocument {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<SigningMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -306,6 +318,12 @@ public class SigningDocument {
     }
 
 
+    public SigningDocument withMetadata(@Nullable List<SigningMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Document/envelope title
      */
@@ -377,6 +395,7 @@ public class SigningDocument {
             Utils.enhancedDeepEquals(this.downloadUrl, other.downloadUrl) &&
             Utils.enhancedDeepEquals(this.expiresAt, other.expiresAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sentAt, other.sentAt) &&
@@ -390,9 +409,9 @@ public class SigningDocument {
         return Utils.enhancedHash(
             completedAt, createdAt, creatorId,
             description, downloadUrl, expiresAt,
-            id, name, raw,
-            sentAt, status, templateId,
-            updatedAt);
+            id, metadata, name,
+            raw, sentAt, status,
+            templateId, updatedAt);
     }
     
     @Override
@@ -405,6 +424,7 @@ public class SigningDocument {
                 "downloadUrl", downloadUrl,
                 "expiresAt", expiresAt,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "sentAt", sentAt,
@@ -429,6 +449,8 @@ public class SigningDocument {
         private OffsetDateTime expiresAt;
 
         private String id;
+
+        private List<SigningMetadata> metadata;
 
         private String name;
 
@@ -502,6 +524,11 @@ public class SigningDocument {
             return this;
         }
 
+        public Builder metadata(@Nullable List<SigningMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Document/envelope title
          */
@@ -554,9 +581,9 @@ public class SigningDocument {
             return new SigningDocument(
                 completedAt, createdAt, creatorId,
                 description, downloadUrl, expiresAt,
-                id, name, raw,
-                sentAt, status, templateId,
-                updatedAt);
+                id, metadata, name,
+                raw, sentAt, status,
+                templateId, updatedAt);
         }
 
     }

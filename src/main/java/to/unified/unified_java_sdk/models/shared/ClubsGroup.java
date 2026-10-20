@@ -130,6 +130,11 @@ public class ClubsGroup {
     @JsonProperty("membership_status")
     private MembershipStatus membershipStatus;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ClubsMetadata> metadata;
+
     /**
      * The group's name
      */
@@ -196,6 +201,7 @@ public class ClubsGroup {
             @JsonProperty("is_verified") @Nullable Boolean isVerified,
             @JsonProperty("member_count") @Nullable Double memberCount,
             @JsonProperty("membership_status") @Nullable MembershipStatus membershipStatus,
+            @JsonProperty("metadata") @Nullable List<ClubsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("post_count") @Nullable Double postCount,
             @JsonProperty("profile_image_url") @Nullable String profileImageUrl,
@@ -218,6 +224,7 @@ public class ClubsGroup {
         this.isVerified = isVerified;
         this.memberCount = memberCount;
         this.membershipStatus = membershipStatus;
+        this.metadata = metadata;
         this.name = name;
         this.postCount = postCount;
         this.profileImageUrl = profileImageUrl;
@@ -235,7 +242,7 @@ public class ClubsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -341,6 +348,10 @@ public class ClubsGroup {
      */
     public Optional<MembershipStatus> membershipStatus() {
         return Optional.ofNullable(this.membershipStatus);
+    }
+
+    public Optional<List<ClubsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -532,6 +543,12 @@ public class ClubsGroup {
     }
 
 
+    public ClubsGroup withMetadata(@Nullable List<ClubsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The group's name
      */
@@ -620,6 +637,7 @@ public class ClubsGroup {
             Utils.enhancedDeepEquals(this.isVerified, other.isVerified) &&
             Utils.enhancedDeepEquals(this.memberCount, other.memberCount) &&
             Utils.enhancedDeepEquals(this.membershipStatus, other.membershipStatus) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.postCount, other.postCount) &&
             Utils.enhancedDeepEquals(this.profileImageUrl, other.profileImageUrl) &&
@@ -637,9 +655,9 @@ public class ClubsGroup {
             groupType, id, isAdmin,
             isFeatured, isOwner, isPrivate,
             isVerified, memberCount, membershipStatus,
-            name, postCount, profileImageUrl,
-            raw, sportType, updatedAt,
-            url);
+            metadata, name, postCount,
+            profileImageUrl, raw, sportType,
+            updatedAt, url);
     }
     
     @Override
@@ -660,6 +678,7 @@ public class ClubsGroup {
                 "isVerified", isVerified,
                 "memberCount", memberCount,
                 "membershipStatus", membershipStatus,
+                "metadata", metadata,
                 "name", name,
                 "postCount", postCount,
                 "profileImageUrl", profileImageUrl,
@@ -701,6 +720,8 @@ public class ClubsGroup {
         private Double memberCount;
 
         private MembershipStatus membershipStatus;
+
+        private List<ClubsMetadata> metadata;
 
         private String name;
 
@@ -840,6 +861,11 @@ public class ClubsGroup {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ClubsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The group's name
          */
@@ -903,9 +929,9 @@ public class ClubsGroup {
                 groupType, id, isAdmin,
                 isFeatured, isOwner, isPrivate,
                 isVerified, memberCount, membershipStatus,
-                name, postCount, profileImageUrl,
-                raw, sportType, updatedAt,
-                url);
+                metadata, name, postCount,
+                profileImageUrl, raw, sportType,
+                updatedAt, url);
         }
 
     }

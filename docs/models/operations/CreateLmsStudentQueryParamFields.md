@@ -23,4 +23,5 @@ CreateLmsStudentQueryParamFields value = CreateLmsStudentQueryParamFields.ID;
 | `TELEPHONES` | telephones   |
 | `ADDRESS`    | address      |
 | `IMAGE_URL`  | image_url    |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

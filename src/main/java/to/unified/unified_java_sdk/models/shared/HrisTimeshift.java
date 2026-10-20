@@ -99,6 +99,11 @@ public class HrisTimeshift {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -130,6 +135,7 @@ public class HrisTimeshift {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_approved") @Nullable Boolean isApproved,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -146,6 +152,7 @@ public class HrisTimeshift {
         this.id = id;
         this.isApproved = isApproved;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = startAt;
         this.updatedAt = updatedAt;
@@ -157,7 +164,8 @@ public class HrisTimeshift {
             null, null, employeeUserId,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -230,6 +238,10 @@ public class HrisTimeshift {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -351,6 +363,12 @@ public class HrisTimeshift {
     }
 
 
+    public HrisTimeshift withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisTimeshift withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -397,6 +415,7 @@ public class HrisTimeshift {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isApproved, other.isApproved) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -409,7 +428,8 @@ public class HrisTimeshift {
             compensation, createdAt, employeeUserId,
             endAt, groupId, hours,
             id, isApproved, locationId,
-            raw, startAt, updatedAt);
+            metadata, raw, startAt,
+            updatedAt);
     }
     
     @Override
@@ -427,6 +447,7 @@ public class HrisTimeshift {
                 "id", id,
                 "isApproved", isApproved,
                 "locationId", locationId,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "updatedAt", updatedAt);
@@ -458,6 +479,8 @@ public class HrisTimeshift {
         private Boolean isApproved;
 
         private String locationId;
+
+        private List<HrisMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -553,6 +576,11 @@ public class HrisTimeshift {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -580,7 +608,8 @@ public class HrisTimeshift {
                 compensation, createdAt, employeeUserId,
                 endAt, groupId, hours,
                 id, isApproved, locationId,
-                raw, startAt, updatedAt);
+                metadata, raw, startAt,
+                updatedAt);
         }
 
     }

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -55,6 +56,11 @@ public class MessagingEvent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MessagingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -76,6 +82,7 @@ public class MessagingEvent {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_replacing_original") @Nullable Boolean isReplacingOriginal,
             @JsonProperty("message") @Nullable PropertyMessagingEventMessage message,
+            @JsonProperty("metadata") @Nullable List<MessagingMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable MessagingEventType type,
             @JsonProperty("user") @Nullable PropertyMessagingEventUser user) {
@@ -85,6 +92,7 @@ public class MessagingEvent {
         this.id = id;
         this.isReplacingOriginal = isReplacingOriginal;
         this.message = message;
+        this.metadata = metadata;
         this.raw = raw;
         this.type = type;
         this.user = user;
@@ -93,7 +101,8 @@ public class MessagingEvent {
     public MessagingEvent() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyMessagingEventButton> button() {
@@ -124,6 +133,10 @@ public class MessagingEvent {
 
     public Optional<PropertyMessagingEventMessage> message() {
         return Optional.ofNullable(this.message);
+    }
+
+    public Optional<List<MessagingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -185,6 +198,12 @@ public class MessagingEvent {
     }
 
 
+    public MessagingEvent withMetadata(@Nullable List<MessagingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public MessagingEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -219,6 +238,7 @@ public class MessagingEvent {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isReplacingOriginal, other.isReplacingOriginal) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.user, other.user);
@@ -229,7 +249,8 @@ public class MessagingEvent {
         return Utils.enhancedHash(
             button, channel, createdAt,
             id, isReplacingOriginal, message,
-            raw, type, user);
+            metadata, raw, type,
+            user);
     }
     
     @Override
@@ -241,6 +262,7 @@ public class MessagingEvent {
                 "id", id,
                 "isReplacingOriginal", isReplacingOriginal,
                 "message", message,
+                "metadata", metadata,
                 "raw", raw,
                 "type", type,
                 "user", user);
@@ -260,6 +282,8 @@ public class MessagingEvent {
         private Boolean isReplacingOriginal;
 
         private PropertyMessagingEventMessage message;
+
+        private List<MessagingMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -307,6 +331,11 @@ public class MessagingEvent {
             return this;
         }
 
+        public Builder metadata(@Nullable List<MessagingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -326,7 +355,8 @@ public class MessagingEvent {
             return new MessagingEvent(
                 button, channel, createdAt,
                 id, isReplacingOriginal, message,
-                raw, type, user);
+                metadata, raw, type,
+                user);
         }
 
     }

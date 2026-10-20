@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -41,6 +42,11 @@ public class RepoRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
     private Boolean isPrivate;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<RepoMetadata> metadata;
 
 
     @JsonProperty("name")
@@ -81,6 +87,7 @@ public class RepoRepository {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("metadata") @Nullable List<RepoMetadata> metadata,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("org_id") @Nullable String orgId,
             @JsonProperty("owner") @Nullable String owner,
@@ -91,6 +98,7 @@ public class RepoRepository {
         this.description = description;
         this.id = id;
         this.isPrivate = isPrivate;
+        this.metadata = metadata;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.orgId = orgId;
@@ -103,9 +111,9 @@ public class RepoRepository {
     public RepoRepository(
             @Nonnull String name) {
         this(null, null, null,
-            null, name, null,
+            null, null, name,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -125,6 +133,10 @@ public class RepoRepository {
 
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
+    }
+
+    public Optional<List<RepoMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public String name() {
@@ -189,6 +201,12 @@ public class RepoRepository {
     }
 
 
+    public RepoRepository withMetadata(@Nullable List<RepoMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public RepoRepository withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
@@ -245,6 +263,7 @@ public class RepoRepository {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.owner, other.owner) &&
@@ -257,9 +276,9 @@ public class RepoRepository {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isPrivate, name, orgId,
-            owner, raw, updatedAt,
-            webUrl);
+            isPrivate, metadata, name,
+            orgId, owner, raw,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -269,6 +288,7 @@ public class RepoRepository {
                 "description", description,
                 "id", id,
                 "isPrivate", isPrivate,
+                "metadata", metadata,
                 "name", name,
                 "orgId", orgId,
                 "owner", owner,
@@ -287,6 +307,8 @@ public class RepoRepository {
         private String id;
 
         private Boolean isPrivate;
+
+        private List<RepoMetadata> metadata;
 
         private String name;
 
@@ -324,6 +346,11 @@ public class RepoRepository {
 
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<RepoMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -366,9 +393,9 @@ public class RepoRepository {
         public RepoRepository build() {
             return new RepoRepository(
                 createdAt, description, id,
-                isPrivate, name, orgId,
-                owner, raw, updatedAt,
-                webUrl);
+                isPrivate, metadata, name,
+                orgId, owner, raw,
+                updatedAt, webUrl);
         }
 
     }

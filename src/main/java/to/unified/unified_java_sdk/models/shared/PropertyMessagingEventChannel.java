@@ -59,6 +59,11 @@ public class PropertyMessagingEventChannel {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MessagingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -93,6 +98,7 @@ public class PropertyMessagingEventChannel {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("members") @Nullable List<MessagingMember> members,
+            @JsonProperty("metadata") @Nullable List<MessagingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -105,6 +111,7 @@ public class PropertyMessagingEventChannel {
         this.isActive = isActive;
         this.isPrivate = isPrivate;
         this.members = members;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -116,7 +123,8 @@ public class PropertyMessagingEventChannel {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -148,6 +156,10 @@ public class PropertyMessagingEventChannel {
 
     public Optional<List<MessagingMember>> members() {
         return Optional.ofNullable(this.members);
+    }
+
+    public Optional<List<MessagingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -223,6 +235,12 @@ public class PropertyMessagingEventChannel {
     }
 
 
+    public PropertyMessagingEventChannel withMetadata(@Nullable List<MessagingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PropertyMessagingEventChannel withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -273,6 +291,7 @@ public class PropertyMessagingEventChannel {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.members, other.members) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -285,8 +304,9 @@ public class PropertyMessagingEventChannel {
         return Utils.enhancedHash(
             createdAt, description, hasSubchannels,
             id, isActive, isPrivate,
-            members, name, parentId,
-            raw, updatedAt, webUrl);
+            members, metadata, name,
+            parentId, raw, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -299,6 +319,7 @@ public class PropertyMessagingEventChannel {
                 "isActive", isActive,
                 "isPrivate", isPrivate,
                 "members", members,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -322,6 +343,8 @@ public class PropertyMessagingEventChannel {
         private Boolean isPrivate;
 
         private List<MessagingMember> members;
+
+        private List<MessagingMetadata> metadata;
 
         private String name;
 
@@ -375,6 +398,11 @@ public class PropertyMessagingEventChannel {
             return this;
         }
 
+        public Builder metadata(@Nullable List<MessagingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -407,8 +435,9 @@ public class PropertyMessagingEventChannel {
             return new PropertyMessagingEventChannel(
                 createdAt, description, hasSubchannels,
                 id, isActive, isPrivate,
-                members, name, parentId,
-                raw, updatedAt, webUrl);
+                members, metadata, name,
+                parentId, raw, updatedAt,
+                webUrl);
         }
 
     }

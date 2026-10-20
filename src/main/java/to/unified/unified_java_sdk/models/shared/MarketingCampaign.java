@@ -54,6 +54,11 @@ public class MarketingCampaign {
     @JsonProperty("list_ids")
     private List<String> listIds;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MarketingMetadata> metadata;
+
     /**
      * Campaign nametitle
      */
@@ -124,6 +129,7 @@ public class MarketingCampaign {
             @JsonProperty("from_name") @Nullable String fromName,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("list_ids") @Nullable List<String> listIds,
+            @JsonProperty("metadata") @Nullable List<MarketingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("preview_text") @Nullable String previewText,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -138,6 +144,7 @@ public class MarketingCampaign {
         this.fromName = fromName;
         this.id = id;
         this.listIds = listIds;
+        this.metadata = metadata;
         this.name = name;
         this.previewText = previewText;
         this.raw = raw;
@@ -154,7 +161,7 @@ public class MarketingCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -190,6 +197,10 @@ public class MarketingCampaign {
      */
     public Optional<List<String>> listIds() {
         return Optional.ofNullable(this.listIds);
+    }
+
+    public Optional<List<MarketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -305,6 +316,12 @@ public class MarketingCampaign {
     }
 
 
+    public MarketingCampaign withMetadata(@Nullable List<MarketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Campaign nametitle
      */
@@ -401,6 +418,7 @@ public class MarketingCampaign {
             Utils.enhancedDeepEquals(this.fromName, other.fromName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.listIds, other.listIds) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.previewText, other.previewText) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -416,10 +434,10 @@ public class MarketingCampaign {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, fromEmail, fromName,
-            id, listIds, name,
-            previewText, raw, replyToEmail,
-            sendAt, status, subjectLine,
-            type, updatedAt);
+            id, listIds, metadata,
+            name, previewText, raw,
+            replyToEmail, sendAt, status,
+            subjectLine, type, updatedAt);
     }
     
     @Override
@@ -430,6 +448,7 @@ public class MarketingCampaign {
                 "fromName", fromName,
                 "id", id,
                 "listIds", listIds,
+                "metadata", metadata,
                 "name", name,
                 "previewText", previewText,
                 "raw", raw,
@@ -453,6 +472,8 @@ public class MarketingCampaign {
         private String id;
 
         private List<String> listIds;
+
+        private List<MarketingMetadata> metadata;
 
         private String name;
 
@@ -513,6 +534,11 @@ public class MarketingCampaign {
          */
         public Builder listIds(@Nullable List<String> listIds) {
             this.listIds = listIds;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<MarketingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -591,10 +617,10 @@ public class MarketingCampaign {
         public MarketingCampaign build() {
             return new MarketingCampaign(
                 createdAt, fromEmail, fromName,
-                id, listIds, name,
-                previewText, raw, replyToEmail,
-                sendAt, status, subjectLine,
-                type, updatedAt);
+                id, listIds, metadata,
+                name, previewText, raw,
+                replyToEmail, sendAt, status,
+                subjectLine, type, updatedAt);
         }
 
     }

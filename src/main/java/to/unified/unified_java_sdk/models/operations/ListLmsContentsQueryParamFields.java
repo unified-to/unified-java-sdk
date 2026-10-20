@@ -32,6 +32,7 @@ public enum ListLmsContentsQueryParamFields {
     COLLECTION_IDS("collection_ids"),
     INSTRUCTORS("instructors"),
     PUBLISHED_AT("published_at"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

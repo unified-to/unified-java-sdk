@@ -38,6 +38,11 @@ public class TicketingCustomer {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TicketingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -68,6 +73,7 @@ public class TicketingCustomer {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("emails") @Nullable List<TicketingEmail> emails,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<TicketingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("tags") @Nullable List<String> tags,
@@ -76,6 +82,7 @@ public class TicketingCustomer {
         this.createdAt = createdAt;
         this.emails = emails;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.tags = tags;
@@ -86,7 +93,7 @@ public class TicketingCustomer {
     public TicketingCustomer() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -102,6 +109,10 @@ public class TicketingCustomer {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<TicketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -153,6 +164,12 @@ public class TicketingCustomer {
     }
 
 
+    public TicketingCustomer withMetadata(@Nullable List<TicketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public TicketingCustomer withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -199,6 +216,7 @@ public class TicketingCustomer {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
@@ -210,8 +228,8 @@ public class TicketingCustomer {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, emails, id,
-            name, raw, tags,
-            telephones, updatedAt);
+            metadata, name, raw,
+            tags, telephones, updatedAt);
     }
     
     @Override
@@ -220,6 +238,7 @@ public class TicketingCustomer {
                 "createdAt", createdAt,
                 "emails", emails,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "tags", tags,
@@ -235,6 +254,8 @@ public class TicketingCustomer {
         private List<TicketingEmail> emails;
 
         private String id;
+
+        private List<TicketingMetadata> metadata;
 
         private String name;
 
@@ -265,6 +286,11 @@ public class TicketingCustomer {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<TicketingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -299,8 +325,8 @@ public class TicketingCustomer {
         public TicketingCustomer build() {
             return new TicketingCustomer(
                 createdAt, emails, id,
-                name, raw, tags,
-                telephones, updatedAt);
+                metadata, name, raw,
+                tags, telephones, updatedAt);
         }
 
     }

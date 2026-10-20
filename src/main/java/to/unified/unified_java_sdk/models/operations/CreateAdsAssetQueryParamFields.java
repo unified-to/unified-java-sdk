@@ -21,6 +21,7 @@ public enum CreateAdsAssetQueryParamFields {
     WIDTH("width"),
     HEIGHT("height"),
     FILE_SIZE("file_size"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -59,6 +59,11 @@ public class StorageFile {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<StorageMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mime_type")
     private String mimeType;
 
@@ -136,6 +141,7 @@ public class StorageFile {
             @JsonProperty("download_url") @Nullable String downloadUrl,
             @JsonProperty("hash") @Nullable String hash,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<StorageMetadata> metadata,
             @JsonProperty("mime_type") @Nullable String mimeType,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -155,6 +161,7 @@ public class StorageFile {
         this.downloadUrl = downloadUrl;
         this.hash = hash;
         this.id = id;
+        this.metadata = metadata;
         this.mimeType = mimeType;
         this.name = name;
         this.parentId = parentId;
@@ -177,7 +184,7 @@ public class StorageFile {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -212,6 +219,10 @@ public class StorageFile {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<StorageMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> mimeType() {
@@ -326,6 +337,12 @@ public class StorageFile {
     }
 
 
+    public StorageFile withMetadata(@Nullable List<StorageMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public StorageFile withMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -429,6 +446,7 @@ public class StorageFile {
             Utils.enhancedDeepEquals(this.downloadUrl, other.downloadUrl) &&
             Utils.enhancedDeepEquals(this.hash, other.hash) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.mimeType, other.mimeType) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -449,11 +467,11 @@ public class StorageFile {
         return Utils.enhancedHash(
             createdAt, data, description,
             downloadUrl, hash, id,
-            mimeType, name, parentId,
-            permissions, raw, references,
-            size, tags, type,
-            updatedAt, userId, version,
-            webUrl);
+            metadata, mimeType, name,
+            parentId, permissions, raw,
+            references, size, tags,
+            type, updatedAt, userId,
+            version, webUrl);
     }
     
     @Override
@@ -465,6 +483,7 @@ public class StorageFile {
                 "downloadUrl", downloadUrl,
                 "hash", hash,
                 "id", id,
+                "metadata", metadata,
                 "mimeType", mimeType,
                 "name", name,
                 "parentId", parentId,
@@ -494,6 +513,8 @@ public class StorageFile {
         private String hash;
 
         private String id;
+
+        private List<StorageMetadata> metadata;
 
         private String mimeType;
 
@@ -562,6 +583,11 @@ public class StorageFile {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<StorageMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -643,11 +669,11 @@ public class StorageFile {
             return new StorageFile(
                 createdAt, data, description,
                 downloadUrl, hash, id,
-                mimeType, name, parentId,
-                permissions, raw, references,
-                size, tags, type,
-                updatedAt, userId, version,
-                webUrl);
+                metadata, mimeType, name,
+                parentId, permissions, raw,
+                references, size, tags,
+                type, updatedAt, userId,
+                version, webUrl);
         }
 
     }

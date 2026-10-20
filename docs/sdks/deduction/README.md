@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionResponse;
@@ -40,20 +41,21 @@ public class Application {
 
         CreateHrisDeductionRequest req = CreateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
-                    .amount(139655d)
-                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .amount(564d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_CHILD)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .employerAmount(22611d)
-                    .employerType(EmployerType.FIXED)
-                    .endAt(OffsetDateTime.parse("2026-06-21T09:07:26.639Z"))
-                    .frequency(HrisDeductionFrequency.BIWEEKLY)
-                    .garnishmentType(GarnishmentType.OTHER)
-                    .id("4518b0ad-a5a7-4b24-bce3-5c685f9a7662")
-                    .isActive(false)
+                    .employerAmount(80510d)
+                    .employerType(EmployerType.PERCENTAGE)
+                    .frequency(HrisDeductionFrequency.ONE_TIME)
+                    .garnishmentType(GarnishmentType.CHILD_SUPPORT)
+                    .id("bcfbe17f-496d-45bd-a172-182bdd098e0a")
+                    .isActive(true)
+                    .maxAmount(21794d)
+                    .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-13T17:57:00.587Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-14T09:35:07.259Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-21T00:30:17.803Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-21T13:08:20.410Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,6 +214,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionResponse;
@@ -229,20 +232,21 @@ public class Application {
 
         PatchHrisDeductionRequest req = PatchHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
-                    .amount(139655d)
-                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .amount(564d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_CHILD)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .employerAmount(22611d)
-                    .employerType(EmployerType.FIXED)
-                    .endAt(OffsetDateTime.parse("2026-06-21T09:07:26.666Z"))
-                    .frequency(HrisDeductionFrequency.BIWEEKLY)
-                    .garnishmentType(GarnishmentType.OTHER)
-                    .id("bcbc8c58-678c-40b7-b4f3-ae75587a65ef")
-                    .isActive(false)
+                    .employerAmount(80510d)
+                    .employerType(EmployerType.PERCENTAGE)
+                    .frequency(HrisDeductionFrequency.ONE_TIME)
+                    .garnishmentType(GarnishmentType.CHILD_SUPPORT)
+                    .id("162562d9-52ee-48e3-9fe6-c308f36aa54a")
+                    .isActive(true)
+                    .maxAmount(21794d)
+                    .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-13T17:57:00.608Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-14T09:35:07.270Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-21T00:30:17.820Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-21T13:08:20.418Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -343,6 +347,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionResponse;
@@ -360,20 +365,21 @@ public class Application {
 
         UpdateHrisDeductionRequest req = UpdateHrisDeductionRequest.builder()
                 .hrisDeduction(HrisDeduction.builder()
-                    .amount(139655d)
-                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_ONLY)
+                    .amount(564d)
+                    .coverageLevel(HrisDeductionCoverageLevel.EMPLOYEE_CHILD)
                     .createdAt(OffsetDateTime.parse("2020-02-05T01:46:31.384Z"))
-                    .employerAmount(22611d)
-                    .employerType(EmployerType.FIXED)
-                    .endAt(OffsetDateTime.parse("2026-06-21T09:07:26.666Z"))
-                    .frequency(HrisDeductionFrequency.BIWEEKLY)
-                    .garnishmentType(GarnishmentType.OTHER)
-                    .id("bcbc8c58-678c-40b7-b4f3-ae75587a65ef")
-                    .isActive(false)
+                    .employerAmount(80510d)
+                    .employerType(EmployerType.PERCENTAGE)
+                    .frequency(HrisDeductionFrequency.ONE_TIME)
+                    .garnishmentType(GarnishmentType.CHILD_SUPPORT)
+                    .id("162562d9-52ee-48e3-9fe6-c308f36aa54a")
+                    .isActive(true)
+                    .maxAmount(21794d)
+                    .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-13T17:57:00.608Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-14T09:35:07.270Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-21T00:30:17.820Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-21T13:08:20.418Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

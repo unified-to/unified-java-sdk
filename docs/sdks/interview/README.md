@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
@@ -41,14 +42,14 @@ public class Application {
         CreateAtsInterviewRequest req = CreateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-17T22:38:29.519Z"))
-                    .externalEventXref("82c6da91-5040-4ff0-b034-956f75ca6fa4")
-                    .id("000e3929-1d3e-4f76-a7c9-7ce49277e1e8")
+                    .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
+                    .id("86cc90bb-76c4-4409-a110-df09521d57d8")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
-                    .startAt(OffsetDateTime.parse("2025-06-10T15:00:20.144Z"))
+                    .metadata(List.of())
+                    .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2026-03-02T23:31:41.417Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-23T05:51:58.569Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -207,6 +208,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsInterviewResponse;
@@ -225,14 +227,14 @@ public class Application {
         PatchAtsInterviewRequest req = PatchAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-17T22:38:29.528Z"))
-                    .externalEventXref("2c0e403d-6fd0-4bb4-a8cb-69e81fb83dac")
-                    .id("4f15920b-8208-4a62-97b1-74f92ab8856b")
+                    .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
+                    .id("1c103830-0bd9-4159-8705-021ecdbb52bb")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
-                    .startAt(OffsetDateTime.parse("2025-06-10T15:00:20.153Z"))
+                    .metadata(List.of())
+                    .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2026-03-02T23:31:41.428Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-23T05:51:58.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -333,6 +335,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsInterviewResponse;
@@ -351,14 +354,14 @@ public class Application {
         UpdateAtsInterviewRequest req = UpdateAtsInterviewRequest.builder()
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-17T22:38:29.528Z"))
-                    .externalEventXref("2c0e403d-6fd0-4bb4-a8cb-69e81fb83dac")
-                    .id("4f15920b-8208-4a62-97b1-74f92ab8856b")
+                    .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
+                    .id("1c103830-0bd9-4159-8705-021ecdbb52bb")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
-                    .startAt(OffsetDateTime.parse("2025-06-10T15:00:20.153Z"))
+                    .metadata(List.of())
+                    .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2026-03-02T23:31:41.428Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-23T05:51:58.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -33,4 +33,5 @@ ListPaymentSubscriptionsQueryParamFields value = ListPaymentSubscriptionsQueryPa
 | `DAY_OF_WEEK`             | day_of_week               |
 | `INTERVAL`                | interval                  |
 | `LINEITEMS`               | lineitems                 |
+| `METADATA`                | metadata                  |
 | `RAW`                     | raw                       |

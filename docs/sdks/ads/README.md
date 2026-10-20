@@ -61,6 +61,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
@@ -85,10 +86,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("56af86c6-fdfa-44fd-ad7f-df39b696deeb")
+                    .id("575c0f19-3b7c-4045-a65a-dd5d3e277d97")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.345Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.598Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -132,6 +134,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAssetResponse;
@@ -151,11 +154,12 @@ public class Application {
                 .adsAsset(AdsAsset.builder()
                     .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
                     .height(400d)
-                    .id("3dabb9cd-4f23-44ba-b43b-642aed586793")
+                    .id("d2f4b926-027c-48aa-bfef-645860b3b9dd")
+                    .metadata(List.of())
                     .mimeType("IMAGE_PNG")
                     .name("Lockman - DuBuque")
                     .type(AdsAssetType.IMAGE)
-                    .updatedAt(OffsetDateTime.parse("2022-03-24T13:37:15.088Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-03-24T19:50:57.885Z"))
                     .url("https://informal-perfection.com/")
                     .width(600d)
                     .build())
@@ -225,17 +229,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-30T13:31:16.418Z"))
-                    .id("056d758b-37ab-4efe-bb61-fa539e959e2d")
+                    .endAt(OffsetDateTime.parse("2025-05-31T03:36:17.257Z"))
+                    .id("2e8a6397-bc44-4ecf-a6e2-d31eb9966054")
                     .labels(List.of(
                         "comedo"))
+                    .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T08:57:48.044Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T09:44:26.617Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2025-12-30T21:33:15.386Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-31T14:22:08.841Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -298,14 +303,15 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("507e8c60-9ddd-49a0-8d61-b40428bcc3ea")
+                    .id("6e244bba-8e9d-4712-83a5-e647756dac5a")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.100Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.549Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -349,6 +355,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
@@ -372,15 +379,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.497Z"))
-                    .id("ce9637c1-8881-49e5-b135-3a8ba3ac2921")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.472Z"))
+                    .id("66afa24f-ba44-48d9-8163-1a789393e926")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.272Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.652Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.104Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:49.945Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -424,6 +432,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
@@ -442,10 +451,11 @@ public class Application {
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("bdb1a7fd-6455-44da-a820-2e59355bd62c")
+                    .id("ef8286ea-f81a-44c3-86af-fec2c65ead27")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -510,16 +520,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("e56300fa-83bd-4bea-8613-9b35865b9edd")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("1adcbb8a-1e72-4979-b69c-2a17bd219341")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.349Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1655,6 +1662,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
@@ -1679,10 +1687,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("1a01b3b8-6a75-4e54-a4e0-f0588bfa2fd9")
+                    .id("c74c1abd-908d-4c98-81a1-ca265042f4f0")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.352Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.609Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1751,17 +1760,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-30T13:31:16.483Z"))
-                    .id("ea42426b-476d-4f10-9b19-092fb15950ab")
+                    .endAt(OffsetDateTime.parse("2025-05-31T03:36:17.344Z"))
+                    .id("26c27c05-ebde-4d55-b9f6-cb7398a33b0b")
                     .labels(List.of(
                         "comedo"))
+                    .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T08:57:48.048Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T09:44:26.622Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2025-12-30T21:33:15.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-31T14:22:08.945Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1825,14 +1835,15 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("35e95d9b-12b2-4754-828b-4be3f3a1089d")
+                    .id("d3b608e0-44e2-4d2e-85f2-c1ad480ff726")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.557Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1877,6 +1888,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupResponse;
@@ -1900,15 +1912,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.611Z"))
-                    .id("d77dab3a-559b-4871-8be2-c13a2cc9886f")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.627Z"))
+                    .id("869bae61-f58e-4402-b994-a312769b2578")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.380Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.798Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:50.000Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1953,6 +1966,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
@@ -1971,10 +1985,11 @@ public class Application {
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("243e70b0-f561-4a07-8cc7-905a153b821d")
+                    .id("ab83c275-c439-4b76-98be-ffc1cc57fa6d")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.444Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2040,16 +2055,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("57b2dfe8-ea91-4af1-8958-ee428bebcff0")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("c4087d92-30d0-452b-b23c-15cf3a3a2225")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.141Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.368Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2430,6 +2442,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
@@ -2454,10 +2467,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("1a01b3b8-6a75-4e54-a4e0-f0588bfa2fd9")
+                    .id("c74c1abd-908d-4c98-81a1-ca265042f4f0")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.352Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.609Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2526,17 +2540,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-30T13:31:16.483Z"))
-                    .id("ea42426b-476d-4f10-9b19-092fb15950ab")
+                    .endAt(OffsetDateTime.parse("2025-05-31T03:36:17.344Z"))
+                    .id("26c27c05-ebde-4d55-b9f6-cb7398a33b0b")
                     .labels(List.of(
                         "comedo"))
+                    .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T08:57:48.048Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T09:44:26.622Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2025-12-30T21:33:15.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-31T14:22:08.945Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2600,14 +2615,15 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("35e95d9b-12b2-4754-828b-4be3f3a1089d")
+                    .id("d3b608e0-44e2-4d2e-85f2-c1ad480ff726")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.557Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2652,6 +2668,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsGroupResponse;
@@ -2675,15 +2692,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-23T02:15:52.611Z"))
-                    .id("d77dab3a-559b-4871-8be2-c13a2cc9886f")
+                    .endAt(OffsetDateTime.parse("2026-06-23T21:52:21.627Z"))
+                    .id("869bae61-f58e-4402-b994-a312769b2578")
                     .languageLocale("fr-FR")
+                    .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-07T10:40:15.380Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-08T04:57:58.798Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-12T23:44:58.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-13T06:34:50.000Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2728,6 +2746,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
@@ -2746,10 +2765,11 @@ public class Application {
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("243e70b0-f561-4a07-8cc7-905a153b821d")
+                    .id("ab83c275-c439-4b76-98be-ffc1cc57fa6d")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.444Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2815,16 +2835,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("57b2dfe8-ea91-4af1-8958-ee428bebcff0")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("c4087d92-30d0-452b-b23c-15cf3a3a2225")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.141Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.368Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

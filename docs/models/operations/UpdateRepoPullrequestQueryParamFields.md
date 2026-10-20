@@ -26,4 +26,5 @@ UpdateRepoPullrequestQueryParamFields value = UpdateRepoPullrequestQueryParamFie
 | `LABELS`           | labels             |
 | `CLOSED_AT`        | closed_at          |
 | `COMMIT_IDS`       | commit_ids         |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

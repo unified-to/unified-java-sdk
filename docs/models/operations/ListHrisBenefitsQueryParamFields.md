@@ -28,4 +28,5 @@ ListHrisBenefitsQueryParamFields value = ListHrisBenefitsQueryParamFields.ID;
 | `EMPLOYER_CONTRIBUTION_MAX_AMOUNT` | employer_contribution_max_amount   |
 | `COVERAGE_LEVEL`                   | coverage_level                     |
 | `CURRENCY`                         | currency                           |
+| `METADATA`                         | metadata                           |
 | `RAW`                              | raw                                |

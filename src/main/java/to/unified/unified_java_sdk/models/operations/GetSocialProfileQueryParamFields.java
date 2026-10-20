@@ -26,6 +26,7 @@ public enum GetSocialProfileQueryParamFields {
     IS_VERIFIED("is_verified"),
     IS_PRIVATE("is_private"),
     METRICS("metrics"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

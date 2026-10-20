@@ -27,4 +27,5 @@ UpdateHrisJobQueryParamFields value = UpdateHrisJobQueryParamFields.ID;
 | `PARENT_ID`       | parent_id         |
 | `USERS`           | users             |
 | `COMPENSATION`    | compensation      |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |

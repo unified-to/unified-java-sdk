@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
@@ -40,18 +41,18 @@ public class Application {
 
         CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("5e8b7906-1f2c-4e1d-bba2-0db70cd3f0dc")
-                    .rateAmount(8.86546263936907)
+                    .id("2bd43d13-f0c6-4b60-814b-afb18e364ff6")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.515Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.674Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.568Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -210,6 +211,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
@@ -227,18 +229,18 @@ public class Application {
 
         PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("b04ed747-9f85-4bfe-8d80-a36f41c415fb")
-                    .rateAmount(8.86546263936907)
+                    .id("25d6e632-f8ea-4cb8-9dfb-be46020986cd")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.592Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.747Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -339,6 +341,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
@@ -356,18 +359,18 @@ public class Application {
 
         UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("b04ed747-9f85-4bfe-8d80-a36f41c415fb")
-                    .rateAmount(8.86546263936907)
+                    .id("25d6e632-f8ea-4cb8-9dfb-be46020986cd")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.592Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.747Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

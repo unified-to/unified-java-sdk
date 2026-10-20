@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -30,6 +31,11 @@ public class RepoBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<RepoMetadata> metadata;
 
 
     @JsonProperty("name")
@@ -57,12 +63,14 @@ public class RepoBranch {
     public RepoBranch(
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<RepoMetadata> metadata,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nonnull String repoId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
+        this.metadata = metadata;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.raw = raw;
@@ -74,8 +82,9 @@ public class RepoBranch {
     public RepoBranch(
             @Nonnull String name,
             @Nonnull String repoId) {
-        this(null, null, name,
-            null, repoId, null);
+        this(null, null, null,
+            name, null, repoId,
+            null);
     }
 
     /**
@@ -87,6 +96,10 @@ public class RepoBranch {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<RepoMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public String name() {
@@ -127,6 +140,12 @@ public class RepoBranch {
 
     public RepoBranch withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public RepoBranch withMetadata(@Nullable List<RepoMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -173,6 +192,7 @@ public class RepoBranch {
         return 
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
@@ -182,8 +202,9 @@ public class RepoBranch {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, id, name,
-            raw, repoId, updatedAt);
+            createdAt, id, metadata,
+            name, raw, repoId,
+            updatedAt);
     }
     
     @Override
@@ -191,6 +212,7 @@ public class RepoBranch {
         return Utils.toString(RepoBranch.class,
                 "createdAt", createdAt,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "repoId", repoId,
@@ -203,6 +225,8 @@ public class RepoBranch {
         private OffsetDateTime createdAt;
 
         private String id;
+
+        private List<RepoMetadata> metadata;
 
         private String name;
 
@@ -226,6 +250,11 @@ public class RepoBranch {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<RepoMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -257,8 +286,9 @@ public class RepoBranch {
 
         public RepoBranch build() {
             return new RepoBranch(
-                createdAt, id, name,
-                raw, repoId, updatedAt);
+                createdAt, id, metadata,
+                name, raw, repoId,
+                updatedAt);
         }
 
     }

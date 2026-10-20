@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -57,6 +58,11 @@ public class CommerceInventory {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CommerceMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -75,6 +81,7 @@ public class CommerceInventory {
             @JsonProperty("item_option_id") @Nullable String itemOptionId,
             @JsonProperty("item_variant_id") @Nullable String itemVariantId,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.available = available;
@@ -83,6 +90,7 @@ public class CommerceInventory {
         this.itemOptionId = itemOptionId;
         this.itemVariantId = itemVariantId;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.raw = raw;
         this.updatedAt = updatedAt;
     }
@@ -90,7 +98,7 @@ public class CommerceInventory {
     public CommerceInventory() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> available() {
@@ -124,6 +132,10 @@ public class CommerceInventory {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<CommerceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -187,6 +199,12 @@ public class CommerceInventory {
     }
 
 
+    public CommerceInventory withMetadata(@Nullable List<CommerceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CommerceInventory withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -218,6 +236,7 @@ public class CommerceInventory {
             Utils.enhancedDeepEquals(this.itemOptionId, other.itemOptionId) &&
             Utils.enhancedDeepEquals(this.itemVariantId, other.itemVariantId) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -227,7 +246,7 @@ public class CommerceInventory {
         return Utils.enhancedHash(
             available, id, itemId,
             itemOptionId, itemVariantId, locationId,
-            raw, updatedAt);
+            metadata, raw, updatedAt);
     }
     
     @Override
@@ -239,6 +258,7 @@ public class CommerceInventory {
                 "itemOptionId", itemOptionId,
                 "itemVariantId", itemVariantId,
                 "locationId", locationId,
+                "metadata", metadata,
                 "raw", raw,
                 "updatedAt", updatedAt);
     }
@@ -257,6 +277,8 @@ public class CommerceInventory {
         private String itemVariantId;
 
         private String locationId;
+
+        private List<CommerceMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -305,6 +327,11 @@ public class CommerceInventory {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -322,7 +349,7 @@ public class CommerceInventory {
             return new CommerceInventory(
                 available, id, itemId,
                 itemOptionId, itemVariantId, locationId,
-                raw, updatedAt);
+                metadata, raw, updatedAt);
         }
 
     }

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -68,6 +69,11 @@ public class HrisEarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -144,6 +150,7 @@ public class HrisEarning {
             @JsonProperty("frequency") @Nullable HrisEarningFrequency frequency,
             @JsonProperty("hours") @Nullable Double hours,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("paycode_id") @Nullable String paycodeId,
             @JsonProperty("payroll_id") @Nullable String payrollId,
@@ -162,6 +169,7 @@ public class HrisEarning {
         this.frequency = frequency;
         this.hours = hours;
         this.id = id;
+        this.metadata = metadata;
         this.notes = notes;
         this.paycodeId = paycodeId;
         this.payrollId = payrollId;
@@ -180,7 +188,8 @@ public class HrisEarning {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -228,6 +237,10 @@ public class HrisEarning {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -360,6 +373,12 @@ public class HrisEarning {
     }
 
 
+    public HrisEarning withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisEarning withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -460,6 +479,7 @@ public class HrisEarning {
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
             Utils.enhancedDeepEquals(this.hours, other.hours) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.paycodeId, other.paycodeId) &&
             Utils.enhancedDeepEquals(this.payrollId, other.payrollId) &&
@@ -477,10 +497,11 @@ public class HrisEarning {
         return Utils.enhancedHash(
             amount, companyId, createdAt,
             currency, endAt, frequency,
-            hours, id, notes,
-            paycodeId, payrollId, payslipId,
-            rateAmount, raw, startAt,
-            status, updatedAt, userId);
+            hours, id, metadata,
+            notes, paycodeId, payrollId,
+            payslipId, rateAmount, raw,
+            startAt, status, updatedAt,
+            userId);
     }
     
     @Override
@@ -494,6 +515,7 @@ public class HrisEarning {
                 "frequency", frequency,
                 "hours", hours,
                 "id", id,
+                "metadata", metadata,
                 "notes", notes,
                 "paycodeId", paycodeId,
                 "payrollId", payrollId,
@@ -524,6 +546,8 @@ public class HrisEarning {
         private Double hours;
 
         private String id;
+
+        private List<HrisMetadata> metadata;
 
         private String notes;
 
@@ -604,6 +628,11 @@ public class HrisEarning {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -680,10 +709,11 @@ public class HrisEarning {
             return new HrisEarning(
                 amount, companyId, createdAt,
                 currency, endAt, frequency,
-                hours, id, notes,
-                paycodeId, payrollId, payslipId,
-                rateAmount, raw, startAt,
-                status, updatedAt, userId);
+                hours, id, metadata,
+                notes, paycodeId, payrollId,
+                payslipId, rateAmount, raw,
+                startAt, status, updatedAt,
+                userId);
         }
 
     }

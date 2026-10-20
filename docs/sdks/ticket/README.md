@@ -41,25 +41,20 @@ public class Application {
 
         CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "76d78801-ed65-4f20-82a8-20415e92d4e7",
-                        "994be4e1-f018-4b40-bcdb-fc318bbf4105"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.376Z"))
-                    .id("54a827af-47c7-494a-a432-1d40a8a0c7ba")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("66360cb4-eb10-41f9-a348-2ffc33928f20")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("a2d1c30f-cb23-49f0-9981-5b3ead19ba32")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.244Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -236,25 +231,20 @@ public class Application {
 
         PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "2e322130-a669-410f-9996-d7edd557ec92",
-                        "79d4658a-34b5-4da6-ae7f-7313ce05a59f"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.382Z"))
-                    .id("39dc7291-c76a-461f-b99d-1ce96513cd3b")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("06e0f907-581d-4dd2-a8e1-bad695ee261a")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("5eaab953-24c3-42e3-b5bf-8c4e985d1345")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.247Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -373,25 +363,20 @@ public class Application {
 
         UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "2e322130-a669-410f-9996-d7edd557ec92",
-                        "79d4658a-34b5-4da6-ae7f-7313ce05a59f"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.382Z"))
-                    .id("39dc7291-c76a-461f-b99d-1ce96513cd3b")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("06e0f907-581d-4dd2-a8e1-bad695ee261a")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("5eaab953-24c3-42e3-b5bf-8c4e985d1345")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.247Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -11,6 +11,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -41,6 +42,11 @@ public class UcComment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<UcMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -64,6 +70,7 @@ public class UcComment {
             @JsonProperty("content") @Nullable String content,
             @JsonProperty("created_at") @Nullable String createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<UcMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable String updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
@@ -71,6 +78,7 @@ public class UcComment {
         this.content = content;
         this.createdAt = createdAt;
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.updatedAt = updatedAt;
         this.userId = userId;
@@ -79,7 +87,7 @@ public class UcComment {
     public UcComment() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> callId() {
@@ -99,6 +107,10 @@ public class UcComment {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<UcMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -151,6 +163,12 @@ public class UcComment {
     }
 
 
+    public UcComment withMetadata(@Nullable List<UcMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public UcComment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -189,6 +207,7 @@ public class UcComment {
             Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
@@ -198,8 +217,8 @@ public class UcComment {
     public int hashCode() {
         return Utils.enhancedHash(
             callId, content, createdAt,
-            id, raw, updatedAt,
-            userId);
+            id, metadata, raw,
+            updatedAt, userId);
     }
     
     @Override
@@ -209,6 +228,7 @@ public class UcComment {
                 "content", content,
                 "createdAt", createdAt,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "updatedAt", updatedAt,
                 "userId", userId);
@@ -224,6 +244,8 @@ public class UcComment {
         private String createdAt;
 
         private String id;
+
+        private List<UcMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -258,6 +280,11 @@ public class UcComment {
             return this;
         }
 
+        public Builder metadata(@Nullable List<UcMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -282,8 +309,8 @@ public class UcComment {
         public UcComment build() {
             return new UcComment(
                 callId, content, createdAt,
-                id, raw, updatedAt,
-                userId);
+                id, metadata, raw,
+                updatedAt, userId);
         }
 
     }

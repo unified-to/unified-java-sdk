@@ -53,6 +53,11 @@ public class LmsInstructor {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<LmsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -86,6 +91,7 @@ public class LmsInstructor {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("image_url") @Nullable String imageUrl,
             @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("metadata") @Nullable List<LmsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("telephones") @Nullable List<LmsTelephone> telephones,
@@ -97,6 +103,7 @@ public class LmsInstructor {
         this.id = id;
         this.imageUrl = imageUrl;
         this.lastName = lastName;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.telephones = telephones;
@@ -108,7 +115,7 @@ public class LmsInstructor {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -136,6 +143,10 @@ public class LmsInstructor {
 
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
+    }
+
+    public Optional<List<LmsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -205,6 +216,12 @@ public class LmsInstructor {
     }
 
 
+    public LmsInstructor withMetadata(@Nullable List<LmsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public LmsInstructor withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -254,6 +271,7 @@ public class LmsInstructor {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
@@ -266,8 +284,8 @@ public class LmsInstructor {
         return Utils.enhancedHash(
             createdAt, emails, firstName,
             id, imageUrl, lastName,
-            name, raw, telephones,
-            title, updatedAt);
+            metadata, name, raw,
+            telephones, title, updatedAt);
     }
     
     @Override
@@ -279,6 +297,7 @@ public class LmsInstructor {
                 "id", id,
                 "imageUrl", imageUrl,
                 "lastName", lastName,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "telephones", telephones,
@@ -300,6 +319,8 @@ public class LmsInstructor {
         private String imageUrl;
 
         private String lastName;
+
+        private List<LmsMetadata> metadata;
 
         private String name;
 
@@ -348,6 +369,11 @@ public class LmsInstructor {
             return this;
         }
 
+        public Builder metadata(@Nullable List<LmsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -380,8 +406,8 @@ public class LmsInstructor {
             return new LmsInstructor(
                 createdAt, emails, firstName,
                 id, imageUrl, lastName,
-                name, raw, telephones,
-                title, updatedAt);
+                metadata, name, raw,
+                telephones, title, updatedAt);
         }
 
     }

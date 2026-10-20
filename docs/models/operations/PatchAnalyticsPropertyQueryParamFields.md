@@ -21,4 +21,5 @@ PatchAnalyticsPropertyQueryParamFields value = PatchAnalyticsPropertyQueryParamF
 | `CURRENCY`   | currency     |
 | `INDUSTRY`   | industry     |
 | `PARENT_ID`  | parent_id    |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

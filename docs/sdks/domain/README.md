@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeDomainResponse;
@@ -41,11 +42,12 @@ public class Application {
         CreateComputeDomainRequest req = CreateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("9c3eeab8-36d0-44f8-8e8e-2c1acfc17e6a")
+                    .id("7fa27e4a-271e-4f9a-853d-fbb0b194f876")
                     .isPrimary(false)
+                    .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-02T10:53:22.437Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-02T22:37:13.419Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -204,6 +206,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchComputeDomainRequest;
 import to.unified.unified_java_sdk.models.operations.PatchComputeDomainResponse;
@@ -222,11 +225,12 @@ public class Application {
         PatchComputeDomainRequest req = PatchComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("6402ac84-b519-40e8-90d7-b3a469712c8a")
+                    .id("51b7b05e-2b44-4de8-b15b-f9d536eb646f")
                     .isPrimary(false)
+                    .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-02T10:53:22.441Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-02T22:37:13.427Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -327,6 +331,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeDomainRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeDomainResponse;
@@ -345,11 +350,12 @@ public class Application {
         UpdateComputeDomainRequest req = UpdateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("6402ac84-b519-40e8-90d7-b3a469712c8a")
+                    .id("51b7b05e-2b44-4de8-b15b-f9d536eb646f")
                     .isPrimary(false)
+                    .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-02T10:53:22.441Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-02T22:37:13.427Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

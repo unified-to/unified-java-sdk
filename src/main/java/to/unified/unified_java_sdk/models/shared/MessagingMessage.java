@@ -110,6 +110,11 @@ public class MessagingMessage {
     @JsonProperty("message_thread_identifier")
     private String messageThreadIdentifier;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MessagingMetadata> metadata;
+
     /**
      * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
      * to which the current message directly replies.
@@ -169,6 +174,7 @@ public class MessagingMessage {
             @JsonProperty("message_html") @Nullable String messageHtml,
             @JsonProperty("message_markdown") @Nullable String messageMarkdown,
             @JsonProperty("message_thread_identifier") @Nullable String messageThreadIdentifier,
+            @JsonProperty("metadata") @Nullable List<MessagingMetadata> metadata,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reactions") @Nullable List<MessagingReaction> reactions,
@@ -191,6 +197,7 @@ public class MessagingMessage {
         this.messageHtml = messageHtml;
         this.messageMarkdown = messageMarkdown;
         this.messageThreadIdentifier = messageThreadIdentifier;
+        this.metadata = metadata;
         this.parentId = parentId;
         this.raw = raw;
         this.reactions = reactions;
@@ -208,7 +215,7 @@ public class MessagingMessage {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<MessagingAttachment>> attachments() {
@@ -291,6 +298,10 @@ public class MessagingMessage {
      */
     public Optional<String> messageThreadIdentifier() {
         return Optional.ofNullable(this.messageThreadIdentifier);
+    }
+
+    public Optional<List<MessagingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -448,6 +459,12 @@ public class MessagingMessage {
     }
 
 
+    public MessagingMessage withMetadata(@Nullable List<MessagingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
      * to which the current message directly replies.
@@ -525,6 +542,7 @@ public class MessagingMessage {
             Utils.enhancedDeepEquals(this.messageHtml, other.messageHtml) &&
             Utils.enhancedDeepEquals(this.messageMarkdown, other.messageMarkdown) &&
             Utils.enhancedDeepEquals(this.messageThreadIdentifier, other.messageThreadIdentifier) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reactions, other.reactions) &&
@@ -542,9 +560,9 @@ public class MessagingMessage {
             hasChildren, hiddenMembers, id,
             isUnread, mentionedMembers, message,
             messageHtml, messageMarkdown, messageThreadIdentifier,
-            parentId, raw, reactions,
-            reference, subject, updatedAt,
-            webUrl);
+            metadata, parentId, raw,
+            reactions, reference, subject,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -565,6 +583,7 @@ public class MessagingMessage {
                 "messageHtml", messageHtml,
                 "messageMarkdown", messageMarkdown,
                 "messageThreadIdentifier", messageThreadIdentifier,
+                "metadata", metadata,
                 "parentId", parentId,
                 "raw", raw,
                 "reactions", reactions,
@@ -606,6 +625,8 @@ public class MessagingMessage {
         private String messageMarkdown;
 
         private String messageThreadIdentifier;
+
+        private List<MessagingMetadata> metadata;
 
         private String parentId;
 
@@ -722,6 +743,11 @@ public class MessagingMessage {
             return this;
         }
 
+        public Builder metadata(@Nullable List<MessagingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message
          * to which the current message directly replies.
@@ -774,9 +800,9 @@ public class MessagingMessage {
                 hasChildren, hiddenMembers, id,
                 isUnread, mentionedMembers, message,
                 messageHtml, messageMarkdown, messageThreadIdentifier,
-                parentId, raw, reactions,
-                reference, subject, updatedAt,
-                webUrl);
+                metadata, parentId, raw,
+                reactions, reference, subject,
+                updatedAt, webUrl);
         }
 
     }

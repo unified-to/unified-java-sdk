@@ -50,6 +50,11 @@ public class AccountingAgedreceivable {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -102,6 +107,7 @@ public class AccountingAgedreceivable {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("periods") @Nullable List<AccountingAgedPeriod> periods,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -114,6 +120,7 @@ public class AccountingAgedreceivable {
         this.currency = currency;
         this.endAt = endAt;
         this.id = id;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.periods = periods;
         this.raw = raw;
@@ -128,7 +135,8 @@ public class AccountingAgedreceivable {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -157,6 +165,10 @@ public class AccountingAgedreceivable {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -244,6 +256,12 @@ public class AccountingAgedreceivable {
     }
 
 
+    public AccountingAgedreceivable withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingAgedreceivable withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -318,6 +336,7 @@ public class AccountingAgedreceivable {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.periods, other.periods) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -332,9 +351,10 @@ public class AccountingAgedreceivable {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, endAt,
-            id, organizationId, periods,
-            raw, startAt, totalAmount,
-            totalCurrentAmount, totalOverdueAmount, updatedAt);
+            id, metadata, organizationId,
+            periods, raw, startAt,
+            totalAmount, totalCurrentAmount, totalOverdueAmount,
+            updatedAt);
     }
     
     @Override
@@ -344,6 +364,7 @@ public class AccountingAgedreceivable {
                 "currency", currency,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "periods", periods,
                 "raw", raw,
@@ -364,6 +385,8 @@ public class AccountingAgedreceivable {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -414,6 +437,11 @@ public class AccountingAgedreceivable {
          */
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -472,9 +500,10 @@ public class AccountingAgedreceivable {
         public AccountingAgedreceivable build() {
             return new AccountingAgedreceivable(
                 createdAt, currency, endAt,
-                id, organizationId, periods,
-                raw, startAt, totalAmount,
-                totalCurrentAmount, totalOverdueAmount, updatedAt);
+                id, metadata, organizationId,
+                periods, raw, startAt,
+                totalAmount, totalCurrentAmount, totalOverdueAmount,
+                updatedAt);
         }
 
     }

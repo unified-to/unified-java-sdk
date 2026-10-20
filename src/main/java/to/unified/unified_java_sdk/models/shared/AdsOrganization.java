@@ -52,6 +52,11 @@ public class AdsOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -89,6 +94,7 @@ public class AdsOrganization {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("managers") @Nullable List<AdsManager> managers,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -100,6 +106,7 @@ public class AdsOrganization {
         this.currency = currency;
         this.id = id;
         this.managers = managers;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -112,7 +119,7 @@ public class AdsOrganization {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -142,6 +149,10 @@ public class AdsOrganization {
      */
     public Optional<List<AdsManager>> managers() {
         return Optional.ofNullable(this.managers);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -215,6 +226,12 @@ public class AdsOrganization {
     }
 
 
+    public AdsOrganization withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsOrganization withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -269,6 +286,7 @@ public class AdsOrganization {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.managers, other.managers) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -281,9 +299,9 @@ public class AdsOrganization {
     public int hashCode() {
         return Utils.enhancedHash(
             accountNumber, createdAt, currency,
-            id, managers, name,
-            parentId, raw, status,
-            timezone, updatedAt);
+            id, managers, metadata,
+            name, parentId, raw,
+            status, timezone, updatedAt);
     }
     
     @Override
@@ -294,6 +312,7 @@ public class AdsOrganization {
                 "currency", currency,
                 "id", id,
                 "managers", managers,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -314,6 +333,8 @@ public class AdsOrganization {
         private String id;
 
         private List<AdsManager> managers;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -365,6 +386,11 @@ public class AdsOrganization {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -401,9 +427,9 @@ public class AdsOrganization {
         public AdsOrganization build() {
             return new AdsOrganization(
                 accountNumber, createdAt, currency,
-                id, managers, name,
-                parentId, raw, status,
-                timezone, updatedAt);
+                id, managers, metadata,
+                name, parentId, raw,
+                status, timezone, updatedAt);
         }
 
     }

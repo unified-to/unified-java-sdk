@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -50,6 +51,11 @@ public class AdsAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -103,6 +109,7 @@ public class AdsAsset {
             @JsonProperty("file_size") @Nullable Double fileSize,
             @JsonProperty("height") @Nullable Double height,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("mime_type") @Nullable String mimeType,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -116,6 +123,7 @@ public class AdsAsset {
         this.fileSize = fileSize;
         this.height = height;
         this.id = id;
+        this.metadata = metadata;
         this.mimeType = mimeType;
         this.name = name;
         this.organizationId = organizationId;
@@ -131,7 +139,7 @@ public class AdsAsset {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -162,6 +170,10 @@ public class AdsAsset {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> mimeType() {
@@ -248,6 +260,12 @@ public class AdsAsset {
     }
 
 
+    public AdsAsset withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsAsset withMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -318,6 +336,7 @@ public class AdsAsset {
             Utils.enhancedDeepEquals(this.fileSize, other.fileSize) &&
             Utils.enhancedDeepEquals(this.height, other.height) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.mimeType, other.mimeType) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -332,10 +351,10 @@ public class AdsAsset {
     public int hashCode() {
         return Utils.enhancedHash(
             content, createdAt, fileSize,
-            height, id, mimeType,
-            name, organizationId, raw,
-            type, updatedAt, url,
-            width);
+            height, id, metadata,
+            mimeType, name, organizationId,
+            raw, type, updatedAt,
+            url, width);
     }
     
     @Override
@@ -346,6 +365,7 @@ public class AdsAsset {
                 "fileSize", fileSize,
                 "height", height,
                 "id", id,
+                "metadata", metadata,
                 "mimeType", mimeType,
                 "name", name,
                 "organizationId", organizationId,
@@ -368,6 +388,8 @@ public class AdsAsset {
         private Double height;
 
         private String id;
+
+        private List<AdsMetadata> metadata;
 
         private String mimeType;
 
@@ -424,6 +446,11 @@ public class AdsAsset {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
@@ -474,10 +501,10 @@ public class AdsAsset {
         public AdsAsset build() {
             return new AdsAsset(
                 content, createdAt, fileSize,
-                height, id, mimeType,
-                name, organizationId, raw,
-                type, updatedAt, url,
-                width);
+                height, id, metadata,
+                mimeType, name, organizationId,
+                raw, type, updatedAt,
+                url, width);
         }
 
     }

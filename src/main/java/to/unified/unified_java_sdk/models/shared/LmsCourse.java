@@ -87,6 +87,11 @@ public class LmsCourse {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<LmsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -150,6 +155,7 @@ public class LmsCourse {
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
+            @JsonProperty("metadata") @Nullable List<LmsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("price_amount") @Nullable Double priceAmount,
             @JsonProperty("provider_name") @Nullable String providerName,
@@ -171,6 +177,7 @@ public class LmsCourse {
         this.isPrivate = isPrivate;
         this.languages = languages;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.priceAmount = priceAmount;
         this.providerName = providerName;
@@ -189,7 +196,8 @@ public class LmsCourse {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<String>> categories() {
@@ -244,6 +252,10 @@ public class LmsCourse {
 
     public Optional<List<LmsMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<LmsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -374,6 +386,12 @@ public class LmsCourse {
     }
 
 
+    public LmsCourse withMetadata(@Nullable List<LmsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public LmsCourse withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -459,6 +477,7 @@ public class LmsCourse {
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.priceAmount, other.priceAmount) &&
             Utils.enhancedDeepEquals(this.providerName, other.providerName) &&
@@ -477,9 +496,10 @@ public class LmsCourse {
             currency, description, durationMinutes,
             id, instructors, isActive,
             isPrivate, languages, media,
-            name, priceAmount, providerName,
-            publishedAt, raw, skills,
-            students, timeEstimateMinutes, updatedAt);
+            metadata, name, priceAmount,
+            providerName, publishedAt, raw,
+            skills, students, timeEstimateMinutes,
+            updatedAt);
     }
     
     @Override
@@ -497,6 +517,7 @@ public class LmsCourse {
                 "isPrivate", isPrivate,
                 "languages", languages,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "priceAmount", priceAmount,
                 "providerName", providerName,
@@ -534,6 +555,8 @@ public class LmsCourse {
         private List<String> languages;
 
         private List<LmsMedia> media;
+
+        private List<LmsMetadata> metadata;
 
         private String name;
 
@@ -623,6 +646,11 @@ public class LmsCourse {
             return this;
         }
 
+        public Builder metadata(@Nullable List<LmsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -683,9 +711,10 @@ public class LmsCourse {
                 currency, description, durationMinutes,
                 id, instructors, isActive,
                 isPrivate, languages, media,
-                name, priceAmount, providerName,
-                publishedAt, raw, skills,
-                students, timeEstimateMinutes, updatedAt);
+                metadata, name, priceAmount,
+                providerName, publishedAt, raw,
+                skills, students, timeEstimateMinutes,
+                updatedAt);
         }
 
     }

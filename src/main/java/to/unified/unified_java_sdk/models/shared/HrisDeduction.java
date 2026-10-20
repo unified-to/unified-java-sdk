@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -109,6 +110,11 @@ public class HrisDeduction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -165,6 +171,7 @@ public class HrisDeduction {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("max_amount") @Nullable Double maxAmount,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("paycode_id") @Nullable String paycodeId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -185,6 +192,7 @@ public class HrisDeduction {
         this.id = id;
         this.isActive = isActive;
         this.maxAmount = maxAmount;
+        this.metadata = metadata;
         this.notes = notes;
         this.paycodeId = paycodeId;
         this.raw = raw;
@@ -201,7 +209,7 @@ public class HrisDeduction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -281,6 +289,10 @@ public class HrisDeduction {
      */
     public Optional<Double> maxAmount() {
         return Optional.ofNullable(this.maxAmount);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -433,6 +445,12 @@ public class HrisDeduction {
     }
 
 
+    public HrisDeduction withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisDeduction withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -510,6 +528,7 @@ public class HrisDeduction {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.maxAmount, other.maxAmount) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.paycodeId, other.paycodeId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -526,9 +545,9 @@ public class HrisDeduction {
             coverageLevel, createdAt, employerAmount,
             employerType, endAt, frequency,
             garnishmentType, id, isActive,
-            maxAmount, notes, paycodeId,
-            raw, startAt, type,
-            updatedAt, userId);
+            maxAmount, metadata, notes,
+            paycodeId, raw, startAt,
+            type, updatedAt, userId);
     }
     
     @Override
@@ -547,6 +566,7 @@ public class HrisDeduction {
                 "id", id,
                 "isActive", isActive,
                 "maxAmount", maxAmount,
+                "metadata", metadata,
                 "notes", notes,
                 "paycodeId", paycodeId,
                 "raw", raw,
@@ -584,6 +604,8 @@ public class HrisDeduction {
         private Boolean isActive;
 
         private Double maxAmount;
+
+        private List<HrisMetadata> metadata;
 
         private String notes;
 
@@ -695,6 +717,11 @@ public class HrisDeduction {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -748,9 +775,9 @@ public class HrisDeduction {
                 coverageLevel, createdAt, employerAmount,
                 employerType, endAt, frequency,
                 garnishmentType, id, isActive,
-                maxAmount, notes, paycodeId,
-                raw, startAt, type,
-                updatedAt, userId);
+                maxAmount, metadata, notes,
+                paycodeId, raw, startAt,
+                type, updatedAt, userId);
         }
 
     }

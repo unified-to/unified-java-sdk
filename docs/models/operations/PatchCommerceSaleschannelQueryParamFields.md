@@ -20,4 +20,5 @@ PatchCommerceSaleschannelQueryParamFields value = PatchCommerceSaleschannelQuery
 | `DESCRIPTION` | description   |
 | `IS_ACTIVE`   | is_active     |
 | `COLLECTIONS` | collections   |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

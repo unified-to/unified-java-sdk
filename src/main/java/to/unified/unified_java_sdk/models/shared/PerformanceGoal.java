@@ -63,6 +63,11 @@ public class PerformanceGoal {
     @JsonProperty("id")
     private String id;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PerformanceMetadata> metadata;
+
     /**
      * milestones or key results for this goal
      */
@@ -141,6 +146,7 @@ public class PerformanceGoal {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<PerformanceMetadata> metadata,
             @JsonProperty("milestones") @Nullable List<PerformanceGoalMilestone> milestones,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -159,6 +165,7 @@ public class PerformanceGoal {
         this.description = description;
         this.dueAt = dueAt;
         this.id = id;
+        this.metadata = metadata;
         this.milestones = milestones;
         this.name = name;
         this.parentId = parentId;
@@ -178,7 +185,8 @@ public class PerformanceGoal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> companyId() {
@@ -219,6 +227,10 @@ public class PerformanceGoal {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<PerformanceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -345,6 +357,12 @@ public class PerformanceGoal {
     }
 
 
+    public PerformanceGoal withMetadata(@Nullable List<PerformanceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * milestones or key results for this goal
      */
@@ -449,6 +467,7 @@ public class PerformanceGoal {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.milestones, other.milestones) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -467,10 +486,11 @@ public class PerformanceGoal {
         return Utils.enhancedHash(
             companyId, completedAt, createdAt,
             cycleId, description, dueAt,
-            id, milestones, name,
-            parentId, progress, raw,
-            startAt, status, type,
-            updatedAt, userIds, weight);
+            id, metadata, milestones,
+            name, parentId, progress,
+            raw, startAt, status,
+            type, updatedAt, userIds,
+            weight);
     }
     
     @Override
@@ -483,6 +503,7 @@ public class PerformanceGoal {
                 "description", description,
                 "dueAt", dueAt,
                 "id", id,
+                "metadata", metadata,
                 "milestones", milestones,
                 "name", name,
                 "parentId", parentId,
@@ -512,6 +533,8 @@ public class PerformanceGoal {
         private OffsetDateTime dueAt;
 
         private String id;
+
+        private List<PerformanceMetadata> metadata;
 
         private List<PerformanceGoalMilestone> milestones;
 
@@ -583,6 +606,11 @@ public class PerformanceGoal {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<PerformanceMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -666,10 +694,11 @@ public class PerformanceGoal {
             return new PerformanceGoal(
                 companyId, completedAt, createdAt,
                 cycleId, description, dueAt,
-                id, milestones, name,
-                parentId, progress, raw,
-                startAt, status, type,
-                updatedAt, userIds, weight);
+                id, metadata, milestones,
+                name, parentId, progress,
+                raw, startAt, status,
+                type, updatedAt, userIds,
+                weight);
         }
 
     }

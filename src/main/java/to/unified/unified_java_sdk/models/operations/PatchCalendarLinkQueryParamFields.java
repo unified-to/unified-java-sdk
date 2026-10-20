@@ -19,6 +19,7 @@ public enum PatchCalendarLinkQueryParamFields {
     IS_ACTIVE("is_active"),
     PRICE_AMOUNT("price_amount"),
     PRICE_CURRENCY("price_currency"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

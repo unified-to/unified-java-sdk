@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -88,6 +89,11 @@ public class AccountingBankfeedaccount {
     @JsonProperty("id")
     private String id;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
     /**
      * account nickname / source name
      */
@@ -142,6 +148,7 @@ public class AccountingBankfeedaccount {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("feed_start_at") @Nullable OffsetDateTime feedStartAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -158,6 +165,7 @@ public class AccountingBankfeedaccount {
         this.currency = currency;
         this.feedStartAt = feedStartAt;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.raw = raw;
@@ -172,7 +180,7 @@ public class AccountingBankfeedaccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -241,6 +249,10 @@ public class AccountingBankfeedaccount {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -378,6 +390,12 @@ public class AccountingBankfeedaccount {
     }
 
 
+    public AccountingBankfeedaccount withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * account nickname / source name
      */
@@ -452,6 +470,7 @@ public class AccountingBankfeedaccount {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.feedStartAt, other.feedStartAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -466,9 +485,9 @@ public class AccountingBankfeedaccount {
             accountId, accountNumber, accountNumberLast4,
             accountType, balance, bankName,
             createdAt, currency, feedStartAt,
-            id, name, organizationId,
-            raw, routingNumber, status,
-            updatedAt);
+            id, metadata, name,
+            organizationId, raw, routingNumber,
+            status, updatedAt);
     }
     
     @Override
@@ -484,6 +503,7 @@ public class AccountingBankfeedaccount {
                 "currency", currency,
                 "feedStartAt", feedStartAt,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "raw", raw,
@@ -514,6 +534,8 @@ public class AccountingBankfeedaccount {
         private OffsetDateTime feedStartAt;
 
         private String id;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -609,6 +631,11 @@ public class AccountingBankfeedaccount {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * account nickname / source name
          */
@@ -662,9 +689,9 @@ public class AccountingBankfeedaccount {
                 accountId, accountNumber, accountNumberLast4,
                 accountType, balance, bankName,
                 createdAt, currency, feedStartAt,
-                id, name, organizationId,
-                raw, routingNumber, status,
-                updatedAt);
+                id, metadata, name,
+                organizationId, raw, routingNumber,
+                status, updatedAt);
         }
 
     }

@@ -21,4 +21,5 @@ ListSocialInsightsQueryParamFields value = ListSocialInsightsQueryParamFields.ID
 | `PERIOD`     | period       |
 | `METRIC`     | metric       |
 | `VALUE`      | value        |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

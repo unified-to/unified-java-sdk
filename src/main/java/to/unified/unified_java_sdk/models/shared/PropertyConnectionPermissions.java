@@ -213,6 +213,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions GENAI_ORGANIZATION_WRITE = new PropertyConnectionPermissions("genai_organization_write");
     public static final PropertyConnectionPermissions GENAI_SKILL_READ = new PropertyConnectionPermissions("genai_skill_read");
     public static final PropertyConnectionPermissions GENAI_SKILL_WRITE = new PropertyConnectionPermissions("genai_skill_write");
+    public static final PropertyConnectionPermissions GENAI_MEMORY_READ = new PropertyConnectionPermissions("genai_memory_read");
+    public static final PropertyConnectionPermissions GENAI_MEMORY_WRITE = new PropertyConnectionPermissions("genai_memory_write");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_READ = new PropertyConnectionPermissions("messaging_message_read");
     public static final PropertyConnectionPermissions MESSAGING_MESSAGE_WRITE = new PropertyConnectionPermissions("messaging_message_write");
     public static final PropertyConnectionPermissions MESSAGING_CHANNEL_READ = new PropertyConnectionPermissions("messaging_channel_read");
@@ -680,6 +682,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_organization_write", GENAI_ORGANIZATION_WRITE);
         map.put("genai_skill_read", GENAI_SKILL_READ);
         map.put("genai_skill_write", GENAI_SKILL_WRITE);
+        map.put("genai_memory_read", GENAI_MEMORY_READ);
+        map.put("genai_memory_write", GENAI_MEMORY_WRITE);
         map.put("messaging_message_read", MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", MESSAGING_CHANNEL_READ);
@@ -1079,6 +1083,8 @@ public class PropertyConnectionPermissions {
         map.put("genai_organization_write", PropertyConnectionPermissionsEnum.GENAI_ORGANIZATION_WRITE);
         map.put("genai_skill_read", PropertyConnectionPermissionsEnum.GENAI_SKILL_READ);
         map.put("genai_skill_write", PropertyConnectionPermissionsEnum.GENAI_SKILL_WRITE);
+        map.put("genai_memory_read", PropertyConnectionPermissionsEnum.GENAI_MEMORY_READ);
+        map.put("genai_memory_write", PropertyConnectionPermissionsEnum.GENAI_MEMORY_WRITE);
         map.put("messaging_message_read", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_READ);
         map.put("messaging_message_write", PropertyConnectionPermissionsEnum.MESSAGING_MESSAGE_WRITE);
         map.put("messaging_channel_read", PropertyConnectionPermissionsEnum.MESSAGING_CHANNEL_READ);
@@ -1479,6 +1485,8 @@ public class PropertyConnectionPermissions {
         GENAI_ORGANIZATION_WRITE("genai_organization_write"),
         GENAI_SKILL_READ("genai_skill_read"),
         GENAI_SKILL_WRITE("genai_skill_write"),
+        GENAI_MEMORY_READ("genai_memory_read"),
+        GENAI_MEMORY_WRITE("genai_memory_write"),
         MESSAGING_MESSAGE_READ("messaging_message_read"),
         MESSAGING_MESSAGE_WRITE("messaging_message_write"),
         MESSAGING_CHANNEL_READ("messaging_channel_read"),

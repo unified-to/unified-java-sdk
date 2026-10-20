@@ -61,6 +61,11 @@ public class AccountingBalancesheet {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -97,6 +102,7 @@ public class AccountingBalancesheet {
             @JsonProperty("equity") @Nullable List<AccountingBalancesheetItem> equity,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("liabilities") @Nullable List<AccountingBalancesheetItem> liabilities,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("net_assets_amount") @Nullable Double netAssetsAmount,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -109,6 +115,7 @@ public class AccountingBalancesheet {
         this.equity = equity;
         this.id = id;
         this.liabilities = liabilities;
+        this.metadata = metadata;
         this.name = name;
         this.netAssetsAmount = netAssetsAmount;
         this.raw = raw;
@@ -120,7 +127,8 @@ public class AccountingBalancesheet {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AccountingBalancesheetItem>> assets() {
@@ -155,6 +163,10 @@ public class AccountingBalancesheet {
 
     public Optional<List<AccountingBalancesheetItem>> liabilities() {
         return Optional.ofNullable(this.liabilities);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -236,6 +248,12 @@ public class AccountingBalancesheet {
     }
 
 
+    public AccountingBalancesheet withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingBalancesheet withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -289,6 +307,7 @@ public class AccountingBalancesheet {
             Utils.enhancedDeepEquals(this.equity, other.equity) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.liabilities, other.liabilities) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.netAssetsAmount, other.netAssetsAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -301,8 +320,9 @@ public class AccountingBalancesheet {
         return Utils.enhancedHash(
             assets, createdAt, currency,
             endAt, equity, id,
-            liabilities, name, netAssetsAmount,
-            raw, startAt, updatedAt);
+            liabilities, metadata, name,
+            netAssetsAmount, raw, startAt,
+            updatedAt);
     }
     
     @Override
@@ -315,6 +335,7 @@ public class AccountingBalancesheet {
                 "equity", equity,
                 "id", id,
                 "liabilities", liabilities,
+                "metadata", metadata,
                 "name", name,
                 "netAssetsAmount", netAssetsAmount,
                 "raw", raw,
@@ -338,6 +359,8 @@ public class AccountingBalancesheet {
         private String id;
 
         private List<AccountingBalancesheetItem> liabilities;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -394,6 +417,11 @@ public class AccountingBalancesheet {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -429,8 +457,9 @@ public class AccountingBalancesheet {
             return new AccountingBalancesheet(
                 assets, createdAt, currency,
                 endAt, equity, id,
-                liabilities, name, netAssetsAmount,
-                raw, startAt, updatedAt);
+                liabilities, metadata, name,
+                netAssetsAmount, raw, startAt,
+                updatedAt);
         }
 
     }

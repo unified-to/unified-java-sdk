@@ -103,6 +103,11 @@ public class AccountingBankfeedtransaction {
     @JsonProperty("merchant_name")
     private String merchantName;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
     /**
      * ref -&gt; accounting Organization this record belongs to
      */
@@ -166,6 +171,7 @@ public class AccountingBankfeedtransaction {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_pending") @Nullable Boolean isPending,
             @JsonProperty("merchant_name") @Nullable String merchantName,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -185,6 +191,7 @@ public class AccountingBankfeedtransaction {
         this.id = id;
         this.isPending = isPending;
         this.merchantName = merchantName;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.raw = raw;
@@ -201,7 +208,7 @@ public class AccountingBankfeedtransaction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -283,6 +290,10 @@ public class AccountingBankfeedtransaction {
      */
     public Optional<String> merchantName() {
         return Optional.ofNullable(this.merchantName);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -444,6 +455,12 @@ public class AccountingBankfeedtransaction {
     }
 
 
+    public AccountingBankfeedtransaction withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * ref -&gt; accounting Organization this record belongs to
      */
@@ -529,6 +546,7 @@ public class AccountingBankfeedtransaction {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPending, other.isPending) &&
             Utils.enhancedDeepEquals(this.merchantName, other.merchantName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -545,9 +563,9 @@ public class AccountingBankfeedtransaction {
             bankfeedaccountId, categoryIds, contactId,
             createdAt, currency, description,
             id, isPending, merchantName,
-            organizationId, postedAt, raw,
-            reference, transactionAt, type,
-            updatedAt);
+            metadata, organizationId, postedAt,
+            raw, reference, transactionAt,
+            type, updatedAt);
     }
     
     @Override
@@ -565,6 +583,7 @@ public class AccountingBankfeedtransaction {
                 "id", id,
                 "isPending", isPending,
                 "merchantName", merchantName,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
                 "raw", raw,
@@ -600,6 +619,8 @@ public class AccountingBankfeedtransaction {
         private Boolean isPending;
 
         private String merchantName;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -712,6 +733,11 @@ public class AccountingBankfeedtransaction {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * ref -&gt; accounting Organization this record belongs to
          */
@@ -774,9 +800,9 @@ public class AccountingBankfeedtransaction {
                 bankfeedaccountId, categoryIds, contactId,
                 createdAt, currency, description,
                 id, isPending, merchantName,
-                organizationId, postedAt, raw,
-                reference, transactionAt, type,
-                updatedAt);
+                metadata, organizationId, postedAt,
+                raw, reference, transactionAt,
+                type, updatedAt);
         }
 
     }

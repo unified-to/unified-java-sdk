@@ -114,6 +114,11 @@ public class PropertyAdsReportMetricsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -179,6 +184,7 @@ public class PropertyAdsReportMetricsCampaign {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("kpi") @Nullable PropertyAdsReportMetricsCampaignKpi kpi,
             @JsonProperty("labels") @Nullable List<String> labels,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("planned_spend_amount") @Nullable Double plannedSpendAmount,
@@ -204,6 +210,7 @@ public class PropertyAdsReportMetricsCampaign {
         this.id = id;
         this.kpi = kpi;
         this.labels = labels;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.plannedSpendAmount = plannedSpendAmount;
@@ -224,7 +231,7 @@ public class PropertyAdsReportMetricsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyAdsReportMetricsCampaignAdvertisingChannelType> advertisingChannelType() {
@@ -305,6 +312,10 @@ public class PropertyAdsReportMetricsCampaign {
 
     public Optional<List<String>> labels() {
         return Optional.ofNullable(this.labels);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -466,6 +477,12 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    public PropertyAdsReportMetricsCampaign withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -552,6 +569,7 @@ public class PropertyAdsReportMetricsCampaign {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.kpi, other.kpi) &&
             Utils.enhancedDeepEquals(this.labels, other.labels) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.plannedSpendAmount, other.plannedSpendAmount) &&
@@ -571,10 +589,10 @@ public class PropertyAdsReportMetricsCampaign {
             createdAt, currency, effectiveStatus,
             endAt, frequencyCap, goal,
             hasEuPoliticalAds, id, kpi,
-            labels, name, organizationId,
-            plannedSpendAmount, raw, startAt,
-            status, targeting, totalSpendAmount,
-            updatedAt);
+            labels, metadata, name,
+            organizationId, plannedSpendAmount, raw,
+            startAt, status, targeting,
+            totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -596,6 +614,7 @@ public class PropertyAdsReportMetricsCampaign {
                 "id", id,
                 "kpi", kpi,
                 "labels", labels,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "plannedSpendAmount", plannedSpendAmount,
@@ -641,6 +660,8 @@ public class PropertyAdsReportMetricsCampaign {
         private PropertyAdsReportMetricsCampaignKpi kpi;
 
         private List<String> labels;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -760,6 +781,11 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -818,10 +844,10 @@ public class PropertyAdsReportMetricsCampaign {
                 createdAt, currency, effectiveStatus,
                 endAt, frequencyCap, goal,
                 hasEuPoliticalAds, id, kpi,
-                labels, name, organizationId,
-                plannedSpendAmount, raw, startAt,
-                status, targeting, totalSpendAmount,
-                updatedAt);
+                labels, metadata, name,
+                organizationId, plannedSpendAmount, raw,
+                startAt, status, targeting,
+                totalSpendAmount, updatedAt);
         }
 
     }

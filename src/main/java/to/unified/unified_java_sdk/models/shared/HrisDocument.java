@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -58,6 +59,11 @@ public class HrisDocument {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -90,6 +96,7 @@ public class HrisDocument {
             @JsonProperty("document_url") @Nullable String documentUrl,
             @JsonProperty("filename") @Nullable String filename,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable HrisDocumentType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -100,6 +107,7 @@ public class HrisDocument {
         this.documentUrl = documentUrl;
         this.filename = filename;
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -110,7 +118,7 @@ public class HrisDocument {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -147,6 +155,10 @@ public class HrisDocument {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -227,6 +239,12 @@ public class HrisDocument {
     }
 
 
+    public HrisDocument withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisDocument withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -276,6 +294,7 @@ public class HrisDocument {
             Utils.enhancedDeepEquals(this.documentUrl, other.documentUrl) &&
             Utils.enhancedDeepEquals(this.filename, other.filename) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -287,8 +306,8 @@ public class HrisDocument {
         return Utils.enhancedHash(
             companyId, createdAt, documentData,
             documentUrl, filename, id,
-            raw, type, updatedAt,
-            userId);
+            metadata, raw, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -300,6 +319,7 @@ public class HrisDocument {
                 "documentUrl", documentUrl,
                 "filename", filename,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -320,6 +340,8 @@ public class HrisDocument {
         private String filename;
 
         private String id;
+
+        private List<HrisMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -375,6 +397,11 @@ public class HrisDocument {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -408,8 +435,8 @@ public class HrisDocument {
             return new HrisDocument(
                 companyId, createdAt, documentData,
                 documentUrl, filename, id,
-                raw, type, updatedAt,
-                userId);
+                metadata, raw, type,
+                updatedAt, userId);
         }
 
     }

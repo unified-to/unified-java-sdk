@@ -48,6 +48,11 @@ public class ComputeEnvvar {
     @JsonProperty("is_secret")
     private Boolean isSecret;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
+
     /**
      * Variable name
      */
@@ -89,6 +94,7 @@ public class ComputeEnvvar {
             @JsonProperty("environments") @Nullable List<PropertyComputeEnvvarEnvironments> environments,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_secret") @Nullable Boolean isSecret,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("service_id") @Nullable String serviceId,
@@ -98,6 +104,7 @@ public class ComputeEnvvar {
         this.environments = environments;
         this.id = id;
         this.isSecret = isSecret;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.serviceId = serviceId;
@@ -108,7 +115,8 @@ public class ComputeEnvvar {
     public ComputeEnvvar() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -137,6 +145,10 @@ public class ComputeEnvvar {
      */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -215,6 +227,12 @@ public class ComputeEnvvar {
     }
 
 
+    public ComputeEnvvar withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Variable name
      */
@@ -274,6 +292,7 @@ public class ComputeEnvvar {
             Utils.enhancedDeepEquals(this.environments, other.environments) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isSecret, other.isSecret) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.serviceId, other.serviceId) &&
@@ -285,8 +304,9 @@ public class ComputeEnvvar {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, environments, id,
-            isSecret, name, raw,
-            serviceId, updatedAt, value);
+            isSecret, metadata, name,
+            raw, serviceId, updatedAt,
+            value);
     }
     
     @Override
@@ -296,6 +316,7 @@ public class ComputeEnvvar {
                 "environments", environments,
                 "id", id,
                 "isSecret", isSecret,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "serviceId", serviceId,
@@ -313,6 +334,8 @@ public class ComputeEnvvar {
         private String id;
 
         private Boolean isSecret;
+
+        private List<ComputeMetadata> metadata;
 
         private String name;
 
@@ -360,6 +383,11 @@ public class ComputeEnvvar {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Variable name
          */
@@ -403,8 +431,9 @@ public class ComputeEnvvar {
         public ComputeEnvvar build() {
             return new ComputeEnvvar(
                 createdAt, environments, id,
-                isSecret, name, raw,
-                serviceId, updatedAt, value);
+                isSecret, metadata, name,
+                raw, serviceId, updatedAt,
+                value);
         }
 
     }

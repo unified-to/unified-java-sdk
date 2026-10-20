@@ -30,6 +30,7 @@ public enum ListHrisPayrollsQueryParamFields {
     TOTAL_COST_AMOUNT("total_cost_amount"),
     USER_IDS("user_ids"),
     PAYSLIP_IDS("payslip_ids"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

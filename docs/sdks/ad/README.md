@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
@@ -47,10 +48,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("56af86c6-fdfa-44fd-ad7f-df39b696deeb")
+                    .id("575c0f19-3b7c-4045-a65a-dd5d3e277d97")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.345Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.598Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -209,6 +211,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
@@ -233,10 +236,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("1a01b3b8-6a75-4e54-a4e0-f0588bfa2fd9")
+                    .id("c74c1abd-908d-4c98-81a1-ca265042f4f0")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.352Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.609Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -337,6 +341,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsAdResponse;
@@ -361,10 +366,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("1a01b3b8-6a75-4e54-a4e0-f0588bfa2fd9")
+                    .id("c74c1abd-908d-4c98-81a1-ca265042f4f0")
+                    .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-17T17:27:01.352Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T01:49:31.609Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

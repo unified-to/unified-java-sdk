@@ -22,6 +22,7 @@ public enum PatchAtsInterviewQueryParamFields {
     LOCATION("location"),
     MEETING_URL("meeting_url"),
     EXTERNAL_EVENT_XREF("external_event_xref"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

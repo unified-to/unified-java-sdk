@@ -55,4 +55,5 @@ ListClubsActivitiesQueryParamFields value = ListClubsActivitiesQueryParamFields.
 | `WORKOUT_TYPE`           | workout_type             |
 | `SUFFER_SCORE`           | suffer_score             |
 | `PR_COUNT`               | pr_count                 |
+| `METADATA`               | metadata                 |
 | `RAW`                    | raw                      |

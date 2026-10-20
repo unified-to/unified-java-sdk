@@ -25,6 +25,7 @@ public enum GetAccountingOrganizationQueryParamFields {
     TYPE("type"),
     IS_ELIMINATION("is_elimination"),
     BOOKS_CLOSE_AT("books_close_at"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

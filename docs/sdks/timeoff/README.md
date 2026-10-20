@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -41,20 +42,21 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T05:23:02.203Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T06:56:31.747Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-27T09:33:21.898Z"))
-                    .id("d76d95ac-987f-4a4a-b0ef-77979e8d637c")
+                    .endAt(OffsetDateTime.parse("2024-12-27T22:42:46.021Z"))
+                    .id("ae646603-aa50-43c8-80b1-711d7ac46661")
                     .isPaid(true)
+                    .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T00:36:28.607Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-04T08:23:52.492Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T12:11:05.922Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T15:17:57.340Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -213,6 +215,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
@@ -231,20 +234,21 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T05:23:02.204Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T06:56:31.748Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-27T09:33:21.910Z"))
-                    .id("79b9c152-3984-4a81-b0fb-c6107c58dc73")
+                    .endAt(OffsetDateTime.parse("2024-12-27T22:42:46.031Z"))
+                    .id("6ea366a3-ca7a-444e-ab8a-9892b84c39d4")
                     .isPaid(true)
+                    .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T00:36:28.614Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-04T08:23:52.498Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T12:11:05.925Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T15:17:57.342Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -345,6 +349,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
@@ -363,20 +368,21 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T05:23:02.204Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T06:56:31.748Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-27T09:33:21.910Z"))
-                    .id("79b9c152-3984-4a81-b0fb-c6107c58dc73")
+                    .endAt(OffsetDateTime.parse("2024-12-27T22:42:46.031Z"))
+                    .id("6ea366a3-ca7a-444e-ab8a-9892b84c39d4")
                     .isPaid(true)
+                    .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T00:36:28.614Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-04T08:23:52.498Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T12:11:05.925Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T15:17:57.342Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

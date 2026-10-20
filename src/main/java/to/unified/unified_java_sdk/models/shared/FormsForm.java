@@ -75,6 +75,11 @@ public class FormsForm {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<FormsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -112,6 +117,7 @@ public class FormsForm {
             @JsonProperty("has_shuffle_questions") @Nullable Boolean hasShuffleQuestions,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<FormsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("published_url") @Nullable String publishedUrl,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -127,6 +133,7 @@ public class FormsForm {
         this.hasShuffleQuestions = hasShuffleQuestions;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.publishedUrl = publishedUrl;
         this.raw = raw;
@@ -139,7 +146,8 @@ public class FormsForm {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> confirmationMessage() {
@@ -183,6 +191,10 @@ public class FormsForm {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<FormsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -276,6 +288,12 @@ public class FormsForm {
     }
 
 
+    public FormsForm withMetadata(@Nullable List<FormsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public FormsForm withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -329,6 +347,7 @@ public class FormsForm {
             Utils.enhancedDeepEquals(this.hasShuffleQuestions, other.hasShuffleQuestions) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.publishedUrl, other.publishedUrl) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -342,8 +361,9 @@ public class FormsForm {
             confirmationMessage, confirmationRedirectUrl, createdAt,
             description, fields, hasMultipleSubmissions,
             hasProgressBar, hasShuffleQuestions, id,
-            isActive, name, publishedUrl,
-            raw, responseCount, updatedAt);
+            isActive, metadata, name,
+            publishedUrl, raw, responseCount,
+            updatedAt);
     }
     
     @Override
@@ -359,6 +379,7 @@ public class FormsForm {
                 "hasShuffleQuestions", hasShuffleQuestions,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "publishedUrl", publishedUrl,
                 "raw", raw,
@@ -388,6 +409,8 @@ public class FormsForm {
         private String id;
 
         private Boolean isActive;
+
+        private List<FormsMetadata> metadata;
 
         private String name;
 
@@ -456,6 +479,11 @@ public class FormsForm {
             return this;
         }
 
+        public Builder metadata(@Nullable List<FormsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -489,8 +517,9 @@ public class FormsForm {
                 confirmationMessage, confirmationRedirectUrl, createdAt,
                 description, fields, hasMultipleSubmissions,
                 hasProgressBar, hasShuffleQuestions, id,
-                isActive, name, publishedUrl,
-                raw, responseCount, updatedAt);
+                isActive, metadata, name,
+                publishedUrl, raw, responseCount,
+                updatedAt);
         }
 
     }

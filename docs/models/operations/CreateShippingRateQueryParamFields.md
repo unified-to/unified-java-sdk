@@ -22,4 +22,5 @@ CreateShippingRateQueryParamFields value = CreateShippingRateQueryParamFields.SH
 | `CARRIER_ID`   | carrier_id     |
 | `ID`           | id             |
 | `RATES`        | rates          |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

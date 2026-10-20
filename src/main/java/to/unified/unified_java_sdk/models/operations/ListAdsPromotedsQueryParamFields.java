@@ -12,6 +12,7 @@ public enum ListAdsPromotedsQueryParamFields {
     ID("id"),
     NAME("name"),
     TYPE("type"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

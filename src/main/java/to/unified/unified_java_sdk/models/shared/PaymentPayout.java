@@ -65,6 +65,11 @@ public class PaymentPayout {
     @JsonProperty("lineitems")
     private List<PaymentPayoutLineitem> lineitems;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PaymentMetadata> metadata;
+
     /**
      * total_amount minus fee_amount
      */
@@ -108,6 +113,7 @@ public class PaymentPayout {
             @JsonProperty("fee_amount") @Nullable Double feeAmount,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<PaymentPayoutLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<PaymentMetadata> metadata,
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -121,6 +127,7 @@ public class PaymentPayout {
         this.feeAmount = feeAmount;
         this.id = id;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.netAmount = netAmount;
         this.notes = notes;
         this.raw = raw;
@@ -134,7 +141,7 @@ public class PaymentPayout {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -178,6 +185,10 @@ public class PaymentPayout {
      */
     public Optional<List<PaymentPayoutLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<PaymentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -272,6 +283,12 @@ public class PaymentPayout {
     }
 
 
+    public PaymentPayout withMetadata(@Nullable List<PaymentMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * total_amount minus fee_amount
      */
@@ -331,6 +348,7 @@ public class PaymentPayout {
             Utils.enhancedDeepEquals(this.feeAmount, other.feeAmount) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -344,9 +362,9 @@ public class PaymentPayout {
         return Utils.enhancedHash(
             accountId, arrivalAt, createdAt,
             currency, feeAmount, id,
-            lineitems, netAmount, notes,
-            raw, status, totalAmount,
-            updatedAt);
+            lineitems, metadata, netAmount,
+            notes, raw, status,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -359,6 +377,7 @@ public class PaymentPayout {
                 "feeAmount", feeAmount,
                 "id", id,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "netAmount", netAmount,
                 "notes", notes,
                 "raw", raw,
@@ -383,6 +402,8 @@ public class PaymentPayout {
         private String id;
 
         private List<PaymentPayoutLineitem> lineitems;
+
+        private List<PaymentMetadata> metadata;
 
         private Double netAmount;
 
@@ -450,6 +471,11 @@ public class PaymentPayout {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PaymentMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * total_amount minus fee_amount
          */
@@ -490,9 +516,9 @@ public class PaymentPayout {
             return new PaymentPayout(
                 accountId, arrivalAt, createdAt,
                 currency, feeAmount, id,
-                lineitems, netAmount, notes,
-                raw, status, totalAmount,
-                updatedAt);
+                lineitems, metadata, netAmount,
+                notes, raw, status,
+                totalAmount, updatedAt);
         }
 
     }

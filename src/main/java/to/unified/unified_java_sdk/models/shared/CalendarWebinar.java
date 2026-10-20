@@ -94,6 +94,11 @@ public class CalendarWebinar {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -218,6 +223,7 @@ public class CalendarWebinar {
             @JsonProperty("is_enabled") @Nullable Boolean isEnabled,
             @JsonProperty("is_webcast") @Nullable Boolean isWebcast,
             @JsonProperty("join_url") @Nullable String joinUrl,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organizer") @Nullable PropertyCalendarWebinarOrganizer organizer,
             @JsonProperty("panelist_password") @Nullable String panelistPassword,
@@ -252,6 +258,7 @@ public class CalendarWebinar {
         this.isEnabled = isEnabled;
         this.isWebcast = isWebcast;
         this.joinUrl = joinUrl;
+        this.metadata = metadata;
         this.notes = notes;
         this.organizer = organizer;
         this.panelistPassword = panelistPassword;
@@ -287,7 +294,7 @@ public class CalendarWebinar {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -349,6 +356,10 @@ public class CalendarWebinar {
 
     public Optional<String> joinUrl() {
         return Optional.ofNullable(this.joinUrl);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -536,6 +547,12 @@ public class CalendarWebinar {
     }
 
 
+    public CalendarWebinar withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarWebinar withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -694,6 +711,7 @@ public class CalendarWebinar {
             Utils.enhancedDeepEquals(this.isEnabled, other.isEnabled) &&
             Utils.enhancedDeepEquals(this.isWebcast, other.isWebcast) &&
             Utils.enhancedDeepEquals(this.joinUrl, other.joinUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizer, other.organizer) &&
             Utils.enhancedDeepEquals(this.panelistPassword, other.panelistPassword) &&
@@ -724,14 +742,14 @@ public class CalendarWebinar {
             createdAt, endAt, hasPolls,
             hasQa, hasRecording, id,
             isAutoApprove, isEnabled, isWebcast,
-            joinUrl, notes, organizer,
-            panelistPassword, panelists, raw,
-            recurrence, registrantPassword, registrants,
-            requireAddress, requireCompany, requireEmail,
-            requireFirstName, requireJobTitle, requireLastName,
-            requirePhone, startAt, status,
-            subject, timezone, updatedAt,
-            webUrl);
+            joinUrl, metadata, notes,
+            organizer, panelistPassword, panelists,
+            raw, recurrence, registrantPassword,
+            registrants, requireAddress, requireCompany,
+            requireEmail, requireFirstName, requireJobTitle,
+            requireLastName, requirePhone, startAt,
+            status, subject, timezone,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -750,6 +768,7 @@ public class CalendarWebinar {
                 "isEnabled", isEnabled,
                 "isWebcast", isWebcast,
                 "joinUrl", joinUrl,
+                "metadata", metadata,
                 "notes", notes,
                 "organizer", organizer,
                 "panelistPassword", panelistPassword,
@@ -801,6 +820,8 @@ public class CalendarWebinar {
         private Boolean isWebcast;
 
         private String joinUrl;
+
+        private List<CalendarMetadata> metadata;
 
         private String notes;
 
@@ -919,6 +940,11 @@ public class CalendarWebinar {
 
         public Builder joinUrl(@Nullable String joinUrl) {
             this.joinUrl = joinUrl;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -1042,14 +1068,14 @@ public class CalendarWebinar {
                 createdAt, endAt, hasPolls,
                 hasQa, hasRecording, id,
                 isAutoApprove, isEnabled, isWebcast,
-                joinUrl, notes, organizer,
-                panelistPassword, panelists, raw,
-                recurrence, registrantPassword, registrants,
-                requireAddress, requireCompany, requireEmail,
-                requireFirstName, requireJobTitle, requireLastName,
-                requirePhone, startAt, status,
-                subject, timezone, updatedAt,
-                webUrl);
+                joinUrl, metadata, notes,
+                organizer, panelistPassword, panelists,
+                raw, recurrence, registrantPassword,
+                registrants, requireAddress, requireCompany,
+                requireEmail, requireFirstName, requireJobTitle,
+                requireLastName, requirePhone, startAt,
+                status, subject, timezone,
+                updatedAt, webUrl);
         }
 
     }

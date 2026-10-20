@@ -235,6 +235,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncEmbedding embedding;
 
+    private final AsyncMemory memory;
+
     private final AsyncModel model;
 
     private final AsyncPrompt prompt;
@@ -877,6 +879,10 @@ public class AsyncUnifiedTo {
         return embedding;
     }
 
+    public AsyncMemory memory() {
+        return memory;
+    }
+
     public AsyncModel model() {
         return model;
     }
@@ -1390,6 +1396,7 @@ public class AsyncUnifiedTo {
         this.genai = new AsyncGenai(syncSDK.genai(), sdkConfiguration);
         this.agent = new AsyncAgent(syncSDK.agent(), sdkConfiguration);
         this.embedding = new AsyncEmbedding(syncSDK.embedding(), sdkConfiguration);
+        this.memory = new AsyncMemory(syncSDK.memory(), sdkConfiguration);
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
         this.skill = new AsyncSkill(syncSDK.skill(), sdkConfiguration);

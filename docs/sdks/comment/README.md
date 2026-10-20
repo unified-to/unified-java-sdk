@@ -35,6 +35,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -55,9 +56,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("22642020-7439-4530-abde-d9a6ad8f2337")
+                    .id("4153820f-2e15-49d2-96f2-3434d2e3494e")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.312Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.064Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -101,6 +103,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
@@ -121,10 +124,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("c9be8ee6-7fe5-44de-beaa-f6836398b2c1")
+                    .id("ecc84e47-8776-4c9e-a58e-6bfaa0a2250b")
+                    .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-02T18:03:17.633Z"))
-                    .userName("Santina Abbott")
+                    .updatedAt(OffsetDateTime.parse("2021-10-02T23:49:51.413Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -167,6 +170,7 @@ Create a comment
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
@@ -187,8 +191,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("04c55a91-88f2-4fb6-b422-65475502525d")
-                    .updatedAt("2024-02-09T06:33:00.474Z")
+                    .id("b082308e-9c72-4bda-84c5-d50989550336")
+                    .metadata(List.of())
+                    .updatedAt("2024-02-09T11:30:09.364Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -577,6 +582,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
@@ -597,9 +603,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("6d545584-0e7a-4328-a704-567e6d02029b")
+                    .id("87532c36-2b29-4e63-92a2-2904d3482d9f")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.313Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.067Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -644,6 +651,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
@@ -664,10 +672,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("29c39b46-e281-41df-a362-72f8ce72e2cd")
+                    .id("1a5cbd95-43ee-4bf6-bbe1-99303f86baa8")
+                    .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-02T18:03:17.635Z"))
-                    .userName("Santina Abbott")
+                    .updatedAt(OffsetDateTime.parse("2021-10-02T23:49:51.417Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -711,6 +719,7 @@ Update a comment
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
@@ -731,8 +740,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("a768736b-8901-4ba0-8215-d6725de0047f")
-                    .updatedAt("2024-02-09T06:33:00.475Z")
+                    .id("8bdad788-affd-4e26-a1e1-1b8c9206df51")
+                    .metadata(List.of())
+                    .updatedAt("2024-02-09T11:30:09.366Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -945,6 +955,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
@@ -965,9 +976,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("6d545584-0e7a-4328-a704-567e6d02029b")
+                    .id("87532c36-2b29-4e63-92a2-2904d3482d9f")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.313Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.067Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1012,6 +1024,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
@@ -1032,10 +1045,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("29c39b46-e281-41df-a362-72f8ce72e2cd")
+                    .id("1a5cbd95-43ee-4bf6-bbe1-99303f86baa8")
+                    .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-02T18:03:17.635Z"))
-                    .userName("Santina Abbott")
+                    .updatedAt(OffsetDateTime.parse("2021-10-02T23:49:51.417Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1079,6 +1092,7 @@ Update a comment
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
@@ -1099,8 +1113,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("a768736b-8901-4ba0-8215-d6725de0047f")
-                    .updatedAt("2024-02-09T06:33:00.475Z")
+                    .id("8bdad788-affd-4e26-a1e1-1b8c9206df51")
+                    .metadata(List.of())
+                    .updatedAt("2024-02-09T11:30:09.366Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

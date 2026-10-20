@@ -117,6 +117,11 @@ public class PropertyAdsReportMetricsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -208,6 +213,7 @@ public class PropertyAdsReportMetricsCreative {
             @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("labels") @Nullable List<String> labels,
             @JsonProperty("link_url") @Nullable String linkUrl,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("path1") @Nullable String path1,
@@ -238,6 +244,7 @@ public class PropertyAdsReportMetricsCreative {
         this.itemId = itemId;
         this.labels = labels;
         this.linkUrl = linkUrl;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.path1 = path1;
@@ -263,7 +270,8 @@ public class PropertyAdsReportMetricsCreative {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -347,6 +355,10 @@ public class PropertyAdsReportMetricsCreative {
      */
     public Optional<String> linkUrl() {
         return Optional.ofNullable(this.linkUrl);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -536,6 +548,12 @@ public class PropertyAdsReportMetricsCreative {
     }
 
 
+    public PropertyAdsReportMetricsCreative withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsCreative withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -654,6 +672,7 @@ public class PropertyAdsReportMetricsCreative {
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.labels, other.labels) &&
             Utils.enhancedDeepEquals(this.linkUrl, other.linkUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.path1, other.path1) &&
@@ -677,11 +696,12 @@ public class PropertyAdsReportMetricsCreative {
             data, externalAdReference, externalCreativeReference,
             externalPlacementReference, groupId, height,
             hostingSource, id, itemId,
-            labels, linkUrl, name,
-            organizationId, path1, path2,
-            promoted, raw, status,
-            thirdPartyTag, title, updatedAt,
-            urlTags, vastTagUrl, width);
+            labels, linkUrl, metadata,
+            name, organizationId, path1,
+            path2, promoted, raw,
+            status, thirdPartyTag, title,
+            updatedAt, urlTags, vastTagUrl,
+            width);
     }
     
     @Override
@@ -704,6 +724,7 @@ public class PropertyAdsReportMetricsCreative {
                 "itemId", itemId,
                 "labels", labels,
                 "linkUrl", linkUrl,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "path1", path1,
@@ -755,6 +776,8 @@ public class PropertyAdsReportMetricsCreative {
         private List<String> labels;
 
         private String linkUrl;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -886,6 +909,11 @@ public class PropertyAdsReportMetricsCreative {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -971,11 +999,12 @@ public class PropertyAdsReportMetricsCreative {
                 data, externalAdReference, externalCreativeReference,
                 externalPlacementReference, groupId, height,
                 hostingSource, id, itemId,
-                labels, linkUrl, name,
-                organizationId, path1, path2,
-                promoted, raw, status,
-                thirdPartyTag, title, updatedAt,
-                urlTags, vastTagUrl, width);
+                labels, linkUrl, metadata,
+                name, organizationId, path1,
+                path2, promoted, raw,
+                status, thirdPartyTag, title,
+                updatedAt, urlTags, vastTagUrl,
+                width);
         }
 
     }

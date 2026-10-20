@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -35,6 +36,11 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PaymentMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -101,6 +107,7 @@ public class PaymentRefund {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<PaymentMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -114,6 +121,7 @@ public class PaymentRefund {
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
+        this.metadata = metadata;
         this.notes = notes;
         this.paymentId = paymentId;
         this.raw = raw;
@@ -131,7 +139,7 @@ public class PaymentRefund {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -147,6 +155,10 @@ public class PaymentRefund {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<PaymentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -226,6 +238,12 @@ public class PaymentRefund {
 
     public PaymentRefund withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public PaymentRefund withMetadata(@Nullable List<PaymentMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -318,6 +336,7 @@ public class PaymentRefund {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -334,10 +353,10 @@ public class PaymentRefund {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, id,
-            notes, paymentId, raw,
-            reason, reference, refundedAt,
-            status, tenderType, totalAmount,
-            updatedAt);
+            metadata, notes, paymentId,
+            raw, reason, reference,
+            refundedAt, status, tenderType,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -346,6 +365,7 @@ public class PaymentRefund {
                 "createdAt", createdAt,
                 "currency", currency,
                 "id", id,
+                "metadata", metadata,
                 "notes", notes,
                 "paymentId", paymentId,
                 "raw", raw,
@@ -366,6 +386,8 @@ public class PaymentRefund {
         private String currency;
 
         private String id;
+
+        private List<PaymentMetadata> metadata;
 
         private String notes;
 
@@ -406,6 +428,11 @@ public class PaymentRefund {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<PaymentMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -477,10 +504,10 @@ public class PaymentRefund {
         public PaymentRefund build() {
             return new PaymentRefund(
                 createdAt, currency, id,
-                notes, paymentId, raw,
-                reason, reference, refundedAt,
-                status, tenderType, totalAmount,
-                updatedAt);
+                metadata, notes, paymentId,
+                raw, reason, reference,
+                refundedAt, status, tenderType,
+                totalAmount, updatedAt);
         }
 
     }

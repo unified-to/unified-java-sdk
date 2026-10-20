@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -35,6 +36,11 @@ public class TaskComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TaskMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -82,6 +88,7 @@ public class TaskComment {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("has_children") @Nullable Boolean hasChildren,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<TaskMetadata> metadata,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("task_id") @Nullable String taskId,
@@ -92,6 +99,7 @@ public class TaskComment {
         this.createdAt = createdAt;
         this.hasChildren = hasChildren;
         this.id = id;
+        this.metadata = metadata;
         this.parentId = parentId;
         this.raw = raw;
         this.taskId = taskId;
@@ -105,7 +113,7 @@ public class TaskComment {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -121,6 +129,10 @@ public class TaskComment {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<TaskMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> parentId() {
@@ -182,6 +194,12 @@ public class TaskComment {
 
     public TaskComment withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public TaskComment withMetadata(@Nullable List<TaskMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -250,6 +268,7 @@ public class TaskComment {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.taskId, other.taskId) &&
@@ -263,9 +282,9 @@ public class TaskComment {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, hasChildren, id,
-            parentId, raw, taskId,
-            text, updatedAt, userId,
-            userName);
+            metadata, parentId, raw,
+            taskId, text, updatedAt,
+            userId, userName);
     }
     
     @Override
@@ -274,6 +293,7 @@ public class TaskComment {
                 "createdAt", createdAt,
                 "hasChildren", hasChildren,
                 "id", id,
+                "metadata", metadata,
                 "parentId", parentId,
                 "raw", raw,
                 "taskId", taskId,
@@ -291,6 +311,8 @@ public class TaskComment {
         private Boolean hasChildren;
 
         private String id;
+
+        private List<TaskMetadata> metadata;
 
         private String parentId;
 
@@ -325,6 +347,11 @@ public class TaskComment {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<TaskMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -375,9 +402,9 @@ public class TaskComment {
         public TaskComment build() {
             return new TaskComment(
                 createdAt, hasChildren, id,
-                parentId, raw, taskId,
-                text, updatedAt, userId,
-                userName);
+                metadata, parentId, raw,
+                taskId, text, updatedAt,
+                userId, userName);
         }
 
     }

@@ -38,6 +38,11 @@ public class TaskChange {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TaskMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -67,6 +72,7 @@ public class TaskChange {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("items") @Nullable List<TaskChangeItem> items,
+            @JsonProperty("metadata") @Nullable List<TaskMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("task_id") @Nullable String taskId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -74,6 +80,7 @@ public class TaskChange {
         this.createdAt = createdAt;
         this.id = id;
         this.items = items;
+        this.metadata = metadata;
         this.raw = raw;
         this.taskId = taskId;
         this.updatedAt = updatedAt;
@@ -83,7 +90,7 @@ public class TaskChange {
     public TaskChange() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -99,6 +106,10 @@ public class TaskChange {
 
     public Optional<List<TaskChangeItem>> items() {
         return Optional.ofNullable(this.items);
+    }
+
+    public Optional<List<TaskMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -152,6 +163,12 @@ public class TaskChange {
     }
 
 
+    public TaskChange withMetadata(@Nullable List<TaskMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public TaskChange withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -198,6 +215,7 @@ public class TaskChange {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.items, other.items) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.taskId, other.taskId) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -208,8 +226,8 @@ public class TaskChange {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, id, items,
-            raw, taskId, updatedAt,
-            userId);
+            metadata, raw, taskId,
+            updatedAt, userId);
     }
     
     @Override
@@ -218,6 +236,7 @@ public class TaskChange {
                 "createdAt", createdAt,
                 "id", id,
                 "items", items,
+                "metadata", metadata,
                 "raw", raw,
                 "taskId", taskId,
                 "updatedAt", updatedAt,
@@ -232,6 +251,8 @@ public class TaskChange {
         private String id;
 
         private List<TaskChangeItem> items;
+
+        private List<TaskMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -260,6 +281,11 @@ public class TaskChange {
 
         public Builder items(@Nullable List<TaskChangeItem> items) {
             this.items = items;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<TaskMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -295,8 +321,8 @@ public class TaskChange {
         public TaskChange build() {
             return new TaskChange(
                 createdAt, id, items,
-                raw, taskId, updatedAt,
-                userId);
+                metadata, raw, taskId,
+                updatedAt, userId);
         }
 
     }

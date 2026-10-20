@@ -41,18 +41,17 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-30T08:19:34.694Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-30T20:34:27.897Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("94fd014b-1aae-4735-a87e-d6ab93da362a")
+                    .id("7fef24f0-bccc-4409-844f-02f287921fde")
                     .labels(List.of(
-                        "adhuc",
-                        "quaerat"))
-                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
-                    .sourceBranchId("microchip-navigate")
-                    .status(RepoPullrequestStatus.REJECTED)
-                    .targetBranchId("feed-reboot")
-                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-16T00:17:30.282Z"))
+                        "creptio",
+                        "tutamen"))
+                    .metadata(List.of())
+                    .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
+                    .status(RepoPullrequestStatus.APPROVED)
+                    .title("reboot mobile application")
+                    .updatedAt(OffsetDateTime.parse("2026-01-16T08:06:40.552Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -229,18 +228,17 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-30T08:19:34.700Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-30T20:34:27.906Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("d660205f-2253-4962-a0c0-a28f3b663d7b")
+                    .id("3b399be7-3342-449e-986a-bd153fb57c3a")
                     .labels(List.of(
-                        "adhuc",
-                        "quaerat"))
-                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
-                    .sourceBranchId("microchip-navigate")
-                    .status(RepoPullrequestStatus.REJECTED)
-                    .targetBranchId("feed-reboot")
-                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-16T00:17:30.287Z"))
+                        "creptio",
+                        "tutamen"))
+                    .metadata(List.of())
+                    .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
+                    .status(RepoPullrequestStatus.APPROVED)
+                    .title("reboot mobile application")
+                    .updatedAt(OffsetDateTime.parse("2026-01-16T08:06:40.564Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -359,18 +357,17 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-04-30T08:19:34.700Z"))
+                    .closedAt(OffsetDateTime.parse("2025-04-30T20:34:27.906Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("d660205f-2253-4962-a0c0-a28f3b663d7b")
+                    .id("3b399be7-3342-449e-986a-bd153fb57c3a")
                     .labels(List.of(
-                        "adhuc",
-                        "quaerat"))
-                    .notes("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.")
-                    .sourceBranchId("microchip-navigate")
-                    .status(RepoPullrequestStatus.REJECTED)
-                    .targetBranchId("feed-reboot")
-                    .title("Cunae aegrus averto texo advoco bibo amet asporto.")
-                    .updatedAt(OffsetDateTime.parse("2025-01-16T00:17:30.287Z"))
+                        "creptio",
+                        "tutamen"))
+                    .metadata(List.of())
+                    .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
+                    .status(RepoPullrequestStatus.APPROVED)
+                    .title("reboot mobile application")
+                    .updatedAt(OffsetDateTime.parse("2026-01-16T08:06:40.564Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

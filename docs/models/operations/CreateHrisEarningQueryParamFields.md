@@ -30,4 +30,5 @@ CreateHrisEarningQueryParamFields value = CreateHrisEarningQueryParamFields.ID;
 | `PAYROLL_ID`  | payroll_id    |
 | `PAYSLIP_ID`  | payslip_id    |
 | `NOTES`       | notes         |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

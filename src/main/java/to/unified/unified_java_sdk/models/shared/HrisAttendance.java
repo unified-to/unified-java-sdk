@@ -125,6 +125,11 @@ public class HrisAttendance {
     @JsonProperty("location_id")
     private String locationId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * card/non-cash tips attributed to this attendance record
      */
@@ -185,6 +190,7 @@ public class HrisAttendance {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("job_name") @Nullable String jobName,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("non_cash_tips_amount") @Nullable Double nonCashTipsAmount,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
@@ -210,6 +216,7 @@ public class HrisAttendance {
         this.id = id;
         this.jobName = jobName;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.nonCashTipsAmount = nonCashTipsAmount;
         this.raw = raw;
         this.startAt = Optional.ofNullable(startAt)
@@ -230,8 +237,8 @@ public class HrisAttendance {
             endAt, null, null,
             null, null, null,
             null, null, null,
-            startAt, null, null,
-            null, null);
+            null, startAt, null,
+            null, null, null);
     }
 
     public Optional<PropertyHrisAttendanceAddress> address() {
@@ -329,6 +336,10 @@ public class HrisAttendance {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -505,6 +516,12 @@ public class HrisAttendance {
     }
 
 
+    public HrisAttendance withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * card/non-cash tips attributed to this attendance record
      */
@@ -585,6 +602,7 @@ public class HrisAttendance {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.jobName, other.jobName) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.nonCashTipsAmount, other.nonCashTipsAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -602,9 +620,9 @@ public class HrisAttendance {
             currency, declaredTipsAmount, employeeUserId,
             endAt, groupId, hourlyRate,
             hours, id, jobName,
-            locationId, nonCashTipsAmount, raw,
-            startAt, status, timeshiftId,
-            timezone, updatedAt);
+            locationId, metadata, nonCashTipsAmount,
+            raw, startAt, status,
+            timeshiftId, timezone, updatedAt);
     }
     
     @Override
@@ -626,6 +644,7 @@ public class HrisAttendance {
                 "id", id,
                 "jobName", jobName,
                 "locationId", locationId,
+                "metadata", metadata,
                 "nonCashTipsAmount", nonCashTipsAmount,
                 "raw", raw,
                 "startAt", startAt,
@@ -669,6 +688,8 @@ public class HrisAttendance {
         private String jobName;
 
         private String locationId;
+
+        private List<HrisMetadata> metadata;
 
         private Double nonCashTipsAmount;
 
@@ -801,6 +822,11 @@ public class HrisAttendance {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * card/non-cash tips attributed to this attendance record
          */
@@ -855,9 +881,9 @@ public class HrisAttendance {
                 currency, declaredTipsAmount, employeeUserId,
                 endAt, groupId, hourlyRate,
                 hours, id, jobName,
-                locationId, nonCashTipsAmount, raw,
-                startAt, status, timeshiftId,
-                timezone, updatedAt);
+                locationId, metadata, nonCashTipsAmount,
+                raw, startAt, status,
+                timeshiftId, timezone, updatedAt);
         }
 
     }

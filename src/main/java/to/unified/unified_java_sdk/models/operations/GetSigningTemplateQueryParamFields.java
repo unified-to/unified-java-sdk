@@ -16,7 +16,8 @@ public enum GetSigningTemplateQueryParamFields {
     DESCRIPTION("description"),
     IS_ACTIVE("is_active"),
     CREATOR_ID("creator_id"),
-    RAW("raw");
+    RAW("raw"),
+    METADATA("metadata");
 
     @JsonValue
     private final String value;

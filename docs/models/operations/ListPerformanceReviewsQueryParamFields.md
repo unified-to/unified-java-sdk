@@ -30,4 +30,5 @@ ListPerformanceReviewsQueryParamFields value = ListPerformanceReviewsQueryParamF
 | `IS_ACKNOWLEDGED`     | is_acknowledged       |
 | `SUBMITTED_AT`        | submitted_at          |
 | `COMPLETED_AT`        | completed_at          |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

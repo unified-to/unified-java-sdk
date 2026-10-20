@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class TicketingNote {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TicketingMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -70,6 +76,7 @@ public class TicketingNote {
             @JsonProperty("customer_id") @Nullable String customerId,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<TicketingMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("ticket_id") @Nullable String ticketId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -78,6 +85,7 @@ public class TicketingNote {
         this.customerId = customerId;
         this.description = description;
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.ticketId = ticketId;
         this.updatedAt = updatedAt;
@@ -87,7 +95,7 @@ public class TicketingNote {
     public TicketingNote() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -107,6 +115,10 @@ public class TicketingNote {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<TicketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -163,6 +175,12 @@ public class TicketingNote {
     }
 
 
+    public TicketingNote withMetadata(@Nullable List<TicketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public TicketingNote withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -207,6 +225,7 @@ public class TicketingNote {
             Utils.enhancedDeepEquals(this.customerId, other.customerId) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.ticketId, other.ticketId) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -217,8 +236,8 @@ public class TicketingNote {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, customerId, description,
-            id, raw, ticketId,
-            updatedAt, userId);
+            id, metadata, raw,
+            ticketId, updatedAt, userId);
     }
     
     @Override
@@ -228,6 +247,7 @@ public class TicketingNote {
                 "customerId", customerId,
                 "description", description,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "ticketId", ticketId,
                 "updatedAt", updatedAt,
@@ -244,6 +264,8 @@ public class TicketingNote {
         private String description;
 
         private String id;
+
+        private List<TicketingMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -280,6 +302,11 @@ public class TicketingNote {
             return this;
         }
 
+        public Builder metadata(@Nullable List<TicketingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -309,8 +336,8 @@ public class TicketingNote {
         public TicketingNote build() {
             return new TicketingNote(
                 createdAt, customerId, description,
-                id, raw, ticketId,
-                updatedAt, userId);
+                id, metadata, raw,
+                ticketId, updatedAt, userId);
         }
 
     }

@@ -1,0 +1,13 @@
+# ClubsMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `extraData`                                                                        | [Optional\<ClubsMetadataExtraData>](../../models/shared/ClubsMetadataExtraData.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `format`                                                                           | [Optional\<ClubsMetadataFormat>](../../models/shared/ClubsMetadataFormat.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `id`                                                                               | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `namespace`                                                                        | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `slug`                                                                             | *Optional\<String>*                                                                | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `value`                                                                            | [Optional\<ClubsMetadataValue>](../../models/shared/ClubsMetadataValue.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |

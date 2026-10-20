@@ -20,4 +20,5 @@ UpdateCommerceInventoryQueryParamFields value = UpdateCommerceInventoryQueryPara
 | `ITEM_OPTION_ID`  | item_option_id    |
 | `LOCATION_ID`     | location_id       |
 | `AVAILABLE`       | available         |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |

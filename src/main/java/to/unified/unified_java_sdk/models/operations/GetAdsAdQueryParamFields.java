@@ -31,6 +31,7 @@ public enum GetAdsAdQueryParamFields {
     PATH2("path2"),
     PROMOTED("promoted"),
     LOGO_CREATIVE_ID("logo_creative_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

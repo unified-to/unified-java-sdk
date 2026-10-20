@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class ComputeDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_primary")
     private Boolean isPrimary;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
 
     /**
      * The hostname (eg. app.example.com)
@@ -87,6 +93,7 @@ public class ComputeDomain {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_primary") @Nullable Boolean isPrimary,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("redirect_url") @Nullable String redirectUrl,
@@ -96,6 +103,7 @@ public class ComputeDomain {
         this.createdAt = createdAt;
         this.id = id;
         this.isPrimary = isPrimary;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.redirectUrl = redirectUrl;
@@ -107,7 +115,8 @@ public class ComputeDomain {
     public ComputeDomain() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -129,6 +138,10 @@ public class ComputeDomain {
      */
     public Optional<Boolean> isPrimary() {
         return Optional.ofNullable(this.isPrimary);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -205,6 +218,12 @@ public class ComputeDomain {
     }
 
 
+    public ComputeDomain withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The hostname (eg. app.example.com)
      */
@@ -272,6 +291,7 @@ public class ComputeDomain {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrimary, other.isPrimary) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.redirectUrl, other.redirectUrl) &&
@@ -284,8 +304,9 @@ public class ComputeDomain {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, id, isPrimary,
-            name, raw, redirectUrl,
-            serviceId, status, updatedAt);
+            metadata, name, raw,
+            redirectUrl, serviceId, status,
+            updatedAt);
     }
     
     @Override
@@ -294,6 +315,7 @@ public class ComputeDomain {
                 "createdAt", createdAt,
                 "id", id,
                 "isPrimary", isPrimary,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "redirectUrl", redirectUrl,
@@ -310,6 +332,8 @@ public class ComputeDomain {
         private String id;
 
         private Boolean isPrimary;
+
+        private List<ComputeMetadata> metadata;
 
         private String name;
 
@@ -348,6 +372,11 @@ public class ComputeDomain {
          */
         public Builder isPrimary(@Nullable Boolean isPrimary) {
             this.isPrimary = isPrimary;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -402,8 +431,9 @@ public class ComputeDomain {
         public ComputeDomain build() {
             return new ComputeDomain(
                 createdAt, id, isPrimary,
-                name, raw, redirectUrl,
-                serviceId, status, updatedAt);
+                metadata, name, raw,
+                redirectUrl, serviceId, status,
+                updatedAt);
         }
 
     }

@@ -63,6 +63,11 @@ public class AtsScorecard {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AtsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
     private List<AtsScorecardQuestion> questions;
 
@@ -93,6 +98,7 @@ public class AtsScorecard {
             @JsonProperty("interview_id") @Nullable String interviewId,
             @JsonProperty("interviewer_id") @Nullable String interviewerId,
             @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("questions") @Nullable List<AtsScorecardQuestion> questions,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("recommendation") @Nullable Recommendation recommendation,
@@ -105,6 +111,7 @@ public class AtsScorecard {
         this.interviewId = interviewId;
         this.interviewerId = interviewerId;
         this.jobId = jobId;
+        this.metadata = metadata;
         this.questions = questions;
         this.raw = raw;
         this.recommendation = recommendation;
@@ -115,7 +122,8 @@ public class AtsScorecard {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> applicationId() {
@@ -151,6 +159,10 @@ public class AtsScorecard {
 
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
+    }
+
+    public Optional<List<AtsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<List<AtsScorecardQuestion>> questions() {
@@ -228,6 +240,12 @@ public class AtsScorecard {
     }
 
 
+    public AtsScorecard withMetadata(@Nullable List<AtsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AtsScorecard withQuestions(@Nullable List<AtsScorecardQuestion> questions) {
         this.questions = questions;
         return this;
@@ -273,6 +291,7 @@ public class AtsScorecard {
             Utils.enhancedDeepEquals(this.interviewId, other.interviewId) &&
             Utils.enhancedDeepEquals(this.interviewerId, other.interviewerId) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.questions, other.questions) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.recommendation, other.recommendation) &&
@@ -284,8 +303,9 @@ public class AtsScorecard {
         return Utils.enhancedHash(
             applicationId, candidateId, comment,
             createdAt, id, interviewId,
-            interviewerId, jobId, questions,
-            raw, recommendation, updatedAt);
+            interviewerId, jobId, metadata,
+            questions, raw, recommendation,
+            updatedAt);
     }
     
     @Override
@@ -299,6 +319,7 @@ public class AtsScorecard {
                 "interviewId", interviewId,
                 "interviewerId", interviewerId,
                 "jobId", jobId,
+                "metadata", metadata,
                 "questions", questions,
                 "raw", raw,
                 "recommendation", recommendation,
@@ -323,6 +344,8 @@ public class AtsScorecard {
         private String interviewerId;
 
         private String jobId;
+
+        private List<AtsMetadata> metadata;
 
         private List<AtsScorecardQuestion> questions;
 
@@ -379,6 +402,11 @@ public class AtsScorecard {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder questions(@Nullable List<AtsScorecardQuestion> questions) {
             this.questions = questions;
             return this;
@@ -406,8 +434,9 @@ public class AtsScorecard {
             return new AtsScorecard(
                 applicationId, candidateId, comment,
                 createdAt, id, interviewId,
-                interviewerId, jobId, questions,
-                raw, recommendation, updatedAt);
+                interviewerId, jobId, metadata,
+                questions, raw, recommendation,
+                updatedAt);
         }
 
     }

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -74,6 +75,11 @@ public class HrisPaycode {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -105,6 +111,7 @@ public class HrisPaycode {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_employer") @Nullable Boolean isEmployer,
             @JsonProperty("is_pre_tax") @Nullable Boolean isPreTax,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable HrisPaycodeType type,
@@ -118,6 +125,7 @@ public class HrisPaycode {
         this.isActive = isActive;
         this.isEmployer = isEmployer;
         this.isPreTax = isPreTax;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.type = type;
@@ -129,7 +137,7 @@ public class HrisPaycode {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -178,6 +186,10 @@ public class HrisPaycode {
 
     public Optional<Boolean> isPreTax() {
         return Optional.ofNullable(this.isPreTax);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -270,6 +282,12 @@ public class HrisPaycode {
     }
 
 
+    public HrisPaycode withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisPaycode withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -316,6 +334,7 @@ public class HrisPaycode {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isEmployer, other.isEmployer) &&
             Utils.enhancedDeepEquals(this.isPreTax, other.isPreTax) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -328,8 +347,8 @@ public class HrisPaycode {
             code, companyId, createdAt,
             description, detailType, id,
             isActive, isEmployer, isPreTax,
-            name, raw, type,
-            updatedAt);
+            metadata, name, raw,
+            type, updatedAt);
     }
     
     @Override
@@ -344,6 +363,7 @@ public class HrisPaycode {
                 "isActive", isActive,
                 "isEmployer", isEmployer,
                 "isPreTax", isPreTax,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "type", type,
@@ -370,6 +390,8 @@ public class HrisPaycode {
         private Boolean isEmployer;
 
         private Boolean isPreTax;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -440,6 +462,11 @@ public class HrisPaycode {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -468,8 +495,8 @@ public class HrisPaycode {
                 code, companyId, createdAt,
                 description, detailType, id,
                 isActive, isEmployer, isPreTax,
-                name, raw, type,
-                updatedAt);
+                metadata, name, raw,
+                type, updatedAt);
         }
 
     }

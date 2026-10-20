@@ -62,6 +62,11 @@ public class RepoCommit {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<RepoMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullrequest_ids")
     private List<String> pullrequestIds;
 
@@ -99,6 +104,7 @@ public class RepoCommit {
             @JsonProperty("lines_changed") @Nullable Double linesChanged,
             @JsonProperty("lines_deleted") @Nullable Double linesDeleted,
             @JsonProperty("message") @Nullable String message,
+            @JsonProperty("metadata") @Nullable List<RepoMetadata> metadata,
             @JsonProperty("pullrequest_ids") @Nullable List<String> pullrequestIds,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nonnull String repoId,
@@ -111,6 +117,7 @@ public class RepoCommit {
         this.linesChanged = linesChanged;
         this.linesDeleted = linesDeleted;
         this.message = message;
+        this.metadata = metadata;
         this.pullrequestIds = pullrequestIds;
         this.raw = raw;
         this.repoId = Optional.ofNullable(repoId)
@@ -124,7 +131,8 @@ public class RepoCommit {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            repoId, null, null);
+            null, repoId, null,
+            null);
     }
 
     /**
@@ -159,6 +167,10 @@ public class RepoCommit {
 
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
+    }
+
+    public Optional<List<RepoMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<List<String>> pullrequestIds() {
@@ -243,6 +255,12 @@ public class RepoCommit {
     }
 
 
+    public RepoCommit withMetadata(@Nullable List<RepoMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public RepoCommit withPullrequestIds(@Nullable List<String> pullrequestIds) {
         this.pullrequestIds = pullrequestIds;
         return this;
@@ -299,6 +317,7 @@ public class RepoCommit {
             Utils.enhancedDeepEquals(this.linesChanged, other.linesChanged) &&
             Utils.enhancedDeepEquals(this.linesDeleted, other.linesDeleted) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.pullrequestIds, other.pullrequestIds) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
@@ -311,8 +330,9 @@ public class RepoCommit {
         return Utils.enhancedHash(
             branchId, createdAt, id,
             linesAdded, linesChanged, linesDeleted,
-            message, pullrequestIds, raw,
-            repoId, updatedAt, userId);
+            message, metadata, pullrequestIds,
+            raw, repoId, updatedAt,
+            userId);
     }
     
     @Override
@@ -325,6 +345,7 @@ public class RepoCommit {
                 "linesChanged", linesChanged,
                 "linesDeleted", linesDeleted,
                 "message", message,
+                "metadata", metadata,
                 "pullrequestIds", pullrequestIds,
                 "raw", raw,
                 "repoId", repoId,
@@ -348,6 +369,8 @@ public class RepoCommit {
         private Double linesDeleted;
 
         private String message;
+
+        private List<RepoMetadata> metadata;
 
         private List<String> pullrequestIds;
 
@@ -404,6 +427,11 @@ public class RepoCommit {
             return this;
         }
 
+        public Builder metadata(@Nullable List<RepoMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder pullrequestIds(@Nullable List<String> pullrequestIds) {
             this.pullrequestIds = pullrequestIds;
             return this;
@@ -442,8 +470,9 @@ public class RepoCommit {
             return new RepoCommit(
                 branchId, createdAt, id,
                 linesAdded, linesChanged, linesDeleted,
-                message, pullrequestIds, raw,
-                repoId, updatedAt, userId);
+                message, metadata, pullrequestIds,
+                raw, repoId, updatedAt,
+                userId);
         }
 
     }

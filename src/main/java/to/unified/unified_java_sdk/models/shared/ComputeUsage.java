@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -68,6 +69,11 @@ public class ComputeUsage {
     @JsonProperty("instance_id")
     private String instanceId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
+
     /**
      * Amount consumed, in unit
      */
@@ -112,6 +118,7 @@ public class ComputeUsage {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instance_id") @Nullable String instanceId,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("quantity") @Nullable Double quantity,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -124,6 +131,7 @@ public class ComputeUsage {
         this.endAt = endAt;
         this.id = id;
         this.instanceId = instanceId;
+        this.metadata = metadata;
         this.quantity = quantity;
         this.raw = raw;
         this.startAt = startAt;
@@ -135,7 +143,8 @@ public class ComputeUsage {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -185,6 +194,10 @@ public class ComputeUsage {
      */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -290,6 +303,12 @@ public class ComputeUsage {
     }
 
 
+    public ComputeUsage withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Amount consumed, in unit
      */
@@ -352,6 +371,7 @@ public class ComputeUsage {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.instanceId, other.instanceId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.quantity, other.quantity) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -364,8 +384,9 @@ public class ComputeUsage {
         return Utils.enhancedHash(
             category, costAmount, createdAt,
             currency, endAt, id,
-            instanceId, quantity, raw,
-            startAt, unit, updatedAt);
+            instanceId, metadata, quantity,
+            raw, startAt, unit,
+            updatedAt);
     }
     
     @Override
@@ -378,6 +399,7 @@ public class ComputeUsage {
                 "endAt", endAt,
                 "id", id,
                 "instanceId", instanceId,
+                "metadata", metadata,
                 "quantity", quantity,
                 "raw", raw,
                 "startAt", startAt,
@@ -401,6 +423,8 @@ public class ComputeUsage {
         private String id;
 
         private String instanceId;
+
+        private List<ComputeMetadata> metadata;
 
         private Double quantity;
 
@@ -472,6 +496,11 @@ public class ComputeUsage {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Amount consumed, in unit
          */
@@ -516,8 +545,9 @@ public class ComputeUsage {
             return new ComputeUsage(
                 category, costAmount, createdAt,
                 currency, endAt, id,
-                instanceId, quantity, raw,
-                startAt, unit, updatedAt);
+                instanceId, metadata, quantity,
+                raw, startAt, unit,
+                updatedAt);
         }
 
     }

@@ -33,6 +33,7 @@ public enum UpdateVerificationRequestQueryParamFields {
     RESPONSE_DOWNLOAD_URLS("response_download_urls"),
     RESPONSE_DETAILS("response_details"),
     RESPONSE_SOURCE("response_source"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -16,6 +16,7 @@ public enum GetTicketingCustomerQueryParamFields {
     EMAILS("emails"),
     TELEPHONES("telephones"),
     TAGS("tags"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

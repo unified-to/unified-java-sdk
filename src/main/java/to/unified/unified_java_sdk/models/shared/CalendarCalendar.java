@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -43,6 +44,11 @@ public class CalendarCalendar {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -69,6 +75,7 @@ public class CalendarCalendar {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_primary") @Nullable Boolean isPrimary,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("timezone") @Nullable String timezone,
@@ -77,6 +84,7 @@ public class CalendarCalendar {
         this.description = description;
         this.id = id;
         this.isPrimary = isPrimary;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.timezone = timezone;
@@ -86,7 +94,7 @@ public class CalendarCalendar {
     public CalendarCalendar() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -106,6 +114,10 @@ public class CalendarCalendar {
 
     public Optional<Boolean> isPrimary() {
         return Optional.ofNullable(this.isPrimary);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -159,6 +171,12 @@ public class CalendarCalendar {
     }
 
 
+    public CalendarCalendar withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarCalendar withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -200,6 +218,7 @@ public class CalendarCalendar {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPrimary, other.isPrimary) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
@@ -210,8 +229,8 @@ public class CalendarCalendar {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isPrimary, name, raw,
-            timezone, updatedAt);
+            isPrimary, metadata, name,
+            raw, timezone, updatedAt);
     }
     
     @Override
@@ -221,6 +240,7 @@ public class CalendarCalendar {
                 "description", description,
                 "id", id,
                 "isPrimary", isPrimary,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "timezone", timezone,
@@ -237,6 +257,8 @@ public class CalendarCalendar {
         private String id;
 
         private Boolean isPrimary;
+
+        private List<CalendarMetadata> metadata;
 
         private String name;
 
@@ -273,6 +295,11 @@ public class CalendarCalendar {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -299,8 +326,8 @@ public class CalendarCalendar {
         public CalendarCalendar build() {
             return new CalendarCalendar(
                 createdAt, description, id,
-                isPrimary, name, raw,
-                timezone, updatedAt);
+                isPrimary, metadata, name,
+                raw, timezone, updatedAt);
         }
 
     }

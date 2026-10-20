@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
@@ -41,10 +42,11 @@ public class Application {
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("bdb1a7fd-6455-44da-a820-2e59355bd62c")
+                    .id("ef8286ea-f81a-44c3-86af-fec2c65ead27")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -203,6 +205,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
@@ -221,10 +224,11 @@ public class Application {
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("243e70b0-f561-4a07-8cc7-905a153b821d")
+                    .id("ab83c275-c439-4b76-98be-ffc1cc57fa6d")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.444Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -325,6 +329,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
@@ -343,10 +348,11 @@ public class Application {
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("243e70b0-f561-4a07-8cc7-905a153b821d")
+                    .id("ab83c275-c439-4b76-98be-ffc1cc57fa6d")
+                    .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:20:12.444Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:31:30.896Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

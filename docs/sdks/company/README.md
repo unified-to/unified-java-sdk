@@ -55,11 +55,11 @@ public class Application {
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("00e045d6-a35c-4f8d-ab9f-00a658f71b0e")
+                    .id("0052f999-8bd4-4636-a8e8-055776c2e50c")
                     .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-602-210-4548")
-                    .updatedAt(OffsetDateTime.parse("2020-09-30T18:39:09.743Z"))
-                    .websiteUrl("https://somber-substitution.com/")
+                    .phone("1-882-360-2010")
+                    .updatedAt(OffsetDateTime.parse("2020-09-30T22:36:42.627Z"))
+                    .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -123,72 +123,61 @@ public class Application {
         CreateCrmCompanyRequest req = CreateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("7261 Salisbury Road")
-                        .address2("Apt. 778")
-                        .city("Harrisburg")
+                        .address1("3328 Wunsch Flat")
+                        .address2("Suite 905")
+                        .city("New Ryderfort")
                         .countryCode("US")
-                        .postalCode("56293-3678")
-                        .region("Pennsylvania")
-                        .regionCode("ID")
+                        .postalCode("04674")
+                        .region("Delaware")
+                        .regionCode("NY")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Balbus crapula spiculum.")
+                    .description("Venustas cruentus votum patruus terebro.")
                     .domains(List.of(
-                        "fussy-nerve.info",
-                        "sturdy-lobster.org",
-                        "greedy-offset.name"))
+                        "goodwinsons.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@hotmail.com")
+                            .email("info@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@gmail.com")
+                            .email("sales@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine.Jacobi@yahoo.com")
-                            .type(CrmEmailType.OTHER)
+                            .email("support@goodwinsons.com")
+                            .type(CrmEmailType.WORK)
                             .build()))
-                    .employees(967d)
-                    .id("d6abd698-1d3d-45a4-8901-fe9625f04f1a")
-                    .industry("Infrastructure")
+                    .employees(4177d)
+                    .id("336c3fcd-902d-45fa-90f8-8df365343f61")
+                    .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://blue-license.org",
-                        "https://minor-formation.com",
-                        "https://ecstatic-hammock.com"))
+                        "https://www.linkedin.com/company/goodwin-and-sons"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("1ba9690d-c212-401f-8248-e9e3a25b7e7c")
+                            .id("bd33b3c2-c4f5-4a26-81e4-518100efbcc9")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("esse"))
+                            .value(CrmMetadataValue.of("unde"))
                             .build()))
                     .name("Goodwin and Sons")
                     .tags(List.of(
-                        "quaerat",
-                        "valeo"))
+                        "censura",
+                        "abstergo",
+                        "ipsam"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(432) 849-2690")
-                            .type(CrmTelephoneType.MOBILE)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(606) 871-2046")
-                            .type(CrmTelephoneType.OTHER)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(842) 258-9395")
-                            .type(CrmTelephoneType.MOBILE)
+                            .telephone("(667) 607-5872")
+                            .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Europe/San_Marino")
-                    .updatedAt(OffsetDateTime.parse("2025-03-01T14:45:10.758Z"))
+                    .timezone("Atlantic/Azores")
+                    .updatedAt(OffsetDateTime.parse("2025-03-02T06:04:50.216Z"))
                     .websites(List.of(
-                        "https://wise-possession.org"))
+                        "https://www.goodwinsons.com"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -232,6 +221,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyResponse;
@@ -250,18 +240,19 @@ public class Application {
         CreateHrisCompanyRequest req = CreateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("2549 Church Walk")
-                        .city("Lake Nettiebury")
+                        .address1("675 Lavinia Lights")
+                        .city("Rocky Mount")
                         .countryCode("US")
-                        .postalCode("32877-4898")
-                        .region("Idaho")
-                        .regionCode("PA")
+                        .postalCode("67325")
+                        .region("Kentucky")
+                        .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("45b6c427-8d2b-43f5-9ef1-67437e00c48f")
-                    .legalName("Schultz LLC")
+                    .id("47784d40-7748-4310-b79c-18af4600e7c2")
+                    .legalName("Gottlieb Group LLC")
+                    .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-06T15:07:53.300Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-07T11:32:27.729Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -726,11 +717,11 @@ public class Application {
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("11baf013-30b0-4258-beee-72a178c5cd72")
+                    .id("1f6c8b6c-4a0b-4a39-ae91-60aff5ba4bf2")
                     .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-602-210-4548")
-                    .updatedAt(OffsetDateTime.parse("2020-09-30T18:39:09.747Z"))
-                    .websiteUrl("https://somber-substitution.com/")
+                    .phone("1-882-360-2010")
+                    .updatedAt(OffsetDateTime.parse("2020-09-30T22:36:42.629Z"))
+                    .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -795,72 +786,61 @@ public class Application {
         PatchCrmCompanyRequest req = PatchCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("7261 Salisbury Road")
-                        .address2("Apt. 778")
-                        .city("Harrisburg")
+                        .address1("3328 Wunsch Flat")
+                        .address2("Suite 905")
+                        .city("New Ryderfort")
                         .countryCode("US")
-                        .postalCode("56293-3678")
-                        .region("Pennsylvania")
-                        .regionCode("ID")
+                        .postalCode("04674")
+                        .region("Delaware")
+                        .regionCode("NY")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Balbus crapula spiculum.")
+                    .description("Venustas cruentus votum patruus terebro.")
                     .domains(List.of(
-                        "fussy-nerve.info",
-                        "sturdy-lobster.org",
-                        "greedy-offset.name"))
+                        "goodwinsons.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@hotmail.com")
+                            .email("info@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@gmail.com")
+                            .email("sales@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine.Jacobi@yahoo.com")
-                            .type(CrmEmailType.OTHER)
+                            .email("support@goodwinsons.com")
+                            .type(CrmEmailType.WORK)
                             .build()))
-                    .employees(967d)
-                    .id("07463859-db0b-49c7-86ff-f82cb41d669a")
-                    .industry("Infrastructure")
+                    .employees(4177d)
+                    .id("990fc194-d42e-4046-a9b9-cbddf78ecf7b")
+                    .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://blue-license.org",
-                        "https://minor-formation.com",
-                        "https://ecstatic-hammock.com"))
+                        "https://www.linkedin.com/company/goodwin-and-sons"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("4f2f5258-0d6c-4fcc-b0c5-64def5911372")
+                            .id("7127d8eb-fc60-49d0-b798-b85e108a2dac")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("esse"))
+                            .value(CrmMetadataValue.of("unde"))
                             .build()))
                     .name("Goodwin and Sons")
                     .tags(List.of(
-                        "quaerat",
-                        "valeo"))
+                        "censura",
+                        "abstergo",
+                        "ipsam"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(432) 849-2690")
-                            .type(CrmTelephoneType.MOBILE)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(606) 871-2046")
-                            .type(CrmTelephoneType.OTHER)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(842) 258-9395")
-                            .type(CrmTelephoneType.MOBILE)
+                            .telephone("(667) 607-5872")
+                            .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Europe/San_Marino")
-                    .updatedAt(OffsetDateTime.parse("2025-03-01T14:45:10.780Z"))
+                    .timezone("Atlantic/Azores")
+                    .updatedAt(OffsetDateTime.parse("2025-03-02T06:04:50.249Z"))
                     .websites(List.of(
-                        "https://wise-possession.org"))
+                        "https://www.goodwinsons.com"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -905,6 +885,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyResponse;
@@ -923,18 +904,19 @@ public class Application {
         PatchHrisCompanyRequest req = PatchHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("2549 Church Walk")
-                        .city("Lake Nettiebury")
+                        .address1("675 Lavinia Lights")
+                        .city("Rocky Mount")
                         .countryCode("US")
-                        .postalCode("32877-4898")
-                        .region("Idaho")
-                        .regionCode("PA")
+                        .postalCode("67325")
+                        .region("Kentucky")
+                        .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("08e0b1b3-2126-4f92-912f-efa7f3fc5715")
-                    .legalName("Schultz LLC")
+                    .id("0a42fa0f-6e39-4aa0-8793-a2e9ba9a37f0")
+                    .legalName("Gottlieb Group LLC")
+                    .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-06T15:07:53.323Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-07T11:32:27.746Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1166,11 +1148,11 @@ public class Application {
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("11baf013-30b0-4258-beee-72a178c5cd72")
+                    .id("1f6c8b6c-4a0b-4a39-ae91-60aff5ba4bf2")
                     .name("Gulgowski, Dibbert and Wilderman")
-                    .phone("1-602-210-4548")
-                    .updatedAt(OffsetDateTime.parse("2020-09-30T18:39:09.747Z"))
-                    .websiteUrl("https://somber-substitution.com/")
+                    .phone("1-882-360-2010")
+                    .updatedAt(OffsetDateTime.parse("2020-09-30T22:36:42.629Z"))
+                    .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1235,72 +1217,61 @@ public class Application {
         UpdateCrmCompanyRequest req = UpdateCrmCompanyRequest.builder()
                 .crmCompany(CrmCompany.builder()
                     .address(PropertyCrmCompanyAddress.builder()
-                        .address1("7261 Salisbury Road")
-                        .address2("Apt. 778")
-                        .city("Harrisburg")
+                        .address1("3328 Wunsch Flat")
+                        .address2("Suite 905")
+                        .city("New Ryderfort")
                         .countryCode("US")
-                        .postalCode("56293-3678")
-                        .region("Pennsylvania")
-                        .regionCode("ID")
+                        .postalCode("04674")
+                        .region("Delaware")
+                        .regionCode("NY")
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-05-11T18:26:32.925Z"))
-                    .description("Balbus crapula spiculum.")
+                    .description("Venustas cruentus votum patruus terebro.")
                     .domains(List.of(
-                        "fussy-nerve.info",
-                        "sturdy-lobster.org",
-                        "greedy-offset.name"))
+                        "goodwinsons.com"))
                     .emails(List.of(
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@hotmail.com")
+                            .email("info@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine_Jacobi@gmail.com")
+                            .email("sales@goodwinsons.com")
                             .type(CrmEmailType.WORK)
                             .build(),
                         CrmEmail.builder()
-                            .email("Sandrine.Jacobi@yahoo.com")
-                            .type(CrmEmailType.OTHER)
+                            .email("support@goodwinsons.com")
+                            .type(CrmEmailType.WORK)
                             .build()))
-                    .employees(967d)
-                    .id("07463859-db0b-49c7-86ff-f82cb41d669a")
-                    .industry("Infrastructure")
+                    .employees(4177d)
+                    .id("990fc194-d42e-4046-a9b9-cbddf78ecf7b")
+                    .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
-                        "https://blue-license.org",
-                        "https://minor-formation.com",
-                        "https://ecstatic-hammock.com"))
+                        "https://www.linkedin.com/company/goodwin-and-sons"))
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("4f2f5258-0d6c-4fcc-b0c5-64def5911372")
+                            .id("7127d8eb-fc60-49d0-b798-b85e108a2dac")
                             .namespace("custom")
                             .slug("custom_property")
-                            .value(CrmMetadataValue.of("esse"))
+                            .value(CrmMetadataValue.of("unde"))
                             .build()))
                     .name("Goodwin and Sons")
                     .tags(List.of(
-                        "quaerat",
-                        "valeo"))
+                        "censura",
+                        "abstergo",
+                        "ipsam"))
                     .telephones(List.of(
                         CrmTelephone.builder()
-                            .telephone("(432) 849-2690")
-                            .type(CrmTelephoneType.MOBILE)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(606) 871-2046")
-                            .type(CrmTelephoneType.OTHER)
-                            .build(),
-                        CrmTelephone.builder()
-                            .telephone("(842) 258-9395")
-                            .type(CrmTelephoneType.MOBILE)
+                            .telephone("(667) 607-5872")
+                            .type(CrmTelephoneType.HOME)
                             .build()))
-                    .timezone("Europe/San_Marino")
-                    .updatedAt(OffsetDateTime.parse("2025-03-01T14:45:10.780Z"))
+                    .timezone("Atlantic/Azores")
+                    .updatedAt(OffsetDateTime.parse("2025-03-02T06:04:50.249Z"))
                     .websites(List.of(
-                        "https://wise-possession.org"))
+                        "https://www.goodwinsons.com"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1345,6 +1316,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyResponse;
@@ -1363,18 +1335,19 @@ public class Application {
         UpdateHrisCompanyRequest req = UpdateHrisCompanyRequest.builder()
                 .hrisCompany(HrisCompany.builder()
                     .address(PropertyHrisCompanyAddress.builder()
-                        .address1("2549 Church Walk")
-                        .city("Lake Nettiebury")
+                        .address1("675 Lavinia Lights")
+                        .city("Rocky Mount")
                         .countryCode("US")
-                        .postalCode("32877-4898")
-                        .region("Idaho")
-                        .regionCode("PA")
+                        .postalCode("67325")
+                        .region("Kentucky")
+                        .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("08e0b1b3-2126-4f92-912f-efa7f3fc5715")
-                    .legalName("Schultz LLC")
+                    .id("0a42fa0f-6e39-4aa0-8793-a2e9ba9a37f0")
+                    .legalName("Gottlieb Group LLC")
+                    .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-06T15:07:53.323Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-07T11:32:27.746Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

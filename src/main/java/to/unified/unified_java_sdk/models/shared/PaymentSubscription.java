@@ -117,6 +117,11 @@ public class PaymentSubscription {
     @JsonProperty("lineitems")
     private List<PaymentLineitem> lineitems;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PaymentMetadata> metadata;
+
     /**
      * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
      */
@@ -170,6 +175,7 @@ public class PaymentSubscription {
             @JsonProperty("interval_unit") @Nullable IntervalUnit intervalUnit,
             @JsonProperty("invoice_id") @Nullable String invoiceId,
             @JsonProperty("lineitems") @Nullable List<PaymentLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<PaymentMetadata> metadata,
             @JsonProperty("month") @Nullable Double month,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -191,6 +197,7 @@ public class PaymentSubscription {
         this.intervalUnit = intervalUnit;
         this.invoiceId = invoiceId;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.month = month;
         this.raw = raw;
         this.startAt = startAt;
@@ -206,7 +213,8 @@ public class PaymentSubscription {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -299,6 +307,10 @@ public class PaymentSubscription {
 
     public Optional<List<PaymentLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<PaymentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -461,6 +473,12 @@ public class PaymentSubscription {
     }
 
 
+    public PaymentSubscription withMetadata(@Nullable List<PaymentMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
      */
@@ -531,6 +549,7 @@ public class PaymentSubscription {
             Utils.enhancedDeepEquals(this.intervalUnit, other.intervalUnit) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.month, other.month) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -547,8 +566,9 @@ public class PaymentSubscription {
             dayOfMonth, dayOfWeek, description,
             endAt, id, interval,
             intervalUnit, invoiceId, lineitems,
-            month, raw, startAt,
-            status, totalAmount, updatedAt);
+            metadata, month, raw,
+            startAt, status, totalAmount,
+            updatedAt);
     }
     
     @Override
@@ -569,6 +589,7 @@ public class PaymentSubscription {
                 "intervalUnit", intervalUnit,
                 "invoiceId", invoiceId,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "month", month,
                 "raw", raw,
                 "startAt", startAt,
@@ -609,6 +630,8 @@ public class PaymentSubscription {
         private String invoiceId;
 
         private List<PaymentLineitem> lineitems;
+
+        private List<PaymentMetadata> metadata;
 
         private Double month;
 
@@ -733,6 +756,11 @@ public class PaymentSubscription {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PaymentMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
          */
@@ -779,8 +807,9 @@ public class PaymentSubscription {
                 dayOfMonth, dayOfWeek, description,
                 endAt, id, interval,
                 intervalUnit, invoiceId, lineitems,
-                month, raw, startAt,
-                status, totalAmount, updatedAt);
+                metadata, month, raw,
+                startAt, status, totalAmount,
+                updatedAt);
         }
 
     }

@@ -29,6 +29,7 @@ public enum GetPaymentSubscriptionQueryParamFields {
     DAY_OF_WEEK("day_of_week"),
     INTERVAL("interval"),
     LINEITEMS("lineitems"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

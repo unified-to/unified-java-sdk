@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class KmsComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<KmsPageMetadata> metadata;
 
     /**
      * (reference to KmsPage)
@@ -82,6 +88,7 @@ public class KmsComment {
             @JsonProperty("content_type") @Nullable ContentType contentType,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<KmsPageMetadata> metadata,
             @JsonProperty("page_id") @Nullable String pageId,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -92,6 +99,7 @@ public class KmsComment {
         this.contentType = contentType;
         this.createdAt = createdAt;
         this.id = id;
+        this.metadata = metadata;
         this.pageId = pageId;
         this.parentId = parentId;
         this.raw = raw;
@@ -104,7 +112,7 @@ public class KmsComment {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> content() {
@@ -124,6 +132,10 @@ public class KmsComment {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<KmsPageMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -191,6 +203,12 @@ public class KmsComment {
     }
 
 
+    public KmsComment withMetadata(@Nullable List<KmsPageMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * (reference to KmsPage)
      */
@@ -250,6 +268,7 @@ public class KmsComment {
             Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.pageId, other.pageId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -262,9 +281,9 @@ public class KmsComment {
     public int hashCode() {
         return Utils.enhancedHash(
             content, contentType, createdAt,
-            id, pageId, parentId,
-            raw, type, updatedAt,
-            userId);
+            id, metadata, pageId,
+            parentId, raw, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -274,6 +293,7 @@ public class KmsComment {
                 "contentType", contentType,
                 "createdAt", createdAt,
                 "id", id,
+                "metadata", metadata,
                 "pageId", pageId,
                 "parentId", parentId,
                 "raw", raw,
@@ -292,6 +312,8 @@ public class KmsComment {
         private OffsetDateTime createdAt;
 
         private String id;
+
+        private List<KmsPageMetadata> metadata;
 
         private String pageId;
 
@@ -329,6 +351,11 @@ public class KmsComment {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<KmsPageMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -374,9 +401,9 @@ public class KmsComment {
         public KmsComment build() {
             return new KmsComment(
                 content, contentType, createdAt,
-                id, pageId, parentId,
-                raw, type, updatedAt,
-                userId);
+                id, metadata, pageId,
+                parentId, raw, type,
+                updatedAt, userId);
         }
 
     }

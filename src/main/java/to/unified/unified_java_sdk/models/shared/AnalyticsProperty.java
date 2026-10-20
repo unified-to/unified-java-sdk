@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class AnalyticsProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
     private String industry;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AnalyticsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -75,6 +81,7 @@ public class AnalyticsProperty {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("industry") @Nullable String industry,
+            @JsonProperty("metadata") @Nullable List<AnalyticsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -84,6 +91,7 @@ public class AnalyticsProperty {
         this.currency = currency;
         this.id = id;
         this.industry = industry;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -94,7 +102,8 @@ public class AnalyticsProperty {
     public AnalyticsProperty() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -114,6 +123,10 @@ public class AnalyticsProperty {
 
     public Optional<String> industry() {
         return Optional.ofNullable(this.industry);
+    }
+
+    public Optional<List<AnalyticsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -174,6 +187,12 @@ public class AnalyticsProperty {
     }
 
 
+    public AnalyticsProperty withMetadata(@Nullable List<AnalyticsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AnalyticsProperty withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -224,6 +243,7 @@ public class AnalyticsProperty {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.industry, other.industry) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -235,8 +255,9 @@ public class AnalyticsProperty {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, id,
-            industry, name, parentId,
-            raw, timezone, updatedAt);
+            industry, metadata, name,
+            parentId, raw, timezone,
+            updatedAt);
     }
     
     @Override
@@ -246,6 +267,7 @@ public class AnalyticsProperty {
                 "currency", currency,
                 "id", id,
                 "industry", industry,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -263,6 +285,8 @@ public class AnalyticsProperty {
         private String id;
 
         private String industry;
+
+        private List<AnalyticsMetadata> metadata;
 
         private String name;
 
@@ -301,6 +325,11 @@ public class AnalyticsProperty {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AnalyticsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -335,8 +364,9 @@ public class AnalyticsProperty {
         public AnalyticsProperty build() {
             return new AnalyticsProperty(
                 createdAt, currency, id,
-                industry, name, parentId,
-                raw, timezone, updatedAt);
+                industry, metadata, name,
+                parentId, raw, timezone,
+                updatedAt);
         }
 
     }

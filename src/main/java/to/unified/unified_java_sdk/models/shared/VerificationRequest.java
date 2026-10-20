@@ -41,6 +41,11 @@ public class VerificationRequest {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<VerificationMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_id")
     private String packageId;
 
@@ -181,6 +186,7 @@ public class VerificationRequest {
             @JsonProperty("candidate_id") @Nullable String candidateId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<VerificationMetadata> metadata,
             @JsonProperty("package_id") @Nullable String packageId,
             @JsonProperty("parameters") @Nullable List<VerificationParameterInput> parameters,
             @JsonProperty("profile_addresses") @Nullable List<VerificationAddress> profileAddresses,
@@ -206,6 +212,7 @@ public class VerificationRequest {
         this.candidateId = candidateId;
         this.createdAt = createdAt;
         this.id = id;
+        this.metadata = metadata;
         this.packageId = packageId;
         this.parameters = parameters;
         this.profileAddresses = profileAddresses;
@@ -239,7 +246,7 @@ public class VerificationRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -258,6 +265,10 @@ public class VerificationRequest {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<VerificationMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> packageId() {
@@ -410,6 +421,12 @@ public class VerificationRequest {
 
     public VerificationRequest withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public VerificationRequest withMetadata(@Nullable List<VerificationMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -596,6 +613,7 @@ public class VerificationRequest {
             Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.packageId, other.packageId) &&
             Utils.enhancedDeepEquals(this.parameters, other.parameters) &&
             Utils.enhancedDeepEquals(this.profileAddresses, other.profileAddresses) &&
@@ -624,14 +642,14 @@ public class VerificationRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             candidateId, createdAt, id,
-            packageId, parameters, profileAddresses,
-            profileDateOfBirth, profileEmails, profileGender,
-            profileIpAddress, profileName, profileNationalIdentifier,
-            profileTelephones, raw, responseCompletedAt,
-            responseDetails, responseDownloadUrls, responseExpiresAt,
-            responseIssuedAt, responseRedirectUrl, responseScore,
-            responseSource, responseStatus, targetUrl,
-            updatedAt);
+            metadata, packageId, parameters,
+            profileAddresses, profileDateOfBirth, profileEmails,
+            profileGender, profileIpAddress, profileName,
+            profileNationalIdentifier, profileTelephones, raw,
+            responseCompletedAt, responseDetails, responseDownloadUrls,
+            responseExpiresAt, responseIssuedAt, responseRedirectUrl,
+            responseScore, responseSource, responseStatus,
+            targetUrl, updatedAt);
     }
     
     @Override
@@ -640,6 +658,7 @@ public class VerificationRequest {
                 "candidateId", candidateId,
                 "createdAt", createdAt,
                 "id", id,
+                "metadata", metadata,
                 "packageId", packageId,
                 "parameters", parameters,
                 "profileAddresses", profileAddresses,
@@ -672,6 +691,8 @@ public class VerificationRequest {
         private OffsetDateTime createdAt;
 
         private String id;
+
+        private List<VerificationMetadata> metadata;
 
         private String packageId;
 
@@ -739,6 +760,11 @@ public class VerificationRequest {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<VerificationMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -892,14 +918,14 @@ public class VerificationRequest {
         public VerificationRequest build() {
             return new VerificationRequest(
                 candidateId, createdAt, id,
-                packageId, parameters, profileAddresses,
-                profileDateOfBirth, profileEmails, profileGender,
-                profileIpAddress, profileName, profileNationalIdentifier,
-                profileTelephones, raw, responseCompletedAt,
-                responseDetails, responseDownloadUrls, responseExpiresAt,
-                responseIssuedAt, responseRedirectUrl, responseScore,
-                responseSource, responseStatus, targetUrl,
-                updatedAt);
+                metadata, packageId, parameters,
+                profileAddresses, profileDateOfBirth, profileEmails,
+                profileGender, profileIpAddress, profileName,
+                profileNationalIdentifier, profileTelephones, raw,
+                responseCompletedAt, responseDetails, responseDownloadUrls,
+                responseExpiresAt, responseIssuedAt, responseRedirectUrl,
+                responseScore, responseSource, responseStatus,
+                targetUrl, updatedAt);
         }
 
     }

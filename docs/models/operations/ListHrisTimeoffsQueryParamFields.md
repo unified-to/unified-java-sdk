@@ -30,4 +30,5 @@ ListHrisTimeoffsQueryParamFields value = ListHrisTimeoffsQueryParamFields.ID;
 | `TYPE`             | type               |
 | `DURATION`         | duration           |
 | `DURATION_TYPE`    | duration_type      |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

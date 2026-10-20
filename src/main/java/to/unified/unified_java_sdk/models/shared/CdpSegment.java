@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -61,6 +62,11 @@ public class CdpSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CdpMetadata> metadata;
 
     /**
      * The name of the segment/audience
@@ -119,6 +125,7 @@ public class CdpSegment {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<CdpMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("size") @Nullable Double size,
@@ -132,6 +139,7 @@ public class CdpSegment {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.size = size;
@@ -146,7 +154,7 @@ public class CdpSegment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -189,6 +197,10 @@ public class CdpSegment {
      */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<CdpMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -299,6 +311,12 @@ public class CdpSegment {
     }
 
 
+    public CdpSegment withMetadata(@Nullable List<CdpMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the segment/audience
      */
@@ -378,6 +396,7 @@ public class CdpSegment {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
@@ -392,9 +411,9 @@ public class CdpSegment {
         return Utils.enhancedHash(
             computeMode, createdAt, definition,
             description, id, isActive,
-            name, raw, size,
-            slug, sourceId, type,
-            updatedAt);
+            metadata, name, raw,
+            size, slug, sourceId,
+            type, updatedAt);
     }
     
     @Override
@@ -406,6 +425,7 @@ public class CdpSegment {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "size", size,
@@ -429,6 +449,8 @@ public class CdpSegment {
         private String id;
 
         private Boolean isActive;
+
+        private List<CdpMetadata> metadata;
 
         private String name;
 
@@ -496,6 +518,11 @@ public class CdpSegment {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CdpMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The name of the segment/audience
          */
@@ -556,9 +583,9 @@ public class CdpSegment {
             return new CdpSegment(
                 computeMode, createdAt, definition,
                 description, id, isActive,
-                name, raw, size,
-                slug, sourceId, type,
-                updatedAt);
+                metadata, name, raw,
+                size, slug, sourceId,
+                type, updatedAt);
         }
 
     }

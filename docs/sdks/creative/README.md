@@ -42,14 +42,15 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("507e8c60-9ddd-49a0-8d61-b40428bcc3ea")
+                    .id("6e244bba-8e9d-4712-83a5-e647756dac5a")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.100Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.549Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -227,14 +228,15 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("35e95d9b-12b2-4754-828b-4be3f3a1089d")
+                    .id("d3b608e0-44e2-4d2e-85f2-c1ad480ff726")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.557Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -354,14 +356,15 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("35e95d9b-12b2-4754-828b-4be3f3a1089d")
+                    .id("d3b608e0-44e2-4d2e-85f2-c1ad480ff726")
                     .labels(List.of(
                         "coma",
                         "accedo",
                         "termes"))
+                    .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T08:12:09.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T12:23:01.557Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

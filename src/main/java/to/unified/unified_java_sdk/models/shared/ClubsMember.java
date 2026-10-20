@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -79,6 +80,11 @@ public class ClubsMember {
     @JsonProperty("membership_status")
     private ClubsMemberMembershipStatus membershipStatus;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ClubsMetadata> metadata;
+
     /**
      * The full name of the member (first name + last initial for Strava)
      */
@@ -110,6 +116,7 @@ public class ClubsMember {
             @JsonProperty("is_owner") @Nullable Boolean isOwner,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("membership_status") @Nullable ClubsMemberMembershipStatus membershipStatus,
+            @JsonProperty("metadata") @Nullable List<ClubsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -121,6 +128,7 @@ public class ClubsMember {
         this.isOwner = isOwner;
         this.lastName = lastName;
         this.membershipStatus = membershipStatus;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -130,7 +138,7 @@ public class ClubsMember {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -187,6 +195,10 @@ public class ClubsMember {
      */
     public Optional<ClubsMemberMembershipStatus> membershipStatus() {
         return Optional.ofNullable(this.membershipStatus);
+    }
+
+    public Optional<List<ClubsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -287,6 +299,12 @@ public class ClubsMember {
     }
 
 
+    public ClubsMember withMetadata(@Nullable List<ClubsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The full name of the member (first name + last initial for Strava)
      */
@@ -332,6 +350,7 @@ public class ClubsMember {
             Utils.enhancedDeepEquals(this.isOwner, other.isOwner) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.membershipStatus, other.membershipStatus) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -342,8 +361,8 @@ public class ClubsMember {
         return Utils.enhancedHash(
             createdAt, firstName, groupId,
             id, isAdmin, isOwner,
-            lastName, membershipStatus, name,
-            raw, updatedAt);
+            lastName, membershipStatus, metadata,
+            name, raw, updatedAt);
     }
     
     @Override
@@ -357,6 +376,7 @@ public class ClubsMember {
                 "isOwner", isOwner,
                 "lastName", lastName,
                 "membershipStatus", membershipStatus,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt);
@@ -380,6 +400,8 @@ public class ClubsMember {
         private String lastName;
 
         private ClubsMemberMembershipStatus membershipStatus;
+
+        private List<ClubsMetadata> metadata;
 
         private String name;
 
@@ -455,6 +477,11 @@ public class ClubsMember {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ClubsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The full name of the member (first name + last initial for Strava)
          */
@@ -483,8 +510,8 @@ public class ClubsMember {
             return new ClubsMember(
                 createdAt, firstName, groupId,
                 id, isAdmin, isOwner,
-                lastName, membershipStatus, name,
-                raw, updatedAt);
+                lastName, membershipStatus, metadata,
+                name, raw, updatedAt);
         }
 
     }

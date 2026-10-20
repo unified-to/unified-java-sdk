@@ -45,6 +45,11 @@ public class AdsReport {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     private List<AdsReportMetrics> metrics;
 
@@ -78,6 +83,7 @@ public class AdsReport {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("metrics") @Nullable List<AdsReportMetrics> metrics,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -87,6 +93,7 @@ public class AdsReport {
         this.currency = currency;
         this.endAt = endAt;
         this.id = id;
+        this.metadata = metadata;
         this.metrics = metrics;
         this.organizationId = organizationId;
         this.raw = raw;
@@ -97,7 +104,8 @@ public class AdsReport {
     public AdsReport() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -120,6 +128,10 @@ public class AdsReport {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<List<AdsReportMetrics>> metrics() {
@@ -183,6 +195,12 @@ public class AdsReport {
     }
 
 
+    public AdsReport withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsReport withMetrics(@Nullable List<AdsReportMetrics> metrics) {
         this.metrics = metrics;
         return this;
@@ -233,6 +251,7 @@ public class AdsReport {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metrics, other.metrics) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -244,8 +263,9 @@ public class AdsReport {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, endAt,
-            id, metrics, organizationId,
-            raw, startAt, updatedAt);
+            id, metadata, metrics,
+            organizationId, raw, startAt,
+            updatedAt);
     }
     
     @Override
@@ -255,6 +275,7 @@ public class AdsReport {
                 "currency", currency,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "metrics", metrics,
                 "organizationId", organizationId,
                 "raw", raw,
@@ -272,6 +293,8 @@ public class AdsReport {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<AdsMetadata> metadata;
 
         private List<AdsReportMetrics> metrics;
 
@@ -313,6 +336,11 @@ public class AdsReport {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder metrics(@Nullable List<AdsReportMetrics> metrics) {
             this.metrics = metrics;
             return this;
@@ -347,8 +375,9 @@ public class AdsReport {
         public AdsReport build() {
             return new AdsReport(
                 createdAt, currency, endAt,
-                id, metrics, organizationId,
-                raw, startAt, updatedAt);
+                id, metadata, metrics,
+                organizationId, raw, startAt,
+                updatedAt);
         }
 
     }

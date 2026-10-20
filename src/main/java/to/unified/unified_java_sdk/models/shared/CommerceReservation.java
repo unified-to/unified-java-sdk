@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -71,6 +72,11 @@ public class CommerceReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -134,6 +140,7 @@ public class CommerceReservation {
             @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("item_name") @Nullable String itemName,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("size") @Nullable Double size,
@@ -152,6 +159,7 @@ public class CommerceReservation {
         this.itemId = itemId;
         this.itemName = itemName;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.notes = notes;
         this.raw = raw;
         this.size = size;
@@ -169,7 +177,8 @@ public class CommerceReservation {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -218,6 +227,10 @@ public class CommerceReservation {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<CommerceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -336,6 +349,12 @@ public class CommerceReservation {
     }
 
 
+    public CommerceReservation withMetadata(@Nullable List<CommerceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CommerceReservation withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -418,6 +437,7 @@ public class CommerceReservation {
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.itemName, other.itemName) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
@@ -435,9 +455,10 @@ public class CommerceReservation {
             createdAt, endAt, guestEmail,
             guestName, guestPhone, id,
             itemId, itemName, locationId,
-            notes, raw, size,
-            staffName, staffUserId, startAt,
-            status, updatedAt, url);
+            metadata, notes, raw,
+            size, staffName, staffUserId,
+            startAt, status, updatedAt,
+            url);
     }
     
     @Override
@@ -452,6 +473,7 @@ public class CommerceReservation {
                 "itemId", itemId,
                 "itemName", itemName,
                 "locationId", locationId,
+                "metadata", metadata,
                 "notes", notes,
                 "raw", raw,
                 "size", size,
@@ -483,6 +505,8 @@ public class CommerceReservation {
         private String itemName;
 
         private String locationId;
+
+        private List<CommerceMetadata> metadata;
 
         private String notes;
 
@@ -563,6 +587,11 @@ public class CommerceReservation {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
@@ -622,9 +651,10 @@ public class CommerceReservation {
                 createdAt, endAt, guestEmail,
                 guestName, guestPhone, id,
                 itemId, itemName, locationId,
-                notes, raw, size,
-                staffName, staffUserId, startAt,
-                status, updatedAt, url);
+                metadata, notes, raw,
+                size, staffName, staffUserId,
+                startAt, status, updatedAt,
+                url);
         }
 
     }

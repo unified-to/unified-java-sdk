@@ -13,6 +13,7 @@ public enum ListCrmTaxonomiesQueryParamFields {
     NAME("name"),
     LABEL("label"),
     TYPE("type"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

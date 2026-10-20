@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -92,6 +93,11 @@ public class HrisBenefit {
     @JsonProperty("is_active")
     private Boolean isActive;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * e.g. "401(k) Plan"
      */
@@ -136,6 +142,7 @@ public class HrisBenefit {
             @JsonProperty("frequency") @Nullable HrisBenefitFrequency frequency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("tax") @Nullable Tax tax,
@@ -152,6 +159,7 @@ public class HrisBenefit {
         this.frequency = frequency;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.tax = tax;
@@ -165,7 +173,7 @@ public class HrisBenefit {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -229,6 +237,10 @@ public class HrisBenefit {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -350,6 +362,12 @@ public class HrisBenefit {
     }
 
 
+    public HrisBenefit withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * e.g. "401(k) Plan"
      */
@@ -410,6 +428,7 @@ public class HrisBenefit {
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.tax, other.tax) &&
@@ -423,9 +442,9 @@ public class HrisBenefit {
             companyId, coverageLevel, createdAt,
             currency, description, employerContributionAmount,
             employerContributionMaxAmount, employerContributionType, frequency,
-            id, isActive, name,
-            raw, tax, type,
-            updatedAt);
+            id, isActive, metadata,
+            name, raw, tax,
+            type, updatedAt);
     }
     
     @Override
@@ -442,6 +461,7 @@ public class HrisBenefit {
                 "frequency", frequency,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "tax", tax,
@@ -473,6 +493,8 @@ public class HrisBenefit {
         private String id;
 
         private Boolean isActive;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -562,6 +584,11 @@ public class HrisBenefit {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * e.g. "401(k) Plan"
          */
@@ -601,9 +628,9 @@ public class HrisBenefit {
                 companyId, coverageLevel, createdAt,
                 currency, description, employerContributionAmount,
                 employerContributionMaxAmount, employerContributionType, frequency,
-                id, isActive, name,
-                raw, tax, type,
-                updatedAt);
+                id, isActive, metadata,
+                name, raw, tax,
+                type, updatedAt);
         }
 
     }

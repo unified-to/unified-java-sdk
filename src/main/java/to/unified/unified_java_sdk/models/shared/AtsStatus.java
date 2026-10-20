@@ -11,6 +11,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -36,6 +37,11 @@ public class AtsStatus {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AtsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
     private String originalStatus;
 
@@ -54,12 +60,14 @@ public class AtsStatus {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("original_status") @Nullable String originalStatus,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable AtsStatusStatus status) {
         this.description = description;
         this.id = id;
         this.jobId = jobId;
+        this.metadata = metadata;
         this.originalStatus = originalStatus;
         this.raw = raw;
         this.status = status;
@@ -67,7 +75,8 @@ public class AtsStatus {
     
     public AtsStatus() {
         this(null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> description() {
@@ -83,6 +92,10 @@ public class AtsStatus {
      */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
+    }
+
+    public Optional<List<AtsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> originalStatus() {
@@ -123,6 +136,12 @@ public class AtsStatus {
     }
 
 
+    public AtsStatus withMetadata(@Nullable List<AtsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AtsStatus withOriginalStatus(@Nullable String originalStatus) {
         this.originalStatus = originalStatus;
         return this;
@@ -154,6 +173,7 @@ public class AtsStatus {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.originalStatus, other.originalStatus) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.status, other.status);
@@ -163,7 +183,8 @@ public class AtsStatus {
     public int hashCode() {
         return Utils.enhancedHash(
             description, id, jobId,
-            originalStatus, raw, status);
+            metadata, originalStatus, raw,
+            status);
     }
     
     @Override
@@ -172,6 +193,7 @@ public class AtsStatus {
                 "description", description,
                 "id", id,
                 "jobId", jobId,
+                "metadata", metadata,
                 "originalStatus", originalStatus,
                 "raw", raw,
                 "status", status);
@@ -185,6 +207,8 @@ public class AtsStatus {
         private String id;
 
         private String jobId;
+
+        private List<AtsMetadata> metadata;
 
         private String originalStatus;
 
@@ -214,6 +238,11 @@ public class AtsStatus {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder originalStatus(@Nullable String originalStatus) {
             this.originalStatus = originalStatus;
             return this;
@@ -232,7 +261,8 @@ public class AtsStatus {
         public AtsStatus build() {
             return new AtsStatus(
                 description, id, jobId,
-                originalStatus, raw, status);
+                metadata, originalStatus, raw,
+                status);
         }
 
     }

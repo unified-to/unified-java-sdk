@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
@@ -41,11 +42,12 @@ public class Application {
 
         CreateRepoBranchRequest req = CreateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("voluptas")
+                    .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("43afef90-1ea2-4777-a099-46431f442ab3")
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T02:25:50.439Z"))
+                    .id("f153941e-906c-47bc-ac31-f20cf8653968")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T04:45:31.955Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -204,6 +206,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoBranchResponse;
@@ -222,11 +225,12 @@ public class Application {
 
         PatchRepoBranchRequest req = PatchRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("voluptas")
+                    .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("78fd506d-4fbf-4fc6-9d4d-403df92fc4bf")
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T02:25:50.440Z"))
+                    .id("94846ca8-eb7d-4c38-82f9-30df682f7701")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T04:45:31.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -327,6 +331,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoBranchResponse;
@@ -345,11 +350,12 @@ public class Application {
 
         UpdateRepoBranchRequest req = UpdateRepoBranchRequest.builder()
                 .repoBranch(RepoBranch.builder()
-                    .name("voluptas")
+                    .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("78fd506d-4fbf-4fc6-9d4d-403df92fc4bf")
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T02:25:50.440Z"))
+                    .id("94846ca8-eb7d-4c38-82f9-30df682f7701")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T04:45:31.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

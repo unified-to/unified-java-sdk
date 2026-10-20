@@ -28,4 +28,5 @@ GetComputeGputypeQueryParamFields value = GetComputeGputypeQueryParamFields.ID;
 | `ARCHITECTURE`     | architecture       |
 | `PRICES`           | prices             |
 | `AVAILABILITY`     | availability       |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

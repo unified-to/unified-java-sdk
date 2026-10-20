@@ -23,6 +23,7 @@ public enum GetHrisTaxonomyQueryParamFields {
     URL("url"),
     ROLE_IDS("role_ids"),
     IS_ACTIVE("is_active"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

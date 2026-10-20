@@ -24,6 +24,7 @@ public enum GetComputeGputypeQueryParamFields {
     ARCHITECTURE("architecture"),
     PRICES("prices"),
     AVAILABILITY("availability"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

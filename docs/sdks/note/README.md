@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -43,8 +44,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("96739701-f4b9-4f14-8b56-8e3ddd6dcc02")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.551Z"))
+                    .id("884848a1-52e3-4e95-ae2b-d3f1fa00af96")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.442Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -203,6 +205,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
@@ -223,8 +226,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("b6d37fbf-7613-4576-876e-4240bbb9bdb2")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.557Z"))
+                    .id("ded6dbe0-cdd4-4876-a0e0-17c4021cc0b3")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.451Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -325,6 +329,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
@@ -345,8 +350,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("b6d37fbf-7613-4576-876e-4240bbb9bdb2")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.557Z"))
+                    .id("ded6dbe0-cdd4-4876-a0e0-17c4021cc0b3")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.451Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

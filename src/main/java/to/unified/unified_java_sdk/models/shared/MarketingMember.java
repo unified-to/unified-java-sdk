@@ -68,6 +68,11 @@ public class MarketingMember {
     @JsonProperty("list_ids")
     private List<String> listIds;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MarketingMetadata> metadata;
+
     /**
      * The name of the member
      */
@@ -110,6 +115,7 @@ public class MarketingMember {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("list_ids") @Nullable List<String> listIds,
+            @JsonProperty("metadata") @Nullable List<MarketingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable MarketingMemberStatus status,
@@ -122,6 +128,7 @@ public class MarketingMember {
         this.id = id;
         this.lastName = lastName;
         this.listIds = listIds;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.status = status;
@@ -133,7 +140,8 @@ public class MarketingMember {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -177,6 +185,10 @@ public class MarketingMember {
      */
     public Optional<List<String>> listIds() {
         return Optional.ofNullable(this.listIds);
+    }
+
+    public Optional<List<MarketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -273,6 +285,12 @@ public class MarketingMember {
     }
 
 
+    public MarketingMember withMetadata(@Nullable List<MarketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the member
      */
@@ -332,6 +350,7 @@ public class MarketingMember {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.listIds, other.listIds) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -344,8 +363,9 @@ public class MarketingMember {
         return Utils.enhancedHash(
             company, createdAt, emails,
             firstName, id, lastName,
-            listIds, name, raw,
-            status, tags, updatedAt);
+            listIds, metadata, name,
+            raw, status, tags,
+            updatedAt);
     }
     
     @Override
@@ -358,6 +378,7 @@ public class MarketingMember {
                 "id", id,
                 "lastName", lastName,
                 "listIds", listIds,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "status", status,
@@ -381,6 +402,8 @@ public class MarketingMember {
         private String lastName;
 
         private List<String> listIds;
+
+        private List<MarketingMetadata> metadata;
 
         private String name;
 
@@ -446,6 +469,11 @@ public class MarketingMember {
             return this;
         }
 
+        public Builder metadata(@Nullable List<MarketingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The name of the member
          */
@@ -487,8 +515,9 @@ public class MarketingMember {
             return new MarketingMember(
                 company, createdAt, emails,
                 firstName, id, lastName,
-                listIds, name, raw,
-                status, tags, updatedAt);
+                listIds, metadata, name,
+                raw, status, tags,
+                updatedAt);
         }
 
     }

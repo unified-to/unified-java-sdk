@@ -54,6 +54,11 @@ public class PerformanceFeedback {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PerformanceMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -91,6 +96,7 @@ public class PerformanceFeedback {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_visible") @Nullable Boolean isVisible,
             @JsonProperty("message") @Nullable String message,
+            @JsonProperty("metadata") @Nullable List<PerformanceMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("type") @Nullable PerformanceFeedbackType type,
@@ -101,6 +107,7 @@ public class PerformanceFeedback {
         this.id = id;
         this.isVisible = isVisible;
         this.message = message;
+        this.metadata = metadata;
         this.raw = raw;
         this.tags = tags;
         this.type = type;
@@ -114,7 +121,7 @@ public class PerformanceFeedback {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            userId);
+            null, userId);
     }
 
     /**
@@ -144,6 +151,10 @@ public class PerformanceFeedback {
 
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
+    }
+
+    public Optional<List<PerformanceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -222,6 +233,12 @@ public class PerformanceFeedback {
     }
 
 
+    public PerformanceFeedback withMetadata(@Nullable List<PerformanceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PerformanceFeedback withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -279,6 +296,7 @@ public class PerformanceFeedback {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isVisible, other.isVisible) &&
             Utils.enhancedDeepEquals(this.message, other.message) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -290,9 +308,9 @@ public class PerformanceFeedback {
     public int hashCode() {
         return Utils.enhancedHash(
             authorUserId, createdAt, id,
-            isVisible, message, raw,
-            tags, type, updatedAt,
-            userId);
+            isVisible, message, metadata,
+            raw, tags, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -303,6 +321,7 @@ public class PerformanceFeedback {
                 "id", id,
                 "isVisible", isVisible,
                 "message", message,
+                "metadata", metadata,
                 "raw", raw,
                 "tags", tags,
                 "type", type,
@@ -322,6 +341,8 @@ public class PerformanceFeedback {
         private Boolean isVisible;
 
         private String message;
+
+        private List<PerformanceMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -371,6 +392,11 @@ public class PerformanceFeedback {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PerformanceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -411,9 +437,9 @@ public class PerformanceFeedback {
         public PerformanceFeedback build() {
             return new PerformanceFeedback(
                 authorUserId, createdAt, id,
-                isVisible, message, raw,
-                tags, type, updatedAt,
-                userId);
+                isVisible, message, metadata,
+                raw, tags, type,
+                updatedAt, userId);
         }
 
     }

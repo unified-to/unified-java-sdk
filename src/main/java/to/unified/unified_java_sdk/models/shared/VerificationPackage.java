@@ -93,6 +93,11 @@ public class VerificationPackage {
     @JsonProperty("max_score")
     private Double maxScore;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<VerificationMetadata> metadata;
+
     /**
      * Name of the verification type
      */
@@ -154,6 +159,7 @@ public class VerificationPackage {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("info_url") @Nullable String infoUrl,
             @JsonProperty("max_score") @Nullable Double maxScore,
+            @JsonProperty("metadata") @Nullable List<VerificationMetadata> metadata,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("needs_ip_address") @Nullable Boolean needsIpAddress,
             @JsonProperty("parameters") @Nullable List<VerificationParameter> parameters,
@@ -173,6 +179,7 @@ public class VerificationPackage {
         this.id = id;
         this.infoUrl = infoUrl;
         this.maxScore = maxScore;
+        this.metadata = metadata;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.needsIpAddress = needsIpAddress;
@@ -191,10 +198,10 @@ public class VerificationPackage {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, name,
             null, null, null,
-            null, type, null,
-            null);
+            name, null, null,
+            null, null, type,
+            null, null);
     }
 
     public Optional<List<String>> aliases() {
@@ -263,6 +270,10 @@ public class VerificationPackage {
      */
     public Optional<Double> maxScore() {
         return Optional.ofNullable(this.maxScore);
+    }
+
+    public Optional<List<VerificationMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -407,6 +418,12 @@ public class VerificationPackage {
     }
 
 
+    public VerificationPackage withMetadata(@Nullable List<VerificationMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Name of the verification type
      */
@@ -491,6 +508,7 @@ public class VerificationPackage {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.infoUrl, other.infoUrl) &&
             Utils.enhancedDeepEquals(this.maxScore, other.maxScore) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.needsIpAddress, other.needsIpAddress) &&
             Utils.enhancedDeepEquals(this.parameters, other.parameters) &&
@@ -507,10 +525,10 @@ public class VerificationPackage {
             aliases, averageProcessingTimes, costAmount,
             createdAt, currency, description,
             hasRedirectUrl, hasTargetUrl, id,
-            infoUrl, maxScore, name,
-            needsIpAddress, parameters, raw,
-            tags, type, updatedAt,
-            validRegions);
+            infoUrl, maxScore, metadata,
+            name, needsIpAddress, parameters,
+            raw, tags, type,
+            updatedAt, validRegions);
     }
     
     @Override
@@ -527,6 +545,7 @@ public class VerificationPackage {
                 "id", id,
                 "infoUrl", infoUrl,
                 "maxScore", maxScore,
+                "metadata", metadata,
                 "name", name,
                 "needsIpAddress", needsIpAddress,
                 "parameters", parameters,
@@ -561,6 +580,8 @@ public class VerificationPackage {
         private String infoUrl;
 
         private Double maxScore;
+
+        private List<VerificationMetadata> metadata;
 
         private String name;
 
@@ -661,6 +682,11 @@ public class VerificationPackage {
             return this;
         }
 
+        public Builder metadata(@Nullable List<VerificationMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Name of the verification type
          */
@@ -721,10 +747,10 @@ public class VerificationPackage {
                 aliases, averageProcessingTimes, costAmount,
                 createdAt, currency, description,
                 hasRedirectUrl, hasTargetUrl, id,
-                infoUrl, maxScore, name,
-                needsIpAddress, parameters, raw,
-                tags, type, updatedAt,
-                validRegions);
+                infoUrl, maxScore, metadata,
+                name, needsIpAddress, parameters,
+                raw, tags, type,
+                updatedAt, validRegions);
         }
 
     }

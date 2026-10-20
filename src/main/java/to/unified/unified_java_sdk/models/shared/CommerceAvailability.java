@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class CommerceAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -69,6 +75,7 @@ public class CommerceAvailability {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("size") @Nullable Double size,
             @JsonProperty("staff_user_id") @Nullable String staffUserId,
@@ -76,6 +83,7 @@ public class CommerceAvailability {
         this.endAt = endAt;
         this.itemId = itemId;
         this.locationId = locationId;
+        this.metadata = metadata;
         this.raw = raw;
         this.size = size;
         this.staffUserId = staffUserId;
@@ -85,7 +93,7 @@ public class CommerceAvailability {
     public CommerceAvailability() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -107,6 +115,10 @@ public class CommerceAvailability {
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    public Optional<List<CommerceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -163,6 +175,12 @@ public class CommerceAvailability {
     }
 
 
+    public CommerceAvailability withMetadata(@Nullable List<CommerceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CommerceAvailability withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -206,6 +224,7 @@ public class CommerceAvailability {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
             Utils.enhancedDeepEquals(this.staffUserId, other.staffUserId) &&
@@ -216,8 +235,8 @@ public class CommerceAvailability {
     public int hashCode() {
         return Utils.enhancedHash(
             endAt, itemId, locationId,
-            raw, size, staffUserId,
-            startAt);
+            metadata, raw, size,
+            staffUserId, startAt);
     }
     
     @Override
@@ -226,6 +245,7 @@ public class CommerceAvailability {
                 "endAt", endAt,
                 "itemId", itemId,
                 "locationId", locationId,
+                "metadata", metadata,
                 "raw", raw,
                 "size", size,
                 "staffUserId", staffUserId,
@@ -240,6 +260,8 @@ public class CommerceAvailability {
         private String itemId;
 
         private String locationId;
+
+        private List<CommerceMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -277,6 +299,11 @@ public class CommerceAvailability {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -306,8 +333,8 @@ public class CommerceAvailability {
         public CommerceAvailability build() {
             return new CommerceAvailability(
                 endAt, itemId, locationId,
-                raw, size, staffUserId,
-                startAt);
+                metadata, raw, size,
+                staffUserId, startAt);
         }
 
     }

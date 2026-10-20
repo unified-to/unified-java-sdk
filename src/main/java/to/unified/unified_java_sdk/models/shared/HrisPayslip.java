@@ -119,6 +119,11 @@ public class HrisPayslip {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     private Double netAmount;
 
@@ -201,6 +206,7 @@ public class HrisPayslip {
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("hours") @Nullable Double hours,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("net_ytd_amount") @Nullable Double netYtdAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
@@ -227,6 +233,7 @@ public class HrisPayslip {
         this.groupId = groupId;
         this.hours = hours;
         this.id = id;
+        this.metadata = metadata;
         this.netAmount = netAmount;
         this.netYtdAmount = netYtdAmount;
         this.paidAt = paidAt;
@@ -249,7 +256,7 @@ public class HrisPayslip {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -343,6 +350,10 @@ public class HrisPayslip {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Double> netAmount() {
@@ -535,6 +546,12 @@ public class HrisPayslip {
     }
 
 
+    public HrisPayslip withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisPayslip withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
@@ -644,6 +661,7 @@ public class HrisPayslip {
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.hours, other.hours) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.netYtdAmount, other.netYtdAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
@@ -665,10 +683,10 @@ public class HrisPayslip {
             employeeTaxAmount, employerContributionAmount, employerTaxAmount,
             endAt, grossAmount, grossYtdAmount,
             groupId, hours, id,
-            netAmount, netYtdAmount, paidAt,
-            paymentReference, paymentType, payrollId,
-            raw, startAt, type,
-            updatedAt, userId);
+            metadata, netAmount, netYtdAmount,
+            paidAt, paymentReference, paymentType,
+            payrollId, raw, startAt,
+            type, updatedAt, userId);
     }
     
     @Override
@@ -689,6 +707,7 @@ public class HrisPayslip {
                 "groupId", groupId,
                 "hours", hours,
                 "id", id,
+                "metadata", metadata,
                 "netAmount", netAmount,
                 "netYtdAmount", netYtdAmount,
                 "paidAt", paidAt,
@@ -734,6 +753,8 @@ public class HrisPayslip {
         private Double hours;
 
         private String id;
+
+        private List<HrisMetadata> metadata;
 
         private Double netAmount;
 
@@ -869,6 +890,11 @@ public class HrisPayslip {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
@@ -949,10 +975,10 @@ public class HrisPayslip {
                 employeeTaxAmount, employerContributionAmount, employerTaxAmount,
                 endAt, grossAmount, grossYtdAmount,
                 groupId, hours, id,
-                netAmount, netYtdAmount, paidAt,
-                paymentReference, paymentType, payrollId,
-                raw, startAt, type,
-                updatedAt, userId);
+                metadata, netAmount, netYtdAmount,
+                paidAt, paymentReference, paymentType,
+                payrollId, raw, startAt,
+                type, updatedAt, userId);
         }
 
     }

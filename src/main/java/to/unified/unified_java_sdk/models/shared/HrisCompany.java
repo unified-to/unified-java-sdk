@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -42,6 +43,11 @@ public class HrisCompany {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -63,6 +69,7 @@ public class HrisCompany {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("legal_name") @Nullable String legalName,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -70,6 +77,7 @@ public class HrisCompany {
         this.createdAt = createdAt;
         this.id = id;
         this.legalName = legalName;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -78,7 +86,7 @@ public class HrisCompany {
     public HrisCompany() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyHrisCompanyAddress> address() {
@@ -98,6 +106,10 @@ public class HrisCompany {
 
     public Optional<String> legalName() {
         return Optional.ofNullable(this.legalName);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -147,6 +159,12 @@ public class HrisCompany {
     }
 
 
+    public HrisCompany withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisCompany withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -182,6 +200,7 @@ public class HrisCompany {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.legalName, other.legalName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -191,8 +210,8 @@ public class HrisCompany {
     public int hashCode() {
         return Utils.enhancedHash(
             address, createdAt, id,
-            legalName, name, raw,
-            updatedAt);
+            legalName, metadata, name,
+            raw, updatedAt);
     }
     
     @Override
@@ -202,6 +221,7 @@ public class HrisCompany {
                 "createdAt", createdAt,
                 "id", id,
                 "legalName", legalName,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt);
@@ -217,6 +237,8 @@ public class HrisCompany {
         private String id;
 
         private String legalName;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -251,6 +273,11 @@ public class HrisCompany {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -272,8 +299,8 @@ public class HrisCompany {
         public HrisCompany build() {
             return new HrisCompany(
                 address, createdAt, id,
-                legalName, name, raw,
-                updatedAt);
+                legalName, metadata, name,
+                raw, updatedAt);
         }
 
     }

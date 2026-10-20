@@ -96,6 +96,11 @@ public class AssessmentPackage {
     @JsonProperty("max_score")
     private Double maxScore;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AssessmentMetadata> metadata;
+
     /**
      * Name of the assessment package
      */
@@ -164,6 +169,7 @@ public class AssessmentPackage {
             @JsonProperty("info_url") @Nullable String infoUrl,
             @JsonProperty("integration_types") @Nullable List<String> integrationTypes,
             @JsonProperty("max_score") @Nullable Double maxScore,
+            @JsonProperty("metadata") @Nullable List<AssessmentMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("needs_ip_address") @Nullable Boolean needsIpAddress,
             @JsonProperty("parameters") @Nullable List<AssessmentParameter> parameters,
@@ -183,6 +189,7 @@ public class AssessmentPackage {
         this.infoUrl = infoUrl;
         this.integrationTypes = integrationTypes;
         this.maxScore = maxScore;
+        this.metadata = metadata;
         this.name = name;
         this.needsIpAddress = needsIpAddress;
         this.parameters = parameters;
@@ -202,8 +209,8 @@ public class AssessmentPackage {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, type, null,
-            null);
+            null, null, type,
+            null, null);
     }
 
     /**
@@ -274,6 +281,10 @@ public class AssessmentPackage {
      */
     public Optional<Double> maxScore() {
         return Optional.ofNullable(this.maxScore);
+    }
+
+    public Optional<List<AssessmentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -425,6 +436,12 @@ public class AssessmentPackage {
     }
 
 
+    public AssessmentPackage withMetadata(@Nullable List<AssessmentMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Name of the assessment package
      */
@@ -517,6 +534,7 @@ public class AssessmentPackage {
             Utils.enhancedDeepEquals(this.infoUrl, other.infoUrl) &&
             Utils.enhancedDeepEquals(this.integrationTypes, other.integrationTypes) &&
             Utils.enhancedDeepEquals(this.maxScore, other.maxScore) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.needsIpAddress, other.needsIpAddress) &&
             Utils.enhancedDeepEquals(this.parameters, other.parameters) &&
@@ -534,10 +552,10 @@ public class AssessmentPackage {
             aliases, connectionId, createdAt,
             description, hasRedirectUrl, hasTargetUrl,
             id, infoUrl, integrationTypes,
-            maxScore, name, needsIpAddress,
-            parameters, raw, regions,
-            tags, type, updatedAt,
-            workspaceId);
+            maxScore, metadata, name,
+            needsIpAddress, parameters, raw,
+            regions, tags, type,
+            updatedAt, workspaceId);
     }
     
     @Override
@@ -553,6 +571,7 @@ public class AssessmentPackage {
                 "infoUrl", infoUrl,
                 "integrationTypes", integrationTypes,
                 "maxScore", maxScore,
+                "metadata", metadata,
                 "name", name,
                 "needsIpAddress", needsIpAddress,
                 "parameters", parameters,
@@ -586,6 +605,8 @@ public class AssessmentPackage {
         private List<String> integrationTypes;
 
         private Double maxScore;
+
+        private List<AssessmentMetadata> metadata;
 
         private String name;
 
@@ -689,6 +710,11 @@ public class AssessmentPackage {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AssessmentMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Name of the assessment package
          */
@@ -757,10 +783,10 @@ public class AssessmentPackage {
                 aliases, connectionId, createdAt,
                 description, hasRedirectUrl, hasTargetUrl,
                 id, infoUrl, integrationTypes,
-                maxScore, name, needsIpAddress,
-                parameters, raw, regions,
-                tags, type, updatedAt,
-                workspaceId);
+                maxScore, metadata, name,
+                needsIpAddress, parameters, raw,
+                regions, tags, type,
+                updatedAt, workspaceId);
         }
 
     }

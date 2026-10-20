@@ -34,4 +34,5 @@ GetHrisPayrollQueryParamFields value = GetHrisPayrollQueryParamFields.ID;
 | `TOTAL_COST_AMOUNT`            | total_cost_amount              |
 | `USER_IDS`                     | user_ids                       |
 | `PAYSLIP_IDS`                  | payslip_ids                    |
+| `METADATA`                     | metadata                       |
 | `RAW`                          | raw                            |

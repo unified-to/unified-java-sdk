@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -53,6 +54,11 @@ public class SigningSignatory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SigningMetadata> metadata;
 
     /**
      * Full name of the signatory
@@ -110,6 +116,7 @@ public class SigningSignatory {
             @JsonProperty("document_id") @Nullable String documentId,
             @JsonProperty("email") @Nullable String email,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<SigningMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("order") @Nullable Double order,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -122,6 +129,7 @@ public class SigningSignatory {
         this.documentId = documentId;
         this.email = email;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.order = order;
         this.raw = raw;
@@ -135,7 +143,8 @@ public class SigningSignatory {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -171,6 +180,10 @@ public class SigningSignatory {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<SigningMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -272,6 +285,12 @@ public class SigningSignatory {
     }
 
 
+    public SigningSignatory withMetadata(@Nullable List<SigningMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Full name of the signatory
      */
@@ -350,6 +369,7 @@ public class SigningSignatory {
             Utils.enhancedDeepEquals(this.documentId, other.documentId) &&
             Utils.enhancedDeepEquals(this.email, other.email) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -363,9 +383,10 @@ public class SigningSignatory {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, declineReason, documentId,
-            email, id, name,
-            order, raw, role,
-            signedAt, status, updatedAt);
+            email, id, metadata,
+            name, order, raw,
+            role, signedAt, status,
+            updatedAt);
     }
     
     @Override
@@ -376,6 +397,7 @@ public class SigningSignatory {
                 "documentId", documentId,
                 "email", email,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "order", order,
                 "raw", raw,
@@ -397,6 +419,8 @@ public class SigningSignatory {
         private String email;
 
         private String id;
+
+        private List<SigningMetadata> metadata;
 
         private String name;
 
@@ -453,6 +477,11 @@ public class SigningSignatory {
          */
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<SigningMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -515,9 +544,10 @@ public class SigningSignatory {
         public SigningSignatory build() {
             return new SigningSignatory(
                 createdAt, declineReason, documentId,
-                email, id, name,
-                order, raw, role,
-                signedAt, status, updatedAt);
+                email, id, metadata,
+                name, order, raw,
+                role, signedAt, status,
+                updatedAt);
         }
 
     }

@@ -18,6 +18,7 @@ public enum GetDatastoreDatabaseQueryParamFields {
     IS_ACTIVE("is_active"),
     PASSWORD("password"),
     REGION("region"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

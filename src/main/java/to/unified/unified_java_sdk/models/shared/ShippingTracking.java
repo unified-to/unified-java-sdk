@@ -75,6 +75,11 @@ public class ShippingTracking {
     @JsonProperty("id")
     private String id;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ShippingMetadata> metadata;
+
     /**
      * The raw data returned by the integration for this tracking
      */
@@ -127,6 +132,7 @@ public class ShippingTracking {
             @JsonProperty("estimated_delivery") @Nullable OffsetDateTime estimatedDelivery,
             @JsonProperty("events") @Nullable List<ShippingTrackingEvent> events,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<ShippingMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("shipment_id") @Nullable String shipmentId,
             @JsonProperty("status") @Nullable ShippingTrackingStatus status,
@@ -141,6 +147,7 @@ public class ShippingTracking {
         this.estimatedDelivery = estimatedDelivery;
         this.events = events;
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.shipmentId = shipmentId;
         this.status = status;
@@ -154,7 +161,7 @@ public class ShippingTracking {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -211,6 +218,10 @@ public class ShippingTracking {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<ShippingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -332,6 +343,12 @@ public class ShippingTracking {
     }
 
 
+    public ShippingTracking withMetadata(@Nullable List<ShippingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The raw data returned by the integration for this tracking
      */
@@ -404,6 +421,7 @@ public class ShippingTracking {
             Utils.enhancedDeepEquals(this.estimatedDelivery, other.estimatedDelivery) &&
             Utils.enhancedDeepEquals(this.events, other.events) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.shipmentId, other.shipmentId) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -417,9 +435,9 @@ public class ShippingTracking {
         return Utils.enhancedHash(
             actualDeliveryAt, carrierId, carrierStatusCode,
             carrierStatusDescription, createdAt, estimatedDelivery,
-            events, id, raw,
-            shipmentId, status, statusDescription,
-            trackingNumber, updatedAt);
+            events, id, metadata,
+            raw, shipmentId, status,
+            statusDescription, trackingNumber, updatedAt);
     }
     
     @Override
@@ -433,6 +451,7 @@ public class ShippingTracking {
                 "estimatedDelivery", estimatedDelivery,
                 "events", events,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "shipmentId", shipmentId,
                 "status", status,
@@ -459,6 +478,8 @@ public class ShippingTracking {
         private List<ShippingTrackingEvent> events;
 
         private String id;
+
+        private List<ShippingMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -540,6 +561,11 @@ public class ShippingTracking {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ShippingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The raw data returned by the integration for this tracking
          */
@@ -592,9 +618,9 @@ public class ShippingTracking {
             return new ShippingTracking(
                 actualDeliveryAt, carrierId, carrierStatusCode,
                 carrierStatusDescription, createdAt, estimatedDelivery,
-                events, id, raw,
-                shipmentId, status, statusDescription,
-                trackingNumber, updatedAt);
+                events, id, metadata,
+                raw, shipmentId, status,
+                statusDescription, trackingNumber, updatedAt);
         }
 
     }

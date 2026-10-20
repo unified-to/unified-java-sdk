@@ -76,6 +76,11 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -150,6 +155,7 @@ public class AccountingJournal {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_inclusive_of_tax") @Nullable Boolean isInclusiveOfTax,
             @JsonProperty("lineitems") @Nullable List<AccountingJournalLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("project_id") @Nullable String projectId,
@@ -170,6 +176,7 @@ public class AccountingJournal {
         this.id = id;
         this.isInclusiveOfTax = isInclusiveOfTax;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.projectId = projectId;
@@ -190,7 +197,7 @@ public class AccountingJournal {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -239,6 +246,10 @@ public class AccountingJournal {
      */
     public Optional<List<AccountingJournalLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -371,6 +382,12 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingJournal withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -471,6 +488,7 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isInclusiveOfTax, other.isInclusiveOfTax) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
@@ -490,10 +508,10 @@ public class AccountingJournal {
             attachments, categoryIds, createdAt,
             currency, description, exchangeRate,
             id, isInclusiveOfTax, lineitems,
-            organizationId, postedAt, projectId,
-            raw, reference, source,
-            status, taxAmount, taxrateId,
-            totalAmount, updatedAt);
+            metadata, organizationId, postedAt,
+            projectId, raw, reference,
+            source, status, taxAmount,
+            taxrateId, totalAmount, updatedAt);
     }
     
     @Override
@@ -508,6 +526,7 @@ public class AccountingJournal {
                 "id", id,
                 "isInclusiveOfTax", isInclusiveOfTax,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "postedAt", postedAt,
                 "projectId", projectId,
@@ -541,6 +560,8 @@ public class AccountingJournal {
         private Boolean isInclusiveOfTax;
 
         private List<AccountingJournalLineitem> lineitems;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -625,6 +646,11 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
@@ -700,10 +726,10 @@ public class AccountingJournal {
                 attachments, categoryIds, createdAt,
                 currency, description, exchangeRate,
                 id, isInclusiveOfTax, lineitems,
-                organizationId, postedAt, projectId,
-                raw, reference, source,
-                status, taxAmount, taxrateId,
-                totalAmount, updatedAt);
+                metadata, organizationId, postedAt,
+                projectId, raw, reference,
+                source, status, taxAmount,
+                taxrateId, totalAmount, updatedAt);
         }
 
     }

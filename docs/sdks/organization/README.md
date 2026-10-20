@@ -58,16 +58,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("e56300fa-83bd-4bea-8613-9b35865b9edd")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("1adcbb8a-1e72-4979-b69c-2a17bd219341")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.349Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -131,10 +128,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("e98256ad-81e4-406e-ab84-283c304c3135")
+                    .id("25f875b9-9bf5-4b27-812b-47cd0f3e53ac")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.636Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -178,6 +175,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationResponse;
@@ -199,9 +197,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("c8908f22-c562-4a13-9465-a0e53ec1230c")
+                    .id("c6e1b4d9-6a67-4cf0-a000-e3b91d9639c2")
+                    .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T02:09:09.656Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T07:32:02.746Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -727,16 +726,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("57b2dfe8-ea91-4af1-8958-ee428bebcff0")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("c4087d92-30d0-452b-b23c-15cf3a3a2225")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.141Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.368Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -801,10 +797,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("bd7e2595-50fc-40d4-93ce-0ffdcf82e43a")
+                    .id("c82cf3bb-8fe3-46f6-b106-5852bc70beb5")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.891Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.640Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -849,6 +845,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoOrganizationResponse;
@@ -870,9 +867,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("7ed70f3e-a2ef-4f73-820c-450d49df3cfe")
+                    .id("a4712dfb-bd64-4679-b41b-714fe492b69f")
+                    .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T02:09:09.658Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T07:32:02.749Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -1107,16 +1105,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("57b2dfe8-ea91-4af1-8958-ee428bebcff0")
-                    .managers(List.of(
-                        AdsManager.builder()
-                            .id("e4fd87df-9f8b-4fa0-a77b-b7d18669e350")
-                            .name("Parker, Leannon and Gibson")
-                            .build()))
+                    .id("c4087d92-30d0-452b-b23c-15cf3a3a2225")
+                    .managers(List.of())
+                    .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-27T05:59:52.141Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-28T00:40:47.368Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1181,10 +1176,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("bd7e2595-50fc-40d4-93ce-0ffdcf82e43a")
+                    .id("c82cf3bb-8fe3-46f6-b106-5852bc70beb5")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T16:01:18.891Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-25T23:44:18.640Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1229,6 +1224,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoOrganizationResponse;
@@ -1250,9 +1246,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("7ed70f3e-a2ef-4f73-820c-450d49df3cfe")
+                    .id("a4712dfb-bd64-4679-b41b-714fe492b69f")
+                    .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T02:09:09.658Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T07:32:02.749Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")

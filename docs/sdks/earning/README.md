@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEarningResponse;
@@ -42,13 +43,14 @@ public class Application {
                 .hrisEarning(HrisEarning.builder()
                     .amount(4026d)
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
-                    .currency("PKR")
-                    .frequency(HrisEarningFrequency.BIWEEKLY)
-                    .id("9b9a199e-3dfd-427b-b6d4-c592629a3f79")
-                    .notes("Truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-24T13:25:34.373Z"))
-                    .status(HrisEarningStatus.PROCESSED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T13:54:36.053Z"))
+                    .currency("USD")
+                    .frequency(HrisEarningFrequency.SEMIMONTHLY)
+                    .id("438f0fb5-a277-4a05-a2e0-9fcabac17e45")
+                    .metadata(List.of())
+                    .notes("Deporto truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-24T22:42:12.542Z"))
+                    .status(HrisEarningStatus.ENDED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T16:39:38.677Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -207,6 +209,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEarningRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisEarningResponse;
@@ -226,13 +229,14 @@ public class Application {
                 .hrisEarning(HrisEarning.builder()
                     .amount(4026d)
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
-                    .currency("PKR")
-                    .frequency(HrisEarningFrequency.BIWEEKLY)
-                    .id("6b7abe51-91f4-4c2a-89ef-f872c51627be")
-                    .notes("Truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-24T13:25:34.382Z"))
-                    .status(HrisEarningStatus.PROCESSED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T13:54:36.056Z"))
+                    .currency("USD")
+                    .frequency(HrisEarningFrequency.SEMIMONTHLY)
+                    .id("54ccbae7-3570-4d1f-9c26-82e80ac02a61")
+                    .metadata(List.of())
+                    .notes("Deporto truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-24T22:42:12.553Z"))
+                    .status(HrisEarningStatus.ENDED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T16:39:38.680Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -333,6 +337,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisEarningResponse;
@@ -352,13 +357,14 @@ public class Application {
                 .hrisEarning(HrisEarning.builder()
                     .amount(4026d)
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
-                    .currency("PKR")
-                    .frequency(HrisEarningFrequency.BIWEEKLY)
-                    .id("6b7abe51-91f4-4c2a-89ef-f872c51627be")
-                    .notes("Truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-24T13:25:34.382Z"))
-                    .status(HrisEarningStatus.PROCESSED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T13:54:36.056Z"))
+                    .currency("USD")
+                    .frequency(HrisEarningFrequency.SEMIMONTHLY)
+                    .id("54ccbae7-3570-4d1f-9c26-82e80ac02a61")
+                    .metadata(List.of())
+                    .notes("Deporto truculenter vinum beatae.")
+                    .startAt(OffsetDateTime.parse("2022-07-24T22:42:12.553Z"))
+                    .status(HrisEarningStatus.ENDED)
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T16:39:38.680Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

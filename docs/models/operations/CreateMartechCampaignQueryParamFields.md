@@ -26,4 +26,5 @@ CreateMartechCampaignQueryParamFields value = CreateMartechCampaignQueryParamFie
 | `FROM_EMAIL`     | from_email       |
 | `REPLY_TO_EMAIL` | reply_to_email   |
 | `SEND_AT`        | send_at          |
+| `METADATA`       | metadata         |
 | `RAW`            | raw              |

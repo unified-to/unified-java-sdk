@@ -86,6 +86,11 @@ public class HrisDevice {
     @JsonProperty("manufacturer")
     private String manufacturer;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * device model
      */
@@ -150,6 +155,7 @@ public class HrisDevice {
             @JsonProperty("is_missing") @Nullable Boolean isMissing,
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("manufacturer") @Nullable String manufacturer,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("model") @Nullable String model,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("os") @Nullable String os,
@@ -170,6 +176,7 @@ public class HrisDevice {
         this.isMissing = isMissing;
         this.locationId = locationId;
         this.manufacturer = manufacturer;
+        this.metadata = metadata;
         this.model = model;
         this.name = name;
         this.os = os;
@@ -187,7 +194,7 @@ public class HrisDevice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<String>> adminUserIds() {
@@ -245,6 +252,10 @@ public class HrisDevice {
      */
     public Optional<String> manufacturer() {
         return Optional.ofNullable(this.manufacturer);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -380,6 +391,12 @@ public class HrisDevice {
     }
 
 
+    public HrisDevice withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * device model
      */
@@ -465,6 +482,7 @@ public class HrisDevice {
             Utils.enhancedDeepEquals(this.isMissing, other.isMissing) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.manufacturer, other.manufacturer) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.model, other.model) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.os, other.os) &&
@@ -482,9 +500,9 @@ public class HrisDevice {
             hasAntivirus, hasFirewall, hasHdEncrypted,
             hasPasswordManager, hasScreenlock, id,
             isMissing, locationId, manufacturer,
-            model, name, os,
-            osVersion, raw, updatedAt,
-            userIds, version);
+            metadata, model, name,
+            os, osVersion, raw,
+            updatedAt, userIds, version);
     }
     
     @Override
@@ -502,6 +520,7 @@ public class HrisDevice {
                 "isMissing", isMissing,
                 "locationId", locationId,
                 "manufacturer", manufacturer,
+                "metadata", metadata,
                 "model", model,
                 "name", name,
                 "os", os,
@@ -538,6 +557,8 @@ public class HrisDevice {
         private String locationId;
 
         private String manufacturer;
+
+        private List<HrisMetadata> metadata;
 
         private String model;
 
@@ -628,6 +649,11 @@ public class HrisDevice {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * device model
          */
@@ -689,9 +715,9 @@ public class HrisDevice {
                 hasAntivirus, hasFirewall, hasHdEncrypted,
                 hasPasswordManager, hasScreenlock, id,
                 isMissing, locationId, manufacturer,
-                model, name, os,
-                osVersion, raw, updatedAt,
-                userIds, version);
+                metadata, model, name,
+                os, osVersion, raw,
+                updatedAt, userIds, version);
         }
 
     }

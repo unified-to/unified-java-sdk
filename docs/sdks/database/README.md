@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreDatabaseResponse;
@@ -43,12 +44,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("17984a50-8ef4-43d1-81b8-64c95c9b1585")
+                    .id("b2f0213b-b4f1-4b45-b87a-4d211e7c27c8")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T15:44:36.789Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T03:22:31.348Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -208,6 +210,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreDatabaseResponse;
@@ -228,12 +231,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("3c163323-d051-4871-99c3-3b6c1d9f4a3b")
+                    .id("e5a60894-e578-4412-b5c1-a0ab17900482")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T15:44:36.792Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T03:22:31.355Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -335,6 +339,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreDatabaseResponse;
@@ -355,12 +360,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("3c163323-d051-4871-99c3-3b6c1d9f4a3b")
+                    .id("e5a60894-e578-4412-b5c1-a0ab17900482")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T15:44:36.792Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T03:22:31.355Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")

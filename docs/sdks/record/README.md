@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreRecordRequest;
@@ -45,9 +46,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("fe09cdc5-3812-405a-80e3-446b5595cac3")
+                    .id("6e9ad9cd-7874-4abc-8ee4-555f7b0b8540")
+                    .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T20:28:06.824Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T09:11:34.647Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -206,6 +208,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreRecordRequest;
@@ -228,9 +231,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("22e7b8fe-05bd-4c4d-9bba-082ac1241218")
+                    .id("0612b8e9-4eaf-4b27-8222-8700570206a8")
+                    .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T20:28:06.830Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T09:11:34.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -331,6 +335,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreRecordRequest;
@@ -353,9 +358,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("22e7b8fe-05bd-4c4d-9bba-082ac1241218")
+                    .id("0612b8e9-4eaf-4b27-8222-8700570206a8")
+                    .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T20:28:06.830Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-04T09:11:34.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

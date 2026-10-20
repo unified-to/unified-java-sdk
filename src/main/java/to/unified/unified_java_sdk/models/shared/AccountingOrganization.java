@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -70,6 +71,11 @@ public class AccountingOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal_name")
     private String legalName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -136,6 +142,7 @@ public class AccountingOrganization {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_elimination") @Nullable Boolean isElimination,
             @JsonProperty("legal_name") @Nullable String legalName,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_code") @Nullable String organizationCode,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -153,6 +160,7 @@ public class AccountingOrganization {
         this.id = id;
         this.isElimination = isElimination;
         this.legalName = legalName;
+        this.metadata = metadata;
         this.name = name;
         this.organizationCode = organizationCode;
         this.parentId = parentId;
@@ -170,7 +178,7 @@ public class AccountingOrganization {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyAccountingOrganizationAddress> address() {
@@ -219,6 +227,10 @@ public class AccountingOrganization {
 
     public Optional<String> legalName() {
         return Optional.ofNullable(this.legalName);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -340,6 +352,12 @@ public class AccountingOrganization {
     }
 
 
+    public AccountingOrganization withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingOrganization withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -426,6 +444,7 @@ public class AccountingOrganization {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isElimination, other.isElimination) &&
             Utils.enhancedDeepEquals(this.legalName, other.legalName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationCode, other.organizationCode) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -442,10 +461,10 @@ public class AccountingOrganization {
         return Utils.enhancedHash(
             address, booksCloseAt, createdAt,
             currency, fiscalYearEndMonth, id,
-            isElimination, legalName, name,
-            organizationCode, parentId, raw,
-            taxNumber, timezone, type,
-            updatedAt, website);
+            isElimination, legalName, metadata,
+            name, organizationCode, parentId,
+            raw, taxNumber, timezone,
+            type, updatedAt, website);
     }
     
     @Override
@@ -459,6 +478,7 @@ public class AccountingOrganization {
                 "id", id,
                 "isElimination", isElimination,
                 "legalName", legalName,
+                "metadata", metadata,
                 "name", name,
                 "organizationCode", organizationCode,
                 "parentId", parentId,
@@ -488,6 +508,8 @@ public class AccountingOrganization {
         private Boolean isElimination;
 
         private String legalName;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -567,6 +589,11 @@ public class AccountingOrganization {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -630,10 +657,10 @@ public class AccountingOrganization {
             return new AccountingOrganization(
                 address, booksCloseAt, createdAt,
                 currency, fiscalYearEndMonth, id,
-                isElimination, legalName, name,
-                organizationCode, parentId, raw,
-                taxNumber, timezone, type,
-                updatedAt, website);
+                isElimination, legalName, metadata,
+                name, organizationCode, parentId,
+                raw, taxNumber, timezone,
+                type, updatedAt, website);
         }
 
     }

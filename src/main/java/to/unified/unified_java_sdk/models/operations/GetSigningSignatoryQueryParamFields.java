@@ -20,7 +20,8 @@ public enum GetSigningSignatoryQueryParamFields {
     ORDER("order"),
     SIGNED_AT("signed_at"),
     DECLINE_REASON("decline_reason"),
-    RAW("raw");
+    RAW("raw"),
+    METADATA("metadata");
 
     @JsonValue
     private final String value;

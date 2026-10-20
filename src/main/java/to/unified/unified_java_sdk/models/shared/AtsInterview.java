@@ -74,6 +74,11 @@ public class AtsInterview {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AtsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -112,6 +117,7 @@ public class AtsInterview {
             @JsonProperty("job_id") @Nullable String jobId,
             @JsonProperty("location") @Nullable String location,
             @JsonProperty("meeting_url") @Nullable String meetingUrl,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable AtsInterviewStatus status,
@@ -126,6 +132,7 @@ public class AtsInterview {
         this.jobId = jobId;
         this.location = location;
         this.meetingUrl = meetingUrl;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = startAt;
         this.status = status;
@@ -138,7 +145,7 @@ public class AtsInterview {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> applicationId() {
@@ -187,6 +194,10 @@ public class AtsInterview {
      */
     public Optional<String> meetingUrl() {
         return Optional.ofNullable(this.meetingUrl);
+    }
+
+    public Optional<List<AtsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -286,6 +297,12 @@ public class AtsInterview {
     }
 
 
+    public AtsInterview withMetadata(@Nullable List<AtsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AtsInterview withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -341,6 +358,7 @@ public class AtsInterview {
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
             Utils.enhancedDeepEquals(this.meetingUrl, other.meetingUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -354,8 +372,8 @@ public class AtsInterview {
             applicationId, candidateId, createdAt,
             endAt, externalEventXref, id,
             jobId, location, meetingUrl,
-            raw, startAt, status,
-            updatedAt, userIds);
+            metadata, raw, startAt,
+            status, updatedAt, userIds);
     }
     
     @Override
@@ -370,6 +388,7 @@ public class AtsInterview {
                 "jobId", jobId,
                 "location", location,
                 "meetingUrl", meetingUrl,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "status", status,
@@ -397,6 +416,8 @@ public class AtsInterview {
         private String location;
 
         private String meetingUrl;
+
+        private List<AtsMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -469,6 +490,11 @@ public class AtsInterview {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -505,8 +531,8 @@ public class AtsInterview {
                 applicationId, candidateId, createdAt,
                 endAt, externalEventXref, id,
                 jobId, location, meetingUrl,
-                raw, startAt, status,
-                updatedAt, userIds);
+                metadata, raw, startAt,
+                status, updatedAt, userIds);
         }
 
     }

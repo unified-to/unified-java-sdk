@@ -18,6 +18,7 @@ public enum GetPerformanceFeedbackQueryParamFields {
     MESSAGE("message"),
     TAGS("tags"),
     IS_VISIBLE("is_visible"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

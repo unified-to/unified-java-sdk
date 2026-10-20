@@ -1,0 +1,13 @@
+# AdsMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [Optional\<AdsMetadataExtraData>](../../models/shared/AdsMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [Optional\<AdsMetadataFormat>](../../models/shared/AdsMetadataFormat.md)       | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `id`                                                                           | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `namespace`                                                                    | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `value`                                                                        | [Optional\<AdsMetadataValue>](../../models/shared/AdsMetadataValue.md)         | :heavy_minus_sign:                                                             | N/A                                                                            |

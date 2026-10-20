@@ -28,4 +28,5 @@ ListComputeGputypesQueryParamFields value = ListComputeGputypesQueryParamFields.
 | `ARCHITECTURE`     | architecture       |
 | `PRICES`           | prices             |
 | `AVAILABILITY`     | availability       |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

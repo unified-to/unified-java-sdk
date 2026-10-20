@@ -26,6 +26,7 @@ public enum UpdateTicketingTicketQueryParamFields {
     URL("url"),
     ATTACHMENT_IDS("attachment_ids"),
     DUE_AT("due_at"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

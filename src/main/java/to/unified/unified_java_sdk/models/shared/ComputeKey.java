@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -52,6 +53,11 @@ public class ComputeKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance_id")
     private String instanceId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ComputeMetadata> metadata;
 
     /**
      * Display name of the key
@@ -123,6 +129,7 @@ public class ComputeKey {
             @JsonProperty("fingerprint") @Nullable String fingerprint,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instance_id") @Nullable String instanceId,
+            @JsonProperty("metadata") @Nullable List<ComputeMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("private_key") @Nullable String privateKey,
             @JsonProperty("public_key") @Nullable String publicKey,
@@ -137,6 +144,7 @@ public class ComputeKey {
         this.fingerprint = fingerprint;
         this.id = id;
         this.instanceId = instanceId;
+        this.metadata = metadata;
         this.name = name;
         this.privateKey = privateKey;
         this.publicKey = publicKey;
@@ -153,7 +161,7 @@ public class ComputeKey {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -189,6 +197,10 @@ public class ComputeKey {
      */
     public Optional<String> instanceId() {
         return Optional.ofNullable(this.instanceId);
+    }
+
+    public Optional<List<ComputeMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -304,6 +316,12 @@ public class ComputeKey {
     }
 
 
+    public ComputeKey withMetadata(@Nullable List<ComputeMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Display name of the key
      */
@@ -400,6 +418,7 @@ public class ComputeKey {
             Utils.enhancedDeepEquals(this.fingerprint, other.fingerprint) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.instanceId, other.instanceId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.privateKey, other.privateKey) &&
             Utils.enhancedDeepEquals(this.publicKey, other.publicKey) &&
@@ -415,10 +434,10 @@ public class ComputeKey {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, expiresAt, fingerprint,
-            id, instanceId, name,
-            privateKey, publicKey, raw,
-            registryUrl, secret, type,
-            updatedAt, username);
+            id, instanceId, metadata,
+            name, privateKey, publicKey,
+            raw, registryUrl, secret,
+            type, updatedAt, username);
     }
     
     @Override
@@ -429,6 +448,7 @@ public class ComputeKey {
                 "fingerprint", fingerprint,
                 "id", id,
                 "instanceId", instanceId,
+                "metadata", metadata,
                 "name", name,
                 "privateKey", privateKey,
                 "publicKey", publicKey,
@@ -452,6 +472,8 @@ public class ComputeKey {
         private String id;
 
         private String instanceId;
+
+        private List<ComputeMetadata> metadata;
 
         private String name;
 
@@ -512,6 +534,11 @@ public class ComputeKey {
          */
         public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<ComputeMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -590,10 +617,10 @@ public class ComputeKey {
         public ComputeKey build() {
             return new ComputeKey(
                 createdAt, expiresAt, fingerprint,
-                id, instanceId, name,
-                privateKey, publicKey, raw,
-                registryUrl, secret, type,
-                updatedAt, username);
+                id, instanceId, metadata,
+                name, privateKey, publicKey,
+                raw, registryUrl, secret,
+                type, updatedAt, username);
         }
 
     }

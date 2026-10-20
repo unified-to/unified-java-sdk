@@ -78,6 +78,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
 
@@ -177,6 +182,7 @@ public class AccountingTransaction {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingTransactionLineItem> lineitems,
             @JsonProperty("memo") @Nullable String memo,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("payment_terms") @Nullable String paymentTerms,
@@ -201,6 +207,7 @@ public class AccountingTransaction {
         this.id = id;
         this.lineitems = lineitems;
         this.memo = memo;
+        this.metadata = metadata;
         this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
         this.paymentTerms = paymentTerms;
@@ -225,7 +232,8 @@ public class AccountingTransaction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -275,6 +283,10 @@ public class AccountingTransaction {
 
     public Optional<String> memo() {
         return Optional.ofNullable(this.memo);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> organizationId() {
@@ -433,6 +445,12 @@ public class AccountingTransaction {
     }
 
 
+    public AccountingTransaction withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingTransaction withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -563,6 +581,7 @@ public class AccountingTransaction {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.memo, other.memo) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
@@ -585,11 +604,12 @@ public class AccountingTransaction {
             accountId, categoryIds, contacts,
             createdAt, currency, customerMessage,
             exchangeRate, id, lineitems,
-            memo, organizationId, paymentMethod,
-            paymentTerms, projectId, raw,
-            reference, splitAccountId, status,
-            subTotalAmount, taxAmount, totalAmount,
-            transactionAt, type, updatedAt);
+            memo, metadata, organizationId,
+            paymentMethod, paymentTerms, projectId,
+            raw, reference, splitAccountId,
+            status, subTotalAmount, taxAmount,
+            totalAmount, transactionAt, type,
+            updatedAt);
     }
     
     @Override
@@ -605,6 +625,7 @@ public class AccountingTransaction {
                 "id", id,
                 "lineitems", lineitems,
                 "memo", memo,
+                "metadata", metadata,
                 "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
                 "paymentTerms", paymentTerms,
@@ -643,6 +664,8 @@ public class AccountingTransaction {
         private List<AccountingTransactionLineItem> lineitems;
 
         private String memo;
+
+        private List<AccountingMetadata> metadata;
 
         private String organizationId;
 
@@ -732,6 +755,11 @@ public class AccountingTransaction {
 
         public Builder memo(@Nullable String memo) {
             this.memo = memo;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -836,11 +864,12 @@ public class AccountingTransaction {
                 accountId, categoryIds, contacts,
                 createdAt, currency, customerMessage,
                 exchangeRate, id, lineitems,
-                memo, organizationId, paymentMethod,
-                paymentTerms, projectId, raw,
-                reference, splitAccountId, status,
-                subTotalAmount, taxAmount, totalAmount,
-                transactionAt, type, updatedAt);
+                memo, metadata, organizationId,
+                paymentMethod, paymentTerms, projectId,
+                raw, reference, splitAccountId,
+                status, subTotalAmount, taxAmount,
+                totalAmount, transactionAt, type,
+                updatedAt);
         }
 
     }

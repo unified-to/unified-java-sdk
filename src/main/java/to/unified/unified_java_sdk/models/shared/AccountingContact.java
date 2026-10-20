@@ -102,6 +102,11 @@ public class AccountingContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AccountingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -193,6 +198,7 @@ public class AccountingContact {
             @JsonProperty("is_customer") @Nullable Boolean isCustomer,
             @JsonProperty("is_supplier") @Nullable Boolean isSupplier,
             @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -222,6 +228,7 @@ public class AccountingContact {
         this.isCustomer = isCustomer;
         this.isSupplier = isSupplier;
         this.lastName = lastName;
+        this.metadata = metadata;
         this.name = name;
         this.notes = notes;
         this.organizationId = organizationId;
@@ -248,7 +255,7 @@ public class AccountingContact {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
@@ -315,6 +322,10 @@ public class AccountingContact {
 
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
+    }
+
+    public Optional<List<AccountingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -482,6 +493,12 @@ public class AccountingContact {
     }
 
 
+    public AccountingContact withMetadata(@Nullable List<AccountingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AccountingContact withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -600,6 +617,7 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.isCustomer, other.isCustomer) &&
             Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -623,12 +641,12 @@ public class AccountingContact {
             companyName, createdAt, currency,
             emails, firstName, id,
             identification, isActive, isCustomer,
-            isSupplier, lastName, name,
-            notes, organizationId, paymentMethods,
-            paymentTerms, paymenttermId, portalUrl,
-            raw, shippingAddress, taxExemption,
-            taxNumber, telephones, updatedAt,
-            website);
+            isSupplier, lastName, metadata,
+            name, notes, organizationId,
+            paymentMethods, paymentTerms, paymenttermId,
+            portalUrl, raw, shippingAddress,
+            taxExemption, taxNumber, telephones,
+            updatedAt, website);
     }
     
     @Override
@@ -648,6 +666,7 @@ public class AccountingContact {
                 "isCustomer", isCustomer,
                 "isSupplier", isSupplier,
                 "lastName", lastName,
+                "metadata", metadata,
                 "name", name,
                 "notes", notes,
                 "organizationId", organizationId,
@@ -694,6 +713,8 @@ public class AccountingContact {
         private Boolean isSupplier;
 
         private String lastName;
+
+        private List<AccountingMetadata> metadata;
 
         private String name;
 
@@ -807,6 +828,11 @@ public class AccountingContact {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AccountingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -893,12 +919,12 @@ public class AccountingContact {
                 companyName, createdAt, currency,
                 emails, firstName, id,
                 identification, isActive, isCustomer,
-                isSupplier, lastName, name,
-                notes, organizationId, paymentMethods,
-                paymentTerms, paymenttermId, portalUrl,
-                raw, shippingAddress, taxExemption,
-                taxNumber, telephones, updatedAt,
-                website);
+                isSupplier, lastName, metadata,
+                name, notes, organizationId,
+                paymentMethods, paymentTerms, paymenttermId,
+                portalUrl, raw, shippingAddress,
+                taxExemption, taxNumber, telephones,
+                updatedAt, website);
         }
 
 

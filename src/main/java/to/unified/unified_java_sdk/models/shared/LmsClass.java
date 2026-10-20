@@ -60,6 +60,11 @@ public class LmsClass {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<LmsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -89,6 +94,7 @@ public class LmsClass {
             @JsonProperty("instructors") @Nullable List<LmsReference> instructors,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
+            @JsonProperty("metadata") @Nullable List<LmsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("students") @Nullable List<LmsReference> students,
@@ -100,6 +106,7 @@ public class LmsClass {
         this.instructors = instructors;
         this.languages = languages;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.students = students;
@@ -110,7 +117,7 @@ public class LmsClass {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -145,6 +152,10 @@ public class LmsClass {
 
     public Optional<List<LmsMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<LmsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -219,6 +230,12 @@ public class LmsClass {
     }
 
 
+    public LmsClass withMetadata(@Nullable List<LmsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public LmsClass withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -263,6 +280,7 @@ public class LmsClass {
             Utils.enhancedDeepEquals(this.instructors, other.instructors) &&
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.students, other.students) &&
@@ -274,8 +292,8 @@ public class LmsClass {
         return Utils.enhancedHash(
             courseId, createdAt, description,
             id, instructors, languages,
-            media, name, raw,
-            students, updatedAt);
+            media, metadata, name,
+            raw, students, updatedAt);
     }
     
     @Override
@@ -288,6 +306,7 @@ public class LmsClass {
                 "instructors", instructors,
                 "languages", languages,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "students", students,
@@ -310,6 +329,8 @@ public class LmsClass {
         private List<String> languages;
 
         private List<LmsMedia> media;
+
+        private List<LmsMetadata> metadata;
 
         private String name;
 
@@ -364,6 +385,11 @@ public class LmsClass {
             return this;
         }
 
+        public Builder metadata(@Nullable List<LmsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -391,8 +417,8 @@ public class LmsClass {
             return new LmsClass(
                 courseId, createdAt, description,
                 id, instructors, languages,
-                media, name, raw,
-                students, updatedAt);
+                media, metadata, name,
+                raw, students, updatedAt);
         }
 
     }

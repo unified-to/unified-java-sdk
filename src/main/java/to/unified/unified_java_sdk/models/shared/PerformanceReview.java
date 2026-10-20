@@ -64,6 +64,11 @@ public class PerformanceReview {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PerformanceMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
     private List<PerformanceReviewQuestion> questions;
 
@@ -145,6 +150,7 @@ public class PerformanceReview {
             @JsonProperty("cycle_id") @Nullable String cycleId,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_acknowledged") @Nullable Boolean isAcknowledged,
+            @JsonProperty("metadata") @Nullable List<PerformanceMetadata> metadata,
             @JsonProperty("questions") @Nullable List<PerformanceReviewQuestion> questions,
             @JsonProperty("rating") @Nullable Double rating,
             @JsonProperty("rating_description") @Nullable String ratingDescription,
@@ -163,6 +169,7 @@ public class PerformanceReview {
         this.cycleId = cycleId;
         this.id = id;
         this.isAcknowledged = isAcknowledged;
+        this.metadata = metadata;
         this.questions = questions;
         this.rating = rating;
         this.ratingDescription = ratingDescription;
@@ -185,7 +192,8 @@ public class PerformanceReview {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, userId);
+            null, null, null,
+            userId);
     }
 
     /**
@@ -225,6 +233,10 @@ public class PerformanceReview {
      */
     public Optional<Boolean> isAcknowledged() {
         return Optional.ofNullable(this.isAcknowledged);
+    }
+
+    public Optional<List<PerformanceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<List<PerformanceReviewQuestion>> questions() {
@@ -355,6 +367,12 @@ public class PerformanceReview {
     }
 
 
+    public PerformanceReview withMetadata(@Nullable List<PerformanceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PerformanceReview withQuestions(@Nullable List<PerformanceReviewQuestion> questions) {
         this.questions = questions;
         return this;
@@ -467,6 +485,7 @@ public class PerformanceReview {
             Utils.enhancedDeepEquals(this.cycleId, other.cycleId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isAcknowledged, other.isAcknowledged) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.questions, other.questions) &&
             Utils.enhancedDeepEquals(this.rating, other.rating) &&
             Utils.enhancedDeepEquals(this.ratingDescription, other.ratingDescription) &&
@@ -486,10 +505,11 @@ public class PerformanceReview {
         return Utils.enhancedHash(
             comment, completedAt, createdAt,
             cycleId, id, isAcknowledged,
-            questions, rating, ratingDescription,
-            ratingMaximum, raw, reviewerUserId,
-            status, submittedAt, templateIdentifier,
-            type, updatedAt, userId);
+            metadata, questions, rating,
+            ratingDescription, ratingMaximum, raw,
+            reviewerUserId, status, submittedAt,
+            templateIdentifier, type, updatedAt,
+            userId);
     }
     
     @Override
@@ -501,6 +521,7 @@ public class PerformanceReview {
                 "cycleId", cycleId,
                 "id", id,
                 "isAcknowledged", isAcknowledged,
+                "metadata", metadata,
                 "questions", questions,
                 "rating", rating,
                 "ratingDescription", ratingDescription,
@@ -529,6 +550,8 @@ public class PerformanceReview {
         private String id;
 
         private Boolean isAcknowledged;
+
+        private List<PerformanceMetadata> metadata;
 
         private List<PerformanceReviewQuestion> questions;
 
@@ -600,6 +623,11 @@ public class PerformanceReview {
          */
         public Builder isAcknowledged(@Nullable Boolean isAcknowledged) {
             this.isAcknowledged = isAcknowledged;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<PerformanceMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -691,10 +719,11 @@ public class PerformanceReview {
             return new PerformanceReview(
                 comment, completedAt, createdAt,
                 cycleId, id, isAcknowledged,
-                questions, rating, ratingDescription,
-                ratingMaximum, raw, reviewerUserId,
-                status, submittedAt, templateIdentifier,
-                type, updatedAt, userId);
+                metadata, questions, rating,
+                ratingDescription, ratingMaximum, raw,
+                reviewerUserId, status, submittedAt,
+                templateIdentifier, type, updatedAt,
+                userId);
         }
 
     }

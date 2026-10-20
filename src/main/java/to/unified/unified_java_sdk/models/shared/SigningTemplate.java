@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -54,6 +55,11 @@ public class SigningTemplate {
     @JsonProperty("is_active")
     private Boolean isActive;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SigningMetadata> metadata;
+
     /**
      * Template name
      */
@@ -82,6 +88,7 @@ public class SigningTemplate {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<SigningMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -90,6 +97,7 @@ public class SigningTemplate {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -98,7 +106,7 @@ public class SigningTemplate {
     public SigningTemplate() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -134,6 +142,10 @@ public class SigningTemplate {
      */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<SigningMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -207,6 +219,12 @@ public class SigningTemplate {
     }
 
 
+    public SigningTemplate withMetadata(@Nullable List<SigningMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Template name
      */
@@ -249,6 +267,7 @@ public class SigningTemplate {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -258,8 +277,8 @@ public class SigningTemplate {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, creatorId, description,
-            id, isActive, name,
-            raw, updatedAt);
+            id, isActive, metadata,
+            name, raw, updatedAt);
     }
     
     @Override
@@ -270,6 +289,7 @@ public class SigningTemplate {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt);
@@ -287,6 +307,8 @@ public class SigningTemplate {
         private String id;
 
         private Boolean isActive;
+
+        private List<SigningMetadata> metadata;
 
         private String name;
 
@@ -338,6 +360,11 @@ public class SigningTemplate {
             return this;
         }
 
+        public Builder metadata(@Nullable List<SigningMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Template name
          */
@@ -365,8 +392,8 @@ public class SigningTemplate {
         public SigningTemplate build() {
             return new SigningTemplate(
                 createdAt, creatorId, description,
-                id, isActive, name,
-                raw, updatedAt);
+                id, isActive, metadata,
+                name, raw, updatedAt);
         }
 
     }

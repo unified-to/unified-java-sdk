@@ -44,6 +44,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarResponse;
@@ -63,12 +64,13 @@ public class Application {
         CreateCalendarCalendarRequest req = CreateCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
-                    .description("Socius catena auxilium.")
-                    .id("e212878f-811b-4ce5-b050-5c9876c86bf8")
+                    .description("Acer supra vallum suasoria thesaurus.")
+                    .id("f2b6a84c-d624-4825-a393-5d485c3aec9d")
                     .isPrimary(false)
-                    .name("Acer supra vallum suasoria thesaurus omnis condico cognomen accendo vehemens.")
-                    .timezone("America/Dawson_Creek")
-                    .updatedAt(OffsetDateTime.parse("2023-03-27T03:57:57.085Z"))
+                    .metadata(List.of())
+                    .name("Interviews")
+                    .timezone("Asia/Kolkata")
+                    .updatedAt(OffsetDateTime.parse("2023-03-27T13:41:46.284Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -133,44 +135,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.622Z")
-                    .id("24124db0-d539-45fa-8343-dccaddf86493")
+                    .endAt("2020-05-24T03:47:02.479Z")
+                    .hasConference(false)
+                    .id("4e3d114e-ba2b-441a-b39c-5c3f08d82d63")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.404Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.005Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.730Z",
-                                "2023-10-27T02:46:59.897Z",
-                                "2024-03-05T15:36:05.622Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.498Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:46.996Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.743Z",
+                                "2025-01-22T23:38:59.276Z",
+                                "2024-04-01T04:56:01.383Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -199,12 +204,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -427,48 +432,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.462Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.496Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.511Z",
-                                "2021-12-08T19:59:10.348Z",
-                                "2019-12-24T08:53:07.534Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -479,504 +480,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.915Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.962Z",
-                                "2021-09-16T09:03:04.247Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.738Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("25d321aa-65fc-445a-8347-c726c2a666c5")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.430Z")
+                    .startAt("2020-05-23T18:33:40.498Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.037Z")
+                    .updatedAt("2020-06-30T01:45:14.348Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -1020,6 +532,7 @@ Create a link
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkResponse;
@@ -1042,12 +555,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("822fdb46-ba27-4c7f-9edc-562ce52011a4")
+                    .id("da23ea6c-c8d2-4b5c-8f8c-646089ed23a6")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-14T23:01:44.061Z")
+                    .updatedAt("2024-03-15T04:49:55.503Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1111,28 +625,25 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-27T03:06:05.122Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-27T18:57:25.051Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("4f0af59d-d324-43a6-9b89-cbed2660cc3a")
+                    .id("3167c9e7-562b-4121-9ea1-d1f576b39c3a")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
-                    .joinUrl("https://robust-bathhouse.biz")
+                    .joinUrl("https://nutritious-crocodile.com")
+                    .metadata(List.of())
                     .notes("Curriculum ducimus assentator aspernatur ait.")
-                    .organizer(PropertyCalendarWebinarOrganizer.builder()
-                        .email("Kelton_Dicki@yahoo.com")
-                        .name("Walter Greenfelder")
-                        .build())
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T01:29:38.938Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T07:00:41.146Z"))
                             .excludedDates(List.of(
-                                "2025-02-11T18:29:10.778Z"))
+                                "2025-02-12T06:57:56.519Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-27T09:52:02.984Z"))
+                                "2024-04-27T18:32:16.053Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1512,20 +1023,20 @@ public class Application {
                                 -207d,
                                 55d,
                                 86d))
-                            .timezone("Asia/Ust-Nera")
+                            .timezone("Africa/Abidjan")
                             .weekStart(WeekStart.MO)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T13:30:10.413Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T14:37:55.341Z"))
                             .excludedDates(List.of(
-                                "2024-08-31T17:11:05.520Z",
-                                "2024-08-16T04:42:31.959Z"))
+                                "2024-09-01T03:30:43.538Z",
+                                "2024-08-16T14:49:57.028Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-24T08:21:38.390Z",
-                                "2026-01-11T16:59:52.005Z",
-                                "2023-08-13T17:36:25.167Z"))
+                                "2024-03-24T16:35:02.788Z",
+                                "2026-01-12T09:51:28.501Z",
+                                "2023-08-13T22:53:49.003Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -1658,20 +1169,20 @@ public class Application {
                                 -314d,
                                 -151d,
                                 -295d))
-                            .timezone("Pacific/Wake")
+                            .timezone("Asia/Choibalsan")
                             .weekStart(WeekStart.TU)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-24T14:00:04.378Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-25T09:24:16.937Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T03:31:03.982Z",
-                                "2023-06-07T04:42:20.933Z"))
+                                "2023-06-18T08:03:55.404Z",
+                                "2023-06-07T09:06:35.200Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-01T08:58:42.660Z",
-                                "2023-08-19T12:51:01.672Z",
-                                "2024-09-25T21:10:13.584Z"))
+                                "2024-04-01T17:18:26.088Z",
+                                "2023-08-19T18:12:59.508Z",
+                                "2024-09-26T07:49:40.110Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1811,18 +1322,18 @@ public class Application {
                                 4d,
                                 -287d,
                                 161d))
-                            .timezone("Africa/Bissau")
+                            .timezone("Asia/Krasnoyarsk")
                             .weekStart(WeekStart.WE)
                             .build()))
-                    .registrantPassword("OxwWzr0C")
+                    .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-29T05:16:49.695Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-29T18:45:45.897Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-28T11:11:07.068Z"))
-                    .webUrl("https://classic-recovery.biz")
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T07:27:11.041Z"))
+                    .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2498,6 +2009,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarCalendarResponse;
@@ -2517,12 +2029,13 @@ public class Application {
         PatchCalendarCalendarRequest req = PatchCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
-                    .description("Socius catena auxilium.")
-                    .id("d2344afe-883e-487f-9fa1-01f546286a4c")
+                    .description("Acer supra vallum suasoria thesaurus.")
+                    .id("1491c875-af9b-4149-b487-fee7b765300a")
                     .isPrimary(false)
-                    .name("Acer supra vallum suasoria thesaurus omnis condico cognomen accendo vehemens.")
-                    .timezone("America/Dawson_Creek")
-                    .updatedAt(OffsetDateTime.parse("2023-03-27T03:57:57.088Z"))
+                    .metadata(List.of())
+                    .name("Interviews")
+                    .timezone("Asia/Kolkata")
+                    .updatedAt(OffsetDateTime.parse("2023-03-27T13:41:46.289Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2588,44 +2101,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.626Z")
-                    .id("e21fe861-256e-4822-825e-50871e841fba")
+                    .endAt("2020-05-24T03:47:02.484Z")
+                    .hasConference(false)
+                    .id("6c102b53-2d33-417d-851f-56457ddabd50")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.443Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.038Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.767Z",
-                                "2023-10-27T02:46:59.922Z",
-                                "2024-03-05T15:36:05.650Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.524Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:47.005Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.766Z",
+                                "2025-01-22T23:38:59.308Z",
+                                "2024-04-01T04:56:01.410Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -2654,12 +2170,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -2882,48 +2398,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.496Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.500Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.518Z",
-                                "2021-12-08T19:59:10.362Z",
-                                "2019-12-24T08:53:07.536Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -2934,504 +2446,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.922Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.983Z",
-                                "2021-09-16T09:03:04.260Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.768Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("8870d464-8470-48d6-90ea-37219ab25e06")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.434Z")
+                    .startAt("2020-05-23T18:33:40.503Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.042Z")
+                    .updatedAt("2020-06-30T01:45:14.353Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -3476,6 +2499,7 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkResponse;
@@ -3498,12 +2522,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("08af92e4-bf8b-49b7-8221-7bd3e954f5f8")
+                    .id("bdf91970-35b7-4224-b7fc-d72a46658fb8")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-14T23:01:44.063Z")
+                    .updatedAt("2024-03-15T04:49:55.505Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3568,28 +2593,25 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-27T03:06:05.161Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-27T18:57:25.097Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("2c697d55-f54a-4999-bdb2-7f16830701f8")
+                    .id("38cdf657-e86a-459a-a158-abac57e8383c")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
-                    .joinUrl("https://robust-bathhouse.biz")
+                    .joinUrl("https://nutritious-crocodile.com")
+                    .metadata(List.of())
                     .notes("Curriculum ducimus assentator aspernatur ait.")
-                    .organizer(PropertyCalendarWebinarOrganizer.builder()
-                        .email("Kelton_Dicki@yahoo.com")
-                        .name("Walter Greenfelder")
-                        .build())
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T01:29:38.952Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T07:00:41.162Z"))
                             .excludedDates(List.of(
-                                "2025-02-11T18:29:10.809Z"))
+                                "2025-02-12T06:57:56.555Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-27T09:52:03.006Z"))
+                                "2024-04-27T18:32:16.078Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -3969,20 +2991,20 @@ public class Application {
                                 -207d,
                                 55d,
                                 86d))
-                            .timezone("Asia/Ust-Nera")
+                            .timezone("Africa/Abidjan")
                             .weekStart(WeekStart.MO)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T13:30:10.416Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T14:37:55.345Z"))
                             .excludedDates(List.of(
-                                "2024-08-31T17:11:05.546Z",
-                                "2024-08-16T04:42:31.985Z"))
+                                "2024-09-01T03:30:43.568Z",
+                                "2024-08-16T14:49:57.058Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-24T08:21:38.410Z",
-                                "2026-01-11T16:59:52.048Z",
-                                "2023-08-13T17:36:25.181Z"))
+                                "2024-03-24T16:35:02.812Z",
+                                "2026-01-12T09:51:28.549Z",
+                                "2023-08-13T22:53:49.018Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -4115,20 +3137,20 @@ public class Application {
                                 -314d,
                                 -151d,
                                 -295d))
-                            .timezone("Pacific/Wake")
+                            .timezone("Asia/Choibalsan")
                             .weekStart(WeekStart.TU)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-24T14:00:04.427Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-25T09:24:16.993Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T03:31:03.993Z",
-                                "2023-06-07T04:42:20.944Z"))
+                                "2023-06-18T08:03:55.417Z",
+                                "2023-06-07T09:06:35.213Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-01T08:58:42.681Z",
-                                "2023-08-19T12:51:01.686Z",
-                                "2024-09-25T21:10:13.611Z"))
+                                "2024-04-01T17:18:26.112Z",
+                                "2023-08-19T18:12:59.523Z",
+                                "2024-09-26T07:49:40.141Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -4268,18 +3290,18 @@ public class Application {
                                 4d,
                                 -287d,
                                 161d))
-                            .timezone("Africa/Bissau")
+                            .timezone("Asia/Krasnoyarsk")
                             .weekStart(WeekStart.WE)
                             .build()))
-                    .registrantPassword("OxwWzr0C")
+                    .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-29T05:16:49.728Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-29T18:45:45.937Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-28T11:11:07.118Z"))
-                    .webUrl("https://classic-recovery.biz")
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T07:27:11.099Z"))
+                    .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4548,6 +3570,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarCalendarResponse;
@@ -4567,12 +3590,13 @@ public class Application {
         UpdateCalendarCalendarRequest req = UpdateCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
-                    .description("Socius catena auxilium.")
-                    .id("d2344afe-883e-487f-9fa1-01f546286a4c")
+                    .description("Acer supra vallum suasoria thesaurus.")
+                    .id("1491c875-af9b-4149-b487-fee7b765300a")
                     .isPrimary(false)
-                    .name("Acer supra vallum suasoria thesaurus omnis condico cognomen accendo vehemens.")
-                    .timezone("America/Dawson_Creek")
-                    .updatedAt(OffsetDateTime.parse("2023-03-27T03:57:57.088Z"))
+                    .metadata(List.of())
+                    .name("Interviews")
+                    .timezone("Asia/Kolkata")
+                    .updatedAt(OffsetDateTime.parse("2023-03-27T13:41:46.289Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4638,44 +3662,47 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T01:29:40.626Z")
-                    .id("e21fe861-256e-4822-825e-50871e841fba")
+                    .endAt("2020-05-24T03:47:02.484Z")
+                    .hasConference(false)
+                    .id("6c102b53-2d33-417d-851f-56457ddabd50")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
                     .location("621 Boehm Prairie")
+                    .metadata(List.of())
                     .notes("Aegre traho.")
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
-                            .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-01-22T04:56:45.443Z"))
+                            .count(4d)
+                            .endAt(OffsetDateTime.parse("2025-03-23T17:00:09.038Z"))
                             .excludedDates(List.of(
-                                "2025-10-26T21:11:11.767Z",
-                                "2023-10-27T02:46:59.922Z",
-                                "2024-03-05T15:36:05.650Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
+                                "2024-02-02T00:39:33.524Z"))
+                            .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2021-02-23T09:40:47.005Z"))
-                            .interval(4d)
+                                "2023-07-06T09:41:22.766Z",
+                                "2025-01-22T23:38:59.308Z",
+                                "2024-04-01T04:56:01.410Z"))
+                            .interval(7d)
                             .onDays(List.of(
+                                PropertyCalendarEventRecurrenceOnDays.TU,
                                 PropertyCalendarEventRecurrenceOnDays.TH,
                                 PropertyCalendarEventRecurrenceOnDays.MO,
-                                PropertyCalendarEventRecurrenceOnDays.TH))
+                                PropertyCalendarEventRecurrenceOnDays.TH,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA,
+                                PropertyCalendarEventRecurrenceOnDays.SA))
                             .onMonthDays(List.of(
-                                -26d))
+                                -3d))
                             .onMonths(List.of(
-                                12d,
-                                9d,
-                                -1d,
                                 0d,
                                 1d,
                                 6d,
                                 -10d,
                                 9d,
-                                0d,
-                                4d,
-                                -2d))
+                                0d))
                             .onWeeks(List.of(
+                                -8d,
+                                3d,
                                 -7d,
                                 51d,
                                 -3d,
@@ -4704,12 +3731,12 @@ public class Application {
                                 -44d,
                                 -23d,
                                 -21d,
-                                -18d))
+                                -18d,
+                                13d,
+                                -5d,
+                                2d,
+                                -49d))
                             .onYearDays(List.of(
-                                -35d,
-                                14d,
-                                -338d,
-                                175d,
                                 -87d,
                                 339d,
                                 341d,
@@ -4932,48 +3959,44 @@ public class Application {
                                 235d,
                                 295d,
                                 -366d,
-                                -55d))
-                            .timezone("Asia/Ho_Chi_Minh")
-                            .weekStart(WeekStart.SU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(9d)
-                            .endAt(OffsetDateTime.parse("2025-05-24T09:49:01.496Z"))
-                            .excludedDates(List.of(
-                                "2020-05-02T03:00:18.500Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.DAILY)
-                            .includedDates(List.of(
-                                "2020-09-15T18:14:05.518Z",
-                                "2021-12-08T19:59:10.362Z",
-                                "2019-12-24T08:53:07.536Z"))
-                            .interval(1d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.WE,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                1d))
-                            .onMonths(List.of(
-                                4d,
-                                0d,
-                                -3d))
-                            .onWeeks(List.of(
-                                -7d,
-                                -19d,
-                                50d,
-                                -37d,
-                                43d,
-                                -48d,
-                                -30d,
-                                34d,
+                                -55d,
+                                -297d,
+                                -308d,
+                                -294d,
+                                -208d,
+                                141d,
+                                267d,
+                                64d,
+                                100d,
+                                -355d,
+                                -335d,
+                                280d,
+                                224d,
+                                259d,
+                                1d,
+                                -146d,
+                                48d,
+                                335d,
+                                363d,
+                                308d,
+                                -224d,
+                                109d,
+                                -10d,
+                                -89d,
+                                -211d,
+                                -47d,
+                                -130d,
+                                341d,
+                                -250d,
+                                295d,
+                                -329d,
+                                -205d,
+                                231d,
+                                247d,
+                                -228d,
+                                166d,
+                                -28d,
                                 36d,
-                                -33d,
-                                24d,
-                                -4d))
-                            .onYearDays(List.of(
                                 277d,
                                 -115d,
                                 100d,
@@ -4984,504 +4007,15 @@ public class Application {
                                 -39d,
                                 -319d,
                                 -251d,
-                                -254d,
-                                -35d,
-                                -121d,
-                                262d,
-                                32d,
-                                190d,
-                                107d,
-                                -145d,
-                                91d,
-                                313d,
-                                -48d,
-                                277d,
-                                104d,
-                                342d,
-                                297d,
-                                -216d,
-                                346d,
-                                -257d,
-                                307d,
-                                -44d,
-                                264d,
-                                -153d,
-                                -268d,
-                                92d,
-                                152d,
-                                -182d,
-                                -334d,
-                                89d,
-                                343d,
-                                -320d,
-                                -36d,
-                                84d,
-                                340d,
-                                -88d,
-                                -278d,
-                                202d,
-                                291d,
-                                95d,
-                                -234d,
-                                -304d,
-                                -157d,
-                                -82d,
-                                -339d,
-                                83d,
-                                2d,
-                                -238d,
-                                -204d,
-                                206d,
-                                -273d,
-                                -78d,
-                                -21d,
-                                270d,
-                                -266d,
-                                -276d,
-                                154d,
-                                -97d,
-                                -43d,
-                                -3d,
-                                191d,
-                                -302d,
-                                290d,
-                                -118d,
-                                -125d,
-                                -294d,
-                                115d,
-                                -73d,
-                                -244d,
-                                127d,
-                                26d,
-                                251d,
-                                47d,
-                                -157d,
-                                22d,
-                                -361d,
-                                318d,
-                                352d,
-                                358d,
-                                167d,
-                                210d,
-                                -185d,
-                                327d,
-                                117d,
-                                350d,
-                                -170d,
-                                -144d,
-                                -14d,
-                                -37d,
-                                318d,
-                                243d,
-                                33d,
-                                90d,
-                                319d,
-                                -270d,
-                                229d,
-                                122d,
-                                287d,
-                                -90d,
-                                -69d,
-                                -134d,
-                                -184d,
-                                25d,
-                                -178d,
-                                -89d,
-                                -273d,
-                                -49d,
-                                -362d,
-                                -9d,
-                                -71d,
-                                -347d,
-                                353d,
-                                342d,
-                                133d,
-                                -116d,
-                                231d,
-                                -231d,
-                                51d,
-                                288d,
-                                186d,
-                                -328d,
-                                275d,
-                                81d,
-                                94d,
-                                -263d,
-                                114d,
-                                13d,
-                                -357d,
-                                171d,
-                                -242d,
-                                -85d,
-                                -362d,
-                                108d,
-                                164d,
-                                69d,
-                                15d,
-                                57d,
-                                -287d,
-                                100d,
-                                165d,
-                                205d,
-                                204d,
-                                -78d,
-                                360d,
-                                -80d,
-                                -120d,
-                                -255d,
-                                -77d,
-                                110d,
-                                -26d,
-                                -149d,
-                                -254d,
-                                95d,
-                                32d,
-                                -57d,
-                                -195d,
-                                100d,
-                                221d,
-                                74d,
-                                274d,
-                                15d,
-                                353d,
-                                204d,
-                                -365d,
-                                315d,
-                                344d,
-                                199d,
-                                -59d,
-                                272d,
-                                173d,
-                                -40d,
-                                -318d,
-                                -330d,
-                                -365d,
-                                -272d,
-                                -149d,
-                                -27d,
-                                -334d,
-                                -277d,
-                                344d,
-                                351d,
-                                -310d,
-                                264d,
-                                281d,
-                                176d,
-                                191d,
-                                -183d,
-                                288d,
-                                -112d,
-                                -55d,
-                                -166d,
-                                258d,
-                                194d,
-                                59d))
-                            .timezone("America/Guadeloupe")
-                            .weekStart(WeekStart.TU)
-                            .build(),
-                        CalendarEventRecurrence.builder()
-                            .count(1d)
-                            .endAt(OffsetDateTime.parse("2020-11-10T00:40:57.922Z"))
-                            .excludedDates(List.of(
-                                "2023-01-26T09:14:19.983Z",
-                                "2021-09-16T09:03:04.260Z"))
-                            .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
-                            .includedDates(List.of(
-                                "2024-09-21T20:00:24.768Z"))
-                            .interval(9d)
-                            .onDays(List.of(
-                                PropertyCalendarEventRecurrenceOnDays.TU,
-                                PropertyCalendarEventRecurrenceOnDays.SA))
-                            .onMonthDays(List.of(
-                                -2d))
-                            .onMonths(List.of(
-                                -4d,
-                                8d,
-                                0d,
-                                9d,
-                                4d,
-                                -11d,
-                                7d,
-                                1d,
-                                -5d))
-                            .onWeeks(List.of(
-                                -36d,
-                                -31d,
-                                -16d,
-                                -6d,
-                                44d,
-                                -37d,
-                                14d,
-                                38d,
-                                -27d,
-                                -22d,
-                                -2d,
-                                24d,
-                                7d,
-                                50d,
-                                46d,
-                                52d,
-                                20d,
-                                37d,
-                                31d,
-                                48d,
-                                35d,
-                                -46d,
-                                13d,
-                                22d,
-                                53d,
-                                20d,
-                                -28d,
-                                -2d,
-                                39d,
-                                13d,
-                                4d,
-                                0d,
-                                7d,
-                                -38d,
-                                -35d,
-                                41d,
-                                49d,
-                                12d,
-                                17d,
-                                8d,
-                                49d,
-                                -47d,
-                                46d,
-                                25d,
-                                14d,
-                                -26d,
-                                -37d,
-                                -25d,
-                                -41d,
-                                27d,
-                                28d,
-                                -19d))
-                            .onYearDays(List.of(
-                                -256d,
-                                -328d,
-                                -312d,
-                                50d,
-                                -251d,
-                                -338d,
-                                -315d,
-                                214d,
-                                129d,
-                                -263d,
-                                -108d,
-                                -11d,
-                                206d,
-                                -29d,
-                                -159d,
-                                -29d,
-                                -264d,
-                                295d,
-                                -231d,
-                                53d,
-                                34d,
-                                -366d,
-                                326d,
-                                -202d,
-                                151d,
-                                79d,
-                                -66d,
-                                11d,
-                                -42d,
-                                73d,
-                                338d,
-                                -155d,
-                                197d,
-                                260d,
-                                356d,
-                                -323d,
-                                -213d,
-                                -332d,
-                                -305d,
-                                -182d,
-                                -253d,
-                                -276d,
-                                -285d,
-                                96d,
-                                -336d,
-                                269d,
-                                -233d,
-                                250d,
-                                -112d,
-                                -307d,
-                                -96d,
-                                54d,
-                                267d,
-                                318d,
-                                -66d,
-                                11d,
-                                -303d,
-                                231d,
-                                165d,
-                                -297d,
-                                -348d,
-                                -355d,
-                                364d,
-                                312d,
-                                -26d,
-                                111d,
-                                162d,
-                                280d,
-                                312d,
-                                337d,
-                                235d,
-                                68d,
-                                -282d,
-                                363d,
-                                212d,
-                                -328d,
-                                9d,
-                                -24d,
-                                -163d,
-                                -101d,
-                                -79d,
-                                -264d,
-                                -157d,
-                                188d,
-                                290d,
-                                51d,
-                                -213d,
-                                216d,
-                                230d,
-                                -270d,
-                                -211d,
-                                -156d,
-                                -165d,
-                                -305d,
-                                -45d,
-                                224d,
-                                -248d,
-                                65d,
-                                9d,
-                                274d,
-                                -299d,
-                                -228d,
-                                33d,
-                                -42d,
-                                356d,
-                                -311d,
-                                241d,
-                                261d,
-                                -136d,
-                                -252d,
-                                166d,
-                                208d,
-                                -126d,
-                                64d,
-                                323d,
-                                -104d,
-                                -106d,
-                                -248d,
-                                -41d,
-                                -109d,
-                                245d,
-                                47d,
-                                205d,
-                                358d,
-                                -296d,
-                                214d,
-                                -157d,
-                                -313d,
-                                -303d,
-                                -54d,
-                                -229d,
-                                231d,
-                                -94d,
-                                -198d,
-                                338d,
-                                199d,
-                                5d,
-                                42d,
-                                309d,
-                                73d,
-                                56d,
-                                -120d,
-                                351d,
-                                6d,
-                                -193d,
-                                21d,
-                                78d,
-                                57d,
-                                -269d,
-                                -76d,
-                                -299d,
-                                295d,
-                                -278d,
-                                11d,
-                                121d,
-                                -323d,
-                                156d,
-                                67d,
-                                152d,
-                                284d,
-                                108d,
-                                -7d,
-                                329d,
-                                -32d,
-                                333d,
-                                -338d,
-                                148d,
-                                -42d,
-                                151d,
-                                145d,
-                                -34d,
-                                -36d,
-                                296d,
-                                -198d,
-                                -317d,
-                                -161d,
-                                -253d,
-                                328d,
-                                -57d,
-                                134d,
-                                -289d,
-                                229d,
-                                44d,
-                                16d,
-                                -256d,
-                                289d,
-                                -234d,
-                                197d,
-                                333d,
-                                228d,
-                                -143d,
-                                -202d,
-                                -172d,
-                                -262d,
-                                -203d,
-                                -83d,
-                                -242d,
-                                -173d,
-                                336d,
-                                298d,
-                                -319d,
-                                66d,
-                                254d,
-                                214d,
-                                -118d,
-                                -216d,
-                                -168d,
-                                44d,
-                                -243d,
-                                207d,
-                                -28d,
-                                -4d,
-                                -272d,
-                                79d))
-                            .timezone("Atlantic/Reykjavik")
+                                -254d))
+                            .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .recurringEventId("8870d464-8470-48d6-90ea-37219ab25e06")
-                    .sendNotifications(false)
-                    .startAt("2020-05-23T16:16:29.434Z")
+                    .startAt("2020-05-23T18:33:40.503Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-29T23:10:36.042Z")
+                    .updatedAt("2020-06-30T01:45:14.353Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -5526,6 +4060,7 @@ Update a link
 package hello.world;
 
 import java.lang.Exception;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkResponse;
@@ -5548,12 +4083,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("08af92e4-bf8b-49b7-8221-7bd3e954f5f8")
+                    .id("bdf91970-35b7-4224-b7fc-d72a46658fb8")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-14T23:01:44.063Z")
+                    .updatedAt("2024-03-15T04:49:55.505Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5618,28 +4154,25 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-27T03:06:05.161Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-27T18:57:25.097Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("2c697d55-f54a-4999-bdb2-7f16830701f8")
+                    .id("38cdf657-e86a-459a-a158-abac57e8383c")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
-                    .joinUrl("https://robust-bathhouse.biz")
+                    .joinUrl("https://nutritious-crocodile.com")
+                    .metadata(List.of())
                     .notes("Curriculum ducimus assentator aspernatur ait.")
-                    .organizer(PropertyCalendarWebinarOrganizer.builder()
-                        .email("Kelton_Dicki@yahoo.com")
-                        .name("Walter Greenfelder")
-                        .build())
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T01:29:38.952Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T07:00:41.162Z"))
                             .excludedDates(List.of(
-                                "2025-02-11T18:29:10.809Z"))
+                                "2025-02-12T06:57:56.555Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-27T09:52:03.006Z"))
+                                "2024-04-27T18:32:16.078Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -6019,20 +4552,20 @@ public class Application {
                                 -207d,
                                 55d,
                                 86d))
-                            .timezone("Asia/Ust-Nera")
+                            .timezone("Africa/Abidjan")
                             .weekStart(WeekStart.MO)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T13:30:10.416Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T14:37:55.345Z"))
                             .excludedDates(List.of(
-                                "2024-08-31T17:11:05.546Z",
-                                "2024-08-16T04:42:31.985Z"))
+                                "2024-09-01T03:30:43.568Z",
+                                "2024-08-16T14:49:57.058Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-24T08:21:38.410Z",
-                                "2026-01-11T16:59:52.048Z",
-                                "2023-08-13T17:36:25.181Z"))
+                                "2024-03-24T16:35:02.812Z",
+                                "2026-01-12T09:51:28.549Z",
+                                "2023-08-13T22:53:49.018Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -6165,20 +4698,20 @@ public class Application {
                                 -314d,
                                 -151d,
                                 -295d))
-                            .timezone("Pacific/Wake")
+                            .timezone("Asia/Choibalsan")
                             .weekStart(WeekStart.TU)
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-24T14:00:04.427Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-25T09:24:16.993Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T03:31:03.993Z",
-                                "2023-06-07T04:42:20.944Z"))
+                                "2023-06-18T08:03:55.417Z",
+                                "2023-06-07T09:06:35.213Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-01T08:58:42.681Z",
-                                "2023-08-19T12:51:01.686Z",
-                                "2024-09-25T21:10:13.611Z"))
+                                "2024-04-01T17:18:26.112Z",
+                                "2023-08-19T18:12:59.523Z",
+                                "2024-09-26T07:49:40.141Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -6318,18 +4851,18 @@ public class Application {
                                 4d,
                                 -287d,
                                 161d))
-                            .timezone("Africa/Bissau")
+                            .timezone("Asia/Krasnoyarsk")
                             .weekStart(WeekStart.WE)
                             .build()))
-                    .registrantPassword("OxwWzr0C")
+                    .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-29T05:16:49.728Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-29T18:45:45.937Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-28T11:11:07.118Z"))
-                    .webUrl("https://classic-recovery.biz")
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T07:27:11.099Z"))
+                    .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

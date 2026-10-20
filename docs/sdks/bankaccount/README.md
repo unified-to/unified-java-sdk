@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
@@ -47,14 +48,15 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("48c96549-2eb1-4147-ab6a-2082a35a8309")
-                    .isPrimary(false)
-                    .name("Checking Account")
-                    .priority(3d)
+                    .id("d5591bc4-0557-4821-9081-abbc15ea43fa")
+                    .isPrimary(true)
+                    .metadata(List.of())
+                    .name("Granville Schumm - Checking")
+                    .priority(2d)
                     .routingNumber("448650724")
-                    .splitAmount(23d)
-                    .splitType(SplitType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:08:10.247Z"))
+                    .splitAmount(98d)
+                    .splitType(SplitType.PERCENTAGE)
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T06:48:11.285Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -213,6 +215,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
@@ -237,14 +240,15 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("2acd5697-a150-42b6-abbf-7252e01aa914")
-                    .isPrimary(false)
-                    .name("Checking Account")
-                    .priority(3d)
+                    .id("aa03b113-36b3-45b9-871f-a3957ae90678")
+                    .isPrimary(true)
+                    .metadata(List.of())
+                    .name("Granville Schumm - Checking")
+                    .priority(2d)
                     .routingNumber("448650724")
-                    .splitAmount(23d)
-                    .splitType(SplitType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:08:10.260Z"))
+                    .splitAmount(98d)
+                    .splitType(SplitType.PERCENTAGE)
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T06:48:11.300Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -345,6 +349,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
@@ -369,14 +374,15 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("2acd5697-a150-42b6-abbf-7252e01aa914")
-                    .isPrimary(false)
-                    .name("Checking Account")
-                    .priority(3d)
+                    .id("aa03b113-36b3-45b9-871f-a3957ae90678")
+                    .isPrimary(true)
+                    .metadata(List.of())
+                    .name("Granville Schumm - Checking")
+                    .priority(2d)
                     .routingNumber("448650724")
-                    .splitAmount(23d)
-                    .splitType(SplitType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T14:08:10.260Z"))
+                    .splitAmount(98d)
+                    .splitType(SplitType.PERCENTAGE)
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T06:48:11.300Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

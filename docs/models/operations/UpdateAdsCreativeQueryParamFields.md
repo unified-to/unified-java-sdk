@@ -42,4 +42,5 @@ UpdateAdsCreativeQueryParamFields value = UpdateAdsCreativeQueryParamFields.ID;
 | `PATH2`                        | path2                          |
 | `DATA`                         | data                           |
 | `LABELS`                       | labels                         |
+| `METADATA`                     | metadata                       |
 | `RAW`                          | raw                            |

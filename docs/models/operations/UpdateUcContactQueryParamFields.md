@@ -23,4 +23,5 @@ UpdateUcContactQueryParamFields value = UpdateUcContactQueryParamFields.ID;
 | `COMPANY`    | company      |
 | `EMAILS`     | emails       |
 | `TELEPHONES` | telephones   |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

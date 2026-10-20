@@ -23,6 +23,7 @@ public enum CreateHrisJobQueryParamFields {
     PARENT_ID("parent_id"),
     USERS("users"),
     COMPENSATION("compensation"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

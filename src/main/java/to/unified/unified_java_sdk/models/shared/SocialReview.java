@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -60,6 +61,11 @@ public class SocialReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SocialMetadata> metadata;
 
     /**
      * The social profile (page/handle/listing) being reviewed
@@ -118,6 +124,7 @@ public class SocialReview {
             @JsonProperty("content") @Nullable String content,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<SocialMetadata> metadata,
             @JsonProperty("profile_id") @Nullable String profileId,
             @JsonProperty("rating") @Nullable Double rating,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -131,6 +138,7 @@ public class SocialReview {
         this.content = content;
         this.createdAt = createdAt;
         this.id = id;
+        this.metadata = metadata;
         this.profileId = profileId;
         this.rating = rating;
         this.raw = raw;
@@ -145,7 +153,7 @@ public class SocialReview {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -188,6 +196,10 @@ public class SocialReview {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<SocialMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -298,6 +310,12 @@ public class SocialReview {
     }
 
 
+    public SocialReview withMetadata(@Nullable List<SocialMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The social profile (page/handle/listing) being reviewed
      */
@@ -377,6 +395,7 @@ public class SocialReview {
             Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.profileId, other.profileId) &&
             Utils.enhancedDeepEquals(this.rating, other.rating) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -391,9 +410,9 @@ public class SocialReview {
         return Utils.enhancedHash(
             authorAvatarUrl, authorLocation, authorName,
             content, createdAt, id,
-            profileId, rating, raw,
-            reply, title, updatedAt,
-            url);
+            metadata, profileId, rating,
+            raw, reply, title,
+            updatedAt, url);
     }
     
     @Override
@@ -405,6 +424,7 @@ public class SocialReview {
                 "content", content,
                 "createdAt", createdAt,
                 "id", id,
+                "metadata", metadata,
                 "profileId", profileId,
                 "rating", rating,
                 "raw", raw,
@@ -428,6 +448,8 @@ public class SocialReview {
         private OffsetDateTime createdAt;
 
         private String id;
+
+        private List<SocialMetadata> metadata;
 
         private String profileId;
 
@@ -495,6 +517,11 @@ public class SocialReview {
             return this;
         }
 
+        public Builder metadata(@Nullable List<SocialMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The social profile (page/handle/listing) being reviewed
          */
@@ -555,9 +582,9 @@ public class SocialReview {
             return new SocialReview(
                 authorAvatarUrl, authorLocation, authorName,
                 content, createdAt, id,
-                profileId, rating, raw,
-                reply, title, updatedAt,
-                url);
+                metadata, profileId, rating,
+                raw, reply, title,
+                updatedAt, url);
         }
 
     }

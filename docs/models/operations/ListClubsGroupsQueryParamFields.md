@@ -34,4 +34,5 @@ ListClubsGroupsQueryParamFields value = ListClubsGroupsQueryParamFields.ID;
 | `PROFILE_IMAGE_URL` | profile_image_url   |
 | `COVER_IMAGE_URL`   | cover_image_url     |
 | `ACTIVITY_TYPES`    | activity_types      |
+| `METADATA`          | metadata            |
 | `RAW`               | raw                 |

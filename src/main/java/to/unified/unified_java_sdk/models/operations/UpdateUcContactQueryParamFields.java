@@ -19,6 +19,7 @@ public enum UpdateUcContactQueryParamFields {
     COMPANY("company"),
     EMAILS("emails"),
     TELEPHONES("telephones"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -48,6 +49,11 @@ public class PerformanceCycle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PerformanceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -92,6 +98,7 @@ public class PerformanceCycle {
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<PerformanceMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -103,6 +110,7 @@ public class PerformanceCycle {
         this.dueAt = dueAt;
         this.endAt = endAt;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.startAt = startAt;
@@ -115,7 +123,7 @@ public class PerformanceCycle {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -145,6 +153,10 @@ public class PerformanceCycle {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<PerformanceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -224,6 +236,12 @@ public class PerformanceCycle {
     }
 
 
+    public PerformanceCycle withMetadata(@Nullable List<PerformanceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public PerformanceCycle withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -284,6 +302,7 @@ public class PerformanceCycle {
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -296,9 +315,9 @@ public class PerformanceCycle {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, dueAt,
-            endAt, id, name,
-            raw, startAt, status,
-            type, updatedAt);
+            endAt, id, metadata,
+            name, raw, startAt,
+            status, type, updatedAt);
     }
     
     @Override
@@ -309,6 +328,7 @@ public class PerformanceCycle {
                 "dueAt", dueAt,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "startAt", startAt,
@@ -329,6 +349,8 @@ public class PerformanceCycle {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<PerformanceMetadata> metadata;
 
         private String name;
 
@@ -380,6 +402,11 @@ public class PerformanceCycle {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PerformanceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -422,9 +449,9 @@ public class PerformanceCycle {
         public PerformanceCycle build() {
             return new PerformanceCycle(
                 createdAt, description, dueAt,
-                endAt, id, name,
-                raw, startAt, status,
-                type, updatedAt);
+                endAt, id, metadata,
+                name, raw, startAt,
+                status, type, updatedAt);
         }
 
     }

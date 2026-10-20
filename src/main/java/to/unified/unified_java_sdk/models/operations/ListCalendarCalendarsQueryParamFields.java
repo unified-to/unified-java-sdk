@@ -16,6 +16,7 @@ public enum ListCalendarCalendarsQueryParamFields {
     DESCRIPTION("description"),
     TIMEZONE("timezone"),
     IS_PRIMARY("is_primary"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

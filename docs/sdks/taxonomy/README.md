@@ -39,19 +39,20 @@ public class Application {
 
         CreateHrisTaxonomyRequest req = CreateHrisTaxonomyRequest.builder()
                 .hrisTaxonomy(HrisTaxonomy.builder()
+                    .alternativeNames(List.of(
+                        "Facilitator",
+                        "National"))
                     .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
-                    .description("Apto demonstro audacia adstringo cursim tristis solio careo.")
-                    .domain("Electronics")
-                    .id("ede085db-5709-4d53-a490-746f3de5be17")
+                    .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
+                    .domain("Health")
+                    .id("30babc47-15c6-4230-81ba-799d531e0d89")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("International Functionality Architect")
-                    .parentId("6524b2a7-6520-4e15-8c4e-1aa6793db837")
-                    .roleIds(List.of(
-                        "2b1ef757-eb4c-4207-8af1-929afe49cd65"))
-                    .subcategory("Bamboo")
+                    .subcategory("Marble")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-05-28T20:45:10.267Z"))
-                    .url("https://our-polarisation.name")
+                    .updatedAt(OffsetDateTime.parse("2023-05-29T01:10:20.439Z"))
+                    .url("https://fixed-membership.biz/")
                     .build())
                 .connectionId("<id>")
                 .build();

@@ -69,6 +69,11 @@ public class UcRecording {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<UcMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -123,6 +128,7 @@ public class UcRecording {
             @JsonProperty("expires_at") @Nullable OffsetDateTime expiresAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("media") @Nullable List<UcRecordingMedia> media,
+            @JsonProperty("metadata") @Nullable List<UcMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("type") @Nullable UcRecordingType type,
@@ -139,6 +145,7 @@ public class UcRecording {
         this.expiresAt = expiresAt;
         this.id = id;
         this.media = media;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = startAt;
         this.type = type;
@@ -155,7 +162,7 @@ public class UcRecording {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> callId() {
@@ -200,6 +207,10 @@ public class UcRecording {
 
     public Optional<List<UcRecordingMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<UcMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -308,6 +319,12 @@ public class UcRecording {
     }
 
 
+    public UcRecording withMetadata(@Nullable List<UcMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public UcRecording withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -383,6 +400,7 @@ public class UcRecording {
             Utils.enhancedDeepEquals(this.expiresAt, other.expiresAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -398,10 +416,10 @@ public class UcRecording {
         return Utils.enhancedHash(
             callId, contacts, conversationIdentifier,
             createdAt, endAt, expiresAt,
-            id, media, raw,
-            startAt, type, updatedAt,
-            userId, userName, userPhone,
-            webUrl);
+            id, media, metadata,
+            raw, startAt, type,
+            updatedAt, userId, userName,
+            userPhone, webUrl);
     }
     
     @Override
@@ -415,6 +433,7 @@ public class UcRecording {
                 "expiresAt", expiresAt,
                 "id", id,
                 "media", media,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "type", type,
@@ -443,6 +462,8 @@ public class UcRecording {
         private String id;
 
         private List<UcRecordingMedia> media;
+
+        private List<UcMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -516,6 +537,11 @@ public class UcRecording {
             return this;
         }
 
+        public Builder metadata(@Nullable List<UcMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -569,10 +595,10 @@ public class UcRecording {
             return new UcRecording(
                 callId, contacts, conversationIdentifier,
                 createdAt, endAt, expiresAt,
-                id, media, raw,
-                startAt, type, updatedAt,
-                userId, userName, userPhone,
-                webUrl);
+                id, media, metadata,
+                raw, startAt, type,
+                updatedAt, userId, userName,
+                userPhone, webUrl);
         }
 
     }

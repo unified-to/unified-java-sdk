@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoCommitResponse;
@@ -43,12 +44,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("82a3c660-98c8-4355-bb6d-c939fee48727")
+                    .id("4440c4b8-1113-4d82-80e4-7e10599a77e8")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
-                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
-                    .updatedAt(OffsetDateTime.parse("2023-05-30T08:05:31.446Z"))
+                    .message("quantify bluetooth bandwidth")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2023-05-30T17:31:34.389Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -207,6 +209,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchRepoCommitResponse;
@@ -227,12 +230,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("5033c12d-c279-4f2e-95b2-817a4625b8f3")
+                    .id("8d8621aa-4dc9-4dd0-9d8a-8393ef783df7")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
-                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
-                    .updatedAt(OffsetDateTime.parse("2023-05-30T08:05:31.449Z"))
+                    .message("quantify bluetooth bandwidth")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2023-05-30T17:31:34.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -333,6 +337,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateRepoCommitResponse;
@@ -353,12 +358,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("5033c12d-c279-4f2e-95b2-817a4625b8f3")
+                    .id("8d8621aa-4dc9-4dd0-9d8a-8393ef783df7")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
-                    .message("Auctus ascisco esse attollo clarus odio tum bis rerum.")
-                    .updatedAt(OffsetDateTime.parse("2023-05-30T08:05:31.449Z"))
+                    .message("quantify bluetooth bandwidth")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2023-05-30T17:31:34.395Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

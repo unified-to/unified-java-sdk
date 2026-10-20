@@ -9,33 +9,41 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiAgentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.GetGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiSkillRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiAgentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListGenaiMemoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiModelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiSkillsRequest;
 import to.unified.unified_java_sdk.models.operations.ListGenaiTasksRequest;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiSkillRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiAgentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateGenaiMemoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateGenaiTaskRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiAgentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiMemoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateGenaiMemoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
@@ -44,6 +52,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskReques
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiMemoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetGenaiMemoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiModelResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiOrganizationRequestBuilder;
@@ -54,6 +64,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskRequestBu
 import to.unified.unified_java_sdk.models.operations.async.GetGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiAgentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiAgentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiMemoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListGenaiMemoriesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiModelsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiOrganizationsRequestBuilder;
@@ -64,12 +76,16 @@ import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksRequest
 import to.unified.unified_java_sdk.models.operations.async.ListGenaiTasksResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiMemoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchGenaiMemoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiMemoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiMemoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiSkillRequestBuilder;
@@ -78,33 +94,41 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskReques
 import to.unified.unified_java_sdk.models.operations.async.RemoveGenaiTaskResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiAgentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiAgentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiMemoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiMemoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiTaskRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateGenaiTaskResponse;
 import to.unified.unified_java_sdk.operations.CreateGenaiAgent;
 import to.unified.unified_java_sdk.operations.CreateGenaiEmbedding;
+import to.unified.unified_java_sdk.operations.CreateGenaiMemory;
 import to.unified.unified_java_sdk.operations.CreateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.CreateGenaiPrompt;
 import to.unified.unified_java_sdk.operations.CreateGenaiTask;
 import to.unified.unified_java_sdk.operations.GetGenaiAgent;
+import to.unified.unified_java_sdk.operations.GetGenaiMemory;
 import to.unified.unified_java_sdk.operations.GetGenaiModel;
 import to.unified.unified_java_sdk.operations.GetGenaiOrganization;
 import to.unified.unified_java_sdk.operations.GetGenaiSkill;
 import to.unified.unified_java_sdk.operations.GetGenaiTask;
 import to.unified.unified_java_sdk.operations.ListGenaiAgents;
+import to.unified.unified_java_sdk.operations.ListGenaiMemories;
 import to.unified.unified_java_sdk.operations.ListGenaiModels;
 import to.unified.unified_java_sdk.operations.ListGenaiOrganizations;
 import to.unified.unified_java_sdk.operations.ListGenaiSkills;
 import to.unified.unified_java_sdk.operations.ListGenaiTasks;
 import to.unified.unified_java_sdk.operations.PatchGenaiAgent;
+import to.unified.unified_java_sdk.operations.PatchGenaiMemory;
 import to.unified.unified_java_sdk.operations.PatchGenaiOrganization;
 import to.unified.unified_java_sdk.operations.PatchGenaiTask;
 import to.unified.unified_java_sdk.operations.RemoveGenaiAgent;
+import to.unified.unified_java_sdk.operations.RemoveGenaiMemory;
 import to.unified.unified_java_sdk.operations.RemoveGenaiOrganization;
 import to.unified.unified_java_sdk.operations.RemoveGenaiSkill;
 import to.unified.unified_java_sdk.operations.RemoveGenaiTask;
 import to.unified.unified_java_sdk.operations.UpdateGenaiAgent;
+import to.unified.unified_java_sdk.operations.UpdateGenaiMemory;
 import to.unified.unified_java_sdk.operations.UpdateGenaiOrganization;
 import to.unified.unified_java_sdk.operations.UpdateGenaiTask;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -171,6 +195,29 @@ public class AsyncGenai {
     public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a memory
+     * 
+     * @return The async call builder
+     */
+    public CreateGenaiMemoryRequestBuilder createGenaiMemory() {
+        return new CreateGenaiMemoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a memory
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<CreateGenaiMemoryResponse> createGenaiMemory(@Nonnull CreateGenaiMemoryRequest request) {
+        AsyncRequestOperation<CreateGenaiMemoryRequest, CreateGenaiMemoryResponse> operation
+              = new CreateGenaiMemory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -263,6 +310,29 @@ public class AsyncGenai {
     public CompletableFuture<GetGenaiAgentResponse> getGenaiAgent(@Nonnull GetGenaiAgentRequest request) {
         AsyncRequestOperation<GetGenaiAgentRequest, GetGenaiAgentResponse> operation
               = new GetGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a memory
+     * 
+     * @return The async call builder
+     */
+    public GetGenaiMemoryRequestBuilder getGenaiMemory() {
+        return new GetGenaiMemoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a memory
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<GetGenaiMemoryResponse> getGenaiMemory(@Nonnull GetGenaiMemoryRequest request) {
+        AsyncRequestOperation<GetGenaiMemoryRequest, GetGenaiMemoryResponse> operation
+              = new GetGenaiMemory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -384,6 +454,29 @@ public class AsyncGenai {
 
 
     /**
+     * List all memories
+     * 
+     * @return The async call builder
+     */
+    public ListGenaiMemoriesRequestBuilder listGenaiMemories() {
+        return new ListGenaiMemoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all memories
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListGenaiMemoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListGenaiMemoriesResponse> listGenaiMemories(@Nonnull ListGenaiMemoriesRequest request) {
+        AsyncRequestOperation<ListGenaiMemoriesRequest, ListGenaiMemoriesResponse> operation
+              = new ListGenaiMemories.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all models
      * 
      * @return The async call builder
@@ -499,6 +592,29 @@ public class AsyncGenai {
 
 
     /**
+     * Update a memory
+     * 
+     * @return The async call builder
+     */
+    public PatchGenaiMemoryRequestBuilder patchGenaiMemory() {
+        return new PatchGenaiMemoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<PatchGenaiMemoryResponse> patchGenaiMemory(@Nonnull PatchGenaiMemoryRequest request) {
+        AsyncRequestOperation<PatchGenaiMemoryRequest, PatchGenaiMemoryResponse> operation
+              = new PatchGenaiMemory.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an organization
      * 
      * @return The async call builder
@@ -562,6 +678,29 @@ public class AsyncGenai {
     public CompletableFuture<RemoveGenaiAgentResponse> removeGenaiAgent(@Nonnull RemoveGenaiAgentRequest request) {
         AsyncRequestOperation<RemoveGenaiAgentRequest, RemoveGenaiAgentResponse> operation
               = new RemoveGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a memory
+     * 
+     * @return The async call builder
+     */
+    public RemoveGenaiMemoryRequestBuilder removeGenaiMemory() {
+        return new RemoveGenaiMemoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a memory
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<RemoveGenaiMemoryResponse> removeGenaiMemory(@Nonnull RemoveGenaiMemoryRequest request) {
+        AsyncRequestOperation<RemoveGenaiMemoryRequest, RemoveGenaiMemoryResponse> operation
+              = new RemoveGenaiMemory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -654,6 +793,29 @@ public class AsyncGenai {
     public CompletableFuture<UpdateGenaiAgentResponse> updateGenaiAgent(@Nonnull UpdateGenaiAgentRequest request) {
         AsyncRequestOperation<UpdateGenaiAgentRequest, UpdateGenaiAgentResponse> operation
               = new UpdateGenaiAgent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a memory
+     * 
+     * @return The async call builder
+     */
+    public UpdateGenaiMemoryRequestBuilder updateGenaiMemory() {
+        return new UpdateGenaiMemoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a memory
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateGenaiMemoryResponse>} - The async response
+     */
+    public CompletableFuture<UpdateGenaiMemoryResponse> updateGenaiMemory(@Nonnull UpdateGenaiMemoryRequest request) {
+        AsyncRequestOperation<UpdateGenaiMemoryRequest, UpdateGenaiMemoryResponse> operation
+              = new UpdateGenaiMemory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

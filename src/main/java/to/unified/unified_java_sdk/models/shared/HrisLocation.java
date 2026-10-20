@@ -78,6 +78,11 @@ public class HrisLocation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -120,6 +125,7 @@ public class HrisLocation {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_hq") @Nullable Boolean isHq,
             @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -136,6 +142,7 @@ public class HrisLocation {
         this.isActive = isActive;
         this.isHq = isHq;
         this.languageLocale = languageLocale;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -150,7 +157,7 @@ public class HrisLocation {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyHrisLocationAddress> address() {
@@ -200,6 +207,10 @@ public class HrisLocation {
 
     public Optional<String> languageLocale() {
         return Optional.ofNullable(this.languageLocale);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -303,6 +314,12 @@ public class HrisLocation {
     }
 
 
+    public HrisLocation withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisLocation withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -362,6 +379,7 @@ public class HrisLocation {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isHq, other.isHq) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -376,9 +394,9 @@ public class HrisLocation {
             address, companyId, createdAt,
             currency, description, externalIdentifier,
             id, isActive, isHq,
-            languageLocale, name, parentId,
-            raw, telephones, timezone,
-            updatedAt);
+            languageLocale, metadata, name,
+            parentId, raw, telephones,
+            timezone, updatedAt);
     }
     
     @Override
@@ -394,6 +412,7 @@ public class HrisLocation {
                 "isActive", isActive,
                 "isHq", isHq,
                 "languageLocale", languageLocale,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -424,6 +443,8 @@ public class HrisLocation {
         private Boolean isHq;
 
         private String languageLocale;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -500,6 +521,11 @@ public class HrisLocation {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -538,9 +564,9 @@ public class HrisLocation {
                 address, companyId, createdAt,
                 currency, description, externalIdentifier,
                 id, isActive, isHq,
-                languageLocale, name, parentId,
-                raw, telephones, timezone,
-                updatedAt);
+                languageLocale, metadata, name,
+                parentId, raw, telephones,
+                timezone, updatedAt);
         }
 
     }

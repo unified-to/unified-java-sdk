@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -37,6 +38,11 @@ public class CalendarBusy {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -56,6 +62,7 @@ public class CalendarBusy {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("end_at") @Nonnull OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
             @JsonProperty("timezone") @Nullable String timezone) {
@@ -63,6 +70,7 @@ public class CalendarBusy {
         this.endAt = Optional.ofNullable(endAt)
             .orElseThrow(() -> new IllegalArgumentException("endAt cannot be null"));
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.startAt = Optional.ofNullable(startAt)
             .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
@@ -73,7 +81,8 @@ public class CalendarBusy {
             @Nonnull OffsetDateTime endAt,
             @Nonnull OffsetDateTime startAt) {
         this(null, endAt, null,
-            null, startAt, null);
+            null, null, startAt,
+            null);
     }
 
     public Optional<String> description() {
@@ -89,6 +98,10 @@ public class CalendarBusy {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -132,6 +145,12 @@ public class CalendarBusy {
     }
 
 
+    public CalendarBusy withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarBusy withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -166,6 +185,7 @@ public class CalendarBusy {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone);
@@ -175,7 +195,8 @@ public class CalendarBusy {
     public int hashCode() {
         return Utils.enhancedHash(
             description, endAt, id,
-            raw, startAt, timezone);
+            metadata, raw, startAt,
+            timezone);
     }
     
     @Override
@@ -184,6 +205,7 @@ public class CalendarBusy {
                 "description", description,
                 "endAt", endAt,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "startAt", startAt,
                 "timezone", timezone);
@@ -197,6 +219,8 @@ public class CalendarBusy {
         private OffsetDateTime endAt;
 
         private String id;
+
+        private List<CalendarMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -226,6 +250,11 @@ public class CalendarBusy {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -247,7 +276,8 @@ public class CalendarBusy {
         public CalendarBusy build() {
             return new CalendarBusy(
                 description, endAt, id,
-                raw, startAt, timezone);
+                metadata, raw, startAt,
+                timezone);
         }
 
     }

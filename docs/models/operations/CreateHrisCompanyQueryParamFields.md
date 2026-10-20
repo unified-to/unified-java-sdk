@@ -19,4 +19,5 @@ CreateHrisCompanyQueryParamFields value = CreateHrisCompanyQueryParamFields.ID;
 | `NAME`       | name         |
 | `LEGAL_NAME` | legal_name   |
 | `ADDRESS`    | address      |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

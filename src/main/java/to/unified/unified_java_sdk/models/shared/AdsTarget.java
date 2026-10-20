@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -45,6 +46,11 @@ public class AdsTarget {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -72,6 +78,7 @@ public class AdsTarget {
             @JsonProperty("audience_count_min") @Nullable Double audienceCountMin,
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -81,6 +88,7 @@ public class AdsTarget {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -91,7 +99,7 @@ public class AdsTarget {
             @Nonnull String id) {
         this(null, null, id,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> audienceCountMax() {
@@ -108,6 +116,10 @@ public class AdsTarget {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -159,6 +171,12 @@ public class AdsTarget {
     }
 
 
+    public AdsTarget withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsTarget withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -201,6 +219,7 @@ public class AdsTarget {
             Utils.enhancedDeepEquals(this.audienceCountMin, other.audienceCountMin) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -211,8 +230,8 @@ public class AdsTarget {
     public int hashCode() {
         return Utils.enhancedHash(
             audienceCountMax, audienceCountMin, id,
-            isActive, name, parentId,
-            raw, type);
+            isActive, metadata, name,
+            parentId, raw, type);
     }
     
     @Override
@@ -222,6 +241,7 @@ public class AdsTarget {
                 "audienceCountMin", audienceCountMin,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -238,6 +258,8 @@ public class AdsTarget {
         private String id;
 
         private Boolean isActive;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -271,6 +293,11 @@ public class AdsTarget {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -298,8 +325,8 @@ public class AdsTarget {
         public AdsTarget build() {
             return new AdsTarget(
                 audienceCountMax, audienceCountMin, id,
-                isActive, name, parentId,
-                raw, type);
+                isActive, metadata, name,
+                parentId, raw, type);
         }
 
     }

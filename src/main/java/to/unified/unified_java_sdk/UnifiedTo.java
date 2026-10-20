@@ -374,6 +374,9 @@ public class UnifiedTo {
     private final Embedding embedding;
 
 
+    private final Memory memory;
+
+
     private final Model model;
 
 
@@ -1226,6 +1229,11 @@ public class UnifiedTo {
     }
 
 
+    public Memory memory() {
+        return memory;
+    }
+
+
     public Model model() {
         return model;
     }
@@ -1968,6 +1976,7 @@ public class UnifiedTo {
         this.genai = new Genai(sdkConfiguration);
         this.agent = new Agent(sdkConfiguration);
         this.embedding = new Embedding(sdkConfiguration);
+        this.memory = new Memory(sdkConfiguration);
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
         this.skill = new Skill(sdkConfiguration);

@@ -50,6 +50,11 @@ public class DatastoreTable {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<DatastoreMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -87,6 +92,7 @@ public class DatastoreTable {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("fields") @Nullable List<DatastoreField> fields,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<DatastoreMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -98,6 +104,7 @@ public class DatastoreTable {
         this.description = description;
         this.fields = fields;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -110,7 +117,7 @@ public class DatastoreTable {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -137,6 +144,10 @@ public class DatastoreTable {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<DatastoreMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -207,6 +218,12 @@ public class DatastoreTable {
     }
 
 
+    public DatastoreTable withMetadata(@Nullable List<DatastoreMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public DatastoreTable withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -261,6 +278,7 @@ public class DatastoreTable {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -273,9 +291,9 @@ public class DatastoreTable {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, databaseId, description,
-            fields, id, name,
-            parentId, raw, relationships,
-            updatedAt, webUrl);
+            fields, id, metadata,
+            name, parentId, raw,
+            relationships, updatedAt, webUrl);
     }
     
     @Override
@@ -286,6 +304,7 @@ public class DatastoreTable {
                 "description", description,
                 "fields", fields,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -306,6 +325,8 @@ public class DatastoreTable {
         private List<DatastoreField> fields;
 
         private String id;
+
+        private List<DatastoreMetadata> metadata;
 
         private String name;
 
@@ -354,6 +375,11 @@ public class DatastoreTable {
             return this;
         }
 
+        public Builder metadata(@Nullable List<DatastoreMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -390,9 +416,9 @@ public class DatastoreTable {
         public DatastoreTable build() {
             return new DatastoreTable(
                 createdAt, databaseId, description,
-                fields, id, name,
-                parentId, raw, relationships,
-                updatedAt, webUrl);
+                fields, id, metadata,
+                name, parentId, raw,
+                relationships, updatedAt, webUrl);
         }
 
     }

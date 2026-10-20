@@ -35,6 +35,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
@@ -54,10 +55,11 @@ public class Application {
                 .atsDocument(AtsDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
-                    .filename("bah_white_frantically.bz")
-                    .id("979d856a-35e7-41d9-8616-5d72902bcd09")
-                    .type(AtsDocumentType.RESUME)
-                    .updatedAt(OffsetDateTime.parse("2022-12-06T16:33:29.218Z"))
+                    .filename("lonzo_schowalter_resume.pdf")
+                    .id("8c3d864b-9921-4c29-a188-1be34b1166a3")
+                    .metadata(List.of())
+                    .type(AtsDocumentType.COVER_LETTER)
+                    .updatedAt(OffsetDateTime.parse("2022-12-06T21:42:48.538Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -101,6 +103,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
@@ -121,9 +124,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("06c9b2df-57c5-4b6b-bbc3-88135ef486b4")
+                    .id("e78a52b0-b0ef-474d-b28a-a175f51451f3")
+                    .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:18:05.545Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T16:33:05.270Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -167,6 +171,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
@@ -185,11 +190,14 @@ public class Application {
         CreateSigningDocumentRequest req = CreateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.781Z"))
-                    .id("95e7b138-7be8-4634-8bf3-19b46ba0043a")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.899Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("8a1086ca-7b30-4414-a38c-aa2627a82f02")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.503Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.390Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -578,6 +586,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
@@ -597,10 +606,11 @@ public class Application {
                 .atsDocument(AtsDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
-                    .filename("bah_white_frantically.bz")
-                    .id("d9939acc-7f04-425c-bb42-5d30d6650b6b")
-                    .type(AtsDocumentType.RESUME)
-                    .updatedAt(OffsetDateTime.parse("2022-12-06T16:33:29.220Z"))
+                    .filename("lonzo_schowalter_resume.pdf")
+                    .id("df326b4d-c94a-4a39-bb57-cd04b3cd16df")
+                    .metadata(List.of())
+                    .type(AtsDocumentType.COVER_LETTER)
+                    .updatedAt(OffsetDateTime.parse("2022-12-06T21:42:48.542Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -645,6 +655,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
@@ -665,9 +676,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("8682141e-f81b-452d-bfb0-fbbc8039ff88")
+                    .id("280e0bfa-2cc9-43e0-b278-6301912522d1")
+                    .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:18:05.551Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T16:33:05.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -712,6 +724,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
@@ -730,11 +743,14 @@ public class Application {
         PatchSigningDocumentRequest req = PatchSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.792Z"))
-                    .id("218657bf-69a6-488b-bcc2-ec1421c59ba7")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.908Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("2b926e3c-46e3-4434-a92e-0df7b0817610")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.506Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.404Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -947,6 +963,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
@@ -966,10 +983,11 @@ public class Application {
                 .atsDocument(AtsDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
-                    .filename("bah_white_frantically.bz")
-                    .id("d9939acc-7f04-425c-bb42-5d30d6650b6b")
-                    .type(AtsDocumentType.RESUME)
-                    .updatedAt(OffsetDateTime.parse("2022-12-06T16:33:29.220Z"))
+                    .filename("lonzo_schowalter_resume.pdf")
+                    .id("df326b4d-c94a-4a39-bb57-cd04b3cd16df")
+                    .metadata(List.of())
+                    .type(AtsDocumentType.COVER_LETTER)
+                    .updatedAt(OffsetDateTime.parse("2022-12-06T21:42:48.542Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1014,6 +1032,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
@@ -1034,9 +1053,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("8682141e-f81b-452d-bfb0-fbbc8039ff88")
+                    .id("280e0bfa-2cc9-43e0-b278-6301912522d1")
+                    .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:18:05.551Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T16:33:05.278Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1081,6 +1101,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
@@ -1099,11 +1120,14 @@ public class Application {
         UpdateSigningDocumentRequest req = UpdateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.792Z"))
-                    .id("218657bf-69a6-488b-bcc2-ec1421c59ba7")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.908Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("2b926e3c-46e3-4434-a92e-0df7b0817610")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.506Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.404Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

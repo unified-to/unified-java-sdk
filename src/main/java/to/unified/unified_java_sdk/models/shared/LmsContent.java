@@ -97,6 +97,11 @@ public class LmsContent {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<LmsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -167,6 +172,7 @@ public class LmsContent {
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("localizations") @Nullable List<LmsContentLocalization> localizations,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
+            @JsonProperty("metadata") @Nullable List<LmsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("provider_name") @Nullable String providerName,
             @JsonProperty("published_at") @Nullable OffsetDateTime publishedAt,
@@ -191,6 +197,7 @@ public class LmsContent {
         this.languages = languages;
         this.localizations = localizations;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.providerName = providerName;
         this.publishedAt = publishedAt;
@@ -211,7 +218,8 @@ public class LmsContent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<String>> categories() {
@@ -274,6 +282,10 @@ public class LmsContent {
 
     public Optional<List<LmsMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<LmsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -420,6 +432,12 @@ public class LmsContent {
     }
 
 
+    public LmsContent withMetadata(@Nullable List<LmsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public LmsContent withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -513,6 +531,7 @@ public class LmsContent {
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.localizations, other.localizations) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.providerName, other.providerName) &&
             Utils.enhancedDeepEquals(this.publishedAt, other.publishedAt) &&
@@ -532,10 +551,11 @@ public class LmsContent {
             createdAt, description, difficulty,
             durationMinutes, externalReference, id,
             instructors, isActive, languages,
-            localizations, media, name,
-            providerName, publishedAt, raw,
-            shortDescription, skills, sortOrder,
-            subjects, tags, updatedAt);
+            localizations, media, metadata,
+            name, providerName, publishedAt,
+            raw, shortDescription, skills,
+            sortOrder, subjects, tags,
+            updatedAt);
     }
     
     @Override
@@ -555,6 +575,7 @@ public class LmsContent {
                 "languages", languages,
                 "localizations", localizations,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "providerName", providerName,
                 "publishedAt", publishedAt,
@@ -597,6 +618,8 @@ public class LmsContent {
         private List<LmsContentLocalization> localizations;
 
         private List<LmsMedia> media;
+
+        private List<LmsMetadata> metadata;
 
         private String name;
 
@@ -698,6 +721,11 @@ public class LmsContent {
             return this;
         }
 
+        public Builder metadata(@Nullable List<LmsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -763,10 +791,11 @@ public class LmsContent {
                 createdAt, description, difficulty,
                 durationMinutes, externalReference, id,
                 instructors, isActive, languages,
-                localizations, media, name,
-                providerName, publishedAt, raw,
-                shortDescription, skills, sortOrder,
-                subjects, tags, updatedAt);
+                localizations, media, metadata,
+                name, providerName, publishedAt,
+                raw, shortDescription, skills,
+                sortOrder, subjects, tags,
+                updatedAt);
         }
 
     }

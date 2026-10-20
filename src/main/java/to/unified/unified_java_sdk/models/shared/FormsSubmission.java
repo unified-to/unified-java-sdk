@@ -42,6 +42,11 @@ public class FormsSubmission {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<FormsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -68,6 +73,7 @@ public class FormsSubmission {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("form_id") @Nonnull String formId,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<FormsMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("respondent_email") @Nullable String respondentEmail,
             @JsonProperty("respondent_name") @Nullable String respondentName,
@@ -78,6 +84,7 @@ public class FormsSubmission {
         this.formId = Optional.ofNullable(formId)
             .orElseThrow(() -> new IllegalArgumentException("formId cannot be null"));
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.respondentEmail = respondentEmail;
         this.respondentName = respondentName;
@@ -89,7 +96,7 @@ public class FormsSubmission {
             @Nonnull String formId) {
         this(answers, null, formId,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public List<FormAnswer> answers() {
@@ -109,6 +116,10 @@ public class FormsSubmission {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<FormsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -162,6 +173,12 @@ public class FormsSubmission {
     }
 
 
+    public FormsSubmission withMetadata(@Nullable List<FormsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public FormsSubmission withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -203,6 +220,7 @@ public class FormsSubmission {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.formId, other.formId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.respondentEmail, other.respondentEmail) &&
             Utils.enhancedDeepEquals(this.respondentName, other.respondentName) &&
@@ -213,8 +231,8 @@ public class FormsSubmission {
     public int hashCode() {
         return Utils.enhancedHash(
             answers, createdAt, formId,
-            id, raw, respondentEmail,
-            respondentName, updatedAt);
+            id, metadata, raw,
+            respondentEmail, respondentName, updatedAt);
     }
     
     @Override
@@ -224,6 +242,7 @@ public class FormsSubmission {
                 "createdAt", createdAt,
                 "formId", formId,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "respondentEmail", respondentEmail,
                 "respondentName", respondentName,
@@ -240,6 +259,8 @@ public class FormsSubmission {
         private String formId;
 
         private String id;
+
+        private List<FormsMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -276,6 +297,11 @@ public class FormsSubmission {
             return this;
         }
 
+        public Builder metadata(@Nullable List<FormsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -302,8 +328,8 @@ public class FormsSubmission {
         public FormsSubmission build() {
             return new FormsSubmission(
                 answers, createdAt, formId,
-                id, raw, respondentEmail,
-                respondentName, updatedAt);
+                id, metadata, raw,
+                respondentEmail, respondentName, updatedAt);
         }
 
     }

@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -115,6 +116,11 @@ public class ClubsEvent {
     @JsonProperty("location_name")
     private String locationName;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ClubsMetadata> metadata;
+
     /**
      * The event name (or a "Home vs Away" matchup label)
      */
@@ -214,6 +220,7 @@ public class ClubsEvent {
             @JsonProperty("is_home") @Nullable Boolean isHome,
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("location_name") @Nullable String locationName,
+            @JsonProperty("metadata") @Nullable List<ClubsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("opponent_id") @Nullable String opponentId,
             @JsonProperty("opponent_name") @Nullable String opponentName,
@@ -239,6 +246,7 @@ public class ClubsEvent {
         this.isHome = isHome;
         this.locationId = locationId;
         this.locationName = locationName;
+        this.metadata = metadata;
         this.name = name;
         this.opponentId = opponentId;
         this.opponentName = opponentName;
@@ -262,7 +270,7 @@ public class ClubsEvent {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -354,6 +362,10 @@ public class ClubsEvent {
      */
     public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
+    }
+
+    public Optional<List<ClubsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -562,6 +574,12 @@ public class ClubsEvent {
     }
 
 
+    public ClubsEvent withMetadata(@Nullable List<ClubsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The event name (or a "Home vs Away" matchup label)
      */
@@ -693,6 +711,7 @@ public class ClubsEvent {
             Utils.enhancedDeepEquals(this.isHome, other.isHome) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.locationName, other.locationName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.opponentId, other.opponentId) &&
             Utils.enhancedDeepEquals(this.opponentName, other.opponentName) &&
@@ -714,11 +733,11 @@ public class ClubsEvent {
             description, durationMinutes, endAt,
             groupId, homeScore, homeTeamName,
             id, isHome, locationId,
-            locationName, name, opponentId,
-            opponentName, raw, scoreAgainst,
-            scoreFor, startAt, status,
-            timezone, type, updatedAt,
-            url);
+            locationName, metadata, name,
+            opponentId, opponentName, raw,
+            scoreAgainst, scoreFor, startAt,
+            status, timezone, type,
+            updatedAt, url);
     }
     
     @Override
@@ -737,6 +756,7 @@ public class ClubsEvent {
                 "isHome", isHome,
                 "locationId", locationId,
                 "locationName", locationName,
+                "metadata", metadata,
                 "name", name,
                 "opponentId", opponentId,
                 "opponentName", opponentName,
@@ -779,6 +799,8 @@ public class ClubsEvent {
         private String locationId;
 
         private String locationName;
+
+        private List<ClubsMetadata> metadata;
 
         private String name;
 
@@ -912,6 +934,11 @@ public class ClubsEvent {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ClubsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The event name (or a "Home vs Away" matchup label)
          */
@@ -1014,11 +1041,11 @@ public class ClubsEvent {
                 description, durationMinutes, endAt,
                 groupId, homeScore, homeTeamName,
                 id, isHome, locationId,
-                locationName, name, opponentId,
-                opponentName, raw, scoreAgainst,
-                scoreFor, startAt, status,
-                timezone, type, updatedAt,
-                url);
+                locationName, metadata, name,
+                opponentId, opponentName, raw,
+                scoreAgainst, scoreFor, startAt,
+                status, timezone, type,
+                updatedAt, url);
         }
 
     }

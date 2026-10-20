@@ -35,6 +35,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -55,9 +56,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("22642020-7439-4530-abde-d9a6ad8f2337")
+                    .id("4153820f-2e15-49d2-96f2-3434d2e3494e")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.312Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.064Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -123,11 +125,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("748b4206-9341-4eb2-9b08-88f944d4f408")
+                    .id("f3a595e0-7633-4d14-8a06-3a76dd2e25ef")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-07T09:42:38.015Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T03:23:29.489Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -172,6 +174,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -192,10 +195,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("d63d693e-e968-4716-af5d-86a3e2bc1509")
+                    .id("fc81a7d6-fdf3-4075-b681-fd53eae19c64")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.908Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.073Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -584,6 +588,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
@@ -604,9 +609,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("6d545584-0e7a-4328-a704-567e6d02029b")
+                    .id("87532c36-2b29-4e63-92a2-2904d3482d9f")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.313Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.067Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -673,11 +679,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("6949752f-ea25-493f-98f5-9efcf171d4d2")
+                    .id("757f3387-4d05-480e-9dc6-20c2b38475e6")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-07T09:42:38.024Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T03:23:29.499Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -723,6 +729,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
@@ -743,10 +750,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("ee52ba32-87e0-4c45-a29d-08c1d270afc8")
+                    .id("92e9573b-1e68-48c5-8df2-d66625a1ef9e")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.911Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -959,6 +967,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
@@ -979,9 +988,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("6d545584-0e7a-4328-a704-567e6d02029b")
+                    .id("87532c36-2b29-4e63-92a2-2904d3482d9f")
+                    .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-25T15:52:12.313Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-25T22:03:17.067Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1048,11 +1058,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("6949752f-ea25-493f-98f5-9efcf171d4d2")
+                    .id("757f3387-4d05-480e-9dc6-20c2b38475e6")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-07T09:42:38.024Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T03:23:29.499Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -1098,6 +1108,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
@@ -1118,10 +1129,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("ee52ba32-87e0-4c45-a29d-08c1d270afc8")
+                    .id("92e9573b-1e68-48c5-8df2-d66625a1ef9e")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.911Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

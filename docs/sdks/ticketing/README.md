@@ -41,6 +41,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
@@ -61,10 +62,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("7ea7377d-e453-4035-92a6-6136b4b1616e")
+                    .id("13ea9a4a-e171-4222-9756-668a306a6727")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.337Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.147Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -129,28 +131,29 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
                     .emails(List.of(
                         TicketingEmail.builder()
-                            .email("Christian_Windler@gmail.com")
+                            .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("1cb37a6d-fb38-40c3-bf7e-53f3184a4d36")
+                    .id("6b5c2430-55ae-4c38-9d58-715809cd7d23")
+                    .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
-                        "casso",
-                        "peccatus"))
+                        "quidem",
+                        "una"))
                     .telephones(List.of(
                         TicketingTelephone.builder()
-                            .telephone("(532) 242-0482")
+                            .telephone("(299) 843-2042")
                             .type(TicketingTelephoneType.OTHER)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(826) 283-7431")
+                            .telephone("(248) 482-6083")
                             .type(TicketingTelephoneType.MOBILE)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(483) 314-6826")
+                            .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-02T03:44:50.492Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-02T22:53:19.873Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -194,6 +197,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -214,8 +218,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("96739701-f4b9-4f14-8b56-8e3ddd6dcc02")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.551Z"))
+                    .id("884848a1-52e3-4e95-ae2b-d3f1fa00af96")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.442Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -277,25 +282,20 @@ public class Application {
 
         CreateTicketingTicketRequest req = CreateTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "76d78801-ed65-4f20-82a8-20415e92d4e7",
-                        "994be4e1-f018-4b40-bcdb-fc318bbf4105"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.376Z"))
-                    .id("54a827af-47c7-494a-a432-1d40a8a0c7ba")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("66360cb4-eb10-41f9-a348-2ffc33928f20")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("a2d1c30f-cb23-49f0-9981-5b3ead19ba32")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.244Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -799,6 +799,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryResponse;
@@ -819,10 +820,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("bca40b88-34bf-4c67-bab8-e8ea72f938d1")
+                    .id("2a4d4372-20e5-4c64-8dc3-c99dbfce23b6")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.344Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.158Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -888,28 +890,29 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
                     .emails(List.of(
                         TicketingEmail.builder()
-                            .email("Christian_Windler@gmail.com")
+                            .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("d4da3ffa-a41c-4824-a545-0dc2e117469a")
+                    .id("d04203f1-d846-4df1-b44a-8ca9b01e880c")
+                    .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
-                        "casso",
-                        "peccatus"))
+                        "quidem",
+                        "una"))
                     .telephones(List.of(
                         TicketingTelephone.builder()
-                            .telephone("(532) 242-0482")
+                            .telephone("(299) 843-2042")
                             .type(TicketingTelephoneType.OTHER)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(826) 283-7431")
+                            .telephone("(248) 482-6083")
                             .type(TicketingTelephoneType.MOBILE)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(483) 314-6826")
+                            .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-02T03:44:50.503Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-02T22:53:19.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -954,6 +957,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingNoteResponse;
@@ -974,8 +978,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("b6d37fbf-7613-4576-876e-4240bbb9bdb2")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.557Z"))
+                    .id("ded6dbe0-cdd4-4876-a0e0-17c4021cc0b3")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.451Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1038,25 +1043,20 @@ public class Application {
 
         PatchTicketingTicketRequest req = PatchTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "2e322130-a669-410f-9996-d7edd557ec92",
-                        "79d4658a-34b5-4da6-ae7f-7313ce05a59f"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.382Z"))
-                    .id("39dc7291-c76a-461f-b99d-1ce96513cd3b")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("06e0f907-581d-4dd2-a8e1-bad695ee261a")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("5eaab953-24c3-42e3-b5bf-8c4e985d1345")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.247Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1325,6 +1325,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResponse;
@@ -1345,10 +1346,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("bca40b88-34bf-4c67-bab8-e8ea72f938d1")
+                    .id("2a4d4372-20e5-4c64-8dc3-c99dbfce23b6")
                     .isActive(true)
+                    .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-12T04:26:05.344Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-12T22:43:24.158Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1414,28 +1416,29 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-03-15T12:33:14.875Z"))
                     .emails(List.of(
                         TicketingEmail.builder()
-                            .email("Christian_Windler@gmail.com")
+                            .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("d4da3ffa-a41c-4824-a545-0dc2e117469a")
+                    .id("d04203f1-d846-4df1-b44a-8ca9b01e880c")
+                    .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
-                        "casso",
-                        "peccatus"))
+                        "quidem",
+                        "una"))
                     .telephones(List.of(
                         TicketingTelephone.builder()
-                            .telephone("(532) 242-0482")
+                            .telephone("(299) 843-2042")
                             .type(TicketingTelephoneType.OTHER)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(826) 283-7431")
+                            .telephone("(248) 482-6083")
                             .type(TicketingTelephoneType.MOBILE)
                             .build(),
                         TicketingTelephone.builder()
-                            .telephone("(483) 314-6826")
+                            .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-02T03:44:50.503Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-02T22:53:19.894Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1480,6 +1483,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTicketingNoteResponse;
@@ -1500,8 +1504,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("b6d37fbf-7613-4576-876e-4240bbb9bdb2")
-                    .updatedAt(OffsetDateTime.parse("2024-09-27T19:14:34.557Z"))
+                    .id("ded6dbe0-cdd4-4876-a0e0-17c4021cc0b3")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2024-09-28T09:56:44.451Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1564,25 +1569,20 @@ public class Application {
 
         UpdateTicketingTicketRequest req = UpdateTicketingTicketRequest.builder()
                 .ticketingTicket(TicketingTicket.builder()
-                    .attachmentIds(List.of(
-                        "2e322130-a669-410f-9996-d7edd557ec92",
-                        "79d4658a-34b5-4da6-ae7f-7313ce05a59f"))
-                    .categoryId("vilicus")
+                    .attachmentIds(List.of())
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
-                    .dueAt(OffsetDateTime.parse("2025-08-13T05:20:15.382Z"))
-                    .id("39dc7291-c76a-461f-b99d-1ce96513cd3b")
-                    .priority("LOW")
-                    .source("atavus")
-                    .sourceRef("06e0f907-581d-4dd2-a8e1-bad695ee261a")
+                    .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
+                    .id("5eaab953-24c3-42e3-b5bf-8c4e985d1345")
+                    .metadata(List.of())
+                    .priority("MEDIUM")
+                    .source("email")
                     .status(TicketingTicketStatus.ACTIVE)
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
-                        "tamen",
-                        "vitae",
-                        "torrens"))
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T16:06:37.247Z"))
-                    .url("https://yellowish-testimonial.biz")
+                        "vilicus"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:21:48.538Z"))
+                    .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -27,6 +27,7 @@ public enum ListAccountingBankfeedtransactionsQueryParamFields {
     CONTACT_ID("contact_id"),
     ACCOUNT_ID("account_id"),
     CATEGORY_IDS("category_ids"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -28,4 +28,5 @@ PatchUcRecordingQueryParamFields value = PatchUcRecordingQueryParamFields.ID;
 | `USER_PHONE`              | user_phone                |
 | `TYPE`                    | type                      |
 | `CONVERSATION_IDENTIFIER` | conversation_identifier   |
+| `METADATA`                | metadata                  |
 | `RAW`                     | raw                       |

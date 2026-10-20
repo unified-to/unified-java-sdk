@@ -84,6 +84,11 @@ public class HrisJob {
     @JsonProperty("locations")
     private List<HrisLocation> locations;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * the job or position title
      */
@@ -130,6 +135,7 @@ public class HrisJob {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("locations") @Nullable List<HrisLocation> locations,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -145,6 +151,7 @@ public class HrisJob {
         this.id = id;
         this.isActive = isActive;
         this.locations = locations;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -157,7 +164,8 @@ public class HrisJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -218,6 +226,10 @@ public class HrisJob {
      */
     public Optional<List<HrisLocation>> locations() {
         return Optional.ofNullable(this.locations);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -338,6 +350,12 @@ public class HrisJob {
     }
 
 
+    public HrisJob withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * the job or position title
      */
@@ -401,6 +419,7 @@ public class HrisJob {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -414,8 +433,9 @@ public class HrisJob {
             code, companyId, compensation,
             createdAt, description, employmentType,
             groups, id, isActive,
-            locations, name, parentId,
-            raw, updatedAt, users);
+            locations, metadata, name,
+            parentId, raw, updatedAt,
+            users);
     }
     
     @Override
@@ -431,6 +451,7 @@ public class HrisJob {
                 "id", id,
                 "isActive", isActive,
                 "locations", locations,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -460,6 +481,8 @@ public class HrisJob {
         private Boolean isActive;
 
         private List<HrisLocation> locations;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -545,6 +568,11 @@ public class HrisJob {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * the job or position title
          */
@@ -588,8 +616,9 @@ public class HrisJob {
                 code, companyId, compensation,
                 createdAt, description, employmentType,
                 groups, id, isActive,
-                locations, name, parentId,
-                raw, updatedAt, users);
+                locations, metadata, name,
+                parentId, raw, updatedAt,
+                users);
         }
 
     }

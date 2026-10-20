@@ -30,4 +30,5 @@ ListPerformanceGoalsQueryParamFields value = ListPerformanceGoalsQueryParamField
 | `DUE_AT`       | due_at         |
 | `COMPLETED_AT` | completed_at   |
 | `MILESTONES`   | milestones     |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

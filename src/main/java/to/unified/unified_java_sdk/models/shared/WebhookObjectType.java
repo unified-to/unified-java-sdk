@@ -131,6 +131,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType GENAI_AGENT = new WebhookObjectType("genai_agent");
     public static final WebhookObjectType GENAI_ORGANIZATION = new WebhookObjectType("genai_organization");
     public static final WebhookObjectType GENAI_SKILL = new WebhookObjectType("genai_skill");
+    public static final WebhookObjectType GENAI_MEMORY = new WebhookObjectType("genai_memory");
     public static final WebhookObjectType MESSAGING_MESSAGE = new WebhookObjectType("messaging_message");
     public static final WebhookObjectType MESSAGING_CHANNEL = new WebhookObjectType("messaging_channel");
     public static final WebhookObjectType MESSAGING_EVENT = new WebhookObjectType("messaging_event");
@@ -416,6 +417,7 @@ public class WebhookObjectType {
         map.put("genai_agent", GENAI_AGENT);
         map.put("genai_organization", GENAI_ORGANIZATION);
         map.put("genai_skill", GENAI_SKILL);
+        map.put("genai_memory", GENAI_MEMORY);
         map.put("messaging_message", MESSAGING_MESSAGE);
         map.put("messaging_channel", MESSAGING_CHANNEL);
         map.put("messaging_event", MESSAGING_EVENT);
@@ -633,6 +635,7 @@ public class WebhookObjectType {
         map.put("genai_agent", WebhookObjectTypeEnum.GENAI_AGENT);
         map.put("genai_organization", WebhookObjectTypeEnum.GENAI_ORGANIZATION);
         map.put("genai_skill", WebhookObjectTypeEnum.GENAI_SKILL);
+        map.put("genai_memory", WebhookObjectTypeEnum.GENAI_MEMORY);
         map.put("messaging_message", WebhookObjectTypeEnum.MESSAGING_MESSAGE);
         map.put("messaging_channel", WebhookObjectTypeEnum.MESSAGING_CHANNEL);
         map.put("messaging_event", WebhookObjectTypeEnum.MESSAGING_EVENT);
@@ -851,6 +854,7 @@ public class WebhookObjectType {
         GENAI_AGENT("genai_agent"),
         GENAI_ORGANIZATION("genai_organization"),
         GENAI_SKILL("genai_skill"),
+        GENAI_MEMORY("genai_memory"),
         MESSAGING_MESSAGE("messaging_message"),
         MESSAGING_CHANNEL("messaging_channel"),
         MESSAGING_EVENT("messaging_event"),

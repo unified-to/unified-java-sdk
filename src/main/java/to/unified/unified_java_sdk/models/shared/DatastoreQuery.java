@@ -11,6 +11,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,6 +22,11 @@ public class DatastoreQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database_id")
     private String databaseId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<DatastoreMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -45,11 +51,13 @@ public class DatastoreQuery {
     @JsonCreator
     public DatastoreQuery(
             @JsonProperty("database_id") @Nullable String databaseId,
+            @JsonProperty("metadata") @Nullable List<DatastoreMetadata> metadata,
             @JsonProperty("query") @Nullable PropertyDatastoreQueryQuery query,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("response") @Nullable PropertyDatastoreQueryResponse response,
             @JsonProperty("table_id") @Nullable String tableId) {
         this.databaseId = databaseId;
+        this.metadata = metadata;
         this.query = query;
         this.raw = raw;
         this.response = response;
@@ -58,11 +66,15 @@ public class DatastoreQuery {
     
     public DatastoreQuery() {
         this(null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> databaseId() {
         return Optional.ofNullable(this.databaseId);
+    }
+
+    public Optional<List<DatastoreMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<PropertyDatastoreQueryQuery> query() {
@@ -88,6 +100,12 @@ public class DatastoreQuery {
 
     public DatastoreQuery withDatabaseId(@Nullable String databaseId) {
         this.databaseId = databaseId;
+        return this;
+    }
+
+
+    public DatastoreQuery withMetadata(@Nullable List<DatastoreMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -127,6 +145,7 @@ public class DatastoreQuery {
         DatastoreQuery other = (DatastoreQuery) o;
         return 
             Utils.enhancedDeepEquals(this.databaseId, other.databaseId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.response, other.response) &&
@@ -136,14 +155,15 @@ public class DatastoreQuery {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            databaseId, query, raw,
-            response, tableId);
+            databaseId, metadata, query,
+            raw, response, tableId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(DatastoreQuery.class,
                 "databaseId", databaseId,
+                "metadata", metadata,
                 "query", query,
                 "raw", raw,
                 "response", response,
@@ -154,6 +174,8 @@ public class DatastoreQuery {
     public final static class Builder {
 
         private String databaseId;
+
+        private List<DatastoreMetadata> metadata;
 
         private PropertyDatastoreQueryQuery query;
 
@@ -169,6 +191,11 @@ public class DatastoreQuery {
 
         public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = databaseId;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<DatastoreMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -194,8 +221,8 @@ public class DatastoreQuery {
 
         public DatastoreQuery build() {
             return new DatastoreQuery(
-                databaseId, query, raw,
-                response, tableId);
+                databaseId, metadata, query,
+                raw, response, tableId);
         }
 
     }

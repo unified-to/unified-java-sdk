@@ -136,6 +136,11 @@ public class AdsGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -222,6 +227,7 @@ public class AdsGroup {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("insertionorder_id") @Nullable String insertionorderId,
             @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("optimization_goal") @Nullable OptimizationGoal optimizationGoal,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -254,6 +260,7 @@ public class AdsGroup {
         this.id = id;
         this.insertionorderId = insertionorderId;
         this.languageLocale = languageLocale;
+        this.metadata = metadata;
         this.name = name;
         this.optimizationGoal = optimizationGoal;
         this.organizationId = organizationId;
@@ -279,7 +286,7 @@ public class AdsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> bidAmount() {
@@ -379,6 +386,10 @@ public class AdsGroup {
      */
     public Optional<String> languageLocale() {
         return Optional.ofNullable(this.languageLocale);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -582,6 +593,12 @@ public class AdsGroup {
     }
 
 
+    public AdsGroup withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsGroup withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -693,6 +710,7 @@ public class AdsGroup {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.insertionorderId, other.insertionorderId) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.optimizationGoal, other.optimizationGoal) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -716,11 +734,11 @@ public class AdsGroup {
             createdAt, creativeIds, creativeSelection,
             currency, effectiveStatus, endAt,
             frequencyCap, hasEuPoliticalAds, id,
-            insertionorderId, languageLocale, name,
-            optimizationGoal, organizationId, pacing,
-            parentId, promoted, raw,
-            startAt, status, targeting,
-            type, updatedAt);
+            insertionorderId, languageLocale, metadata,
+            name, optimizationGoal, organizationId,
+            pacing, parentId, promoted,
+            raw, startAt, status,
+            targeting, type, updatedAt);
     }
     
     @Override
@@ -746,6 +764,7 @@ public class AdsGroup {
                 "id", id,
                 "insertionorderId", insertionorderId,
                 "languageLocale", languageLocale,
+                "metadata", metadata,
                 "name", name,
                 "optimizationGoal", optimizationGoal,
                 "organizationId", organizationId,
@@ -802,6 +821,8 @@ public class AdsGroup {
         private String insertionorderId;
 
         private String languageLocale;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -950,6 +971,11 @@ public class AdsGroup {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -1027,11 +1053,11 @@ public class AdsGroup {
                 createdAt, creativeIds, creativeSelection,
                 currency, effectiveStatus, endAt,
                 frequencyCap, hasEuPoliticalAds, id,
-                insertionorderId, languageLocale, name,
-                optimizationGoal, organizationId, pacing,
-                parentId, promoted, raw,
-                startAt, status, targeting,
-                type, updatedAt);
+                insertionorderId, languageLocale, metadata,
+                name, optimizationGoal, organizationId,
+                pacing, parentId, promoted,
+                raw, startAt, status,
+                targeting, type, updatedAt);
         }
 
     }

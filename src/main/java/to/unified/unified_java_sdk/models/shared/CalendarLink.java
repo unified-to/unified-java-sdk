@@ -14,6 +14,7 @@ import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -48,6 +49,11 @@ public class CalendarLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CalendarMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -87,6 +93,7 @@ public class CalendarLink {
             @JsonProperty("duration") @Nullable Double duration,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<CalendarMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("price_amount") @Nullable Double priceAmount,
             @JsonProperty("price_currency") @Nullable String priceCurrency,
@@ -98,6 +105,7 @@ public class CalendarLink {
         this.duration = duration;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.priceAmount = priceAmount;
         this.priceCurrency = priceCurrency;
@@ -112,7 +120,7 @@ public class CalendarLink {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, url);
+            null, null, url);
     }
 
     /**
@@ -139,6 +147,10 @@ public class CalendarLink {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<CalendarMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -209,6 +221,12 @@ public class CalendarLink {
     }
 
 
+    public CalendarLink withMetadata(@Nullable List<CalendarMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CalendarLink withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -263,6 +281,7 @@ public class CalendarLink {
             Utils.enhancedDeepEquals(this.duration, other.duration) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.priceAmount, other.priceAmount) &&
             Utils.enhancedDeepEquals(this.priceCurrency, other.priceCurrency) &&
@@ -275,9 +294,9 @@ public class CalendarLink {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, duration,
-            id, isActive, name,
-            priceAmount, priceCurrency, raw,
-            updatedAt, url);
+            id, isActive, metadata,
+            name, priceAmount, priceCurrency,
+            raw, updatedAt, url);
     }
     
     @Override
@@ -288,6 +307,7 @@ public class CalendarLink {
                 "duration", duration,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "priceAmount", priceAmount,
                 "priceCurrency", priceCurrency,
@@ -308,6 +328,8 @@ public class CalendarLink {
         private String id;
 
         private Boolean isActive;
+
+        private List<CalendarMetadata> metadata;
 
         private String name;
 
@@ -356,6 +378,11 @@ public class CalendarLink {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CalendarMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -392,9 +419,9 @@ public class CalendarLink {
         public CalendarLink build() {
             return new CalendarLink(
                 createdAt, description, duration,
-                id, isActive, name,
-                priceAmount, priceCurrency, raw,
-                updatedAt, url);
+                id, isActive, metadata,
+                name, priceAmount, priceCurrency,
+                raw, updatedAt, url);
         }
 
     }

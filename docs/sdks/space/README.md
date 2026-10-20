@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -43,10 +44,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("d63d693e-e968-4716-af5d-86a3e2bc1509")
+                    .id("fc81a7d6-fdf3-4075-b681-fd53eae19c64")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.908Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.073Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -205,6 +207,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceResponse;
@@ -225,10 +228,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("ee52ba32-87e0-4c45-a29d-08c1d270afc8")
+                    .id("92e9573b-1e68-48c5-8df2-d66625a1ef9e")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.911Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -329,6 +333,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsSpaceResponse;
@@ -349,10 +354,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("ee52ba32-87e0-4c45-a29d-08c1d270afc8")
+                    .id("92e9573b-1e68-48c5-8df2-d66625a1ef9e")
                     .isActive(false)
+                    .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-28T07:23:46.911Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-28T23:45:24.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

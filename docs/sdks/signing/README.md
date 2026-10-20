@@ -31,6 +31,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
@@ -49,11 +50,14 @@ public class Application {
         CreateSigningDocumentRequest req = CreateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.781Z"))
-                    .id("95e7b138-7be8-4634-8bf3-19b46ba0043a")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.899Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("8a1086ca-7b30-4414-a38c-aa2627a82f02")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.503Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.390Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -97,6 +101,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningSignatoryResponse;
@@ -115,12 +120,13 @@ public class Application {
         CreateSigningSignatoryRequest req = CreateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("c94357a2-b409-4d90-a4d0-ee2b3891bc9b")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("c7ecbb94-a6a1-42fe-a577-48381c6494ca")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.718Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.209Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -509,6 +515,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
@@ -527,11 +534,14 @@ public class Application {
         PatchSigningDocumentRequest req = PatchSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.792Z"))
-                    .id("218657bf-69a6-488b-bcc2-ec1421c59ba7")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.908Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("2b926e3c-46e3-4434-a92e-0df7b0817610")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.506Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.404Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -576,6 +586,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningSignatoryResponse;
@@ -594,12 +605,13 @@ public class Application {
         PatchSigningSignatoryRequest req = PatchSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("44e829f2-930c-46ab-a680-a43ade2cd23c")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("7996751b-99f6-460f-9fad-052bad50d6f3")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.727Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.217Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -756,6 +768,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
@@ -774,11 +787,14 @@ public class Application {
         UpdateSigningDocumentRequest req = UpdateSigningDocumentRequest.builder()
                 .signingDocument(SigningDocument.builder()
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
-                    .expiresAt(OffsetDateTime.parse("2027-01-16T08:47:26.792Z"))
-                    .id("218657bf-69a6-488b-bcc2-ec1421c59ba7")
-                    .name("nam audax absens")
-                    .status(SigningDocumentStatus.VOIDED)
-                    .updatedAt(OffsetDateTime.parse("2025-09-01T07:10:14.908Z"))
+                    .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
+                    .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
+                    .id("2b926e3c-46e3-4434-a92e-0df7b0817610")
+                    .metadata(List.of())
+                    .name("Denesik Group NDA")
+                    .sentAt(OffsetDateTime.parse("2022-06-29T05:57:10.506Z"))
+                    .status(SigningDocumentStatus.DRAFT)
+                    .updatedAt(OffsetDateTime.parse("2025-09-01T23:27:38.404Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -823,6 +839,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningSignatoryResponse;
@@ -841,12 +858,13 @@ public class Application {
         UpdateSigningSignatoryRequest req = UpdateSigningSignatoryRequest.builder()
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
-                    .email("Hardy.Wehner@gmail.com")
-                    .id("44e829f2-930c-46ab-a680-a43ade2cd23c")
-                    .order(5d)
+                    .email("anais.lakin@icloud.com")
+                    .id("7996751b-99f6-460f-9fad-052bad50d6f3")
+                    .metadata(List.of())
+                    .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
-                    .status(SigningSignatoryStatus.SIGNED)
-                    .updatedAt(OffsetDateTime.parse("2026-09-10T00:00:42.727Z"))
+                    .status(SigningSignatoryStatus.ERROR)
+                    .updatedAt(OffsetDateTime.parse("2024-05-17T06:32:47.217Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

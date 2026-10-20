@@ -28,6 +28,7 @@ public enum GetHrisDeviceQueryParamFields {
     HAS_HD_ENCRYPTED("has_hd_encrypted"),
     HAS_SCREENLOCK("has_screenlock"),
     IS_MISSING("is_missing"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

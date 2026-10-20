@@ -44,4 +44,5 @@ CreateAdsGroupQueryParamFields value = CreateAdsGroupQueryParamFields.ID;
 | `PROMOTED`               | promoted                 |
 | `LANGUAGE_LOCALE`        | language_locale          |
 | `CREATIVE_SELECTION`     | creative_selection       |
+| `METADATA`               | metadata                 |
 | `RAW`                    | raw                      |

@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -68,6 +69,11 @@ public class LmsActivity {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<LmsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress_percentage")
     private Double progressPercentage;
 
@@ -107,6 +113,7 @@ public class LmsActivity {
             @JsonProperty("duration_minutes") @Nullable Double durationMinutes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_completed") @Nullable Boolean isCompleted,
+            @JsonProperty("metadata") @Nullable List<LmsMetadata> metadata,
             @JsonProperty("progress_percentage") @Nullable Double progressPercentage,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("started_at") @Nullable OffsetDateTime startedAt,
@@ -120,6 +127,7 @@ public class LmsActivity {
         this.durationMinutes = durationMinutes;
         this.id = id;
         this.isCompleted = isCompleted;
+        this.metadata = metadata;
         this.progressPercentage = progressPercentage;
         this.raw = raw;
         this.startedAt = startedAt;
@@ -132,7 +140,7 @@ public class LmsActivity {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> assignedGrade() {
@@ -174,6 +182,10 @@ public class LmsActivity {
 
     public Optional<Boolean> isCompleted() {
         return Optional.ofNullable(this.isCompleted);
+    }
+
+    public Optional<List<LmsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Double> progressPercentage() {
@@ -267,6 +279,12 @@ public class LmsActivity {
     }
 
 
+    public LmsActivity withMetadata(@Nullable List<LmsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public LmsActivity withProgressPercentage(@Nullable Double progressPercentage) {
         this.progressPercentage = progressPercentage;
         return this;
@@ -324,6 +342,7 @@ public class LmsActivity {
             Utils.enhancedDeepEquals(this.durationMinutes, other.durationMinutes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isCompleted, other.isCompleted) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.progressPercentage, other.progressPercentage) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startedAt, other.startedAt) &&
@@ -336,9 +355,9 @@ public class LmsActivity {
         return Utils.enhancedHash(
             assignedGrade, completedAt, contentId,
             courseId, createdAt, durationMinutes,
-            id, isCompleted, progressPercentage,
-            raw, startedAt, studentId,
-            updatedAt);
+            id, isCompleted, metadata,
+            progressPercentage, raw, startedAt,
+            studentId, updatedAt);
     }
     
     @Override
@@ -352,6 +371,7 @@ public class LmsActivity {
                 "durationMinutes", durationMinutes,
                 "id", id,
                 "isCompleted", isCompleted,
+                "metadata", metadata,
                 "progressPercentage", progressPercentage,
                 "raw", raw,
                 "startedAt", startedAt,
@@ -377,6 +397,8 @@ public class LmsActivity {
         private String id;
 
         private Boolean isCompleted;
+
+        private List<LmsMetadata> metadata;
 
         private Double progressPercentage;
 
@@ -441,6 +463,11 @@ public class LmsActivity {
             return this;
         }
 
+        public Builder metadata(@Nullable List<LmsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder progressPercentage(@Nullable Double progressPercentage) {
             this.progressPercentage = progressPercentage;
             return this;
@@ -479,9 +506,9 @@ public class LmsActivity {
             return new LmsActivity(
                 assignedGrade, completedAt, contentId,
                 courseId, createdAt, durationMinutes,
-                id, isCompleted, progressPercentage,
-                raw, startedAt, studentId,
-                updatedAt);
+                id, isCompleted, metadata,
+                progressPercentage, raw, startedAt,
+                studentId, updatedAt);
         }
 
     }

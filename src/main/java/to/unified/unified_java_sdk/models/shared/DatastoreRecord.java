@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -45,6 +46,11 @@ public class DatastoreRecord {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<DatastoreMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -73,6 +79,7 @@ public class DatastoreRecord {
             @JsonProperty("database_id") @Nullable String databaseId,
             @JsonProperty("fields") @Nonnull Map<String, DatastoreFieldValue> fields,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<DatastoreMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("row_number") @Nullable Double rowNumber,
             @JsonProperty("table_id") @Nullable String tableId,
@@ -83,6 +90,7 @@ public class DatastoreRecord {
         this.fields = Optional.ofNullable(fields)
             .orElseThrow(() -> new IllegalArgumentException("fields cannot be null"));
         this.id = id;
+        this.metadata = metadata;
         this.raw = raw;
         this.rowNumber = rowNumber;
         this.tableId = tableId;
@@ -93,7 +101,7 @@ public class DatastoreRecord {
             @Nonnull Map<String, DatastoreFieldValue> fields) {
         this(null, null, fields,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -116,6 +124,10 @@ public class DatastoreRecord {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<DatastoreMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -175,6 +187,12 @@ public class DatastoreRecord {
     }
 
 
+    public DatastoreRecord withMetadata(@Nullable List<DatastoreMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public DatastoreRecord withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -219,6 +237,7 @@ public class DatastoreRecord {
             Utils.enhancedDeepEquals(this.databaseId, other.databaseId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.rowNumber, other.rowNumber) &&
             Utils.enhancedDeepEquals(this.tableId, other.tableId) &&
@@ -229,8 +248,8 @@ public class DatastoreRecord {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, databaseId, fields,
-            id, raw, rowNumber,
-            tableId, updatedAt);
+            id, metadata, raw,
+            rowNumber, tableId, updatedAt);
     }
     
     @Override
@@ -240,6 +259,7 @@ public class DatastoreRecord {
                 "databaseId", databaseId,
                 "fields", fields,
                 "id", id,
+                "metadata", metadata,
                 "raw", raw,
                 "rowNumber", rowNumber,
                 "tableId", tableId,
@@ -256,6 +276,8 @@ public class DatastoreRecord {
         private Map<String, DatastoreFieldValue> fields;
 
         private String id;
+
+        private List<DatastoreMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -295,6 +317,11 @@ public class DatastoreRecord {
             return this;
         }
 
+        public Builder metadata(@Nullable List<DatastoreMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -324,8 +351,8 @@ public class DatastoreRecord {
         public DatastoreRecord build() {
             return new DatastoreRecord(
                 createdAt, databaseId, fields,
-                id, raw, rowNumber,
-                tableId, updatedAt);
+                id, metadata, raw,
+                rowNumber, tableId, updatedAt);
         }
 
     }

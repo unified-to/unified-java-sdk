@@ -20,6 +20,7 @@ public enum ListAtsScorecardsQueryParamFields {
     RECOMMENDATION("recommendation"),
     COMMENT("comment"),
     QUESTIONS("questions"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

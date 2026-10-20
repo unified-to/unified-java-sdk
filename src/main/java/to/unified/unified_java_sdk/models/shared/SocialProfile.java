@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -81,6 +82,11 @@ public class SocialProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     private String location;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SocialMetadata> metadata;
 
     /**
      * Audience metrics for the profile
@@ -156,6 +162,7 @@ public class SocialProfile {
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("is_verified") @Nullable Boolean isVerified,
             @JsonProperty("location") @Nullable String location,
+            @JsonProperty("metadata") @Nullable List<SocialMetadata> metadata,
             @JsonProperty("metrics") @Nullable PropertySocialProfileMetrics metrics,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -174,6 +181,7 @@ public class SocialProfile {
         this.isPrivate = isPrivate;
         this.isVerified = isVerified;
         this.location = location;
+        this.metadata = metadata;
         this.metrics = metrics;
         this.name = name;
         this.parentId = parentId;
@@ -191,7 +199,8 @@ public class SocialProfile {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -255,6 +264,10 @@ public class SocialProfile {
      */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    public Optional<List<SocialMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -406,6 +419,12 @@ public class SocialProfile {
     }
 
 
+    public SocialProfile withMetadata(@Nullable List<SocialMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Audience metrics for the profile
      */
@@ -506,6 +525,7 @@ public class SocialProfile {
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.isVerified, other.isVerified) &&
             Utils.enhancedDeepEquals(this.location, other.location) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metrics, other.metrics) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -523,9 +543,10 @@ public class SocialProfile {
             address, avatarUrl, category,
             createdAt, description, id,
             isPrivate, isVerified, location,
-            metrics, name, parentId,
-            phone, raw, updatedAt,
-            url, username, websiteUrl);
+            metadata, metrics, name,
+            parentId, phone, raw,
+            updatedAt, url, username,
+            websiteUrl);
     }
     
     @Override
@@ -540,6 +561,7 @@ public class SocialProfile {
                 "isPrivate", isPrivate,
                 "isVerified", isVerified,
                 "location", location,
+                "metadata", metadata,
                 "metrics", metrics,
                 "name", name,
                 "parentId", parentId,
@@ -571,6 +593,8 @@ public class SocialProfile {
         private Boolean isVerified;
 
         private String location;
+
+        private List<SocialMetadata> metadata;
 
         private PropertySocialProfileMetrics metrics;
 
@@ -666,6 +690,11 @@ public class SocialProfile {
             return this;
         }
 
+        public Builder metadata(@Nullable List<SocialMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Audience metrics for the profile
          */
@@ -743,9 +772,10 @@ public class SocialProfile {
                 address, avatarUrl, category,
                 createdAt, description, id,
                 isPrivate, isVerified, location,
-                metrics, name, parentId,
-                phone, raw, updatedAt,
-                url, username, websiteUrl);
+                metadata, metrics, name,
+                parentId, phone, raw,
+                updatedAt, url, username,
+                websiteUrl);
         }
 
     }

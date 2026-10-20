@@ -19,6 +19,7 @@ public enum GetLmsClassQueryParamFields {
     LANGUAGES("languages"),
     INSTRUCTORS("instructors"),
     STUDENTS("students"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

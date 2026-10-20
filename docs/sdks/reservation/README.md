@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
@@ -42,18 +43,17 @@ public class Application {
                 .commerceReservation(CommerceReservation.builder()
                     .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
                     .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
-                    .guestEmail("Sunny.Strosin77@yahoo.com")
-                    .guestName("Annette Franecki")
-                    .guestPhone("(990) 317-6213")
-                    .id("a941aae1-1be4-48c5-9af3-1a356335c8b3")
-                    .itemName("Practical Ceramic Shoes")
+                    .guestEmail("julien.bartoletti@icloud.com")
+                    .guestName("Julien Bartoletti")
+                    .guestPhone("(728) 596-2620")
+                    .id("a7f84786-a9c2-4a23-b14c-0ac02bc14295")
+                    .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
-                    .staffName("Vickie Fahey")
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T10:37:24.036Z"))
-                    .url("https://cluttered-pine.info/")
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T15:05:16.985Z"))
+                    .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -212,6 +212,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationResponse;
@@ -231,18 +232,17 @@ public class Application {
                 .commerceReservation(CommerceReservation.builder()
                     .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
                     .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
-                    .guestEmail("Sunny.Strosin77@yahoo.com")
-                    .guestName("Annette Franecki")
-                    .guestPhone("(990) 317-6213")
-                    .id("cb337c1b-d064-42c5-874f-d7d0aed055b2")
-                    .itemName("Practical Ceramic Shoes")
+                    .guestEmail("julien.bartoletti@icloud.com")
+                    .guestName("Julien Bartoletti")
+                    .guestPhone("(728) 596-2620")
+                    .id("c4391c9d-bf46-45ec-a7bb-9db017019db9")
+                    .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
-                    .staffName("Vickie Fahey")
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T10:37:24.038Z"))
-                    .url("https://cluttered-pine.info/")
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T15:05:16.990Z"))
+                    .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -343,6 +343,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationResponse;
@@ -362,18 +363,17 @@ public class Application {
                 .commerceReservation(CommerceReservation.builder()
                     .createdAt(OffsetDateTime.parse("2021-12-14T19:50:31.151Z"))
                     .endAt(OffsetDateTime.parse("2022-01-01T22:00:17.868Z"))
-                    .guestEmail("Sunny.Strosin77@yahoo.com")
-                    .guestName("Annette Franecki")
-                    .guestPhone("(990) 317-6213")
-                    .id("cb337c1b-d064-42c5-874f-d7d0aed055b2")
-                    .itemName("Practical Ceramic Shoes")
+                    .guestEmail("julien.bartoletti@icloud.com")
+                    .guestName("Julien Bartoletti")
+                    .guestPhone("(728) 596-2620")
+                    .id("c4391c9d-bf46-45ec-a7bb-9db017019db9")
+                    .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
-                    .staffName("Vickie Fahey")
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T10:37:24.038Z"))
-                    .url("https://cluttered-pine.info/")
+                    .updatedAt(OffsetDateTime.parse("2023-01-03T15:05:16.990Z"))
+                    .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -139,6 +139,11 @@ public class MarketingReport {
     @JsonProperty("list_id")
     private String listId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MarketingMetadata> metadata;
+
     /**
      * Open rate (decimal)
      */
@@ -235,6 +240,7 @@ public class MarketingReport {
             @JsonProperty("last_open_at") @Nullable OffsetDateTime lastOpenAt,
             @JsonProperty("links") @Nullable List<MarketingReportLink> links,
             @JsonProperty("list_id") @Nullable String listId,
+            @JsonProperty("metadata") @Nullable List<MarketingMetadata> metadata,
             @JsonProperty("open_rate") @Nullable Double openRate,
             @JsonProperty("opens_total") @Nullable Double opensTotal,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -263,6 +269,7 @@ public class MarketingReport {
         this.lastOpenAt = lastOpenAt;
         this.links = links;
         this.listId = listId;
+        this.metadata = metadata;
         this.openRate = openRate;
         this.opensTotal = opensTotal;
         this.raw = raw;
@@ -286,7 +293,7 @@ public class MarketingReport {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -406,6 +413,10 @@ public class MarketingReport {
      */
     public Optional<String> listId() {
         return Optional.ofNullable(this.listId);
+    }
+
+    public Optional<List<MarketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -643,6 +654,12 @@ public class MarketingReport {
     }
 
 
+    public MarketingReport withMetadata(@Nullable List<MarketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Open rate (decimal)
      */
@@ -769,6 +786,7 @@ public class MarketingReport {
             Utils.enhancedDeepEquals(this.lastOpenAt, other.lastOpenAt) &&
             Utils.enhancedDeepEquals(this.links, other.links) &&
             Utils.enhancedDeepEquals(this.listId, other.listId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.openRate, other.openRate) &&
             Utils.enhancedDeepEquals(this.opensTotal, other.opensTotal) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -790,11 +808,11 @@ public class MarketingReport {
             forwardsCount, forwardsOpens, hardBounces,
             humanOpenRate, humanOpensTotal, humanUniqueOpens,
             id, lastClickAt, lastOpenAt,
-            links, listId, openRate,
-            opensTotal, raw, sentAt,
-            softBounces, startAt, syntaxErrors,
-            uniqueClicks, uniqueOpens, uniqueSubscriberClicks,
-            unsubscribed);
+            links, listId, metadata,
+            openRate, opensTotal, raw,
+            sentAt, softBounces, startAt,
+            syntaxErrors, uniqueClicks, uniqueOpens,
+            uniqueSubscriberClicks, unsubscribed);
     }
     
     @Override
@@ -817,6 +835,7 @@ public class MarketingReport {
                 "lastOpenAt", lastOpenAt,
                 "links", links,
                 "listId", listId,
+                "metadata", metadata,
                 "openRate", openRate,
                 "opensTotal", opensTotal,
                 "raw", raw,
@@ -866,6 +885,8 @@ public class MarketingReport {
         private List<MarketingReportLink> links;
 
         private String listId;
+
+        private List<MarketingMetadata> metadata;
 
         private Double openRate;
 
@@ -1029,6 +1050,11 @@ public class MarketingReport {
             return this;
         }
 
+        public Builder metadata(@Nullable List<MarketingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Open rate (decimal)
          */
@@ -1124,11 +1150,11 @@ public class MarketingReport {
                 forwardsCount, forwardsOpens, hardBounces,
                 humanOpenRate, humanOpensTotal, humanUniqueOpens,
                 id, lastClickAt, lastOpenAt,
-                links, listId, openRate,
-                opensTotal, raw, sentAt,
-                softBounces, startAt, syntaxErrors,
-                uniqueClicks, uniqueOpens, uniqueSubscriberClicks,
-                unsubscribed);
+                links, listId, metadata,
+                openRate, opensTotal, raw,
+                sentAt, softBounces, startAt,
+                syntaxErrors, uniqueClicks, uniqueOpens,
+                uniqueSubscriberClicks, unsubscribed);
         }
 
     }

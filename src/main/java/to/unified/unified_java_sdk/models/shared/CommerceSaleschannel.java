@@ -51,6 +51,11 @@ public class CommerceSaleschannel {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CommerceMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -75,6 +80,7 @@ public class CommerceSaleschannel {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("slug") @Nullable String slug,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -83,6 +89,7 @@ public class CommerceSaleschannel {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.raw = raw;
         this.slug = slug;
         this.updatedAt = updatedAt;
@@ -91,7 +98,7 @@ public class CommerceSaleschannel {
     public CommerceSaleschannel() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -118,6 +125,10 @@ public class CommerceSaleschannel {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<CommerceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -179,6 +190,12 @@ public class CommerceSaleschannel {
     }
 
 
+    public CommerceSaleschannel withMetadata(@Nullable List<CommerceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CommerceSaleschannel withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -218,6 +235,7 @@ public class CommerceSaleschannel {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -227,8 +245,8 @@ public class CommerceSaleschannel {
     public int hashCode() {
         return Utils.enhancedHash(
             collections, createdAt, description,
-            id, isActive, raw,
-            slug, updatedAt);
+            id, isActive, metadata,
+            raw, slug, updatedAt);
     }
     
     @Override
@@ -239,6 +257,7 @@ public class CommerceSaleschannel {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "raw", raw,
                 "slug", slug,
                 "updatedAt", updatedAt);
@@ -256,6 +275,8 @@ public class CommerceSaleschannel {
         private String id;
 
         private Boolean isActive;
+
+        private List<CommerceMetadata> metadata;
 
         private Map<String, Object> raw;
 
@@ -298,6 +319,11 @@ public class CommerceSaleschannel {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -322,8 +348,8 @@ public class CommerceSaleschannel {
         public CommerceSaleschannel build() {
             return new CommerceSaleschannel(
                 collections, createdAt, description,
-                id, isActive, raw,
-                slug, updatedAt);
+                id, isActive, metadata,
+                raw, slug, updatedAt);
         }
 
     }

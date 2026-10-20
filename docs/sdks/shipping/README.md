@@ -34,6 +34,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
@@ -52,16 +53,17 @@ public class Application {
         CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("1f602fc0-588f-41cb-af75-2473b09b2b2b")
+                    .id("48383374-4753-4aee-9411-320f7b6bf89d")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/48383374-4753-4aee-9411-320f7b6bf89d.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.242Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.432Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -124,20 +126,21 @@ public class Application {
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
                     .currency("USD")
-                    .id("e41538e4-1afb-426c-88d0-f9ce6017d61b")
+                    .id("8229f47d-c3ae-421e-8ccb-f8dd38631ae1")
+                    .metadata(List.of())
                     .rates(List.of(
                         ShippingRateRate.builder()
-                            .title("Turcotte Inc")
-                            .amount(54.679719475097954)
-                            .baseAmount(76.45537888631225)
+                            .title("Express")
+                            .amount(44.72)
+                            .baseAmount(46.01)
                             .currency("USD")
-                            .deliveryDays(8d)
-                            .description("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.")
-                            .estimatedDays(10d)
-                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2024-02-15T18:31:49.468Z"))
-                            .isGuaranteed(true)
+                            .deliveryDays(2d)
+                            .description("Veniam denego vulgo bos turpis pax.")
+                            .discountAmount(4.6)
+                            .estimatedDays(2d)
+                            .estimatedDeliveryEndAt(OffsetDateTime.parse("2021-09-03T01:03:36.021Z"))
                             .isNegotiatedRate(true)
-                            .taxAmount(2.2701712837442756)
+                            .taxAmount(3.31)
                             .build()))
                     .build())
                 .connectionId("<id>")
@@ -182,6 +185,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
@@ -199,18 +203,18 @@ public class Application {
 
         CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("5e8b7906-1f2c-4e1d-bba2-0db70cd3f0dc")
-                    .rateAmount(8.86546263936907)
+                    .id("2bd43d13-f0c6-4b60-814b-afb18e364ff6")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.515Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.674Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.568Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -714,6 +718,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
@@ -732,16 +737,17 @@ public class Application {
         PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("a8f792d0-7d18-44f0-9d74-267d1c1befe8")
+                    .id("bb30434d-bf4a-4b92-81c0-11e1fc3851de")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/bb30434d-bf4a-4b92-81c0-11e1fc3851de.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.246Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.440Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -786,6 +792,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentResponse;
@@ -803,18 +810,18 @@ public class Application {
 
         PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("b04ed747-9f85-4bfe-8d80-a36f41c415fb")
-                    .rateAmount(8.86546263936907)
+                    .id("25d6e632-f8ea-4cb8-9dfb-be46020986cd")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.592Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.747Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -971,6 +978,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
@@ -989,16 +997,17 @@ public class Application {
         UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("a8f792d0-7d18-44f0-9d74-267d1c1befe8")
+                    .id("bb30434d-bf4a-4b92-81c0-11e1fc3851de")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://optimal-meadow.net")
-                    .serviceCode("GIz")
+                    .labelUrl("https://labels.example.com/bb30434d-bf4a-4b92-81c0-11e1fc3851de.pdf")
+                    .metadata(List.of())
+                    .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
-                    .trackingNumber("zYv60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T03:39:22.246Z"))
+                    .trackingNumber("ZYV60FOIBUJ6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T11:12:55.440Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1043,6 +1052,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentResponse;
@@ -1060,18 +1070,18 @@ public class Application {
 
         UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
-                    .carrierName("Bogisich, Franey and Koelpin")
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("b04ed747-9f85-4bfe-8d80-a36f41c415fb")
-                    .rateAmount(8.86546263936907)
+                    .id("25d6e632-f8ea-4cb8-9dfb-be46020986cd")
+                    .isReturn(false)
+                    .lineitems(List.of())
+                    .metadata(List.of())
                     .rateCurrency("USD")
-                    .rateEstimatedDays(8d)
-                    .rateServiceName("Fisher - Kilback")
-                    .serviceCode("F7U")
-                    .shippedAt(OffsetDateTime.parse("2025-09-16T11:49:39.592Z"))
-                    .status(ShippingShipmentStatus.PENDING)
-                    .trackingUrl("https://shallow-secrecy.info/")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T16:56:52.747Z"))
+                    .rateEstimatedDays(4d)
+                    .rateServiceName("2nd Day Air")
+                    .serviceCode("OVERNIGHT")
+                    .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
+                    .status(ShippingShipmentStatus.DELIVERED)
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T05:31:52.574Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

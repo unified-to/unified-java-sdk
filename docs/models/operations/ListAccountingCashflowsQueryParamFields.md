@@ -28,4 +28,5 @@ ListAccountingCashflowsQueryParamFields value = ListAccountingCashflowsQueryPara
 | `OPERATING_SECTIONS`        | operating_sections          |
 | `INVESTING_SECTIONS`        | investing_sections          |
 | `FINANCING_SECTIONS`        | financing_sections          |
+| `METADATA`                  | metadata                    |
 | `RAW`                       | raw                         |

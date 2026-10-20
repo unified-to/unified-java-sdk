@@ -16,6 +16,7 @@ public enum GetFormsSubmissionQueryParamFields {
     RESPONDENT_EMAIL("respondent_email"),
     RESPONDENT_NAME("respondent_name"),
     ANSWERS("answers"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

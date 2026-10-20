@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -54,6 +55,11 @@ public class ShippingCarrier {
     @JsonProperty("logo_url")
     private String logoUrl;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ShippingMetadata> metadata;
+
     /**
      * The name of the carrier
      */
@@ -89,6 +95,7 @@ public class ShippingCarrier {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("logo_url") @Nullable String logoUrl,
+            @JsonProperty("metadata") @Nullable List<ShippingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -98,6 +105,7 @@ public class ShippingCarrier {
         this.id = id;
         this.isActive = isActive;
         this.logoUrl = logoUrl;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -107,7 +115,8 @@ public class ShippingCarrier {
     public ShippingCarrier() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -143,6 +152,10 @@ public class ShippingCarrier {
      */
     public Optional<String> logoUrl() {
         return Optional.ofNullable(this.logoUrl);
+    }
+
+    public Optional<List<ShippingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -223,6 +236,12 @@ public class ShippingCarrier {
     }
 
 
+    public ShippingCarrier withMetadata(@Nullable List<ShippingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the carrier
      */
@@ -274,6 +293,7 @@ public class ShippingCarrier {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.logoUrl, other.logoUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -284,8 +304,9 @@ public class ShippingCarrier {
     public int hashCode() {
         return Utils.enhancedHash(
             code, createdAt, id,
-            isActive, logoUrl, name,
-            raw, updatedAt, websiteUrl);
+            isActive, logoUrl, metadata,
+            name, raw, updatedAt,
+            websiteUrl);
     }
     
     @Override
@@ -296,6 +317,7 @@ public class ShippingCarrier {
                 "id", id,
                 "isActive", isActive,
                 "logoUrl", logoUrl,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt,
@@ -314,6 +336,8 @@ public class ShippingCarrier {
         private Boolean isActive;
 
         private String logoUrl;
+
+        private List<ShippingMetadata> metadata;
 
         private String name;
 
@@ -367,6 +391,11 @@ public class ShippingCarrier {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ShippingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The name of the carrier
          */
@@ -402,8 +431,9 @@ public class ShippingCarrier {
         public ShippingCarrier build() {
             return new ShippingCarrier(
                 code, createdAt, id,
-                isActive, logoUrl, name,
-                raw, updatedAt, websiteUrl);
+                isActive, logoUrl, metadata,
+                name, raw, updatedAt,
+                websiteUrl);
         }
 
     }

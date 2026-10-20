@@ -21,4 +21,5 @@ GetRepoOrganizationQueryParamFields value = GetRepoOrganizationQueryParamFields.
 | `AVATAR_URL`  | avatar_url    |
 | `WEB_URL`     | web_url       |
 | `USER_IDS`    | user_ids      |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

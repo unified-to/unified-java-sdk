@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -111,6 +112,11 @@ public class AnalyticsSession {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AnalyticsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     private String os;
 
@@ -176,6 +182,7 @@ public class AnalyticsSession {
             @JsonProperty("is_conversion") @Nullable Boolean isConversion,
             @JsonProperty("landing_page") @Nullable String landingPage,
             @JsonProperty("medium") @Nullable String medium,
+            @JsonProperty("metadata") @Nullable List<AnalyticsMetadata> metadata,
             @JsonProperty("os") @Nullable String os,
             @JsonProperty("page_views") @Nullable Double pageViews,
             @JsonProperty("property_id") @Nullable String propertyId,
@@ -199,6 +206,7 @@ public class AnalyticsSession {
         this.isConversion = isConversion;
         this.landingPage = landingPage;
         this.medium = medium;
+        this.metadata = metadata;
         this.os = os;
         this.pageViews = pageViews;
         this.propertyId = propertyId;
@@ -217,7 +225,7 @@ public class AnalyticsSession {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> browser() {
@@ -299,6 +307,10 @@ public class AnalyticsSession {
 
     public Optional<String> medium() {
         return Optional.ofNullable(this.medium);
+    }
+
+    public Optional<List<AnalyticsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> os() {
@@ -464,6 +476,12 @@ public class AnalyticsSession {
     }
 
 
+    public AnalyticsSession withMetadata(@Nullable List<AnalyticsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AnalyticsSession withOs(@Nullable String os) {
         this.os = os;
         return this;
@@ -552,6 +570,7 @@ public class AnalyticsSession {
             Utils.enhancedDeepEquals(this.isConversion, other.isConversion) &&
             Utils.enhancedDeepEquals(this.landingPage, other.landingPage) &&
             Utils.enhancedDeepEquals(this.medium, other.medium) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.os, other.os) &&
             Utils.enhancedDeepEquals(this.pageViews, other.pageViews) &&
             Utils.enhancedDeepEquals(this.propertyId, other.propertyId) &&
@@ -570,9 +589,9 @@ public class AnalyticsSession {
             durationSeconds, endAt, eventsCount,
             exitPage, id, isBounce,
             isConversion, landingPage, medium,
-            os, pageViews, propertyId,
-            raw, source, startAt,
-            updatedAt, visitorId);
+            metadata, os, pageViews,
+            propertyId, raw, source,
+            startAt, updatedAt, visitorId);
     }
     
     @Override
@@ -593,6 +612,7 @@ public class AnalyticsSession {
                 "isConversion", isConversion,
                 "landingPage", landingPage,
                 "medium", medium,
+                "metadata", metadata,
                 "os", os,
                 "pageViews", pageViews,
                 "propertyId", propertyId,
@@ -635,6 +655,8 @@ public class AnalyticsSession {
         private String landingPage;
 
         private String medium;
+
+        private List<AnalyticsMetadata> metadata;
 
         private String os;
 
@@ -752,6 +774,11 @@ public class AnalyticsSession {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AnalyticsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder os(@Nullable String os) {
             this.os = os;
             return this;
@@ -814,9 +841,9 @@ public class AnalyticsSession {
                 durationSeconds, endAt, eventsCount,
                 exitPage, id, isBounce,
                 isConversion, landingPage, medium,
-                os, pageViews, propertyId,
-                raw, source, startAt,
-                updatedAt, visitorId);
+                metadata, os, pageViews,
+                propertyId, raw, source,
+                startAt, updatedAt, visitorId);
         }
 
     }

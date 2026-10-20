@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -81,6 +82,11 @@ public class HrisTimeoff {
     @JsonProperty("is_paid")
     private Boolean isPaid;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * integration leave-type label before normalization
      */
@@ -140,6 +146,7 @@ public class HrisTimeoff {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_paid") @Nullable Boolean isPaid,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("original_type") @Nullable String originalType,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reason") @Nullable String reason,
@@ -158,6 +165,7 @@ public class HrisTimeoff {
         this.endAt = endAt;
         this.id = id;
         this.isPaid = isPaid;
+        this.metadata = metadata;
         this.originalType = originalType;
         this.raw = raw;
         this.reason = reason;
@@ -176,7 +184,8 @@ public class HrisTimeoff {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, userId);
+            null, null, null,
+            userId);
     }
 
     /**
@@ -232,6 +241,10 @@ public class HrisTimeoff {
 
     public Optional<Boolean> isPaid() {
         return Optional.ofNullable(this.isPaid);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -358,6 +371,12 @@ public class HrisTimeoff {
     }
 
 
+    public HrisTimeoff withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * integration leave-type label before normalization
      */
@@ -438,6 +457,7 @@ public class HrisTimeoff {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPaid, other.isPaid) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.originalType, other.originalType) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reason, other.reason) &&
@@ -454,9 +474,10 @@ public class HrisTimeoff {
             approvedAt, approverUserId, comments,
             companyId, createdAt, duration,
             durationType, endAt, id,
-            isPaid, originalType, raw,
-            reason, startAt, status,
-            type, updatedAt, userId);
+            isPaid, metadata, originalType,
+            raw, reason, startAt,
+            status, type, updatedAt,
+            userId);
     }
     
     @Override
@@ -472,6 +493,7 @@ public class HrisTimeoff {
                 "endAt", endAt,
                 "id", id,
                 "isPaid", isPaid,
+                "metadata", metadata,
                 "originalType", originalType,
                 "raw", raw,
                 "reason", reason,
@@ -504,6 +526,8 @@ public class HrisTimeoff {
         private String id;
 
         private Boolean isPaid;
+
+        private List<HrisMetadata> metadata;
 
         private String originalType;
 
@@ -590,6 +614,11 @@ public class HrisTimeoff {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * integration leave-type label before normalization
          */
@@ -647,9 +676,10 @@ public class HrisTimeoff {
                 approvedAt, approverUserId, comments,
                 companyId, createdAt, duration,
                 durationType, endAt, id,
-                isPaid, originalType, raw,
-                reason, startAt, status,
-                type, updatedAt, userId);
+                isPaid, metadata, originalType,
+                raw, reason, startAt,
+                status, type, updatedAt,
+                userId);
         }
 
     }

@@ -70,6 +70,11 @@ public class PaymentLink {
     @JsonProperty("lineitems")
     private List<PaymentLineitem> lineitems;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<PaymentMetadata> metadata;
+
     /**
      * (reference to PaymentPayment)
      */
@@ -112,6 +117,7 @@ public class PaymentLink {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_chargeable_now") @Nullable Boolean isChargeableNow,
             @JsonProperty("lineitems") @Nullable List<PaymentLineitem> lineitems,
+            @JsonProperty("metadata") @Nullable List<PaymentMetadata> metadata,
             @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("success_url") @Nullable String successUrl,
@@ -126,6 +132,7 @@ public class PaymentLink {
         this.isActive = isActive;
         this.isChargeableNow = isChargeableNow;
         this.lineitems = lineitems;
+        this.metadata = metadata;
         this.paymentId = paymentId;
         this.raw = raw;
         this.successUrl = successUrl;
@@ -138,7 +145,7 @@ public class PaymentLink {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> amount() {
@@ -181,6 +188,10 @@ public class PaymentLink {
 
     public Optional<List<PaymentLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<List<PaymentMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -277,6 +288,12 @@ public class PaymentLink {
     }
 
 
+    public PaymentLink withMetadata(@Nullable List<PaymentMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * (reference to PaymentPayment)
      */
@@ -335,6 +352,7 @@ public class PaymentLink {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isChargeableNow, other.isChargeableNow) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.successUrl, other.successUrl) &&
@@ -348,8 +366,8 @@ public class PaymentLink {
             amount, contactId, createdAt,
             currency, description, id,
             isActive, isChargeableNow, lineitems,
-            paymentId, raw, successUrl,
-            updatedAt, url);
+            metadata, paymentId, raw,
+            successUrl, updatedAt, url);
     }
     
     @Override
@@ -364,6 +382,7 @@ public class PaymentLink {
                 "isActive", isActive,
                 "isChargeableNow", isChargeableNow,
                 "lineitems", lineitems,
+                "metadata", metadata,
                 "paymentId", paymentId,
                 "raw", raw,
                 "successUrl", successUrl,
@@ -391,6 +410,8 @@ public class PaymentLink {
         private Boolean isChargeableNow;
 
         private List<PaymentLineitem> lineitems;
+
+        private List<PaymentMetadata> metadata;
 
         private String paymentId;
 
@@ -457,6 +478,11 @@ public class PaymentLink {
             return this;
         }
 
+        public Builder metadata(@Nullable List<PaymentMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * (reference to PaymentPayment)
          */
@@ -496,8 +522,8 @@ public class PaymentLink {
                 amount, contactId, createdAt,
                 currency, description, id,
                 isActive, isChargeableNow, lineitems,
-                paymentId, raw, successUrl,
-                updatedAt, url);
+                metadata, paymentId, raw,
+                successUrl, updatedAt, url);
         }
 
     }

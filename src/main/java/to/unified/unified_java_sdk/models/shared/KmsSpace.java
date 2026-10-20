@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -40,6 +41,11 @@ public class KmsSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<KmsPageMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -83,6 +89,7 @@ public class KmsSpace {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<KmsPageMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("parent_page_id") @Nullable String parentPageId,
@@ -93,6 +100,7 @@ public class KmsSpace {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.parentPageId = parentPageId;
@@ -105,7 +113,7 @@ public class KmsSpace {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -125,6 +133,10 @@ public class KmsSpace {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<KmsPageMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -192,6 +204,12 @@ public class KmsSpace {
     }
 
 
+    public KmsSpace withMetadata(@Nullable List<KmsPageMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public KmsSpace withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -251,6 +269,7 @@ public class KmsSpace {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.parentPageId, other.parentPageId) &&
@@ -263,9 +282,9 @@ public class KmsSpace {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isActive, name, parentId,
-            parentPageId, raw, updatedAt,
-            userId);
+            isActive, metadata, name,
+            parentId, parentPageId, raw,
+            updatedAt, userId);
     }
     
     @Override
@@ -275,6 +294,7 @@ public class KmsSpace {
                 "description", description,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "parentPageId", parentPageId,
@@ -293,6 +313,8 @@ public class KmsSpace {
         private String id;
 
         private Boolean isActive;
+
+        private List<KmsPageMetadata> metadata;
 
         private String name;
 
@@ -330,6 +352,11 @@ public class KmsSpace {
 
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<KmsPageMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -375,9 +402,9 @@ public class KmsSpace {
         public KmsSpace build() {
             return new KmsSpace(
                 createdAt, description, id,
-                isActive, name, parentId,
-                parentPageId, raw, updatedAt,
-                userId);
+                isActive, metadata, name,
+                parentId, parentPageId, raw,
+                updatedAt, userId);
         }
 
     }

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -63,6 +64,11 @@ public class MarketingList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<MarketingMetadata> metadata;
 
     /**
      * The list's name
@@ -133,6 +139,7 @@ public class MarketingList {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("language") @Nullable String language,
+            @JsonProperty("metadata") @Nullable List<MarketingMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("sender_company") @Nullable String senderCompany,
@@ -150,6 +157,7 @@ public class MarketingList {
         this.id = id;
         this.isActive = isActive;
         this.language = language;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.senderCompany = senderCompany;
@@ -168,7 +176,7 @@ public class MarketingList {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyMarketingListAddress> address() {
@@ -206,6 +214,10 @@ public class MarketingList {
 
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
+    }
+
+    public Optional<List<MarketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -319,6 +331,12 @@ public class MarketingList {
     }
 
 
+    public MarketingList withMetadata(@Nullable List<MarketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The list's name
      */
@@ -411,6 +429,7 @@ public class MarketingList {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.senderCompany, other.senderCompany) &&
@@ -428,10 +447,10 @@ public class MarketingList {
         return Utils.enhancedHash(
             address, createdAt, description,
             endAt, id, isActive,
-            language, name, raw,
-            senderCompany, senderEmail, senderName,
-            senderPhone, startAt, subject,
-            updatedAt, userId);
+            language, metadata, name,
+            raw, senderCompany, senderEmail,
+            senderName, senderPhone, startAt,
+            subject, updatedAt, userId);
     }
     
     @Override
@@ -444,6 +463,7 @@ public class MarketingList {
                 "id", id,
                 "isActive", isActive,
                 "language", language,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "senderCompany", senderCompany,
@@ -472,6 +492,8 @@ public class MarketingList {
         private Boolean isActive;
 
         private String language;
+
+        private List<MarketingMetadata> metadata;
 
         private String name;
 
@@ -538,6 +560,11 @@ public class MarketingList {
 
         public Builder language(@Nullable String language) {
             this.language = language;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<MarketingMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -610,10 +637,10 @@ public class MarketingList {
             return new MarketingList(
                 address, createdAt, description,
                 endAt, id, isActive,
-                language, name, raw,
-                senderCompany, senderEmail, senderName,
-                senderPhone, startAt, subject,
-                updatedAt, userId);
+                language, metadata, name,
+                raw, senderCompany, senderEmail,
+                senderName, senderPhone, startAt,
+                subject, updatedAt, userId);
         }
 
     }

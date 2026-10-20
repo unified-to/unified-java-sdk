@@ -17,6 +17,7 @@ public enum GetLmsCollectionQueryParamFields {
     MEDIA("media"),
     IS_ACTIVE("is_active"),
     PARENT_ID("parent_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

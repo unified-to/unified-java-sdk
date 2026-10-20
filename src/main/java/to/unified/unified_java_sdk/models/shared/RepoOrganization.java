@@ -43,6 +43,11 @@ public class RepoOrganization {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<RepoMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -76,6 +81,7 @@ public class RepoOrganization {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<RepoMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -85,6 +91,7 @@ public class RepoOrganization {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -95,7 +102,8 @@ public class RepoOrganization {
     public RepoOrganization() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> avatarUrl() {
@@ -115,6 +123,10 @@ public class RepoOrganization {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<RepoMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -175,6 +187,12 @@ public class RepoOrganization {
     }
 
 
+    public RepoOrganization withMetadata(@Nullable List<RepoMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public RepoOrganization withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -225,6 +243,7 @@ public class RepoOrganization {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -236,8 +255,9 @@ public class RepoOrganization {
     public int hashCode() {
         return Utils.enhancedHash(
             avatarUrl, createdAt, description,
-            id, name, raw,
-            updatedAt, userIds, webUrl);
+            id, metadata, name,
+            raw, updatedAt, userIds,
+            webUrl);
     }
     
     @Override
@@ -247,6 +267,7 @@ public class RepoOrganization {
                 "createdAt", createdAt,
                 "description", description,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "updatedAt", updatedAt,
@@ -264,6 +285,8 @@ public class RepoOrganization {
         private String description;
 
         private String id;
+
+        private List<RepoMetadata> metadata;
 
         private String name;
 
@@ -302,6 +325,11 @@ public class RepoOrganization {
             return this;
         }
 
+        public Builder metadata(@Nullable List<RepoMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -336,8 +364,9 @@ public class RepoOrganization {
         public RepoOrganization build() {
             return new RepoOrganization(
                 avatarUrl, createdAt, description,
-                id, name, raw,
-                updatedAt, userIds, webUrl);
+                id, metadata, name,
+                raw, updatedAt, userIds,
+                webUrl);
         }
 
     }

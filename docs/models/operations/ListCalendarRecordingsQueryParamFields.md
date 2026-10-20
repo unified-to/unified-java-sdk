@@ -22,4 +22,5 @@ ListCalendarRecordingsQueryParamFields value = ListCalendarRecordingsQueryParamF
 | `EVENT_ID`   | event_id     |
 | `WEB_URL`    | web_url      |
 | `MEDIA`      | media        |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

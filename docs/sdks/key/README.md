@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateComputeKeyResponse;
@@ -41,10 +42,11 @@ public class Application {
         CreateComputeKeyRequest req = CreateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("d0d1784f-504c-4f4f-912e-48920a16d6d1")
+                    .id("7fad7036-d614-4740-a04f-92b024c2f916")
+                    .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T05:37:07.357Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-06T12:57:53.215Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -203,6 +205,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchComputeKeyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchComputeKeyResponse;
@@ -221,10 +224,11 @@ public class Application {
         PatchComputeKeyRequest req = PatchComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("c8ad4a7e-94f3-4068-b661-94ff2e14baf1")
+                    .id("fc38e3d1-6b9a-4aa7-a20e-c556533e2c31")
+                    .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T05:37:07.361Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-06T12:57:53.223Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -325,6 +329,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeKeyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeKeyResponse;
@@ -343,10 +348,11 @@ public class Application {
         UpdateComputeKeyRequest req = UpdateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("c8ad4a7e-94f3-4068-b661-94ff2e14baf1")
+                    .id("fc38e3d1-6b9a-4aa7-a20e-c556533e2c31")
+                    .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T05:37:07.361Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-06T12:57:53.223Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

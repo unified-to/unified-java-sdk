@@ -26,6 +26,7 @@ public enum ListCrmEventsQueryParamFields {
     CONTACT_IDS("contact_ids"),
     LEAD_IDS("lead_ids"),
     USER_ID("user_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

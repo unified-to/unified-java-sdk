@@ -15,6 +15,7 @@ public enum GetHrisCompanyQueryParamFields {
     NAME("name"),
     LEGAL_NAME("legal_name"),
     ADDRESS("address"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -39,6 +40,11 @@ public class SocialInsight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<SocialMetadata> metadata;
 
     /**
      * The metric being reported
@@ -87,6 +93,7 @@ public class SocialInsight {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("date") @Nullable OffsetDateTime date,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<SocialMetadata> metadata,
             @JsonProperty("metric") @Nullable Metric metric,
             @JsonProperty("period") @Nullable Period period,
             @JsonProperty("post_id") @Nullable String postId,
@@ -96,6 +103,7 @@ public class SocialInsight {
         this.createdAt = createdAt;
         this.date = date;
         this.id = id;
+        this.metadata = metadata;
         this.metric = metric;
         this.period = period;
         this.postId = postId;
@@ -107,7 +115,8 @@ public class SocialInsight {
     public SocialInsight() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -129,6 +138,10 @@ public class SocialInsight {
      */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<SocialMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -205,6 +218,12 @@ public class SocialInsight {
     }
 
 
+    public SocialInsight withMetadata(@Nullable List<SocialMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The metric being reported
      */
@@ -272,6 +291,7 @@ public class SocialInsight {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.date, other.date) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metric, other.metric) &&
             Utils.enhancedDeepEquals(this.period, other.period) &&
             Utils.enhancedDeepEquals(this.postId, other.postId) &&
@@ -284,8 +304,9 @@ public class SocialInsight {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, date, id,
-            metric, period, postId,
-            profileId, raw, value);
+            metadata, metric, period,
+            postId, profileId, raw,
+            value);
     }
     
     @Override
@@ -294,6 +315,7 @@ public class SocialInsight {
                 "createdAt", createdAt,
                 "date", date,
                 "id", id,
+                "metadata", metadata,
                 "metric", metric,
                 "period", period,
                 "postId", postId,
@@ -310,6 +332,8 @@ public class SocialInsight {
         private OffsetDateTime date;
 
         private String id;
+
+        private List<SocialMetadata> metadata;
 
         private Metric metric;
 
@@ -348,6 +372,11 @@ public class SocialInsight {
          */
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<SocialMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -402,8 +431,9 @@ public class SocialInsight {
         public SocialInsight build() {
             return new SocialInsight(
                 createdAt, date, id,
-                metric, period, postId,
-                profileId, raw, value);
+                metadata, metric, period,
+                postId, profileId, raw,
+                value);
         }
 
     }

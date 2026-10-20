@@ -42,4 +42,5 @@ CreatePaymentPaymentQueryParamFields value = CreatePaymentPaymentQueryParamField
 | `EXCHANGE_RATE`   | exchange_rate     |
 | `CATEGORY_IDS`    | category_ids      |
 | `NET_AMOUNT`      | net_amount        |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |

@@ -65,6 +65,11 @@ public class AdsInsertionorder {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -112,6 +117,7 @@ public class AdsInsertionorder {
             @JsonProperty("frequency_cap") @Nullable PropertyAdsInsertionorderFrequencyCap frequencyCap,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("kpi") @Nullable PropertyAdsInsertionorderKpi kpi,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("pacing") @Nullable PropertyAdsInsertionorderPacing pacing,
@@ -127,6 +133,7 @@ public class AdsInsertionorder {
         this.frequencyCap = frequencyCap;
         this.id = id;
         this.kpi = kpi;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.pacing = pacing;
@@ -141,7 +148,8 @@ public class AdsInsertionorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -180,6 +188,10 @@ public class AdsInsertionorder {
 
     public Optional<PropertyAdsInsertionorderKpi> kpi() {
         return Optional.ofNullable(this.kpi);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -275,6 +287,12 @@ public class AdsInsertionorder {
     }
 
 
+    public AdsInsertionorder withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsInsertionorder withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -341,6 +359,7 @@ public class AdsInsertionorder {
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.kpi, other.kpi) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.pacing, other.pacing) &&
@@ -355,9 +374,10 @@ public class AdsInsertionorder {
         return Utils.enhancedHash(
             bidStrategy, budgetSegments, budgetUnit,
             campaignId, createdAt, frequencyCap,
-            id, kpi, name,
-            organizationId, pacing, raw,
-            reference, status, updatedAt);
+            id, kpi, metadata,
+            name, organizationId, pacing,
+            raw, reference, status,
+            updatedAt);
     }
     
     @Override
@@ -371,6 +391,7 @@ public class AdsInsertionorder {
                 "frequencyCap", frequencyCap,
                 "id", id,
                 "kpi", kpi,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "pacing", pacing,
@@ -398,6 +419,8 @@ public class AdsInsertionorder {
         private String id;
 
         private PropertyAdsInsertionorderKpi kpi;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -463,6 +486,11 @@ public class AdsInsertionorder {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -508,9 +536,10 @@ public class AdsInsertionorder {
             return new AdsInsertionorder(
                 bidStrategy, budgetSegments, budgetUnit,
                 campaignId, createdAt, frequencyCap,
-                id, kpi, name,
-                organizationId, pacing, raw,
-                reference, status, updatedAt);
+                id, kpi, metadata,
+                name, organizationId, pacing,
+                raw, reference, status,
+                updatedAt);
         }
 
     }

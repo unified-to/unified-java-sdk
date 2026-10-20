@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -66,6 +67,11 @@ public class ShippingLabel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_url")
     private String labelUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ShippingMetadata> metadata;
 
     /**
      * Rate used for this label; points to ShippingRate
@@ -125,6 +131,7 @@ public class ShippingLabel {
             @JsonProperty("label_cost_currency") @Nullable String labelCostCurrency,
             @JsonProperty("label_format") @Nullable LabelFormat labelFormat,
             @JsonProperty("label_url") @Nullable String labelUrl,
+            @JsonProperty("metadata") @Nullable List<ShippingMetadata> metadata,
             @JsonProperty("rate_id") @Nullable String rateId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("service_code") @Nullable String serviceCode,
@@ -139,6 +146,7 @@ public class ShippingLabel {
         this.labelCostCurrency = labelCostCurrency;
         this.labelFormat = labelFormat;
         this.labelUrl = labelUrl;
+        this.metadata = metadata;
         this.rateId = rateId;
         this.raw = raw;
         this.serviceCode = serviceCode;
@@ -153,7 +161,7 @@ public class ShippingLabel {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -200,6 +208,10 @@ public class ShippingLabel {
      */
     public Optional<String> labelUrl() {
         return Optional.ofNullable(this.labelUrl);
+    }
+
+    public Optional<List<ShippingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -316,6 +328,12 @@ public class ShippingLabel {
     }
 
 
+    public ShippingLabel withMetadata(@Nullable List<ShippingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * Rate used for this label; points to ShippingRate
      */
@@ -396,6 +414,7 @@ public class ShippingLabel {
             Utils.enhancedDeepEquals(this.labelCostCurrency, other.labelCostCurrency) &&
             Utils.enhancedDeepEquals(this.labelFormat, other.labelFormat) &&
             Utils.enhancedDeepEquals(this.labelUrl, other.labelUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.rateId, other.rateId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.serviceCode, other.serviceCode) &&
@@ -410,9 +429,9 @@ public class ShippingLabel {
         return Utils.enhancedHash(
             createdAt, id, isVoided,
             labelCost, labelCostCurrency, labelFormat,
-            labelUrl, rateId, raw,
-            serviceCode, shipmentId, status,
-            trackingNumber, updatedAt);
+            labelUrl, metadata, rateId,
+            raw, serviceCode, shipmentId,
+            status, trackingNumber, updatedAt);
     }
     
     @Override
@@ -425,6 +444,7 @@ public class ShippingLabel {
                 "labelCostCurrency", labelCostCurrency,
                 "labelFormat", labelFormat,
                 "labelUrl", labelUrl,
+                "metadata", metadata,
                 "rateId", rateId,
                 "raw", raw,
                 "serviceCode", serviceCode,
@@ -450,6 +470,8 @@ public class ShippingLabel {
         private LabelFormat labelFormat;
 
         private String labelUrl;
+
+        private List<ShippingMetadata> metadata;
 
         private String rateId;
 
@@ -522,6 +544,11 @@ public class ShippingLabel {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ShippingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * Rate used for this label; points to ShippingRate
          */
@@ -582,9 +609,9 @@ public class ShippingLabel {
             return new ShippingLabel(
                 createdAt, id, isVoided,
                 labelCost, labelCostCurrency, labelFormat,
-                labelUrl, rateId, raw,
-                serviceCode, shipmentId, status,
-                trackingNumber, updatedAt);
+                labelUrl, metadata, rateId,
+                raw, serviceCode, shipmentId,
+                status, trackingNumber, updatedAt);
         }
 
     }

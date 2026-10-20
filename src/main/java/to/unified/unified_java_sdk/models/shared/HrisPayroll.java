@@ -96,6 +96,11 @@ public class HrisPayroll {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
     private Double netAmount;
 
@@ -168,6 +173,7 @@ public class HrisPayroll {
             @JsonProperty("gross_amount") @Nullable Double grossAmount,
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payslip_ids") @Nullable List<String> payslipIds,
@@ -190,6 +196,7 @@ public class HrisPayroll {
         this.grossAmount = grossAmount;
         this.groupId = groupId;
         this.id = id;
+        this.metadata = metadata;
         this.netAmount = netAmount;
         this.paidAt = paidAt;
         this.payslipIds = payslipIds;
@@ -210,7 +217,7 @@ public class HrisPayroll {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -280,6 +287,10 @@ public class HrisPayroll {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<Double> netAmount() {
@@ -435,6 +446,12 @@ public class HrisPayroll {
     }
 
 
+    public HrisPayroll withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public HrisPayroll withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
@@ -532,6 +549,7 @@ public class HrisPayroll {
             Utils.enhancedDeepEquals(this.grossAmount, other.grossAmount) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.netAmount, other.netAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
             Utils.enhancedDeepEquals(this.payslipIds, other.payslipIds) &&
@@ -551,10 +569,10 @@ public class HrisPayroll {
             currency, deductionAmount, employeeTaxAmount,
             employerContributionAmount, employerTaxAmount, endAt,
             grossAmount, groupId, id,
-            netAmount, paidAt, payslipIds,
-            raw, startAt, status,
-            totalCostAmount, type, updatedAt,
-            userIds);
+            metadata, netAmount, paidAt,
+            payslipIds, raw, startAt,
+            status, totalCostAmount, type,
+            updatedAt, userIds);
     }
     
     @Override
@@ -572,6 +590,7 @@ public class HrisPayroll {
                 "grossAmount", grossAmount,
                 "groupId", groupId,
                 "id", id,
+                "metadata", metadata,
                 "netAmount", netAmount,
                 "paidAt", paidAt,
                 "payslipIds", payslipIds,
@@ -610,6 +629,8 @@ public class HrisPayroll {
         private String groupId;
 
         private String id;
+
+        private List<HrisMetadata> metadata;
 
         private Double netAmount;
 
@@ -716,6 +737,11 @@ public class HrisPayroll {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
@@ -787,10 +813,10 @@ public class HrisPayroll {
                 currency, deductionAmount, employeeTaxAmount,
                 employerContributionAmount, employerTaxAmount, endAt,
                 grossAmount, groupId, id,
-                netAmount, paidAt, payslipIds,
-                raw, startAt, status,
-                totalCostAmount, type, updatedAt,
-                userIds);
+                metadata, netAmount, paidAt,
+                payslipIds, raw, startAt,
+                status, totalCostAmount, type,
+                updatedAt, userIds);
         }
 
     }

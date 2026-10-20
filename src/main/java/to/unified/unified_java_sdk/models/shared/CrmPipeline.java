@@ -50,6 +50,11 @@ public class CrmPipeline {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CrmMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -77,6 +82,7 @@ public class CrmPipeline {
             @JsonProperty("display_order") @Nullable Double displayOrder,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<CrmMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("stages") @Nullable List<CrmStage> stages,
@@ -86,6 +92,7 @@ public class CrmPipeline {
         this.displayOrder = displayOrder;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.stages = stages;
@@ -95,7 +102,8 @@ public class CrmPipeline {
     public CrmPipeline() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -119,6 +127,10 @@ public class CrmPipeline {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<CrmMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -178,6 +190,12 @@ public class CrmPipeline {
     }
 
 
+    public CrmPipeline withMetadata(@Nullable List<CrmMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CrmPipeline withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -220,6 +238,7 @@ public class CrmPipeline {
             Utils.enhancedDeepEquals(this.displayOrder, other.displayOrder) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.stages, other.stages) &&
@@ -230,8 +249,9 @@ public class CrmPipeline {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, dealProbability, displayOrder,
-            id, isActive, name,
-            raw, stages, updatedAt);
+            id, isActive, metadata,
+            name, raw, stages,
+            updatedAt);
     }
     
     @Override
@@ -242,6 +262,7 @@ public class CrmPipeline {
                 "displayOrder", displayOrder,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "stages", stages,
@@ -260,6 +281,8 @@ public class CrmPipeline {
         private String id;
 
         private Boolean isActive;
+
+        private List<CrmMetadata> metadata;
 
         private String name;
 
@@ -301,6 +324,11 @@ public class CrmPipeline {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CrmMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -327,8 +355,9 @@ public class CrmPipeline {
         public CrmPipeline build() {
             return new CrmPipeline(
                 createdAt, dealProbability, displayOrder,
-                id, isActive, name,
-                raw, stages, updatedAt);
+                id, isActive, metadata,
+                name, raw, stages,
+                updatedAt);
         }
 
     }

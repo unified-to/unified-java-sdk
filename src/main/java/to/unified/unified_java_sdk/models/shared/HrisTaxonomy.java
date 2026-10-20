@@ -63,6 +63,11 @@ public class HrisTaxonomy {
     @JsonProperty("is_active")
     private Boolean isActive;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<HrisMetadata> metadata;
+
     /**
      * the preferred label of the skill/role
      */
@@ -126,6 +131,7 @@ public class HrisTaxonomy {
             @JsonProperty("domain") @Nullable String domain,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -141,6 +147,7 @@ public class HrisTaxonomy {
         this.domain = domain;
         this.id = id;
         this.isActive = isActive;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -156,7 +163,8 @@ public class HrisTaxonomy {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -197,6 +205,10 @@ public class HrisTaxonomy {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<List<HrisMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -311,6 +323,12 @@ public class HrisTaxonomy {
     }
 
 
+    public HrisTaxonomy withMetadata(@Nullable List<HrisMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * the preferred label of the skill/role
      */
@@ -397,6 +415,7 @@ public class HrisTaxonomy {
             Utils.enhancedDeepEquals(this.domain, other.domain) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -412,9 +431,10 @@ public class HrisTaxonomy {
         return Utils.enhancedHash(
             alternativeNames, category, createdAt,
             description, domain, id,
-            isActive, name, parentId,
-            raw, roleIds, subcategory,
-            type, updatedAt, url);
+            isActive, metadata, name,
+            parentId, raw, roleIds,
+            subcategory, type, updatedAt,
+            url);
     }
     
     @Override
@@ -427,6 +447,7 @@ public class HrisTaxonomy {
                 "domain", domain,
                 "id", id,
                 "isActive", isActive,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -453,6 +474,8 @@ public class HrisTaxonomy {
         private String id;
 
         private Boolean isActive;
+
+        private List<HrisMetadata> metadata;
 
         private String name;
 
@@ -521,6 +544,11 @@ public class HrisTaxonomy {
             return this;
         }
 
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * the preferred label of the skill/role
          */
@@ -586,9 +614,10 @@ public class HrisTaxonomy {
             return new HrisTaxonomy(
                 alternativeNames, category, createdAt,
                 description, domain, id,
-                isActive, name, parentId,
-                raw, roleIds, subcategory,
-                type, updatedAt, url);
+                isActive, metadata, name,
+                parentId, raw, roleIds,
+                subcategory, type, updatedAt,
+                url);
         }
 
     }

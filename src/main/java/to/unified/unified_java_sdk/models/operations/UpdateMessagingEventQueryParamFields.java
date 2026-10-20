@@ -16,6 +16,7 @@ public enum UpdateMessagingEventQueryParamFields {
     MESSAGE("message"),
     BUTTON("button"),
     USER("user"),
+    METADATA("metadata"),
     RAW("raw"),
     IS_REPLACING_ORIGINAL("is_replacing_original");
 

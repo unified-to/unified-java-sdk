@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -234,6 +235,11 @@ public class ClubsActivity {
     @JsonProperty("max_watts")
     private Double maxWatts;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ClubsMetadata> metadata;
+
     /**
      * The activity's moving time, in seconds
      */
@@ -357,6 +363,7 @@ public class ClubsActivity {
             @JsonProperty("max_heartrate") @Nullable Double maxHeartrate,
             @JsonProperty("max_speed") @Nullable Double maxSpeed,
             @JsonProperty("max_watts") @Nullable Double maxWatts,
+            @JsonProperty("metadata") @Nullable List<ClubsMetadata> metadata,
             @JsonProperty("moving_time") @Nullable Double movingTime,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("photo_count") @Nullable Double photoCount,
@@ -400,6 +407,7 @@ public class ClubsActivity {
         this.maxHeartrate = maxHeartrate;
         this.maxSpeed = maxSpeed;
         this.maxWatts = maxWatts;
+        this.metadata = metadata;
         this.movingTime = movingTime;
         this.name = name;
         this.photoCount = photoCount;
@@ -430,7 +438,7 @@ public class ClubsActivity {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -641,6 +649,10 @@ public class ClubsActivity {
      */
     public Optional<Double> maxWatts() {
         return Optional.ofNullable(this.maxWatts);
+    }
+
+    public Optional<List<ClubsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -1009,6 +1021,12 @@ public class ClubsActivity {
     }
 
 
+    public ClubsActivity withMetadata(@Nullable List<ClubsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The activity's moving time, in seconds
      */
@@ -1166,6 +1184,7 @@ public class ClubsActivity {
             Utils.enhancedDeepEquals(this.maxHeartrate, other.maxHeartrate) &&
             Utils.enhancedDeepEquals(this.maxSpeed, other.maxSpeed) &&
             Utils.enhancedDeepEquals(this.maxWatts, other.maxWatts) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.movingTime, other.movingTime) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.photoCount, other.photoCount) &&
@@ -1194,11 +1213,11 @@ public class ClubsActivity {
             isPrivate, isTrainer, kilojoules,
             kudosCount, mapPolyline, mapSummaryPolyline,
             maxHeartrate, maxSpeed, maxWatts,
-            movingTime, name, photoCount,
-            prCount, raw, startAt,
-            sufferScore, timezone, totalElevationGain,
-            type, updatedAt, weightedAverageWatts,
-            workoutType);
+            metadata, movingTime, name,
+            photoCount, prCount, raw,
+            startAt, sufferScore, timezone,
+            totalElevationGain, type, updatedAt,
+            weightedAverageWatts, workoutType);
     }
     
     @Override
@@ -1234,6 +1253,7 @@ public class ClubsActivity {
                 "maxHeartrate", maxHeartrate,
                 "maxSpeed", maxSpeed,
                 "maxWatts", maxWatts,
+                "metadata", metadata,
                 "movingTime", movingTime,
                 "name", name,
                 "photoCount", photoCount,
@@ -1311,6 +1331,8 @@ public class ClubsActivity {
         private Double maxSpeed;
 
         private Double maxWatts;
+
+        private List<ClubsMetadata> metadata;
 
         private Double movingTime;
 
@@ -1582,6 +1604,11 @@ public class ClubsActivity {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ClubsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The activity's moving time, in seconds
          */
@@ -1698,11 +1725,11 @@ public class ClubsActivity {
                 isPrivate, isTrainer, kilojoules,
                 kudosCount, mapPolyline, mapSummaryPolyline,
                 maxHeartrate, maxSpeed, maxWatts,
-                movingTime, name, photoCount,
-                prCount, raw, startAt,
-                sufferScore, timezone, totalElevationGain,
-                type, updatedAt, weightedAverageWatts,
-                workoutType);
+                metadata, movingTime, name,
+                photoCount, prCount, raw,
+                startAt, sufferScore, timezone,
+                totalElevationGain, type, updatedAt,
+                weightedAverageWatts, workoutType);
         }
 
     }

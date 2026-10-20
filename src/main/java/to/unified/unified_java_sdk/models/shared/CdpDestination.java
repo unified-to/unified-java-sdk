@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -46,6 +47,11 @@ public class CdpDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_enabled")
     private Boolean isEnabled;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CdpMetadata> metadata;
 
     /**
      * The name of the outbound activation destination
@@ -88,6 +94,7 @@ public class CdpDestination {
             @JsonProperty("direction") @Nullable Direction direction,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_enabled") @Nullable Boolean isEnabled,
+            @JsonProperty("metadata") @Nullable List<CdpMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("slug") @Nullable String slug,
@@ -97,6 +104,7 @@ public class CdpDestination {
         this.direction = direction;
         this.id = id;
         this.isEnabled = isEnabled;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.slug = slug;
@@ -107,7 +115,8 @@ public class CdpDestination {
     public CdpDestination() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -136,6 +145,10 @@ public class CdpDestination {
      */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
+    }
+
+    public Optional<List<CdpMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -214,6 +227,12 @@ public class CdpDestination {
     }
 
 
+    public CdpDestination withMetadata(@Nullable List<CdpMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the outbound activation destination
      */
@@ -273,6 +292,7 @@ public class CdpDestination {
             Utils.enhancedDeepEquals(this.direction, other.direction) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isEnabled, other.isEnabled) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
@@ -284,8 +304,9 @@ public class CdpDestination {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, direction, id,
-            isEnabled, name, raw,
-            slug, type, updatedAt);
+            isEnabled, metadata, name,
+            raw, slug, type,
+            updatedAt);
     }
     
     @Override
@@ -295,6 +316,7 @@ public class CdpDestination {
                 "direction", direction,
                 "id", id,
                 "isEnabled", isEnabled,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "slug", slug,
@@ -312,6 +334,8 @@ public class CdpDestination {
         private String id;
 
         private Boolean isEnabled;
+
+        private List<CdpMetadata> metadata;
 
         private String name;
 
@@ -359,6 +383,11 @@ public class CdpDestination {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CdpMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The name of the outbound activation destination
          */
@@ -402,8 +431,9 @@ public class CdpDestination {
         public CdpDestination build() {
             return new CdpDestination(
                 createdAt, direction, id,
-                isEnabled, name, raw,
-                slug, type, updatedAt);
+                isEnabled, metadata, name,
+                raw, slug, type,
+                updatedAt);
         }
 
     }

@@ -1,0 +1,13 @@
+# LmsMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [Optional\<LmsMetadataExtraData>](../../models/shared/LmsMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [Optional\<LmsMetadataFormat>](../../models/shared/LmsMetadataFormat.md)       | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `id`                                                                           | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `namespace`                                                                    | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `value`                                                                        | [Optional\<LmsMetadataValue>](../../models/shared/LmsMetadataValue.md)         | :heavy_minus_sign:                                                             | N/A                                                                            |

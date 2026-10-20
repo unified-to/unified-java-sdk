@@ -20,4 +20,5 @@ PatchTicketingCategoryQueryParamFields value = PatchTicketingCategoryQueryParamF
 | `DESCRIPTION` | description   |
 | `IS_ACTIVE`   | is_active     |
 | `PARENT_ID`   | parent_id     |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

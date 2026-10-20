@@ -53,4 +53,5 @@ PatchAssessmentOrderQueryParamFields value = PatchAssessmentOrderQueryParamField
 | `RESPONSE_DETAILS`            | response_details              |
 | `RESPONSE_SOURCE`             | response_source               |
 | `RESPONSE_ATTRIBUTES`         | response_attributes           |
+| `METADATA`                    | metadata                      |
 | `RAW`                         | raw                           |

@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -63,6 +64,11 @@ public class ClubsLocation {
     @JsonProperty("longitude")
     private Double longitude;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<ClubsMetadata> metadata;
+
     /**
      * The location name
      */
@@ -106,6 +112,7 @@ public class ClubsLocation {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("latitude") @Nullable Double latitude,
             @JsonProperty("longitude") @Nullable Double longitude,
+            @JsonProperty("metadata") @Nullable List<ClubsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("telephone") @Nullable String telephone,
@@ -117,6 +124,7 @@ public class ClubsLocation {
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.telephone = telephone;
@@ -128,7 +136,7 @@ public class ClubsLocation {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyClubsLocationAddress> address() {
@@ -168,6 +176,10 @@ public class ClubsLocation {
      */
     public Optional<Double> longitude() {
         return Optional.ofNullable(this.longitude);
+    }
+
+    public Optional<List<ClubsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -261,6 +273,12 @@ public class ClubsLocation {
     }
 
 
+    public ClubsLocation withMetadata(@Nullable List<ClubsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The location name
      */
@@ -322,6 +340,7 @@ public class ClubsLocation {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.latitude, other.latitude) &&
             Utils.enhancedDeepEquals(this.longitude, other.longitude) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
@@ -334,8 +353,8 @@ public class ClubsLocation {
         return Utils.enhancedHash(
             address, createdAt, groupId,
             id, latitude, longitude,
-            name, raw, telephone,
-            updatedAt, url);
+            metadata, name, raw,
+            telephone, updatedAt, url);
     }
     
     @Override
@@ -347,6 +366,7 @@ public class ClubsLocation {
                 "id", id,
                 "latitude", latitude,
                 "longitude", longitude,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "telephone", telephone,
@@ -368,6 +388,8 @@ public class ClubsLocation {
         private Double latitude;
 
         private Double longitude;
+
+        private List<ClubsMetadata> metadata;
 
         private String name;
 
@@ -428,6 +450,11 @@ public class ClubsLocation {
             return this;
         }
 
+        public Builder metadata(@Nullable List<ClubsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The location name
          */
@@ -472,8 +499,8 @@ public class ClubsLocation {
             return new ClubsLocation(
                 address, createdAt, groupId,
                 id, latitude, longitude,
-                name, raw, telephone,
-                updatedAt, url);
+                metadata, name, raw,
+                telephone, updatedAt, url);
         }
 
     }

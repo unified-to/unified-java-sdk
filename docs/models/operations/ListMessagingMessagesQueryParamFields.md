@@ -34,4 +34,5 @@ ListMessagingMessagesQueryParamFields value = ListMessagingMessagesQueryParamFie
 | `HAS_CHILDREN`              | has_children                |
 | `IS_UNREAD`                 | is_unread                   |
 | `BUTTONS`                   | buttons                     |
+| `METADATA`                  | metadata                    |
 | `RAW`                       | raw                         |

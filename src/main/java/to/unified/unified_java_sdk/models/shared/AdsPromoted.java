@@ -12,6 +12,7 @@ import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -25,6 +26,11 @@ public class AdsPromoted {
 
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -45,11 +51,13 @@ public class AdsPromoted {
     @JsonCreator
     public AdsPromoted(
             @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nonnull AdsPromotedType type) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.type = Optional.ofNullable(type)
@@ -60,11 +68,15 @@ public class AdsPromoted {
             @Nonnull String id,
             @Nonnull AdsPromotedType type) {
         this(id, null, null,
-            type);
+            null, type);
     }
 
     public String id() {
         return this.id;
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -89,6 +101,12 @@ public class AdsPromoted {
 
     public AdsPromoted withId(@Nonnull String id) {
         this.id = Utils.checkNotNull(id, "id");
+        return this;
+    }
+
+
+    public AdsPromoted withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -125,6 +143,7 @@ public class AdsPromoted {
         AdsPromoted other = (AdsPromoted) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type);
@@ -133,14 +152,15 @@ public class AdsPromoted {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, name, raw,
-            type);
+            id, metadata, name,
+            raw, type);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AdsPromoted.class,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "type", type);
@@ -150,6 +170,8 @@ public class AdsPromoted {
     public final static class Builder {
 
         private String id;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -163,6 +185,11 @@ public class AdsPromoted {
 
         public Builder id(@Nonnull String id) {
             this.id = Utils.checkNotNull(id, "id");
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -186,8 +213,8 @@ public class AdsPromoted {
 
         public AdsPromoted build() {
             return new AdsPromoted(
-                id, name, raw,
-                type);
+                id, metadata, name,
+                raw, type);
         }
 
     }

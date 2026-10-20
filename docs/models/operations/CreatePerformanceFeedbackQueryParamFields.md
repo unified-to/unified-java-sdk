@@ -22,4 +22,5 @@ CreatePerformanceFeedbackQueryParamFields value = CreatePerformanceFeedbackQuery
 | `MESSAGE`        | message          |
 | `TAGS`           | tags             |
 | `IS_VISIBLE`     | is_visible       |
+| `METADATA`       | metadata         |
 | `RAW`            | raw              |

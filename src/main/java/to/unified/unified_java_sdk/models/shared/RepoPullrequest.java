@@ -50,6 +50,11 @@ public class RepoPullrequest {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<RepoMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
 
@@ -104,6 +109,7 @@ public class RepoPullrequest {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("labels") @Nullable List<String> labels,
+            @JsonProperty("metadata") @Nullable List<RepoMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("repo_id") @Nullable String repoId,
@@ -118,6 +124,7 @@ public class RepoPullrequest {
         this.createdAt = createdAt;
         this.id = id;
         this.labels = labels;
+        this.metadata = metadata;
         this.notes = notes;
         this.raw = raw;
         this.repoId = repoId;
@@ -134,7 +141,7 @@ public class RepoPullrequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -161,6 +168,10 @@ public class RepoPullrequest {
 
     public Optional<List<String>> labels() {
         return Optional.ofNullable(this.labels);
+    }
+
+    public Optional<List<RepoMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> notes() {
@@ -246,6 +257,12 @@ public class RepoPullrequest {
     }
 
 
+    public RepoPullrequest withMetadata(@Nullable List<RepoMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public RepoPullrequest withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
@@ -321,6 +338,7 @@ public class RepoPullrequest {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.labels, other.labels) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.repoId, other.repoId) &&
@@ -336,10 +354,10 @@ public class RepoPullrequest {
     public int hashCode() {
         return Utils.enhancedHash(
             closedAt, commitIds, createdAt,
-            id, labels, notes,
-            raw, repoId, sourceBranchId,
-            status, targetBranchId, title,
-            updatedAt, userIds);
+            id, labels, metadata,
+            notes, raw, repoId,
+            sourceBranchId, status, targetBranchId,
+            title, updatedAt, userIds);
     }
     
     @Override
@@ -350,6 +368,7 @@ public class RepoPullrequest {
                 "createdAt", createdAt,
                 "id", id,
                 "labels", labels,
+                "metadata", metadata,
                 "notes", notes,
                 "raw", raw,
                 "repoId", repoId,
@@ -373,6 +392,8 @@ public class RepoPullrequest {
         private String id;
 
         private List<String> labels;
+
+        private List<RepoMetadata> metadata;
 
         private String notes;
 
@@ -424,6 +445,11 @@ public class RepoPullrequest {
 
         public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<RepoMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -481,10 +507,10 @@ public class RepoPullrequest {
         public RepoPullrequest build() {
             return new RepoPullrequest(
                 closedAt, commitIds, createdAt,
-                id, labels, notes,
-                raw, repoId, sourceBranchId,
-                status, targetBranchId, title,
-                updatedAt, userIds);
+                id, labels, metadata,
+                notes, raw, repoId,
+                sourceBranchId, status, targetBranchId,
+                title, updatedAt, userIds);
         }
 
     }

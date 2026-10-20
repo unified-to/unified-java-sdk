@@ -18,4 +18,5 @@ UpdateRepoBranchQueryParamFields value = UpdateRepoBranchQueryParamFields.ID;
 | `UPDATED_AT` | updated_at   |
 | `NAME`       | name         |
 | `REPO_ID`    | repo_id      |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

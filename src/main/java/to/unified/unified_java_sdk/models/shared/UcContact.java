@@ -61,6 +61,11 @@ public class UcContact {
     @JsonProperty("last_name")
     private String lastName;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<UcMetadata> metadata;
+
     /**
      * The name of the contact
      */
@@ -104,6 +109,7 @@ public class UcContact {
             @JsonProperty("first_name") @Nullable String firstName,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("metadata") @Nullable List<UcMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("telephones") @Nullable List<UcTelephone> telephones,
@@ -115,6 +121,7 @@ public class UcContact {
         this.firstName = firstName;
         this.id = id;
         this.lastName = lastName;
+        this.metadata = metadata;
         this.name = name;
         this.raw = raw;
         this.telephones = telephones;
@@ -126,7 +133,7 @@ public class UcContact {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -163,6 +170,10 @@ public class UcContact {
 
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
+    }
+
+    public Optional<List<UcMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -253,6 +264,12 @@ public class UcContact {
     }
 
 
+    public UcContact withMetadata(@Nullable List<UcMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     /**
      * The name of the contact
      */
@@ -314,6 +331,7 @@ public class UcContact {
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
@@ -326,8 +344,8 @@ public class UcContact {
         return Utils.enhancedHash(
             company, createdAt, emails,
             firstName, id, lastName,
-            name, raw, telephones,
-            title, updatedAt);
+            metadata, name, raw,
+            telephones, title, updatedAt);
     }
     
     @Override
@@ -339,6 +357,7 @@ public class UcContact {
                 "firstName", firstName,
                 "id", id,
                 "lastName", lastName,
+                "metadata", metadata,
                 "name", name,
                 "raw", raw,
                 "telephones", telephones,
@@ -360,6 +379,8 @@ public class UcContact {
         private String id;
 
         private String lastName;
+
+        private List<UcMetadata> metadata;
 
         private String name;
 
@@ -417,6 +438,11 @@ public class UcContact {
             return this;
         }
 
+        public Builder metadata(@Nullable List<UcMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         /**
          * The name of the contact
          */
@@ -461,8 +487,8 @@ public class UcContact {
             return new UcContact(
                 company, createdAt, emails,
                 firstName, id, lastName,
-                name, raw, telephones,
-                title, updatedAt);
+                metadata, name, raw,
+                telephones, title, updatedAt);
         }
 
     }

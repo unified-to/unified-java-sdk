@@ -14,6 +14,7 @@ public enum ListRepoBranchesQueryParamFields {
     UPDATED_AT("updated_at"),
     NAME("name"),
     REPO_ID("repo_id"),
+    METADATA("metadata"),
     RAW("raw");
 
     @JsonValue

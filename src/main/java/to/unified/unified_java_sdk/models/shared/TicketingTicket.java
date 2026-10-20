@@ -73,6 +73,11 @@ public class TicketingTicket {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TicketingMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     private String priority;
 
@@ -141,6 +146,7 @@ public class TicketingTicket {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("due_at") @Nullable OffsetDateTime dueAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<TicketingMetadata> metadata,
             @JsonProperty("priority") @Nullable String priority,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("source") @Nullable String source,
@@ -159,6 +165,7 @@ public class TicketingTicket {
         this.description = description;
         this.dueAt = dueAt;
         this.id = id;
+        this.metadata = metadata;
         this.priority = priority;
         this.raw = raw;
         this.source = source;
@@ -177,7 +184,8 @@ public class TicketingTicket {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -228,6 +236,10 @@ public class TicketingTicket {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<TicketingMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> priority() {
@@ -356,6 +368,12 @@ public class TicketingTicket {
     }
 
 
+    public TicketingTicket withMetadata(@Nullable List<TicketingMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public TicketingTicket withPriority(@Nullable String priority) {
         this.priority = priority;
         return this;
@@ -449,6 +467,7 @@ public class TicketingTicket {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.dueAt, other.dueAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.source, other.source) &&
@@ -466,10 +485,11 @@ public class TicketingTicket {
         return Utils.enhancedHash(
             attachmentIds, categoryId, closedAt,
             createdAt, customerId, description,
-            dueAt, id, priority,
-            raw, source, sourceRef,
-            status, subject, tags,
-            updatedAt, url, userId);
+            dueAt, id, metadata,
+            priority, raw, source,
+            sourceRef, status, subject,
+            tags, updatedAt, url,
+            userId);
     }
     
     @Override
@@ -483,6 +503,7 @@ public class TicketingTicket {
                 "description", description,
                 "dueAt", dueAt,
                 "id", id,
+                "metadata", metadata,
                 "priority", priority,
                 "raw", raw,
                 "source", source,
@@ -513,6 +534,8 @@ public class TicketingTicket {
         private OffsetDateTime dueAt;
 
         private String id;
+
+        private List<TicketingMetadata> metadata;
 
         private String priority;
 
@@ -596,6 +619,11 @@ public class TicketingTicket {
             return this;
         }
 
+        public Builder metadata(@Nullable List<TicketingMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
@@ -665,10 +693,11 @@ public class TicketingTicket {
             return new TicketingTicket(
                 attachmentIds, categoryId, closedAt,
                 createdAt, customerId, description,
-                dueAt, id, priority,
-                raw, source, sourceRef,
-                status, subject, tags,
-                updatedAt, url, userId);
+                dueAt, id, metadata,
+                priority, raw, source,
+                sourceRef, status, subject,
+                tags, updatedAt, url,
+                userId);
         }
 
     }

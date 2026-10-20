@@ -23,6 +23,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
@@ -42,7 +43,9 @@ public class Application {
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-18T17:52:53.618Z"))
+                    .id("d32eb598-f7dd-4844-8615-08f5503e2430")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:25:41.760Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -201,6 +204,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryResponse;
@@ -220,7 +224,9 @@ public class Application {
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-18T17:52:53.623Z"))
+                    .id("a8045ec7-428d-4426-88df-36f691d1eee6")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:25:41.769Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -321,6 +327,7 @@ package hello.world;
 
 import java.lang.Exception;
 import java.time.OffsetDateTime;
+import java.util.List;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
@@ -340,7 +347,9 @@ public class Application {
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .updatedAt(OffsetDateTime.parse("2025-11-18T17:52:53.623Z"))
+                    .id("a8045ec7-428d-4426-88df-36f691d1eee6")
+                    .metadata(List.of())
+                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:25:41.769Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

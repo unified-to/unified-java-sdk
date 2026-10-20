@@ -47,26 +47,19 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("Thalia.Abernathy61@gmail.com")
+                            .email("jude.leffler@hotmail.com")
                             .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Maymie59@hotmail.com")
-                            .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Coty27@hotmail.com")
-                            .type(MarketingEmailType.WORK)
                             .build()))
                     .firstName("Jude")
-                    .id("f1e69334-ea48-4b36-add3-a67d0f4121d2")
+                    .id("1b064799-9e4f-49e3-adc0-5d312f115a94")
                     .lastName("Leffler")
+                    .metadata(List.of())
                     .name("Jude Leffler")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "vinco",
-                        "ceno"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-07T08:24:52.642Z"))
+                        "adnuo",
+                        "verumtamen"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T23:06:32.961Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -362,26 +355,19 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("Thalia.Abernathy61@gmail.com")
+                            .email("jude.leffler@hotmail.com")
                             .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Maymie59@hotmail.com")
-                            .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Coty27@hotmail.com")
-                            .type(MarketingEmailType.WORK)
                             .build()))
                     .firstName("Jude")
-                    .id("257e81cc-3608-4659-9928-53f1e06ee315")
+                    .id("57c44751-e1d9-43ce-8702-e105e5ef3fc4")
                     .lastName("Leffler")
+                    .metadata(List.of())
                     .name("Jude Leffler")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "vinco",
-                        "ceno"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-07T08:24:52.650Z"))
+                        "adnuo",
+                        "verumtamen"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T23:06:32.973Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -504,26 +490,19 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-04-15T15:32:38.496Z"))
                     .emails(List.of(
                         MarketingEmail.builder()
-                            .email("Thalia.Abernathy61@gmail.com")
+                            .email("jude.leffler@hotmail.com")
                             .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Maymie59@hotmail.com")
-                            .type(MarketingEmailType.HOME)
-                            .build(),
-                        MarketingEmail.builder()
-                            .email("Coty27@hotmail.com")
-                            .type(MarketingEmailType.WORK)
                             .build()))
                     .firstName("Jude")
-                    .id("257e81cc-3608-4659-9928-53f1e06ee315")
+                    .id("57c44751-e1d9-43ce-8702-e105e5ef3fc4")
                     .lastName("Leffler")
+                    .metadata(List.of())
                     .name("Jude Leffler")
                     .status(MarketingMemberStatus.UNSUBSCRIBED)
                     .tags(List.of(
-                        "vinco",
-                        "ceno"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-07T08:24:52.650Z"))
+                        "adnuo",
+                        "verumtamen"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-07T23:06:32.973Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -90,6 +90,11 @@ public class CommerceLocation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<CommerceMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -150,6 +155,7 @@ public class CommerceLocation {
             @JsonProperty("location_type") @Nullable LocationType locationType,
             @JsonProperty("longitude") @Nullable Double longitude,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("price_level") @Nullable String priceLevel,
@@ -172,6 +178,7 @@ public class CommerceLocation {
         this.locationType = locationType;
         this.longitude = longitude;
         this.media = media;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.priceLevel = priceLevel;
@@ -191,7 +198,7 @@ public class CommerceLocation {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<PropertyCommerceLocationAddress> address() {
@@ -247,6 +254,10 @@ public class CommerceLocation {
 
     public Optional<List<CommerceItemMedia>> media() {
         return Optional.ofNullable(this.media);
+    }
+
+    public Optional<List<CommerceMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -374,6 +385,12 @@ public class CommerceLocation {
     }
 
 
+    public CommerceLocation withMetadata(@Nullable List<CommerceMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public CommerceLocation withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -454,6 +471,7 @@ public class CommerceLocation {
             Utils.enhancedDeepEquals(this.locationType, other.locationType) &&
             Utils.enhancedDeepEquals(this.longitude, other.longitude) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.priceLevel, other.priceLevel) &&
@@ -472,10 +490,10 @@ public class CommerceLocation {
             currency, description, id,
             imageUrl, isActive, languageLocale,
             latitude, locationType, longitude,
-            media, name, parentId,
-            priceLevel, rating, raw,
-            reviewCount, telephones, updatedAt,
-            webUrl);
+            media, metadata, name,
+            parentId, priceLevel, rating,
+            raw, reviewCount, telephones,
+            updatedAt, webUrl);
     }
     
     @Override
@@ -494,6 +512,7 @@ public class CommerceLocation {
                 "locationType", locationType,
                 "longitude", longitude,
                 "media", media,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "priceLevel", priceLevel,
@@ -533,6 +552,8 @@ public class CommerceLocation {
         private Double longitude;
 
         private List<CommerceItemMedia> media;
+
+        private List<CommerceMetadata> metadata;
 
         private String name;
 
@@ -624,6 +645,11 @@ public class CommerceLocation {
             return this;
         }
 
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -678,10 +704,10 @@ public class CommerceLocation {
                 currency, description, id,
                 imageUrl, isActive, languageLocale,
                 latitude, locationType, longitude,
-                media, name, parentId,
-                priceLevel, rating, raw,
-                reviewCount, telephones, updatedAt,
-                webUrl);
+                media, metadata, name,
+                parentId, priceLevel, rating,
+                raw, reviewCount, telephones,
+                updatedAt, webUrl);
         }
 
     }
