@@ -23,6 +23,7 @@ public enum UpdateAdsCreativeQueryParamFields {
     WIDTH("width"),
     HEIGHT("height"),
     ASSET_URLS("asset_urls"),
+    CARDS("cards"),
     LINK_URL("link_url"),
     URL_TAGS("url_tags"),
     BODY("body"),

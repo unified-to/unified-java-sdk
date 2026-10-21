@@ -38,6 +38,13 @@ public class AdsCreative {
     private String campaignId;
 
     /**
+     * Carousel cards, in display order
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cards")
+    private List<AdsCreativeCard> cards;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -199,6 +206,7 @@ public class AdsCreative {
             @JsonProperty("asset_urls") @Nullable List<String> assetUrls,
             @JsonProperty("body") @Nullable String body,
             @JsonProperty("campaign_id") @Nullable String campaignId,
+            @JsonProperty("cards") @Nullable List<AdsCreativeCard> cards,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_type") @Nullable CreativeType creativeType,
             @JsonProperty("cta") @Nullable String cta,
@@ -230,6 +238,7 @@ public class AdsCreative {
         this.assetUrls = assetUrls;
         this.body = body;
         this.campaignId = campaignId;
+        this.cards = cards;
         this.createdAt = createdAt;
         this.creativeType = creativeType;
         this.cta = cta;
@@ -271,7 +280,7 @@ public class AdsCreative {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -287,6 +296,13 @@ public class AdsCreative {
 
     public Optional<String> campaignId() {
         return Optional.ofNullable(this.campaignId);
+    }
+
+    /**
+     * Carousel cards, in display order
+     */
+    public Optional<List<AdsCreativeCard>> cards() {
+        return Optional.ofNullable(this.cards);
     }
 
     /**
@@ -448,6 +464,15 @@ public class AdsCreative {
 
     public AdsCreative withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
+        return this;
+    }
+
+
+    /**
+     * Carousel cards, in display order
+     */
+    public AdsCreative withCards(@Nullable List<AdsCreativeCard> cards) {
+        this.cards = cards;
         return this;
     }
 
@@ -658,6 +683,7 @@ public class AdsCreative {
             Utils.enhancedDeepEquals(this.assetUrls, other.assetUrls) &&
             Utils.enhancedDeepEquals(this.body, other.body) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
+            Utils.enhancedDeepEquals(this.cards, other.cards) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeType, other.creativeType) &&
             Utils.enhancedDeepEquals(this.cta, other.cta) &&
@@ -692,16 +718,16 @@ public class AdsCreative {
     public int hashCode() {
         return Utils.enhancedHash(
             assetUrls, body, campaignId,
-            createdAt, creativeType, cta,
-            data, externalAdReference, externalCreativeReference,
-            externalPlacementReference, groupId, height,
-            hostingSource, id, itemId,
-            labels, linkUrl, metadata,
-            name, organizationId, path1,
-            path2, promoted, raw,
-            status, thirdPartyTag, title,
-            updatedAt, urlTags, vastTagUrl,
-            width);
+            cards, createdAt, creativeType,
+            cta, data, externalAdReference,
+            externalCreativeReference, externalPlacementReference, groupId,
+            height, hostingSource, id,
+            itemId, labels, linkUrl,
+            metadata, name, organizationId,
+            path1, path2, promoted,
+            raw, status, thirdPartyTag,
+            title, updatedAt, urlTags,
+            vastTagUrl, width);
     }
     
     @Override
@@ -710,6 +736,7 @@ public class AdsCreative {
                 "assetUrls", assetUrls,
                 "body", body,
                 "campaignId", campaignId,
+                "cards", cards,
                 "createdAt", createdAt,
                 "creativeType", creativeType,
                 "cta", cta,
@@ -748,6 +775,8 @@ public class AdsCreative {
         private String body;
 
         private String campaignId;
+
+        private List<AdsCreativeCard> cards;
 
         private OffsetDateTime createdAt;
 
@@ -824,6 +853,14 @@ public class AdsCreative {
 
         public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
+            return this;
+        }
+
+        /**
+         * Carousel cards, in display order
+         */
+        public Builder cards(@Nullable List<AdsCreativeCard> cards) {
+            this.cards = cards;
             return this;
         }
 
@@ -995,16 +1032,16 @@ public class AdsCreative {
         public AdsCreative build() {
             return new AdsCreative(
                 assetUrls, body, campaignId,
-                createdAt, creativeType, cta,
-                data, externalAdReference, externalCreativeReference,
-                externalPlacementReference, groupId, height,
-                hostingSource, id, itemId,
-                labels, linkUrl, metadata,
-                name, organizationId, path1,
-                path2, promoted, raw,
-                status, thirdPartyTag, title,
-                updatedAt, urlTags, vastTagUrl,
-                width);
+                cards, createdAt, creativeType,
+                cta, data, externalAdReference,
+                externalCreativeReference, externalPlacementReference, groupId,
+                height, hostingSource, id,
+                itemId, labels, linkUrl,
+                metadata, name, organizationId,
+                path1, path2, promoted,
+                raw, status, thirdPartyTag,
+                title, updatedAt, urlTags,
+                vastTagUrl, width);
         }
 
     }

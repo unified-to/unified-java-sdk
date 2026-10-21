@@ -38,7 +38,9 @@ public class MetadataMetadata {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * When true, this metadata slug is required for create for this integration.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_required")
     private Boolean isRequired;
@@ -49,7 +51,7 @@ public class MetadataMetadata {
 
     /**
      * This is the unified object type that this metadata is associated with. eg. crm_contact or
-     * coomerce_item
+     * commerce_item
      */
     @JsonProperty("object_type")
     private String objectType;
@@ -57,7 +59,7 @@ public class MetadataMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objects")
-    private Map<String, Object> objects;
+    private Map<String, String> objects;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -94,7 +96,7 @@ public class MetadataMetadata {
             @JsonProperty("is_required") @Nullable Boolean isRequired,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("object_type") @Nonnull String objectType,
-            @JsonProperty("objects") @Nullable Map<String, Object> objects,
+            @JsonProperty("objects") @Nullable Map<String, String> objects,
             @JsonProperty("options") @Nullable List<String> options,
             @JsonProperty("original_format") @Nullable String originalFormat,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -140,6 +142,9 @@ public class MetadataMetadata {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * When true, this metadata slug is required for create for this integration.
+     */
     public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
@@ -150,13 +155,13 @@ public class MetadataMetadata {
 
     /**
      * This is the unified object type that this metadata is associated with. eg. crm_contact or
-     * coomerce_item
+     * commerce_item
      */
     public String objectType() {
         return this.objectType;
     }
 
-    public Optional<Map<String, Object>> objects() {
+    public Optional<Map<String, String>> objects() {
         return Optional.ofNullable(this.objects);
     }
 
@@ -209,6 +214,9 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * When true, this metadata slug is required for create for this integration.
+     */
     public MetadataMetadata withIsRequired(@Nullable Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -223,7 +231,7 @@ public class MetadataMetadata {
 
     /**
      * This is the unified object type that this metadata is associated with. eg. crm_contact or
-     * coomerce_item
+     * commerce_item
      */
     public MetadataMetadata withObjectType(@Nonnull String objectType) {
         this.objectType = Utils.checkNotNull(objectType, "objectType");
@@ -231,7 +239,7 @@ public class MetadataMetadata {
     }
 
 
-    public MetadataMetadata withObjects(@Nullable Map<String, Object> objects) {
+    public MetadataMetadata withObjects(@Nullable Map<String, String> objects) {
         this.objects = objects;
         return this;
     }
@@ -335,7 +343,7 @@ public class MetadataMetadata {
 
         private String objectType;
 
-        private Map<String, Object> objects;
+        private Map<String, String> objects;
 
         private List<String> options;
 
@@ -369,6 +377,9 @@ public class MetadataMetadata {
             return this;
         }
 
+        /**
+         * When true, this metadata slug is required for create for this integration.
+         */
         public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
@@ -381,14 +392,14 @@ public class MetadataMetadata {
 
         /**
          * This is the unified object type that this metadata is associated with. eg. crm_contact or
-         * coomerce_item
+         * commerce_item
          */
         public Builder objectType(@Nonnull String objectType) {
             this.objectType = Utils.checkNotNull(objectType, "objectType");
             return this;
         }
 
-        public Builder objects(@Nullable Map<String, Object> objects) {
+        public Builder objects(@Nullable Map<String, String> objects) {
             this.objects = objects;
             return this;
         }

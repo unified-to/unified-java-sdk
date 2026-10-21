@@ -51,6 +51,11 @@ public class AnalyticsVisitor {
     @JsonProperty("email")
     private String email;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("first_name")
+    private String firstName;
+
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -72,6 +77,11 @@ public class AnalyticsVisitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("last_name")
+    private String lastName;
 
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -137,10 +147,12 @@ public class AnalyticsVisitor {
             @JsonProperty("country_code") @Nullable String countryCode,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("email") @Nullable String email,
+            @JsonProperty("first_name") @Nullable String firstName,
             @JsonProperty("first_seen_at") @Nullable OffsetDateTime firstSeenAt,
             @JsonProperty("gender") @Nullable Gender gender,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("language") @Nullable String language,
+            @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("last_seen_at") @Nullable OffsetDateTime lastSeenAt,
             @JsonProperty("metadata") @Nullable Map<String, PropertyAnalyticsVisitorMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
@@ -157,10 +169,12 @@ public class AnalyticsVisitor {
         this.countryCode = countryCode;
         this.createdAt = createdAt;
         this.email = email;
+        this.firstName = firstName;
         this.firstSeenAt = firstSeenAt;
         this.gender = gender;
         this.id = id;
         this.language = language;
+        this.lastName = lastName;
         this.lastSeenAt = lastSeenAt;
         this.metadata = metadata;
         this.name = name;
@@ -180,7 +194,8 @@ public class AnalyticsVisitor {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<Double> age() {
@@ -210,6 +225,10 @@ public class AnalyticsVisitor {
         return Optional.ofNullable(this.email);
     }
 
+    public Optional<String> firstName() {
+        return Optional.ofNullable(this.firstName);
+    }
+
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -227,6 +246,10 @@ public class AnalyticsVisitor {
 
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
+    }
+
+    public Optional<String> lastName() {
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
@@ -322,6 +345,12 @@ public class AnalyticsVisitor {
     }
 
 
+    public AnalyticsVisitor withFirstName(@Nullable String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -345,6 +374,12 @@ public class AnalyticsVisitor {
 
     public AnalyticsVisitor withLanguage(@Nullable String language) {
         this.language = language;
+        return this;
+    }
+
+
+    public AnalyticsVisitor withLastName(@Nullable String lastName) {
+        this.lastName = lastName;
         return this;
     }
 
@@ -434,10 +469,12 @@ public class AnalyticsVisitor {
             Utils.enhancedDeepEquals(this.countryCode, other.countryCode) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.email, other.email) &&
+            Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.firstSeenAt, other.firstSeenAt) &&
             Utils.enhancedDeepEquals(this.gender, other.gender) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
+            Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.lastSeenAt, other.lastSeenAt) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -455,11 +492,12 @@ public class AnalyticsVisitor {
         return Utils.enhancedHash(
             age, city, country,
             countryCode, createdAt, email,
-            firstSeenAt, gender, id,
-            language, lastSeenAt, metadata,
-            name, propertyId, raw,
-            timezone, totalEvents, totalPageViews,
-            totalSessions, updatedAt);
+            firstName, firstSeenAt, gender,
+            id, language, lastName,
+            lastSeenAt, metadata, name,
+            propertyId, raw, timezone,
+            totalEvents, totalPageViews, totalSessions,
+            updatedAt);
     }
     
     @Override
@@ -471,10 +509,12 @@ public class AnalyticsVisitor {
                 "countryCode", countryCode,
                 "createdAt", createdAt,
                 "email", email,
+                "firstName", firstName,
                 "firstSeenAt", firstSeenAt,
                 "gender", gender,
                 "id", id,
                 "language", language,
+                "lastName", lastName,
                 "lastSeenAt", lastSeenAt,
                 "metadata", metadata,
                 "name", name,
@@ -502,6 +542,8 @@ public class AnalyticsVisitor {
 
         private String email;
 
+        private String firstName;
+
         private OffsetDateTime firstSeenAt;
 
         private Gender gender;
@@ -509,6 +551,8 @@ public class AnalyticsVisitor {
         private String id;
 
         private String language;
+
+        private String lastName;
 
         private OffsetDateTime lastSeenAt;
 
@@ -567,6 +611,11 @@ public class AnalyticsVisitor {
             return this;
         }
 
+        public Builder firstName(@Nullable String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
         /**
          * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -587,6 +636,11 @@ public class AnalyticsVisitor {
 
         public Builder language(@Nullable String language) {
             this.language = language;
+            return this;
+        }
+
+        public Builder lastName(@Nullable String lastName) {
+            this.lastName = lastName;
             return this;
         }
 
@@ -653,11 +707,12 @@ public class AnalyticsVisitor {
             return new AnalyticsVisitor(
                 age, city, country,
                 countryCode, createdAt, email,
-                firstSeenAt, gender, id,
-                language, lastSeenAt, metadata,
-                name, propertyId, raw,
-                timezone, totalEvents, totalPageViews,
-                totalSessions, updatedAt);
+                firstName, firstSeenAt, gender,
+                id, language, lastName,
+                lastSeenAt, metadata, name,
+                propertyId, raw, timezone,
+                totalEvents, totalPageViews, totalSessions,
+                updatedAt);
         }
 
     }
