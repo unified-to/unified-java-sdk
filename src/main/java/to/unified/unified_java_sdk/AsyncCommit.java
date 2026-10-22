@@ -57,6 +57,9 @@ public class AsyncCommit {
     /**
      * Create a commit
      * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
+     * 
      * @return The async call builder
      */
     public CreateRepoCommitRequestBuilder createRepoCommit() {
@@ -65,6 +68,9 @@ public class AsyncCommit {
 
     /**
      * Create a commit
+     * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncCommit {
     /**
      * Retrieve a commit
      * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoCommitRequestBuilder getRepoCommit() {
@@ -88,6 +97,9 @@ public class AsyncCommit {
 
     /**
      * Retrieve a commit
+     * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncCommit {
     /**
      * List all commits
      * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoCommitsRequestBuilder listRepoCommits() {
@@ -111,6 +130,13 @@ public class AsyncCommit {
 
     /**
      * List all commits
+     * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncCommit {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoCommitRequestBuilder patchRepoCommit() {
@@ -134,6 +163,9 @@ public class AsyncCommit {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncCommit {
     /**
      * Remove a commit
      * 
+     * <p>Deletes the RepoCommit identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoCommitRequestBuilder removeRepoCommit() {
@@ -157,6 +191,8 @@ public class AsyncCommit {
 
     /**
      * Remove a commit
+     * 
+     * <p>Deletes the RepoCommit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncCommit {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoCommitRequestBuilder updateRepoCommit() {
@@ -180,6 +219,9 @@ public class AsyncCommit {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response

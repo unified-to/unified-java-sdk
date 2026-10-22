@@ -73,6 +73,9 @@ public class AsyncAssessment {
     /**
      * Create an order
      * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
      * @return The async call builder
      */
     public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
@@ -81,6 +84,9 @@ public class AsyncAssessment {
 
     /**
      * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAssessmentOrderResponse>} - The async response
@@ -119,6 +125,9 @@ public class AsyncAssessment {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
@@ -127,6 +136,9 @@ public class AsyncAssessment {
 
     /**
      * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAssessmentOrderResponse>} - The async response
@@ -188,6 +200,9 @@ public class AsyncAssessment {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
@@ -196,6 +211,9 @@ public class AsyncAssessment {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAssessmentOrderResponse>} - The async response
@@ -257,6 +275,9 @@ public class AsyncAssessment {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
@@ -265,6 +286,9 @@ public class AsyncAssessment {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAssessmentOrderResponse>} - The async response

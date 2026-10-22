@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * StorageFileType
+ * 
+ * <p>Whether this is a file or a folder
+ */
 public class StorageFileType {
 
     public static final StorageFileType FILE = new StorageFileType("FILE");

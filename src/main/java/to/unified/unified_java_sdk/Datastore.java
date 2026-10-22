@@ -107,6 +107,9 @@ public class Datastore {
     /**
      * Create a database
      * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
      * @return The call builder
      */
     public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
@@ -115,6 +118,9 @@ public class Datastore {
 
     /**
      * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +135,9 @@ public class Datastore {
     /**
      * Create a query
      * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
      * @return The call builder
      */
     public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
@@ -137,6 +146,9 @@ public class Datastore {
 
     /**
      * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +163,9 @@ public class Datastore {
     /**
      * Create a record
      * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
+     * 
      * @return The call builder
      */
     public CreateDatastoreRecordRequestBuilder createDatastoreRecord() {
@@ -159,6 +174,9 @@ public class Datastore {
 
     /**
      * Create a record
+     * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +191,9 @@ public class Datastore {
     /**
      * Create a table
      * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
+     * 
      * @return The call builder
      */
     public CreateDatastoreTableRequestBuilder createDatastoreTable() {
@@ -181,6 +202,9 @@ public class Datastore {
 
     /**
      * Create a table
+     * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +219,9 @@ public class Datastore {
     /**
      * Retrieve a database
      * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
@@ -203,6 +230,9 @@ public class Datastore {
 
     /**
      * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +247,9 @@ public class Datastore {
     /**
      * Retrieve a record
      * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetDatastoreRecordRequestBuilder getDatastoreRecord() {
@@ -225,6 +258,9 @@ public class Datastore {
 
     /**
      * Retrieve a record
+     * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -239,6 +275,9 @@ public class Datastore {
     /**
      * Retrieve a table
      * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetDatastoreTableRequestBuilder getDatastoreTable() {
@@ -247,6 +286,9 @@ public class Datastore {
 
     /**
      * Retrieve a table
+     * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -261,6 +303,13 @@ public class Datastore {
     /**
      * List all databases
      * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
@@ -269,6 +318,13 @@ public class Datastore {
 
     /**
      * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -283,6 +339,13 @@ public class Datastore {
     /**
      * List all records
      * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListDatastoreRecordsRequestBuilder listDatastoreRecords() {
@@ -291,6 +354,13 @@ public class Datastore {
 
     /**
      * List all records
+     * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -305,6 +375,13 @@ public class Datastore {
     /**
      * List all tables
      * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListDatastoreTablesRequestBuilder listDatastoreTables() {
@@ -313,6 +390,13 @@ public class Datastore {
 
     /**
      * List all tables
+     * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -327,6 +411,9 @@ public class Datastore {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
@@ -335,6 +422,9 @@ public class Datastore {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -349,6 +439,9 @@ public class Datastore {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchDatastoreRecordRequestBuilder patchDatastoreRecord() {
@@ -357,6 +450,9 @@ public class Datastore {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -371,6 +467,9 @@ public class Datastore {
     /**
      * Update a table
      * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchDatastoreTableRequestBuilder patchDatastoreTable() {
@@ -379,6 +478,9 @@ public class Datastore {
 
     /**
      * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -393,6 +495,8 @@ public class Datastore {
     /**
      * Remove a database
      * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
@@ -401,6 +505,8 @@ public class Datastore {
 
     /**
      * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -415,6 +521,8 @@ public class Datastore {
     /**
      * Remove a record
      * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveDatastoreRecordRequestBuilder removeDatastoreRecord() {
@@ -423,6 +531,8 @@ public class Datastore {
 
     /**
      * Remove a record
+     * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -437,6 +547,8 @@ public class Datastore {
     /**
      * Remove a table
      * 
+     * <p>Deletes the DatastoreTable identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveDatastoreTableRequestBuilder removeDatastoreTable() {
@@ -445,6 +557,8 @@ public class Datastore {
 
     /**
      * Remove a table
+     * 
+     * <p>Deletes the DatastoreTable identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -459,6 +573,9 @@ public class Datastore {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
@@ -467,6 +584,9 @@ public class Datastore {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -481,6 +601,9 @@ public class Datastore {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateDatastoreRecordRequestBuilder updateDatastoreRecord() {
@@ -489,6 +612,9 @@ public class Datastore {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -503,6 +629,9 @@ public class Datastore {
     /**
      * Update a table
      * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateDatastoreTableRequestBuilder updateDatastoreTable() {
@@ -511,6 +640,9 @@ public class Datastore {
 
     /**
      * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

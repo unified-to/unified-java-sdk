@@ -13,7 +13,7 @@
 
 ## createAccountingPaymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -50,12 +50,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("5bde25a1-ffb3-472f-8ab8-73318ef16c51")
+                    .id("1402e492-3f4d-4aed-acc9-575eb4555969")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.534Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.608Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,7 +89,7 @@ public class Application {
 
 ## getAccountingPaymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listAccountingPaymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -241,12 +241,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("148881cd-c4d8-49ff-87c8-999b1c5e8595")
+                    .id("2f1e3728-7b60-425b-b433-6039408d7c37")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.548Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.620Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeAccountingPaymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -374,12 +374,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("148881cd-c4d8-49ff-87c8-999b1c5e8595")
+                    .id("2f1e3728-7b60-425b-b433-6039408d7c37")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.548Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.620Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

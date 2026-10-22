@@ -47,6 +47,9 @@ public class Snapshot {
     /**
      * Create a snapshot
      * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
+     * 
      * @return The call builder
      */
     public CreateComputeSnapshotRequestBuilder createComputeSnapshot() {
@@ -55,6 +58,9 @@ public class Snapshot {
 
     /**
      * Create a snapshot
+     * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -69,6 +75,9 @@ public class Snapshot {
     /**
      * Retrieve a snapshot
      * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeSnapshotRequestBuilder getComputeSnapshot() {
@@ -77,6 +86,9 @@ public class Snapshot {
 
     /**
      * Retrieve a snapshot
+     * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -91,6 +103,13 @@ public class Snapshot {
     /**
      * List all snapshots
      * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeSnapshotsRequestBuilder listComputeSnapshots() {
@@ -99,6 +118,13 @@ public class Snapshot {
 
     /**
      * List all snapshots
+     * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -113,6 +139,8 @@ public class Snapshot {
     /**
      * Remove a snapshot
      * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeSnapshotRequestBuilder removeComputeSnapshot() {
@@ -121,6 +149,8 @@ public class Snapshot {
 
     /**
      * Remove a snapshot
+     * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

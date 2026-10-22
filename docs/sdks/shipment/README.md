@@ -13,7 +13,7 @@
 
 ## createShippingShipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ public class Application {
         CreateShippingShipmentRequest req = CreateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("b5a05c1d-baf0-49cc-83c5-0d0b86256261")
+                    .id("a117c88f-cbed-43de-87a8-a8a54e9b1158")
                     .isReturn(false)
                     .lineitems(List.of())
                     .metadata(List.of())
@@ -52,7 +52,7 @@ public class Application {
                     .serviceCode("OVERNIGHT")
                     .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
                     .status(ShippingShipmentStatus.DELIVERED)
-                    .updatedAt(OffsetDateTime.parse("2022-11-15T06:46:26.065Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T07:50:25.854Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -86,7 +86,7 @@ public class Application {
 
 ## getShippingShipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## listShippingShipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## patchShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ public class Application {
         PatchShippingShipmentRequest req = PatchShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("299cf8a0-651e-4ca6-8609-144011520b82")
+                    .id("6bc54066-7377-4d83-b35c-0d8f8c365fe4")
                     .isReturn(false)
                     .lineitems(List.of())
                     .metadata(List.of())
@@ -240,7 +240,7 @@ public class Application {
                     .serviceCode("OVERNIGHT")
                     .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
                     .status(ShippingShipmentStatus.DELIVERED)
-                    .updatedAt(OffsetDateTime.parse("2022-11-15T06:46:26.070Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T07:50:25.858Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -275,7 +275,7 @@ public class Application {
 
 ## removeShippingShipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ public class Application {
 
 ## updateShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -360,7 +360,7 @@ public class Application {
         UpdateShippingShipmentRequest req = UpdateShippingShipmentRequest.builder()
                 .shippingShipment(ShippingShipment.builder()
                     .createdAt(OffsetDateTime.parse("2022-09-12T03:11:28.960Z"))
-                    .id("299cf8a0-651e-4ca6-8609-144011520b82")
+                    .id("6bc54066-7377-4d83-b35c-0d8f8c365fe4")
                     .isReturn(false)
                     .lineitems(List.of())
                     .metadata(List.of())
@@ -370,7 +370,7 @@ public class Application {
                     .serviceCode("OVERNIGHT")
                     .shippedAt(OffsetDateTime.parse("2022-09-12T07:26:48.479Z"))
                     .status(ShippingShipmentStatus.DELIVERED)
-                    .updatedAt(OffsetDateTime.parse("2022-11-15T06:46:26.070Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-15T07:50:25.858Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

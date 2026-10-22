@@ -57,6 +57,9 @@ public class AsyncExpensereport {
     /**
      * Create an expensereport
      * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     * 
      * @return The async call builder
      */
     public CreateAccountingExpensereportRequestBuilder createAccountingExpensereport() {
@@ -65,6 +68,9 @@ public class AsyncExpensereport {
 
     /**
      * Create an expensereport
+     * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingExpensereportResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncExpensereport {
     /**
      * Retrieve an expensereport
      * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingExpensereportRequestBuilder getAccountingExpensereport() {
@@ -88,6 +97,9 @@ public class AsyncExpensereport {
 
     /**
      * Retrieve an expensereport
+     * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingExpensereportResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncExpensereport {
     /**
      * List all expensereports
      * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingExpensereportsRequestBuilder listAccountingExpensereports() {
@@ -111,6 +130,13 @@ public class AsyncExpensereport {
 
     /**
      * List all expensereports
+     * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingExpensereportsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncExpensereport {
     /**
      * Update an expensereport
      * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingExpensereportRequestBuilder patchAccountingExpensereport() {
@@ -134,6 +163,9 @@ public class AsyncExpensereport {
 
     /**
      * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingExpensereportResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncExpensereport {
     /**
      * Remove an expensereport
      * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingExpensereportRequestBuilder removeAccountingExpensereport() {
@@ -157,6 +191,8 @@ public class AsyncExpensereport {
 
     /**
      * Remove an expensereport
+     * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingExpensereportResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncExpensereport {
     /**
      * Update an expensereport
      * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingExpensereportRequestBuilder updateAccountingExpensereport() {
@@ -180,6 +219,9 @@ public class AsyncExpensereport {
 
     /**
      * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingExpensereportResponse>} - The async response

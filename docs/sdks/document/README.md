@@ -25,7 +25,7 @@
 
 ## createAtsDocument
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -56,10 +56,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("6ede5d86-a9b9-4048-82b1-6a1d2a50e6fb")
+                    .id("0458cf24-d3ef-4a30-9ae7-71b0b64a2b89")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.439Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.065Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## createHrisDocument
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -124,10 +124,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("84563f6a-ef5c-43e8-a744-7930246c703a")
+                    .id("5d8a1290-8095-46ed-938e-dcda812e7ea0")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.172Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.067Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -161,7 +161,7 @@ public class Application {
 
 ## createSigningDocument
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -192,12 +192,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("c9011624-4bb0-44ac-b565-327c1b35f285")
+                    .id("94da5626-939e-4486-91de-f17d825828c1")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.218Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.671Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.602Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.944Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -231,7 +231,7 @@ public class Application {
 
 ## getAtsDocument
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ public class Application {
 
 ## getHrisDocument
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ public class Application {
 
 ## getSigningDocument
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -405,7 +405,7 @@ public class Application {
 
 ## listAtsDocuments
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -462,7 +462,7 @@ public class Application {
 
 ## listHrisDocuments
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -519,7 +519,7 @@ public class Application {
 
 ## listSigningDocuments
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -576,7 +576,7 @@ public class Application {
 
 ## patchAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -607,10 +607,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("a214c743-edaf-4465-8097-647877814cb5")
+                    .id("0c890d49-14dc-407a-9c54-8680a5c4419e")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -645,7 +645,7 @@ public class Application {
 
 ## patchHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -676,10 +676,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("4e54cb30-a044-4072-8486-717797c7c9c6")
+                    .id("53320e0f-17e4-4beb-880a-bf49bc04b35c")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.185Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.075Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -714,7 +714,7 @@ public class Application {
 
 ## patchSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -745,12 +745,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("4b22404f-785f-4cc1-bd23-291924ff209e")
+                    .id("5ae5f617-5cd1-401f-851f-08207d0e3640")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.221Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.674Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.615Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -785,7 +785,7 @@ public class Application {
 
 ## removeAtsDocument
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -841,7 +841,7 @@ public class Application {
 
 ## removeHrisDocument
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -897,7 +897,7 @@ public class Application {
 
 ## removeSigningDocument
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -953,7 +953,7 @@ public class Application {
 
 ## updateAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -984,10 +984,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("a214c743-edaf-4465-8097-647877814cb5")
+                    .id("0c890d49-14dc-407a-9c54-8680a5c4419e")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1022,7 +1022,7 @@ public class Application {
 
 ## updateHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -1053,10 +1053,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("4e54cb30-a044-4072-8486-717797c7c9c6")
+                    .id("53320e0f-17e4-4beb-880a-bf49bc04b35c")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.185Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.075Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1091,7 +1091,7 @@ public class Application {
 
 ## updateSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -1122,12 +1122,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("4b22404f-785f-4cc1-bd23-291924ff209e")
+                    .id("5ae5f617-5cd1-401f-851f-08207d0e3640")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.221Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.674Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.615Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

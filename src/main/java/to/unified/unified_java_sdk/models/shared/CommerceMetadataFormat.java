@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CommerceMetadataFormat
+ * 
+ * <p>The data type of the custom field, which determines how `value` is formatted.
+ */
 public class CommerceMetadataFormat {
 
     public static final CommerceMetadataFormat TEXT = new CommerceMetadataFormat("TEXT");

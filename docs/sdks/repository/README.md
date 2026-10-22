@@ -13,7 +13,7 @@
 
 ## createRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -45,10 +45,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("37d76763-2cda-4cff-86a4-6a57ada4b71c")
+                    .id("a008267f-c7b0-4c9b-8dcc-a68dd1ec50fc")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.845Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.347Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")
@@ -83,7 +83,7 @@ public class Application {
 
 ## getRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ public class Application {
 
 ## listRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ public class Application {
 
 ## patchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -230,10 +230,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("0a203255-ab68-408a-95cc-a417d1ac0a4e")
+                    .id("b1019817-0313-41d4-843e-df319355c7af")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.349Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")
@@ -269,7 +269,7 @@ public class Application {
 
 ## removeRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ public class Application {
 
 ## updateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -357,10 +357,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("0a203255-ab68-408a-95cc-a417d1ac0a4e")
+                    .id("b1019817-0313-41d4-843e-df319355c7af")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.349Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")

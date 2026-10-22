@@ -105,6 +105,9 @@ public class AsyncKms {
     /**
      * Create a comment
      * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
+     * 
      * @return The async call builder
      */
     public CreateKmsCommentRequestBuilder createKmsComment() {
@@ -113,6 +116,9 @@ public class AsyncKms {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
@@ -128,6 +134,9 @@ public class AsyncKms {
     /**
      * Create a page
      * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
+     * 
      * @return The async call builder
      */
     public CreateKmsPageRequestBuilder createKmsPage() {
@@ -136,6 +145,9 @@ public class AsyncKms {
 
     /**
      * Create a page
+     * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
@@ -151,6 +163,9 @@ public class AsyncKms {
     /**
      * Create a space
      * 
+     * <p>Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsSpace.
+     * 
      * @return The async call builder
      */
     public CreateKmsSpaceRequestBuilder createKmsSpace() {
@@ -159,6 +174,9 @@ public class AsyncKms {
 
     /**
      * Create a space
+     * 
+     * <p>Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsSpace.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
@@ -174,6 +192,9 @@ public class AsyncKms {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetKmsCommentRequestBuilder getKmsComment() {
@@ -182,6 +203,9 @@ public class AsyncKms {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
@@ -197,6 +221,9 @@ public class AsyncKms {
     /**
      * Retrieve a page
      * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetKmsPageRequestBuilder getKmsPage() {
@@ -205,6 +232,9 @@ public class AsyncKms {
 
     /**
      * Retrieve a page
+     * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
@@ -220,6 +250,9 @@ public class AsyncKms {
     /**
      * Retrieve a space
      * 
+     * <p>Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetKmsSpaceRequestBuilder getKmsSpace() {
@@ -228,6 +261,9 @@ public class AsyncKms {
 
     /**
      * Retrieve a space
+     * 
+     * <p>Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
@@ -243,6 +279,13 @@ public class AsyncKms {
     /**
      * List all comments
      * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListKmsCommentsRequestBuilder listKmsComments() {
@@ -251,6 +294,13 @@ public class AsyncKms {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
@@ -266,6 +316,13 @@ public class AsyncKms {
     /**
      * List all pages
      * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListKmsPagesRequestBuilder listKmsPages() {
@@ -274,6 +331,13 @@ public class AsyncKms {
 
     /**
      * List all pages
+     * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
@@ -289,6 +353,13 @@ public class AsyncKms {
     /**
      * List all spaces
      * 
+     * <p>Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListKmsSpacesRequestBuilder listKmsSpaces() {
@@ -297,6 +368,13 @@ public class AsyncKms {
 
     /**
      * List all spaces
+     * 
+     * <p>Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
@@ -312,6 +390,9 @@ public class AsyncKms {
     /**
      * Update a comment
      * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchKmsCommentRequestBuilder patchKmsComment() {
@@ -320,6 +401,9 @@ public class AsyncKms {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
@@ -335,6 +419,9 @@ public class AsyncKms {
     /**
      * Update a page
      * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchKmsPageRequestBuilder patchKmsPage() {
@@ -343,6 +430,9 @@ public class AsyncKms {
 
     /**
      * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
@@ -358,6 +448,9 @@ public class AsyncKms {
     /**
      * Update a space
      * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchKmsSpaceRequestBuilder patchKmsSpace() {
@@ -366,6 +459,9 @@ public class AsyncKms {
 
     /**
      * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
@@ -381,6 +477,8 @@ public class AsyncKms {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the KmsComment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveKmsCommentRequestBuilder removeKmsComment() {
@@ -389,6 +487,8 @@ public class AsyncKms {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the KmsComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
@@ -404,6 +504,8 @@ public class AsyncKms {
     /**
      * Remove a page
      * 
+     * <p>Deletes the KmsPage identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveKmsPageRequestBuilder removeKmsPage() {
@@ -412,6 +514,8 @@ public class AsyncKms {
 
     /**
      * Remove a page
+     * 
+     * <p>Deletes the KmsPage identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
@@ -427,6 +531,8 @@ public class AsyncKms {
     /**
      * Remove a space
      * 
+     * <p>Deletes the KmsSpace identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveKmsSpaceRequestBuilder removeKmsSpace() {
@@ -435,6 +541,8 @@ public class AsyncKms {
 
     /**
      * Remove a space
+     * 
+     * <p>Deletes the KmsSpace identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
@@ -450,6 +558,9 @@ public class AsyncKms {
     /**
      * Update a comment
      * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateKmsCommentRequestBuilder updateKmsComment() {
@@ -458,6 +569,9 @@ public class AsyncKms {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
@@ -473,6 +587,9 @@ public class AsyncKms {
     /**
      * Update a page
      * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateKmsPageRequestBuilder updateKmsPage() {
@@ -481,6 +598,9 @@ public class AsyncKms {
 
     /**
      * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
@@ -496,6 +616,9 @@ public class AsyncKms {
     /**
      * Update a space
      * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateKmsSpaceRequestBuilder updateKmsSpace() {
@@ -504,6 +627,9 @@ public class AsyncKms {
 
     /**
      * Update a space
+     * 
+     * <p>Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response

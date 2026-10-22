@@ -133,6 +133,9 @@ public class AsyncEvent {
     /**
      * Create an event
      * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
      * @return The async call builder
      */
     public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
@@ -141,6 +144,9 @@ public class AsyncEvent {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAnalyticsEventResponse>} - The async response
@@ -156,6 +162,9 @@ public class AsyncEvent {
     /**
      * Create an event
      * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
      * @return The async call builder
      */
     public CreateCalendarEventRequestBuilder createCalendarEvent() {
@@ -164,6 +173,9 @@ public class AsyncEvent {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
@@ -179,6 +191,9 @@ public class AsyncEvent {
     /**
      * Create an event
      * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
      * @return The async call builder
      */
     public CreateCdpEventRequestBuilder createCdpEvent() {
@@ -187,6 +202,9 @@ public class AsyncEvent {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpEventResponse>} - The async response
@@ -202,6 +220,9 @@ public class AsyncEvent {
     /**
      * Create an event
      * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
      * @return The async call builder
      */
     public CreateCrmEventRequestBuilder createCrmEvent() {
@@ -210,6 +231,9 @@ public class AsyncEvent {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
@@ -225,6 +249,9 @@ public class AsyncEvent {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
@@ -233,6 +260,9 @@ public class AsyncEvent {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAnalyticsEventResponse>} - The async response
@@ -248,6 +278,9 @@ public class AsyncEvent {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarEventRequestBuilder getCalendarEvent() {
@@ -256,6 +289,9 @@ public class AsyncEvent {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
@@ -271,6 +307,9 @@ public class AsyncEvent {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpEventRequestBuilder getCdpEvent() {
@@ -279,6 +318,9 @@ public class AsyncEvent {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpEventResponse>} - The async response
@@ -294,6 +336,9 @@ public class AsyncEvent {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetClubsEventRequestBuilder getClubsEvent() {
@@ -302,6 +347,9 @@ public class AsyncEvent {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
@@ -317,6 +365,9 @@ public class AsyncEvent {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmEventRequestBuilder getCrmEvent() {
@@ -325,6 +376,9 @@ public class AsyncEvent {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
@@ -340,6 +394,13 @@ public class AsyncEvent {
     /**
      * List all events
      * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
@@ -348,6 +409,13 @@ public class AsyncEvent {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAnalyticsEventsResponse>} - The async response
@@ -363,6 +431,13 @@ public class AsyncEvent {
     /**
      * List all events
      * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarEventsRequestBuilder listCalendarEvents() {
@@ -371,6 +446,13 @@ public class AsyncEvent {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
@@ -386,6 +468,13 @@ public class AsyncEvent {
     /**
      * List all events
      * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpEventsRequestBuilder listCdpEvents() {
@@ -394,6 +483,13 @@ public class AsyncEvent {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpEventsResponse>} - The async response
@@ -409,6 +505,13 @@ public class AsyncEvent {
     /**
      * List all events
      * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListClubsEventsRequestBuilder listClubsEvents() {
@@ -417,6 +520,13 @@ public class AsyncEvent {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
@@ -432,6 +542,13 @@ public class AsyncEvent {
     /**
      * List all events
      * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmEventsRequestBuilder listCrmEvents() {
@@ -440,6 +557,13 @@ public class AsyncEvent {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
@@ -455,6 +579,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCalendarEventRequestBuilder patchCalendarEvent() {
@@ -463,6 +590,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
@@ -478,6 +608,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpEventRequestBuilder patchCdpEvent() {
@@ -486,6 +619,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpEventResponse>} - The async response
@@ -501,6 +637,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmEventRequestBuilder patchCrmEvent() {
@@ -509,6 +648,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
@@ -524,6 +666,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMessagingEventRequestBuilder patchMessagingEvent() {
@@ -532,6 +677,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
@@ -547,6 +695,8 @@ public class AsyncEvent {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
@@ -555,6 +705,8 @@ public class AsyncEvent {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
@@ -570,6 +722,8 @@ public class AsyncEvent {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpEventRequestBuilder removeCdpEvent() {
@@ -578,6 +732,8 @@ public class AsyncEvent {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpEventResponse>} - The async response
@@ -593,6 +749,8 @@ public class AsyncEvent {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmEventRequestBuilder removeCrmEvent() {
@@ -601,6 +759,8 @@ public class AsyncEvent {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
@@ -616,6 +776,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
@@ -624,6 +787,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
@@ -639,6 +805,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpEventRequestBuilder updateCdpEvent() {
@@ -647,6 +816,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpEventResponse>} - The async response
@@ -662,6 +834,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmEventRequestBuilder updateCrmEvent() {
@@ -670,6 +845,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
@@ -685,6 +863,9 @@ public class AsyncEvent {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
@@ -693,6 +874,9 @@ public class AsyncEvent {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response

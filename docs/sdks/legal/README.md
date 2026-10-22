@@ -31,7 +31,7 @@
 
 ## createLegalExpense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -63,7 +63,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("7226121a-3015-4ea6-8474-2a10f7605b0e")
+                    .id("93e890d8-e66f-479d-9ec6-fb53d2430682")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -71,7 +71,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.236Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.919Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -105,7 +105,7 @@ public class Application {
 
 ## createLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -140,11 +140,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("1d86001f-95c5-4e81-aada-7a20433b94cd")
+                    .id("b810378e-cd23-4adf-8cb6-69b5242ce50e")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.338Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.979Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -152,8 +152,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.664Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.191Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.584Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.753Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -187,7 +187,7 @@ public class Application {
 
 ## createLegalPracticearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -217,11 +217,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("e2a14296-adc0-4625-82fa-eb4b67b469e4")
+                    .id("13151dc7-f5b1-43fb-b8ec-8b911af841c5")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.528Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.889Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -255,7 +255,7 @@ public class Application {
 
 ## createLegalTimeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -288,13 +288,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("2a755b0b-8122-4dd5-b33a-37968de1fe05")
+                    .id("2d754bce-fc01-4baa-a2bb-0cf13964f811")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.408Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")
@@ -329,7 +329,7 @@ public class Application {
 
 ## getLegalExpense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ public class Application {
 
 ## getLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ public class Application {
 
 ## getLegalPracticearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -503,7 +503,7 @@ public class Application {
 
 ## getLegalTimeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -561,7 +561,7 @@ public class Application {
 
 ## listLegalExpenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -618,7 +618,7 @@ public class Application {
 
 ## listLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -675,7 +675,7 @@ public class Application {
 
 ## listLegalPracticeareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -732,7 +732,7 @@ public class Application {
 
 ## listLegalTimeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -789,7 +789,7 @@ public class Application {
 
 ## patchLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -821,7 +821,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("860823ed-6ffe-436d-b897-db11369ec962")
+                    .id("2803c4a2-1772-42cf-aa26-81ee298b9f1a")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -829,7 +829,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.928Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -864,7 +864,7 @@ public class Application {
 
 ## patchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -899,11 +899,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("31f0369f-e4b0-4a22-933e-84d0d7da7b9a")
+                    .id("480375fc-f300-44c9-b0c8-52d5a57a6191")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.339Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.980Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -911,8 +911,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.688Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.192Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.613Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.754Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -947,7 +947,7 @@ public class Application {
 
 ## patchLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -977,11 +977,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("6344fe75-8815-4be8-bd9c-30e114b3c1cb")
+                    .id("54739f83-c9a7-4b91-b795-c79cb3a9974e")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.539Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.914Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1016,7 +1016,7 @@ public class Application {
 
 ## patchLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1049,13 +1049,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("f1a1bdb3-de0b-4f2d-9351-c897b387921d")
+                    .id("0c2aa461-de71-4f6d-ae89-9122e0c3940f")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.409Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")
@@ -1091,7 +1091,7 @@ public class Application {
 
 ## removeLegalExpense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -1147,7 +1147,7 @@ public class Application {
 
 ## removeLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -1203,7 +1203,7 @@ public class Application {
 
 ## removeLegalPracticearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -1259,7 +1259,7 @@ public class Application {
 
 ## removeLegalTimeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -1315,7 +1315,7 @@ public class Application {
 
 ## updateLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -1347,7 +1347,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("860823ed-6ffe-436d-b897-db11369ec962")
+                    .id("2803c4a2-1772-42cf-aa26-81ee298b9f1a")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -1355,7 +1355,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.928Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1390,7 +1390,7 @@ public class Application {
 
 ## updateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -1425,11 +1425,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("31f0369f-e4b0-4a22-933e-84d0d7da7b9a")
+                    .id("480375fc-f300-44c9-b0c8-52d5a57a6191")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.339Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.980Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -1437,8 +1437,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.688Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.192Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.613Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.754Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1473,7 +1473,7 @@ public class Application {
 
 ## updateLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -1503,11 +1503,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("6344fe75-8815-4be8-bd9c-30e114b3c1cb")
+                    .id("54739f83-c9a7-4b91-b795-c79cb3a9974e")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.539Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.914Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1542,7 +1542,7 @@ public class Application {
 
 ## updateLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1575,13 +1575,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("f1a1bdb3-de0b-4f2d-9351-c897b387921d")
+                    .id("0c2aa461-de71-4f6d-ae89-9122e0c3940f")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.409Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")

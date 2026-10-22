@@ -13,7 +13,7 @@
 
 ## createMessagingMessage
 
-Create a message
+Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 
 ### Example Usage
 
@@ -43,23 +43,23 @@ public class Application {
                 .messagingMessage(MessagingMessage.builder()
                     .attachments(List.of(
                         MessagingAttachment.builder()
-                            .contentIdentifier("c7a9f43d-1524-4fae-8d37-b08b4da25f65")
+                            .contentIdentifier("91c5e23e-31ad-4cbe-84df-10da9828ae93")
                             .contentType("coaegresco")
                             .downloadUrl("https://rotating-advertisement.org")
                             .filename("super")
-                            .messageId("896e1944-76ec-4bad-9195-59130bbab30a")
+                            .messageId("2f8d3e3b-7a50-4f44-8c06-722008c1431e")
                             .size(327d)
                             .build()))
                     .buttons(List.of(
                         MessagingButton.builder()
-                            .id("42ba4605-c291-45c3-988e-1e755b3646bf")
+                            .id("fedd8001-b440-4d66-b97b-624696ff6329")
                             .text("comparo")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
                     .destinationMembers(List.of())
                     .hasChildren(true)
                     .hiddenMembers(List.of())
-                    .id("896e1944-76ec-4bad-9195-59130bbab30a")
+                    .id("2f8d3e3b-7a50-4f44-8c06-722008c1431e")
                     .isUnread(false)
                     .mentionedMembers(List.of())
                     .message("Sum utique aliquid.")
@@ -68,7 +68,7 @@ public class Application {
                     .metadata(List.of())
                     .reactions(List.of())
                     .subject("Cernuus optio cohaero summisse in.")
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:57:15.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T20:17:20.219Z"))
                     .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
@@ -103,7 +103,7 @@ public class Application {
 
 ## getMessagingMessage
 
-Retrieve a message
+Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ public class Application {
 
 ## listMessagingMessages
 
-List all messages
+Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ public class Application {
 
 ## patchMessagingMessage
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -248,23 +248,23 @@ public class Application {
                 .messagingMessage(MessagingMessage.builder()
                     .attachments(List.of(
                         MessagingAttachment.builder()
-                            .contentIdentifier("e0d5fa31-f0f6-45bd-9d0d-dd5e451aa76f")
+                            .contentIdentifier("4afc20b7-d1de-4ac6-934b-7091f8e63d73")
                             .contentType("coaegresco")
                             .downloadUrl("https://rotating-advertisement.org")
                             .filename("super")
-                            .messageId("74a664a2-4eff-4f58-a082-d61921759d4e")
+                            .messageId("3651a049-c291-40d5-8759-51d756feaca2")
                             .size(327d)
                             .build()))
                     .buttons(List.of(
                         MessagingButton.builder()
-                            .id("6fdd1631-0bf3-4408-ae46-fcddad603fdc")
+                            .id("de66aabf-36f5-4947-8383-e5d87999c985")
                             .text("comparo")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
                     .destinationMembers(List.of())
                     .hasChildren(true)
                     .hiddenMembers(List.of())
-                    .id("74a664a2-4eff-4f58-a082-d61921759d4e")
+                    .id("3651a049-c291-40d5-8759-51d756feaca2")
                     .isUnread(false)
                     .mentionedMembers(List.of())
                     .message("Sum utique aliquid.")
@@ -273,7 +273,7 @@ public class Application {
                     .metadata(List.of())
                     .reactions(List.of())
                     .subject("Cernuus optio cohaero summisse in.")
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:57:15.521Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T20:17:20.233Z"))
                     .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")
@@ -309,7 +309,7 @@ public class Application {
 
 ## removeMessagingMessage
 
-Remove a message
+Deletes the MessagingMessage identified by `id`.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ public class Application {
 
 ## updateMessagingMessage
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -395,23 +395,23 @@ public class Application {
                 .messagingMessage(MessagingMessage.builder()
                     .attachments(List.of(
                         MessagingAttachment.builder()
-                            .contentIdentifier("e0d5fa31-f0f6-45bd-9d0d-dd5e451aa76f")
+                            .contentIdentifier("4afc20b7-d1de-4ac6-934b-7091f8e63d73")
                             .contentType("coaegresco")
                             .downloadUrl("https://rotating-advertisement.org")
                             .filename("super")
-                            .messageId("74a664a2-4eff-4f58-a082-d61921759d4e")
+                            .messageId("3651a049-c291-40d5-8759-51d756feaca2")
                             .size(327d)
                             .build()))
                     .buttons(List.of(
                         MessagingButton.builder()
-                            .id("6fdd1631-0bf3-4408-ae46-fcddad603fdc")
+                            .id("de66aabf-36f5-4947-8383-e5d87999c985")
                             .text("comparo")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-11-26T09:26:33.973Z"))
                     .destinationMembers(List.of())
                     .hasChildren(true)
                     .hiddenMembers(List.of())
-                    .id("74a664a2-4eff-4f58-a082-d61921759d4e")
+                    .id("3651a049-c291-40d5-8759-51d756feaca2")
                     .isUnread(false)
                     .mentionedMembers(List.of())
                     .message("Sum utique aliquid.")
@@ -420,7 +420,7 @@ public class Application {
                     .metadata(List.of())
                     .reactions(List.of())
                     .subject("Cernuus optio cohaero summisse in.")
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:57:15.521Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T20:17:20.233Z"))
                     .webUrl("https://grumpy-kit.net")
                     .build())
                 .connectionId("<id>")

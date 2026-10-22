@@ -57,6 +57,9 @@ public class AsyncSalesorder {
     /**
      * Create a salesorder
      * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
+     * 
      * @return The async call builder
      */
     public CreateAccountingSalesorderRequestBuilder createAccountingSalesorder() {
@@ -65,6 +68,9 @@ public class AsyncSalesorder {
 
     /**
      * Create a salesorder
+     * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingSalesorderResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncSalesorder {
     /**
      * Retrieve a salesorder
      * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingSalesorderRequestBuilder getAccountingSalesorder() {
@@ -88,6 +97,9 @@ public class AsyncSalesorder {
 
     /**
      * Retrieve a salesorder
+     * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingSalesorderResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncSalesorder {
     /**
      * List all salesorders
      * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingSalesordersRequestBuilder listAccountingSalesorders() {
@@ -111,6 +130,13 @@ public class AsyncSalesorder {
 
     /**
      * List all salesorders
+     * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingSalesordersResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncSalesorder {
     /**
      * Update a salesorder
      * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingSalesorderRequestBuilder patchAccountingSalesorder() {
@@ -134,6 +163,9 @@ public class AsyncSalesorder {
 
     /**
      * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingSalesorderResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncSalesorder {
     /**
      * Remove a salesorder
      * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingSalesorderRequestBuilder removeAccountingSalesorder() {
@@ -157,6 +191,8 @@ public class AsyncSalesorder {
 
     /**
      * Remove a salesorder
+     * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingSalesorderResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncSalesorder {
     /**
      * Update a salesorder
      * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingSalesorderRequestBuilder updateAccountingSalesorder() {
@@ -180,6 +219,9 @@ public class AsyncSalesorder {
 
     /**
      * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingSalesorderResponse>} - The async response

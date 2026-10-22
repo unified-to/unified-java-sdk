@@ -55,7 +55,9 @@ public class AtsCandidate {
     @JsonProperty("education")
     private List<AtsCandidateEducation> education;
 
-
+    /**
+     * The candidate's email addresses
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private List<AtsEmail> emails;
@@ -108,7 +110,9 @@ public class AtsCandidate {
     @JsonProperty("metadata")
     private List<AtsMetadata> metadata;
 
-
+    /**
+     * The candidate's full name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -291,6 +295,9 @@ public class AtsCandidate {
         return Optional.ofNullable(this.education);
     }
 
+    /**
+     * The candidate's email addresses
+     */
     public Optional<List<AtsEmail>> emails() {
         return Optional.ofNullable(this.emails);
     }
@@ -335,6 +342,9 @@ public class AtsCandidate {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The candidate's full name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -452,6 +462,9 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * The candidate's email addresses
+     */
     public AtsCandidate withEmails(@Nullable List<AtsEmail> emails) {
         this.emails = emails;
         return this;
@@ -516,6 +529,9 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * The candidate's full name
+     */
     public AtsCandidate withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -803,6 +819,9 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * The candidate's email addresses
+         */
         public Builder emails(@Nullable List<AtsEmail> emails) {
             this.emails = emails;
             return this;
@@ -857,6 +876,9 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * The candidate's full name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

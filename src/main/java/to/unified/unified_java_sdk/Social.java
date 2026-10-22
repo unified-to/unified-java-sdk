@@ -87,6 +87,9 @@ public class Social {
     /**
      * Create a post
      * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
+     * 
      * @return The call builder
      */
     public CreateSocialPostRequestBuilder createSocialPost() {
@@ -95,6 +98,9 @@ public class Social {
 
     /**
      * Create a post
+     * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -109,6 +115,9 @@ public class Social {
     /**
      * Retrieve an insight
      * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSocialInsightRequestBuilder getSocialInsight() {
@@ -117,6 +126,9 @@ public class Social {
 
     /**
      * Retrieve an insight
+     * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -131,6 +143,9 @@ public class Social {
     /**
      * Retrieve a post
      * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSocialPostRequestBuilder getSocialPost() {
@@ -139,6 +154,9 @@ public class Social {
 
     /**
      * Retrieve a post
+     * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -153,6 +171,9 @@ public class Social {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSocialProfileRequestBuilder getSocialProfile() {
@@ -161,6 +182,9 @@ public class Social {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -175,6 +199,9 @@ public class Social {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSocialReviewRequestBuilder getSocialReview() {
@@ -183,6 +210,9 @@ public class Social {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -197,6 +227,13 @@ public class Social {
     /**
      * List all insights
      * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSocialInsightsRequestBuilder listSocialInsights() {
@@ -205,6 +242,13 @@ public class Social {
 
     /**
      * List all insights
+     * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -219,6 +263,13 @@ public class Social {
     /**
      * List all posts
      * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSocialPostsRequestBuilder listSocialPosts() {
@@ -227,6 +278,13 @@ public class Social {
 
     /**
      * List all posts
+     * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -241,6 +299,13 @@ public class Social {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSocialProfilesRequestBuilder listSocialProfiles() {
@@ -249,6 +314,13 @@ public class Social {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -263,6 +335,13 @@ public class Social {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSocialReviewsRequestBuilder listSocialReviews() {
@@ -271,6 +350,13 @@ public class Social {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -285,6 +371,9 @@ public class Social {
     /**
      * Update a post
      * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchSocialPostRequestBuilder patchSocialPost() {
@@ -293,6 +382,9 @@ public class Social {
 
     /**
      * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -307,6 +399,9 @@ public class Social {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchSocialReviewRequestBuilder patchSocialReview() {
@@ -315,6 +410,9 @@ public class Social {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -329,6 +427,8 @@ public class Social {
     /**
      * Remove a post
      * 
+     * <p>Deletes the SocialPost identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveSocialPostRequestBuilder removeSocialPost() {
@@ -337,6 +437,8 @@ public class Social {
 
     /**
      * Remove a post
+     * 
+     * <p>Deletes the SocialPost identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -351,6 +453,9 @@ public class Social {
     /**
      * Update a post
      * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateSocialPostRequestBuilder updateSocialPost() {
@@ -359,6 +464,9 @@ public class Social {
 
     /**
      * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -373,6 +481,9 @@ public class Social {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateSocialReviewRequestBuilder updateSocialReview() {
@@ -381,6 +492,9 @@ public class Social {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

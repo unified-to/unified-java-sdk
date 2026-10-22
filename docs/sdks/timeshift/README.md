@@ -13,7 +13,7 @@
 
 ## createHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.767Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.078Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -52,13 +52,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.542Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.751Z"))
                     .hours(6d)
-                    .id("34134a78-7c79-4e4b-9d1c-fe506c0e05de")
+                    .id("ac859842-d215-43ea-8daf-db530f7d98f4")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.876Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.177Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.227Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.357Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -92,7 +92,7 @@ public class Application {
 
 ## getHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ public class Application {
 
 ## listHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ public class Application {
 
 ## patchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.774Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.084Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -246,13 +246,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.559Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.765Z"))
                     .hours(6d)
-                    .id("62a9b430-d558-4ae0-9efa-2588d50bbf33")
+                    .id("4b9f4448-b2d6-4ff7-8965-43d26989725a")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.885Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.181Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -287,7 +287,7 @@ public class Application {
 
 ## removeHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ public class Application {
 
 ## updateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.774Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.084Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -382,13 +382,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.559Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.765Z"))
                     .hours(6d)
-                    .id("62a9b430-d558-4ae0-9efa-2588d50bbf33")
+                    .id("4b9f4448-b2d6-4ff7-8965-43d26989725a")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.885Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.181Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -62,7 +62,9 @@ public class HrisEmployee {
     @JsonProperty("date_of_birth")
     private OffsetDateTime dateOfBirth;
 
-
+    /**
+     * The employee's email addresses
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private List<HrisEmail> emails;
@@ -89,7 +91,9 @@ public class HrisEmployee {
     @JsonProperty("employment_type")
     private HrisEmployeeEmploymentType employmentType;
 
-
+    /**
+     * The employee's first (given) name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     private String firstName;
@@ -152,7 +156,9 @@ public class HrisEmployee {
     @JsonProperty("language_locale")
     private String languageLocale;
 
-
+    /**
+     * The employee's last (family) name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private String lastName;
@@ -177,7 +183,9 @@ public class HrisEmployee {
     @JsonProperty("metadata")
     private List<HrisMetadata> metadata;
 
-
+    /**
+     * The employee's full name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -430,6 +438,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.dateOfBirth);
     }
 
+    /**
+     * The employee's email addresses
+     */
     public Optional<List<HrisEmail>> emails() {
         return Optional.ofNullable(this.emails);
     }
@@ -453,6 +464,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.employmentType);
     }
 
+    /**
+     * The employee's first (given) name
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -512,6 +526,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.languageLocale);
     }
 
+    /**
+     * The employee's last (family) name
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -532,6 +549,9 @@ public class HrisEmployee {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The employee's full name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -681,6 +701,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * The employee's email addresses
+     */
     public HrisEmployee withEmails(@Nullable List<HrisEmail> emails) {
         this.emails = emails;
         return this;
@@ -714,6 +737,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * The employee's first (given) name
+     */
     public HrisEmployee withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
@@ -793,6 +819,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * The employee's last (family) name
+     */
     public HrisEmployee withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
@@ -823,6 +852,9 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * The employee's full name
+     */
     public HrisEmployee withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -1220,6 +1252,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * The employee's email addresses
+         */
         public Builder emails(@Nullable List<HrisEmail> emails) {
             this.emails = emails;
             return this;
@@ -1248,6 +1283,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * The employee's first (given) name
+         */
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
@@ -1317,6 +1355,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * The employee's last (family) name
+         */
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
@@ -1342,6 +1383,9 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * The employee's full name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

@@ -95,6 +95,9 @@ public class Location {
     /**
      * Create a location
      * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
      * @return The call builder
      */
     public CreateCommerceLocationRequestBuilder createCommerceLocation() {
@@ -103,6 +106,9 @@ public class Location {
 
     /**
      * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -117,6 +123,9 @@ public class Location {
     /**
      * Create a location
      * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
      * @return The call builder
      */
     public CreateHrisLocationRequestBuilder createHrisLocation() {
@@ -125,6 +134,9 @@ public class Location {
 
     /**
      * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -139,6 +151,9 @@ public class Location {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsLocationRequestBuilder getClubsLocation() {
@@ -147,6 +162,9 @@ public class Location {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -161,6 +179,9 @@ public class Location {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceLocationRequestBuilder getCommerceLocation() {
@@ -169,6 +190,9 @@ public class Location {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -183,6 +207,9 @@ public class Location {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareLocationRequestBuilder getHealthcareLocation() {
@@ -191,6 +218,9 @@ public class Location {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -205,6 +235,9 @@ public class Location {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisLocationRequestBuilder getHrisLocation() {
@@ -213,6 +246,9 @@ public class Location {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -227,6 +263,13 @@ public class Location {
     /**
      * List all locations
      * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsLocationsRequestBuilder listClubsLocations() {
@@ -235,6 +278,13 @@ public class Location {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -249,6 +299,13 @@ public class Location {
     /**
      * List all locations
      * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceLocationsRequestBuilder listCommerceLocations() {
@@ -257,6 +314,13 @@ public class Location {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -271,6 +335,13 @@ public class Location {
     /**
      * List all locations
      * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareLocationsRequestBuilder listHealthcareLocations() {
@@ -279,6 +350,13 @@ public class Location {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -293,6 +371,13 @@ public class Location {
     /**
      * List all locations
      * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisLocationsRequestBuilder listHrisLocations() {
@@ -301,6 +386,13 @@ public class Location {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -315,6 +407,9 @@ public class Location {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceLocationRequestBuilder patchCommerceLocation() {
@@ -323,6 +418,9 @@ public class Location {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -337,6 +435,9 @@ public class Location {
     /**
      * Update a location
      * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisLocationRequestBuilder patchHrisLocation() {
@@ -345,6 +446,9 @@ public class Location {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -359,6 +463,8 @@ public class Location {
     /**
      * Remove a location
      * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceLocationRequestBuilder removeCommerceLocation() {
@@ -367,6 +473,8 @@ public class Location {
 
     /**
      * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -381,6 +489,8 @@ public class Location {
     /**
      * Remove a location
      * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisLocationRequestBuilder removeHrisLocation() {
@@ -389,6 +499,8 @@ public class Location {
 
     /**
      * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -403,6 +515,9 @@ public class Location {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceLocationRequestBuilder updateCommerceLocation() {
@@ -411,6 +526,9 @@ public class Location {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -425,6 +543,9 @@ public class Location {
     /**
      * Update a location
      * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisLocationRequestBuilder updateHrisLocation() {
@@ -433,6 +554,9 @@ public class Location {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

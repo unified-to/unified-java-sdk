@@ -100,7 +100,7 @@
 
 ## createHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -129,8 +129,8 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.581Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.699Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.734Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.585Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -139,28 +139,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.899Z"))
-                            .id("4d3e9e91-a31e-4eab-a339-e5db2d13b80e")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.619Z"))
+                            .id("a7e2619a-89ff-4a7b-96c8-b77d7c05b422")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.925Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.176Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("370c0b74-7869-415e-9e45-760313363b8e")
+                    .id("dea74055-5eec-465a-94f7-4db991b6ddac")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.115Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.924Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -194,7 +194,7 @@ public class Application {
 
 ## createHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("75afe0e9-3b22-4157-be57-8a730d0f3968")
+                    .id("b0c1e98c-8856-4756-bb3d-94ab5bee2b78")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -237,7 +237,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.322Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.041Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -271,7 +271,7 @@ public class Application {
 
 ## createHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -307,13 +307,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("1e8dafd1-6468-474c-8257-ae13c09b5129")
+                    .id("d784f8fe-b082-43c2-8d50-2c14180ce0cf")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.918Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.549Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -347,7 +347,7 @@ public class Application {
 
 ## createHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -384,11 +384,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("defc5c9e-25d6-4de3-8b59-cdbb7d6703ee")
+                    .id("13e2210c-c4b1-48cb-aab5-577f4d785978")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.283Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.573Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -422,7 +422,7 @@ public class Application {
 
 ## createHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -457,14 +457,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("f7b7133b-c29c-47a9-93f8-ce9c318e0a87")
+                    .id("1d7fce0c-6a8c-4104-ab44-fab47d9cc437")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.337Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.476Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.338Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.479Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -498,7 +498,7 @@ public class Application {
 
 ## createHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("49b5d703-8a3e-4737-b1bc-7a3fdcf1605c")
+                    .id("05131f9f-e2a2-4b8f-a802-8cf7151a4697")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -543,7 +543,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.617Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.178Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -578,7 +578,7 @@ public class Application {
 
 ## createHrisDocument
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -609,10 +609,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("84563f6a-ef5c-43e8-a744-7930246c703a")
+                    .id("5d8a1290-8095-46ed-938e-dcda812e7ea0")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.172Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.067Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -646,7 +646,7 @@ public class Application {
 
 ## createHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -678,12 +678,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("ddad645f-3d19-42ec-a027-6c165e76b0f9")
+                    .id("106e4511-3016-4a4a-992b-ad7f2114635f")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.909Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.242Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.505Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.835Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -717,7 +717,7 @@ public class Application {
 
 ## createHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -780,7 +780,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("527e3173-0c4f-4538-b7bf-9252c8a96444")
+                    .id("75db520b-7e56-4d71-ae91-4b6e9a266879")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -791,7 +791,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("c9dfe339-8dc4-44b6-97e8-fab7a88709e2")
+                            .id("2902bb77-e2a7-47f3-84e3-431e2c4ec2fe")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -834,7 +834,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.863Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.079Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -868,7 +868,7 @@ public class Application {
 
 ## createHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -898,12 +898,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("f4b271d1-2f3e-4737-9832-7adfe3f09a3e")
+                    .id("3606725f-8165-4120-b28b-b59112af7590")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.823Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.838Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -937,7 +937,7 @@ public class Application {
 
 ## createHrisJob
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -969,11 +969,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("5d8307df-d5b8-4ce7-bd06-413f18e29148")
+                    .id("b7f28636-55eb-4818-a80c-f4a681b999bd")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.326Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1007,7 +1007,7 @@ public class Application {
 
 ## createHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -1047,7 +1047,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("32b8df3b-dc51-4e85-9e5d-2ddbd5b69acb")
+                    .id("6ea684d2-8ac8-463e-87b6-06668404342e")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -1067,7 +1067,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.149Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.678Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1101,7 +1101,7 @@ public class Application {
 
 ## createHrisTaxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -1135,13 +1135,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
                     .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
                     .domain("Health")
-                    .id("49fc7e99-80ca-43f3-84cc-b92424413122")
+                    .id("918c4117-c82e-4e33-a837-37fa2756c1bf")
                     .isActive(false)
                     .metadata(List.of())
                     .name("International Functionality Architect")
                     .subcategory("Marble")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-05-29T07:25:29.505Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-29T12:47:30.146Z"))
                     .url("https://fixed-membership.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1176,7 +1176,7 @@ public class Application {
 
 ## createHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -1205,21 +1205,21 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.900Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.895Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.839Z"))
-                    .id("59d751f0-771f-49d0-a64f-a59736d69c12")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.847Z"))
+                    .id("b311c144-2124-47d0-9132-e6af0ef9596d")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.830Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.150Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.794Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.471Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1253,7 +1253,7 @@ public class Application {
 
 ## createHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -1282,7 +1282,7 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.767Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.078Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -1292,13 +1292,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.542Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.751Z"))
                     .hours(6d)
-                    .id("34134a78-7c79-4e4b-9d1c-fe506c0e05de")
+                    .id("ac859842-d215-43ea-8daf-db530f7d98f4")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.876Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.177Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.227Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.357Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1332,7 +1332,7 @@ public class Application {
 
 ## getHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1390,7 +1390,7 @@ public class Application {
 
 ## getHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1448,7 +1448,7 @@ public class Application {
 
 ## getHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1506,7 +1506,7 @@ public class Application {
 
 ## getHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1564,7 +1564,7 @@ public class Application {
 
 ## getHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1622,7 +1622,7 @@ public class Application {
 
 ## getHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1680,7 +1680,7 @@ public class Application {
 
 ## getHrisDocument
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1738,7 +1738,7 @@ public class Application {
 
 ## getHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1796,7 +1796,7 @@ public class Application {
 
 ## getHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1854,7 +1854,7 @@ public class Application {
 
 ## getHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1912,7 +1912,7 @@ public class Application {
 
 ## getHrisJob
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1970,7 +1970,7 @@ public class Application {
 
 ## getHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2028,7 +2028,7 @@ public class Application {
 
 ## getHrisPaycode
 
-Retrieve a paycode
+Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2086,7 +2086,7 @@ public class Application {
 
 ## getHrisPayroll
 
-Retrieve a payroll
+Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2144,7 +2144,7 @@ public class Application {
 
 ## getHrisPayslip
 
-Retrieve a payslip
+Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2202,7 +2202,7 @@ public class Application {
 
 ## getHrisTaxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2260,7 +2260,7 @@ public class Application {
 
 ## getHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2318,7 +2318,7 @@ public class Application {
 
 ## getHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2376,7 +2376,7 @@ public class Application {
 
 ## listHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2433,7 +2433,7 @@ public class Application {
 
 ## listHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2490,7 +2490,7 @@ public class Application {
 
 ## listHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2547,7 +2547,7 @@ public class Application {
 
 ## listHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2604,7 +2604,7 @@ public class Application {
 
 ## listHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2661,7 +2661,7 @@ public class Application {
 
 ## listHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2718,7 +2718,7 @@ public class Application {
 
 ## listHrisDocuments
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2775,7 +2775,7 @@ public class Application {
 
 ## listHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2832,7 +2832,7 @@ public class Application {
 
 ## listHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2889,7 +2889,7 @@ public class Application {
 
 ## listHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2946,7 +2946,7 @@ public class Application {
 
 ## listHrisJobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3003,7 +3003,7 @@ public class Application {
 
 ## listHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3060,7 +3060,7 @@ public class Application {
 
 ## listHrisPaycodes
 
-List all paycodes
+Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3117,7 +3117,7 @@ public class Application {
 
 ## listHrisPayrolls
 
-List all payrolls
+Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3174,7 +3174,7 @@ public class Application {
 
 ## listHrisPayslips
 
-List all payslips
+Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3231,7 +3231,7 @@ public class Application {
 
 ## listHrisTaxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3288,7 +3288,7 @@ public class Application {
 
 ## listHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3345,7 +3345,7 @@ public class Application {
 
 ## listHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3402,7 +3402,7 @@ public class Application {
 
 ## patchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -3431,8 +3431,8 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.595Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.700Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.745Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.586Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -3441,28 +3441,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.913Z"))
-                            .id("34421756-d8c5-4446-8599-a0005e420bfa")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.629Z"))
+                            .id("80940e5f-ae45-428c-b108-4070fc7fe36b")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.937Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.185Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("c0ed466a-c972-494d-be6b-a14833abc0e1")
+                    .id("a0af925b-5c23-4fdc-8829-cbb3ae5712b8")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.117Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.925Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3497,7 +3497,7 @@ public class Application {
 
 ## patchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -3532,7 +3532,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("4ef37b4e-17e0-4041-a5d9-01fc2a5de54f")
+                    .id("ca832996-acc5-4c24-a444-138bc2bf1954")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -3540,7 +3540,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.333Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.052Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3575,7 +3575,7 @@ public class Application {
 
 ## patchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -3611,13 +3611,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("5b7abc08-8c64-4b58-9cdb-809a5bbf8823")
+                    .id("7bad80a5-2a97-4c1c-8c30-7d26eabda80b")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.927Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.558Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3652,7 +3652,7 @@ public class Application {
 
 ## patchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3689,11 +3689,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("6116b232-555b-4341-8e04-bca8ba641fe0")
+                    .id("29b7c8c3-9bd6-4de2-ac7d-0140841be8ed")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.297Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.588Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3728,7 +3728,7 @@ public class Application {
 
 ## patchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -3763,14 +3763,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("b907c754-283d-4c80-af30-a6edf6712491")
+                    .id("714024b7-2e30-4b2f-a28e-a32819762c3e")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.357Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.493Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.354Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.492Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3805,7 +3805,7 @@ public class Application {
 
 ## patchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -3842,7 +3842,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("daf3d5af-82dc-4e79-8fca-d45df35f91e5")
+                    .id("7dca24d3-9d68-4849-8fa1-93beac3ae351")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -3850,7 +3850,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.626Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.186Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -3886,7 +3886,7 @@ public class Application {
 
 ## patchHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3917,10 +3917,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("4e54cb30-a044-4072-8486-717797c7c9c6")
+                    .id("53320e0f-17e4-4beb-880a-bf49bc04b35c")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.185Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.075Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3955,7 +3955,7 @@ public class Application {
 
 ## patchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -3987,12 +3987,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("a5d34156-d19f-48f1-bb2c-7bccd7acd799")
+                    .id("0eddb385-71c2-4a79-83b6-55d61fd5cd54")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.917Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.250Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.837Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4027,7 +4027,7 @@ public class Application {
 
 ## patchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -4090,7 +4090,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("3b9d737a-ab65-431c-aca0-5f13d99440e0")
+                    .id("f77ffe03-2906-4785-9f0f-a610ceb34dfe")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -4101,7 +4101,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("680e9785-887e-4d32-ba94-c952934f67ad")
+                            .id("7076aba6-22e1-4b59-a5f7-1b1364fdc997")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -4144,7 +4144,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.091Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4179,7 +4179,7 @@ public class Application {
 
 ## patchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -4209,12 +4209,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("5e3ea6a8-0ae3-491b-9f33-f43f43bc971a")
+                    .id("962ea63f-f392-4847-bb59-a6be7f287e09")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.839Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.850Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4249,7 +4249,7 @@ public class Application {
 
 ## patchHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -4281,11 +4281,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("e5871a20-4409-41b8-9755-0e2f14b010bd")
+                    .id("a39ef193-4268-415d-b260-a142179d82a5")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.332Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4320,7 +4320,7 @@ public class Application {
 
 ## patchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -4360,7 +4360,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("d5b58849-cba9-48ad-bcd3-463c93359e4e")
+                    .id("21266f65-f4b1-4fb4-a48c-4d4ea0d1d0c4")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -4380,7 +4380,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.158Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.685Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4415,7 +4415,7 @@ public class Application {
 
 ## patchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -4444,21 +4444,21 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.901Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.896Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.848Z"))
-                    .id("96c16447-fd7f-4cf8-80d7-6805a29c8784")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.857Z"))
+                    .id("b38bfd41-8faa-45ef-a882-a4a62529f5a9")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.835Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.156Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.796Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.473Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4493,7 +4493,7 @@ public class Application {
 
 ## patchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -4522,7 +4522,7 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.774Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.084Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -4532,13 +4532,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.559Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.765Z"))
                     .hours(6d)
-                    .id("62a9b430-d558-4ae0-9efa-2588d50bbf33")
+                    .id("4b9f4448-b2d6-4ff7-8965-43d26989725a")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.885Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.181Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4573,7 +4573,7 @@ public class Application {
 
 ## removeHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -4629,7 +4629,7 @@ public class Application {
 
 ## removeHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -4685,7 +4685,7 @@ public class Application {
 
 ## removeHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -4741,7 +4741,7 @@ public class Application {
 
 ## removeHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -4797,7 +4797,7 @@ public class Application {
 
 ## removeHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -4853,7 +4853,7 @@ public class Application {
 
 ## removeHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -4909,7 +4909,7 @@ public class Application {
 
 ## removeHrisDocument
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -4965,7 +4965,7 @@ public class Application {
 
 ## removeHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -5021,7 +5021,7 @@ public class Application {
 
 ## removeHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -5077,7 +5077,7 @@ public class Application {
 
 ## removeHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -5133,7 +5133,7 @@ public class Application {
 
 ## removeHrisJob
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -5189,7 +5189,7 @@ public class Application {
 
 ## removeHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -5245,7 +5245,7 @@ public class Application {
 
 ## removeHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -5301,7 +5301,7 @@ public class Application {
 
 ## removeHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -5357,7 +5357,7 @@ public class Application {
 
 ## updateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -5386,8 +5386,8 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.595Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.700Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.745Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.586Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -5396,28 +5396,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.913Z"))
-                            .id("34421756-d8c5-4446-8599-a0005e420bfa")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.629Z"))
+                            .id("80940e5f-ae45-428c-b108-4070fc7fe36b")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.937Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.185Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("c0ed466a-c972-494d-be6b-a14833abc0e1")
+                    .id("a0af925b-5c23-4fdc-8829-cbb3ae5712b8")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.117Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.925Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5452,7 +5452,7 @@ public class Application {
 
 ## updateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5487,7 +5487,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("4ef37b4e-17e0-4041-a5d9-01fc2a5de54f")
+                    .id("ca832996-acc5-4c24-a444-138bc2bf1954")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -5495,7 +5495,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.333Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.052Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5530,7 +5530,7 @@ public class Application {
 
 ## updateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -5566,13 +5566,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("5b7abc08-8c64-4b58-9cdb-809a5bbf8823")
+                    .id("7bad80a5-2a97-4c1c-8c30-7d26eabda80b")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.927Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.558Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5607,7 +5607,7 @@ public class Application {
 
 ## updateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -5644,11 +5644,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("6116b232-555b-4341-8e04-bca8ba641fe0")
+                    .id("29b7c8c3-9bd6-4de2-ac7d-0140841be8ed")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.297Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.588Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5683,7 +5683,7 @@ public class Application {
 
 ## updateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -5718,14 +5718,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("b907c754-283d-4c80-af30-a6edf6712491")
+                    .id("714024b7-2e30-4b2f-a28e-a32819762c3e")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.357Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.493Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.354Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.492Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5760,7 +5760,7 @@ public class Application {
 
 ## updateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -5797,7 +5797,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("daf3d5af-82dc-4e79-8fca-d45df35f91e5")
+                    .id("7dca24d3-9d68-4849-8fa1-93beac3ae351")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -5805,7 +5805,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.626Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.186Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -5841,7 +5841,7 @@ public class Application {
 
 ## updateHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -5872,10 +5872,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("4e54cb30-a044-4072-8486-717797c7c9c6")
+                    .id("53320e0f-17e4-4beb-880a-bf49bc04b35c")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-11T14:07:35.185Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-12T08:38:43.075Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5910,7 +5910,7 @@ public class Application {
 
 ## updateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -5942,12 +5942,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("a5d34156-d19f-48f1-bb2c-7bccd7acd799")
+                    .id("0eddb385-71c2-4a79-83b6-55d61fd5cd54")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.917Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.250Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.837Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5982,7 +5982,7 @@ public class Application {
 
 ## updateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -6045,7 +6045,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("3b9d737a-ab65-431c-aca0-5f13d99440e0")
+                    .id("f77ffe03-2906-4785-9f0f-a610ceb34dfe")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -6056,7 +6056,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("680e9785-887e-4d32-ba94-c952934f67ad")
+                            .id("7076aba6-22e1-4b59-a5f7-1b1364fdc997")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -6099,7 +6099,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.091Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6134,7 +6134,7 @@ public class Application {
 
 ## updateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -6164,12 +6164,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("5e3ea6a8-0ae3-491b-9f33-f43f43bc971a")
+                    .id("962ea63f-f392-4847-bb59-a6be7f287e09")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.839Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.850Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6204,7 +6204,7 @@ public class Application {
 
 ## updateHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -6236,11 +6236,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("e5871a20-4409-41b8-9755-0e2f14b010bd")
+                    .id("a39ef193-4268-415d-b260-a142179d82a5")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.332Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6275,7 +6275,7 @@ public class Application {
 
 ## updateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -6315,7 +6315,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("d5b58849-cba9-48ad-bcd3-463c93359e4e")
+                    .id("21266f65-f4b1-4fb4-a48c-4d4ea0d1d0c4")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -6335,7 +6335,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.158Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.685Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6370,7 +6370,7 @@ public class Application {
 
 ## updateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -6399,21 +6399,21 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.901Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.896Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.848Z"))
-                    .id("96c16447-fd7f-4cf8-80d7-6805a29c8784")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.857Z"))
+                    .id("b38bfd41-8faa-45ef-a882-a4a62529f5a9")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.835Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.156Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.796Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.473Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6448,7 +6448,7 @@ public class Application {
 
 ## updateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -6477,7 +6477,7 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-18T01:51:56.774Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-18T12:15:38.084Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -6487,13 +6487,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-09-27T01:28:47.559Z"))
+                    .endAt(OffsetDateTime.parse("2026-09-28T02:11:39.765Z"))
                     .hours(6d)
-                    .id("62a9b430-d558-4ae0-9efa-2588d50bbf33")
+                    .id("4b9f4448-b2d6-4ff7-8965-43d26989725a")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-13T00:31:42.885Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-01T21:53:34.181Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-13T14:17:16.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:43:29.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

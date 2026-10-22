@@ -19,7 +19,7 @@
 
 ## createAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -53,18 +53,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.682Z"))
-                    .id("d8ed980e-cba0-4aec-bcea-801dd3e4a520")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.467Z"))
+                    .id("c737cc27-b48b-4ec8-a259-ada03eb0115f")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.920Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.379Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.040Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.104Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -98,7 +98,7 @@ public class Application {
 
 ## createMartechCampaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-19T11:18:15.589Z"))
                     .fromEmail("graham.mertz@gmail.com")
                     .fromName("Graham Mertz")
-                    .id("3128f000-904d-46c1-8e02-758a16b61bac")
+                    .id("a7ca5f0d-c71e-4652-b380-986534878208")
                     .metadata(List.of())
                     .name("Consequatur atqui sustineo.")
                     .previewText("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.")
@@ -138,7 +138,7 @@ public class Application {
                     .status(MarketingCampaignStatus.SCHEDULED)
                     .subjectLine("Trepide utpote conculco tibi solio supplanto peior tibi.")
                     .type("absplit")
-                    .updatedAt(OffsetDateTime.parse("2022-06-22T02:51:13.961Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-22T13:14:36.219Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -172,7 +172,7 @@ public class Application {
 
 ## getAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ public class Application {
 
 ## getMartechCampaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ public class Application {
 
 ## listAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -345,7 +345,7 @@ public class Application {
 
 ## listMartechCampaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -402,7 +402,7 @@ public class Application {
 
 ## patchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -436,18 +436,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.798Z"))
-                    .id("7a3c20b5-0ea2-4ce0-8d8d-df575a0c46be")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.556Z"))
+                    .id("d0cfd385-36de-43dc-8959-bab95d88971b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.927Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.384Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.178Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.211Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -482,7 +482,7 @@ public class Application {
 
 ## patchMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -513,7 +513,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-19T11:18:15.589Z"))
                     .fromEmail("graham.mertz@gmail.com")
                     .fromName("Graham Mertz")
-                    .id("a01a21f6-8480-4171-accd-2a8306a3ff09")
+                    .id("4a41e395-b315-40d7-bf5b-a04cffb9f23e")
                     .metadata(List.of())
                     .name("Consequatur atqui sustineo.")
                     .previewText("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.")
@@ -522,7 +522,7 @@ public class Application {
                     .status(MarketingCampaignStatus.SCHEDULED)
                     .subjectLine("Trepide utpote conculco tibi solio supplanto peior tibi.")
                     .type("absplit")
-                    .updatedAt(OffsetDateTime.parse("2022-06-22T02:51:13.967Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-22T13:14:36.225Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -557,7 +557,7 @@ public class Application {
 
 ## removeAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -613,7 +613,7 @@ public class Application {
 
 ## removeMartechCampaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -669,7 +669,7 @@ public class Application {
 
 ## updateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -703,18 +703,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.798Z"))
-                    .id("7a3c20b5-0ea2-4ce0-8d8d-df575a0c46be")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.556Z"))
+                    .id("d0cfd385-36de-43dc-8959-bab95d88971b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.927Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.384Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.178Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.211Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -749,7 +749,7 @@ public class Application {
 
 ## updateMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -780,7 +780,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-19T11:18:15.589Z"))
                     .fromEmail("graham.mertz@gmail.com")
                     .fromName("Graham Mertz")
-                    .id("a01a21f6-8480-4171-accd-2a8306a3ff09")
+                    .id("4a41e395-b315-40d7-bf5b-a04cffb9f23e")
                     .metadata(List.of())
                     .name("Consequatur atqui sustineo.")
                     .previewText("Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.")
@@ -789,7 +789,7 @@ public class Application {
                     .status(MarketingCampaignStatus.SCHEDULED)
                     .subjectLine("Trepide utpote conculco tibi solio supplanto peior tibi.")
                     .type("absplit")
-                    .updatedAt(OffsetDateTime.parse("2022-06-22T02:51:13.967Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-22T13:14:36.225Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

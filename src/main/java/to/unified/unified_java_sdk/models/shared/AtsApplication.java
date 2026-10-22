@@ -31,7 +31,9 @@ public class AtsApplication {
     @JsonProperty("applied_at")
     private OffsetDateTime appliedAt;
 
-
+    /**
+     * The ID of the candidate who is applying (an AtsCandidate ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private String candidateId;
@@ -55,7 +57,9 @@ public class AtsApplication {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The ID of the job being applied to (an AtsJob ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     private String jobId;
@@ -197,6 +201,9 @@ public class AtsApplication {
         return Optional.ofNullable(this.appliedAt);
     }
 
+    /**
+     * The ID of the candidate who is applying (an AtsCandidate ID)
+     */
     public Optional<String> candidateId() {
         return Optional.ofNullable(this.candidateId);
     }
@@ -219,6 +226,9 @@ public class AtsApplication {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The ID of the job being applied to (an AtsJob ID)
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
@@ -311,6 +321,9 @@ public class AtsApplication {
     }
 
 
+    /**
+     * The ID of the candidate who is applying (an AtsCandidate ID)
+     */
     public AtsApplication withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -341,6 +354,9 @@ public class AtsApplication {
     }
 
 
+    /**
+     * The ID of the job being applied to (an AtsJob ID)
+     */
     public AtsApplication withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
@@ -564,6 +580,9 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * The ID of the candidate who is applying (an AtsCandidate ID)
+         */
         public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
@@ -590,6 +609,9 @@ public class AtsApplication {
             return this;
         }
 
+        /**
+         * The ID of the job being applied to (an AtsJob ID)
+         */
         public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;

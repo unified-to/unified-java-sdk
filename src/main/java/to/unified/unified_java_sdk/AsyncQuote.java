@@ -57,6 +57,9 @@ public class AsyncQuote {
     /**
      * Create a quote
      * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
      * @return The async call builder
      */
     public CreateAccountingQuoteRequestBuilder createAccountingQuote() {
@@ -65,6 +68,9 @@ public class AsyncQuote {
 
     /**
      * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingQuoteResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncQuote {
     /**
      * Retrieve a quote
      * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingQuoteRequestBuilder getAccountingQuote() {
@@ -88,6 +97,9 @@ public class AsyncQuote {
 
     /**
      * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingQuoteResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncQuote {
     /**
      * List all quotes
      * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingQuotesRequestBuilder listAccountingQuotes() {
@@ -111,6 +130,13 @@ public class AsyncQuote {
 
     /**
      * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingQuotesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncQuote {
     /**
      * Update a quote
      * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingQuoteRequestBuilder patchAccountingQuote() {
@@ -134,6 +163,9 @@ public class AsyncQuote {
 
     /**
      * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingQuoteResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncQuote {
     /**
      * Remove a quote
      * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingQuoteRequestBuilder removeAccountingQuote() {
@@ -157,6 +191,8 @@ public class AsyncQuote {
 
     /**
      * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingQuoteResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncQuote {
     /**
      * Update a quote
      * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingQuoteRequestBuilder updateAccountingQuote() {
@@ -180,6 +219,9 @@ public class AsyncQuote {
 
     /**
      * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingQuoteResponse>} - The async response

@@ -13,7 +13,7 @@
 
 ## createTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("13441e6d-dd5a-44c5-87ec-beeafb30bd6e")
+                    .id("f6a3f02b-d9ba-4aa5-bb99-250219550e50")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -66,7 +66,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.020Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.712Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -100,7 +100,7 @@ public class Application {
 
 ## getTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ public class Application {
 
 ## listTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ public class Application {
 
 ## patchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -249,7 +249,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("997497f4-4dd4-4bb0-a110-d12f8f61409b")
+                    .id("4b0496b5-7765-425f-823a-b93fe9bd07c2")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -268,7 +268,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.036Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -303,7 +303,7 @@ public class Application {
 
 ## removeTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -359,7 +359,7 @@ public class Application {
 
 ## updateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -393,7 +393,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("997497f4-4dd4-4bb0-a110-d12f8f61409b")
+                    .id("4b0496b5-7765-425f-823a-b93fe9bd07c2")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -412,7 +412,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.036Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

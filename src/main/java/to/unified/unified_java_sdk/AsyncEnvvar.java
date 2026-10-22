@@ -57,6 +57,9 @@ public class AsyncEnvvar {
     /**
      * Create an envvar
      * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
      * @return The async call builder
      */
     public CreateComputeEnvvarRequestBuilder createComputeEnvvar() {
@@ -65,6 +68,9 @@ public class AsyncEnvvar {
 
     /**
      * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncEnvvar {
     /**
      * Retrieve an envvar
      * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeEnvvarRequestBuilder getComputeEnvvar() {
@@ -88,6 +97,9 @@ public class AsyncEnvvar {
 
     /**
      * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncEnvvar {
     /**
      * List all envvars
      * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeEnvvarsRequestBuilder listComputeEnvvars() {
@@ -111,6 +130,13 @@ public class AsyncEnvvar {
 
     /**
      * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncEnvvar {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeEnvvarRequestBuilder patchComputeEnvvar() {
@@ -134,6 +163,9 @@ public class AsyncEnvvar {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncEnvvar {
     /**
      * Remove an envvar
      * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeEnvvarRequestBuilder removeComputeEnvvar() {
@@ -157,6 +191,8 @@ public class AsyncEnvvar {
 
     /**
      * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncEnvvar {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeEnvvarRequestBuilder updateComputeEnvvar() {
@@ -180,6 +219,9 @@ public class AsyncEnvvar {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response

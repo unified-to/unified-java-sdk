@@ -37,7 +37,7 @@
 
 ## createHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -68,7 +68,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("fa2af286-94f0-4d68-98ef-143792930dd3")
+                    .id("157b7d44-27c3-4f21-8313-1266c03e2fb4")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -86,7 +86,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.589Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.130Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -120,7 +120,7 @@ public class Application {
 
 ## createHealthcareObservation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -176,15 +176,15 @@ public class Application {
                             .valueUnit("mm[Hg]")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2022-12-06T21:34:04.293Z"))
-                    .id("794dab20-5698-4ab2-88b3-d69893661fe6")
+                    .id("f8aab48f-cb91-456b-933d-1b22df98db7b")
                     .interpretation(Interpretation.CRITICAL_HIGH)
-                    .issuedAt(OffsetDateTime.parse("2025-05-11T10:30:48.202Z"))
+                    .issuedAt(OffsetDateTime.parse("2025-05-12T02:08:52.378Z"))
                     .metadata(List.of())
                     .name("Blood pressure panel")
-                    .observedAt(OffsetDateTime.parse("2025-01-20T04:01:26.330Z"))
+                    .observedAt(OffsetDateTime.parse("2025-01-20T17:41:46.226Z"))
                     .status(HealthcareObservationStatus.CORRECTED)
                     .type(HealthcareObservationType.VITAL_SIGNS)
-                    .updatedAt(OffsetDateTime.parse("2026-03-24T06:26:26.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-25T03:39:45.072Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -218,7 +218,7 @@ public class Application {
 
 ## createHealthcarePatient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -253,7 +253,7 @@ public class Application {
                         .postalCode("54031")
                         .region("Nebraska")
                         .build())
-                    .birthdate("2025-02-12")
+                    .birthdate("2025-02-13")
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -262,7 +262,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("4383aad9-fa06-4c66-bd8d-fd3c0afdc4cb")
+                    .id("c54b9fdb-e6d9-4218-a2b4-6d1d9d82fa45")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -280,7 +280,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-22T20:20:27.639Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-23T19:45:10.350Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -314,7 +314,7 @@ public class Application {
 
 ## getHealthcareAllergy
 
-Retrieve an allergy
+Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ public class Application {
 
 ## getHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -430,7 +430,7 @@ public class Application {
 
 ## getHealthcareCondition
 
-Retrieve a condition
+Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -488,7 +488,7 @@ public class Application {
 
 ## getHealthcareEncounter
 
-Retrieve an encounter
+Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -546,7 +546,7 @@ public class Application {
 
 ## getHealthcareImmunization
 
-Retrieve an immunization
+Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -604,7 +604,7 @@ public class Application {
 
 ## getHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -662,7 +662,7 @@ public class Application {
 
 ## getHealthcareMedication
 
-Retrieve a medication
+Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -720,7 +720,7 @@ public class Application {
 
 ## getHealthcareObservation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -778,7 +778,7 @@ public class Application {
 
 ## getHealthcarePatient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -836,7 +836,7 @@ public class Application {
 
 ## getHealthcarePractitioner
 
-Retrieve a practitioner
+Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -894,7 +894,7 @@ public class Application {
 
 ## getHealthcareSlot
 
-Retrieve a slot
+Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -952,7 +952,7 @@ public class Application {
 
 ## listHealthcareAllergies
 
-List all allergies
+Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1009,7 +1009,7 @@ public class Application {
 
 ## listHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1066,7 +1066,7 @@ public class Application {
 
 ## listHealthcareConditions
 
-List all conditions
+Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1123,7 +1123,7 @@ public class Application {
 
 ## listHealthcareEncounters
 
-List all encounters
+Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1180,7 +1180,7 @@ public class Application {
 
 ## listHealthcareImmunizations
 
-List all immunizations
+Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1237,7 +1237,7 @@ public class Application {
 
 ## listHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1294,7 +1294,7 @@ public class Application {
 
 ## listHealthcareMedications
 
-List all medications
+Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1351,7 +1351,7 @@ public class Application {
 
 ## listHealthcareObservations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1408,7 +1408,7 @@ public class Application {
 
 ## listHealthcarePatients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1465,7 +1465,7 @@ public class Application {
 
 ## listHealthcarePractitioners
 
-List all practitioners
+Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1522,7 +1522,7 @@ public class Application {
 
 ## listHealthcareSlots
 
-List all slots
+Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1579,7 +1579,7 @@ public class Application {
 
 ## patchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1610,7 +1610,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("0b3b2cec-78f9-4e8e-8b63-19c6acabe6dd")
+                    .id("51fab7a2-d00b-4151-baa0-5c14f4853e59")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -1628,7 +1628,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1663,7 +1663,7 @@ public class Application {
 
 ## patchHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1698,7 +1698,7 @@ public class Application {
                         .postalCode("54031")
                         .region("Nebraska")
                         .build())
-                    .birthdate("2025-02-12")
+                    .birthdate("2025-02-13")
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -1707,7 +1707,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("11aa78ec-bb89-455d-a5f3-2c7575a99444")
+                    .id("ddd7aaec-48ee-4936-a819-95c823074d5b")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -1725,7 +1725,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-22T20:20:27.658Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-23T19:45:10.373Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1760,7 +1760,7 @@ public class Application {
 
 ## removeHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -1816,7 +1816,7 @@ public class Application {
 
 ## updateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1847,7 +1847,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("0b3b2cec-78f9-4e8e-8b63-19c6acabe6dd")
+                    .id("51fab7a2-d00b-4151-baa0-5c14f4853e59")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -1865,7 +1865,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1900,7 +1900,7 @@ public class Application {
 
 ## updateHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1935,7 +1935,7 @@ public class Application {
                         .postalCode("54031")
                         .region("Nebraska")
                         .build())
-                    .birthdate("2025-02-12")
+                    .birthdate("2025-02-13")
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -1944,7 +1944,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("11aa78ec-bb89-455d-a5f3-2c7575a99444")
+                    .id("ddd7aaec-48ee-4936-a819-95c823074d5b")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -1962,7 +1962,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-22T20:20:27.658Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-23T19:45:10.373Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

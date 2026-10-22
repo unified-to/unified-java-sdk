@@ -227,6 +227,9 @@ public class Commerce {
     /**
      * Create a collection
      * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
      * @return The call builder
      */
     public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
@@ -235,6 +238,9 @@ public class Commerce {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -249,6 +255,9 @@ public class Commerce {
     /**
      * Create an inventory
      * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
      * @return The call builder
      */
     public CreateCommerceInventoryRequestBuilder createCommerceInventory() {
@@ -257,6 +266,9 @@ public class Commerce {
 
     /**
      * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -271,6 +283,9 @@ public class Commerce {
     /**
      * Create an item
      * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
      * @return The call builder
      */
     public CreateCommerceItemRequestBuilder createCommerceItem() {
@@ -279,6 +294,9 @@ public class Commerce {
 
     /**
      * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -293,6 +311,9 @@ public class Commerce {
     /**
      * Create an itemvariant
      * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
      * @return The call builder
      */
     public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
@@ -301,6 +322,9 @@ public class Commerce {
 
     /**
      * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -315,6 +339,9 @@ public class Commerce {
     /**
      * Create a location
      * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
      * @return The call builder
      */
     public CreateCommerceLocationRequestBuilder createCommerceLocation() {
@@ -323,6 +350,9 @@ public class Commerce {
 
     /**
      * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -337,6 +367,9 @@ public class Commerce {
     /**
      * Create a reservation
      * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
+     * 
      * @return The call builder
      */
     public CreateCommerceReservationRequestBuilder createCommerceReservation() {
@@ -345,6 +378,9 @@ public class Commerce {
 
     /**
      * Create a reservation
+     * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -359,6 +395,9 @@ public class Commerce {
     /**
      * Create a review
      * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
      * @return The call builder
      */
     public CreateCommerceReviewRequestBuilder createCommerceReview() {
@@ -367,6 +406,9 @@ public class Commerce {
 
     /**
      * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -381,6 +423,9 @@ public class Commerce {
     /**
      * Create a saleschannel
      * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
      * @return The call builder
      */
     public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
@@ -389,6 +434,9 @@ public class Commerce {
 
     /**
      * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -403,6 +451,9 @@ public class Commerce {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceCollectionRequestBuilder getCommerceCollection() {
@@ -411,6 +462,9 @@ public class Commerce {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -425,6 +479,9 @@ public class Commerce {
     /**
      * Retrieve an inventory
      * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceInventoryRequestBuilder getCommerceInventory() {
@@ -433,6 +490,9 @@ public class Commerce {
 
     /**
      * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -447,6 +507,9 @@ public class Commerce {
     /**
      * Retrieve an item
      * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceItemRequestBuilder getCommerceItem() {
@@ -455,6 +518,9 @@ public class Commerce {
 
     /**
      * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -469,6 +535,9 @@ public class Commerce {
     /**
      * Retrieve an itemvariant
      * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
@@ -477,6 +546,9 @@ public class Commerce {
 
     /**
      * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -491,6 +563,9 @@ public class Commerce {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceLocationRequestBuilder getCommerceLocation() {
@@ -499,6 +574,9 @@ public class Commerce {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -513,6 +591,9 @@ public class Commerce {
     /**
      * Retrieve a reservation
      * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceReservationRequestBuilder getCommerceReservation() {
@@ -521,6 +602,9 @@ public class Commerce {
 
     /**
      * Retrieve a reservation
+     * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -535,6 +619,9 @@ public class Commerce {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceReviewRequestBuilder getCommerceReview() {
@@ -543,6 +630,9 @@ public class Commerce {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -557,6 +647,9 @@ public class Commerce {
     /**
      * Retrieve a saleschannel
      * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
@@ -565,6 +658,9 @@ public class Commerce {
 
     /**
      * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -579,6 +675,13 @@ public class Commerce {
     /**
      * List all availabilities
      * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceAvailabilitiesRequestBuilder listCommerceAvailabilities() {
@@ -587,6 +690,13 @@ public class Commerce {
 
     /**
      * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -601,6 +711,13 @@ public class Commerce {
     /**
      * List all collections
      * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
@@ -609,6 +726,13 @@ public class Commerce {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -623,6 +747,13 @@ public class Commerce {
     /**
      * List all inventories
      * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceInventoriesRequestBuilder listCommerceInventories() {
@@ -631,6 +762,13 @@ public class Commerce {
 
     /**
      * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -645,6 +783,13 @@ public class Commerce {
     /**
      * List all items
      * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceItemsRequestBuilder listCommerceItems() {
@@ -653,6 +798,13 @@ public class Commerce {
 
     /**
      * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -667,6 +819,13 @@ public class Commerce {
     /**
      * List all itemvariants
      * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
@@ -675,6 +834,13 @@ public class Commerce {
 
     /**
      * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -689,6 +855,13 @@ public class Commerce {
     /**
      * List all locations
      * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceLocationsRequestBuilder listCommerceLocations() {
@@ -697,6 +870,13 @@ public class Commerce {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -711,6 +891,13 @@ public class Commerce {
     /**
      * List all reservations
      * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceReservationsRequestBuilder listCommerceReservations() {
@@ -719,6 +906,13 @@ public class Commerce {
 
     /**
      * List all reservations
+     * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -733,6 +927,13 @@ public class Commerce {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceReviewsRequestBuilder listCommerceReviews() {
@@ -741,6 +942,13 @@ public class Commerce {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -755,6 +963,13 @@ public class Commerce {
     /**
      * List all saleschannels
      * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
@@ -763,6 +978,13 @@ public class Commerce {
 
     /**
      * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -777,6 +999,9 @@ public class Commerce {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
@@ -785,6 +1010,9 @@ public class Commerce {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -799,6 +1027,9 @@ public class Commerce {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceInventoryRequestBuilder patchCommerceInventory() {
@@ -807,6 +1038,9 @@ public class Commerce {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -821,6 +1055,9 @@ public class Commerce {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceItemRequestBuilder patchCommerceItem() {
@@ -829,6 +1066,9 @@ public class Commerce {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -843,6 +1083,9 @@ public class Commerce {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
@@ -851,6 +1094,9 @@ public class Commerce {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -865,6 +1111,9 @@ public class Commerce {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceLocationRequestBuilder patchCommerceLocation() {
@@ -873,6 +1122,9 @@ public class Commerce {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -887,6 +1139,9 @@ public class Commerce {
     /**
      * Update a reservation
      * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceReservationRequestBuilder patchCommerceReservation() {
@@ -895,6 +1150,9 @@ public class Commerce {
 
     /**
      * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -909,6 +1167,9 @@ public class Commerce {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceReviewRequestBuilder patchCommerceReview() {
@@ -917,6 +1178,9 @@ public class Commerce {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -931,6 +1195,9 @@ public class Commerce {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
@@ -939,6 +1206,9 @@ public class Commerce {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -953,6 +1223,8 @@ public class Commerce {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
@@ -961,6 +1233,8 @@ public class Commerce {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -975,6 +1249,8 @@ public class Commerce {
     /**
      * Remove an inventory
      * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceInventoryRequestBuilder removeCommerceInventory() {
@@ -983,6 +1259,8 @@ public class Commerce {
 
     /**
      * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -997,6 +1275,8 @@ public class Commerce {
     /**
      * Remove an item
      * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceItemRequestBuilder removeCommerceItem() {
@@ -1005,6 +1285,8 @@ public class Commerce {
 
     /**
      * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1019,6 +1301,8 @@ public class Commerce {
     /**
      * Remove an itemvariant
      * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
@@ -1027,6 +1311,8 @@ public class Commerce {
 
     /**
      * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1041,6 +1327,8 @@ public class Commerce {
     /**
      * Remove a location
      * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceLocationRequestBuilder removeCommerceLocation() {
@@ -1049,6 +1337,8 @@ public class Commerce {
 
     /**
      * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1063,6 +1353,8 @@ public class Commerce {
     /**
      * Remove a reservation
      * 
+     * <p>Deletes the CommerceReservation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceReservationRequestBuilder removeCommerceReservation() {
@@ -1071,6 +1363,8 @@ public class Commerce {
 
     /**
      * Remove a reservation
+     * 
+     * <p>Deletes the CommerceReservation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1085,6 +1379,8 @@ public class Commerce {
     /**
      * Remove a review
      * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceReviewRequestBuilder removeCommerceReview() {
@@ -1093,6 +1389,8 @@ public class Commerce {
 
     /**
      * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1107,6 +1405,8 @@ public class Commerce {
     /**
      * Remove a saleschannel
      * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
@@ -1115,6 +1415,8 @@ public class Commerce {
 
     /**
      * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1129,6 +1431,9 @@ public class Commerce {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
@@ -1137,6 +1442,9 @@ public class Commerce {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1151,6 +1459,9 @@ public class Commerce {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceInventoryRequestBuilder updateCommerceInventory() {
@@ -1159,6 +1470,9 @@ public class Commerce {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1173,6 +1487,9 @@ public class Commerce {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceItemRequestBuilder updateCommerceItem() {
@@ -1181,6 +1498,9 @@ public class Commerce {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1195,6 +1515,9 @@ public class Commerce {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
@@ -1203,6 +1526,9 @@ public class Commerce {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1217,6 +1543,9 @@ public class Commerce {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceLocationRequestBuilder updateCommerceLocation() {
@@ -1225,6 +1554,9 @@ public class Commerce {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1239,6 +1571,9 @@ public class Commerce {
     /**
      * Update a reservation
      * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceReservationRequestBuilder updateCommerceReservation() {
@@ -1247,6 +1582,9 @@ public class Commerce {
 
     /**
      * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1261,6 +1599,9 @@ public class Commerce {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceReviewRequestBuilder updateCommerceReview() {
@@ -1269,6 +1610,9 @@ public class Commerce {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1283,6 +1627,9 @@ public class Commerce {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
@@ -1291,6 +1638,9 @@ public class Commerce {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

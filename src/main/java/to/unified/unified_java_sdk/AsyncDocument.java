@@ -105,6 +105,9 @@ public class AsyncDocument {
     /**
      * Create a document
      * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
      * @return The async call builder
      */
     public CreateAtsDocumentRequestBuilder createAtsDocument() {
@@ -113,6 +116,9 @@ public class AsyncDocument {
 
     /**
      * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
@@ -128,6 +134,9 @@ public class AsyncDocument {
     /**
      * Create a document
      * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
      * @return The async call builder
      */
     public CreateHrisDocumentRequestBuilder createHrisDocument() {
@@ -136,6 +145,9 @@ public class AsyncDocument {
 
     /**
      * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDocumentResponse>} - The async response
@@ -151,6 +163,9 @@ public class AsyncDocument {
     /**
      * Create a document
      * 
+     * <p>Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are
+     * mapped to the provider's API. Returns the created SigningDocument.
+     * 
      * @return The async call builder
      */
     public CreateSigningDocumentRequestBuilder createSigningDocument() {
@@ -159,6 +174,9 @@ public class AsyncDocument {
 
     /**
      * Create a document
+     * 
+     * <p>Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are
+     * mapped to the provider's API. Returns the created SigningDocument.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateSigningDocumentResponse>} - The async response
@@ -174,6 +192,9 @@ public class AsyncDocument {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsDocumentRequestBuilder getAtsDocument() {
@@ -182,6 +203,9 @@ public class AsyncDocument {
 
     /**
      * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
@@ -197,6 +221,9 @@ public class AsyncDocument {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisDocumentRequestBuilder getHrisDocument() {
@@ -205,6 +232,9 @@ public class AsyncDocument {
 
     /**
      * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDocumentResponse>} - The async response
@@ -220,6 +250,9 @@ public class AsyncDocument {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSigningDocumentRequestBuilder getSigningDocument() {
@@ -228,6 +261,9 @@ public class AsyncDocument {
 
     /**
      * Retrieve a document
+     * 
+     * <p>Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSigningDocumentResponse>} - The async response
@@ -243,6 +279,13 @@ public class AsyncDocument {
     /**
      * List all documents
      * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsDocumentsRequestBuilder listAtsDocuments() {
@@ -251,6 +294,13 @@ public class AsyncDocument {
 
     /**
      * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
@@ -266,6 +316,13 @@ public class AsyncDocument {
     /**
      * List all documents
      * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisDocumentsRequestBuilder listHrisDocuments() {
@@ -274,6 +331,13 @@ public class AsyncDocument {
 
     /**
      * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDocumentsResponse>} - The async response
@@ -289,6 +353,13 @@ public class AsyncDocument {
     /**
      * List all documents
      * 
+     * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSigningDocumentsRequestBuilder listSigningDocuments() {
@@ -297,6 +368,13 @@ public class AsyncDocument {
 
     /**
      * List all documents
+     * 
+     * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSigningDocumentsResponse>} - The async response
@@ -312,6 +390,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsDocumentRequestBuilder patchAtsDocument() {
@@ -320,6 +401,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
@@ -335,6 +419,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisDocumentRequestBuilder patchHrisDocument() {
@@ -343,6 +430,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDocumentResponse>} - The async response
@@ -358,6 +448,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchSigningDocumentRequestBuilder patchSigningDocument() {
@@ -366,6 +459,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchSigningDocumentResponse>} - The async response
@@ -381,6 +477,8 @@ public class AsyncDocument {
     /**
      * Remove a document
      * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsDocumentRequestBuilder removeAtsDocument() {
@@ -389,6 +487,8 @@ public class AsyncDocument {
 
     /**
      * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
@@ -404,6 +504,8 @@ public class AsyncDocument {
     /**
      * Remove a document
      * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisDocumentRequestBuilder removeHrisDocument() {
@@ -412,6 +514,8 @@ public class AsyncDocument {
 
     /**
      * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDocumentResponse>} - The async response
@@ -427,6 +531,8 @@ public class AsyncDocument {
     /**
      * Remove a document
      * 
+     * <p>Deletes the SigningDocument identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveSigningDocumentRequestBuilder removeSigningDocument() {
@@ -435,6 +541,8 @@ public class AsyncDocument {
 
     /**
      * Remove a document
+     * 
+     * <p>Deletes the SigningDocument identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveSigningDocumentResponse>} - The async response
@@ -450,6 +558,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsDocumentRequestBuilder updateAtsDocument() {
@@ -458,6 +569,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
@@ -473,6 +587,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisDocumentRequestBuilder updateHrisDocument() {
@@ -481,6 +598,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDocumentResponse>} - The async response
@@ -496,6 +616,9 @@ public class AsyncDocument {
     /**
      * Update a document
      * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateSigningDocumentRequestBuilder updateSigningDocument() {
@@ -504,6 +627,9 @@ public class AsyncDocument {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateSigningDocumentResponse>} - The async response

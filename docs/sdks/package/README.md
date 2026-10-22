@@ -50,7 +50,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("de1fd2e0-08b8-45f1-b065-a4761a2765e9")
+                    .id("4b5a7238-016a-4d9e-b8f6-8906b7c15422")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -62,7 +62,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.914Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -154,7 +154,7 @@ public class Application {
 
 ## getVerificationPackage
 
-Retrieve a package
+Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -269,7 +269,7 @@ public class Application {
 
 ## listVerificationPackages
 
-List all packages
+Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -361,7 +361,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("88fca071-5f4f-4a96-a08b-afcf8efad7dc")
+                    .id("5cae9624-cc12-4fbc-8b0d-2143e3d93baa")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -373,7 +373,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.919Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -499,7 +499,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("88fca071-5f4f-4a96-a08b-afcf8efad7dc")
+                    .id("5cae9624-cc12-4fbc-8b0d-2143e3d93baa")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -511,7 +511,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.919Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

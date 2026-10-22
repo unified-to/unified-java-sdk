@@ -55,6 +55,9 @@ public class Creditmemo {
     /**
      * Create a creditmemo
      * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
      * @return The call builder
      */
     public CreateAccountingCreditmemoRequestBuilder createAccountingCreditmemo() {
@@ -63,6 +66,9 @@ public class Creditmemo {
 
     /**
      * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Creditmemo {
     /**
      * Retrieve a creditmemo
      * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingCreditmemoRequestBuilder getAccountingCreditmemo() {
@@ -85,6 +94,9 @@ public class Creditmemo {
 
     /**
      * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Creditmemo {
     /**
      * List all creditmemoes
      * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingCreditmemoesRequestBuilder listAccountingCreditmemoes() {
@@ -107,6 +126,13 @@ public class Creditmemo {
 
     /**
      * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Creditmemo {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingCreditmemoRequestBuilder patchAccountingCreditmemo() {
@@ -129,6 +158,9 @@ public class Creditmemo {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Creditmemo {
     /**
      * Remove a creditmemo
      * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingCreditmemoRequestBuilder removeAccountingCreditmemo() {
@@ -151,6 +185,8 @@ public class Creditmemo {
 
     /**
      * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Creditmemo {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingCreditmemoRequestBuilder updateAccountingCreditmemo() {
@@ -173,6 +212,9 @@ public class Creditmemo {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

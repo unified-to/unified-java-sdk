@@ -57,6 +57,9 @@ public class AsyncProperty {
     /**
      * Create a property
      * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
      * @return The async call builder
      */
     public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
@@ -65,6 +68,9 @@ public class AsyncProperty {
 
     /**
      * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAnalyticsPropertyResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncProperty {
     /**
      * Retrieve a property
      * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
@@ -88,6 +97,9 @@ public class AsyncProperty {
 
     /**
      * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAnalyticsPropertyResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncProperty {
     /**
      * List all properties
      * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
@@ -111,6 +130,13 @@ public class AsyncProperty {
 
     /**
      * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAnalyticsPropertiesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncProperty {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
@@ -134,6 +163,9 @@ public class AsyncProperty {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAnalyticsPropertyResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncProperty {
     /**
      * Remove a property
      * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
@@ -157,6 +191,8 @@ public class AsyncProperty {
 
     /**
      * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAnalyticsPropertyResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncProperty {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
@@ -180,6 +219,9 @@ public class AsyncProperty {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAnalyticsPropertyResponse>} - The async response

@@ -57,6 +57,9 @@ public class AsyncStudent {
     /**
      * Create a student
      * 
+     * <p>Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsStudent.
+     * 
      * @return The async call builder
      */
     public CreateLmsStudentRequestBuilder createLmsStudent() {
@@ -65,6 +68,9 @@ public class AsyncStudent {
 
     /**
      * Create a student
+     * 
+     * <p>Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsStudent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncStudent {
     /**
      * Retrieve a student
      * 
+     * <p>Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLmsStudentRequestBuilder getLmsStudent() {
@@ -88,6 +97,9 @@ public class AsyncStudent {
 
     /**
      * Retrieve a student
+     * 
+     * <p>Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncStudent {
     /**
      * List all students
      * 
+     * <p>Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLmsStudentsRequestBuilder listLmsStudents() {
@@ -111,6 +130,13 @@ public class AsyncStudent {
 
     /**
      * List all students
+     * 
+     * <p>Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncStudent {
     /**
      * Update a student
      * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchLmsStudentRequestBuilder patchLmsStudent() {
@@ -134,6 +163,9 @@ public class AsyncStudent {
 
     /**
      * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncStudent {
     /**
      * Remove a student
      * 
+     * <p>Deletes the LmsStudent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLmsStudentRequestBuilder removeLmsStudent() {
@@ -157,6 +191,8 @@ public class AsyncStudent {
 
     /**
      * Remove a student
+     * 
+     * <p>Deletes the LmsStudent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncStudent {
     /**
      * Update a student
      * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateLmsStudentRequestBuilder updateLmsStudent() {
@@ -180,6 +219,9 @@ public class AsyncStudent {
 
     /**
      * Update a student
+     * 
+     * <p>Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response

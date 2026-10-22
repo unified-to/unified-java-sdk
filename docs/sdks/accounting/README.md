@@ -15,7 +15,7 @@
 * [createAccountingExpensereport](#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
-* [createAccountingOrder](#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
@@ -39,7 +39,7 @@
 * [getAccountingExpensereport](#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
-* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
@@ -68,7 +68,7 @@
 * [listAccountingExpenses](#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](#listaccountingjournals) - List all journals
-* [listAccountingOrders](#listaccountingorders) - List all orders
+* [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
@@ -93,7 +93,7 @@
 * [patchAccountingExpensereport](#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
-* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -113,7 +113,7 @@
 * [removeAccountingExpensereport](#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
-* [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [removeAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -133,7 +133,7 @@
 * [updateAccountingExpensereport](#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
-* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -145,7 +145,7 @@
 
 ## createAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -190,7 +190,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -224,7 +224,7 @@ public class Application {
 
 ## createAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -260,12 +260,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("3f5a955e-32d2-4cc7-a19e-13f466e605e5")
+                    .id("031a9c67-e116-4543-ac01-28fe73ea668b")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.239Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.189Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -299,7 +299,7 @@ public class Application {
 
 ## createAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -333,15 +333,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("e2c38db3-be60-4b3e-9a44-4eb78bb147b5")
+                    .id("f8352f66-ab52-44f7-8951-8439ccf0a999")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.737Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.138Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.328Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.612Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.423Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.360Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -375,7 +375,7 @@ public class Application {
 
 ## createAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -406,13 +406,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("8dfc806c-bfc2-4fc3-a886-2e6570206ba2")
+                            .id("55974ccd-ac14-401c-b948-487fcef3a1c4")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("21594bfb-5b0e-4b0e-8b98-18ccba55312d")
+                            .id("5f26f813-19f3-4a14-8297-1c3ee1378b60")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -424,7 +424,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("bba0dc2c-5ad1-436e-a5d6-f6a31bfa551f")
+                    .id("75b6f5cd-7c51-41d5-a6ef-4271aa6e39d8")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -440,7 +440,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.992Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.490Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")
@@ -475,7 +475,7 @@ public class Application {
 
 ## createAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -506,11 +506,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("f55e6994-dd49-418b-90b1-0b03f0afd03a")
+                    .id("0f4f6482-65df-4d47-be62-3fa0dd566ecd")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.881Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.905Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -544,7 +544,7 @@ public class Application {
 
 ## createAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -595,7 +595,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("b8ef7481-5912-429e-a58d-1d1caea83d28")
+                    .id("e5c7b8c1-5066-4f6c-b121-4759fbfcf47a")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -607,7 +607,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("ca1705d7-f372-483e-9952-6b0e382b96d7")
+                            .id("59055010-f36d-45e1-af7e-f32210706a89")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -626,7 +626,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:19.977Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.889Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -661,7 +661,7 @@ public class Application {
 
 ## createAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -696,7 +696,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("09e90a02-f567-4091-bf55-c914a0465bb3")
+                    .id("166d437e-4cd7-4c65-82fa-50fd5fdd711d")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -705,7 +705,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.244Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.031Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -739,7 +739,7 @@ public class Application {
 
 ## createAccountingExpense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -770,13 +770,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("575f62f0-3628-48c6-80a9-05c6b4ae9c2b")
+                            .id("f515ff69-9c02-45f7-89b1-74007228cb69")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("2802f6de-9129-41b9-b0c0-117cb030df73")
+                            .id("aeede0b5-2b8d-41d9-bd85-813073355552")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -784,10 +784,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("b2eb4562-d004-4206-8455-c8da29897a11")
+                    .id("a3f4e533-b569-4939-b246-3d9663d1a7b7")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("de034837-53c0-457e-bb7e-9fcff7e16504")
+                            .id("947dc21a-0b5c-4bc2-8164-bd18beaa2667")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -795,7 +795,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("446027ba-b98e-4938-99d3-bfd864783ff4")
+                            .id("e5c1f775-c40e-4892-b089-8ee1af7942c1")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -803,7 +803,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("bce31a18-98b4-4629-9344-df0adac3c24e")
+                            .id("34eca38e-bc2e-4af8-b835-9664188515c9")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -812,7 +812,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("15da7132-b910-45fb-b329-c664b0ce7f79")
+                            .id("9fa9c199-2335-48bc-be1e-2cac606537fe")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -820,7 +820,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("68b0a867-3c28-4dee-ae17-187ab80d1e5a")
+                            .id("231ae283-9730-4c42-8338-6f0070ac9011")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -835,7 +835,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.454Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.236Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -869,7 +869,7 @@ public class Application {
 
 ## createAccountingExpensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -897,16 +897,16 @@ public class Application {
 
         CreateAccountingExpensereportRequest req = CreateAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("2bdd4545-15d2-492a-ba9c-d0aad542d58e")
+                    .id("073ebf50-daf4-416e-bb1a-7f52c8aef73c")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("f1143d7b-18b1-4f16-b2cc-f5bee133aa29")
+                            .id("da3aa992-b207-4bc0-8773-66db39350a2e")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -914,7 +914,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("348619ee-842d-4940-8436-0ecf86cc470a")
+                            .id("207aa92e-5f36-4947-bbeb-0b47523b1d2d")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -923,7 +923,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("b6153d9d-54b9-44d9-b0a9-a2297e7660a7")
+                            .id("0136fa9f-dba7-43d8-a98c-5218dc133f15")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -932,7 +932,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("8ab2b72e-1abf-4d83-9e74-86b534c84a78")
+                            .id("818b5c18-3c3f-4394-8b04-deaecbc6cb25")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -943,11 +943,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -981,7 +981,7 @@ public class Application {
 
 ## createAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -1012,13 +1012,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("623d2b76-b9e6-4b7a-b361-f30ae3e365c1")
+                            .id("091a6129-6e50-4926-a8ce-4397da5d0b14")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("22b80d16-4f9a-47d3-85cc-62ff670d7597")
+                            .id("3059c8c3-711d-4da6-8380-13ac54e89ff1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -1029,7 +1029,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("6dd4cd9f-79cc-4737-b421-c64cc47cac05")
+                    .id("9962c2b4-a9ec-45dd-8027-f824fcf8abe8")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -1047,7 +1047,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.370Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.329Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")
@@ -1082,7 +1082,7 @@ public class Application {
 
 ## createAccountingJournal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -1115,16 +1115,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("279a8324-f2d2-48ba-9c34-ed5b2b52cae2")
+                    .id("dad1275b-1711-48d0-97b2-403b99d0fab0")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.976Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.455Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.939Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1156,9 +1156,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createAccountingOrder
+## ~~createAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -1196,7 +1198,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("15aca128-a668-41dd-801a-da5fb830d585")
+                    .id("737f31c8-0aaa-451f-a595-ef740b6d1938")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -1211,7 +1213,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.445Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1245,7 +1247,7 @@ public class Application {
 
 ## createAccountingPaymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -1282,12 +1284,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("5bde25a1-ffb3-472f-8ab8-73318ef16c51")
+                    .id("1402e492-3f4d-4aed-acc9-575eb4555969")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.534Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.608Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1321,7 +1323,7 @@ public class Application {
 
 ## createAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -1381,7 +1383,7 @@ public class Application {
 
 ## createAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -1422,7 +1424,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("b0e4088e-4da2-43fc-a71e-0d10378758ba")
+                    .id("6c281087-fb53-4446-a303-7198d131dfd2")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -1436,7 +1438,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.551Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.934Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1470,7 +1472,7 @@ public class Application {
 
 ## createAccountingQuote
 
-Create a quote
+Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 
 ### Example Usage
 
@@ -1530,7 +1532,7 @@ public class Application {
 
 ## createAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -1568,13 +1570,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.144Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.191Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("9cd920c1-6830-4199-b5e5-8584b193fc2c")
+                    .id("a7e62007-a4c6-4328-9f88-a8db8753098a")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -1596,7 +1598,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.191Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1630,7 +1632,7 @@ public class Application {
 
 ## createAccountingTaxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -1668,7 +1670,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("7c47545f-5d9b-46c5-8545-85e2881f9fa1")
+                    .id("aff121fa-9169-4220-83a0-077c82eb636d")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -1677,7 +1679,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1711,7 +1713,7 @@ public class Application {
 
 ## createAccountingTransaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -1740,12 +1742,12 @@ public class Application {
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("f149483b-5630-47af-afc4-8fed91959132")
+                    .id("7d84db37-d5b9-4098-adac-7dd406208d43")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("93250607-4dd3-485d-8df1-f2258f854b65")
+                            .id("e572460b-57c9-45bd-bfcc-4c6e92e11c57")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -1756,7 +1758,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1790,7 +1792,7 @@ public class Application {
 
 ## createAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -1822,14 +1824,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("10adb814-c55c-44b0-96fe-b775e3505ed7")
+                    .id("1af7da47-7158-4a03-abbc-199abddb9345")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.404Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.877Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1863,7 +1865,7 @@ public class Application {
 
 ## getAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1921,7 +1923,7 @@ public class Application {
 
 ## getAccountingAgedpayable
 
-Retrieve an agedpayable
+Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1979,7 +1981,7 @@ public class Application {
 
 ## getAccountingAgedreceivable
 
-Retrieve an agedreceivable
+Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2037,7 +2039,7 @@ public class Application {
 
 ## getAccountingBalancesheet
 
-Retrieve a balancesheet
+Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2095,7 +2097,7 @@ public class Application {
 
 ## getAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2153,7 +2155,7 @@ public class Application {
 
 ## getAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2211,7 +2213,7 @@ public class Application {
 
 ## getAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2269,7 +2271,7 @@ public class Application {
 
 ## getAccountingCashflow
 
-Retrieve a cashflow
+Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2327,7 +2329,7 @@ public class Application {
 
 ## getAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2385,7 +2387,7 @@ public class Application {
 
 ## getAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2443,7 +2445,7 @@ public class Application {
 
 ## getAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2501,7 +2503,7 @@ public class Application {
 
 ## getAccountingExpense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2559,7 +2561,7 @@ public class Application {
 
 ## getAccountingExpensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2617,7 +2619,7 @@ public class Application {
 
 ## getAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2675,7 +2677,7 @@ public class Application {
 
 ## getAccountingJournal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2731,9 +2733,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingOrder
+## ~~getAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -2791,7 +2795,7 @@ public class Application {
 
 ## getAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2849,7 +2853,7 @@ public class Application {
 
 ## getAccountingPaymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2907,7 +2911,7 @@ public class Application {
 
 ## getAccountingProfitloss
 
-Retrieve a profitloss
+Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2965,7 +2969,7 @@ public class Application {
 
 ## getAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3023,7 +3027,7 @@ public class Application {
 
 ## getAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3081,7 +3085,7 @@ public class Application {
 
 ## getAccountingPurchasereceipt
 
-Retrieve a purchasereceipt
+Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3139,7 +3143,7 @@ public class Application {
 
 ## getAccountingQuote
 
-Retrieve a quote
+Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3197,7 +3201,7 @@ public class Application {
 
 ## getAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3255,7 +3259,7 @@ public class Application {
 
 ## getAccountingSalesreceipt
 
-Retrieve a salesreceipt
+Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3313,7 +3317,7 @@ public class Application {
 
 ## getAccountingTaxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3371,7 +3375,7 @@ public class Application {
 
 ## getAccountingTransaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3429,7 +3433,7 @@ public class Application {
 
 ## getAccountingTrialbalance
 
-Retrieve a trialbalance
+Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3487,7 +3491,7 @@ public class Application {
 
 ## getAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3545,7 +3549,7 @@ public class Application {
 
 ## listAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3602,7 +3606,7 @@ public class Application {
 
 ## listAccountingAgedpayables
 
-List all agedpayables
+Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3659,7 +3663,7 @@ public class Application {
 
 ## listAccountingAgedreceivables
 
-List all agedreceivables
+Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3716,7 +3720,7 @@ public class Application {
 
 ## listAccountingBalancesheets
 
-List all balancesheets
+Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3773,7 +3777,7 @@ public class Application {
 
 ## listAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3830,7 +3834,7 @@ public class Application {
 
 ## listAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3887,7 +3891,7 @@ public class Application {
 
 ## listAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3944,7 +3948,7 @@ public class Application {
 
 ## listAccountingCashflows
 
-List all cashflows
+Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4001,7 +4005,7 @@ public class Application {
 
 ## listAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4058,7 +4062,7 @@ public class Application {
 
 ## listAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4115,7 +4119,7 @@ public class Application {
 
 ## listAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4172,7 +4176,7 @@ public class Application {
 
 ## listAccountingExpensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4229,7 +4233,7 @@ public class Application {
 
 ## listAccountingExpenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4286,7 +4290,7 @@ public class Application {
 
 ## listAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4343,7 +4347,7 @@ public class Application {
 
 ## listAccountingJournals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4398,9 +4402,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingOrders
+## ~~listAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -4457,7 +4463,7 @@ public class Application {
 
 ## listAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4514,7 +4520,7 @@ public class Application {
 
 ## listAccountingPaymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4571,7 +4577,7 @@ public class Application {
 
 ## listAccountingProfitlosses
 
-List all profitlosses
+Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4628,7 +4634,7 @@ public class Application {
 
 ## listAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4685,7 +4691,7 @@ public class Application {
 
 ## listAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4742,7 +4748,7 @@ public class Application {
 
 ## listAccountingPurchasereceipts
 
-List all purchasereceipts
+Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4799,7 +4805,7 @@ public class Application {
 
 ## listAccountingQuotes
 
-List all quotes
+Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4856,7 +4862,7 @@ public class Application {
 
 ## listAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4913,7 +4919,7 @@ public class Application {
 
 ## listAccountingSalesreceipts
 
-List all salesreceipts
+Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4970,7 +4976,7 @@ public class Application {
 
 ## listAccountingTaxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -5027,7 +5033,7 @@ public class Application {
 
 ## listAccountingTransactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -5084,7 +5090,7 @@ public class Application {
 
 ## listAccountingTrialbalances
 
-List all trialbalances
+Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -5141,7 +5147,7 @@ public class Application {
 
 ## listAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -5198,7 +5204,7 @@ public class Application {
 
 ## patchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5231,7 +5237,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("dc5f837a-a1ac-4356-a56e-a1b513c09c12")
+                    .id("02f84203-c567-4992-ad19-ab7dd8adc4b9")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -5243,7 +5249,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.197Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5278,7 +5284,7 @@ public class Application {
 
 ## patchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -5314,12 +5320,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("fbb3de69-fa19-4312-a3a0-25aa2a0951a4")
+                    .id("481943e1-31c5-4e42-821b-6f9c7d4ac246")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.195Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5354,7 +5360,7 @@ public class Application {
 
 ## patchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -5388,15 +5394,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("c8a03fdd-e180-473e-b06d-dcc006c8952d")
+                    .id("55c21f72-7386-4b73-ae17-a72d26e3a1be")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.746Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.157Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.329Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.615Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.424Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5431,7 +5437,7 @@ public class Application {
 
 ## patchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -5462,13 +5468,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("08b49dc4-8cdc-478a-aeae-f33829f57e16")
+                            .id("d77fdfb3-fd28-49b0-ab7e-a688cb81da0f")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("4a7247cd-eb8a-439e-a8f3-2509e1b65511")
+                            .id("af6e1baa-6bce-4e63-bf40-ecb99e3b7a0b")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -5480,7 +5486,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("590c99b0-b840-48b1-9596-4e22a418c311")
+                    .id("28bdc4c8-433d-46bd-a48d-99e8f98350ac")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -5496,7 +5502,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.999Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.496Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")
@@ -5532,7 +5538,7 @@ public class Application {
 
 ## patchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -5563,11 +5569,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("e830092c-7107-4417-95d4-69db5d218a6f")
+                    .id("47b3740b-ffb2-41e6-8a8f-267dbacbee54")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.915Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5602,7 +5608,7 @@ public class Application {
 
 ## patchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -5653,7 +5659,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("28ebc354-9a2c-49bd-b670-78f8c1d68d0b")
+                    .id("6c321c70-45ca-4c35-a684-446b116b7802")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -5665,7 +5671,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("85d75563-a111-4fad-bd66-b3079157b01f")
+                            .id("36c24e0e-c359-4847-8010-5f26727ed716")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -5684,7 +5690,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:20.001Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.913Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -5720,7 +5726,7 @@ public class Application {
 
 ## patchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -5755,7 +5761,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("bba119a9-42d9-4a79-b644-d063110c513b")
+                    .id("fca13d53-2bed-4438-ba2d-5943bb9ea5f4")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -5764,7 +5770,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.055Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5799,7 +5805,7 @@ public class Application {
 
 ## patchAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -5830,13 +5836,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("c82fca74-8d49-4c4f-a455-05e61693d578")
+                            .id("38787df5-7d1e-4012-8f30-33a53be9591b")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("9e0066d8-c229-4314-8825-22fdc48bfe8e")
+                            .id("2c816ee4-bcf8-47b8-99a7-8491f962bfb7")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -5844,10 +5850,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("c88ad427-510a-4813-ab28-b75fc23b72d0")
+                    .id("03d8d504-c36d-43b8-a7c8-4160e543fc7a")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("969e8636-12d2-4dcd-8ca8-a1bbc8cb2a2b")
+                            .id("d1ce435f-521b-4434-a782-12753bb24d6e")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -5855,7 +5861,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("925c2572-9f5d-4232-bd4b-561b25ca4c5e")
+                            .id("a57827d4-c90c-449e-bcd7-cfb55dd4d424")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -5863,7 +5869,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("29dfa075-c339-4136-a3a8-d83da7260587")
+                            .id("9aa820ab-f47c-4621-8227-20c31d816895")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -5872,7 +5878,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("54281082-b2c0-4e00-8a72-7395d0e72e82")
+                            .id("d9fb1392-9cc3-47b9-88b5-e5546515ffe1")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -5880,7 +5886,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("f134463a-1d08-4393-884e-2f7715a0ba1a")
+                            .id("508be7e8-a025-4e80-8042-ed47866315c2")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -5895,7 +5901,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.455Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5930,7 +5936,7 @@ public class Application {
 
 ## patchAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -5958,16 +5964,16 @@ public class Application {
 
         PatchAccountingExpensereportRequest req = PatchAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("342c456a-5c0f-413a-841f-d76d51a0a505")
+                    .id("b9104d06-3de4-4edf-89d8-bd74a6032d0e")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("27fd7077-e2b4-447a-a247-1ff83931127f")
+                            .id("3c3bbc5a-d839-4f48-a3f5-0a2a5802f99c")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -5975,7 +5981,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("208eb5e8-4903-4bf5-a9f3-779d31f30f0b")
+                            .id("6130b795-0660-49e1-961d-304f65a23bab")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -5984,7 +5990,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("e94f7952-dc22-4d61-9de3-e127a1e31780")
+                            .id("8c8ea052-9a74-4874-b44e-4e9e697aaf2e")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -5993,7 +5999,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("86473631-5fbf-4d1d-8b69-f2101a125d2f")
+                            .id("f3e85a62-f1e3-4491-a7d8-b4739ac7d5a8")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -6004,11 +6010,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6043,7 +6049,7 @@ public class Application {
 
 ## patchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -6074,13 +6080,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("a387063f-f673-41fc-af9b-2b7b73aa3727")
+                            .id("e02e1031-a00e-462f-8876-f5b6a58e3f2f")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("4c7e09cc-1e74-4a3a-9db4-dc1b3665ed45")
+                            .id("3015ebdf-a757-45be-8f3b-d81530a501c1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -6091,7 +6097,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("2fe32232-1ab6-4fdc-a897-a5fd9aee3a7a")
+                    .id("b2c369bb-8bb8-45ff-bf89-39a93004a343")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -6109,7 +6115,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.422Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.387Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")
@@ -6145,7 +6151,7 @@ public class Application {
 
 ## patchAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -6178,16 +6184,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("48f96c49-75d9-4118-9678-6ea894b8662f")
+                    .id("5d500c8d-494a-41d6-b89e-392cb3a3ba06")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.995Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.472Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.346Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.947Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6220,9 +6226,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingOrder
+## ~~patchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -6260,7 +6268,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("aa260150-da09-4d74-962e-fc4230c8bd8b")
+                    .id("e84e250a-5370-4900-a123-c6e66a3bb787")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -6275,7 +6283,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.650Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.454Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6310,7 +6318,7 @@ public class Application {
 
 ## patchAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -6347,12 +6355,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("148881cd-c4d8-49ff-87c8-999b1c5e8595")
+                    .id("2f1e3728-7b60-425b-b433-6039408d7c37")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.548Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.620Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6387,7 +6395,7 @@ public class Application {
 
 ## patchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -6448,7 +6456,7 @@ public class Application {
 
 ## patchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -6489,7 +6497,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("9707c87d-b16c-4734-83cf-ce7be5880368")
+                    .id("23260f1f-6417-4b6b-9e91-8abb05d470fc")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -6503,7 +6511,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.556Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.939Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6538,7 +6546,7 @@ public class Application {
 
 ## patchAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -6599,7 +6607,7 @@ public class Application {
 
 ## patchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -6637,13 +6645,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("da9eeed0-9f3c-46e3-8856-5b5e478ea07b")
+                    .id("c398d393-3647-4d70-a7a0-d6e5da942c54")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -6665,7 +6673,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6700,7 +6708,7 @@ public class Application {
 
 ## patchAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -6738,7 +6746,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("88211579-db4f-4526-9821-20286b551703")
+                    .id("02027e6a-ff36-4ae7-acb8-c6d5a33f1cb1")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -6747,7 +6755,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6782,7 +6790,7 @@ public class Application {
 
 ## patchAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -6811,12 +6819,12 @@ public class Application {
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("c9198db8-246a-4f84-bcc9-95b88b46676f")
+                    .id("0f076efa-8474-42d3-81a8-571670229456")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("a965a6aa-025f-4e32-9b85-7e98f493530e")
+                            .id("4610f9a3-2400-442d-85a9-4067c82998c8")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -6827,7 +6835,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6862,7 +6870,7 @@ public class Application {
 
 ## patchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -6894,14 +6902,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("8aad8f57-5f48-4439-8c12-0295b646be63")
+                    .id("092d8e7a-d188-42eb-8a10-1999a0803f81")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.408Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.881Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6936,7 +6944,7 @@ public class Application {
 
 ## removeAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -6992,7 +7000,7 @@ public class Application {
 
 ## removeAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -7048,7 +7056,7 @@ public class Application {
 
 ## removeAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -7104,7 +7112,7 @@ public class Application {
 
 ## removeAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -7160,7 +7168,7 @@ public class Application {
 
 ## removeAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -7216,7 +7224,7 @@ public class Application {
 
 ## removeAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -7272,7 +7280,7 @@ public class Application {
 
 ## removeAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -7328,7 +7336,7 @@ public class Application {
 
 ## removeAccountingExpense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -7384,7 +7392,7 @@ public class Application {
 
 ## removeAccountingExpensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -7440,7 +7448,7 @@ public class Application {
 
 ## removeAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -7496,7 +7504,7 @@ public class Application {
 
 ## removeAccountingJournal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -7550,9 +7558,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingOrder
+## ~~removeAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -7608,7 +7618,7 @@ public class Application {
 
 ## removeAccountingPaymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -7664,7 +7674,7 @@ public class Application {
 
 ## removeAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -7720,7 +7730,7 @@ public class Application {
 
 ## removeAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -7776,7 +7786,7 @@ public class Application {
 
 ## removeAccountingQuote
 
-Remove a quote
+Deletes the AccountingQuote identified by `id`.
 
 ### Example Usage
 
@@ -7832,7 +7842,7 @@ public class Application {
 
 ## removeAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -7888,7 +7898,7 @@ public class Application {
 
 ## removeAccountingTaxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -7944,7 +7954,7 @@ public class Application {
 
 ## removeAccountingTransaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -8000,7 +8010,7 @@ public class Application {
 
 ## removeAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -8056,7 +8066,7 @@ public class Application {
 
 ## updateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -8089,7 +8099,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("dc5f837a-a1ac-4356-a56e-a1b513c09c12")
+                    .id("02f84203-c567-4992-ad19-ab7dd8adc4b9")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -8101,7 +8111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.197Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8136,7 +8146,7 @@ public class Application {
 
 ## updateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -8172,12 +8182,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("fbb3de69-fa19-4312-a3a0-25aa2a0951a4")
+                    .id("481943e1-31c5-4e42-821b-6f9c7d4ac246")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.195Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8212,7 +8222,7 @@ public class Application {
 
 ## updateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -8246,15 +8256,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("c8a03fdd-e180-473e-b06d-dcc006c8952d")
+                    .id("55c21f72-7386-4b73-ae17-a72d26e3a1be")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.746Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.157Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.329Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.615Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.424Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8289,7 +8299,7 @@ public class Application {
 
 ## updateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -8320,13 +8330,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("08b49dc4-8cdc-478a-aeae-f33829f57e16")
+                            .id("d77fdfb3-fd28-49b0-ab7e-a688cb81da0f")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("4a7247cd-eb8a-439e-a8f3-2509e1b65511")
+                            .id("af6e1baa-6bce-4e63-bf40-ecb99e3b7a0b")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -8338,7 +8348,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("590c99b0-b840-48b1-9596-4e22a418c311")
+                    .id("28bdc4c8-433d-46bd-a48d-99e8f98350ac")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -8354,7 +8364,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.999Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.496Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")
@@ -8390,7 +8400,7 @@ public class Application {
 
 ## updateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -8421,11 +8431,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("e830092c-7107-4417-95d4-69db5d218a6f")
+                    .id("47b3740b-ffb2-41e6-8a8f-267dbacbee54")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.915Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8460,7 +8470,7 @@ public class Application {
 
 ## updateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -8511,7 +8521,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("28ebc354-9a2c-49bd-b670-78f8c1d68d0b")
+                    .id("6c321c70-45ca-4c35-a684-446b116b7802")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -8523,7 +8533,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("85d75563-a111-4fad-bd66-b3079157b01f")
+                            .id("36c24e0e-c359-4847-8010-5f26727ed716")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -8542,7 +8552,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:20.001Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.913Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -8578,7 +8588,7 @@ public class Application {
 
 ## updateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -8613,7 +8623,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("bba119a9-42d9-4a79-b644-d063110c513b")
+                    .id("fca13d53-2bed-4438-ba2d-5943bb9ea5f4")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -8622,7 +8632,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.055Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8657,7 +8667,7 @@ public class Application {
 
 ## updateAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -8688,13 +8698,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("c82fca74-8d49-4c4f-a455-05e61693d578")
+                            .id("38787df5-7d1e-4012-8f30-33a53be9591b")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("9e0066d8-c229-4314-8825-22fdc48bfe8e")
+                            .id("2c816ee4-bcf8-47b8-99a7-8491f962bfb7")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -8702,10 +8712,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("c88ad427-510a-4813-ab28-b75fc23b72d0")
+                    .id("03d8d504-c36d-43b8-a7c8-4160e543fc7a")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("969e8636-12d2-4dcd-8ca8-a1bbc8cb2a2b")
+                            .id("d1ce435f-521b-4434-a782-12753bb24d6e")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -8713,7 +8723,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("925c2572-9f5d-4232-bd4b-561b25ca4c5e")
+                            .id("a57827d4-c90c-449e-bcd7-cfb55dd4d424")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -8721,7 +8731,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("29dfa075-c339-4136-a3a8-d83da7260587")
+                            .id("9aa820ab-f47c-4621-8227-20c31d816895")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -8730,7 +8740,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("54281082-b2c0-4e00-8a72-7395d0e72e82")
+                            .id("d9fb1392-9cc3-47b9-88b5-e5546515ffe1")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -8738,7 +8748,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("f134463a-1d08-4393-884e-2f7715a0ba1a")
+                            .id("508be7e8-a025-4e80-8042-ed47866315c2")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -8753,7 +8763,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.455Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8788,7 +8798,7 @@ public class Application {
 
 ## updateAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -8816,16 +8826,16 @@ public class Application {
 
         UpdateAccountingExpensereportRequest req = UpdateAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("342c456a-5c0f-413a-841f-d76d51a0a505")
+                    .id("b9104d06-3de4-4edf-89d8-bd74a6032d0e")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("27fd7077-e2b4-447a-a247-1ff83931127f")
+                            .id("3c3bbc5a-d839-4f48-a3f5-0a2a5802f99c")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -8833,7 +8843,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("208eb5e8-4903-4bf5-a9f3-779d31f30f0b")
+                            .id("6130b795-0660-49e1-961d-304f65a23bab")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -8842,7 +8852,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("e94f7952-dc22-4d61-9de3-e127a1e31780")
+                            .id("8c8ea052-9a74-4874-b44e-4e9e697aaf2e")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -8851,7 +8861,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("86473631-5fbf-4d1d-8b69-f2101a125d2f")
+                            .id("f3e85a62-f1e3-4491-a7d8-b4739ac7d5a8")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -8862,11 +8872,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -8901,7 +8911,7 @@ public class Application {
 
 ## updateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -8932,13 +8942,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("a387063f-f673-41fc-af9b-2b7b73aa3727")
+                            .id("e02e1031-a00e-462f-8876-f5b6a58e3f2f")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("4c7e09cc-1e74-4a3a-9db4-dc1b3665ed45")
+                            .id("3015ebdf-a757-45be-8f3b-d81530a501c1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -8949,7 +8959,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("2fe32232-1ab6-4fdc-a897-a5fd9aee3a7a")
+                    .id("b2c369bb-8bb8-45ff-bf89-39a93004a343")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -8967,7 +8977,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.422Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.387Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")
@@ -9003,7 +9013,7 @@ public class Application {
 
 ## updateAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -9036,16 +9046,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("48f96c49-75d9-4118-9678-6ea894b8662f")
+                    .id("5d500c8d-494a-41d6-b89e-392cb3a3ba06")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.995Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.472Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.346Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.947Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9078,9 +9088,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingOrder
+## ~~updateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -9118,7 +9130,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("aa260150-da09-4d74-962e-fc4230c8bd8b")
+                    .id("e84e250a-5370-4900-a123-c6e66a3bb787")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -9133,7 +9145,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.650Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.454Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9168,7 +9180,7 @@ public class Application {
 
 ## updateAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -9205,12 +9217,12 @@ public class Application {
                     .discountPercent(5d)
                     .dueDays(57d)
                     .dueNextMonthDays(9d)
-                    .id("148881cd-c4d8-49ff-87c8-999b1c5e8595")
+                    .id("2f1e3728-7b60-425b-b433-6039408d7c37")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Net 30")
                     .type(AccountingPaymenttermType.NET15)
-                    .updatedAt(OffsetDateTime.parse("2026-01-08T11:14:28.548Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-09T08:24:07.620Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9245,7 +9257,7 @@ public class Application {
 
 ## updateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -9306,7 +9318,7 @@ public class Application {
 
 ## updateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -9347,7 +9359,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("9707c87d-b16c-4734-83cf-ce7be5880368")
+                    .id("23260f1f-6417-4b6b-9e91-8abb05d470fc")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -9361,7 +9373,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.556Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.939Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9396,7 +9408,7 @@ public class Application {
 
 ## updateAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -9457,7 +9469,7 @@ public class Application {
 
 ## updateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -9495,13 +9507,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("da9eeed0-9f3c-46e3-8856-5b5e478ea07b")
+                    .id("c398d393-3647-4d70-a7a0-d6e5da942c54")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -9523,7 +9535,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9558,7 +9570,7 @@ public class Application {
 
 ## updateAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -9596,7 +9608,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("88211579-db4f-4526-9821-20286b551703")
+                    .id("02027e6a-ff36-4ae7-acb8-c6d5a33f1cb1")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -9605,7 +9617,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9640,7 +9652,7 @@ public class Application {
 
 ## updateAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -9669,12 +9681,12 @@ public class Application {
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("c9198db8-246a-4f84-bcc9-95b88b46676f")
+                    .id("0f076efa-8474-42d3-81a8-571670229456")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("a965a6aa-025f-4e32-9b85-7e98f493530e")
+                            .id("4610f9a3-2400-442d-85a9-4067c82998c8")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -9685,7 +9697,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -9720,7 +9732,7 @@ public class Application {
 
 ## updateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -9752,14 +9764,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("8aad8f57-5f48-4439-8c12-0295b646be63")
+                    .id("092d8e7a-d188-42eb-8a10-1999a0803f81")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.408Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.881Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

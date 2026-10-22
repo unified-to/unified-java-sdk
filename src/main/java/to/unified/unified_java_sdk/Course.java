@@ -55,6 +55,9 @@ public class Course {
     /**
      * Create a course
      * 
+     * <p>Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsCourse.
+     * 
      * @return The call builder
      */
     public CreateLmsCourseRequestBuilder createLmsCourse() {
@@ -63,6 +66,9 @@ public class Course {
 
     /**
      * Create a course
+     * 
+     * <p>Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to
+     * the provider's API. Returns the created LmsCourse.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Course {
     /**
      * Retrieve a course
      * 
+     * <p>Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLmsCourseRequestBuilder getLmsCourse() {
@@ -85,6 +94,9 @@ public class Course {
 
     /**
      * Retrieve a course
+     * 
+     * <p>Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Course {
     /**
      * List all courses
      * 
+     * <p>Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLmsCoursesRequestBuilder listLmsCourses() {
@@ -107,6 +126,13 @@ public class Course {
 
     /**
      * List all courses
+     * 
+     * <p>Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Course {
     /**
      * Update a course
      * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchLmsCourseRequestBuilder patchLmsCourse() {
@@ -129,6 +158,9 @@ public class Course {
 
     /**
      * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Course {
     /**
      * Remove a course
      * 
+     * <p>Deletes the LmsCourse identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLmsCourseRequestBuilder removeLmsCourse() {
@@ -151,6 +185,8 @@ public class Course {
 
     /**
      * Remove a course
+     * 
+     * <p>Deletes the LmsCourse identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Course {
     /**
      * Update a course
      * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateLmsCourseRequestBuilder updateLmsCourse() {
@@ -173,6 +212,9 @@ public class Course {
 
     /**
      * Update a course
+     * 
+     * <p>Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

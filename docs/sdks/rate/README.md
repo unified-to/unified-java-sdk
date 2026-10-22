@@ -8,7 +8,7 @@
 
 ## createShippingRate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ public class Application {
         CreateShippingRateRequest req = CreateShippingRateRequest.builder()
                 .shippingRate(ShippingRate.builder()
                     .currency("USD")
-                    .id("a9013e0c-2c04-4e5e-8a1c-4126209fe01a")
+                    .id("ca845f41-f65f-475e-8bf9-a8ba5759a62e")
                     .metadata(List.of())
                     .rates(List.of(
                         ShippingRateRate.builder()

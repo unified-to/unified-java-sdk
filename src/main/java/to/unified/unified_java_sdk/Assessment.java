@@ -71,6 +71,9 @@ public class Assessment {
     /**
      * Create an order
      * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
      * @return The call builder
      */
     public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
@@ -79,6 +82,9 @@ public class Assessment {
 
     /**
      * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -115,6 +121,9 @@ public class Assessment {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
@@ -123,6 +132,9 @@ public class Assessment {
 
     /**
      * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -181,6 +193,9 @@ public class Assessment {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
@@ -189,6 +204,9 @@ public class Assessment {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -247,6 +265,9 @@ public class Assessment {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
@@ -255,6 +276,9 @@ public class Assessment {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

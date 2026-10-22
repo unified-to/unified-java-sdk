@@ -13,7 +13,7 @@
 
 ## createAccountingTransaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -42,12 +42,12 @@ public class Application {
         CreateAccountingTransactionRequest req = CreateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("f149483b-5630-47af-afc4-8fed91959132")
+                    .id("7d84db37-d5b9-4098-adac-7dd406208d43")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("93250607-4dd3-485d-8df1-f2258f854b65")
+                            .id("e572460b-57c9-45bd-bfcc-4c6e92e11c57")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -58,7 +58,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -92,7 +92,7 @@ public class Application {
 
 ## getAccountingTransaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ public class Application {
 
 ## listAccountingTransactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ public class Application {
 
 ## patchAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -236,12 +236,12 @@ public class Application {
         PatchAccountingTransactionRequest req = PatchAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("c9198db8-246a-4f84-bcc9-95b88b46676f")
+                    .id("0f076efa-8474-42d3-81a8-571670229456")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("a965a6aa-025f-4e32-9b85-7e98f493530e")
+                            .id("4610f9a3-2400-442d-85a9-4067c82998c8")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -252,7 +252,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -287,7 +287,7 @@ public class Application {
 
 ## removeAccountingTransaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ public class Application {
 
 ## updateAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -372,12 +372,12 @@ public class Application {
         UpdateAccountingTransactionRequest req = UpdateAccountingTransactionRequest.builder()
                 .accountingTransaction(AccountingTransaction.builder()
                     .createdAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .id("c9198db8-246a-4f84-bcc9-95b88b46676f")
+                    .id("0f076efa-8474-42d3-81a8-571670229456")
                     .lineitems(List.of(
                         AccountingTransactionLineItem.builder()
                             .categoryIds(List.of())
                             .description("The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability")
-                            .id("a965a6aa-025f-4e32-9b85-7e98f493530e")
+                            .id("4610f9a3-2400-442d-85a9-4067c82998c8")
                             .name("Shirt")
                             .totalAmount(10184d)
                             .unitAmount(536d)
@@ -388,7 +388,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(10184d)
                     .transactionAt(OffsetDateTime.parse("2019-09-25T11:40:42.574Z"))
-                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:08:30.288Z"))
+                    .updatedAt(OffsetDateTime.parse("2019-10-14T06:19:22.778Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

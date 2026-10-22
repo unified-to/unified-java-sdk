@@ -229,6 +229,9 @@ public class AsyncCommerce {
     /**
      * Create a collection
      * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
      * @return The async call builder
      */
     public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
@@ -237,6 +240,9 @@ public class AsyncCommerce {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
@@ -252,6 +258,9 @@ public class AsyncCommerce {
     /**
      * Create an inventory
      * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
      * @return The async call builder
      */
     public CreateCommerceInventoryRequestBuilder createCommerceInventory() {
@@ -260,6 +269,9 @@ public class AsyncCommerce {
 
     /**
      * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
@@ -275,6 +287,9 @@ public class AsyncCommerce {
     /**
      * Create an item
      * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
      * @return The async call builder
      */
     public CreateCommerceItemRequestBuilder createCommerceItem() {
@@ -283,6 +298,9 @@ public class AsyncCommerce {
 
     /**
      * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
@@ -298,6 +316,9 @@ public class AsyncCommerce {
     /**
      * Create an itemvariant
      * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
      * @return The async call builder
      */
     public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
@@ -306,6 +327,9 @@ public class AsyncCommerce {
 
     /**
      * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
@@ -321,6 +345,9 @@ public class AsyncCommerce {
     /**
      * Create a location
      * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
+     * 
      * @return The async call builder
      */
     public CreateCommerceLocationRequestBuilder createCommerceLocation() {
@@ -329,6 +356,9 @@ public class AsyncCommerce {
 
     /**
      * Create a location
+     * 
+     * <p>Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceLocation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
@@ -344,6 +374,9 @@ public class AsyncCommerce {
     /**
      * Create a reservation
      * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
+     * 
      * @return The async call builder
      */
     public CreateCommerceReservationRequestBuilder createCommerceReservation() {
@@ -352,6 +385,9 @@ public class AsyncCommerce {
 
     /**
      * Create a reservation
+     * 
+     * <p>Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceReservation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceReservationResponse>} - The async response
@@ -367,6 +403,9 @@ public class AsyncCommerce {
     /**
      * Create a review
      * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
      * @return The async call builder
      */
     public CreateCommerceReviewRequestBuilder createCommerceReview() {
@@ -375,6 +414,9 @@ public class AsyncCommerce {
 
     /**
      * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
@@ -390,6 +432,9 @@ public class AsyncCommerce {
     /**
      * Create a saleschannel
      * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
      * @return The async call builder
      */
     public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
@@ -398,6 +443,9 @@ public class AsyncCommerce {
 
     /**
      * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
@@ -413,6 +461,9 @@ public class AsyncCommerce {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceCollectionRequestBuilder getCommerceCollection() {
@@ -421,6 +472,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
@@ -436,6 +490,9 @@ public class AsyncCommerce {
     /**
      * Retrieve an inventory
      * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceInventoryRequestBuilder getCommerceInventory() {
@@ -444,6 +501,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
@@ -459,6 +519,9 @@ public class AsyncCommerce {
     /**
      * Retrieve an item
      * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceItemRequestBuilder getCommerceItem() {
@@ -467,6 +530,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
@@ -482,6 +548,9 @@ public class AsyncCommerce {
     /**
      * Retrieve an itemvariant
      * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
@@ -490,6 +559,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
@@ -505,6 +577,9 @@ public class AsyncCommerce {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceLocationRequestBuilder getCommerceLocation() {
@@ -513,6 +588,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
@@ -528,6 +606,9 @@ public class AsyncCommerce {
     /**
      * Retrieve a reservation
      * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceReservationRequestBuilder getCommerceReservation() {
@@ -536,6 +617,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve a reservation
+     * 
+     * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceReservationResponse>} - The async response
@@ -551,6 +635,9 @@ public class AsyncCommerce {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceReviewRequestBuilder getCommerceReview() {
@@ -559,6 +646,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
@@ -574,6 +664,9 @@ public class AsyncCommerce {
     /**
      * Retrieve a saleschannel
      * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
@@ -582,6 +675,9 @@ public class AsyncCommerce {
 
     /**
      * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
@@ -597,6 +693,13 @@ public class AsyncCommerce {
     /**
      * List all availabilities
      * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceAvailabilitiesRequestBuilder listCommerceAvailabilities() {
@@ -605,6 +708,13 @@ public class AsyncCommerce {
 
     /**
      * List all availabilities
+     * 
+     * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceAvailabilitiesResponse>} - The async response
@@ -620,6 +730,13 @@ public class AsyncCommerce {
     /**
      * List all collections
      * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
@@ -628,6 +745,13 @@ public class AsyncCommerce {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
@@ -643,6 +767,13 @@ public class AsyncCommerce {
     /**
      * List all inventories
      * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceInventoriesRequestBuilder listCommerceInventories() {
@@ -651,6 +782,13 @@ public class AsyncCommerce {
 
     /**
      * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
@@ -666,6 +804,13 @@ public class AsyncCommerce {
     /**
      * List all items
      * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceItemsRequestBuilder listCommerceItems() {
@@ -674,6 +819,13 @@ public class AsyncCommerce {
 
     /**
      * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
@@ -689,6 +841,13 @@ public class AsyncCommerce {
     /**
      * List all itemvariants
      * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
@@ -697,6 +856,13 @@ public class AsyncCommerce {
 
     /**
      * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
@@ -712,6 +878,13 @@ public class AsyncCommerce {
     /**
      * List all locations
      * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceLocationsRequestBuilder listCommerceLocations() {
@@ -720,6 +893,13 @@ public class AsyncCommerce {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of CommerceLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
@@ -735,6 +915,13 @@ public class AsyncCommerce {
     /**
      * List all reservations
      * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceReservationsRequestBuilder listCommerceReservations() {
@@ -743,6 +930,13 @@ public class AsyncCommerce {
 
     /**
      * List all reservations
+     * 
+     * <p>Returns a list of CommerceReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceReservationsResponse>} - The async response
@@ -758,6 +952,13 @@ public class AsyncCommerce {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceReviewsRequestBuilder listCommerceReviews() {
@@ -766,6 +967,13 @@ public class AsyncCommerce {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
@@ -781,6 +989,13 @@ public class AsyncCommerce {
     /**
      * List all saleschannels
      * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
@@ -789,6 +1004,13 @@ public class AsyncCommerce {
 
     /**
      * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
@@ -804,6 +1026,9 @@ public class AsyncCommerce {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
@@ -812,6 +1037,9 @@ public class AsyncCommerce {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
@@ -827,6 +1055,9 @@ public class AsyncCommerce {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceInventoryRequestBuilder patchCommerceInventory() {
@@ -835,6 +1066,9 @@ public class AsyncCommerce {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
@@ -850,6 +1084,9 @@ public class AsyncCommerce {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceItemRequestBuilder patchCommerceItem() {
@@ -858,6 +1095,9 @@ public class AsyncCommerce {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
@@ -873,6 +1113,9 @@ public class AsyncCommerce {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
@@ -881,6 +1124,9 @@ public class AsyncCommerce {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
@@ -896,6 +1142,9 @@ public class AsyncCommerce {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceLocationRequestBuilder patchCommerceLocation() {
@@ -904,6 +1153,9 @@ public class AsyncCommerce {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
@@ -919,6 +1171,9 @@ public class AsyncCommerce {
     /**
      * Update a reservation
      * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceReservationRequestBuilder patchCommerceReservation() {
@@ -927,6 +1182,9 @@ public class AsyncCommerce {
 
     /**
      * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceReservationResponse>} - The async response
@@ -942,6 +1200,9 @@ public class AsyncCommerce {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceReviewRequestBuilder patchCommerceReview() {
@@ -950,6 +1211,9 @@ public class AsyncCommerce {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
@@ -965,6 +1229,9 @@ public class AsyncCommerce {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
@@ -973,6 +1240,9 @@ public class AsyncCommerce {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
@@ -988,6 +1258,8 @@ public class AsyncCommerce {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
@@ -996,6 +1268,8 @@ public class AsyncCommerce {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
@@ -1011,6 +1285,8 @@ public class AsyncCommerce {
     /**
      * Remove an inventory
      * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceInventoryRequestBuilder removeCommerceInventory() {
@@ -1019,6 +1295,8 @@ public class AsyncCommerce {
 
     /**
      * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
@@ -1034,6 +1312,8 @@ public class AsyncCommerce {
     /**
      * Remove an item
      * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceItemRequestBuilder removeCommerceItem() {
@@ -1042,6 +1322,8 @@ public class AsyncCommerce {
 
     /**
      * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
@@ -1057,6 +1339,8 @@ public class AsyncCommerce {
     /**
      * Remove an itemvariant
      * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
@@ -1065,6 +1349,8 @@ public class AsyncCommerce {
 
     /**
      * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
@@ -1080,6 +1366,8 @@ public class AsyncCommerce {
     /**
      * Remove a location
      * 
+     * <p>Deletes the CommerceLocation identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceLocationRequestBuilder removeCommerceLocation() {
@@ -1088,6 +1376,8 @@ public class AsyncCommerce {
 
     /**
      * Remove a location
+     * 
+     * <p>Deletes the CommerceLocation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
@@ -1103,6 +1393,8 @@ public class AsyncCommerce {
     /**
      * Remove a reservation
      * 
+     * <p>Deletes the CommerceReservation identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceReservationRequestBuilder removeCommerceReservation() {
@@ -1111,6 +1403,8 @@ public class AsyncCommerce {
 
     /**
      * Remove a reservation
+     * 
+     * <p>Deletes the CommerceReservation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceReservationResponse>} - The async response
@@ -1126,6 +1420,8 @@ public class AsyncCommerce {
     /**
      * Remove a review
      * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceReviewRequestBuilder removeCommerceReview() {
@@ -1134,6 +1430,8 @@ public class AsyncCommerce {
 
     /**
      * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
@@ -1149,6 +1447,8 @@ public class AsyncCommerce {
     /**
      * Remove a saleschannel
      * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
@@ -1157,6 +1457,8 @@ public class AsyncCommerce {
 
     /**
      * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
@@ -1172,6 +1474,9 @@ public class AsyncCommerce {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
@@ -1180,6 +1485,9 @@ public class AsyncCommerce {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
@@ -1195,6 +1503,9 @@ public class AsyncCommerce {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceInventoryRequestBuilder updateCommerceInventory() {
@@ -1203,6 +1514,9 @@ public class AsyncCommerce {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
@@ -1218,6 +1532,9 @@ public class AsyncCommerce {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceItemRequestBuilder updateCommerceItem() {
@@ -1226,6 +1543,9 @@ public class AsyncCommerce {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
@@ -1241,6 +1561,9 @@ public class AsyncCommerce {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
@@ -1249,6 +1572,9 @@ public class AsyncCommerce {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
@@ -1264,6 +1590,9 @@ public class AsyncCommerce {
     /**
      * Update a location
      * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceLocationRequestBuilder updateCommerceLocation() {
@@ -1272,6 +1601,9 @@ public class AsyncCommerce {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
@@ -1287,6 +1619,9 @@ public class AsyncCommerce {
     /**
      * Update a reservation
      * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceReservationRequestBuilder updateCommerceReservation() {
@@ -1295,6 +1630,9 @@ public class AsyncCommerce {
 
     /**
      * Update a reservation
+     * 
+     * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceReservationResponse>} - The async response
@@ -1310,6 +1648,9 @@ public class AsyncCommerce {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceReviewRequestBuilder updateCommerceReview() {
@@ -1318,6 +1659,9 @@ public class AsyncCommerce {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
@@ -1333,6 +1677,9 @@ public class AsyncCommerce {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
@@ -1341,6 +1688,9 @@ public class AsyncCommerce {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response

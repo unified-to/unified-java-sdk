@@ -55,6 +55,9 @@ public class Property {
     /**
      * Create a property
      * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
      * @return The call builder
      */
     public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
@@ -63,6 +66,9 @@ public class Property {
 
     /**
      * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Property {
     /**
      * Retrieve a property
      * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
@@ -85,6 +94,9 @@ public class Property {
 
     /**
      * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Property {
     /**
      * List all properties
      * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
@@ -107,6 +126,13 @@ public class Property {
 
     /**
      * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Property {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
@@ -129,6 +158,9 @@ public class Property {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Property {
     /**
      * Remove a property
      * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
@@ -151,6 +185,8 @@ public class Property {
 
     /**
      * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Property {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
@@ -173,6 +212,9 @@ public class Property {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

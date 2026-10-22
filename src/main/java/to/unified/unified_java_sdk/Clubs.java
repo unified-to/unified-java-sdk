@@ -71,6 +71,9 @@ public class Clubs {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsActivityRequestBuilder getClubsActivity() {
@@ -79,6 +82,9 @@ public class Clubs {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -93,6 +99,9 @@ public class Clubs {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsEventRequestBuilder getClubsEvent() {
@@ -101,6 +110,9 @@ public class Clubs {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -115,6 +127,9 @@ public class Clubs {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsGroupRequestBuilder getClubsGroup() {
@@ -123,6 +138,9 @@ public class Clubs {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -137,6 +155,9 @@ public class Clubs {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsLocationRequestBuilder getClubsLocation() {
@@ -145,6 +166,9 @@ public class Clubs {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -159,6 +183,9 @@ public class Clubs {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsMemberRequestBuilder getClubsMember() {
@@ -167,6 +194,9 @@ public class Clubs {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -181,6 +211,13 @@ public class Clubs {
     /**
      * List all activities
      * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsActivitiesRequestBuilder listClubsActivities() {
@@ -189,6 +226,13 @@ public class Clubs {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -203,6 +247,13 @@ public class Clubs {
     /**
      * List all events
      * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsEventsRequestBuilder listClubsEvents() {
@@ -211,6 +262,13 @@ public class Clubs {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -225,6 +283,13 @@ public class Clubs {
     /**
      * List all groups
      * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsGroupsRequestBuilder listClubsGroups() {
@@ -233,6 +298,13 @@ public class Clubs {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -247,6 +319,13 @@ public class Clubs {
     /**
      * List all locations
      * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsLocationsRequestBuilder listClubsLocations() {
@@ -255,6 +334,13 @@ public class Clubs {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -269,6 +355,13 @@ public class Clubs {
     /**
      * List all members
      * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsMembersRequestBuilder listClubsMembers() {
@@ -277,6 +370,13 @@ public class Clubs {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

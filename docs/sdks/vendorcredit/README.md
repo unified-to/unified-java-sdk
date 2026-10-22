@@ -13,7 +13,7 @@
 
 ## createAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -45,14 +45,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("10adb814-c55c-44b0-96fe-b775e3505ed7")
+                    .id("1af7da47-7158-4a03-abbc-199abddb9345")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.404Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.877Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -86,7 +86,7 @@ public class Application {
 
 ## getAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## listAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## patchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -233,14 +233,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("8aad8f57-5f48-4439-8c12-0295b646be63")
+                    .id("092d8e7a-d188-42eb-8a10-1999a0803f81")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.408Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.881Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -275,7 +275,7 @@ public class Application {
 
 ## removeAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ public class Application {
 
 ## updateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -363,14 +363,14 @@ public class Application {
                     .balanceAmount(0d)
                     .createdAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .currency("USD")
-                    .id("8aad8f57-5f48-4439-8c12-0295b646be63")
+                    .id("092d8e7a-d188-42eb-8a10-1999a0803f81")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Volup conatus cruciamentum decor avaritia.")
                     .postedAt(OffsetDateTime.parse("2023-04-15T21:14:08.197Z"))
                     .status(AccountingVendorcreditStatus.AUTHORIZED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-03T01:42:28.408Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-03T05:00:46.881Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

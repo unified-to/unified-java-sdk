@@ -103,6 +103,9 @@ public class Contact {
     /**
      * Create a contact
      * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
      * @return The call builder
      */
     public CreateAccountingContactRequestBuilder createAccountingContact() {
@@ -111,6 +114,9 @@ public class Contact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -125,6 +131,9 @@ public class Contact {
     /**
      * Create a contact
      * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
      * @return The call builder
      */
     public CreateCrmContactRequestBuilder createCrmContact() {
@@ -133,6 +142,9 @@ public class Contact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -147,6 +159,9 @@ public class Contact {
     /**
      * Create a contact
      * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
      * @return The call builder
      */
     public CreateUcContactRequestBuilder createUcContact() {
@@ -155,6 +170,9 @@ public class Contact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -169,6 +187,9 @@ public class Contact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingContactRequestBuilder getAccountingContact() {
@@ -177,6 +198,9 @@ public class Contact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -191,6 +215,9 @@ public class Contact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmContactRequestBuilder getCrmContact() {
@@ -199,6 +226,9 @@ public class Contact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -213,6 +243,9 @@ public class Contact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcContactRequestBuilder getUcContact() {
@@ -221,6 +254,9 @@ public class Contact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -235,6 +271,13 @@ public class Contact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingContactsRequestBuilder listAccountingContacts() {
@@ -243,6 +286,13 @@ public class Contact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -257,6 +307,13 @@ public class Contact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmContactsRequestBuilder listCrmContacts() {
@@ -265,6 +322,13 @@ public class Contact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -279,6 +343,13 @@ public class Contact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcContactsRequestBuilder listUcContacts() {
@@ -287,6 +358,13 @@ public class Contact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -301,6 +379,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingContactRequestBuilder patchAccountingContact() {
@@ -309,6 +390,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -323,6 +407,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmContactRequestBuilder patchCrmContact() {
@@ -331,6 +418,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -345,6 +435,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcContactRequestBuilder patchUcContact() {
@@ -353,6 +446,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -367,6 +463,8 @@ public class Contact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingContactRequestBuilder removeAccountingContact() {
@@ -375,6 +473,8 @@ public class Contact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -389,6 +489,8 @@ public class Contact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmContactRequestBuilder removeCrmContact() {
@@ -397,6 +499,8 @@ public class Contact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -411,6 +515,8 @@ public class Contact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcContactRequestBuilder removeUcContact() {
@@ -419,6 +525,8 @@ public class Contact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -433,6 +541,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingContactRequestBuilder updateAccountingContact() {
@@ -441,6 +552,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -455,6 +569,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmContactRequestBuilder updateCrmContact() {
@@ -463,6 +580,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -477,6 +597,9 @@ public class Contact {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcContactRequestBuilder updateUcContact() {
@@ -485,6 +608,9 @@ public class Contact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

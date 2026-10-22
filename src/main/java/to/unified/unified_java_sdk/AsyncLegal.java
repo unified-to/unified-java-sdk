@@ -129,6 +129,9 @@ public class AsyncLegal {
     /**
      * Create an expense
      * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
      * @return The async call builder
      */
     public CreateLegalExpenseRequestBuilder createLegalExpense() {
@@ -137,6 +140,9 @@ public class AsyncLegal {
 
     /**
      * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalExpenseResponse>} - The async response
@@ -152,6 +158,9 @@ public class AsyncLegal {
     /**
      * Create a matter
      * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
      * @return The async call builder
      */
     public CreateLegalMatterRequestBuilder createLegalMatter() {
@@ -160,6 +169,9 @@ public class AsyncLegal {
 
     /**
      * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalMatterResponse>} - The async response
@@ -175,6 +187,9 @@ public class AsyncLegal {
     /**
      * Create a practicearea
      * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
+     * 
      * @return The async call builder
      */
     public CreateLegalPracticeareaRequestBuilder createLegalPracticearea() {
@@ -183,6 +198,9 @@ public class AsyncLegal {
 
     /**
      * Create a practicearea
+     * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalPracticeareaResponse>} - The async response
@@ -198,6 +216,9 @@ public class AsyncLegal {
     /**
      * Create a timeentry
      * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
      * @return The async call builder
      */
     public CreateLegalTimeentryRequestBuilder createLegalTimeentry() {
@@ -206,6 +227,9 @@ public class AsyncLegal {
 
     /**
      * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalTimeentryResponse>} - The async response
@@ -221,6 +245,9 @@ public class AsyncLegal {
     /**
      * Retrieve an expense
      * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalExpenseRequestBuilder getLegalExpense() {
@@ -229,6 +256,9 @@ public class AsyncLegal {
 
     /**
      * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalExpenseResponse>} - The async response
@@ -244,6 +274,9 @@ public class AsyncLegal {
     /**
      * Retrieve a matter
      * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalMatterRequestBuilder getLegalMatter() {
@@ -252,6 +285,9 @@ public class AsyncLegal {
 
     /**
      * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalMatterResponse>} - The async response
@@ -267,6 +303,9 @@ public class AsyncLegal {
     /**
      * Retrieve a practicearea
      * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalPracticeareaRequestBuilder getLegalPracticearea() {
@@ -275,6 +314,9 @@ public class AsyncLegal {
 
     /**
      * Retrieve a practicearea
+     * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalPracticeareaResponse>} - The async response
@@ -290,6 +332,9 @@ public class AsyncLegal {
     /**
      * Retrieve a timeentry
      * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalTimeentryRequestBuilder getLegalTimeentry() {
@@ -298,6 +343,9 @@ public class AsyncLegal {
 
     /**
      * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalTimeentryResponse>} - The async response
@@ -313,6 +361,13 @@ public class AsyncLegal {
     /**
      * List all expenses
      * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalExpensesRequestBuilder listLegalExpenses() {
@@ -321,6 +376,13 @@ public class AsyncLegal {
 
     /**
      * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalExpensesResponse>} - The async response
@@ -336,6 +398,13 @@ public class AsyncLegal {
     /**
      * List all matters
      * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalMattersRequestBuilder listLegalMatters() {
@@ -344,6 +413,13 @@ public class AsyncLegal {
 
     /**
      * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalMattersResponse>} - The async response
@@ -359,6 +435,13 @@ public class AsyncLegal {
     /**
      * List all practiceareas
      * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalPracticeareasRequestBuilder listLegalPracticeareas() {
@@ -367,6 +450,13 @@ public class AsyncLegal {
 
     /**
      * List all practiceareas
+     * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalPracticeareasResponse>} - The async response
@@ -382,6 +472,13 @@ public class AsyncLegal {
     /**
      * List all timeentries
      * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalTimeentriesRequestBuilder listLegalTimeentries() {
@@ -390,6 +487,13 @@ public class AsyncLegal {
 
     /**
      * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalTimeentriesResponse>} - The async response
@@ -405,6 +509,9 @@ public class AsyncLegal {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalExpenseRequestBuilder patchLegalExpense() {
@@ -413,6 +520,9 @@ public class AsyncLegal {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalExpenseResponse>} - The async response
@@ -428,6 +538,9 @@ public class AsyncLegal {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalMatterRequestBuilder patchLegalMatter() {
@@ -436,6 +549,9 @@ public class AsyncLegal {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalMatterResponse>} - The async response
@@ -451,6 +567,9 @@ public class AsyncLegal {
     /**
      * Update a practicearea
      * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalPracticeareaRequestBuilder patchLegalPracticearea() {
@@ -459,6 +578,9 @@ public class AsyncLegal {
 
     /**
      * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalPracticeareaResponse>} - The async response
@@ -474,6 +596,9 @@ public class AsyncLegal {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalTimeentryRequestBuilder patchLegalTimeentry() {
@@ -482,6 +607,9 @@ public class AsyncLegal {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalTimeentryResponse>} - The async response
@@ -497,6 +625,8 @@ public class AsyncLegal {
     /**
      * Remove an expense
      * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalExpenseRequestBuilder removeLegalExpense() {
@@ -505,6 +635,8 @@ public class AsyncLegal {
 
     /**
      * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalExpenseResponse>} - The async response
@@ -520,6 +652,8 @@ public class AsyncLegal {
     /**
      * Remove a matter
      * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalMatterRequestBuilder removeLegalMatter() {
@@ -528,6 +662,8 @@ public class AsyncLegal {
 
     /**
      * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalMatterResponse>} - The async response
@@ -543,6 +679,8 @@ public class AsyncLegal {
     /**
      * Remove a practicearea
      * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalPracticeareaRequestBuilder removeLegalPracticearea() {
@@ -551,6 +689,8 @@ public class AsyncLegal {
 
     /**
      * Remove a practicearea
+     * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalPracticeareaResponse>} - The async response
@@ -566,6 +706,8 @@ public class AsyncLegal {
     /**
      * Remove a timeentry
      * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalTimeentryRequestBuilder removeLegalTimeentry() {
@@ -574,6 +716,8 @@ public class AsyncLegal {
 
     /**
      * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalTimeentryResponse>} - The async response
@@ -589,6 +733,9 @@ public class AsyncLegal {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalExpenseRequestBuilder updateLegalExpense() {
@@ -597,6 +744,9 @@ public class AsyncLegal {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalExpenseResponse>} - The async response
@@ -612,6 +762,9 @@ public class AsyncLegal {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalMatterRequestBuilder updateLegalMatter() {
@@ -620,6 +773,9 @@ public class AsyncLegal {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalMatterResponse>} - The async response
@@ -635,6 +791,9 @@ public class AsyncLegal {
     /**
      * Update a practicearea
      * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalPracticeareaRequestBuilder updateLegalPracticearea() {
@@ -643,6 +802,9 @@ public class AsyncLegal {
 
     /**
      * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalPracticeareaResponse>} - The async response
@@ -658,6 +820,9 @@ public class AsyncLegal {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalTimeentryRequestBuilder updateLegalTimeentry() {
@@ -666,6 +831,9 @@ public class AsyncLegal {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalTimeentryResponse>} - The async response

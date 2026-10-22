@@ -15,7 +15,7 @@
 
 ## createMartechMember
 
-Create a member
+Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ public class Application {
                             .type(MarketingEmailType.HOME)
                             .build()))
                     .firstName("Jude")
-                    .id("90045944-12ef-41de-95b8-505429d3767b")
+                    .id("4810ff9d-3ea5-45e0-b814-44e89003c045")
                     .lastName("Leffler")
                     .metadata(List.of())
                     .name("Jude Leffler")
@@ -59,7 +59,7 @@ public class Application {
                     .tags(List.of(
                         "adnuo",
                         "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-08T19:53:54.227Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-09T13:44:34.231Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## getClubsMember
 
-Retrieve a member
+Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ public class Application {
 
 ## getMartechMember
 
-Retrieve a member
+Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ public class Application {
 
 ## listClubsMembers
 
-List all members
+Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -266,7 +266,7 @@ public class Application {
 
 ## listMartechMembers
 
-List all members
+Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ public class Application {
 
 ## patchMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -359,7 +359,7 @@ public class Application {
                             .type(MarketingEmailType.HOME)
                             .build()))
                     .firstName("Jude")
-                    .id("ef646a11-6d28-4bf3-ac3a-2801bd44f66c")
+                    .id("865def2d-ea14-4cc4-bfdd-96a11aa4b6db")
                     .lastName("Leffler")
                     .metadata(List.of())
                     .name("Jude Leffler")
@@ -367,7 +367,7 @@ public class Application {
                     .tags(List.of(
                         "adnuo",
                         "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-08T19:53:54.242Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-09T13:44:34.241Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -402,7 +402,7 @@ public class Application {
 
 ## removeMartechMember
 
-Remove a member
+Deletes the MarketingMember identified by `id`.
 
 ### Example Usage
 
@@ -458,7 +458,7 @@ public class Application {
 
 ## updateMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -494,7 +494,7 @@ public class Application {
                             .type(MarketingEmailType.HOME)
                             .build()))
                     .firstName("Jude")
-                    .id("ef646a11-6d28-4bf3-ac3a-2801bd44f66c")
+                    .id("865def2d-ea14-4cc4-bfdd-96a11aa4b6db")
                     .lastName("Leffler")
                     .metadata(List.of())
                     .name("Jude Leffler")
@@ -502,7 +502,7 @@ public class Application {
                     .tags(List.of(
                         "adnuo",
                         "verumtamen"))
-                    .updatedAt(OffsetDateTime.parse("2025-07-08T19:53:54.242Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-09T13:44:34.241Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -57,6 +57,9 @@ public class AsyncDeduction {
     /**
      * Create a deduction
      * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
+     * 
      * @return The async call builder
      */
     public CreateHrisDeductionRequestBuilder createHrisDeduction() {
@@ -65,6 +68,9 @@ public class AsyncDeduction {
 
     /**
      * Create a deduction
+     * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncDeduction {
     /**
      * Retrieve a deduction
      * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisDeductionRequestBuilder getHrisDeduction() {
@@ -88,6 +97,9 @@ public class AsyncDeduction {
 
     /**
      * Retrieve a deduction
+     * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncDeduction {
     /**
      * List all deductions
      * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisDeductionsRequestBuilder listHrisDeductions() {
@@ -111,6 +130,13 @@ public class AsyncDeduction {
 
     /**
      * List all deductions
+     * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncDeduction {
     /**
      * Update a deduction
      * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
@@ -134,6 +163,9 @@ public class AsyncDeduction {
 
     /**
      * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncDeduction {
     /**
      * Remove a deduction
      * 
+     * <p>Deletes the HrisDeduction identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
@@ -157,6 +191,8 @@ public class AsyncDeduction {
 
     /**
      * Remove a deduction
+     * 
+     * <p>Deletes the HrisDeduction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncDeduction {
     /**
      * Update a deduction
      * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
@@ -180,6 +219,9 @@ public class AsyncDeduction {
 
     /**
      * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response

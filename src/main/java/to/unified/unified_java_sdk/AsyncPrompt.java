@@ -37,6 +37,9 @@ public class AsyncPrompt {
     /**
      * Create a prompt
      * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
      * @return The async call builder
      */
     public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
@@ -45,6 +48,9 @@ public class AsyncPrompt {
 
     /**
      * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response

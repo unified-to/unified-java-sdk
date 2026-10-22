@@ -79,6 +79,9 @@ public class Campaign {
     /**
      * Create a campaign
      * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
      * @return The call builder
      */
     public CreateAdsCampaignRequestBuilder createAdsCampaign() {
@@ -87,6 +90,9 @@ public class Campaign {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -101,6 +107,9 @@ public class Campaign {
     /**
      * Create a campaign
      * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
      * @return The call builder
      */
     public CreateMartechCampaignRequestBuilder createMartechCampaign() {
@@ -109,6 +118,9 @@ public class Campaign {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -123,6 +135,9 @@ public class Campaign {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsCampaignRequestBuilder getAdsCampaign() {
@@ -131,6 +146,9 @@ public class Campaign {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -145,6 +163,9 @@ public class Campaign {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMartechCampaignRequestBuilder getMartechCampaign() {
@@ -153,6 +174,9 @@ public class Campaign {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -167,6 +191,13 @@ public class Campaign {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
@@ -175,6 +206,13 @@ public class Campaign {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -189,6 +227,13 @@ public class Campaign {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
@@ -197,6 +242,13 @@ public class Campaign {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -211,6 +263,9 @@ public class Campaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
@@ -219,6 +274,9 @@ public class Campaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -233,6 +291,9 @@ public class Campaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
@@ -241,6 +302,9 @@ public class Campaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -255,6 +319,8 @@ public class Campaign {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
@@ -263,6 +329,8 @@ public class Campaign {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -277,6 +345,8 @@ public class Campaign {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
@@ -285,6 +355,8 @@ public class Campaign {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -299,6 +371,9 @@ public class Campaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
@@ -307,6 +382,9 @@ public class Campaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -321,6 +399,9 @@ public class Campaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
@@ -329,6 +410,9 @@ public class Campaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

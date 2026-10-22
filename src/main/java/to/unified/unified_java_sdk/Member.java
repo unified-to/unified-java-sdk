@@ -63,6 +63,9 @@ public class Member {
     /**
      * Create a member
      * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
      * @return The call builder
      */
     public CreateMartechMemberRequestBuilder createMartechMember() {
@@ -71,6 +74,9 @@ public class Member {
 
     /**
      * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -85,6 +91,9 @@ public class Member {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsMemberRequestBuilder getClubsMember() {
@@ -93,6 +102,9 @@ public class Member {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -107,6 +119,9 @@ public class Member {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMartechMemberRequestBuilder getMartechMember() {
@@ -115,6 +130,9 @@ public class Member {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +147,13 @@ public class Member {
     /**
      * List all members
      * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsMembersRequestBuilder listClubsMembers() {
@@ -137,6 +162,13 @@ public class Member {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +183,13 @@ public class Member {
     /**
      * List all members
      * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechMembersRequestBuilder listMartechMembers() {
@@ -159,6 +198,13 @@ public class Member {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +219,9 @@ public class Member {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchMartechMemberRequestBuilder patchMartechMember() {
@@ -181,6 +230,9 @@ public class Member {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +247,8 @@ public class Member {
     /**
      * Remove a member
      * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMartechMemberRequestBuilder removeMartechMember() {
@@ -203,6 +257,8 @@ public class Member {
 
     /**
      * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +273,9 @@ public class Member {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMartechMemberRequestBuilder updateMartechMember() {
@@ -225,6 +284,9 @@ public class Member {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

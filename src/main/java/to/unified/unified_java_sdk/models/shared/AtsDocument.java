@@ -24,7 +24,9 @@ public class AtsDocument {
     @JsonProperty("application_id")
     private String applicationId;
 
-
+    /**
+     * The ID of the candidate the document belongs to (an AtsCandidate ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private String candidateId;
@@ -51,7 +53,9 @@ public class AtsDocument {
     @JsonProperty("document_url")
     private String documentUrl;
 
-
+    /**
+     * The document's file name, including its extension (e.g. resume.pdf)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     private String filename;
@@ -76,7 +80,9 @@ public class AtsDocument {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The kind of document
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AtsDocumentType type;
@@ -137,6 +143,9 @@ public class AtsDocument {
         return Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * The ID of the candidate the document belongs to (an AtsCandidate ID)
+     */
     public Optional<String> candidateId() {
         return Optional.ofNullable(this.candidateId);
     }
@@ -163,6 +172,9 @@ public class AtsDocument {
         return Optional.ofNullable(this.documentUrl);
     }
 
+    /**
+     * The document's file name, including its extension (e.g. resume.pdf)
+     */
     public Optional<String> filename() {
         return Optional.ofNullable(this.filename);
     }
@@ -183,6 +195,9 @@ public class AtsDocument {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The kind of document
+     */
     public Optional<AtsDocumentType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -212,6 +227,9 @@ public class AtsDocument {
     }
 
 
+    /**
+     * The ID of the candidate the document belongs to (an AtsCandidate ID)
+     */
     public AtsDocument withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -246,6 +264,9 @@ public class AtsDocument {
     }
 
 
+    /**
+     * The document's file name, including its extension (e.g. resume.pdf)
+     */
     public AtsDocument withFilename(@Nullable String filename) {
         this.filename = filename;
         return this;
@@ -276,6 +297,9 @@ public class AtsDocument {
     }
 
 
+    /**
+     * The kind of document
+     */
     public AtsDocument withType(@Nullable AtsDocumentType type) {
         this.type = type;
         return this;
@@ -391,6 +415,9 @@ public class AtsDocument {
             return this;
         }
 
+        /**
+         * The ID of the candidate the document belongs to (an AtsCandidate ID)
+         */
         public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
@@ -421,6 +448,9 @@ public class AtsDocument {
             return this;
         }
 
+        /**
+         * The document's file name, including its extension (e.g. resume.pdf)
+         */
         public Builder filename(@Nullable String filename) {
             this.filename = filename;
             return this;
@@ -446,6 +476,9 @@ public class AtsDocument {
             return this;
         }
 
+        /**
+         * The kind of document
+         */
         public Builder type(@Nullable AtsDocumentType type) {
             this.type = type;
             return this;

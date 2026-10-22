@@ -153,6 +153,9 @@ public class AsyncRepo {
     /**
      * Create a branch
      * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
+     * 
      * @return The async call builder
      */
     public CreateRepoBranchRequestBuilder createRepoBranch() {
@@ -161,6 +164,9 @@ public class AsyncRepo {
 
     /**
      * Create a branch
+     * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoBranchResponse>} - The async response
@@ -176,6 +182,9 @@ public class AsyncRepo {
     /**
      * Create a commit
      * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
+     * 
      * @return The async call builder
      */
     public CreateRepoCommitRequestBuilder createRepoCommit() {
@@ -184,6 +193,9 @@ public class AsyncRepo {
 
     /**
      * Create a commit
+     * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoCommitResponse>} - The async response
@@ -199,6 +211,9 @@ public class AsyncRepo {
     /**
      * Create an organization
      * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
+     * 
      * @return The async call builder
      */
     public CreateRepoOrganizationRequestBuilder createRepoOrganization() {
@@ -207,6 +222,9 @@ public class AsyncRepo {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
@@ -222,6 +240,9 @@ public class AsyncRepo {
     /**
      * Create a pullrequest
      * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
+     * 
      * @return The async call builder
      */
     public CreateRepoPullrequestRequestBuilder createRepoPullrequest() {
@@ -230,6 +251,9 @@ public class AsyncRepo {
 
     /**
      * Create a pullrequest
+     * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoPullrequestResponse>} - The async response
@@ -245,6 +269,9 @@ public class AsyncRepo {
     /**
      * Create a repository
      * 
+     * <p>Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoRepository.
+     * 
      * @return The async call builder
      */
     public CreateRepoRepositoryRequestBuilder createRepoRepository() {
@@ -253,6 +280,9 @@ public class AsyncRepo {
 
     /**
      * Create a repository
+     * 
+     * <p>Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoRepository.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoRepositoryResponse>} - The async response
@@ -268,6 +298,9 @@ public class AsyncRepo {
     /**
      * Retrieve a branch
      * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoBranchRequestBuilder getRepoBranch() {
@@ -276,6 +309,9 @@ public class AsyncRepo {
 
     /**
      * Retrieve a branch
+     * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoBranchResponse>} - The async response
@@ -291,6 +327,9 @@ public class AsyncRepo {
     /**
      * Retrieve a commit
      * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoCommitRequestBuilder getRepoCommit() {
@@ -299,6 +338,9 @@ public class AsyncRepo {
 
     /**
      * Retrieve a commit
+     * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoCommitResponse>} - The async response
@@ -314,6 +356,9 @@ public class AsyncRepo {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoOrganizationRequestBuilder getRepoOrganization() {
@@ -322,6 +367,9 @@ public class AsyncRepo {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
@@ -337,6 +385,9 @@ public class AsyncRepo {
     /**
      * Retrieve a pullrequest
      * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoPullrequestRequestBuilder getRepoPullrequest() {
@@ -345,6 +396,9 @@ public class AsyncRepo {
 
     /**
      * Retrieve a pullrequest
+     * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoPullrequestResponse>} - The async response
@@ -360,6 +414,9 @@ public class AsyncRepo {
     /**
      * Retrieve a repository
      * 
+     * <p>Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoRepositoryRequestBuilder getRepoRepository() {
@@ -368,6 +425,9 @@ public class AsyncRepo {
 
     /**
      * Retrieve a repository
+     * 
+     * <p>Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoRepositoryResponse>} - The async response
@@ -383,6 +443,13 @@ public class AsyncRepo {
     /**
      * List all branches
      * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoBranchesRequestBuilder listRepoBranches() {
@@ -391,6 +458,13 @@ public class AsyncRepo {
 
     /**
      * List all branches
+     * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoBranchesResponse>} - The async response
@@ -406,6 +480,13 @@ public class AsyncRepo {
     /**
      * List all commits
      * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoCommitsRequestBuilder listRepoCommits() {
@@ -414,6 +495,13 @@ public class AsyncRepo {
 
     /**
      * List all commits
+     * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoCommitsResponse>} - The async response
@@ -429,6 +517,13 @@ public class AsyncRepo {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
@@ -437,6 +532,13 @@ public class AsyncRepo {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
@@ -452,6 +554,13 @@ public class AsyncRepo {
     /**
      * List all pullrequests
      * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoPullrequestsRequestBuilder listRepoPullrequests() {
@@ -460,6 +569,13 @@ public class AsyncRepo {
 
     /**
      * List all pullrequests
+     * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoPullrequestsResponse>} - The async response
@@ -475,6 +591,13 @@ public class AsyncRepo {
     /**
      * List all repositories
      * 
+     * <p>Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoRepositoriesRequestBuilder listRepoRepositories() {
@@ -483,6 +606,13 @@ public class AsyncRepo {
 
     /**
      * List all repositories
+     * 
+     * <p>Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoRepositoriesResponse>} - The async response
@@ -498,6 +628,9 @@ public class AsyncRepo {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoBranchRequestBuilder patchRepoBranch() {
@@ -506,6 +639,9 @@ public class AsyncRepo {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoBranchResponse>} - The async response
@@ -521,6 +657,9 @@ public class AsyncRepo {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoCommitRequestBuilder patchRepoCommit() {
@@ -529,6 +668,9 @@ public class AsyncRepo {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoCommitResponse>} - The async response
@@ -544,6 +686,9 @@ public class AsyncRepo {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoOrganizationRequestBuilder patchRepoOrganization() {
@@ -552,6 +697,9 @@ public class AsyncRepo {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
@@ -567,6 +715,9 @@ public class AsyncRepo {
     /**
      * Update a pullrequest
      * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoPullrequestRequestBuilder patchRepoPullrequest() {
@@ -575,6 +726,9 @@ public class AsyncRepo {
 
     /**
      * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoPullrequestResponse>} - The async response
@@ -590,6 +744,9 @@ public class AsyncRepo {
     /**
      * Update a repository
      * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoRepositoryRequestBuilder patchRepoRepository() {
@@ -598,6 +755,9 @@ public class AsyncRepo {
 
     /**
      * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoRepositoryResponse>} - The async response
@@ -613,6 +773,8 @@ public class AsyncRepo {
     /**
      * Remove a branch
      * 
+     * <p>Deletes the RepoBranch identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoBranchRequestBuilder removeRepoBranch() {
@@ -621,6 +783,8 @@ public class AsyncRepo {
 
     /**
      * Remove a branch
+     * 
+     * <p>Deletes the RepoBranch identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoBranchResponse>} - The async response
@@ -636,6 +800,8 @@ public class AsyncRepo {
     /**
      * Remove a commit
      * 
+     * <p>Deletes the RepoCommit identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoCommitRequestBuilder removeRepoCommit() {
@@ -644,6 +810,8 @@ public class AsyncRepo {
 
     /**
      * Remove a commit
+     * 
+     * <p>Deletes the RepoCommit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoCommitResponse>} - The async response
@@ -659,6 +827,8 @@ public class AsyncRepo {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the RepoOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
@@ -667,6 +837,8 @@ public class AsyncRepo {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the RepoOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
@@ -682,6 +854,8 @@ public class AsyncRepo {
     /**
      * Remove a pullrequest
      * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoPullrequestRequestBuilder removeRepoPullrequest() {
@@ -690,6 +864,8 @@ public class AsyncRepo {
 
     /**
      * Remove a pullrequest
+     * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoPullrequestResponse>} - The async response
@@ -705,6 +881,8 @@ public class AsyncRepo {
     /**
      * Remove a repository
      * 
+     * <p>Deletes the RepoRepository identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoRepositoryRequestBuilder removeRepoRepository() {
@@ -713,6 +891,8 @@ public class AsyncRepo {
 
     /**
      * Remove a repository
+     * 
+     * <p>Deletes the RepoRepository identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoRepositoryResponse>} - The async response
@@ -728,6 +908,9 @@ public class AsyncRepo {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoBranchRequestBuilder updateRepoBranch() {
@@ -736,6 +919,9 @@ public class AsyncRepo {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoBranchResponse>} - The async response
@@ -751,6 +937,9 @@ public class AsyncRepo {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoCommitRequestBuilder updateRepoCommit() {
@@ -759,6 +948,9 @@ public class AsyncRepo {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoCommitResponse>} - The async response
@@ -774,6 +966,9 @@ public class AsyncRepo {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoOrganizationRequestBuilder updateRepoOrganization() {
@@ -782,6 +977,9 @@ public class AsyncRepo {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response
@@ -797,6 +995,9 @@ public class AsyncRepo {
     /**
      * Update a pullrequest
      * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoPullrequestRequestBuilder updateRepoPullrequest() {
@@ -805,6 +1006,9 @@ public class AsyncRepo {
 
     /**
      * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoPullrequestResponse>} - The async response
@@ -820,6 +1024,9 @@ public class AsyncRepo {
     /**
      * Update a repository
      * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoRepositoryRequestBuilder updateRepoRepository() {
@@ -828,6 +1035,9 @@ public class AsyncRepo {
 
     /**
      * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoRepositoryResponse>} - The async response

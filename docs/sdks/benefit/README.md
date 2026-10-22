@@ -13,7 +13,7 @@
 
 ## createHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -49,13 +49,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("1e8dafd1-6468-474c-8257-ae13c09b5129")
+                    .id("d784f8fe-b082-43c2-8d50-2c14180ce0cf")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.918Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.549Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,7 +89,7 @@ public class Application {
 
 ## getHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -240,13 +240,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("5b7abc08-8c64-4b58-9cdb-809a5bbf8823")
+                    .id("7bad80a5-2a97-4c1c-8c30-7d26eabda80b")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.927Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.558Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -373,13 +373,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("5b7abc08-8c64-4b58-9cdb-809a5bbf8823")
+                    .id("7bad80a5-2a97-4c1c-8c30-7d26eabda80b")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-20T20:21:53.927Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-21T07:14:16.558Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

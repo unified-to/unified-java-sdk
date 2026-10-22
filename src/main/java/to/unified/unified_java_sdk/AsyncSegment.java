@@ -57,6 +57,9 @@ public class AsyncSegment {
     /**
      * Create a segment
      * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
      * @return The async call builder
      */
     public CreateCdpSegmentRequestBuilder createCdpSegment() {
@@ -65,6 +68,9 @@ public class AsyncSegment {
 
     /**
      * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpSegmentResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncSegment {
     /**
      * Retrieve a segment
      * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpSegmentRequestBuilder getCdpSegment() {
@@ -88,6 +97,9 @@ public class AsyncSegment {
 
     /**
      * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpSegmentResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncSegment {
     /**
      * List all segments
      * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpSegmentsRequestBuilder listCdpSegments() {
@@ -111,6 +130,13 @@ public class AsyncSegment {
 
     /**
      * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpSegmentsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncSegment {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpSegmentRequestBuilder patchCdpSegment() {
@@ -134,6 +163,9 @@ public class AsyncSegment {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpSegmentResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncSegment {
     /**
      * Remove a segment
      * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpSegmentRequestBuilder removeCdpSegment() {
@@ -157,6 +191,8 @@ public class AsyncSegment {
 
     /**
      * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpSegmentResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncSegment {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpSegmentRequestBuilder updateCdpSegment() {
@@ -180,6 +219,9 @@ public class AsyncSegment {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpSegmentResponse>} - The async response

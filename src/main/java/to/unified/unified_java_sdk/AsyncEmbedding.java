@@ -37,6 +37,9 @@ public class AsyncEmbedding {
     /**
      * Create an embedding
      * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
      * @return The async call builder
      */
     public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
@@ -45,6 +48,9 @@ public class AsyncEmbedding {
 
     /**
      * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response

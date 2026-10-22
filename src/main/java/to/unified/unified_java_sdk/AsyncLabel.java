@@ -57,6 +57,9 @@ public class AsyncLabel {
     /**
      * Create a label
      * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
+     * 
      * @return The async call builder
      */
     public CreateShippingLabelRequestBuilder createShippingLabel() {
@@ -65,6 +68,9 @@ public class AsyncLabel {
 
     /**
      * Create a label
+     * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingLabelResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncLabel {
     /**
      * Retrieve a label
      * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetShippingLabelRequestBuilder getShippingLabel() {
@@ -88,6 +97,9 @@ public class AsyncLabel {
 
     /**
      * Retrieve a label
+     * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingLabelResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncLabel {
     /**
      * List all labels
      * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListShippingLabelsRequestBuilder listShippingLabels() {
@@ -111,6 +130,13 @@ public class AsyncLabel {
 
     /**
      * List all labels
+     * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingLabelsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncLabel {
     /**
      * Update a label
      * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchShippingLabelRequestBuilder patchShippingLabel() {
@@ -134,6 +163,9 @@ public class AsyncLabel {
 
     /**
      * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchShippingLabelResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncLabel {
     /**
      * Remove a label
      * 
+     * <p>Deletes the ShippingLabel identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveShippingLabelRequestBuilder removeShippingLabel() {
@@ -157,6 +191,8 @@ public class AsyncLabel {
 
     /**
      * Remove a label
+     * 
+     * <p>Deletes the ShippingLabel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveShippingLabelResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncLabel {
     /**
      * Update a label
      * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateShippingLabelRequestBuilder updateShippingLabel() {
@@ -180,6 +219,9 @@ public class AsyncLabel {
 
     /**
      * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateShippingLabelResponse>} - The async response

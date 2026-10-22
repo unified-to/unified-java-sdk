@@ -13,7 +13,7 @@
 
 ## createComputeDomain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -42,12 +42,12 @@ public class Application {
         CreateComputeDomainRequest req = CreateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("34c17795-0ba3-4d5b-a58c-2023a01c3026")
+                    .id("2bdbc93e-5feb-4074-a9fb-5ff67c88509b")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.795Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.672Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -81,7 +81,7 @@ public class Application {
 
 ## getComputeDomain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ public class Application {
 
 ## listComputeDomains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ public class Application {
 
 ## patchComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -225,12 +225,12 @@ public class Application {
         PatchComputeDomainRequest req = PatchComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("78fc5e22-26c0-4ec1-b03d-802493df3d05")
+                    .id("ed820268-bac9-4c62-bfe9-6594add307ce")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.800Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.677Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -265,7 +265,7 @@ public class Application {
 
 ## removeComputeDomain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -321,7 +321,7 @@ public class Application {
 
 ## updateComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -350,12 +350,12 @@ public class Application {
         UpdateComputeDomainRequest req = UpdateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("78fc5e22-26c0-4ec1-b03d-802493df3d05")
+                    .id("ed820268-bac9-4c62-bfe9-6594add307ce")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.800Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.677Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

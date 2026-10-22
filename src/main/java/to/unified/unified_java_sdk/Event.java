@@ -131,6 +131,9 @@ public class Event {
     /**
      * Create an event
      * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
      * @return The call builder
      */
     public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
@@ -139,6 +142,9 @@ public class Event {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -153,6 +159,9 @@ public class Event {
     /**
      * Create an event
      * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
      * @return The call builder
      */
     public CreateCalendarEventRequestBuilder createCalendarEvent() {
@@ -161,6 +170,9 @@ public class Event {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -175,6 +187,9 @@ public class Event {
     /**
      * Create an event
      * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
      * @return The call builder
      */
     public CreateCdpEventRequestBuilder createCdpEvent() {
@@ -183,6 +198,9 @@ public class Event {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -197,6 +215,9 @@ public class Event {
     /**
      * Create an event
      * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
      * @return The call builder
      */
     public CreateCrmEventRequestBuilder createCrmEvent() {
@@ -205,6 +226,9 @@ public class Event {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -219,6 +243,9 @@ public class Event {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
@@ -227,6 +254,9 @@ public class Event {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -241,6 +271,9 @@ public class Event {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarEventRequestBuilder getCalendarEvent() {
@@ -249,6 +282,9 @@ public class Event {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -263,6 +299,9 @@ public class Event {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpEventRequestBuilder getCdpEvent() {
@@ -271,6 +310,9 @@ public class Event {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -285,6 +327,9 @@ public class Event {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsEventRequestBuilder getClubsEvent() {
@@ -293,6 +338,9 @@ public class Event {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -307,6 +355,9 @@ public class Event {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmEventRequestBuilder getCrmEvent() {
@@ -315,6 +366,9 @@ public class Event {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -329,6 +383,13 @@ public class Event {
     /**
      * List all events
      * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
@@ -337,6 +398,13 @@ public class Event {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -351,6 +419,13 @@ public class Event {
     /**
      * List all events
      * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarEventsRequestBuilder listCalendarEvents() {
@@ -359,6 +434,13 @@ public class Event {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -373,6 +455,13 @@ public class Event {
     /**
      * List all events
      * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpEventsRequestBuilder listCdpEvents() {
@@ -381,6 +470,13 @@ public class Event {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -395,6 +491,13 @@ public class Event {
     /**
      * List all events
      * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsEventsRequestBuilder listClubsEvents() {
@@ -403,6 +506,13 @@ public class Event {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -417,6 +527,13 @@ public class Event {
     /**
      * List all events
      * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmEventsRequestBuilder listCrmEvents() {
@@ -425,6 +542,13 @@ public class Event {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -439,6 +563,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarEventRequestBuilder patchCalendarEvent() {
@@ -447,6 +574,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -461,6 +591,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpEventRequestBuilder patchCdpEvent() {
@@ -469,6 +602,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -483,6 +619,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmEventRequestBuilder patchCrmEvent() {
@@ -491,6 +630,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -505,6 +647,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchMessagingEventRequestBuilder patchMessagingEvent() {
@@ -513,6 +658,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -527,6 +675,8 @@ public class Event {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
@@ -535,6 +685,8 @@ public class Event {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -549,6 +701,8 @@ public class Event {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpEventRequestBuilder removeCdpEvent() {
@@ -557,6 +711,8 @@ public class Event {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -571,6 +727,8 @@ public class Event {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmEventRequestBuilder removeCrmEvent() {
@@ -579,6 +737,8 @@ public class Event {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -593,6 +753,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
@@ -601,6 +764,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -615,6 +781,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpEventRequestBuilder updateCdpEvent() {
@@ -623,6 +792,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -637,6 +809,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmEventRequestBuilder updateCrmEvent() {
@@ -645,6 +820,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -659,6 +837,9 @@ public class Event {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
@@ -667,6 +848,9 @@ public class Event {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

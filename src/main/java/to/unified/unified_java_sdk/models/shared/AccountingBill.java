@@ -98,7 +98,9 @@ public class AccountingBill {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * The bill's line items: what is billed, with the quantity, price and amount of each
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private List<AccountingLineitem> lineitems;
@@ -413,6 +415,9 @@ public class AccountingBill {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * The bill's line items: what is billed, with the quantity, price and amount of each
+     */
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
     }
@@ -649,6 +654,9 @@ public class AccountingBill {
     }
 
 
+    /**
+     * The bill's line items: what is billed, with the quantity, price and amount of each
+     */
     public AccountingBill withLineitems(@Nullable List<AccountingLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
@@ -1111,6 +1119,9 @@ public class AccountingBill {
             return this;
         }
 
+        /**
+         * The bill's line items: what is billed, with the quantity, price and amount of each
+         */
         public Builder lineitems(@Nullable List<AccountingLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;

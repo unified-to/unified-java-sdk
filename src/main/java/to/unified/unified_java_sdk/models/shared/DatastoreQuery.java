@@ -28,7 +28,10 @@ public class DatastoreQuery {
     @JsonProperty("metadata")
     private List<DatastoreMetadata> metadata;
 
-
+    /**
+     * What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset,
+     * aggregate)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     private PropertyDatastoreQueryQuery query;
@@ -77,6 +80,10 @@ public class DatastoreQuery {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset,
+     * aggregate)
+     */
     public Optional<PropertyDatastoreQueryQuery> query() {
         return Optional.ofNullable(this.query);
     }
@@ -110,6 +117,10 @@ public class DatastoreQuery {
     }
 
 
+    /**
+     * What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset,
+     * aggregate)
+     */
     public DatastoreQuery withQuery(@Nullable PropertyDatastoreQueryQuery query) {
         this.query = query;
         return this;
@@ -199,6 +210,10 @@ public class DatastoreQuery {
             return this;
         }
 
+        /**
+         * What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset,
+         * aggregate)
+         */
         public Builder query(@Nullable PropertyDatastoreQueryQuery query) {
             this.query = query;
             return this;

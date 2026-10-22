@@ -28,7 +28,9 @@ public class MetadataMetadata {
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The data type of the custom field's values
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private MetadataMetadataFormat format;
@@ -45,7 +47,9 @@ public class MetadataMetadata {
     @JsonProperty("is_required")
     private Boolean isRequired;
 
-
+    /**
+     * The display name of the custom field
+     */
     @JsonProperty("name")
     private String name;
 
@@ -134,6 +138,9 @@ public class MetadataMetadata {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The data type of the custom field's values
+     */
     public Optional<MetadataMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
@@ -149,6 +156,9 @@ public class MetadataMetadata {
         return Optional.ofNullable(this.isRequired);
     }
 
+    /**
+     * The display name of the custom field
+     */
     public String name() {
         return this.name;
     }
@@ -202,6 +212,9 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * The data type of the custom field's values
+     */
     public MetadataMetadata withFormat(@Nullable MetadataMetadataFormat format) {
         this.format = format;
         return this;
@@ -223,6 +236,9 @@ public class MetadataMetadata {
     }
 
 
+    /**
+     * The display name of the custom field
+     */
     public MetadataMetadata withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
@@ -367,6 +383,9 @@ public class MetadataMetadata {
             return this;
         }
 
+        /**
+         * The data type of the custom field's values
+         */
         public Builder format(@Nullable MetadataMetadataFormat format) {
             this.format = format;
             return this;
@@ -385,6 +404,9 @@ public class MetadataMetadata {
             return this;
         }
 
+        /**
+         * The display name of the custom field
+         */
         public Builder name(@Nonnull String name) {
             this.name = Utils.checkNotNull(name, "name");
             return this;

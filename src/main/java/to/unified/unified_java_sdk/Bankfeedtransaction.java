@@ -55,6 +55,10 @@ public class Bankfeedtransaction {
     /**
      * Create a bankfeedtransaction
      * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
      * @return The call builder
      */
     public CreateAccountingBankfeedtransactionRequestBuilder createAccountingBankfeedtransaction() {
@@ -63,6 +67,10 @@ public class Bankfeedtransaction {
 
     /**
      * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +85,9 @@ public class Bankfeedtransaction {
     /**
      * Retrieve a bankfeedtransaction
      * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingBankfeedtransactionRequestBuilder getAccountingBankfeedtransaction() {
@@ -85,6 +96,9 @@ public class Bankfeedtransaction {
 
     /**
      * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +113,14 @@ public class Bankfeedtransaction {
     /**
      * List all bankfeedtransactions
      * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingBankfeedtransactionsRequestBuilder listAccountingBankfeedtransactions() {
@@ -107,6 +129,14 @@ public class Bankfeedtransaction {
 
     /**
      * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +151,9 @@ public class Bankfeedtransaction {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingBankfeedtransactionRequestBuilder patchAccountingBankfeedtransaction() {
@@ -129,6 +162,9 @@ public class Bankfeedtransaction {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +179,8 @@ public class Bankfeedtransaction {
     /**
      * Remove a bankfeedtransaction
      * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingBankfeedtransactionRequestBuilder removeAccountingBankfeedtransaction() {
@@ -151,6 +189,8 @@ public class Bankfeedtransaction {
 
     /**
      * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +205,9 @@ public class Bankfeedtransaction {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingBankfeedtransactionRequestBuilder updateAccountingBankfeedtransaction() {
@@ -173,6 +216,9 @@ public class Bankfeedtransaction {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

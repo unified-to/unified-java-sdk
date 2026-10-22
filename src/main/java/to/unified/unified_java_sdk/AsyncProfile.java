@@ -65,6 +65,9 @@ public class AsyncProfile {
     /**
      * Create a profile
      * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
      * @return The async call builder
      */
     public CreateCdpProfileRequestBuilder createCdpProfile() {
@@ -73,6 +76,9 @@ public class AsyncProfile {
 
     /**
      * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpProfileResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncProfile {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpProfileRequestBuilder getCdpProfile() {
@@ -96,6 +105,9 @@ public class AsyncProfile {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpProfileResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncProfile {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialProfileRequestBuilder getSocialProfile() {
@@ -119,6 +134,9 @@ public class AsyncProfile {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncProfile {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpProfilesRequestBuilder listCdpProfiles() {
@@ -142,6 +167,13 @@ public class AsyncProfile {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpProfilesResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncProfile {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialProfilesRequestBuilder listSocialProfiles() {
@@ -165,6 +204,13 @@ public class AsyncProfile {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncProfile {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpProfileRequestBuilder patchCdpProfile() {
@@ -188,6 +237,9 @@ public class AsyncProfile {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpProfileResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncProfile {
     /**
      * Remove a profile
      * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpProfileRequestBuilder removeCdpProfile() {
@@ -211,6 +265,8 @@ public class AsyncProfile {
 
     /**
      * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpProfileResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncProfile {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpProfileRequestBuilder updateCdpProfile() {
@@ -234,6 +293,9 @@ public class AsyncProfile {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpProfileResponse>} - The async response

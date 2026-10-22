@@ -259,6 +259,9 @@ public class Compute {
     /**
      * Create a deployment
      * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
      * @return The call builder
      */
     public CreateComputeDeploymentRequestBuilder createComputeDeployment() {
@@ -267,6 +270,9 @@ public class Compute {
 
     /**
      * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -281,6 +287,9 @@ public class Compute {
     /**
      * Create a domain
      * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
      * @return The call builder
      */
     public CreateComputeDomainRequestBuilder createComputeDomain() {
@@ -289,6 +298,9 @@ public class Compute {
 
     /**
      * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -303,6 +315,9 @@ public class Compute {
     /**
      * Create an envvar
      * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
      * @return The call builder
      */
     public CreateComputeEnvvarRequestBuilder createComputeEnvvar() {
@@ -311,6 +326,9 @@ public class Compute {
 
     /**
      * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -325,6 +343,9 @@ public class Compute {
     /**
      * Create an instance
      * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
      * @return The call builder
      */
     public CreateComputeInstanceRequestBuilder createComputeInstance() {
@@ -333,6 +354,9 @@ public class Compute {
 
     /**
      * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -347,6 +371,9 @@ public class Compute {
     /**
      * Create a key
      * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
      * @return The call builder
      */
     public CreateComputeKeyRequestBuilder createComputeKey() {
@@ -355,6 +382,9 @@ public class Compute {
 
     /**
      * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -369,6 +399,9 @@ public class Compute {
     /**
      * Create a service
      * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
+     * 
      * @return The call builder
      */
     public CreateComputeServiceRequestBuilder createComputeService() {
@@ -377,6 +410,9 @@ public class Compute {
 
     /**
      * Create a service
+     * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -391,6 +427,9 @@ public class Compute {
     /**
      * Create a snapshot
      * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
+     * 
      * @return The call builder
      */
     public CreateComputeSnapshotRequestBuilder createComputeSnapshot() {
@@ -399,6 +438,9 @@ public class Compute {
 
     /**
      * Create a snapshot
+     * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -413,6 +455,9 @@ public class Compute {
     /**
      * Create a template
      * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
      * @return The call builder
      */
     public CreateComputeTemplateRequestBuilder createComputeTemplate() {
@@ -421,6 +466,9 @@ public class Compute {
 
     /**
      * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -435,6 +483,9 @@ public class Compute {
     /**
      * Create a volume
      * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
      * @return The call builder
      */
     public CreateComputeVolumeRequestBuilder createComputeVolume() {
@@ -443,6 +494,9 @@ public class Compute {
 
     /**
      * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -457,6 +511,9 @@ public class Compute {
     /**
      * Retrieve a deployment
      * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeDeploymentRequestBuilder getComputeDeployment() {
@@ -465,6 +522,9 @@ public class Compute {
 
     /**
      * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -479,6 +539,9 @@ public class Compute {
     /**
      * Retrieve a domain
      * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeDomainRequestBuilder getComputeDomain() {
@@ -487,6 +550,9 @@ public class Compute {
 
     /**
      * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -501,6 +567,9 @@ public class Compute {
     /**
      * Retrieve an envvar
      * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeEnvvarRequestBuilder getComputeEnvvar() {
@@ -509,6 +578,9 @@ public class Compute {
 
     /**
      * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -523,6 +595,9 @@ public class Compute {
     /**
      * Retrieve a gputype
      * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeGputypeRequestBuilder getComputeGputype() {
@@ -531,6 +606,9 @@ public class Compute {
 
     /**
      * Retrieve a gputype
+     * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -545,6 +623,9 @@ public class Compute {
     /**
      * Retrieve an instance
      * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeInstanceRequestBuilder getComputeInstance() {
@@ -553,6 +634,9 @@ public class Compute {
 
     /**
      * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -567,6 +651,9 @@ public class Compute {
     /**
      * Retrieve a key
      * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeKeyRequestBuilder getComputeKey() {
@@ -575,6 +662,9 @@ public class Compute {
 
     /**
      * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -589,6 +679,9 @@ public class Compute {
     /**
      * Retrieve a region
      * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeRegionRequestBuilder getComputeRegion() {
@@ -597,6 +690,9 @@ public class Compute {
 
     /**
      * Retrieve a region
+     * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -611,6 +707,9 @@ public class Compute {
     /**
      * Retrieve a service
      * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeServiceRequestBuilder getComputeService() {
@@ -619,6 +718,9 @@ public class Compute {
 
     /**
      * Retrieve a service
+     * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -633,6 +735,9 @@ public class Compute {
     /**
      * Retrieve a snapshot
      * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeSnapshotRequestBuilder getComputeSnapshot() {
@@ -641,6 +746,9 @@ public class Compute {
 
     /**
      * Retrieve a snapshot
+     * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -655,6 +763,9 @@ public class Compute {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeTemplateRequestBuilder getComputeTemplate() {
@@ -663,6 +774,9 @@ public class Compute {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -677,6 +791,9 @@ public class Compute {
     /**
      * Retrieve a volume
      * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeVolumeRequestBuilder getComputeVolume() {
@@ -685,6 +802,9 @@ public class Compute {
 
     /**
      * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -699,6 +819,13 @@ public class Compute {
     /**
      * List all deployments
      * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeDeploymentsRequestBuilder listComputeDeployments() {
@@ -707,6 +834,13 @@ public class Compute {
 
     /**
      * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -721,6 +855,13 @@ public class Compute {
     /**
      * List all domains
      * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeDomainsRequestBuilder listComputeDomains() {
@@ -729,6 +870,13 @@ public class Compute {
 
     /**
      * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -743,6 +891,13 @@ public class Compute {
     /**
      * List all envvars
      * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeEnvvarsRequestBuilder listComputeEnvvars() {
@@ -751,6 +906,13 @@ public class Compute {
 
     /**
      * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -765,6 +927,13 @@ public class Compute {
     /**
      * List all gputypes
      * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeGputypesRequestBuilder listComputeGputypes() {
@@ -773,6 +942,13 @@ public class Compute {
 
     /**
      * List all gputypes
+     * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -787,6 +963,13 @@ public class Compute {
     /**
      * List all instances
      * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeInstancesRequestBuilder listComputeInstances() {
@@ -795,6 +978,13 @@ public class Compute {
 
     /**
      * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -809,6 +999,13 @@ public class Compute {
     /**
      * List all keys
      * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeKeysRequestBuilder listComputeKeys() {
@@ -817,6 +1014,13 @@ public class Compute {
 
     /**
      * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -831,6 +1035,13 @@ public class Compute {
     /**
      * List all regions
      * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeRegionsRequestBuilder listComputeRegions() {
@@ -839,6 +1050,13 @@ public class Compute {
 
     /**
      * List all regions
+     * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -853,6 +1071,13 @@ public class Compute {
     /**
      * List all services
      * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeServicesRequestBuilder listComputeServices() {
@@ -861,6 +1086,13 @@ public class Compute {
 
     /**
      * List all services
+     * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -875,6 +1107,13 @@ public class Compute {
     /**
      * List all snapshots
      * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeSnapshotsRequestBuilder listComputeSnapshots() {
@@ -883,6 +1122,13 @@ public class Compute {
 
     /**
      * List all snapshots
+     * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -897,6 +1143,13 @@ public class Compute {
     /**
      * List all templates
      * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeTemplatesRequestBuilder listComputeTemplates() {
@@ -905,6 +1158,13 @@ public class Compute {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -919,6 +1179,13 @@ public class Compute {
     /**
      * List all usages
      * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeUsagesRequestBuilder listComputeUsages() {
@@ -927,6 +1194,13 @@ public class Compute {
 
     /**
      * List all usages
+     * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -941,6 +1215,13 @@ public class Compute {
     /**
      * List all volumes
      * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeVolumesRequestBuilder listComputeVolumes() {
@@ -949,6 +1230,13 @@ public class Compute {
 
     /**
      * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -963,6 +1251,9 @@ public class Compute {
     /**
      * Update a deployment
      * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeDeploymentRequestBuilder patchComputeDeployment() {
@@ -971,6 +1262,9 @@ public class Compute {
 
     /**
      * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -985,6 +1279,9 @@ public class Compute {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeDomainRequestBuilder patchComputeDomain() {
@@ -993,6 +1290,9 @@ public class Compute {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1007,6 +1307,9 @@ public class Compute {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeEnvvarRequestBuilder patchComputeEnvvar() {
@@ -1015,6 +1318,9 @@ public class Compute {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1029,6 +1335,9 @@ public class Compute {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeInstanceRequestBuilder patchComputeInstance() {
@@ -1037,6 +1346,9 @@ public class Compute {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1051,6 +1363,9 @@ public class Compute {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchComputeKeyRequestBuilder patchComputeKey() {
@@ -1059,6 +1374,9 @@ public class Compute {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1073,6 +1391,9 @@ public class Compute {
     /**
      * Update a service
      * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeServiceRequestBuilder patchComputeService() {
@@ -1081,6 +1402,9 @@ public class Compute {
 
     /**
      * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1095,6 +1419,9 @@ public class Compute {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
@@ -1103,6 +1430,9 @@ public class Compute {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1117,6 +1447,9 @@ public class Compute {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeVolumeRequestBuilder patchComputeVolume() {
@@ -1125,6 +1458,9 @@ public class Compute {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1139,6 +1475,8 @@ public class Compute {
     /**
      * Remove a deployment
      * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeDeploymentRequestBuilder removeComputeDeployment() {
@@ -1147,6 +1485,8 @@ public class Compute {
 
     /**
      * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1161,6 +1501,8 @@ public class Compute {
     /**
      * Remove a domain
      * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeDomainRequestBuilder removeComputeDomain() {
@@ -1169,6 +1511,8 @@ public class Compute {
 
     /**
      * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1183,6 +1527,8 @@ public class Compute {
     /**
      * Remove an envvar
      * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeEnvvarRequestBuilder removeComputeEnvvar() {
@@ -1191,6 +1537,8 @@ public class Compute {
 
     /**
      * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1205,6 +1553,8 @@ public class Compute {
     /**
      * Remove an instance
      * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeInstanceRequestBuilder removeComputeInstance() {
@@ -1213,6 +1563,8 @@ public class Compute {
 
     /**
      * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1227,6 +1579,8 @@ public class Compute {
     /**
      * Remove a key
      * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeKeyRequestBuilder removeComputeKey() {
@@ -1235,6 +1589,8 @@ public class Compute {
 
     /**
      * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1249,6 +1605,8 @@ public class Compute {
     /**
      * Remove a service
      * 
+     * <p>Deletes the ComputeService identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeServiceRequestBuilder removeComputeService() {
@@ -1257,6 +1615,8 @@ public class Compute {
 
     /**
      * Remove a service
+     * 
+     * <p>Deletes the ComputeService identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1271,6 +1631,8 @@ public class Compute {
     /**
      * Remove a snapshot
      * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeSnapshotRequestBuilder removeComputeSnapshot() {
@@ -1279,6 +1641,8 @@ public class Compute {
 
     /**
      * Remove a snapshot
+     * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1293,6 +1657,8 @@ public class Compute {
     /**
      * Remove a template
      * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
@@ -1301,6 +1667,8 @@ public class Compute {
 
     /**
      * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1315,6 +1683,8 @@ public class Compute {
     /**
      * Remove a volume
      * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeVolumeRequestBuilder removeComputeVolume() {
@@ -1323,6 +1693,8 @@ public class Compute {
 
     /**
      * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1337,6 +1709,9 @@ public class Compute {
     /**
      * Update a deployment
      * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeDeploymentRequestBuilder updateComputeDeployment() {
@@ -1345,6 +1720,9 @@ public class Compute {
 
     /**
      * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1359,6 +1737,9 @@ public class Compute {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeDomainRequestBuilder updateComputeDomain() {
@@ -1367,6 +1748,9 @@ public class Compute {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1381,6 +1765,9 @@ public class Compute {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeEnvvarRequestBuilder updateComputeEnvvar() {
@@ -1389,6 +1776,9 @@ public class Compute {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1403,6 +1793,9 @@ public class Compute {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeInstanceRequestBuilder updateComputeInstance() {
@@ -1411,6 +1804,9 @@ public class Compute {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1425,6 +1821,9 @@ public class Compute {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeKeyRequestBuilder updateComputeKey() {
@@ -1433,6 +1832,9 @@ public class Compute {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1447,6 +1849,9 @@ public class Compute {
     /**
      * Update a service
      * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeServiceRequestBuilder updateComputeService() {
@@ -1455,6 +1860,9 @@ public class Compute {
 
     /**
      * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1469,6 +1877,9 @@ public class Compute {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
@@ -1477,6 +1888,9 @@ public class Compute {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1491,6 +1905,9 @@ public class Compute {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeVolumeRequestBuilder updateComputeVolume() {
@@ -1499,6 +1916,9 @@ public class Compute {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

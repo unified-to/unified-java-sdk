@@ -19,7 +19,7 @@
 
 ## createAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -50,11 +50,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("f55e6994-dd49-418b-90b1-0b03f0afd03a")
+                    .id("0f4f6482-65df-4d47-be62-3fa0dd566ecd")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.881Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.905Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -88,7 +88,7 @@ public class Application {
 
 ## createTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -119,11 +119,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("28e78990-31e0-497f-8b98-af4e038b9248")
+                    .id("f0df9b99-1579-4b8c-99c1-25c075c90704")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.127Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.001Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -157,7 +157,7 @@ public class Application {
 
 ## getAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ public class Application {
 
 ## getTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ public class Application {
 
 ## listAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ public class Application {
 
 ## listTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ public class Application {
 
 ## patchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -418,11 +418,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("e830092c-7107-4417-95d4-69db5d218a6f")
+                    .id("47b3740b-ffb2-41e6-8a8f-267dbacbee54")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.915Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -457,7 +457,7 @@ public class Application {
 
 ## patchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -488,11 +488,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("e9c0a7e1-dd24-400c-aea7-3fd43686c66c")
+                    .id("444df8bc-efda-4f39-aabf-e0183d1443b4")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.014Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -527,7 +527,7 @@ public class Application {
 
 ## removeAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -583,7 +583,7 @@ public class Application {
 
 ## removeTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -639,7 +639,7 @@ public class Application {
 
 ## updateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -670,11 +670,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("e830092c-7107-4417-95d4-69db5d218a6f")
+                    .id("47b3740b-ffb2-41e6-8a8f-267dbacbee54")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T12:12:23.889Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-12T05:00:23.915Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -709,7 +709,7 @@ public class Application {
 
 ## updateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -740,11 +740,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("e9c0a7e1-dd24-400c-aea7-3fd43686c66c")
+                    .id("444df8bc-efda-4f39-aabf-e0183d1443b4")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.014Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

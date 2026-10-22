@@ -57,6 +57,9 @@ public class AsyncGoal {
     /**
      * Create a goal
      * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
+     * 
      * @return The async call builder
      */
     public CreatePerformanceGoalRequestBuilder createPerformanceGoal() {
@@ -65,6 +68,9 @@ public class AsyncGoal {
 
     /**
      * Create a goal
+     * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePerformanceGoalResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncGoal {
     /**
      * Retrieve a goal
      * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceGoalRequestBuilder getPerformanceGoal() {
@@ -88,6 +97,9 @@ public class AsyncGoal {
 
     /**
      * Retrieve a goal
+     * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceGoalResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncGoal {
     /**
      * List all goals
      * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceGoalsRequestBuilder listPerformanceGoals() {
@@ -111,6 +130,13 @@ public class AsyncGoal {
 
     /**
      * List all goals
+     * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceGoalsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncGoal {
     /**
      * Update a goal
      * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchPerformanceGoalRequestBuilder patchPerformanceGoal() {
@@ -134,6 +163,9 @@ public class AsyncGoal {
 
     /**
      * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPerformanceGoalResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncGoal {
     /**
      * Remove a goal
      * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemovePerformanceGoalRequestBuilder removePerformanceGoal() {
@@ -157,6 +191,8 @@ public class AsyncGoal {
 
     /**
      * Remove a goal
+     * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePerformanceGoalResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncGoal {
     /**
      * Update a goal
      * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdatePerformanceGoalRequestBuilder updatePerformanceGoal() {
@@ -180,6 +219,9 @@ public class AsyncGoal {
 
     /**
      * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePerformanceGoalResponse>} - The async response

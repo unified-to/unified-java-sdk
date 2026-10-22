@@ -127,6 +127,9 @@ public class Uc {
     /**
      * Create a comment
      * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
      * @return The call builder
      */
     public CreateUcCommentRequestBuilder createUcComment() {
@@ -135,6 +138,9 @@ public class Uc {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -149,6 +155,9 @@ public class Uc {
     /**
      * Create a contact
      * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
      * @return The call builder
      */
     public CreateUcContactRequestBuilder createUcContact() {
@@ -157,6 +166,9 @@ public class Uc {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -171,6 +183,9 @@ public class Uc {
     /**
      * Create a recording
      * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
      * @return The call builder
      */
     public CreateUcRecordingRequestBuilder createUcRecording() {
@@ -179,6 +194,9 @@ public class Uc {
 
     /**
      * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -193,6 +211,9 @@ public class Uc {
     /**
      * Retrieve a call
      * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcCallRequestBuilder getUcCall() {
@@ -201,6 +222,9 @@ public class Uc {
 
     /**
      * Retrieve a call
+     * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -215,6 +239,9 @@ public class Uc {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcCommentRequestBuilder getUcComment() {
@@ -223,6 +250,9 @@ public class Uc {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -237,6 +267,9 @@ public class Uc {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcContactRequestBuilder getUcContact() {
@@ -245,6 +278,9 @@ public class Uc {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -259,6 +295,9 @@ public class Uc {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcRecordingRequestBuilder getUcRecording() {
@@ -267,6 +306,9 @@ public class Uc {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -281,6 +323,9 @@ public class Uc {
     /**
      * Retrieve a scorecard
      * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcScorecardRequestBuilder getUcScorecard() {
@@ -289,6 +334,9 @@ public class Uc {
 
     /**
      * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -303,6 +351,9 @@ public class Uc {
     /**
      * Retrieve a scorecardtemplate
      * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcScorecardtemplateRequestBuilder getUcScorecardtemplate() {
@@ -311,6 +362,9 @@ public class Uc {
 
     /**
      * Retrieve a scorecardtemplate
+     * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -325,6 +379,13 @@ public class Uc {
     /**
      * List all calls
      * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcCallsRequestBuilder listUcCalls() {
@@ -333,6 +394,13 @@ public class Uc {
 
     /**
      * List all calls
+     * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -347,6 +415,13 @@ public class Uc {
     /**
      * List all comments
      * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcCommentsRequestBuilder listUcComments() {
@@ -355,6 +430,13 @@ public class Uc {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -369,6 +451,13 @@ public class Uc {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcContactsRequestBuilder listUcContacts() {
@@ -377,6 +466,13 @@ public class Uc {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -391,6 +487,13 @@ public class Uc {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcRecordingsRequestBuilder listUcRecordings() {
@@ -399,6 +502,13 @@ public class Uc {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -413,6 +523,13 @@ public class Uc {
     /**
      * List all scorecards
      * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcScorecardsRequestBuilder listUcScorecards() {
@@ -421,6 +538,13 @@ public class Uc {
 
     /**
      * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -435,6 +559,13 @@ public class Uc {
     /**
      * List all scorecardtemplates
      * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcScorecardtemplatesRequestBuilder listUcScorecardtemplates() {
@@ -443,6 +574,13 @@ public class Uc {
 
     /**
      * List all scorecardtemplates
+     * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -457,6 +595,9 @@ public class Uc {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcCommentRequestBuilder patchUcComment() {
@@ -465,6 +606,9 @@ public class Uc {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -479,6 +623,9 @@ public class Uc {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcContactRequestBuilder patchUcContact() {
@@ -487,6 +634,9 @@ public class Uc {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -501,6 +651,9 @@ public class Uc {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcRecordingRequestBuilder patchUcRecording() {
@@ -509,6 +662,9 @@ public class Uc {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -523,6 +679,8 @@ public class Uc {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcCommentRequestBuilder removeUcComment() {
@@ -531,6 +689,8 @@ public class Uc {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -545,6 +705,8 @@ public class Uc {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcContactRequestBuilder removeUcContact() {
@@ -553,6 +715,8 @@ public class Uc {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -567,6 +731,8 @@ public class Uc {
     /**
      * Remove a recording
      * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcRecordingRequestBuilder removeUcRecording() {
@@ -575,6 +741,8 @@ public class Uc {
 
     /**
      * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -589,6 +757,9 @@ public class Uc {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcCommentRequestBuilder updateUcComment() {
@@ -597,6 +768,9 @@ public class Uc {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -611,6 +785,9 @@ public class Uc {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcContactRequestBuilder updateUcContact() {
@@ -619,6 +796,9 @@ public class Uc {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -633,6 +813,9 @@ public class Uc {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcRecordingRequestBuilder updateUcRecording() {
@@ -641,6 +824,9 @@ public class Uc {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

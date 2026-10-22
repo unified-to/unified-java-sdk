@@ -65,6 +65,9 @@ public class AsyncScorecard {
     /**
      * Create a scorecard
      * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
      * @return The async call builder
      */
     public CreateAtsScorecardRequestBuilder createAtsScorecard() {
@@ -73,6 +76,9 @@ public class AsyncScorecard {
 
     /**
      * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncScorecard {
     /**
      * Retrieve a scorecard
      * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsScorecardRequestBuilder getAtsScorecard() {
@@ -96,6 +105,9 @@ public class AsyncScorecard {
 
     /**
      * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncScorecard {
     /**
      * Retrieve a scorecard
      * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcScorecardRequestBuilder getUcScorecard() {
@@ -119,6 +134,9 @@ public class AsyncScorecard {
 
     /**
      * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncScorecard {
     /**
      * List all scorecards
      * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsScorecardsRequestBuilder listAtsScorecards() {
@@ -142,6 +167,13 @@ public class AsyncScorecard {
 
     /**
      * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncScorecard {
     /**
      * List all scorecards
      * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcScorecardsRequestBuilder listUcScorecards() {
@@ -165,6 +204,13 @@ public class AsyncScorecard {
 
     /**
      * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncScorecard {
     /**
      * Update a scorecard
      * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsScorecardRequestBuilder patchAtsScorecard() {
@@ -188,6 +237,9 @@ public class AsyncScorecard {
 
     /**
      * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncScorecard {
     /**
      * Remove a scorecard
      * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsScorecardRequestBuilder removeAtsScorecard() {
@@ -211,6 +265,8 @@ public class AsyncScorecard {
 
     /**
      * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncScorecard {
     /**
      * Update a scorecard
      * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsScorecardRequestBuilder updateAtsScorecard() {
@@ -234,6 +293,9 @@ public class AsyncScorecard {
 
     /**
      * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response

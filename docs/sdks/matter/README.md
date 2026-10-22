@@ -13,7 +13,7 @@
 
 ## createLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -48,11 +48,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("1d86001f-95c5-4e81-aada-7a20433b94cd")
+                    .id("b810378e-cd23-4adf-8cb6-69b5242ce50e")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.338Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.979Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -60,8 +60,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.664Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.191Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.584Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.753Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -95,7 +95,7 @@ public class Application {
 
 ## getLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ public class Application {
 
 ## listLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ public class Application {
 
 ## patchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -245,11 +245,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("31f0369f-e4b0-4a22-933e-84d0d7da7b9a")
+                    .id("480375fc-f300-44c9-b0c8-52d5a57a6191")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.339Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.980Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -257,8 +257,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.688Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.192Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.613Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.754Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -293,7 +293,7 @@ public class Application {
 
 ## removeLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ public class Application {
 
 ## updateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -384,11 +384,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-05-28T04:10:42.375Z"))
                     .currency("BOB")
                     .description("Speciosus cresco aut cotidie temeritas arma.")
-                    .id("31f0369f-e4b0-4a22-933e-84d0d7da7b9a")
+                    .id("480375fc-f300-44c9-b0c8-52d5a57a6191")
                     .metadata(List.of())
                     .name("Walter v. Franecki - Spinka")
                     .number("2023-3062")
-                    .openedAt(OffsetDateTime.parse("2023-07-05T06:18:47.339Z"))
+                    .openedAt(OffsetDateTime.parse("2023-07-05T07:04:40.980Z"))
                     .parties(List.of(
                         LegalParty.builder()
                             .description("Urban Walter")
@@ -396,8 +396,8 @@ public class Application {
                             .build()))
                     .stage("currus")
                     .status(LegalMatterStatus.OPEN)
-                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-28T21:14:07.688Z"))
-                    .updatedAt(OffsetDateTime.parse("2023-07-17T10:05:29.192Z"))
+                    .statuteOfLimitationsAt(OffsetDateTime.parse("2027-06-29T22:10:24.613Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-17T11:06:01.754Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

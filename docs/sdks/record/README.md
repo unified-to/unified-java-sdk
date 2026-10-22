@@ -13,7 +13,7 @@
 
 ## createDatastoreRecord
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -46,10 +46,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("acbfc901-32f5-4905-af31-9f2f90e42c37")
+                    .id("50aee548-fa64-4593-8a10-e2fe7faf8a47")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.537Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.043Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,7 +83,7 @@ public class Application {
 
 ## getDatastoreRecord
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ public class Application {
 
 ## listDatastoreRecords
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ public class Application {
 
 ## patchDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -231,10 +231,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("59aa6e08-13bf-438b-9234-029f0e94a0a9")
+                    .id("b2e572d1-2191-41a3-b36a-d59149cf7768")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.545Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.050Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -269,7 +269,7 @@ public class Application {
 
 ## removeDatastoreRecord
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ public class Application {
 
 ## updateDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -358,10 +358,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("59aa6e08-13bf-438b-9234-029f0e94a0a9")
+                    .id("b2e572d1-2191-41a3-b36a-d59149cf7768")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.545Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.050Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -27,7 +27,7 @@
 
 ## createAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -58,13 +58,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("76a6b5f6-c784-4d90-ad58-c5380824d9dc")
+                    .id("494370a5-e62e-414a-a1f8-984b36029eb5")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.230Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.932Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -98,7 +98,7 @@ public class Application {
 
 ## createGenaiOrganization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -128,10 +128,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("0bbeb865-8eff-4ea0-bf39-227105453659")
+                    .id("ce7f7bf2-4e6c-4bb2-95d5-1509bda61015")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.822Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -165,7 +165,7 @@ public class Application {
 
 ## createRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -197,10 +197,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("043427e9-9835-4fec-b66e-1f0a955306e9")
+                    .id("52e00ad2-eb5c-4fc2-81b6-5ee058c526f6")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.940Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.591Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -235,7 +235,7 @@ public class Application {
 
 ## getAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -293,7 +293,7 @@ public class Application {
 
 ## getAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -351,7 +351,7 @@ public class Application {
 
 ## getGenaiOrganization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -409,7 +409,7 @@ public class Application {
 
 ## getRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -467,7 +467,7 @@ public class Application {
 
 ## listAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -524,7 +524,7 @@ public class Application {
 
 ## listAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -581,7 +581,7 @@ public class Application {
 
 ## listGenaiOrganizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -638,7 +638,7 @@ public class Application {
 
 ## listRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -695,7 +695,7 @@ public class Application {
 
 ## patchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -726,13 +726,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("9df4004d-1633-45fe-bd89-16e5e0facbb2")
+                    .id("22e2d873-3bdf-4198-b0a8-10f1fe96450b")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -767,7 +767,7 @@ public class Application {
 
 ## patchGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -797,10 +797,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("12e8213b-80a4-49e5-b4c2-d9c8dea6f714")
+                    .id("114dbef7-72cb-4d6b-a727-338e67e3e900")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.247Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.824Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -835,7 +835,7 @@ public class Application {
 
 ## patchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -867,10 +867,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("65a7440a-a987-4334-8013-ef632cf96c08")
+                    .id("df51ee73-f0cf-45b0-b943-0a1fbac8ff4f")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.945Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.594Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -906,7 +906,7 @@ public class Application {
 
 ## removeAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -962,7 +962,7 @@ public class Application {
 
 ## removeGenaiOrganization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1018,7 +1018,7 @@ public class Application {
 
 ## removeRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1074,7 +1074,7 @@ public class Application {
 
 ## updateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1105,13 +1105,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("9df4004d-1633-45fe-bd89-16e5e0facbb2")
+                    .id("22e2d873-3bdf-4198-b0a8-10f1fe96450b")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1146,7 +1146,7 @@ public class Application {
 
 ## updateGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1176,10 +1176,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("12e8213b-80a4-49e5-b4c2-d9c8dea6f714")
+                    .id("114dbef7-72cb-4d6b-a727-338e67e3e900")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.247Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.824Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1214,7 +1214,7 @@ public class Application {
 
 ## updateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1246,10 +1246,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("65a7440a-a987-4334-8013-ef632cf96c08")
+                    .id("df51ee73-f0cf-45b0-b943-0a1fbac8ff4f")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.945Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.594Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")

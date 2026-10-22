@@ -57,6 +57,9 @@ public class AsyncVendorcredit {
     /**
      * Create a vendorcredit
      * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
      * @return The async call builder
      */
     public CreateAccountingVendorcreditRequestBuilder createAccountingVendorcredit() {
@@ -65,6 +68,9 @@ public class AsyncVendorcredit {
 
     /**
      * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingVendorcreditResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncVendorcredit {
     /**
      * Retrieve a vendorcredit
      * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingVendorcreditRequestBuilder getAccountingVendorcredit() {
@@ -88,6 +97,9 @@ public class AsyncVendorcredit {
 
     /**
      * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingVendorcreditResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncVendorcredit {
     /**
      * List all vendorcredits
      * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingVendorcreditsRequestBuilder listAccountingVendorcredits() {
@@ -111,6 +130,13 @@ public class AsyncVendorcredit {
 
     /**
      * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingVendorcreditsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncVendorcredit {
     /**
      * Update a vendorcredit
      * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingVendorcreditRequestBuilder patchAccountingVendorcredit() {
@@ -134,6 +163,9 @@ public class AsyncVendorcredit {
 
     /**
      * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingVendorcreditResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncVendorcredit {
     /**
      * Remove a vendorcredit
      * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingVendorcreditRequestBuilder removeAccountingVendorcredit() {
@@ -157,6 +191,8 @@ public class AsyncVendorcredit {
 
     /**
      * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingVendorcreditResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncVendorcredit {
     /**
      * Update a vendorcredit
      * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingVendorcreditRequestBuilder updateAccountingVendorcredit() {
@@ -180,6 +219,9 @@ public class AsyncVendorcredit {
 
     /**
      * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingVendorcreditResponse>} - The async response

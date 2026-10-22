@@ -81,7 +81,9 @@ public class HrisLocation {
     @JsonProperty("metadata")
     private List<HrisMetadata> metadata;
 
-
+    /**
+     * The name of the location
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -213,6 +215,9 @@ public class HrisLocation {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The name of the location
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -320,6 +325,9 @@ public class HrisLocation {
     }
 
 
+    /**
+     * The name of the location
+     */
     public HrisLocation withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -526,6 +534,9 @@ public class HrisLocation {
             return this;
         }
 
+        /**
+         * The name of the location
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

@@ -13,7 +13,7 @@
 
 ## createCommerceReservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -46,13 +46,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("3500a77e-f5f8-4937-9b5f-5881f304082b")
+                    .id("b3b81102-7acc-422c-8031-d1c20430d6ea")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.348Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.701Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -87,7 +87,7 @@ public class Application {
 
 ## getCommerceReservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ public class Application {
 
 ## listCommerceReservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ public class Application {
 
 ## patchCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -235,13 +235,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("f2ef49e2-7efa-4cf5-8c36-a43db03260d6")
+                    .id("0ca690ec-4af9-4919-9ed3-f5436659cafc")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.351Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.705Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -277,7 +277,7 @@ public class Application {
 
 ## removeCommerceReservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ public class Application {
 
 ## updateCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -366,13 +366,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("f2ef49e2-7efa-4cf5-8c36-a43db03260d6")
+                    .id("0ca690ec-4af9-4919-9ed3-f5436659cafc")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.351Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.705Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")

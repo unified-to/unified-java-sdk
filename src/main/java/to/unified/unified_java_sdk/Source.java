@@ -55,6 +55,9 @@ public class Source {
     /**
      * Create a source
      * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
      * @return The call builder
      */
     public CreateCdpSourceRequestBuilder createCdpSource() {
@@ -63,6 +66,9 @@ public class Source {
 
     /**
      * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Source {
     /**
      * Retrieve a source
      * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpSourceRequestBuilder getCdpSource() {
@@ -85,6 +94,9 @@ public class Source {
 
     /**
      * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Source {
     /**
      * List all sources
      * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpSourcesRequestBuilder listCdpSources() {
@@ -107,6 +126,13 @@ public class Source {
 
     /**
      * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Source {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpSourceRequestBuilder patchCdpSource() {
@@ -129,6 +158,9 @@ public class Source {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Source {
     /**
      * Remove a source
      * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpSourceRequestBuilder removeCdpSource() {
@@ -151,6 +185,8 @@ public class Source {
 
     /**
      * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Source {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpSourceRequestBuilder updateCdpSource() {
@@ -173,6 +212,9 @@ public class Source {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -13,7 +13,7 @@
 
 ## createRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("231c7198-c036-44d3-8cb5-457ddd6f61af")
+                    .id("6f31a351-20bb-4a84-911b-853e03e8ec2e")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.634Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.399Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,7 +84,7 @@ public class Application {
 
 ## getRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -230,13 +230,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("24f04575-92f1-40ef-8216-cdbe4e99e682")
+                    .id("9f4097d6-26a2-4464-b6b3-cd20467b4bd9")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.405Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -358,13 +358,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("24f04575-92f1-40ef-8216-cdbe4e99e682")
+                    .id("9f4097d6-26a2-4464-b6b3-cd20467b4bd9")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.405Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

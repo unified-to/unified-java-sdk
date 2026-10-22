@@ -195,7 +195,9 @@ public class PaymentPayment {
     @JsonProperty("tip_amount")
     private Double tipAmount;
 
-
+    /**
+     * The amount paid, in the payment's currency
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
     private Double totalAmount;
@@ -454,6 +456,9 @@ public class PaymentPayment {
         return Optional.ofNullable(this.tipAmount);
     }
 
+    /**
+     * The amount paid, in the payment's currency
+     */
     public Optional<Double> totalAmount() {
         return Optional.ofNullable(this.totalAmount);
     }
@@ -691,6 +696,9 @@ public class PaymentPayment {
     }
 
 
+    /**
+     * The amount paid, in the payment's currency
+     */
     public PaymentPayment withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -1065,6 +1073,9 @@ public class PaymentPayment {
             return this;
         }
 
+        /**
+         * The amount paid, in the payment's currency
+         */
         public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;

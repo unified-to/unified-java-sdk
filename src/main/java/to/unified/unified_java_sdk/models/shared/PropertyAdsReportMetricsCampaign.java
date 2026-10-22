@@ -117,12 +117,16 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonProperty("metadata")
     private List<AdsMetadata> metadata;
 
-
+    /**
+     * The campaign's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * The ID of the ad account the campaign belongs to (an AdsOrganization ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
@@ -318,10 +322,16 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The campaign's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the ad account the campaign belongs to (an AdsOrganization ID)
+     */
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
     }
@@ -483,12 +493,18 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    /**
+     * The campaign's name
+     */
     public PropertyAdsReportMetricsCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
 
+    /**
+     * The ID of the ad account the campaign belongs to (an AdsOrganization ID)
+     */
     public PropertyAdsReportMetricsCampaign withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -786,11 +802,17 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        /**
+         * The campaign's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
+        /**
+         * The ID of the ad account the campaign belongs to (an AdsOrganization ID)
+         */
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;

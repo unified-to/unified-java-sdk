@@ -65,6 +65,9 @@ public class AsyncRecording {
     /**
      * Create a recording
      * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
      * @return The async call builder
      */
     public CreateUcRecordingRequestBuilder createUcRecording() {
@@ -73,6 +76,9 @@ public class AsyncRecording {
 
     /**
      * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncRecording {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarRecordingRequestBuilder getCalendarRecording() {
@@ -96,6 +105,9 @@ public class AsyncRecording {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncRecording {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcRecordingRequestBuilder getUcRecording() {
@@ -119,6 +134,9 @@ public class AsyncRecording {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncRecording {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
@@ -142,6 +167,13 @@ public class AsyncRecording {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncRecording {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcRecordingsRequestBuilder listUcRecordings() {
@@ -165,6 +204,13 @@ public class AsyncRecording {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncRecording {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchUcRecordingRequestBuilder patchUcRecording() {
@@ -188,6 +237,9 @@ public class AsyncRecording {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncRecording {
     /**
      * Remove a recording
      * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveUcRecordingRequestBuilder removeUcRecording() {
@@ -211,6 +265,8 @@ public class AsyncRecording {
 
     /**
      * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncRecording {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateUcRecordingRequestBuilder updateUcRecording() {
@@ -234,6 +293,9 @@ public class AsyncRecording {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response

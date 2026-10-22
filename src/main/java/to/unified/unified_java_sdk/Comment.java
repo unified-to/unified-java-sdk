@@ -103,6 +103,9 @@ public class Comment {
     /**
      * Create a comment
      * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
+     * 
      * @return The call builder
      */
     public CreateKmsCommentRequestBuilder createKmsComment() {
@@ -111,6 +114,9 @@ public class Comment {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created KmsComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -125,6 +131,9 @@ public class Comment {
     /**
      * Create a comment
      * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
      * @return The call builder
      */
     public CreateTaskCommentRequestBuilder createTaskComment() {
@@ -133,6 +142,9 @@ public class Comment {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -147,6 +159,9 @@ public class Comment {
     /**
      * Create a comment
      * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
      * @return The call builder
      */
     public CreateUcCommentRequestBuilder createUcComment() {
@@ -155,6 +170,9 @@ public class Comment {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -169,6 +187,9 @@ public class Comment {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetKmsCommentRequestBuilder getKmsComment() {
@@ -177,6 +198,9 @@ public class Comment {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -191,6 +215,9 @@ public class Comment {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskCommentRequestBuilder getTaskComment() {
@@ -199,6 +226,9 @@ public class Comment {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -213,6 +243,9 @@ public class Comment {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcCommentRequestBuilder getUcComment() {
@@ -221,6 +254,9 @@ public class Comment {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -235,6 +271,13 @@ public class Comment {
     /**
      * List all comments
      * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListKmsCommentsRequestBuilder listKmsComments() {
@@ -243,6 +286,13 @@ public class Comment {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -257,6 +307,13 @@ public class Comment {
     /**
      * List all comments
      * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskCommentsRequestBuilder listTaskComments() {
@@ -265,6 +322,13 @@ public class Comment {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -279,6 +343,13 @@ public class Comment {
     /**
      * List all comments
      * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcCommentsRequestBuilder listUcComments() {
@@ -287,6 +358,13 @@ public class Comment {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -301,6 +379,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchKmsCommentRequestBuilder patchKmsComment() {
@@ -309,6 +390,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -323,6 +407,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchTaskCommentRequestBuilder patchTaskComment() {
@@ -331,6 +418,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -345,6 +435,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcCommentRequestBuilder patchUcComment() {
@@ -353,6 +446,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -367,6 +463,8 @@ public class Comment {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the KmsComment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveKmsCommentRequestBuilder removeKmsComment() {
@@ -375,6 +473,8 @@ public class Comment {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the KmsComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -389,6 +489,8 @@ public class Comment {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTaskCommentRequestBuilder removeTaskComment() {
@@ -397,6 +499,8 @@ public class Comment {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -411,6 +515,8 @@ public class Comment {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcCommentRequestBuilder removeUcComment() {
@@ -419,6 +525,8 @@ public class Comment {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -433,6 +541,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateKmsCommentRequestBuilder updateKmsComment() {
@@ -441,6 +552,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -455,6 +569,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateTaskCommentRequestBuilder updateTaskComment() {
@@ -463,6 +580,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -477,6 +597,9 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcCommentRequestBuilder updateUcComment() {
@@ -485,6 +608,9 @@ public class Comment {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

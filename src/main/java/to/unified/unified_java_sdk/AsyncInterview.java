@@ -57,6 +57,9 @@ public class AsyncInterview {
     /**
      * Create an interview
      * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
+     * 
      * @return The async call builder
      */
     public CreateAtsInterviewRequestBuilder createAtsInterview() {
@@ -65,6 +68,9 @@ public class AsyncInterview {
 
     /**
      * Create an interview
+     * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncInterview {
     /**
      * Retrieve an interview
      * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsInterviewRequestBuilder getAtsInterview() {
@@ -88,6 +97,9 @@ public class AsyncInterview {
 
     /**
      * Retrieve an interview
+     * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncInterview {
     /**
      * List all interviews
      * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsInterviewsRequestBuilder listAtsInterviews() {
@@ -111,6 +130,13 @@ public class AsyncInterview {
 
     /**
      * List all interviews
+     * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncInterview {
     /**
      * Update an interview
      * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsInterviewRequestBuilder patchAtsInterview() {
@@ -134,6 +163,9 @@ public class AsyncInterview {
 
     /**
      * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncInterview {
     /**
      * Remove an interview
      * 
+     * <p>Deletes the AtsInterview identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsInterviewRequestBuilder removeAtsInterview() {
@@ -157,6 +191,8 @@ public class AsyncInterview {
 
     /**
      * Remove an interview
+     * 
+     * <p>Deletes the AtsInterview identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncInterview {
     /**
      * Update an interview
      * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsInterviewRequestBuilder updateAtsInterview() {
@@ -180,6 +219,9 @@ public class AsyncInterview {
 
     /**
      * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response

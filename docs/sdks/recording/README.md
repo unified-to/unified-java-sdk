@@ -15,7 +15,7 @@
 
 ## createUcRecording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -44,34 +44,34 @@ public class Application {
         CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("b34e46d5-79ee-4009-b9d3-ff8a14dcb1c7")
+                    .conversationIdentifier("1c6c1b25-2968-4773-8326-c620f05ee4af")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-04T23:56:35.147Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-26T18:30:37.269Z"))
-                    .id("b34e46d5-79ee-4009-b9d3-ff8a14dcb1c7")
+                    .endAt(OffsetDateTime.parse("2024-05-05T09:52:36.482Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-27T16:29:26.527Z"))
+                    .id("1c6c1b25-2968-4773-8326-c620f05ee4af")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-01T19:36:38.299Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T04:59:25.975Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-15T10:34:33.039Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-16T08:52:04.053Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-24T12:19:52.632Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-02T06:05:10.680Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-25T09:17:21.223Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-02T16:29:29.780Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-12T13:13:35.077Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-02T21:09:24.580Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-13T01:50:23.302Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-03T20:46:28.815Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-27T18:04:36.170Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-27T21:46:51.033Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-16T11:09:33.399Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-17T02:21:29.656Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())
@@ -107,7 +107,7 @@ public class Application {
 
 ## getCalendarRecording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ public class Application {
 
 ## getUcRecording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -223,7 +223,7 @@ public class Application {
 
 ## listCalendarRecordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ public class Application {
 
 ## listUcRecordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## patchUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -366,34 +366,34 @@ public class Application {
         PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("8da5e357-17e2-417d-9763-d37294cabac3")
+                    .conversationIdentifier("1817c1b1-0ed2-4113-aba9-0a7492bc6042")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-04T23:56:35.165Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-26T18:30:37.308Z"))
-                    .id("8da5e357-17e2-417d-9763-d37294cabac3")
+                    .endAt(OffsetDateTime.parse("2024-05-05T09:52:36.492Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-27T16:29:26.549Z"))
+                    .id("1817c1b1-0ed2-4113-aba9-0a7492bc6042")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-01T19:36:38.316Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T04:59:25.985Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-15T10:34:33.079Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-16T08:52:04.075Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-24T12:19:52.669Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-02T06:05:10.698Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-25T09:17:21.244Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-02T16:29:29.791Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-12T13:13:35.099Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-02T21:09:24.622Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-13T01:50:23.314Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-03T20:46:28.839Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-27T18:04:36.177Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-27T21:46:51.037Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-16T11:09:33.425Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-17T02:21:29.671Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())
@@ -430,7 +430,7 @@ public class Application {
 
 ## removeUcRecording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -486,7 +486,7 @@ public class Application {
 
 ## updateUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -515,34 +515,34 @@ public class Application {
         UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("8da5e357-17e2-417d-9763-d37294cabac3")
+                    .conversationIdentifier("1817c1b1-0ed2-4113-aba9-0a7492bc6042")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-04T23:56:35.165Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-26T18:30:37.308Z"))
-                    .id("8da5e357-17e2-417d-9763-d37294cabac3")
+                    .endAt(OffsetDateTime.parse("2024-05-05T09:52:36.492Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-27T16:29:26.549Z"))
+                    .id("1817c1b1-0ed2-4113-aba9-0a7492bc6042")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-01T19:36:38.316Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T04:59:25.985Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-15T10:34:33.079Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-16T08:52:04.075Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-24T12:19:52.669Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-02T06:05:10.698Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-25T09:17:21.244Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-02T16:29:29.791Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-12T13:13:35.099Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-02T21:09:24.622Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-13T01:50:23.314Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-03T20:46:28.839Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-27T18:04:36.177Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-27T21:46:51.037Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-16T11:09:33.425Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-17T02:21:29.671Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())

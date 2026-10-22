@@ -53,12 +53,16 @@ public class GenaiPrompt {
     @JsonProperty("mcp_url")
     private String mcpUrl;
 
-
+    /**
+     * The conversation to send to the model, in order; each message has a role and its content
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
     private List<GenaiContent> messages;
 
-
+    /**
+     * The ID of the model to use (a GenaiModel ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_id")
     private String modelId;
@@ -170,10 +174,16 @@ public class GenaiPrompt {
         return Optional.ofNullable(this.mcpUrl);
     }
 
+    /**
+     * The conversation to send to the model, in order; each message has a role and its content
+     */
     public Optional<List<GenaiContent>> messages() {
         return Optional.ofNullable(this.messages);
     }
 
+    /**
+     * The ID of the model to use (a GenaiModel ID)
+     */
     public Optional<String> modelId() {
         return Optional.ofNullable(this.modelId);
     }
@@ -259,12 +269,18 @@ public class GenaiPrompt {
     }
 
 
+    /**
+     * The conversation to send to the model, in order; each message has a role and its content
+     */
     public GenaiPrompt withMessages(@Nullable List<GenaiContent> messages) {
         this.messages = messages;
         return this;
     }
 
 
+    /**
+     * The ID of the model to use (a GenaiModel ID)
+     */
     public GenaiPrompt withModelId(@Nullable String modelId) {
         this.modelId = modelId;
         return this;
@@ -440,11 +456,17 @@ public class GenaiPrompt {
             return this;
         }
 
+        /**
+         * The conversation to send to the model, in order; each message has a role and its content
+         */
         public Builder messages(@Nullable List<GenaiContent> messages) {
             this.messages = messages;
             return this;
         }
 
+        /**
+         * The ID of the model to use (a GenaiModel ID)
+         */
         public Builder modelId(@Nullable String modelId) {
             this.modelId = modelId;
             return this;

@@ -403,6 +403,9 @@ public class Hris {
     /**
      * Create an attendance
      * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
+     * 
      * @return The call builder
      */
     public CreateHrisAttendanceRequestBuilder createHrisAttendance() {
@@ -411,6 +414,9 @@ public class Hris {
 
     /**
      * Create an attendance
+     * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -425,6 +431,9 @@ public class Hris {
     /**
      * Create a bankaccount
      * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
      * @return The call builder
      */
     public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
@@ -433,6 +442,9 @@ public class Hris {
 
     /**
      * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -447,6 +459,9 @@ public class Hris {
     /**
      * Create a benefit
      * 
+     * <p>Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisBenefit.
+     * 
      * @return The call builder
      */
     public CreateHrisBenefitRequestBuilder createHrisBenefit() {
@@ -455,6 +470,9 @@ public class Hris {
 
     /**
      * Create a benefit
+     * 
+     * <p>Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisBenefit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -469,6 +487,9 @@ public class Hris {
     /**
      * Create a company
      * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
      * @return The call builder
      */
     public CreateHrisCompanyRequestBuilder createHrisCompany() {
@@ -477,6 +498,9 @@ public class Hris {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -491,6 +515,9 @@ public class Hris {
     /**
      * Create a deduction
      * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
+     * 
      * @return The call builder
      */
     public CreateHrisDeductionRequestBuilder createHrisDeduction() {
@@ -499,6 +526,9 @@ public class Hris {
 
     /**
      * Create a deduction
+     * 
+     * <p>Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisDeduction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -513,6 +543,9 @@ public class Hris {
     /**
      * Create a device
      * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
+     * 
      * @return The call builder
      */
     public CreateHrisDeviceRequestBuilder createHrisDevice() {
@@ -521,6 +554,9 @@ public class Hris {
 
     /**
      * Create a device
+     * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -535,6 +571,9 @@ public class Hris {
     /**
      * Create a document
      * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
+     * 
      * @return The call builder
      */
     public CreateHrisDocumentRequestBuilder createHrisDocument() {
@@ -543,6 +582,9 @@ public class Hris {
 
     /**
      * Create a document
+     * 
+     * <p>Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisDocument.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -557,6 +599,9 @@ public class Hris {
     /**
      * Create an earning
      * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
      * @return The call builder
      */
     public CreateHrisEarningRequestBuilder createHrisEarning() {
@@ -565,6 +610,9 @@ public class Hris {
 
     /**
      * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -579,6 +627,9 @@ public class Hris {
     /**
      * Create an employee
      * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
+     * 
      * @return The call builder
      */
     public CreateHrisEmployeeRequestBuilder createHrisEmployee() {
@@ -587,6 +638,9 @@ public class Hris {
 
     /**
      * Create an employee
+     * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -601,6 +655,9 @@ public class Hris {
     /**
      * Create a group
      * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
      * @return The call builder
      */
     public CreateHrisGroupRequestBuilder createHrisGroup() {
@@ -609,6 +666,9 @@ public class Hris {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -623,6 +683,9 @@ public class Hris {
     /**
      * Create a job
      * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
      * @return The call builder
      */
     public CreateHrisJobRequestBuilder createHrisJob() {
@@ -631,6 +694,9 @@ public class Hris {
 
     /**
      * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -645,6 +711,9 @@ public class Hris {
     /**
      * Create a location
      * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
+     * 
      * @return The call builder
      */
     public CreateHrisLocationRequestBuilder createHrisLocation() {
@@ -653,6 +722,9 @@ public class Hris {
 
     /**
      * Create a location
+     * 
+     * <p>Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisLocation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -667,6 +739,9 @@ public class Hris {
     /**
      * Create a taxonomy
      * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
+     * 
      * @return The call builder
      */
     public CreateHrisTaxonomyRequestBuilder createHrisTaxonomy() {
@@ -675,6 +750,9 @@ public class Hris {
 
     /**
      * Create a taxonomy
+     * 
+     * <p>Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTaxonomy.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -689,6 +767,9 @@ public class Hris {
     /**
      * Create a timeoff
      * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
      * @return The call builder
      */
     public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
@@ -697,6 +778,9 @@ public class Hris {
 
     /**
      * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -711,6 +795,9 @@ public class Hris {
     /**
      * Create a timeshift
      * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
      * @return The call builder
      */
     public CreateHrisTimeshiftRequestBuilder createHrisTimeshift() {
@@ -719,6 +806,9 @@ public class Hris {
 
     /**
      * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -733,6 +823,9 @@ public class Hris {
     /**
      * Retrieve an attendance
      * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisAttendanceRequestBuilder getHrisAttendance() {
@@ -741,6 +834,9 @@ public class Hris {
 
     /**
      * Retrieve an attendance
+     * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -755,6 +851,9 @@ public class Hris {
     /**
      * Retrieve a bankaccount
      * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
@@ -763,6 +862,9 @@ public class Hris {
 
     /**
      * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -777,6 +879,9 @@ public class Hris {
     /**
      * Retrieve a benefit
      * 
+     * <p>Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisBenefitRequestBuilder getHrisBenefit() {
@@ -785,6 +890,9 @@ public class Hris {
 
     /**
      * Retrieve a benefit
+     * 
+     * <p>Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -799,6 +907,9 @@ public class Hris {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisCompanyRequestBuilder getHrisCompany() {
@@ -807,6 +918,9 @@ public class Hris {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -821,6 +935,9 @@ public class Hris {
     /**
      * Retrieve a deduction
      * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisDeductionRequestBuilder getHrisDeduction() {
@@ -829,6 +946,9 @@ public class Hris {
 
     /**
      * Retrieve a deduction
+     * 
+     * <p>Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -843,6 +963,9 @@ public class Hris {
     /**
      * Retrieve a device
      * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisDeviceRequestBuilder getHrisDevice() {
@@ -851,6 +974,9 @@ public class Hris {
 
     /**
      * Retrieve a device
+     * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -865,6 +991,9 @@ public class Hris {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisDocumentRequestBuilder getHrisDocument() {
@@ -873,6 +1002,9 @@ public class Hris {
 
     /**
      * Retrieve a document
+     * 
+     * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -887,6 +1019,9 @@ public class Hris {
     /**
      * Retrieve an earning
      * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisEarningRequestBuilder getHrisEarning() {
@@ -895,6 +1030,9 @@ public class Hris {
 
     /**
      * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -909,6 +1047,9 @@ public class Hris {
     /**
      * Retrieve an employee
      * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisEmployeeRequestBuilder getHrisEmployee() {
@@ -917,6 +1058,9 @@ public class Hris {
 
     /**
      * Retrieve an employee
+     * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -931,6 +1075,9 @@ public class Hris {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisGroupRequestBuilder getHrisGroup() {
@@ -939,6 +1086,9 @@ public class Hris {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -953,6 +1103,9 @@ public class Hris {
     /**
      * Retrieve a job
      * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisJobRequestBuilder getHrisJob() {
@@ -961,6 +1114,9 @@ public class Hris {
 
     /**
      * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -975,6 +1131,9 @@ public class Hris {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisLocationRequestBuilder getHrisLocation() {
@@ -983,6 +1142,9 @@ public class Hris {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -997,6 +1159,9 @@ public class Hris {
     /**
      * Retrieve a paycode
      * 
+     * <p>Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisPaycodeRequestBuilder getHrisPaycode() {
@@ -1005,6 +1170,9 @@ public class Hris {
 
     /**
      * Retrieve a paycode
+     * 
+     * <p>Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1019,6 +1187,9 @@ public class Hris {
     /**
      * Retrieve a payroll
      * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisPayrollRequestBuilder getHrisPayroll() {
@@ -1027,6 +1198,9 @@ public class Hris {
 
     /**
      * Retrieve a payroll
+     * 
+     * <p>Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1041,6 +1215,9 @@ public class Hris {
     /**
      * Retrieve a payslip
      * 
+     * <p>Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisPayslipRequestBuilder getHrisPayslip() {
@@ -1049,6 +1226,9 @@ public class Hris {
 
     /**
      * Retrieve a payslip
+     * 
+     * <p>Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1063,6 +1243,9 @@ public class Hris {
     /**
      * Retrieve a taxonomy
      * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisTaxonomyRequestBuilder getHrisTaxonomy() {
@@ -1071,6 +1254,9 @@ public class Hris {
 
     /**
      * Retrieve a taxonomy
+     * 
+     * <p>Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1085,6 +1271,9 @@ public class Hris {
     /**
      * Retrieve a timeoff
      * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisTimeoffRequestBuilder getHrisTimeoff() {
@@ -1093,6 +1282,9 @@ public class Hris {
 
     /**
      * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1107,6 +1299,9 @@ public class Hris {
     /**
      * Retrieve a timeshift
      * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisTimeshiftRequestBuilder getHrisTimeshift() {
@@ -1115,6 +1310,9 @@ public class Hris {
 
     /**
      * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1129,6 +1327,13 @@ public class Hris {
     /**
      * List all attendances
      * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisAttendancesRequestBuilder listHrisAttendances() {
@@ -1137,6 +1342,13 @@ public class Hris {
 
     /**
      * List all attendances
+     * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1151,6 +1363,13 @@ public class Hris {
     /**
      * List all bankaccounts
      * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
@@ -1159,6 +1378,13 @@ public class Hris {
 
     /**
      * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1173,6 +1399,13 @@ public class Hris {
     /**
      * List all benefits
      * 
+     * <p>Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisBenefitsRequestBuilder listHrisBenefits() {
@@ -1181,6 +1414,13 @@ public class Hris {
 
     /**
      * List all benefits
+     * 
+     * <p>Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1195,6 +1435,13 @@ public class Hris {
     /**
      * List all companies
      * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisCompaniesRequestBuilder listHrisCompanies() {
@@ -1203,6 +1450,13 @@ public class Hris {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1217,6 +1471,13 @@ public class Hris {
     /**
      * List all deductions
      * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisDeductionsRequestBuilder listHrisDeductions() {
@@ -1225,6 +1486,13 @@ public class Hris {
 
     /**
      * List all deductions
+     * 
+     * <p>Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1239,6 +1507,13 @@ public class Hris {
     /**
      * List all devices
      * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisDevicesRequestBuilder listHrisDevices() {
@@ -1247,6 +1522,13 @@ public class Hris {
 
     /**
      * List all devices
+     * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1261,6 +1543,13 @@ public class Hris {
     /**
      * List all documents
      * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisDocumentsRequestBuilder listHrisDocuments() {
@@ -1269,6 +1558,13 @@ public class Hris {
 
     /**
      * List all documents
+     * 
+     * <p>Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1283,6 +1579,13 @@ public class Hris {
     /**
      * List all earnings
      * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisEarningsRequestBuilder listHrisEarnings() {
@@ -1291,6 +1594,13 @@ public class Hris {
 
     /**
      * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1305,6 +1615,13 @@ public class Hris {
     /**
      * List all employees
      * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisEmployeesRequestBuilder listHrisEmployees() {
@@ -1313,6 +1630,13 @@ public class Hris {
 
     /**
      * List all employees
+     * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1327,6 +1651,13 @@ public class Hris {
     /**
      * List all groups
      * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisGroupsRequestBuilder listHrisGroups() {
@@ -1335,6 +1666,13 @@ public class Hris {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1349,6 +1687,13 @@ public class Hris {
     /**
      * List all jobs
      * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisJobsRequestBuilder listHrisJobs() {
@@ -1357,6 +1702,13 @@ public class Hris {
 
     /**
      * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1371,6 +1723,13 @@ public class Hris {
     /**
      * List all locations
      * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisLocationsRequestBuilder listHrisLocations() {
@@ -1379,6 +1738,13 @@ public class Hris {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1393,6 +1759,13 @@ public class Hris {
     /**
      * List all paycodes
      * 
+     * <p>Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisPaycodesRequestBuilder listHrisPaycodes() {
@@ -1401,6 +1774,13 @@ public class Hris {
 
     /**
      * List all paycodes
+     * 
+     * <p>Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1415,6 +1795,13 @@ public class Hris {
     /**
      * List all payrolls
      * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisPayrollsRequestBuilder listHrisPayrolls() {
@@ -1423,6 +1810,13 @@ public class Hris {
 
     /**
      * List all payrolls
+     * 
+     * <p>Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1437,6 +1831,13 @@ public class Hris {
     /**
      * List all payslips
      * 
+     * <p>Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisPayslipsRequestBuilder listHrisPayslips() {
@@ -1445,6 +1846,13 @@ public class Hris {
 
     /**
      * List all payslips
+     * 
+     * <p>Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1459,6 +1867,13 @@ public class Hris {
     /**
      * List all taxonomies
      * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisTaxonomiesRequestBuilder listHrisTaxonomies() {
@@ -1467,6 +1882,13 @@ public class Hris {
 
     /**
      * List all taxonomies
+     * 
+     * <p>Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1481,6 +1903,13 @@ public class Hris {
     /**
      * List all timeoffs
      * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisTimeoffsRequestBuilder listHrisTimeoffs() {
@@ -1489,6 +1918,13 @@ public class Hris {
 
     /**
      * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1503,6 +1939,13 @@ public class Hris {
     /**
      * List all timeshifts
      * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisTimeshiftsRequestBuilder listHrisTimeshifts() {
@@ -1511,6 +1954,13 @@ public class Hris {
 
     /**
      * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1525,6 +1975,9 @@ public class Hris {
     /**
      * Update an attendance
      * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisAttendanceRequestBuilder patchHrisAttendance() {
@@ -1533,6 +1986,9 @@ public class Hris {
 
     /**
      * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1547,6 +2003,9 @@ public class Hris {
     /**
      * Update a bankaccount
      * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
@@ -1555,6 +2014,9 @@ public class Hris {
 
     /**
      * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1569,6 +2031,9 @@ public class Hris {
     /**
      * Update a benefit
      * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisBenefitRequestBuilder patchHrisBenefit() {
@@ -1577,6 +2042,9 @@ public class Hris {
 
     /**
      * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1591,6 +2059,9 @@ public class Hris {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisCompanyRequestBuilder patchHrisCompany() {
@@ -1599,6 +2070,9 @@ public class Hris {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1613,6 +2087,9 @@ public class Hris {
     /**
      * Update a deduction
      * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisDeductionRequestBuilder patchHrisDeduction() {
@@ -1621,6 +2098,9 @@ public class Hris {
 
     /**
      * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1635,6 +2115,9 @@ public class Hris {
     /**
      * Update a device
      * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisDeviceRequestBuilder patchHrisDevice() {
@@ -1643,6 +2126,9 @@ public class Hris {
 
     /**
      * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1657,6 +2143,9 @@ public class Hris {
     /**
      * Update a document
      * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisDocumentRequestBuilder patchHrisDocument() {
@@ -1665,6 +2154,9 @@ public class Hris {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1679,6 +2171,9 @@ public class Hris {
     /**
      * Update an earning
      * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisEarningRequestBuilder patchHrisEarning() {
@@ -1687,6 +2182,9 @@ public class Hris {
 
     /**
      * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1701,6 +2199,9 @@ public class Hris {
     /**
      * Update an employee
      * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisEmployeeRequestBuilder patchHrisEmployee() {
@@ -1709,6 +2210,9 @@ public class Hris {
 
     /**
      * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1723,6 +2227,9 @@ public class Hris {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisGroupRequestBuilder patchHrisGroup() {
@@ -1731,6 +2238,9 @@ public class Hris {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1745,6 +2255,9 @@ public class Hris {
     /**
      * Update a job
      * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public PatchHrisJobRequestBuilder patchHrisJob() {
@@ -1753,6 +2266,9 @@ public class Hris {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1767,6 +2283,9 @@ public class Hris {
     /**
      * Update a location
      * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisLocationRequestBuilder patchHrisLocation() {
@@ -1775,6 +2294,9 @@ public class Hris {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1789,6 +2311,9 @@ public class Hris {
     /**
      * Update a timeoff
      * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
@@ -1797,6 +2322,9 @@ public class Hris {
 
     /**
      * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1811,6 +2339,9 @@ public class Hris {
     /**
      * Update a timeshift
      * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisTimeshiftRequestBuilder patchHrisTimeshift() {
@@ -1819,6 +2350,9 @@ public class Hris {
 
     /**
      * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1833,6 +2367,8 @@ public class Hris {
     /**
      * Remove an attendance
      * 
+     * <p>Deletes the HrisAttendance identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisAttendanceRequestBuilder removeHrisAttendance() {
@@ -1841,6 +2377,8 @@ public class Hris {
 
     /**
      * Remove an attendance
+     * 
+     * <p>Deletes the HrisAttendance identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1855,6 +2393,8 @@ public class Hris {
     /**
      * Remove a bankaccount
      * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
@@ -1863,6 +2403,8 @@ public class Hris {
 
     /**
      * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1877,6 +2419,8 @@ public class Hris {
     /**
      * Remove a benefit
      * 
+     * <p>Deletes the HrisBenefit identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisBenefitRequestBuilder removeHrisBenefit() {
@@ -1885,6 +2429,8 @@ public class Hris {
 
     /**
      * Remove a benefit
+     * 
+     * <p>Deletes the HrisBenefit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1899,6 +2445,8 @@ public class Hris {
     /**
      * Remove a company
      * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
@@ -1907,6 +2455,8 @@ public class Hris {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1921,6 +2471,8 @@ public class Hris {
     /**
      * Remove a deduction
      * 
+     * <p>Deletes the HrisDeduction identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisDeductionRequestBuilder removeHrisDeduction() {
@@ -1929,6 +2481,8 @@ public class Hris {
 
     /**
      * Remove a deduction
+     * 
+     * <p>Deletes the HrisDeduction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1943,6 +2497,8 @@ public class Hris {
     /**
      * Remove a device
      * 
+     * <p>Deletes the HrisDevice identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisDeviceRequestBuilder removeHrisDevice() {
@@ -1951,6 +2507,8 @@ public class Hris {
 
     /**
      * Remove a device
+     * 
+     * <p>Deletes the HrisDevice identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1965,6 +2523,8 @@ public class Hris {
     /**
      * Remove a document
      * 
+     * <p>Deletes the HrisDocument identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisDocumentRequestBuilder removeHrisDocument() {
@@ -1973,6 +2533,8 @@ public class Hris {
 
     /**
      * Remove a document
+     * 
+     * <p>Deletes the HrisDocument identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1987,6 +2549,8 @@ public class Hris {
     /**
      * Remove an earning
      * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisEarningRequestBuilder removeHrisEarning() {
@@ -1995,6 +2559,8 @@ public class Hris {
 
     /**
      * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2009,6 +2575,8 @@ public class Hris {
     /**
      * Remove an employee
      * 
+     * <p>Deletes the HrisEmployee identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisEmployeeRequestBuilder removeHrisEmployee() {
@@ -2017,6 +2585,8 @@ public class Hris {
 
     /**
      * Remove an employee
+     * 
+     * <p>Deletes the HrisEmployee identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2031,6 +2601,8 @@ public class Hris {
     /**
      * Remove a group
      * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisGroupRequestBuilder removeHrisGroup() {
@@ -2039,6 +2611,8 @@ public class Hris {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2053,6 +2627,8 @@ public class Hris {
     /**
      * Remove a job
      * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisJobRequestBuilder removeHrisJob() {
@@ -2061,6 +2637,8 @@ public class Hris {
 
     /**
      * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2075,6 +2653,8 @@ public class Hris {
     /**
      * Remove a location
      * 
+     * <p>Deletes the HrisLocation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisLocationRequestBuilder removeHrisLocation() {
@@ -2083,6 +2663,8 @@ public class Hris {
 
     /**
      * Remove a location
+     * 
+     * <p>Deletes the HrisLocation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2097,6 +2679,8 @@ public class Hris {
     /**
      * Remove a timeoff
      * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
@@ -2105,6 +2689,8 @@ public class Hris {
 
     /**
      * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2119,6 +2705,8 @@ public class Hris {
     /**
      * Remove a timeshift
      * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisTimeshiftRequestBuilder removeHrisTimeshift() {
@@ -2127,6 +2715,8 @@ public class Hris {
 
     /**
      * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2141,6 +2731,9 @@ public class Hris {
     /**
      * Update an attendance
      * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisAttendanceRequestBuilder updateHrisAttendance() {
@@ -2149,6 +2742,9 @@ public class Hris {
 
     /**
      * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2163,6 +2759,9 @@ public class Hris {
     /**
      * Update a bankaccount
      * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
@@ -2171,6 +2770,9 @@ public class Hris {
 
     /**
      * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2185,6 +2787,9 @@ public class Hris {
     /**
      * Update a benefit
      * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisBenefitRequestBuilder updateHrisBenefit() {
@@ -2193,6 +2798,9 @@ public class Hris {
 
     /**
      * Update a benefit
+     * 
+     * <p>Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2207,6 +2815,9 @@ public class Hris {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
@@ -2215,6 +2826,9 @@ public class Hris {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2229,6 +2843,9 @@ public class Hris {
     /**
      * Update a deduction
      * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisDeductionRequestBuilder updateHrisDeduction() {
@@ -2237,6 +2854,9 @@ public class Hris {
 
     /**
      * Update a deduction
+     * 
+     * <p>Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2251,6 +2871,9 @@ public class Hris {
     /**
      * Update a device
      * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisDeviceRequestBuilder updateHrisDevice() {
@@ -2259,6 +2882,9 @@ public class Hris {
 
     /**
      * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2273,6 +2899,9 @@ public class Hris {
     /**
      * Update a document
      * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisDocumentRequestBuilder updateHrisDocument() {
@@ -2281,6 +2910,9 @@ public class Hris {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2295,6 +2927,9 @@ public class Hris {
     /**
      * Update an earning
      * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisEarningRequestBuilder updateHrisEarning() {
@@ -2303,6 +2938,9 @@ public class Hris {
 
     /**
      * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2317,6 +2955,9 @@ public class Hris {
     /**
      * Update an employee
      * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisEmployeeRequestBuilder updateHrisEmployee() {
@@ -2325,6 +2966,9 @@ public class Hris {
 
     /**
      * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2339,6 +2983,9 @@ public class Hris {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisGroupRequestBuilder updateHrisGroup() {
@@ -2347,6 +2994,9 @@ public class Hris {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2361,6 +3011,9 @@ public class Hris {
     /**
      * Update a job
      * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public UpdateHrisJobRequestBuilder updateHrisJob() {
@@ -2369,6 +3022,9 @@ public class Hris {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2383,6 +3039,9 @@ public class Hris {
     /**
      * Update a location
      * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisLocationRequestBuilder updateHrisLocation() {
@@ -2391,6 +3050,9 @@ public class Hris {
 
     /**
      * Update a location
+     * 
+     * <p>Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2405,6 +3067,9 @@ public class Hris {
     /**
      * Update a timeoff
      * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
@@ -2413,6 +3078,9 @@ public class Hris {
 
     /**
      * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2427,6 +3095,9 @@ public class Hris {
     /**
      * Update a timeshift
      * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisTimeshiftRequestBuilder updateHrisTimeshift() {
@@ -2435,6 +3106,9 @@ public class Hris {
 
     /**
      * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

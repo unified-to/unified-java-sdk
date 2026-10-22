@@ -55,6 +55,9 @@ public class Record {
     /**
      * Create a record
      * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
+     * 
      * @return The call builder
      */
     public CreateDatastoreRecordRequestBuilder createDatastoreRecord() {
@@ -63,6 +66,9 @@ public class Record {
 
     /**
      * Create a record
+     * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Record {
     /**
      * Retrieve a record
      * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetDatastoreRecordRequestBuilder getDatastoreRecord() {
@@ -85,6 +94,9 @@ public class Record {
 
     /**
      * Retrieve a record
+     * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Record {
     /**
      * List all records
      * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListDatastoreRecordsRequestBuilder listDatastoreRecords() {
@@ -107,6 +126,13 @@ public class Record {
 
     /**
      * List all records
+     * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Record {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchDatastoreRecordRequestBuilder patchDatastoreRecord() {
@@ -129,6 +158,9 @@ public class Record {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Record {
     /**
      * Remove a record
      * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveDatastoreRecordRequestBuilder removeDatastoreRecord() {
@@ -151,6 +185,8 @@ public class Record {
 
     /**
      * Remove a record
+     * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Record {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateDatastoreRecordRequestBuilder updateDatastoreRecord() {
@@ -173,6 +212,9 @@ public class Record {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

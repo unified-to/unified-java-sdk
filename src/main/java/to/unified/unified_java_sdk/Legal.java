@@ -127,6 +127,9 @@ public class Legal {
     /**
      * Create an expense
      * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
      * @return The call builder
      */
     public CreateLegalExpenseRequestBuilder createLegalExpense() {
@@ -135,6 +138,9 @@ public class Legal {
 
     /**
      * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -149,6 +155,9 @@ public class Legal {
     /**
      * Create a matter
      * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
      * @return The call builder
      */
     public CreateLegalMatterRequestBuilder createLegalMatter() {
@@ -157,6 +166,9 @@ public class Legal {
 
     /**
      * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -171,6 +183,9 @@ public class Legal {
     /**
      * Create a practicearea
      * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
+     * 
      * @return The call builder
      */
     public CreateLegalPracticeareaRequestBuilder createLegalPracticearea() {
@@ -179,6 +194,9 @@ public class Legal {
 
     /**
      * Create a practicearea
+     * 
+     * <p>Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they
+     * are mapped to the provider's API. Returns the created LegalPracticearea.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -193,6 +211,9 @@ public class Legal {
     /**
      * Create a timeentry
      * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
      * @return The call builder
      */
     public CreateLegalTimeentryRequestBuilder createLegalTimeentry() {
@@ -201,6 +222,9 @@ public class Legal {
 
     /**
      * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -215,6 +239,9 @@ public class Legal {
     /**
      * Retrieve an expense
      * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalExpenseRequestBuilder getLegalExpense() {
@@ -223,6 +250,9 @@ public class Legal {
 
     /**
      * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -237,6 +267,9 @@ public class Legal {
     /**
      * Retrieve a matter
      * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalMatterRequestBuilder getLegalMatter() {
@@ -245,6 +278,9 @@ public class Legal {
 
     /**
      * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -259,6 +295,9 @@ public class Legal {
     /**
      * Retrieve a practicearea
      * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalPracticeareaRequestBuilder getLegalPracticearea() {
@@ -267,6 +306,9 @@ public class Legal {
 
     /**
      * Retrieve a practicearea
+     * 
+     * <p>Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -281,6 +323,9 @@ public class Legal {
     /**
      * Retrieve a timeentry
      * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalTimeentryRequestBuilder getLegalTimeentry() {
@@ -289,6 +334,9 @@ public class Legal {
 
     /**
      * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -303,6 +351,13 @@ public class Legal {
     /**
      * List all expenses
      * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalExpensesRequestBuilder listLegalExpenses() {
@@ -311,6 +366,13 @@ public class Legal {
 
     /**
      * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -325,6 +387,13 @@ public class Legal {
     /**
      * List all matters
      * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalMattersRequestBuilder listLegalMatters() {
@@ -333,6 +402,13 @@ public class Legal {
 
     /**
      * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -347,6 +423,13 @@ public class Legal {
     /**
      * List all practiceareas
      * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalPracticeareasRequestBuilder listLegalPracticeareas() {
@@ -355,6 +438,13 @@ public class Legal {
 
     /**
      * List all practiceareas
+     * 
+     * <p>Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -369,6 +459,13 @@ public class Legal {
     /**
      * List all timeentries
      * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalTimeentriesRequestBuilder listLegalTimeentries() {
@@ -377,6 +474,13 @@ public class Legal {
 
     /**
      * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -391,6 +495,9 @@ public class Legal {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchLegalExpenseRequestBuilder patchLegalExpense() {
@@ -399,6 +506,9 @@ public class Legal {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -413,6 +523,9 @@ public class Legal {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchLegalMatterRequestBuilder patchLegalMatter() {
@@ -421,6 +534,9 @@ public class Legal {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -435,6 +551,9 @@ public class Legal {
     /**
      * Update a practicearea
      * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchLegalPracticeareaRequestBuilder patchLegalPracticearea() {
@@ -443,6 +562,9 @@ public class Legal {
 
     /**
      * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -457,6 +579,9 @@ public class Legal {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchLegalTimeentryRequestBuilder patchLegalTimeentry() {
@@ -465,6 +590,9 @@ public class Legal {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -479,6 +607,8 @@ public class Legal {
     /**
      * Remove an expense
      * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalExpenseRequestBuilder removeLegalExpense() {
@@ -487,6 +617,8 @@ public class Legal {
 
     /**
      * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -501,6 +633,8 @@ public class Legal {
     /**
      * Remove a matter
      * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalMatterRequestBuilder removeLegalMatter() {
@@ -509,6 +643,8 @@ public class Legal {
 
     /**
      * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -523,6 +659,8 @@ public class Legal {
     /**
      * Remove a practicearea
      * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalPracticeareaRequestBuilder removeLegalPracticearea() {
@@ -531,6 +669,8 @@ public class Legal {
 
     /**
      * Remove a practicearea
+     * 
+     * <p>Deletes the LegalPracticearea identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -545,6 +685,8 @@ public class Legal {
     /**
      * Remove a timeentry
      * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalTimeentryRequestBuilder removeLegalTimeentry() {
@@ -553,6 +695,8 @@ public class Legal {
 
     /**
      * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -567,6 +711,9 @@ public class Legal {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalExpenseRequestBuilder updateLegalExpense() {
@@ -575,6 +722,9 @@ public class Legal {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -589,6 +739,9 @@ public class Legal {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalMatterRequestBuilder updateLegalMatter() {
@@ -597,6 +750,9 @@ public class Legal {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -611,6 +767,9 @@ public class Legal {
     /**
      * Update a practicearea
      * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalPracticeareaRequestBuilder updateLegalPracticearea() {
@@ -619,6 +778,9 @@ public class Legal {
 
     /**
      * Update a practicearea
+     * 
+     * <p>Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -633,6 +795,9 @@ public class Legal {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalTimeentryRequestBuilder updateLegalTimeentry() {
@@ -641,6 +806,9 @@ public class Legal {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

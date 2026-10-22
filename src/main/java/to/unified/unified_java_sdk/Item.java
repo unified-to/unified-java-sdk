@@ -55,6 +55,9 @@ public class Item {
     /**
      * Create an item
      * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
      * @return The call builder
      */
     public CreateCommerceItemRequestBuilder createCommerceItem() {
@@ -63,6 +66,9 @@ public class Item {
 
     /**
      * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Item {
     /**
      * Retrieve an item
      * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceItemRequestBuilder getCommerceItem() {
@@ -85,6 +94,9 @@ public class Item {
 
     /**
      * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Item {
     /**
      * List all items
      * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceItemsRequestBuilder listCommerceItems() {
@@ -107,6 +126,13 @@ public class Item {
 
     /**
      * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Item {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceItemRequestBuilder patchCommerceItem() {
@@ -129,6 +158,9 @@ public class Item {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Item {
     /**
      * Remove an item
      * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceItemRequestBuilder removeCommerceItem() {
@@ -151,6 +185,8 @@ public class Item {
 
     /**
      * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Item {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceItemRequestBuilder updateCommerceItem() {
@@ -173,6 +212,9 @@ public class Item {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

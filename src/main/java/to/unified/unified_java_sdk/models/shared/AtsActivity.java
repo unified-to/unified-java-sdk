@@ -30,7 +30,9 @@ public class AtsActivity {
     @JsonProperty("bcc")
     private List<AtsEmail> bcc;
 
-
+    /**
+     * The ID of the candidate the activity is about (an AtsCandidate ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     private String candidateId;
@@ -54,7 +56,9 @@ public class AtsActivity {
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
-
+    /**
+     * The activity's content, such as the text of a note or the body of an email
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -199,6 +203,9 @@ public class AtsActivity {
         return Optional.ofNullable(this.bcc);
     }
 
+    /**
+     * The ID of the candidate the activity is about (an AtsCandidate ID)
+     */
     public Optional<String> candidateId() {
         return Optional.ofNullable(this.candidateId);
     }
@@ -221,6 +228,9 @@ public class AtsActivity {
         return Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * The activity's content, such as the text of a note or the body of an email
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -307,6 +317,9 @@ public class AtsActivity {
     }
 
 
+    /**
+     * The ID of the candidate the activity is about (an AtsCandidate ID)
+     */
     public AtsActivity withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -337,6 +350,9 @@ public class AtsActivity {
     }
 
 
+    /**
+     * The activity's content, such as the text of a note or the body of an email
+     */
     public AtsActivity withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -566,6 +582,9 @@ public class AtsActivity {
             return this;
         }
 
+        /**
+         * The ID of the candidate the activity is about (an AtsCandidate ID)
+         */
         public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
@@ -592,6 +611,9 @@ public class AtsActivity {
             return this;
         }
 
+        /**
+         * The activity's content, such as the text of a note or the body of an email
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;

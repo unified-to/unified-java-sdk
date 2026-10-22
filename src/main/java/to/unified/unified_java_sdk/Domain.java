@@ -55,6 +55,9 @@ public class Domain {
     /**
      * Create a domain
      * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
      * @return The call builder
      */
     public CreateComputeDomainRequestBuilder createComputeDomain() {
@@ -63,6 +66,9 @@ public class Domain {
 
     /**
      * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Domain {
     /**
      * Retrieve a domain
      * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeDomainRequestBuilder getComputeDomain() {
@@ -85,6 +94,9 @@ public class Domain {
 
     /**
      * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Domain {
     /**
      * List all domains
      * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeDomainsRequestBuilder listComputeDomains() {
@@ -107,6 +126,13 @@ public class Domain {
 
     /**
      * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Domain {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeDomainRequestBuilder patchComputeDomain() {
@@ -129,6 +158,9 @@ public class Domain {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Domain {
     /**
      * Remove a domain
      * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeDomainRequestBuilder removeComputeDomain() {
@@ -151,6 +185,8 @@ public class Domain {
 
     /**
      * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Domain {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeDomainRequestBuilder updateComputeDomain() {
@@ -173,6 +212,9 @@ public class Domain {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

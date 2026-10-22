@@ -57,6 +57,9 @@ public class AsyncNote {
     /**
      * Create a note
      * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
+     * 
      * @return The async call builder
      */
     public CreateTicketingNoteRequestBuilder createTicketingNote() {
@@ -65,6 +68,9 @@ public class AsyncNote {
 
     /**
      * Create a note
+     * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncNote {
     /**
      * Retrieve a note
      * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingNoteRequestBuilder getTicketingNote() {
@@ -88,6 +97,9 @@ public class AsyncNote {
 
     /**
      * Retrieve a note
+     * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncNote {
     /**
      * List all notes
      * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingNotesRequestBuilder listTicketingNotes() {
@@ -111,6 +130,13 @@ public class AsyncNote {
 
     /**
      * List all notes
+     * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncNote {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingNoteRequestBuilder patchTicketingNote() {
@@ -134,6 +163,9 @@ public class AsyncNote {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncNote {
     /**
      * Remove a note
      * 
+     * <p>Deletes the TicketingNote identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
@@ -157,6 +191,8 @@ public class AsyncNote {
 
     /**
      * Remove a note
+     * 
+     * <p>Deletes the TicketingNote identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncNote {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
@@ -180,6 +219,9 @@ public class AsyncNote {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response

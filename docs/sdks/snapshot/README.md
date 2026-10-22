@@ -11,7 +11,7 @@
 
 ## createComputeSnapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -40,13 +40,13 @@ public class Application {
         CreateComputeSnapshotRequest req = CreateComputeSnapshotRequest.builder()
                 .computeSnapshot(ComputeSnapshot.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
-                    .id("b00c880f-f094-4719-b9c3-302686f17114")
+                    .id("f8ac9f9d-e2f8-483f-bd71-4c00466af28d")
                     .metadata(List.of())
                     .name("snap-alius")
                     .sizeMb(169984d)
                     .status(ComputeSnapshotStatus.DELETING)
                     .type(ComputeSnapshotType.DISK)
-                    .updatedAt(OffsetDateTime.parse("2026-03-30T21:26:14.148Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-31T19:37:39.522Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,7 +80,7 @@ public class Application {
 
 ## getComputeSnapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ public class Application {
 
 ## listComputeSnapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## removeComputeSnapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 

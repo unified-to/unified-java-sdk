@@ -63,6 +63,9 @@ public class Profile {
     /**
      * Create a profile
      * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
      * @return The call builder
      */
     public CreateCdpProfileRequestBuilder createCdpProfile() {
@@ -71,6 +74,9 @@ public class Profile {
 
     /**
      * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -85,6 +91,9 @@ public class Profile {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpProfileRequestBuilder getCdpProfile() {
@@ -93,6 +102,9 @@ public class Profile {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -107,6 +119,9 @@ public class Profile {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSocialProfileRequestBuilder getSocialProfile() {
@@ -115,6 +130,9 @@ public class Profile {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +147,13 @@ public class Profile {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpProfilesRequestBuilder listCdpProfiles() {
@@ -137,6 +162,13 @@ public class Profile {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +183,13 @@ public class Profile {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSocialProfilesRequestBuilder listSocialProfiles() {
@@ -159,6 +198,13 @@ public class Profile {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +219,9 @@ public class Profile {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpProfileRequestBuilder patchCdpProfile() {
@@ -181,6 +230,9 @@ public class Profile {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +247,8 @@ public class Profile {
     /**
      * Remove a profile
      * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpProfileRequestBuilder removeCdpProfile() {
@@ -203,6 +257,8 @@ public class Profile {
 
     /**
      * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +273,9 @@ public class Profile {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpProfileRequestBuilder updateCdpProfile() {
@@ -225,6 +284,9 @@ public class Profile {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

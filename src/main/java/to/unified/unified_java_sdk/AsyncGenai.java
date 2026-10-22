@@ -157,6 +157,9 @@ public class AsyncGenai {
     /**
      * Create an agent
      * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
+     * 
      * @return The async call builder
      */
     public CreateGenaiAgentRequestBuilder createGenaiAgent() {
@@ -165,6 +168,9 @@ public class AsyncGenai {
 
     /**
      * Create an agent
+     * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiAgentResponse>} - The async response
@@ -180,6 +186,9 @@ public class AsyncGenai {
     /**
      * Create an embedding
      * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
      * @return The async call builder
      */
     public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
@@ -188,6 +197,9 @@ public class AsyncGenai {
 
     /**
      * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
@@ -203,6 +215,9 @@ public class AsyncGenai {
     /**
      * Create a memory
      * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
+     * 
      * @return The async call builder
      */
     public CreateGenaiMemoryRequestBuilder createGenaiMemory() {
@@ -211,6 +226,9 @@ public class AsyncGenai {
 
     /**
      * Create a memory
+     * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiMemoryResponse>} - The async response
@@ -226,6 +244,9 @@ public class AsyncGenai {
     /**
      * Create an organization
      * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
+     * 
      * @return The async call builder
      */
     public CreateGenaiOrganizationRequestBuilder createGenaiOrganization() {
@@ -234,6 +255,9 @@ public class AsyncGenai {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
@@ -249,6 +273,9 @@ public class AsyncGenai {
     /**
      * Create a prompt
      * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
      * @return The async call builder
      */
     public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
@@ -257,6 +284,9 @@ public class AsyncGenai {
 
     /**
      * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
@@ -272,6 +302,9 @@ public class AsyncGenai {
     /**
      * Create a task
      * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
      * @return The async call builder
      */
     public CreateGenaiTaskRequestBuilder createGenaiTask() {
@@ -280,6 +313,9 @@ public class AsyncGenai {
 
     /**
      * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiTaskResponse>} - The async response
@@ -295,6 +331,9 @@ public class AsyncGenai {
     /**
      * Retrieve an agent
      * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiAgentRequestBuilder getGenaiAgent() {
@@ -303,6 +342,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve an agent
+     * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiAgentResponse>} - The async response
@@ -318,6 +360,9 @@ public class AsyncGenai {
     /**
      * Retrieve a memory
      * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiMemoryRequestBuilder getGenaiMemory() {
@@ -326,6 +371,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve a memory
+     * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiMemoryResponse>} - The async response
@@ -341,6 +389,9 @@ public class AsyncGenai {
     /**
      * Retrieve a model
      * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiModelRequestBuilder getGenaiModel() {
@@ -349,6 +400,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve a model
+     * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
@@ -364,6 +418,9 @@ public class AsyncGenai {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiOrganizationRequestBuilder getGenaiOrganization() {
@@ -372,6 +429,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
@@ -387,6 +447,9 @@ public class AsyncGenai {
     /**
      * Retrieve a skill
      * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiSkillRequestBuilder getGenaiSkill() {
@@ -395,6 +458,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve a skill
+     * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiSkillResponse>} - The async response
@@ -410,6 +476,9 @@ public class AsyncGenai {
     /**
      * Retrieve a task
      * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiTaskRequestBuilder getGenaiTask() {
@@ -418,6 +487,9 @@ public class AsyncGenai {
 
     /**
      * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiTaskResponse>} - The async response
@@ -433,6 +505,13 @@ public class AsyncGenai {
     /**
      * List all agents
      * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiAgentsRequestBuilder listGenaiAgents() {
@@ -441,6 +520,13 @@ public class AsyncGenai {
 
     /**
      * List all agents
+     * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiAgentsResponse>} - The async response
@@ -456,6 +542,13 @@ public class AsyncGenai {
     /**
      * List all memories
      * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiMemoriesRequestBuilder listGenaiMemories() {
@@ -464,6 +557,13 @@ public class AsyncGenai {
 
     /**
      * List all memories
+     * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiMemoriesResponse>} - The async response
@@ -479,6 +579,13 @@ public class AsyncGenai {
     /**
      * List all models
      * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiModelsRequestBuilder listGenaiModels() {
@@ -487,6 +594,13 @@ public class AsyncGenai {
 
     /**
      * List all models
+     * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
@@ -502,6 +616,13 @@ public class AsyncGenai {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiOrganizationsRequestBuilder listGenaiOrganizations() {
@@ -510,6 +631,13 @@ public class AsyncGenai {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
@@ -525,6 +653,13 @@ public class AsyncGenai {
     /**
      * List all skills
      * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiSkillsRequestBuilder listGenaiSkills() {
@@ -533,6 +668,13 @@ public class AsyncGenai {
 
     /**
      * List all skills
+     * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiSkillsResponse>} - The async response
@@ -548,6 +690,13 @@ public class AsyncGenai {
     /**
      * List all tasks
      * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiTasksRequestBuilder listGenaiTasks() {
@@ -556,6 +705,13 @@ public class AsyncGenai {
 
     /**
      * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiTasksResponse>} - The async response
@@ -571,6 +727,9 @@ public class AsyncGenai {
     /**
      * Update an agent
      * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiAgentRequestBuilder patchGenaiAgent() {
@@ -579,6 +738,9 @@ public class AsyncGenai {
 
     /**
      * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiAgentResponse>} - The async response
@@ -594,6 +756,9 @@ public class AsyncGenai {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiMemoryRequestBuilder patchGenaiMemory() {
@@ -602,6 +767,9 @@ public class AsyncGenai {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiMemoryResponse>} - The async response
@@ -617,6 +785,9 @@ public class AsyncGenai {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiOrganizationRequestBuilder patchGenaiOrganization() {
@@ -625,6 +796,9 @@ public class AsyncGenai {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
@@ -640,6 +814,9 @@ public class AsyncGenai {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiTaskRequestBuilder patchGenaiTask() {
@@ -648,6 +825,9 @@ public class AsyncGenai {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiTaskResponse>} - The async response
@@ -663,6 +843,8 @@ public class AsyncGenai {
     /**
      * Remove an agent
      * 
+     * <p>Deletes the GenaiAgent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiAgentRequestBuilder removeGenaiAgent() {
@@ -671,6 +853,8 @@ public class AsyncGenai {
 
     /**
      * Remove an agent
+     * 
+     * <p>Deletes the GenaiAgent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiAgentResponse>} - The async response
@@ -686,6 +870,8 @@ public class AsyncGenai {
     /**
      * Remove a memory
      * 
+     * <p>Deletes the GenaiMemory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiMemoryRequestBuilder removeGenaiMemory() {
@@ -694,6 +880,8 @@ public class AsyncGenai {
 
     /**
      * Remove a memory
+     * 
+     * <p>Deletes the GenaiMemory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiMemoryResponse>} - The async response
@@ -709,6 +897,8 @@ public class AsyncGenai {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiOrganizationRequestBuilder removeGenaiOrganization() {
@@ -717,6 +907,8 @@ public class AsyncGenai {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
@@ -732,6 +924,8 @@ public class AsyncGenai {
     /**
      * Remove a skill
      * 
+     * <p>Deletes the GenaiSkill identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiSkillRequestBuilder removeGenaiSkill() {
@@ -740,6 +934,8 @@ public class AsyncGenai {
 
     /**
      * Remove a skill
+     * 
+     * <p>Deletes the GenaiSkill identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiSkillResponse>} - The async response
@@ -755,6 +951,8 @@ public class AsyncGenai {
     /**
      * Remove a task
      * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiTaskRequestBuilder removeGenaiTask() {
@@ -763,6 +961,8 @@ public class AsyncGenai {
 
     /**
      * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiTaskResponse>} - The async response
@@ -778,6 +978,9 @@ public class AsyncGenai {
     /**
      * Update an agent
      * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiAgentRequestBuilder updateGenaiAgent() {
@@ -786,6 +989,9 @@ public class AsyncGenai {
 
     /**
      * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiAgentResponse>} - The async response
@@ -801,6 +1007,9 @@ public class AsyncGenai {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiMemoryRequestBuilder updateGenaiMemory() {
@@ -809,6 +1018,9 @@ public class AsyncGenai {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiMemoryResponse>} - The async response
@@ -824,6 +1036,9 @@ public class AsyncGenai {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiOrganizationRequestBuilder updateGenaiOrganization() {
@@ -832,6 +1047,9 @@ public class AsyncGenai {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
@@ -847,6 +1065,9 @@ public class AsyncGenai {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiTaskRequestBuilder updateGenaiTask() {
@@ -855,6 +1076,9 @@ public class AsyncGenai {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiTaskResponse>} - The async response

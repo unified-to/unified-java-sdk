@@ -57,6 +57,9 @@ public class AsyncEmployee {
     /**
      * Create an employee
      * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
+     * 
      * @return The async call builder
      */
     public CreateHrisEmployeeRequestBuilder createHrisEmployee() {
@@ -65,6 +68,9 @@ public class AsyncEmployee {
 
     /**
      * Create an employee
+     * 
+     * <p>Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEmployee.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncEmployee {
     /**
      * Retrieve an employee
      * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisEmployeeRequestBuilder getHrisEmployee() {
@@ -88,6 +97,9 @@ public class AsyncEmployee {
 
     /**
      * Retrieve an employee
+     * 
+     * <p>Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncEmployee {
     /**
      * List all employees
      * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisEmployeesRequestBuilder listHrisEmployees() {
@@ -111,6 +130,13 @@ public class AsyncEmployee {
 
     /**
      * List all employees
+     * 
+     * <p>Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncEmployee {
     /**
      * Update an employee
      * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisEmployeeRequestBuilder patchHrisEmployee() {
@@ -134,6 +163,9 @@ public class AsyncEmployee {
 
     /**
      * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncEmployee {
     /**
      * Remove an employee
      * 
+     * <p>Deletes the HrisEmployee identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisEmployeeRequestBuilder removeHrisEmployee() {
@@ -157,6 +191,8 @@ public class AsyncEmployee {
 
     /**
      * Remove an employee
+     * 
+     * <p>Deletes the HrisEmployee identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncEmployee {
     /**
      * Update an employee
      * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisEmployeeRequestBuilder updateHrisEmployee() {
@@ -180,6 +219,9 @@ public class AsyncEmployee {
 
     /**
      * Update an employee
+     * 
+     * <p>Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response

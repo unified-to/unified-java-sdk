@@ -13,7 +13,7 @@
 
 ## createMartechList
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
                     .description("Vilis.")
-                    .id("703d65a7-a4dc-45d5-8222-58b826505e04")
+                    .id("ef8be90d-e5c3-4771-b8a1-17a10101d810")
                     .isActive(true)
                     .language("ru")
                     .metadata(List.of())
@@ -61,7 +61,7 @@ public class Application {
                     .senderName("Blake Kuhn")
                     .senderPhone("359.305.7962 x28115")
                     .subject("Theca caecus copia crebro valeo ulciscor.")
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T10:09:34.161Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T20:40:04.742Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -95,7 +95,7 @@ public class Application {
 
 ## getMartechList
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ public class Application {
 
 ## listMartechLists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ public class Application {
 
 ## patchMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
                     .description("Vilis.")
-                    .id("fb6a63cb-2def-4eb9-a42f-8b79b66317de")
+                    .id("ecfffc44-754d-4354-8507-b67ee8dddf03")
                     .isActive(true)
                     .language("ru")
                     .metadata(List.of())
@@ -258,7 +258,7 @@ public class Application {
                     .senderName("Blake Kuhn")
                     .senderPhone("359.305.7962 x28115")
                     .subject("Theca caecus copia crebro valeo ulciscor.")
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T10:09:34.171Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T20:40:04.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -293,7 +293,7 @@ public class Application {
 
 ## removeMartechList
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ public class Application {
 
 ## updateMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-09-18T02:01:36.950Z"))
                     .description("Vilis.")
-                    .id("fb6a63cb-2def-4eb9-a42f-8b79b66317de")
+                    .id("ecfffc44-754d-4354-8507-b67ee8dddf03")
                     .isActive(true)
                     .language("ru")
                     .metadata(List.of())
@@ -397,7 +397,7 @@ public class Application {
                     .senderName("Blake Kuhn")
                     .senderPhone("359.305.7962 x28115")
                     .subject("Theca caecus copia crebro valeo ulciscor.")
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T10:09:34.171Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T20:40:04.755Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

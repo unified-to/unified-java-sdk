@@ -113,6 +113,9 @@ public class AsyncOrganization {
     /**
      * Create an organization
      * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
+     * 
      * @return The async call builder
      */
     public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
@@ -121,6 +124,9 @@ public class AsyncOrganization {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
@@ -136,6 +142,9 @@ public class AsyncOrganization {
     /**
      * Create an organization
      * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
+     * 
      * @return The async call builder
      */
     public CreateGenaiOrganizationRequestBuilder createGenaiOrganization() {
@@ -144,6 +153,9 @@ public class AsyncOrganization {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiOrganizationResponse>} - The async response
@@ -159,6 +171,9 @@ public class AsyncOrganization {
     /**
      * Create an organization
      * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
+     * 
      * @return The async call builder
      */
     public CreateRepoOrganizationRequestBuilder createRepoOrganization() {
@@ -167,6 +182,9 @@ public class AsyncOrganization {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
@@ -182,6 +200,9 @@ public class AsyncOrganization {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingOrganizationRequestBuilder getAccountingOrganization() {
@@ -190,6 +211,9 @@ public class AsyncOrganization {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
@@ -205,6 +229,9 @@ public class AsyncOrganization {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsOrganizationRequestBuilder getAdsOrganization() {
@@ -213,6 +240,9 @@ public class AsyncOrganization {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
@@ -228,6 +258,9 @@ public class AsyncOrganization {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiOrganizationRequestBuilder getGenaiOrganization() {
@@ -236,6 +269,9 @@ public class AsyncOrganization {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiOrganizationResponse>} - The async response
@@ -251,6 +287,9 @@ public class AsyncOrganization {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetRepoOrganizationRequestBuilder getRepoOrganization() {
@@ -259,6 +298,9 @@ public class AsyncOrganization {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
@@ -274,6 +316,13 @@ public class AsyncOrganization {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingOrganizationsRequestBuilder listAccountingOrganizations() {
@@ -282,6 +331,13 @@ public class AsyncOrganization {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
@@ -297,6 +353,13 @@ public class AsyncOrganization {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
@@ -305,6 +368,13 @@ public class AsyncOrganization {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
@@ -320,6 +390,13 @@ public class AsyncOrganization {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiOrganizationsRequestBuilder listGenaiOrganizations() {
@@ -328,6 +405,13 @@ public class AsyncOrganization {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiOrganizationsResponse>} - The async response
@@ -343,6 +427,13 @@ public class AsyncOrganization {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
@@ -351,6 +442,13 @@ public class AsyncOrganization {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
@@ -366,6 +464,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
@@ -374,6 +475,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
@@ -389,6 +493,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiOrganizationRequestBuilder patchGenaiOrganization() {
@@ -397,6 +504,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiOrganizationResponse>} - The async response
@@ -412,6 +522,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchRepoOrganizationRequestBuilder patchRepoOrganization() {
@@ -420,6 +533,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
@@ -435,6 +551,8 @@ public class AsyncOrganization {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the AdsOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
@@ -443,6 +561,8 @@ public class AsyncOrganization {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the AdsOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
@@ -458,6 +578,8 @@ public class AsyncOrganization {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiOrganizationRequestBuilder removeGenaiOrganization() {
@@ -466,6 +588,8 @@ public class AsyncOrganization {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiOrganizationResponse>} - The async response
@@ -481,6 +605,8 @@ public class AsyncOrganization {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the RepoOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
@@ -489,6 +615,8 @@ public class AsyncOrganization {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the RepoOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
@@ -504,6 +632,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
@@ -512,6 +643,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response
@@ -527,6 +661,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiOrganizationRequestBuilder updateGenaiOrganization() {
@@ -535,6 +672,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiOrganizationResponse>} - The async response
@@ -550,6 +690,9 @@ public class AsyncOrganization {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateRepoOrganizationRequestBuilder updateRepoOrganization() {
@@ -558,6 +701,9 @@ public class AsyncOrganization {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response

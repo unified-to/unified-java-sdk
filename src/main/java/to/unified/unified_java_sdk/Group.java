@@ -111,6 +111,9 @@ public class Group {
     /**
      * Create a group
      * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
      * @return The call builder
      */
     public CreateAdsGroupRequestBuilder createAdsGroup() {
@@ -119,6 +122,9 @@ public class Group {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -133,6 +139,9 @@ public class Group {
     /**
      * Create a group
      * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
      * @return The call builder
      */
     public CreateHrisGroupRequestBuilder createHrisGroup() {
@@ -141,6 +150,9 @@ public class Group {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -177,6 +189,9 @@ public class Group {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsGroupRequestBuilder getAdsGroup() {
@@ -185,6 +200,9 @@ public class Group {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -199,6 +217,9 @@ public class Group {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsGroupRequestBuilder getClubsGroup() {
@@ -207,6 +228,9 @@ public class Group {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -221,6 +245,9 @@ public class Group {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisGroupRequestBuilder getHrisGroup() {
@@ -229,6 +256,9 @@ public class Group {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -265,6 +295,13 @@ public class Group {
     /**
      * List all groups
      * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsGroupsRequestBuilder listAdsGroups() {
@@ -273,6 +310,13 @@ public class Group {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -287,6 +331,13 @@ public class Group {
     /**
      * List all groups
      * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsGroupsRequestBuilder listClubsGroups() {
@@ -295,6 +346,13 @@ public class Group {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -309,6 +367,13 @@ public class Group {
     /**
      * List all groups
      * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisGroupsRequestBuilder listHrisGroups() {
@@ -317,6 +382,13 @@ public class Group {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -353,6 +425,9 @@ public class Group {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAdsGroupRequestBuilder patchAdsGroup() {
@@ -361,6 +436,9 @@ public class Group {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -375,6 +453,9 @@ public class Group {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisGroupRequestBuilder patchHrisGroup() {
@@ -383,6 +464,9 @@ public class Group {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -419,6 +503,8 @@ public class Group {
     /**
      * Remove a group
      * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsGroupRequestBuilder removeAdsGroup() {
@@ -427,6 +513,8 @@ public class Group {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -441,6 +529,8 @@ public class Group {
     /**
      * Remove a group
      * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisGroupRequestBuilder removeHrisGroup() {
@@ -449,6 +539,8 @@ public class Group {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -485,6 +577,9 @@ public class Group {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsGroupRequestBuilder updateAdsGroup() {
@@ -493,6 +588,9 @@ public class Group {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -507,6 +605,9 @@ public class Group {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisGroupRequestBuilder updateHrisGroup() {
@@ -515,6 +616,9 @@ public class Group {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

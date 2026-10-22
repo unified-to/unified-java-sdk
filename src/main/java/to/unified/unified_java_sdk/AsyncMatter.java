@@ -57,6 +57,9 @@ public class AsyncMatter {
     /**
      * Create a matter
      * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
+     * 
      * @return The async call builder
      */
     public CreateLegalMatterRequestBuilder createLegalMatter() {
@@ -65,6 +68,9 @@ public class AsyncMatter {
 
     /**
      * Create a matter
+     * 
+     * <p>Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalMatter.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalMatterResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncMatter {
     /**
      * Retrieve a matter
      * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalMatterRequestBuilder getLegalMatter() {
@@ -88,6 +97,9 @@ public class AsyncMatter {
 
     /**
      * Retrieve a matter
+     * 
+     * <p>Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalMatterResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncMatter {
     /**
      * List all matters
      * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalMattersRequestBuilder listLegalMatters() {
@@ -111,6 +130,13 @@ public class AsyncMatter {
 
     /**
      * List all matters
+     * 
+     * <p>Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalMattersResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncMatter {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalMatterRequestBuilder patchLegalMatter() {
@@ -134,6 +163,9 @@ public class AsyncMatter {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalMatterResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncMatter {
     /**
      * Remove a matter
      * 
+     * <p>Deletes the LegalMatter identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalMatterRequestBuilder removeLegalMatter() {
@@ -157,6 +191,8 @@ public class AsyncMatter {
 
     /**
      * Remove a matter
+     * 
+     * <p>Deletes the LegalMatter identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalMatterResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncMatter {
     /**
      * Update a matter
      * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalMatterRequestBuilder updateLegalMatter() {
@@ -180,6 +219,9 @@ public class AsyncMatter {
 
     /**
      * Update a matter
+     * 
+     * <p>Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalMatterResponse>} - The async response

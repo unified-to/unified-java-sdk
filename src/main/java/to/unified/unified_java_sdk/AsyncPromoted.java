@@ -41,6 +41,9 @@ public class AsyncPromoted {
     /**
      * Retrieve a promoted
      * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsPromotedRequestBuilder getAdsPromoted() {
@@ -49,6 +52,9 @@ public class AsyncPromoted {
 
     /**
      * Retrieve a promoted
+     * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsPromotedResponse>} - The async response
@@ -64,6 +70,13 @@ public class AsyncPromoted {
     /**
      * List all promoteds
      * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
@@ -72,6 +85,13 @@ public class AsyncPromoted {
 
     /**
      * List all promoteds
+     * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsPromotedsResponse>} - The async response

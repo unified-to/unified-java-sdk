@@ -13,7 +13,7 @@
 
 ## createTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -44,9 +44,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("a153a126-2d31-4688-ae84-1a5fbb812c34")
+                    .id("db892fbc-5dc9-4ba6-8f13-1f3fe0ea0133")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.435Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.275Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,7 +80,7 @@ public class Application {
 
 ## getTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ public class Application {
 
 ## listTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## patchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -226,9 +226,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("6ca69f3e-e51a-477b-9895-d73591feb422")
+                    .id("ae2b10c4-d68d-4743-9eaf-ecf36b26781f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.446Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.283Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -263,7 +263,7 @@ public class Application {
 
 ## removeTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ public class Application {
 
 ## updateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -350,9 +350,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("6ca69f3e-e51a-477b-9895-d73591feb422")
+                    .id("ae2b10c4-d68d-4743-9eaf-ecf36b26781f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.446Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.283Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

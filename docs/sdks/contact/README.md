@@ -25,7 +25,7 @@
 
 ## createAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -76,7 +76,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("b8ef7481-5912-429e-a58d-1d1caea83d28")
+                    .id("e5c7b8c1-5066-4f6c-b121-4759fbfcf47a")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -88,7 +88,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("ca1705d7-f372-483e-9952-6b0e382b96d7")
+                            .id("59055010-f36d-45e1-af7e-f32210706a89")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -107,7 +107,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:19.977Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.889Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -142,7 +142,7 @@ public class Application {
 
 ## createCrmContact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("23b5106c-6ff1-4fa3-a367-b561445d0d04")
+                    .id("61a2e3fa-0aff-4718-8b21-3ea79f45b968")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -198,7 +198,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("7c3fc2aa-bf65-49e8-ab60-5390dfcdcd6f")
+                            .id("af65f797-f5a0-42d4-877d-c3c60b7eae86")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -214,7 +214,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.281Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.678Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -248,7 +248,7 @@ public class Application {
 
 ## createUcContact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("296a5660-10dd-48d4-adb7-f0ace5f89857")
+                    .id("a3f807b4-77f1-402a-9fb4-1299825cc28b")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -302,7 +302,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-08T09:07:50.831Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-08T23:49:18.408Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -336,7 +336,7 @@ public class Application {
 
 ## getAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ public class Application {
 
 ## getCrmContact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ public class Application {
 
 ## getUcContact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -510,7 +510,7 @@ public class Application {
 
 ## listAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -567,7 +567,7 @@ public class Application {
 
 ## listCrmContacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -624,7 +624,7 @@ public class Application {
 
 ## listUcContacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -681,7 +681,7 @@ public class Application {
 
 ## patchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -732,7 +732,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("28ebc354-9a2c-49bd-b670-78f8c1d68d0b")
+                    .id("6c321c70-45ca-4c35-a684-446b116b7802")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -744,7 +744,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("85d75563-a111-4fad-bd66-b3079157b01f")
+                            .id("36c24e0e-c359-4847-8010-5f26727ed716")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -763,7 +763,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:20.001Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.913Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -799,7 +799,7 @@ public class Application {
 
 ## patchCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -845,7 +845,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("2b27e713-d167-4a42-88df-188f6578bd70")
+                    .id("b3fc8bf7-066b-47cd-b670-93866365c0f4")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -855,7 +855,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("8feb0476-fc64-40ea-823b-94e034dabc18")
+                            .id("65ceabb6-e5f4-4732-8d0f-f3635cf86650")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -871,7 +871,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.282Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.679Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -906,7 +906,7 @@ public class Application {
 
 ## patchUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -942,7 +942,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("50d30859-7ccf-43c2-af6f-742f07b484e7")
+                    .id("6d9389fe-f660-4783-89f2-e379bcb10559")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -960,7 +960,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-08T09:07:50.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-08T23:49:18.416Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -995,7 +995,7 @@ public class Application {
 
 ## removeAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -1051,7 +1051,7 @@ public class Application {
 
 ## removeCrmContact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1107,7 +1107,7 @@ public class Application {
 
 ## removeUcContact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1163,7 +1163,7 @@ public class Application {
 
 ## updateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1214,7 +1214,7 @@ public class Application {
                             .type(AccountingEmailType.OTHER)
                             .build()))
                     .firstName("Delores")
-                    .id("28ebc354-9a2c-49bd-b670-78f8c1d68d0b")
+                    .id("6c321c70-45ca-4c35-a684-446b116b7802")
                     .identification("531850872")
                     .isActive(true)
                     .isCustomer(true)
@@ -1226,7 +1226,7 @@ public class Application {
                         AccountingContactPaymentMethod.builder()
                             .type(AccountingContactPaymentMethodType.CARD)
                             .default_(true)
-                            .id("85d75563-a111-4fad-bd66-b3079157b01f")
+                            .id("36c24e0e-c359-4847-8010-5f26727ed716")
                             .name("Visa 7844")
                             .build()))
                     .portalUrl("https://kertzmanngroup.com/billing")
@@ -1245,7 +1245,7 @@ public class Application {
                             .telephone("(432) 760-1716")
                             .type(AccountingTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2023-12-19T20:52:20.001Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-20T08:09:21.913Z"))
                     .website("https://kertzmanngroup.com")
                     .build())
                 .connectionId("<id>")
@@ -1281,7 +1281,7 @@ public class Application {
 
 ## updateCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1327,7 +1327,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("2b27e713-d167-4a42-88df-188f6578bd70")
+                    .id("b3fc8bf7-066b-47cd-b670-93866365c0f4")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -1337,7 +1337,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("8feb0476-fc64-40ea-823b-94e034dabc18")
+                            .id("65ceabb6-e5f4-4732-8d0f-f3635cf86650")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -1353,7 +1353,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.282Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.679Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1388,7 +1388,7 @@ public class Application {
 
 ## updateUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1424,7 +1424,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("50d30859-7ccf-43c2-af6f-742f07b484e7")
+                    .id("6d9389fe-f660-4783-89f2-e379bcb10559")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -1442,7 +1442,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-08T09:07:50.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-08T23:49:18.416Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

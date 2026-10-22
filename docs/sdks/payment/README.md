@@ -29,7 +29,7 @@
 
 ## createPaymentLink
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -61,13 +61,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                     .currency("CAD")
                     .description("Savor the tender essence in our Ball, designed for dim culinary adventures")
-                    .id("404d6bb1-a743-4354-9e52-43ccb5c967d6")
+                    .id("d8509659-629f-44c0-aff5-abb5794f4191")
                     .isActive(true)
                     .isChargeableNow(true)
                     .lineitems(List.of(
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("cf265891-a57d-4467-8d76-0c44748d9acb")
+                            .id("c3fa0972-fb22-4da0-b289-b5e6e1fb5a75")
                             .itemDescription("Discover the worst new Computer with an exciting mix of Steel ingredients")
                             .itemName("Soft Marble Cheese")
                             .taxAmount(0d)
@@ -79,7 +79,7 @@ public class Application {
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                             .discountAmount(424.32)
-                            .id("fdd55c6e-72c7-4c60-87b0-989207a8f1b3")
+                            .id("e87e2511-d928-45df-802a-3f1583f1a1b6")
                             .itemDescription("Innovative Shoes featuring utilized technology and Cotton construction")
                             .itemName("Sleek Aluminum Shoes")
                             .notes("Cervus decretum viridis doloremque.")
@@ -91,7 +91,7 @@ public class Application {
                             .build(),
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("dcf7e171-3091-478a-9a6d-1b56781ed766")
+                            .id("e69125b6-9709-4c3e-92bd-07efe2aeaf66")
                             .itemDescription("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance")
                             .itemName("Elegant Concrete Gloves")
                             .notes("Desipio usque vacuus currus cetera testimonium.")
@@ -103,8 +103,8 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .successUrl("https://tinted-jet.info")
-                    .updatedAt(OffsetDateTime.parse("2024-04-13T09:31:57.488Z"))
-                    .url("https://pay.example.com/404d6bb1-a743-4354-9e52-43ccb5c967d6")
+                    .updatedAt(OffsetDateTime.parse("2024-04-13T15:52:16.005Z"))
+                    .url("https://pay.example.com/d8509659-629f-44c0-aff5-abb5794f4191")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -138,7 +138,7 @@ public class Application {
 
 ## createPaymentPayment
 
-Create a payment
+Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 
 ### Example Usage
 
@@ -173,7 +173,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-10T00:19:42.086Z"))
                     .currency("EUR")
                     .feeAmount(2055.82)
-                    .id("f5ddc760-976a-4e1f-9f8d-4e863e023d58")
+                    .id("4eb3a948-03df-44fd-bf46-f086faa5b9bc")
                     .metadata(List.of())
                     .netAmount(68824.18)
                     .notes("Bibo tactus vilicus.")
@@ -185,7 +185,7 @@ public class Application {
                     .tipAmount(0d)
                     .totalAmount(70880d)
                     .type(PaymentPaymentType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2025-10-08T00:37:18.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T19:58:09.392Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -219,7 +219,7 @@ public class Application {
 
 ## createPaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -253,7 +253,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("d04e869d-3e4a-410b-844e-e2e55ffed157")
+                    .id("66b07dd9-faa8-4d36-b9fd-36134f7f006d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -262,7 +262,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.652Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.044Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -296,7 +296,7 @@ public class Application {
 
 ## getPaymentLink
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ public class Application {
 
 ## getPaymentPayment
 
-Retrieve a payment
+Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ public class Application {
 
 ## getPaymentPayout
 
-Retrieve a payout
+Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -470,7 +470,7 @@ public class Application {
 
 ## getPaymentRefund
 
-Retrieve a refund
+Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -528,7 +528,7 @@ public class Application {
 
 ## getPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -586,7 +586,7 @@ public class Application {
 
 ## listPaymentLinks
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -643,7 +643,7 @@ public class Application {
 
 ## listPaymentPayments
 
-List all payments
+Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -700,7 +700,7 @@ public class Application {
 
 ## listPaymentPayouts
 
-List all payouts
+Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -757,7 +757,7 @@ public class Application {
 
 ## listPaymentRefunds
 
-List all refunds
+Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -814,7 +814,7 @@ public class Application {
 
 ## listPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -871,7 +871,7 @@ public class Application {
 
 ## patchPaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -903,13 +903,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                     .currency("CAD")
                     .description("Savor the tender essence in our Ball, designed for dim culinary adventures")
-                    .id("d1d16447-f59d-4131-afab-7698e6968e08")
+                    .id("da4a275a-1a2a-4572-a84b-7d240029ce54")
                     .isActive(true)
                     .isChargeableNow(true)
                     .lineitems(List.of(
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("baa7b854-1e80-4c65-b563-5bfabe2dfd3d")
+                            .id("d3e3e690-c7d8-4f28-bb31-d386dfc9dd85")
                             .itemDescription("Discover the worst new Computer with an exciting mix of Steel ingredients")
                             .itemName("Soft Marble Cheese")
                             .taxAmount(0d)
@@ -921,7 +921,7 @@ public class Application {
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                             .discountAmount(424.32)
-                            .id("61b6fd96-cbe1-4772-8e2e-770873d7fd1d")
+                            .id("96487499-b2ab-49f8-9127-f35e16523376")
                             .itemDescription("Innovative Shoes featuring utilized technology and Cotton construction")
                             .itemName("Sleek Aluminum Shoes")
                             .notes("Cervus decretum viridis doloremque.")
@@ -933,7 +933,7 @@ public class Application {
                             .build(),
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("b7441295-9dde-44cb-8fa7-ae0826b79348")
+                            .id("4f65e6e8-0fe0-4e60-8a4f-0fbdea830459")
                             .itemDescription("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance")
                             .itemName("Elegant Concrete Gloves")
                             .notes("Desipio usque vacuus currus cetera testimonium.")
@@ -945,8 +945,8 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .successUrl("https://tinted-jet.info")
-                    .updatedAt(OffsetDateTime.parse("2024-04-13T09:31:57.495Z"))
-                    .url("https://pay.example.com/d1d16447-f59d-4131-afab-7698e6968e08")
+                    .updatedAt(OffsetDateTime.parse("2024-04-13T15:52:16.012Z"))
+                    .url("https://pay.example.com/da4a275a-1a2a-4572-a84b-7d240029ce54")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -981,7 +981,7 @@ public class Application {
 
 ## patchPaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1016,7 +1016,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-10T00:19:42.086Z"))
                     .currency("EUR")
                     .feeAmount(2055.82)
-                    .id("06918bee-92c9-48ec-8fbe-399abc15aa7b")
+                    .id("c8dece5d-446b-42ee-ad96-cc55f42438c3")
                     .metadata(List.of())
                     .netAmount(68824.18)
                     .notes("Bibo tactus vilicus.")
@@ -1028,7 +1028,7 @@ public class Application {
                     .tipAmount(0d)
                     .totalAmount(70880d)
                     .type(PaymentPaymentType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2025-10-08T00:37:18.298Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T19:58:09.425Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1063,7 +1063,7 @@ public class Application {
 
 ## patchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1097,7 +1097,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("7e76a83d-ddcd-43da-a2aa-27623b87ef12")
+                    .id("4e764098-0267-4513-b3a6-0b8a1703834d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -1106,7 +1106,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.654Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1141,7 +1141,7 @@ public class Application {
 
 ## removePaymentLink
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -1197,7 +1197,7 @@ public class Application {
 
 ## removePaymentPayment
 
-Remove a payment
+Deletes the PaymentPayment identified by `id`.
 
 ### Example Usage
 
@@ -1253,7 +1253,7 @@ public class Application {
 
 ## removePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -1309,7 +1309,7 @@ public class Application {
 
 ## updatePaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -1341,13 +1341,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                     .currency("CAD")
                     .description("Savor the tender essence in our Ball, designed for dim culinary adventures")
-                    .id("d1d16447-f59d-4131-afab-7698e6968e08")
+                    .id("da4a275a-1a2a-4572-a84b-7d240029ce54")
                     .isActive(true)
                     .isChargeableNow(true)
                     .lineitems(List.of(
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("baa7b854-1e80-4c65-b563-5bfabe2dfd3d")
+                            .id("d3e3e690-c7d8-4f28-bb31-d386dfc9dd85")
                             .itemDescription("Discover the worst new Computer with an exciting mix of Steel ingredients")
                             .itemName("Soft Marble Cheese")
                             .taxAmount(0d)
@@ -1359,7 +1359,7 @@ public class Application {
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
                             .discountAmount(424.32)
-                            .id("61b6fd96-cbe1-4772-8e2e-770873d7fd1d")
+                            .id("96487499-b2ab-49f8-9127-f35e16523376")
                             .itemDescription("Innovative Shoes featuring utilized technology and Cotton construction")
                             .itemName("Sleek Aluminum Shoes")
                             .notes("Cervus decretum viridis doloremque.")
@@ -1371,7 +1371,7 @@ public class Application {
                             .build(),
                         PaymentLineitem.builder()
                             .createdAt(OffsetDateTime.parse("2023-06-04T16:11:45.685Z"))
-                            .id("b7441295-9dde-44cb-8fa7-ae0826b79348")
+                            .id("4f65e6e8-0fe0-4e60-8a4f-0fbdea830459")
                             .itemDescription("Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance")
                             .itemName("Elegant Concrete Gloves")
                             .notes("Desipio usque vacuus currus cetera testimonium.")
@@ -1383,8 +1383,8 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .successUrl("https://tinted-jet.info")
-                    .updatedAt(OffsetDateTime.parse("2024-04-13T09:31:57.495Z"))
-                    .url("https://pay.example.com/d1d16447-f59d-4131-afab-7698e6968e08")
+                    .updatedAt(OffsetDateTime.parse("2024-04-13T15:52:16.012Z"))
+                    .url("https://pay.example.com/da4a275a-1a2a-4572-a84b-7d240029ce54")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1419,7 +1419,7 @@ public class Application {
 
 ## updatePaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1454,7 +1454,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-10T00:19:42.086Z"))
                     .currency("EUR")
                     .feeAmount(2055.82)
-                    .id("06918bee-92c9-48ec-8fbe-399abc15aa7b")
+                    .id("c8dece5d-446b-42ee-ad96-cc55f42438c3")
                     .metadata(List.of())
                     .netAmount(68824.18)
                     .notes("Bibo tactus vilicus.")
@@ -1466,7 +1466,7 @@ public class Application {
                     .tipAmount(0d)
                     .totalAmount(70880d)
                     .type(PaymentPaymentType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2025-10-08T00:37:18.298Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-08T19:58:09.425Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1501,7 +1501,7 @@ public class Application {
 
 ## updatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1535,7 +1535,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("7e76a83d-ddcd-43da-a2aa-27623b87ef12")
+                    .id("4e764098-0267-4513-b3a6-0b8a1703834d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -1544,7 +1544,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.654Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -57,6 +57,9 @@ public class AsyncBankfeedaccount {
     /**
      * Create a bankfeedaccount
      * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     * 
      * @return The async call builder
      */
     public CreateAccountingBankfeedaccountRequestBuilder createAccountingBankfeedaccount() {
@@ -65,6 +68,9 @@ public class AsyncBankfeedaccount {
 
     /**
      * Create a bankfeedaccount
+     * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingBankfeedaccountResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncBankfeedaccount {
     /**
      * Retrieve a bankfeedaccount
      * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingBankfeedaccountRequestBuilder getAccountingBankfeedaccount() {
@@ -88,6 +97,9 @@ public class AsyncBankfeedaccount {
 
     /**
      * Retrieve a bankfeedaccount
+     * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingBankfeedaccountResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncBankfeedaccount {
     /**
      * List all bankfeedaccounts
      * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingBankfeedaccountsRequestBuilder listAccountingBankfeedaccounts() {
@@ -111,6 +130,13 @@ public class AsyncBankfeedaccount {
 
     /**
      * List all bankfeedaccounts
+     * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingBankfeedaccountsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncBankfeedaccount {
     /**
      * Update a bankfeedaccount
      * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingBankfeedaccountRequestBuilder patchAccountingBankfeedaccount() {
@@ -134,6 +163,9 @@ public class AsyncBankfeedaccount {
 
     /**
      * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingBankfeedaccountResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncBankfeedaccount {
     /**
      * Remove a bankfeedaccount
      * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingBankfeedaccountRequestBuilder removeAccountingBankfeedaccount() {
@@ -157,6 +191,8 @@ public class AsyncBankfeedaccount {
 
     /**
      * Remove a bankfeedaccount
+     * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingBankfeedaccountResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncBankfeedaccount {
     /**
      * Update a bankfeedaccount
      * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingBankfeedaccountRequestBuilder updateAccountingBankfeedaccount() {
@@ -180,6 +219,9 @@ public class AsyncBankfeedaccount {
 
     /**
      * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingBankfeedaccountResponse>} - The async response

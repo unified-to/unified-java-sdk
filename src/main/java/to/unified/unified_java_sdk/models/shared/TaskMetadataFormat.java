@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * TaskMetadataFormat
+ * 
+ * <p>The data type of the custom field, which determines how `value` is formatted.
+ */
 public class TaskMetadataFormat {
 
     public static final TaskMetadataFormat TEXT = new TaskMetadataFormat("TEXT");

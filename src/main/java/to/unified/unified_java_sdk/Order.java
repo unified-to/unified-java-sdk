@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import java.lang.Deprecated;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
@@ -71,8 +72,13 @@ public class Order {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CreateAccountingOrderRequestBuilder createAccountingOrder() {
         return new CreateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -80,10 +86,15 @@ public class Order {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -93,6 +104,9 @@ public class Order {
     /**
      * Create an order
      * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
      * @return The call builder
      */
     public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
@@ -101,6 +115,9 @@ public class Order {
 
     /**
      * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -115,8 +132,13 @@ public class Order {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public GetAccountingOrderRequestBuilder getAccountingOrder() {
         return new GetAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -124,10 +146,15 @@ public class Order {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -137,6 +164,9 @@ public class Order {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
@@ -145,6 +175,9 @@ public class Order {
 
     /**
      * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -159,8 +192,17 @@ public class Order {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public ListAccountingOrdersRequestBuilder listAccountingOrders() {
         return new ListAccountingOrdersRequestBuilder(sdkConfiguration);
     }
@@ -168,10 +210,19 @@ public class Order {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
@@ -181,8 +232,13 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public PatchAccountingOrderRequestBuilder patchAccountingOrder() {
         return new PatchAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -190,10 +246,15 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -203,6 +264,9 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
@@ -211,6 +275,9 @@ public class Order {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -225,8 +292,12 @@ public class Order {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public RemoveAccountingOrderRequestBuilder removeAccountingOrder() {
         return new RemoveAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -234,10 +305,14 @@ public class Order {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -247,8 +322,13 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public UpdateAccountingOrderRequestBuilder updateAccountingOrder() {
         return new UpdateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -256,10 +336,15 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -269,6 +354,9 @@ public class Order {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
@@ -277,6 +365,9 @@ public class Order {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

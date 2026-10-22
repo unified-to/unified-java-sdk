@@ -26,7 +26,7 @@
 
 ## createDatastoreDatabase
 
-Create a database
+Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 
 ### Example Usage
 
@@ -57,13 +57,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("7e2f773f-c7b0-47ef-b94e-5e2f7436dd34")
+                    .id("bda9f2ca-35dc-40b4-a0c7-6463330a3503")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.595Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.756Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -98,7 +98,7 @@ public class Application {
 
 ## createDatastoreQuery
 
-Create a query
+Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ public class Application {
 
 ## createDatastoreRecord
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -200,10 +200,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("acbfc901-32f5-4905-af31-9f2f90e42c37")
+                    .id("50aee548-fa64-4593-8a10-e2fe7faf8a47")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.537Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.043Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -237,7 +237,7 @@ public class Application {
 
 ## createDatastoreTable
 
-Create a table
+Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("aa053b6c-81cc-47cc-b2fb-4fd01a64bf9f")
+                            .id("1d865323-6a35-4db5-a972-b3163332c544")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -283,7 +283,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("e778652c-247b-4d13-af97-4138969e2c5c")
+                            .id("d50839c3-8e16-4159-ab21-ca12316cab00")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -293,7 +293,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("2782af25-b3e9-40d5-bd42-262702d52245")
+                            .id("4bb64804-7f33-4f42-b5c4-a55b734c1582")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -305,7 +305,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("2b2564c4-956c-4e52-b90d-c210b733cdd4")
+                            .id("01cd7622-de65-481c-bab1-050e5f97a24b")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -314,23 +314,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("2688bda9-42ac-42c3-9632-f2255931e7f4")
+                            .id("9991d078-5f3f-4d27-b490-fdeb7479644a")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("66bda4dd-3e1c-4100-8862-75cb52602753")
+                    .id("825e6caa-7958-40ae-b6d6-037418ef6449")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("66bda4dd-3e1c-4100-8862-75cb52602753")
+                            .tableId("825e6caa-7958-40ae-b6d6-037418ef6449")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-12T20:25:56.126Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-12T21:42:36.937Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")
@@ -365,7 +365,7 @@ public class Application {
 
 ## getDatastoreDatabase
 
-Retrieve a database
+Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -423,7 +423,7 @@ public class Application {
 
 ## getDatastoreRecord
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -481,7 +481,7 @@ public class Application {
 
 ## getDatastoreTable
 
-Retrieve a table
+Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -539,7 +539,7 @@ public class Application {
 
 ## listDatastoreDatabases
 
-List all databases
+Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -596,7 +596,7 @@ public class Application {
 
 ## listDatastoreRecords
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -653,7 +653,7 @@ public class Application {
 
 ## listDatastoreTables
 
-List all tables
+Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ public class Application {
 
 ## patchDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -741,13 +741,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("0e1059a5-ed94-4ea1-9381-8758de705356")
+                    .id("80cfc459-f2ba-4b83-80ba-dd6be0bab166")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.761Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -783,7 +783,7 @@ public class Application {
 
 ## patchDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -816,10 +816,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("59aa6e08-13bf-438b-9234-029f0e94a0a9")
+                    .id("b2e572d1-2191-41a3-b36a-d59149cf7768")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.545Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.050Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -854,7 +854,7 @@ public class Application {
 
 ## patchDatastoreTable
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -890,7 +890,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("b7cf7502-918f-4aaf-8d03-b546773620c9")
+                            .id("c0e20ce4-c60c-4611-88f9-3a71e591e119")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -900,7 +900,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("4bd01873-5c87-42d0-9543-2d294477c39f")
+                            .id("757b80c7-3277-46a7-b7d2-0d5b10703407")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -910,7 +910,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("ef7a1aab-a88a-4ba2-9c69-432844cfa1e8")
+                            .id("bcae71b5-9985-4ed4-a212-8d3fced827c4")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -922,7 +922,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("e00e5467-ccbd-47ca-8147-9a815fc42478")
+                            .id("82a77b7e-e703-4698-9605-2699d4ef1ad7")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -931,23 +931,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("a6501578-9fd3-4f00-a839-1389af226484")
+                            .id("304d49dc-d6ca-4f22-8f24-f92392acf945")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("9b80324b-4e48-4a2d-ba09-0a28bd3eb13e")
+                    .id("6ad274eb-d3c2-4e23-8035-7bec5ea6e317")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("9b80324b-4e48-4a2d-ba09-0a28bd3eb13e")
+                            .tableId("6ad274eb-d3c2-4e23-8035-7bec5ea6e317")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-12T20:25:56.128Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-12T21:42:36.938Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")
@@ -983,7 +983,7 @@ public class Application {
 
 ## removeDatastoreDatabase
 
-Remove a database
+Deletes the DatastoreDatabase identified by `id`.
 
 ### Example Usage
 
@@ -1039,7 +1039,7 @@ public class Application {
 
 ## removeDatastoreRecord
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -1095,7 +1095,7 @@ public class Application {
 
 ## removeDatastoreTable
 
-Remove a table
+Deletes the DatastoreTable identified by `id`.
 
 ### Example Usage
 
@@ -1151,7 +1151,7 @@ public class Application {
 
 ## updateDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -1182,13 +1182,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("0e1059a5-ed94-4ea1-9381-8758de705356")
+                    .id("80cfc459-f2ba-4b83-80ba-dd6be0bab166")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.761Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -1224,7 +1224,7 @@ public class Application {
 
 ## updateDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -1257,10 +1257,10 @@ public class Application {
                     .fields(Map.ofEntries(
                     ))
                     .createdAt(OffsetDateTime.parse("2022-07-10T04:42:03.076Z"))
-                    .id("59aa6e08-13bf-438b-9234-029f0e94a0a9")
+                    .id("b2e572d1-2191-41a3-b36a-d59149cf7768")
                     .metadata(List.of())
                     .rowNumber(33d)
-                    .updatedAt(OffsetDateTime.parse("2025-03-05T03:11:41.545Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-05T18:38:48.050Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1295,7 +1295,7 @@ public class Application {
 
 ## updateDatastoreTable
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -1331,7 +1331,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("b7cf7502-918f-4aaf-8d03-b546773620c9")
+                            .id("c0e20ce4-c60c-4611-88f9-3a71e591e119")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -1341,7 +1341,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("4bd01873-5c87-42d0-9543-2d294477c39f")
+                            .id("757b80c7-3277-46a7-b7d2-0d5b10703407")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -1351,7 +1351,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("ef7a1aab-a88a-4ba2-9c69-432844cfa1e8")
+                            .id("bcae71b5-9985-4ed4-a212-8d3fced827c4")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -1363,7 +1363,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("e00e5467-ccbd-47ca-8147-9a815fc42478")
+                            .id("82a77b7e-e703-4698-9605-2699d4ef1ad7")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -1372,23 +1372,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("a6501578-9fd3-4f00-a839-1389af226484")
+                            .id("304d49dc-d6ca-4f22-8f24-f92392acf945")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("9b80324b-4e48-4a2d-ba09-0a28bd3eb13e")
+                    .id("6ad274eb-d3c2-4e23-8035-7bec5ea6e317")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("9b80324b-4e48-4a2d-ba09-0a28bd3eb13e")
+                            .tableId("6ad274eb-d3c2-4e23-8035-7bec5ea6e317")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-12T20:25:56.128Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-12T21:42:36.938Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")

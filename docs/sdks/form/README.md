@@ -13,7 +13,7 @@
 
 ## createFormsForm
 
-Create a form
+Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 
 ### Example Usage
 
@@ -49,22 +49,22 @@ public class Application {
                             .name("cornu creta confugo")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("3e7d4117-3fe7-4e73-a82a-1bf0fc0ad9a0")
+                            .id("5fcd7b9b-6718-40bc-85e3-3127dd66a6a8")
                             .isActive(true)
                             .isRequired(true)
                             .maxLength(146d)
                             .order(0d)
-                            .updatedAt(OffsetDateTime.parse("2025-04-28T16:11:49.609Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-04-29T05:00:28.857Z"))
                             .build(),
                         FormField.builder()
                             .name("tracto nostrum desidero")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("e6f9a3ae-c195-492b-a51f-ebf314b43697")
+                            .id("8b495e06-3fa6-4298-b0f3-3105a3ea9856")
                             .isActive(true)
                             .isRequired(false)
                             .order(1d)
-                            .updatedAt(OffsetDateTime.parse("2024-09-02T04:02:41.400Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-09-02T11:30:09.104Z"))
                             .build(),
                         FormField.builder()
                             .name("officia supra consequatur")
@@ -77,33 +77,33 @@ public class Application {
                                 "tredecim"))
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .defaultValue("somniculosus")
-                            .id("1bd14d95-9c8a-43b5-a0f2-004095485e9f")
+                            .id("69b33a98-a456-47da-ab2a-5eb1defe67de")
                             .isActive(true)
                             .isRequired(false)
                             .order(2d)
-                            .updatedAt(OffsetDateTime.parse("2024-02-26T08:30:41.428Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-02-26T11:43:52.788Z"))
                             .build(),
                         FormField.builder()
                             .name("curtus fugiat audentia")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .description("Antepono cursim aurum voluptatum placeat audax tripudio amo.")
-                            .id("c21f667c-338c-4dd0-be8b-c8eb5c615d64")
+                            .id("813aba06-4d0d-442f-a7ba-eb6efa4b8244")
                             .isActive(true)
                             .isRequired(false)
                             .order(3d)
-                            .updatedAt(OffsetDateTime.parse("2024-11-27T10:05:18.264Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-11-27T19:28:55.198Z"))
                             .build()))
                     .hasMultipleSubmissions(false)
                     .hasProgressBar(false)
                     .hasShuffleQuestions(true)
-                    .id("61f03911-7d40-4a56-b7bc-36c861449f50")
+                    .id("6556a0aa-e24e-4220-b1ee-204b05df36b1")
                     .isActive(false)
                     .metadata(List.of())
                     .name("tandem tracto vivo Form")
                     .publishedUrl("https://massive-blowgun.info")
                     .responseCount(423d)
-                    .updatedAt(OffsetDateTime.parse("2024-08-24T19:18:19.442Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-08-25T02:34:31.315Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -137,7 +137,7 @@ public class Application {
 
 ## getFormsForm
 
-Retrieve a form
+Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## listFormsForms
 
-List all forms
+Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -252,7 +252,7 @@ public class Application {
 
 ## patchFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -288,22 +288,22 @@ public class Application {
                             .name("cornu creta confugo")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("3a8572fb-bf78-4a46-93ee-4c52f35db65b")
+                            .id("761cbcaf-ba6a-4c8b-8c50-2b5dd1b09291")
                             .isActive(true)
                             .isRequired(true)
                             .maxLength(146d)
                             .order(0d)
-                            .updatedAt(OffsetDateTime.parse("2025-04-28T16:11:49.623Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-04-29T05:00:28.868Z"))
                             .build(),
                         FormField.builder()
                             .name("tracto nostrum desidero")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("65fe31a5-4a2a-47c5-9ef3-7dd16dac45da")
+                            .id("557825a5-9c50-49b6-b98b-2a9727684468")
                             .isActive(true)
                             .isRequired(false)
                             .order(1d)
-                            .updatedAt(OffsetDateTime.parse("2024-09-02T04:02:41.408Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-09-02T11:30:09.111Z"))
                             .build(),
                         FormField.builder()
                             .name("officia supra consequatur")
@@ -316,33 +316,33 @@ public class Application {
                                 "tredecim"))
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .defaultValue("somniculosus")
-                            .id("e43e8d24-f1f7-4eea-9361-1f429d2a78cc")
+                            .id("d036a254-cac4-4207-8be7-8e58adfe1f5f")
                             .isActive(true)
                             .isRequired(false)
                             .order(2d)
-                            .updatedAt(OffsetDateTime.parse("2024-02-26T08:30:41.432Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-02-26T11:43:52.791Z"))
                             .build(),
                         FormField.builder()
                             .name("curtus fugiat audentia")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .description("Antepono cursim aurum voluptatum placeat audax tripudio amo.")
-                            .id("bf710a60-ea35-4afa-bdf0-c7de2cf014c6")
+                            .id("40c38c3e-225d-4cc3-8013-2184392e6b73")
                             .isActive(true)
                             .isRequired(false)
                             .order(3d)
-                            .updatedAt(OffsetDateTime.parse("2024-11-27T10:05:18.275Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-11-27T19:28:55.207Z"))
                             .build()))
                     .hasMultipleSubmissions(false)
                     .hasProgressBar(false)
                     .hasShuffleQuestions(true)
-                    .id("24281a80-e9c0-452d-9200-b672ae29c328")
+                    .id("066724e2-8220-4b0c-9a01-d701520ae339")
                     .isActive(false)
                     .metadata(List.of())
                     .name("tandem tracto vivo Form")
                     .publishedUrl("https://massive-blowgun.info")
                     .responseCount(423d)
-                    .updatedAt(OffsetDateTime.parse("2024-08-24T19:18:19.450Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-08-25T02:34:31.321Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -377,7 +377,7 @@ public class Application {
 
 ## removeFormsForm
 
-Remove a form
+Deletes the FormsForm identified by `id`.
 
 ### Example Usage
 
@@ -433,7 +433,7 @@ public class Application {
 
 ## updateFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -469,22 +469,22 @@ public class Application {
                             .name("cornu creta confugo")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("3a8572fb-bf78-4a46-93ee-4c52f35db65b")
+                            .id("761cbcaf-ba6a-4c8b-8c50-2b5dd1b09291")
                             .isActive(true)
                             .isRequired(true)
                             .maxLength(146d)
                             .order(0d)
-                            .updatedAt(OffsetDateTime.parse("2025-04-28T16:11:49.623Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-04-29T05:00:28.868Z"))
                             .build(),
                         FormField.builder()
                             .name("tracto nostrum desidero")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
-                            .id("65fe31a5-4a2a-47c5-9ef3-7dd16dac45da")
+                            .id("557825a5-9c50-49b6-b98b-2a9727684468")
                             .isActive(true)
                             .isRequired(false)
                             .order(1d)
-                            .updatedAt(OffsetDateTime.parse("2024-09-02T04:02:41.408Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-09-02T11:30:09.111Z"))
                             .build(),
                         FormField.builder()
                             .name("officia supra consequatur")
@@ -497,33 +497,33 @@ public class Application {
                                 "tredecim"))
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .defaultValue("somniculosus")
-                            .id("e43e8d24-f1f7-4eea-9361-1f429d2a78cc")
+                            .id("d036a254-cac4-4207-8be7-8e58adfe1f5f")
                             .isActive(true)
                             .isRequired(false)
                             .order(2d)
-                            .updatedAt(OffsetDateTime.parse("2024-02-26T08:30:41.432Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-02-26T11:43:52.791Z"))
                             .build(),
                         FormField.builder()
                             .name("curtus fugiat audentia")
                             .type(FormFieldType.TEXTAREA)
                             .createdAt(OffsetDateTime.parse("2023-10-05T21:34:29.094Z"))
                             .description("Antepono cursim aurum voluptatum placeat audax tripudio amo.")
-                            .id("bf710a60-ea35-4afa-bdf0-c7de2cf014c6")
+                            .id("40c38c3e-225d-4cc3-8013-2184392e6b73")
                             .isActive(true)
                             .isRequired(false)
                             .order(3d)
-                            .updatedAt(OffsetDateTime.parse("2024-11-27T10:05:18.275Z"))
+                            .updatedAt(OffsetDateTime.parse("2024-11-27T19:28:55.207Z"))
                             .build()))
                     .hasMultipleSubmissions(false)
                     .hasProgressBar(false)
                     .hasShuffleQuestions(true)
-                    .id("24281a80-e9c0-452d-9200-b672ae29c328")
+                    .id("066724e2-8220-4b0c-9a01-d701520ae339")
                     .isActive(false)
                     .metadata(List.of())
                     .name("tandem tracto vivo Form")
                     .publishedUrl("https://massive-blowgun.info")
                     .responseCount(423d)
-                    .updatedAt(OffsetDateTime.parse("2024-08-24T19:18:19.450Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-08-25T02:34:31.321Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -20,7 +20,7 @@ public class PropertyDatastoreQueryExpandFilter {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
-    private List<PropertyDatastoreQueryExpandFilter> and;
+    private List<DatastoreFilterGroup> and;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -30,7 +30,7 @@ public class PropertyDatastoreQueryExpandFilter {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("or")
-    private List<PropertyDatastoreQueryExpandFilter> or;
+    private List<DatastoreFilterGroup> or;
 
 
     @JsonProperty("type")
@@ -38,9 +38,9 @@ public class PropertyDatastoreQueryExpandFilter {
 
     @JsonCreator
     public PropertyDatastoreQueryExpandFilter(
-            @JsonProperty("and") @Nullable List<PropertyDatastoreQueryExpandFilter> and,
+            @JsonProperty("and") @Nullable List<DatastoreFilterGroup> and,
             @JsonProperty("filters") @Nullable List<DatastoreFilter> filters,
-            @JsonProperty("or") @Nullable List<PropertyDatastoreQueryExpandFilter> or,
+            @JsonProperty("or") @Nullable List<DatastoreFilterGroup> or,
             @JsonProperty("type") @Nonnull PropertyDatastoreQueryExpandFilterType type) {
         this.and = and;
         this.filters = filters;
@@ -55,7 +55,7 @@ public class PropertyDatastoreQueryExpandFilter {
             type);
     }
 
-    public Optional<List<PropertyDatastoreQueryExpandFilter>> and() {
+    public Optional<List<DatastoreFilterGroup>> and() {
         return Optional.ofNullable(this.and);
     }
 
@@ -63,7 +63,7 @@ public class PropertyDatastoreQueryExpandFilter {
         return Optional.ofNullable(this.filters);
     }
 
-    public Optional<List<PropertyDatastoreQueryExpandFilter>> or() {
+    public Optional<List<DatastoreFilterGroup>> or() {
         return Optional.ofNullable(this.or);
     }
 
@@ -76,7 +76,7 @@ public class PropertyDatastoreQueryExpandFilter {
     }
 
 
-    public PropertyDatastoreQueryExpandFilter withAnd(@Nullable List<PropertyDatastoreQueryExpandFilter> and) {
+    public PropertyDatastoreQueryExpandFilter withAnd(@Nullable List<DatastoreFilterGroup> and) {
         this.and = and;
         return this;
     }
@@ -88,7 +88,7 @@ public class PropertyDatastoreQueryExpandFilter {
     }
 
 
-    public PropertyDatastoreQueryExpandFilter withOr(@Nullable List<PropertyDatastoreQueryExpandFilter> or) {
+    public PropertyDatastoreQueryExpandFilter withOr(@Nullable List<DatastoreFilterGroup> or) {
         this.or = or;
         return this;
     }
@@ -135,11 +135,11 @@ public class PropertyDatastoreQueryExpandFilter {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<PropertyDatastoreQueryExpandFilter> and;
+        private List<DatastoreFilterGroup> and;
 
         private List<DatastoreFilter> filters;
 
-        private List<PropertyDatastoreQueryExpandFilter> or;
+        private List<DatastoreFilterGroup> or;
 
         private PropertyDatastoreQueryExpandFilterType type;
 
@@ -147,7 +147,7 @@ public class PropertyDatastoreQueryExpandFilter {
           // force use of static builder() method
         }
 
-        public Builder and(@Nullable List<PropertyDatastoreQueryExpandFilter> and) {
+        public Builder and(@Nullable List<DatastoreFilterGroup> and) {
             this.and = and;
             return this;
         }
@@ -157,7 +157,7 @@ public class PropertyDatastoreQueryExpandFilter {
             return this;
         }
 
-        public Builder or(@Nullable List<PropertyDatastoreQueryExpandFilter> or) {
+        public Builder or(@Nullable List<DatastoreFilterGroup> or) {
             this.or = or;
             return this;
         }

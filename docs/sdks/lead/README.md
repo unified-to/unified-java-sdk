@@ -13,7 +13,7 @@
 
 ## createCrmLead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -58,7 +58,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("14f68776-ba33-4abb-8799-f2225560c7d7")
+                    .id("0aa4eb44-2ea7-4756-a810-c0a8505307be")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -68,7 +68,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("3342e670-2acb-4a8d-a550-0a8b6478a5de")
+                            .id("ea53a230-96c0-4d3e-8c59-6d4ba9f3e43f")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -90,7 +90,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.413Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.849Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -124,7 +124,7 @@ public class Application {
 
 ## getCrmLead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -182,7 +182,7 @@ public class Application {
 
 ## listCrmLeads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -239,7 +239,7 @@ public class Application {
 
 ## patchCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("fc5d88a8-0be9-42a1-bf23-631ae67fc482")
+                    .id("dd91f9da-fe04-4fb6-b3f8-c28aaf72297e")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -294,7 +294,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("640ee4c9-b9ae-414f-963e-0d1cf4f4fcd6")
+                            .id("968a18ba-6163-48ad-95f9-02432d71429d")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -316,7 +316,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -351,7 +351,7 @@ public class Application {
 
 ## removeCrmLead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -407,7 +407,7 @@ public class Application {
 
 ## updateCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("fc5d88a8-0be9-42a1-bf23-631ae67fc482")
+                    .id("dd91f9da-fe04-4fb6-b3f8-c28aaf72297e")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -462,7 +462,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("640ee4c9-b9ae-414f-963e-0d1cf4f4fcd6")
+                            .id("968a18ba-6163-48ad-95f9-02432d71429d")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -484,7 +484,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

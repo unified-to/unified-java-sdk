@@ -41,6 +41,9 @@ public class AsyncCarrier {
     /**
      * Retrieve a carrier
      * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetShippingCarrierRequestBuilder getShippingCarrier() {
@@ -49,6 +52,9 @@ public class AsyncCarrier {
 
     /**
      * Retrieve a carrier
+     * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
@@ -64,6 +70,13 @@ public class AsyncCarrier {
     /**
      * List all carriers
      * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListShippingCarriersRequestBuilder listShippingCarriers() {
@@ -72,6 +85,13 @@ public class AsyncCarrier {
 
     /**
      * List all carriers
+     * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response

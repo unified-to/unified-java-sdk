@@ -57,6 +57,10 @@ public class AsyncBankfeedtransaction {
     /**
      * Create a bankfeedtransaction
      * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
      * @return The async call builder
      */
     public CreateAccountingBankfeedtransactionRequestBuilder createAccountingBankfeedtransaction() {
@@ -65,6 +69,10 @@ public class AsyncBankfeedtransaction {
 
     /**
      * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingBankfeedtransactionResponse>} - The async response
@@ -80,6 +88,9 @@ public class AsyncBankfeedtransaction {
     /**
      * Retrieve a bankfeedtransaction
      * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingBankfeedtransactionRequestBuilder getAccountingBankfeedtransaction() {
@@ -88,6 +99,9 @@ public class AsyncBankfeedtransaction {
 
     /**
      * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingBankfeedtransactionResponse>} - The async response
@@ -103,6 +117,14 @@ public class AsyncBankfeedtransaction {
     /**
      * List all bankfeedtransactions
      * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingBankfeedtransactionsRequestBuilder listAccountingBankfeedtransactions() {
@@ -111,6 +133,14 @@ public class AsyncBankfeedtransaction {
 
     /**
      * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingBankfeedtransactionsResponse>} - The async response
@@ -126,6 +156,9 @@ public class AsyncBankfeedtransaction {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingBankfeedtransactionRequestBuilder patchAccountingBankfeedtransaction() {
@@ -134,6 +167,9 @@ public class AsyncBankfeedtransaction {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingBankfeedtransactionResponse>} - The async response
@@ -149,6 +185,8 @@ public class AsyncBankfeedtransaction {
     /**
      * Remove a bankfeedtransaction
      * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingBankfeedtransactionRequestBuilder removeAccountingBankfeedtransaction() {
@@ -157,6 +195,8 @@ public class AsyncBankfeedtransaction {
 
     /**
      * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingBankfeedtransactionResponse>} - The async response
@@ -172,6 +212,9 @@ public class AsyncBankfeedtransaction {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingBankfeedtransactionRequestBuilder updateAccountingBankfeedtransaction() {
@@ -180,6 +223,9 @@ public class AsyncBankfeedtransaction {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingBankfeedtransactionResponse>} - The async response

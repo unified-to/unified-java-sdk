@@ -44,7 +44,7 @@
 
 ## createCrmCompany
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -100,7 +100,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("e4eb31a8-d84b-46c1-80e9-45ee52e55884")
+                    .id("25606022-373c-4dfb-99aa-dc21d903758a")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -110,7 +110,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("a127e2a7-1925-493c-8515-44b8d0f809ee")
+                            .id("96020060-73c1-4589-a3b4-46da770b6f7c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -126,7 +126,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.063Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.839Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -162,7 +162,7 @@ public class Application {
 
 ## createCrmContact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("23b5106c-6ff1-4fa3-a367-b561445d0d04")
+                    .id("61a2e3fa-0aff-4718-8b21-3ea79f45b968")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -218,7 +218,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("7c3fc2aa-bf65-49e8-ab60-5390dfcdcd6f")
+                            .id("af65f797-f5a0-42d4-877d-c3c60b7eae86")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -234,7 +234,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.281Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.678Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -268,7 +268,7 @@ public class Application {
 
 ## createCrmDeal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -298,18 +298,18 @@ public class Application {
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.075Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.617Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.158Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.470Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("66acf447-5f1a-4a3f-b95d-a45343f2a290")
+                    .id("b159275a-3d55-44c8-afe7-ca4f3439bf31")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("cb26c564-eb16-4cef-bb54-65d1e8209803")
+                            .id("95fc258a-5dce-40b1-a250-7285b13b9430")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -320,7 +320,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.577Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.806Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
@@ -355,7 +355,7 @@ public class Application {
 
 ## createCrmEvent
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -386,13 +386,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.866Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:22.995Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("51c2174f-eb37-47f6-b3ed-fbed807b02d4")
+                    .id("262f1ef2-b9f2-477a-98c5-d83f0bdbbe8f")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.429Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.395Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -426,7 +426,7 @@ public class Application {
 
 ## createCrmLead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -471,7 +471,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("14f68776-ba33-4abb-8799-f2225560c7d7")
+                    .id("0aa4eb44-2ea7-4756-a810-c0a8505307be")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -481,7 +481,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("3342e670-2acb-4a8d-a550-0a8b6478a5de")
+                            .id("ea53a230-96c0-4d3e-8c59-6d4ba9f3e43f")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -503,7 +503,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.413Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.849Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -537,7 +537,7 @@ public class Application {
 
 ## createCrmPipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -568,7 +568,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("81963c29-4c6b-4233-8f3f-61d8eea21189")
+                    .id("b7d797ed-3898-4dec-9d24-70be40ea4796")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -578,12 +578,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("c7591f42-15d9-4165-947e-7368cf0e25ba")
+                            .id("57405dfd-8b69-468f-9a3a-3da3211831b7")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.024Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.788Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.557Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.168Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -617,7 +617,7 @@ public class Application {
 
 ## getCrmCompany
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -675,7 +675,7 @@ public class Application {
 
 ## getCrmContact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -733,7 +733,7 @@ public class Application {
 
 ## getCrmDeal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -791,7 +791,7 @@ public class Application {
 
 ## getCrmEvent
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ public class Application {
 
 ## getCrmLead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -907,7 +907,7 @@ public class Application {
 
 ## getCrmPipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -965,7 +965,7 @@ public class Application {
 
 ## listCrmCompanies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1022,7 +1022,7 @@ public class Application {
 
 ## listCrmContacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1079,7 +1079,7 @@ public class Application {
 
 ## listCrmDeals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1136,7 +1136,7 @@ public class Application {
 
 ## listCrmEvents
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1193,7 +1193,7 @@ public class Application {
 
 ## listCrmLeads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1250,7 +1250,7 @@ public class Application {
 
 ## listCrmPipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1307,7 +1307,7 @@ public class Application {
 
 ## listCrmTaxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1364,7 +1364,7 @@ public class Application {
 
 ## patchCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1420,7 +1420,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("4c8e7a4f-ada4-44c6-bd9d-769cce5b0dad")
+                    .id("fe640baf-be40-4a1a-8d7b-0cd44f17c525")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -1430,7 +1430,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("9b98421c-5c6f-48a7-bb06-1ad10930eef8")
+                            .id("ce2fc914-160f-41a4-8b5f-150711848a2c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -1446,7 +1446,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.087Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.863Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -1483,7 +1483,7 @@ public class Application {
 
 ## patchCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1529,7 +1529,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("2b27e713-d167-4a42-88df-188f6578bd70")
+                    .id("b3fc8bf7-066b-47cd-b670-93866365c0f4")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -1539,7 +1539,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("8feb0476-fc64-40ea-823b-94e034dabc18")
+                            .id("65ceabb6-e5f4-4732-8d0f-f3635cf86650")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -1555,7 +1555,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.282Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.679Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1590,7 +1590,7 @@ public class Application {
 
 ## patchCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -1620,18 +1620,18 @@ public class Application {
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.080Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.632Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.165Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.491Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("96532c8c-044e-4298-851b-49bfdad6601b")
+                    .id("954ee7da-9ad2-409b-ac6c-757688542987")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("34f33d68-dcd7-42ea-9603-25f4b97ded77")
+                            .id("d959fdc0-fbdb-4979-a78d-63bb0dc99831")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -1642,7 +1642,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.819Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
@@ -1678,7 +1678,7 @@ public class Application {
 
 ## patchCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1709,13 +1709,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.908Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:23.028Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("a6bafef0-ce8b-44bb-b40e-cd1ddb1a8e97")
+                    .id("25074917-3acc-4b8f-98b0-afa91f4faf22")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.487Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.443Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1750,7 +1750,7 @@ public class Application {
 
 ## patchCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -1795,7 +1795,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("fc5d88a8-0be9-42a1-bf23-631ae67fc482")
+                    .id("dd91f9da-fe04-4fb6-b3f8-c28aaf72297e")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -1805,7 +1805,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("640ee4c9-b9ae-414f-963e-0d1cf4f4fcd6")
+                            .id("968a18ba-6163-48ad-95f9-02432d71429d")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -1827,7 +1827,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1862,7 +1862,7 @@ public class Application {
 
 ## patchCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -1893,7 +1893,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("269a8fb5-425c-4efa-ae2e-50cece2038b9")
+                    .id("b9b22715-393f-4b7a-b625-7a0b8f968787")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -1903,12 +1903,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("a58adc67-0cf0-4cd6-8da7-440e9e0f2b99")
+                            .id("9085b7e1-8da1-4187-999d-38126e65cda4")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.038Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.801Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.182Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1943,7 +1943,7 @@ public class Application {
 
 ## removeCrmCompany
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1999,7 +1999,7 @@ public class Application {
 
 ## removeCrmContact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -2055,7 +2055,7 @@ public class Application {
 
 ## removeCrmDeal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -2111,7 +2111,7 @@ public class Application {
 
 ## removeCrmEvent
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -2167,7 +2167,7 @@ public class Application {
 
 ## removeCrmLead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -2223,7 +2223,7 @@ public class Application {
 
 ## removeCrmPipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -2279,7 +2279,7 @@ public class Application {
 
 ## updateCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2335,7 +2335,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("4c8e7a4f-ada4-44c6-bd9d-769cce5b0dad")
+                    .id("fe640baf-be40-4a1a-8d7b-0cd44f17c525")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -2345,7 +2345,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("9b98421c-5c6f-48a7-bb06-1ad10930eef8")
+                            .id("ce2fc914-160f-41a4-8b5f-150711848a2c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -2361,7 +2361,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.087Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.863Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -2398,7 +2398,7 @@ public class Application {
 
 ## updateCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -2444,7 +2444,7 @@ public class Application {
                             .type(CrmEmailType.HOME)
                             .build()))
                     .firstName("Mohammad")
-                    .id("2b27e713-d167-4a42-88df-188f6578bd70")
+                    .id("b3fc8bf7-066b-47cd-b670-93866365c0f4")
                     .imageUrl("https://avatars.githubusercontent.com/u/26803724")
                     .lastName("Bartell")
                     .linkUrls(List.of(
@@ -2454,7 +2454,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("8feb0476-fc64-40ea-823b-94e034dabc18")
+                            .id("65ceabb6-e5f4-4732-8d0f-f3635cf86650")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("antiquus"))
@@ -2470,7 +2470,7 @@ public class Application {
                             .type(CrmTelephoneType.WORK)
                             .build()))
                     .title("National Tactics Analyst")
-                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:06:35.282Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-02-24T05:44:09.679Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2505,7 +2505,7 @@ public class Application {
 
 ## updateCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -2535,18 +2535,18 @@ public class Application {
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.080Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.632Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.165Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.491Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("96532c8c-044e-4298-851b-49bfdad6601b")
+                    .id("954ee7da-9ad2-409b-ac6c-757688542987")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("34f33d68-dcd7-42ea-9603-25f4b97ded77")
+                            .id("d959fdc0-fbdb-4979-a78d-63bb0dc99831")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -2557,7 +2557,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.819Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
@@ -2593,7 +2593,7 @@ public class Application {
 
 ## updateCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2624,13 +2624,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.908Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:23.028Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("a6bafef0-ce8b-44bb-b40e-cd1ddb1a8e97")
+                    .id("25074917-3acc-4b8f-98b0-afa91f4faf22")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.487Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.443Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2665,7 +2665,7 @@ public class Application {
 
 ## updateCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -2710,7 +2710,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .firstName("Velda")
-                    .id("fc5d88a8-0be9-42a1-bf23-631ae67fc482")
+                    .id("dd91f9da-fe04-4fb6-b3f8-c28aaf72297e")
                     .isActive(true)
                     .lastName("Sporer")
                     .linkUrls(List.of(
@@ -2720,7 +2720,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("640ee4c9-b9ae-414f-963e-0d1cf4f4fcd6")
+                            .id("968a18ba-6163-48ad-95f9-02432d71429d")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("vitiosus"))
@@ -2742,7 +2742,7 @@ public class Application {
                             .type(CrmTelephoneType.OTHER)
                             .build()))
                     .title("International Factors Administrator")
-                    .updatedAt(OffsetDateTime.parse("2020-05-17T21:35:00.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-05-17T23:42:23.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2777,7 +2777,7 @@ public class Application {
 
 ## updateCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -2808,7 +2808,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("269a8fb5-425c-4efa-ae2e-50cece2038b9")
+                    .id("b9b22715-393f-4b7a-b625-7a0b8f968787")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -2818,12 +2818,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("a58adc67-0cf0-4cd6-8da7-440e9e0f2b99")
+                            .id("9085b7e1-8da1-4187-999d-38126e65cda4")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.038Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.801Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.182Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

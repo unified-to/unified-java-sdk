@@ -127,7 +127,9 @@ public class AdsCreative {
     @JsonProperty("metadata")
     private List<AdsMetadata> metadata;
 
-
+    /**
+     * The creative's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -377,6 +379,9 @@ public class AdsCreative {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The creative's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -579,6 +584,9 @@ public class AdsCreative {
     }
 
 
+    /**
+     * The creative's name
+     */
     public AdsCreative withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -951,6 +959,9 @@ public class AdsCreative {
             return this;
         }
 
+        /**
+         * The creative's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

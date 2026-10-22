@@ -181,6 +181,9 @@ public class AsyncCrm {
     /**
      * Create a company
      * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
      * @return The async call builder
      */
     public CreateCrmCompanyRequestBuilder createCrmCompany() {
@@ -189,6 +192,9 @@ public class AsyncCrm {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
@@ -204,6 +210,9 @@ public class AsyncCrm {
     /**
      * Create a contact
      * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
      * @return The async call builder
      */
     public CreateCrmContactRequestBuilder createCrmContact() {
@@ -212,6 +221,9 @@ public class AsyncCrm {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
@@ -227,6 +239,9 @@ public class AsyncCrm {
     /**
      * Create a deal
      * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
+     * 
      * @return The async call builder
      */
     public CreateCrmDealRequestBuilder createCrmDeal() {
@@ -235,6 +250,9 @@ public class AsyncCrm {
 
     /**
      * Create a deal
+     * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
@@ -250,6 +268,9 @@ public class AsyncCrm {
     /**
      * Create an event
      * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
      * @return The async call builder
      */
     public CreateCrmEventRequestBuilder createCrmEvent() {
@@ -258,6 +279,9 @@ public class AsyncCrm {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
@@ -273,6 +297,9 @@ public class AsyncCrm {
     /**
      * Create a lead
      * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
+     * 
      * @return The async call builder
      */
     public CreateCrmLeadRequestBuilder createCrmLead() {
@@ -281,6 +308,9 @@ public class AsyncCrm {
 
     /**
      * Create a lead
+     * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
@@ -296,6 +326,9 @@ public class AsyncCrm {
     /**
      * Create a pipeline
      * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
+     * 
      * @return The async call builder
      */
     public CreateCrmPipelineRequestBuilder createCrmPipeline() {
@@ -304,6 +337,9 @@ public class AsyncCrm {
 
     /**
      * Create a pipeline
+     * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
@@ -319,6 +355,9 @@ public class AsyncCrm {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmCompanyRequestBuilder getCrmCompany() {
@@ -327,6 +366,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
@@ -342,6 +384,9 @@ public class AsyncCrm {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmContactRequestBuilder getCrmContact() {
@@ -350,6 +395,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
@@ -365,6 +413,9 @@ public class AsyncCrm {
     /**
      * Retrieve a deal
      * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmDealRequestBuilder getCrmDeal() {
@@ -373,6 +424,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve a deal
+     * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
@@ -388,6 +442,9 @@ public class AsyncCrm {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmEventRequestBuilder getCrmEvent() {
@@ -396,6 +453,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
@@ -411,6 +471,9 @@ public class AsyncCrm {
     /**
      * Retrieve a lead
      * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmLeadRequestBuilder getCrmLead() {
@@ -419,6 +482,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve a lead
+     * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
@@ -434,6 +500,9 @@ public class AsyncCrm {
     /**
      * Retrieve a pipeline
      * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmPipelineRequestBuilder getCrmPipeline() {
@@ -442,6 +511,9 @@ public class AsyncCrm {
 
     /**
      * Retrieve a pipeline
+     * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
@@ -457,6 +529,13 @@ public class AsyncCrm {
     /**
      * List all companies
      * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmCompaniesRequestBuilder listCrmCompanies() {
@@ -465,6 +544,13 @@ public class AsyncCrm {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
@@ -480,6 +566,13 @@ public class AsyncCrm {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmContactsRequestBuilder listCrmContacts() {
@@ -488,6 +581,13 @@ public class AsyncCrm {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
@@ -503,6 +603,13 @@ public class AsyncCrm {
     /**
      * List all deals
      * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmDealsRequestBuilder listCrmDeals() {
@@ -511,6 +618,13 @@ public class AsyncCrm {
 
     /**
      * List all deals
+     * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
@@ -526,6 +640,13 @@ public class AsyncCrm {
     /**
      * List all events
      * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmEventsRequestBuilder listCrmEvents() {
@@ -534,6 +655,13 @@ public class AsyncCrm {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
@@ -549,6 +677,13 @@ public class AsyncCrm {
     /**
      * List all leads
      * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmLeadsRequestBuilder listCrmLeads() {
@@ -557,6 +692,13 @@ public class AsyncCrm {
 
     /**
      * List all leads
+     * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
@@ -572,6 +714,13 @@ public class AsyncCrm {
     /**
      * List all pipelines
      * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmPipelinesRequestBuilder listCrmPipelines() {
@@ -580,6 +729,13 @@ public class AsyncCrm {
 
     /**
      * List all pipelines
+     * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
@@ -595,6 +751,13 @@ public class AsyncCrm {
     /**
      * List all taxonomies
      * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
@@ -603,6 +766,13 @@ public class AsyncCrm {
 
     /**
      * List all taxonomies
+     * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmTaxonomiesResponse>} - The async response
@@ -618,6 +788,9 @@ public class AsyncCrm {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmCompanyRequestBuilder patchCrmCompany() {
@@ -626,6 +799,9 @@ public class AsyncCrm {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
@@ -641,6 +817,9 @@ public class AsyncCrm {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmContactRequestBuilder patchCrmContact() {
@@ -649,6 +828,9 @@ public class AsyncCrm {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
@@ -664,6 +846,9 @@ public class AsyncCrm {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchCrmDealRequestBuilder patchCrmDeal() {
@@ -672,6 +857,9 @@ public class AsyncCrm {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
@@ -687,6 +875,9 @@ public class AsyncCrm {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmEventRequestBuilder patchCrmEvent() {
@@ -695,6 +886,9 @@ public class AsyncCrm {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
@@ -710,6 +904,9 @@ public class AsyncCrm {
     /**
      * Update a lead
      * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchCrmLeadRequestBuilder patchCrmLead() {
@@ -718,6 +915,9 @@ public class AsyncCrm {
 
     /**
      * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
@@ -733,6 +933,9 @@ public class AsyncCrm {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
@@ -741,6 +944,9 @@ public class AsyncCrm {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
@@ -756,6 +962,8 @@ public class AsyncCrm {
     /**
      * Remove a company
      * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
@@ -764,6 +972,8 @@ public class AsyncCrm {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
@@ -779,6 +989,8 @@ public class AsyncCrm {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmContactRequestBuilder removeCrmContact() {
@@ -787,6 +999,8 @@ public class AsyncCrm {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
@@ -802,6 +1016,8 @@ public class AsyncCrm {
     /**
      * Remove a deal
      * 
+     * <p>Deletes the CrmDeal identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmDealRequestBuilder removeCrmDeal() {
@@ -810,6 +1026,8 @@ public class AsyncCrm {
 
     /**
      * Remove a deal
+     * 
+     * <p>Deletes the CrmDeal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
@@ -825,6 +1043,8 @@ public class AsyncCrm {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmEventRequestBuilder removeCrmEvent() {
@@ -833,6 +1053,8 @@ public class AsyncCrm {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
@@ -848,6 +1070,8 @@ public class AsyncCrm {
     /**
      * Remove a lead
      * 
+     * <p>Deletes the CrmLead identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmLeadRequestBuilder removeCrmLead() {
@@ -856,6 +1080,8 @@ public class AsyncCrm {
 
     /**
      * Remove a lead
+     * 
+     * <p>Deletes the CrmLead identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
@@ -871,6 +1097,8 @@ public class AsyncCrm {
     /**
      * Remove a pipeline
      * 
+     * <p>Deletes the CrmPipeline identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
@@ -879,6 +1107,8 @@ public class AsyncCrm {
 
     /**
      * Remove a pipeline
+     * 
+     * <p>Deletes the CrmPipeline identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
@@ -894,6 +1124,9 @@ public class AsyncCrm {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
@@ -902,6 +1135,9 @@ public class AsyncCrm {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
@@ -917,6 +1153,9 @@ public class AsyncCrm {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmContactRequestBuilder updateCrmContact() {
@@ -925,6 +1164,9 @@ public class AsyncCrm {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
@@ -940,6 +1182,9 @@ public class AsyncCrm {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmDealRequestBuilder updateCrmDeal() {
@@ -948,6 +1193,9 @@ public class AsyncCrm {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
@@ -963,6 +1211,9 @@ public class AsyncCrm {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmEventRequestBuilder updateCrmEvent() {
@@ -971,6 +1222,9 @@ public class AsyncCrm {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
@@ -986,6 +1240,9 @@ public class AsyncCrm {
     /**
      * Update a lead
      * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmLeadRequestBuilder updateCrmLead() {
@@ -994,6 +1251,9 @@ public class AsyncCrm {
 
     /**
      * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
@@ -1009,6 +1269,9 @@ public class AsyncCrm {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
@@ -1017,6 +1280,9 @@ public class AsyncCrm {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response

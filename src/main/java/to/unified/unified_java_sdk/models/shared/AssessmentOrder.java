@@ -247,7 +247,9 @@ public class AssessmentOrder {
     @JsonProperty("response_url")
     private String responseUrl;
 
-
+    /**
+     * The current state of the assessment order
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private AssessmentOrderStatus status;
@@ -599,6 +601,9 @@ public class AssessmentOrder {
         return Optional.ofNullable(this.responseUrl);
     }
 
+    /**
+     * The current state of the assessment order
+     */
     public Optional<AssessmentOrderStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -921,6 +926,9 @@ public class AssessmentOrder {
     }
 
 
+    /**
+     * The current state of the assessment order
+     */
     public AssessmentOrder withStatus(@Nullable AssessmentOrderStatus status) {
         this.status = status;
         return this;
@@ -1422,6 +1430,9 @@ public class AssessmentOrder {
             return this;
         }
 
+        /**
+         * The current state of the assessment order
+         */
         public Builder status(@Nullable AssessmentOrderStatus status) {
             this.status = status;
             return this;

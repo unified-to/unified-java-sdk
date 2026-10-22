@@ -129,6 +129,9 @@ public class AsyncTicketing {
     /**
      * Create a category
      * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
+     * 
      * @return The async call builder
      */
     public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
@@ -137,6 +140,9 @@ public class AsyncTicketing {
 
     /**
      * Create a category
+     * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
@@ -152,6 +158,9 @@ public class AsyncTicketing {
     /**
      * Create a customer
      * 
+     * <p>Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCustomer.
+     * 
      * @return The async call builder
      */
     public CreateTicketingCustomerRequestBuilder createTicketingCustomer() {
@@ -160,6 +169,9 @@ public class AsyncTicketing {
 
     /**
      * Create a customer
+     * 
+     * <p>Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCustomer.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingCustomerResponse>} - The async response
@@ -175,6 +187,9 @@ public class AsyncTicketing {
     /**
      * Create a note
      * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
+     * 
      * @return The async call builder
      */
     public CreateTicketingNoteRequestBuilder createTicketingNote() {
@@ -183,6 +198,9 @@ public class AsyncTicketing {
 
     /**
      * Create a note
+     * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
@@ -198,6 +216,9 @@ public class AsyncTicketing {
     /**
      * Create a ticket
      * 
+     * <p>Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingTicket.
+     * 
      * @return The async call builder
      */
     public CreateTicketingTicketRequestBuilder createTicketingTicket() {
@@ -206,6 +227,9 @@ public class AsyncTicketing {
 
     /**
      * Create a ticket
+     * 
+     * <p>Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingTicket.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingTicketResponse>} - The async response
@@ -221,6 +245,9 @@ public class AsyncTicketing {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingCategoryRequestBuilder getTicketingCategory() {
@@ -229,6 +256,9 @@ public class AsyncTicketing {
 
     /**
      * Retrieve a category
+     * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
@@ -244,6 +274,9 @@ public class AsyncTicketing {
     /**
      * Retrieve a customer
      * 
+     * <p>Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingCustomerRequestBuilder getTicketingCustomer() {
@@ -252,6 +285,9 @@ public class AsyncTicketing {
 
     /**
      * Retrieve a customer
+     * 
+     * <p>Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingCustomerResponse>} - The async response
@@ -267,6 +303,9 @@ public class AsyncTicketing {
     /**
      * Retrieve a note
      * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingNoteRequestBuilder getTicketingNote() {
@@ -275,6 +314,9 @@ public class AsyncTicketing {
 
     /**
      * Retrieve a note
+     * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
@@ -290,6 +332,9 @@ public class AsyncTicketing {
     /**
      * Retrieve a ticket
      * 
+     * <p>Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingTicketRequestBuilder getTicketingTicket() {
@@ -298,6 +343,9 @@ public class AsyncTicketing {
 
     /**
      * Retrieve a ticket
+     * 
+     * <p>Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingTicketResponse>} - The async response
@@ -313,6 +361,13 @@ public class AsyncTicketing {
     /**
      * List all categories
      * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
@@ -321,6 +376,13 @@ public class AsyncTicketing {
 
     /**
      * List all categories
+     * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
@@ -336,6 +398,13 @@ public class AsyncTicketing {
     /**
      * List all customers
      * 
+     * <p>Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingCustomersRequestBuilder listTicketingCustomers() {
@@ -344,6 +413,13 @@ public class AsyncTicketing {
 
     /**
      * List all customers
+     * 
+     * <p>Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingCustomersResponse>} - The async response
@@ -359,6 +435,13 @@ public class AsyncTicketing {
     /**
      * List all notes
      * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingNotesRequestBuilder listTicketingNotes() {
@@ -367,6 +450,13 @@ public class AsyncTicketing {
 
     /**
      * List all notes
+     * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
@@ -382,6 +472,13 @@ public class AsyncTicketing {
     /**
      * List all tickets
      * 
+     * <p>Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingTicketsRequestBuilder listTicketingTickets() {
@@ -390,6 +487,13 @@ public class AsyncTicketing {
 
     /**
      * List all tickets
+     * 
+     * <p>Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingTicketsResponse>} - The async response
@@ -405,6 +509,9 @@ public class AsyncTicketing {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
@@ -413,6 +520,9 @@ public class AsyncTicketing {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
@@ -428,6 +538,9 @@ public class AsyncTicketing {
     /**
      * Update a customer
      * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingCustomerRequestBuilder patchTicketingCustomer() {
@@ -436,6 +549,9 @@ public class AsyncTicketing {
 
     /**
      * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingCustomerResponse>} - The async response
@@ -451,6 +567,9 @@ public class AsyncTicketing {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingNoteRequestBuilder patchTicketingNote() {
@@ -459,6 +578,9 @@ public class AsyncTicketing {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
@@ -474,6 +596,9 @@ public class AsyncTicketing {
     /**
      * Update a ticket
      * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingTicketRequestBuilder patchTicketingTicket() {
@@ -482,6 +607,9 @@ public class AsyncTicketing {
 
     /**
      * Update a ticket
+     * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingTicketResponse>} - The async response
@@ -497,6 +625,8 @@ public class AsyncTicketing {
     /**
      * Remove a category
      * 
+     * <p>Deletes the TicketingCategory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
@@ -505,6 +635,8 @@ public class AsyncTicketing {
 
     /**
      * Remove a category
+     * 
+     * <p>Deletes the TicketingCategory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
@@ -520,6 +652,8 @@ public class AsyncTicketing {
     /**
      * Remove a customer
      * 
+     * <p>Deletes the TicketingCustomer identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingCustomerRequestBuilder removeTicketingCustomer() {
@@ -528,6 +662,8 @@ public class AsyncTicketing {
 
     /**
      * Remove a customer
+     * 
+     * <p>Deletes the TicketingCustomer identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingCustomerResponse>} - The async response
@@ -543,6 +679,8 @@ public class AsyncTicketing {
     /**
      * Remove a note
      * 
+     * <p>Deletes the TicketingNote identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
@@ -551,6 +689,8 @@ public class AsyncTicketing {
 
     /**
      * Remove a note
+     * 
+     * <p>Deletes the TicketingNote identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
@@ -566,6 +706,8 @@ public class AsyncTicketing {
     /**
      * Remove a ticket
      * 
+     * <p>Deletes the TicketingTicket identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingTicketRequestBuilder removeTicketingTicket() {
@@ -574,6 +716,8 @@ public class AsyncTicketing {
 
     /**
      * Remove a ticket
+     * 
+     * <p>Deletes the TicketingTicket identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingTicketResponse>} - The async response
@@ -589,6 +733,9 @@ public class AsyncTicketing {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
@@ -597,6 +744,9 @@ public class AsyncTicketing {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response
@@ -612,6 +762,9 @@ public class AsyncTicketing {
     /**
      * Update a customer
      * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingCustomerRequestBuilder updateTicketingCustomer() {
@@ -620,6 +773,9 @@ public class AsyncTicketing {
 
     /**
      * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingCustomerResponse>} - The async response
@@ -635,6 +791,9 @@ public class AsyncTicketing {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
@@ -643,6 +802,9 @@ public class AsyncTicketing {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
@@ -658,6 +820,9 @@ public class AsyncTicketing {
     /**
      * Update a ticket
      * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingTicketRequestBuilder updateTicketingTicket() {
@@ -666,6 +831,9 @@ public class AsyncTicketing {
 
     /**
      * Update a ticket
+     * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingTicketResponse>} - The async response

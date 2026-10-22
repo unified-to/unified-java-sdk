@@ -45,6 +45,9 @@ public class AsyncObservation {
     /**
      * Create an observation
      * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
+     * 
      * @return The async call builder
      */
     public CreateHealthcareObservationRequestBuilder createHealthcareObservation() {
@@ -53,6 +56,9 @@ public class AsyncObservation {
 
     /**
      * Create an observation
+     * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHealthcareObservationResponse>} - The async response
@@ -68,6 +74,9 @@ public class AsyncObservation {
     /**
      * Retrieve an observation
      * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHealthcareObservationRequestBuilder getHealthcareObservation() {
@@ -76,6 +85,9 @@ public class AsyncObservation {
 
     /**
      * Retrieve an observation
+     * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHealthcareObservationResponse>} - The async response
@@ -91,6 +103,13 @@ public class AsyncObservation {
     /**
      * List all observations
      * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHealthcareObservationsRequestBuilder listHealthcareObservations() {
@@ -99,6 +118,13 @@ public class AsyncObservation {
 
     /**
      * List all observations
+     * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHealthcareObservationsResponse>} - The async response

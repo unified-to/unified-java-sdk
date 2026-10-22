@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * CrmMetadataFormat
+ * 
+ * <p>The data type of the custom field, which determines how `value` is formatted.
+ */
 public class CrmMetadataFormat {
 
     public static final CrmMetadataFormat TEXT = new CrmMetadataFormat("TEXT");

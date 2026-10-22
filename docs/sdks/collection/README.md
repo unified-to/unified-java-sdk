@@ -19,7 +19,7 @@
 
 ## createCommerceCollection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -50,7 +50,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("82223764-4c37-4ce0-bb41-a45eae6f2899")
+                    .id("dfd00974-a209-45aa-9216-2a7ff4041182")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -60,10 +60,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("a578c433-c574-4104-8001-6855ff5fc779")
+                            .id("15e6154e-feda-4332-ae72-535eff37de7b")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("72051fbf-21c5-42ac-a7d7-8d218365542e")
+                                    .id("30e82e03-73e7-41bd-b871-f3fccabd0b15")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -73,7 +73,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("57bbe6f6-1a4c-4a96-bea1-3337d3dd12df")
+                            .id("1eb408ca-6497-4c83-9ec0-1c25037002c8")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -84,7 +84,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.058Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.328Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -118,7 +118,7 @@ public class Application {
 
 ## createLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("1c7ab687-a9c8-4f43-815c-ea58d126dbf9")
+                    .id("cce07da8-4012-4200-868d-81aaabc5a0d3")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -163,7 +163,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.541Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.452Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -197,7 +197,7 @@ public class Application {
 
 ## getCommerceCollection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ public class Application {
 
 ## getLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -313,7 +313,7 @@ public class Application {
 
 ## listCommerceCollections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -370,7 +370,7 @@ public class Application {
 
 ## listLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -427,7 +427,7 @@ public class Application {
 
 ## patchCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -458,7 +458,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("6aaf2417-ac28-40d8-bef1-86febc55f6c8")
+                    .id("39b7e4bf-a51a-43ca-94af-06928234aa91")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -468,10 +468,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("ec1857de-5268-431a-a0ee-8892108c3ee0")
+                            .id("39dc9b95-3fcb-46c9-9cc2-851684fb1bac")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("4886e0ec-2694-4588-9e05-a4e306020558")
+                                    .id("f75e3530-8d99-4995-bfc6-d722653e2702")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -481,7 +481,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("69f15108-c40f-4d12-be24-c450cad87f17")
+                            .id("94ffe8e9-76da-4d47-bd92-edbaf7cdf299")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -492,7 +492,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.074Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.346Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -527,7 +527,7 @@ public class Application {
 
 ## patchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -557,7 +557,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("fda0f5c8-fac1-4166-8f91-1206148b9651")
+                    .id("814e5787-79d1-4f20-8849-63fcf0b37b93")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -572,7 +572,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.561Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.465Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -607,7 +607,7 @@ public class Application {
 
 ## removeCommerceCollection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -663,7 +663,7 @@ public class Application {
 
 ## removeLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -719,7 +719,7 @@ public class Application {
 
 ## updateCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -750,7 +750,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("6aaf2417-ac28-40d8-bef1-86febc55f6c8")
+                    .id("39b7e4bf-a51a-43ca-94af-06928234aa91")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -760,10 +760,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("ec1857de-5268-431a-a0ee-8892108c3ee0")
+                            .id("39dc9b95-3fcb-46c9-9cc2-851684fb1bac")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("4886e0ec-2694-4588-9e05-a4e306020558")
+                                    .id("f75e3530-8d99-4995-bfc6-d722653e2702")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -773,7 +773,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("69f15108-c40f-4d12-be24-c450cad87f17")
+                            .id("94ffe8e9-76da-4d47-bd92-edbaf7cdf299")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -784,7 +784,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.074Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.346Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -819,7 +819,7 @@ public class Application {
 
 ## updateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("fda0f5c8-fac1-4166-8f91-1206148b9651")
+                    .id("814e5787-79d1-4f20-8849-63fcf0b37b93")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -864,7 +864,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.561Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.465Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

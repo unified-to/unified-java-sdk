@@ -89,6 +89,9 @@ public class AsyncSocial {
     /**
      * Create a post
      * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
+     * 
      * @return The async call builder
      */
     public CreateSocialPostRequestBuilder createSocialPost() {
@@ -97,6 +100,9 @@ public class AsyncSocial {
 
     /**
      * Create a post
+     * 
+     * <p>Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to
+     * the provider's API. Returns the created SocialPost.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateSocialPostResponse>} - The async response
@@ -112,6 +118,9 @@ public class AsyncSocial {
     /**
      * Retrieve an insight
      * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialInsightRequestBuilder getSocialInsight() {
@@ -120,6 +129,9 @@ public class AsyncSocial {
 
     /**
      * Retrieve an insight
+     * 
+     * <p>Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialInsightResponse>} - The async response
@@ -135,6 +147,9 @@ public class AsyncSocial {
     /**
      * Retrieve a post
      * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialPostRequestBuilder getSocialPost() {
@@ -143,6 +158,9 @@ public class AsyncSocial {
 
     /**
      * Retrieve a post
+     * 
+     * <p>Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialPostResponse>} - The async response
@@ -158,6 +176,9 @@ public class AsyncSocial {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialProfileRequestBuilder getSocialProfile() {
@@ -166,6 +187,9 @@ public class AsyncSocial {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialProfileResponse>} - The async response
@@ -181,6 +205,9 @@ public class AsyncSocial {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialReviewRequestBuilder getSocialReview() {
@@ -189,6 +216,9 @@ public class AsyncSocial {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
@@ -204,6 +234,13 @@ public class AsyncSocial {
     /**
      * List all insights
      * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialInsightsRequestBuilder listSocialInsights() {
@@ -212,6 +249,13 @@ public class AsyncSocial {
 
     /**
      * List all insights
+     * 
+     * <p>Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialInsightsResponse>} - The async response
@@ -227,6 +271,13 @@ public class AsyncSocial {
     /**
      * List all posts
      * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialPostsRequestBuilder listSocialPosts() {
@@ -235,6 +286,13 @@ public class AsyncSocial {
 
     /**
      * List all posts
+     * 
+     * <p>Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialPostsResponse>} - The async response
@@ -250,6 +308,13 @@ public class AsyncSocial {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialProfilesRequestBuilder listSocialProfiles() {
@@ -258,6 +323,13 @@ public class AsyncSocial {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialProfilesResponse>} - The async response
@@ -273,6 +345,13 @@ public class AsyncSocial {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialReviewsRequestBuilder listSocialReviews() {
@@ -281,6 +360,13 @@ public class AsyncSocial {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
@@ -296,6 +382,9 @@ public class AsyncSocial {
     /**
      * Update a post
      * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchSocialPostRequestBuilder patchSocialPost() {
@@ -304,6 +393,9 @@ public class AsyncSocial {
 
     /**
      * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchSocialPostResponse>} - The async response
@@ -319,6 +411,9 @@ public class AsyncSocial {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchSocialReviewRequestBuilder patchSocialReview() {
@@ -327,6 +422,9 @@ public class AsyncSocial {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
@@ -342,6 +440,8 @@ public class AsyncSocial {
     /**
      * Remove a post
      * 
+     * <p>Deletes the SocialPost identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveSocialPostRequestBuilder removeSocialPost() {
@@ -350,6 +450,8 @@ public class AsyncSocial {
 
     /**
      * Remove a post
+     * 
+     * <p>Deletes the SocialPost identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveSocialPostResponse>} - The async response
@@ -365,6 +467,9 @@ public class AsyncSocial {
     /**
      * Update a post
      * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateSocialPostRequestBuilder updateSocialPost() {
@@ -373,6 +478,9 @@ public class AsyncSocial {
 
     /**
      * Update a post
+     * 
+     * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateSocialPostResponse>} - The async response
@@ -388,6 +496,9 @@ public class AsyncSocial {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateSocialReviewRequestBuilder updateSocialReview() {
@@ -396,6 +507,9 @@ public class AsyncSocial {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response

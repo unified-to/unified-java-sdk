@@ -37,6 +37,9 @@ public class AsyncQuery {
     /**
      * Create a query
      * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
@@ -45,6 +48,9 @@ public class AsyncQuery {
 
     /**
      * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response

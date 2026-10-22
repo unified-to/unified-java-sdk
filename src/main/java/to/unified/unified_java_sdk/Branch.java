@@ -55,6 +55,9 @@ public class Branch {
     /**
      * Create a branch
      * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
+     * 
      * @return The call builder
      */
     public CreateRepoBranchRequestBuilder createRepoBranch() {
@@ -63,6 +66,9 @@ public class Branch {
 
     /**
      * Create a branch
+     * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Branch {
     /**
      * Retrieve a branch
      * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoBranchRequestBuilder getRepoBranch() {
@@ -85,6 +94,9 @@ public class Branch {
 
     /**
      * Retrieve a branch
+     * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Branch {
     /**
      * List all branches
      * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoBranchesRequestBuilder listRepoBranches() {
@@ -107,6 +126,13 @@ public class Branch {
 
     /**
      * List all branches
+     * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Branch {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchRepoBranchRequestBuilder patchRepoBranch() {
@@ -129,6 +158,9 @@ public class Branch {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Branch {
     /**
      * Remove a branch
      * 
+     * <p>Deletes the RepoBranch identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoBranchRequestBuilder removeRepoBranch() {
@@ -151,6 +185,8 @@ public class Branch {
 
     /**
      * Remove a branch
+     * 
+     * <p>Deletes the RepoBranch identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Branch {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoBranchRequestBuilder updateRepoBranch() {
@@ -173,6 +212,9 @@ public class Branch {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

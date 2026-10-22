@@ -13,7 +13,7 @@
 
 ## createStorageFile
 
-Create a file
+Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ public class Application {
                     .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
                     .downloadUrl("https://clueless-laughter.biz")
                     .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("60879698-0629-4561-8c18-9ffcba63660d")
+                    .id("db1a3a46-81d8-4381-b15a-b07f28e8d06a")
                     .metadata(List.of())
                     .mimeType("application/pdf")
                     .name("softly.pdf")
@@ -53,7 +53,7 @@ public class Application {
                     .tags(List.of(
                         "suasoria"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-05T13:00:51.962Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-05T19:50:52.256Z"))
                     .version("1")
                     .webUrl("https://faraway-inspection.org")
                     .build())
@@ -89,7 +89,7 @@ public class Application {
 
 ## getStorageFile
 
-Retrieve a file
+Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listStorageFiles
 
-List all files
+Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ public class Application {
                     .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
                     .downloadUrl("https://clueless-laughter.biz")
                     .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("d05ef6cd-2b32-410d-a29f-6b81bcb171c1")
+                    .id("677b3067-ea77-4253-90e5-5a30c571da6d")
                     .metadata(List.of())
                     .mimeType("application/pdf")
                     .name("softly.pdf")
@@ -244,7 +244,7 @@ public class Application {
                     .tags(List.of(
                         "suasoria"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-05T13:00:51.969Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-05T19:50:52.264Z"))
                     .version("1")
                     .webUrl("https://faraway-inspection.org")
                     .build())
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeStorageFile
 
-Remove a file
+Deletes the StorageFile identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -369,7 +369,7 @@ public class Application {
                     .description("Deprimo crastinus cupiditate debilito cimentarius virgo acidus.")
                     .downloadUrl("https://clueless-laughter.biz")
                     .hash("d9d88dda7bc0acaa8472fdef2307f94a1fc355ce")
-                    .id("d05ef6cd-2b32-410d-a29f-6b81bcb171c1")
+                    .id("677b3067-ea77-4253-90e5-5a30c571da6d")
                     .metadata(List.of())
                     .mimeType("application/pdf")
                     .name("softly.pdf")
@@ -377,7 +377,7 @@ public class Application {
                     .tags(List.of(
                         "suasoria"))
                     .type(StorageFileType.FOLDER)
-                    .updatedAt(OffsetDateTime.parse("2023-02-05T13:00:51.969Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-05T19:50:52.264Z"))
                     .version("1")
                     .webUrl("https://faraway-inspection.org")
                     .build())

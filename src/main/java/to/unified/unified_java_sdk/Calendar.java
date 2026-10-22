@@ -139,6 +139,9 @@ public class Calendar {
     /**
      * Create a calendar
      * 
+     * <p>Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they
+     * are mapped to the provider's API. Returns the created CalendarCalendar.
+     * 
      * @return The call builder
      */
     public CreateCalendarCalendarRequestBuilder createCalendarCalendar() {
@@ -147,6 +150,9 @@ public class Calendar {
 
     /**
      * Create a calendar
+     * 
+     * <p>Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they
+     * are mapped to the provider's API. Returns the created CalendarCalendar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -161,6 +167,9 @@ public class Calendar {
     /**
      * Create an event
      * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
      * @return The call builder
      */
     public CreateCalendarEventRequestBuilder createCalendarEvent() {
@@ -169,6 +178,9 @@ public class Calendar {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -183,6 +195,9 @@ public class Calendar {
     /**
      * Create a link
      * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
      * @return The call builder
      */
     public CreateCalendarLinkRequestBuilder createCalendarLink() {
@@ -191,6 +206,9 @@ public class Calendar {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -205,6 +223,9 @@ public class Calendar {
     /**
      * Create a webinar
      * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
+     * 
      * @return The call builder
      */
     public CreateCalendarWebinarRequestBuilder createCalendarWebinar() {
@@ -213,6 +234,9 @@ public class Calendar {
 
     /**
      * Create a webinar
+     * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -227,6 +251,9 @@ public class Calendar {
     /**
      * Retrieve a calendar
      * 
+     * <p>Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarCalendarRequestBuilder getCalendarCalendar() {
@@ -235,6 +262,9 @@ public class Calendar {
 
     /**
      * Retrieve a calendar
+     * 
+     * <p>Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -249,6 +279,9 @@ public class Calendar {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarEventRequestBuilder getCalendarEvent() {
@@ -257,6 +290,9 @@ public class Calendar {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -271,6 +307,9 @@ public class Calendar {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarLinkRequestBuilder getCalendarLink() {
@@ -279,6 +318,9 @@ public class Calendar {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -293,6 +335,9 @@ public class Calendar {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarRecordingRequestBuilder getCalendarRecording() {
@@ -301,6 +346,9 @@ public class Calendar {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -315,6 +363,9 @@ public class Calendar {
     /**
      * Retrieve a webinar
      * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarWebinarRequestBuilder getCalendarWebinar() {
@@ -323,6 +374,9 @@ public class Calendar {
 
     /**
      * Retrieve a webinar
+     * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -337,6 +391,13 @@ public class Calendar {
     /**
      * List all busies
      * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarBusiesRequestBuilder listCalendarBusies() {
@@ -345,6 +406,13 @@ public class Calendar {
 
     /**
      * List all busies
+     * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -359,6 +427,13 @@ public class Calendar {
     /**
      * List all calendars
      * 
+     * <p>Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarCalendarsRequestBuilder listCalendarCalendars() {
@@ -367,6 +442,13 @@ public class Calendar {
 
     /**
      * List all calendars
+     * 
+     * <p>Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -381,6 +463,13 @@ public class Calendar {
     /**
      * List all events
      * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarEventsRequestBuilder listCalendarEvents() {
@@ -389,6 +478,13 @@ public class Calendar {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -403,6 +499,13 @@ public class Calendar {
     /**
      * List all links
      * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarLinksRequestBuilder listCalendarLinks() {
@@ -411,6 +514,13 @@ public class Calendar {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -425,6 +535,13 @@ public class Calendar {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
@@ -433,6 +550,13 @@ public class Calendar {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -447,6 +571,13 @@ public class Calendar {
     /**
      * List all webinars
      * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarWebinarsRequestBuilder listCalendarWebinars() {
@@ -455,6 +586,13 @@ public class Calendar {
 
     /**
      * List all webinars
+     * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -469,6 +607,9 @@ public class Calendar {
     /**
      * Update a calendar
      * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarCalendarRequestBuilder patchCalendarCalendar() {
@@ -477,6 +618,9 @@ public class Calendar {
 
     /**
      * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -491,6 +635,9 @@ public class Calendar {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarEventRequestBuilder patchCalendarEvent() {
@@ -499,6 +646,9 @@ public class Calendar {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -513,6 +663,9 @@ public class Calendar {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarLinkRequestBuilder patchCalendarLink() {
@@ -521,6 +674,9 @@ public class Calendar {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -535,6 +691,9 @@ public class Calendar {
     /**
      * Update a webinar
      * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarWebinarRequestBuilder patchCalendarWebinar() {
@@ -543,6 +702,9 @@ public class Calendar {
 
     /**
      * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -557,6 +719,8 @@ public class Calendar {
     /**
      * Remove a calendar
      * 
+     * <p>Deletes the CalendarCalendar identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarCalendarRequestBuilder removeCalendarCalendar() {
@@ -565,6 +729,8 @@ public class Calendar {
 
     /**
      * Remove a calendar
+     * 
+     * <p>Deletes the CalendarCalendar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -579,6 +745,8 @@ public class Calendar {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
@@ -587,6 +755,8 @@ public class Calendar {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -601,6 +771,8 @@ public class Calendar {
     /**
      * Remove a link
      * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
@@ -609,6 +781,8 @@ public class Calendar {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -623,6 +797,8 @@ public class Calendar {
     /**
      * Remove a webinar
      * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarWebinarRequestBuilder removeCalendarWebinar() {
@@ -631,6 +807,8 @@ public class Calendar {
 
     /**
      * Remove a webinar
+     * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -645,6 +823,9 @@ public class Calendar {
     /**
      * Update a calendar
      * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarCalendarRequestBuilder updateCalendarCalendar() {
@@ -653,6 +834,9 @@ public class Calendar {
 
     /**
      * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -667,6 +851,9 @@ public class Calendar {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
@@ -675,6 +862,9 @@ public class Calendar {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -689,6 +879,9 @@ public class Calendar {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
@@ -697,6 +890,9 @@ public class Calendar {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -711,6 +907,9 @@ public class Calendar {
     /**
      * Update a webinar
      * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarWebinarRequestBuilder updateCalendarWebinar() {
@@ -719,6 +918,9 @@ public class Calendar {
 
     /**
      * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

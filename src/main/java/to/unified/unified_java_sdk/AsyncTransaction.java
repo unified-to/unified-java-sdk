@@ -57,6 +57,9 @@ public class AsyncTransaction {
     /**
      * Create a transaction
      * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+     * 
      * @return The async call builder
      */
     public CreateAccountingTransactionRequestBuilder createAccountingTransaction() {
@@ -65,6 +68,9 @@ public class AsyncTransaction {
 
     /**
      * Create a transaction
+     * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingTransactionResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncTransaction {
     /**
      * Retrieve a transaction
      * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingTransactionRequestBuilder getAccountingTransaction() {
@@ -88,6 +97,9 @@ public class AsyncTransaction {
 
     /**
      * Retrieve a transaction
+     * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingTransactionResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncTransaction {
     /**
      * List all transactions
      * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingTransactionsRequestBuilder listAccountingTransactions() {
@@ -111,6 +130,13 @@ public class AsyncTransaction {
 
     /**
      * List all transactions
+     * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingTransactionsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncTransaction {
     /**
      * Update a transaction
      * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingTransactionRequestBuilder patchAccountingTransaction() {
@@ -134,6 +163,9 @@ public class AsyncTransaction {
 
     /**
      * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingTransactionResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncTransaction {
     /**
      * Remove a transaction
      * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingTransactionRequestBuilder removeAccountingTransaction() {
@@ -157,6 +191,8 @@ public class AsyncTransaction {
 
     /**
      * Remove a transaction
+     * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingTransactionResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncTransaction {
     /**
      * Update a transaction
      * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingTransactionRequestBuilder updateAccountingTransaction() {
@@ -180,6 +219,9 @@ public class AsyncTransaction {
 
     /**
      * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingTransactionResponse>} - The async response

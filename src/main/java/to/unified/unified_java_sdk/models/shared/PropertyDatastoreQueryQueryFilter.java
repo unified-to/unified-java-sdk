@@ -20,7 +20,7 @@ public class PropertyDatastoreQueryQueryFilter {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
-    private List<PropertyDatastoreQueryQueryFilter> and;
+    private List<DatastoreFilterGroup> and;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -30,7 +30,7 @@ public class PropertyDatastoreQueryQueryFilter {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("or")
-    private List<PropertyDatastoreQueryQueryFilter> or;
+    private List<DatastoreFilterGroup> or;
 
 
     @JsonProperty("type")
@@ -38,9 +38,9 @@ public class PropertyDatastoreQueryQueryFilter {
 
     @JsonCreator
     public PropertyDatastoreQueryQueryFilter(
-            @JsonProperty("and") @Nullable List<PropertyDatastoreQueryQueryFilter> and,
+            @JsonProperty("and") @Nullable List<DatastoreFilterGroup> and,
             @JsonProperty("filters") @Nullable List<DatastoreFilter> filters,
-            @JsonProperty("or") @Nullable List<PropertyDatastoreQueryQueryFilter> or,
+            @JsonProperty("or") @Nullable List<DatastoreFilterGroup> or,
             @JsonProperty("type") @Nonnull PropertyDatastoreQueryQueryFilterType type) {
         this.and = and;
         this.filters = filters;
@@ -55,7 +55,7 @@ public class PropertyDatastoreQueryQueryFilter {
             type);
     }
 
-    public Optional<List<PropertyDatastoreQueryQueryFilter>> and() {
+    public Optional<List<DatastoreFilterGroup>> and() {
         return Optional.ofNullable(this.and);
     }
 
@@ -63,7 +63,7 @@ public class PropertyDatastoreQueryQueryFilter {
         return Optional.ofNullable(this.filters);
     }
 
-    public Optional<List<PropertyDatastoreQueryQueryFilter>> or() {
+    public Optional<List<DatastoreFilterGroup>> or() {
         return Optional.ofNullable(this.or);
     }
 
@@ -76,7 +76,7 @@ public class PropertyDatastoreQueryQueryFilter {
     }
 
 
-    public PropertyDatastoreQueryQueryFilter withAnd(@Nullable List<PropertyDatastoreQueryQueryFilter> and) {
+    public PropertyDatastoreQueryQueryFilter withAnd(@Nullable List<DatastoreFilterGroup> and) {
         this.and = and;
         return this;
     }
@@ -88,7 +88,7 @@ public class PropertyDatastoreQueryQueryFilter {
     }
 
 
-    public PropertyDatastoreQueryQueryFilter withOr(@Nullable List<PropertyDatastoreQueryQueryFilter> or) {
+    public PropertyDatastoreQueryQueryFilter withOr(@Nullable List<DatastoreFilterGroup> or) {
         this.or = or;
         return this;
     }
@@ -135,11 +135,11 @@ public class PropertyDatastoreQueryQueryFilter {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<PropertyDatastoreQueryQueryFilter> and;
+        private List<DatastoreFilterGroup> and;
 
         private List<DatastoreFilter> filters;
 
-        private List<PropertyDatastoreQueryQueryFilter> or;
+        private List<DatastoreFilterGroup> or;
 
         private PropertyDatastoreQueryQueryFilterType type;
 
@@ -147,7 +147,7 @@ public class PropertyDatastoreQueryQueryFilter {
           // force use of static builder() method
         }
 
-        public Builder and(@Nullable List<PropertyDatastoreQueryQueryFilter> and) {
+        public Builder and(@Nullable List<DatastoreFilterGroup> and) {
             this.and = and;
             return this;
         }
@@ -157,7 +157,7 @@ public class PropertyDatastoreQueryQueryFilter {
             return this;
         }
 
-        public Builder or(@Nullable List<PropertyDatastoreQueryQueryFilter> or) {
+        public Builder or(@Nullable List<DatastoreFilterGroup> or) {
             this.or = or;
             return this;
         }

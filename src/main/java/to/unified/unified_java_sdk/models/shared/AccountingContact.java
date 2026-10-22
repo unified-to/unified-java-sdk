@@ -57,7 +57,9 @@ public class AccountingContact {
     @JsonProperty("currency")
     private String currency;
 
-
+    /**
+     * The contact's email addresses
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private List<AccountingEmail> emails;
@@ -105,7 +107,9 @@ public class AccountingContact {
     @JsonProperty("metadata")
     private List<AccountingMetadata> metadata;
 
-
+    /**
+     * The contact's display name: the company name for a business, or the person's full name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -288,6 +292,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.currency);
     }
 
+    /**
+     * The contact's email addresses
+     */
     public Optional<List<AccountingEmail>> emails() {
         return Optional.ofNullable(this.emails);
     }
@@ -328,6 +335,9 @@ public class AccountingContact {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The contact's display name: the company name for a business, or the person's full name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -441,6 +451,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * The contact's email addresses
+     */
     public AccountingContact withEmails(@Nullable List<AccountingEmail> emails) {
         this.emails = emails;
         return this;
@@ -499,6 +512,9 @@ public class AccountingContact {
     }
 
 
+    /**
+     * The contact's display name: the company name for a business, or the person's full name
+     */
     public AccountingContact withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -784,6 +800,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * The contact's email addresses
+         */
         public Builder emails(@Nullable List<AccountingEmail> emails) {
             this.emails = emails;
             return this;
@@ -833,6 +852,9 @@ public class AccountingContact {
             return this;
         }
 
+        /**
+         * The contact's display name: the company name for a business, or the person's full name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

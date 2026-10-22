@@ -57,6 +57,9 @@ public class AsyncEarning {
     /**
      * Create an earning
      * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
+     * 
      * @return The async call builder
      */
     public CreateHrisEarningRequestBuilder createHrisEarning() {
@@ -65,6 +68,9 @@ public class AsyncEarning {
 
     /**
      * Create an earning
+     * 
+     * <p>Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisEarning.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisEarningResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncEarning {
     /**
      * Retrieve an earning
      * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisEarningRequestBuilder getHrisEarning() {
@@ -88,6 +97,9 @@ public class AsyncEarning {
 
     /**
      * Retrieve an earning
+     * 
+     * <p>Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisEarningResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncEarning {
     /**
      * List all earnings
      * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisEarningsRequestBuilder listHrisEarnings() {
@@ -111,6 +130,13 @@ public class AsyncEarning {
 
     /**
      * List all earnings
+     * 
+     * <p>Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisEarningsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncEarning {
     /**
      * Update an earning
      * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisEarningRequestBuilder patchHrisEarning() {
@@ -134,6 +163,9 @@ public class AsyncEarning {
 
     /**
      * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisEarningResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncEarning {
     /**
      * Remove an earning
      * 
+     * <p>Deletes the HrisEarning identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisEarningRequestBuilder removeHrisEarning() {
@@ -157,6 +191,8 @@ public class AsyncEarning {
 
     /**
      * Remove an earning
+     * 
+     * <p>Deletes the HrisEarning identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisEarningResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncEarning {
     /**
      * Update an earning
      * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisEarningRequestBuilder updateHrisEarning() {
@@ -180,6 +219,9 @@ public class AsyncEarning {
 
     /**
      * Update an earning
+     * 
+     * <p>Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisEarningResponse>} - The async response

@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import java.lang.Deprecated;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
@@ -583,6 +584,9 @@ public class Accounting {
     /**
      * Create an account
      * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
+     * 
      * @return The call builder
      */
     public CreateAccountingAccountRequestBuilder createAccountingAccount() {
@@ -591,6 +595,9 @@ public class Accounting {
 
     /**
      * Create an account
+     * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -605,6 +612,9 @@ public class Accounting {
     /**
      * Create a bankfeedaccount
      * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     * 
      * @return The call builder
      */
     public CreateAccountingBankfeedaccountRequestBuilder createAccountingBankfeedaccount() {
@@ -613,6 +623,9 @@ public class Accounting {
 
     /**
      * Create a bankfeedaccount
+     * 
+     * <p>Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the
+     * request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -627,6 +640,10 @@ public class Accounting {
     /**
      * Create a bankfeedtransaction
      * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
+     * 
      * @return The call builder
      */
     public CreateAccountingBankfeedtransactionRequestBuilder createAccountingBankfeedtransaction() {
@@ -635,6 +652,10 @@ public class Accounting {
 
     /**
      * Create a bankfeedtransaction
+     * 
+     * <p>Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in
+     * the request body; they are mapped to the provider's API. Returns the created
+     * AccountingBankfeedtransaction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -649,6 +670,9 @@ public class Accounting {
     /**
      * Create a bill
      * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
+     * 
      * @return The call builder
      */
     public CreateAccountingBillRequestBuilder createAccountingBill() {
@@ -657,6 +681,9 @@ public class Accounting {
 
     /**
      * Create a bill
+     * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -671,6 +698,9 @@ public class Accounting {
     /**
      * Create a category
      * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
      * @return The call builder
      */
     public CreateAccountingCategoryRequestBuilder createAccountingCategory() {
@@ -679,6 +709,9 @@ public class Accounting {
 
     /**
      * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -693,6 +726,9 @@ public class Accounting {
     /**
      * Create a contact
      * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
      * @return The call builder
      */
     public CreateAccountingContactRequestBuilder createAccountingContact() {
@@ -701,6 +737,9 @@ public class Accounting {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -715,6 +754,9 @@ public class Accounting {
     /**
      * Create a creditmemo
      * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
      * @return The call builder
      */
     public CreateAccountingCreditmemoRequestBuilder createAccountingCreditmemo() {
@@ -723,6 +765,9 @@ public class Accounting {
 
     /**
      * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -737,6 +782,9 @@ public class Accounting {
     /**
      * Create an expense
      * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
      * @return The call builder
      */
     public CreateAccountingExpenseRequestBuilder createAccountingExpense() {
@@ -745,6 +793,9 @@ public class Accounting {
 
     /**
      * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -759,6 +810,9 @@ public class Accounting {
     /**
      * Create an expensereport
      * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     * 
      * @return The call builder
      */
     public CreateAccountingExpensereportRequestBuilder createAccountingExpensereport() {
@@ -767,6 +821,9 @@ public class Accounting {
 
     /**
      * Create an expensereport
+     * 
+     * <p>Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -781,6 +838,9 @@ public class Accounting {
     /**
      * Create an invoice
      * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
+     * 
      * @return The call builder
      */
     public CreateAccountingInvoiceRequestBuilder createAccountingInvoice() {
@@ -789,6 +849,9 @@ public class Accounting {
 
     /**
      * Create an invoice
+     * 
+     * <p>Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingInvoice.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -803,6 +866,9 @@ public class Accounting {
     /**
      * Create a journal
      * 
+     * <p>Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingJournal.
+     * 
      * @return The call builder
      */
     public CreateAccountingJournalRequestBuilder createAccountingJournal() {
@@ -811,6 +877,9 @@ public class Accounting {
 
     /**
      * Create a journal
+     * 
+     * <p>Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingJournal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -825,8 +894,13 @@ public class Accounting {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CreateAccountingOrderRequestBuilder createAccountingOrder() {
         return new CreateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -834,10 +908,15 @@ public class Accounting {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -847,6 +926,9 @@ public class Accounting {
     /**
      * Create a paymentterm
      * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
      * @return The call builder
      */
     public CreateAccountingPaymenttermRequestBuilder createAccountingPaymentterm() {
@@ -855,6 +937,9 @@ public class Accounting {
 
     /**
      * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -869,6 +954,9 @@ public class Accounting {
     /**
      * Create a project
      * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
      * @return The call builder
      */
     public CreateAccountingProjectRequestBuilder createAccountingProject() {
@@ -877,6 +965,9 @@ public class Accounting {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -891,6 +982,9 @@ public class Accounting {
     /**
      * Create a purchaseorder
      * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
      * @return The call builder
      */
     public CreateAccountingPurchaseorderRequestBuilder createAccountingPurchaseorder() {
@@ -899,6 +993,9 @@ public class Accounting {
 
     /**
      * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -913,6 +1010,9 @@ public class Accounting {
     /**
      * Create a quote
      * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
+     * 
      * @return The call builder
      */
     public CreateAccountingQuoteRequestBuilder createAccountingQuote() {
@@ -921,6 +1021,9 @@ public class Accounting {
 
     /**
      * Create a quote
+     * 
+     * <p>Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingQuote.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -935,6 +1038,9 @@ public class Accounting {
     /**
      * Create a salesorder
      * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
+     * 
      * @return The call builder
      */
     public CreateAccountingSalesorderRequestBuilder createAccountingSalesorder() {
@@ -943,6 +1049,9 @@ public class Accounting {
 
     /**
      * Create a salesorder
+     * 
+     * <p>Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingSalesorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -957,6 +1066,9 @@ public class Accounting {
     /**
      * Create a taxrate
      * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
+     * 
      * @return The call builder
      */
     public CreateAccountingTaxrateRequestBuilder createAccountingTaxrate() {
@@ -965,6 +1077,9 @@ public class Accounting {
 
     /**
      * Create a taxrate
+     * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -979,6 +1094,9 @@ public class Accounting {
     /**
      * Create a transaction
      * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+     * 
      * @return The call builder
      */
     public CreateAccountingTransactionRequestBuilder createAccountingTransaction() {
@@ -987,6 +1105,9 @@ public class Accounting {
 
     /**
      * Create a transaction
+     * 
+     * <p>Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingTransaction.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1001,6 +1122,9 @@ public class Accounting {
     /**
      * Create a vendorcredit
      * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     * 
      * @return The call builder
      */
     public CreateAccountingVendorcreditRequestBuilder createAccountingVendorcredit() {
@@ -1009,6 +1133,9 @@ public class Accounting {
 
     /**
      * Create a vendorcredit
+     * 
+     * <p>Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1023,6 +1150,9 @@ public class Accounting {
     /**
      * Retrieve an account
      * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingAccountRequestBuilder getAccountingAccount() {
@@ -1031,6 +1161,9 @@ public class Accounting {
 
     /**
      * Retrieve an account
+     * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1045,6 +1178,9 @@ public class Accounting {
     /**
      * Retrieve an agedpayable
      * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingAgedpayableRequestBuilder getAccountingAgedpayable() {
@@ -1053,6 +1189,9 @@ public class Accounting {
 
     /**
      * Retrieve an agedpayable
+     * 
+     * <p>Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1067,6 +1206,9 @@ public class Accounting {
     /**
      * Retrieve an agedreceivable
      * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingAgedreceivableRequestBuilder getAccountingAgedreceivable() {
@@ -1075,6 +1217,9 @@ public class Accounting {
 
     /**
      * Retrieve an agedreceivable
+     * 
+     * <p>Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1089,6 +1234,9 @@ public class Accounting {
     /**
      * Retrieve a balancesheet
      * 
+     * <p>Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingBalancesheetRequestBuilder getAccountingBalancesheet() {
@@ -1097,6 +1245,9 @@ public class Accounting {
 
     /**
      * Retrieve a balancesheet
+     * 
+     * <p>Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1111,6 +1262,9 @@ public class Accounting {
     /**
      * Retrieve a bankfeedaccount
      * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingBankfeedaccountRequestBuilder getAccountingBankfeedaccount() {
@@ -1119,6 +1273,9 @@ public class Accounting {
 
     /**
      * Retrieve a bankfeedaccount
+     * 
+     * <p>Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1133,6 +1290,9 @@ public class Accounting {
     /**
      * Retrieve a bankfeedtransaction
      * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingBankfeedtransactionRequestBuilder getAccountingBankfeedtransaction() {
@@ -1141,6 +1301,9 @@ public class Accounting {
 
     /**
      * Retrieve a bankfeedtransaction
+     * 
+     * <p>Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the
+     * corresponding list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1155,6 +1318,9 @@ public class Accounting {
     /**
      * Retrieve a bill
      * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingBillRequestBuilder getAccountingBill() {
@@ -1163,6 +1329,9 @@ public class Accounting {
 
     /**
      * Retrieve a bill
+     * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1177,6 +1346,9 @@ public class Accounting {
     /**
      * Retrieve a cashflow
      * 
+     * <p>Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingCashflowRequestBuilder getAccountingCashflow() {
@@ -1185,6 +1357,9 @@ public class Accounting {
 
     /**
      * Retrieve a cashflow
+     * 
+     * <p>Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1199,6 +1374,9 @@ public class Accounting {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingCategoryRequestBuilder getAccountingCategory() {
@@ -1207,6 +1385,9 @@ public class Accounting {
 
     /**
      * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1221,6 +1402,9 @@ public class Accounting {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingContactRequestBuilder getAccountingContact() {
@@ -1229,6 +1413,9 @@ public class Accounting {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1243,6 +1430,9 @@ public class Accounting {
     /**
      * Retrieve a creditmemo
      * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingCreditmemoRequestBuilder getAccountingCreditmemo() {
@@ -1251,6 +1441,9 @@ public class Accounting {
 
     /**
      * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1265,6 +1458,9 @@ public class Accounting {
     /**
      * Retrieve an expense
      * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingExpenseRequestBuilder getAccountingExpense() {
@@ -1273,6 +1469,9 @@ public class Accounting {
 
     /**
      * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1287,6 +1486,9 @@ public class Accounting {
     /**
      * Retrieve an expensereport
      * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingExpensereportRequestBuilder getAccountingExpensereport() {
@@ -1295,6 +1497,9 @@ public class Accounting {
 
     /**
      * Retrieve an expensereport
+     * 
+     * <p>Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1309,6 +1514,9 @@ public class Accounting {
     /**
      * Retrieve an invoice
      * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingInvoiceRequestBuilder getAccountingInvoice() {
@@ -1317,6 +1525,9 @@ public class Accounting {
 
     /**
      * Retrieve an invoice
+     * 
+     * <p>Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1331,6 +1542,9 @@ public class Accounting {
     /**
      * Retrieve a journal
      * 
+     * <p>Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingJournalRequestBuilder getAccountingJournal() {
@@ -1339,6 +1553,9 @@ public class Accounting {
 
     /**
      * Retrieve a journal
+     * 
+     * <p>Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1353,8 +1570,13 @@ public class Accounting {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public GetAccountingOrderRequestBuilder getAccountingOrder() {
         return new GetAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -1362,10 +1584,15 @@ public class Accounting {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -1375,6 +1602,9 @@ public class Accounting {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingOrganizationRequestBuilder getAccountingOrganization() {
@@ -1383,6 +1613,9 @@ public class Accounting {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1397,6 +1630,9 @@ public class Accounting {
     /**
      * Retrieve a paymentterm
      * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingPaymenttermRequestBuilder getAccountingPaymentterm() {
@@ -1405,6 +1641,9 @@ public class Accounting {
 
     /**
      * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1419,6 +1658,9 @@ public class Accounting {
     /**
      * Retrieve a profitloss
      * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingProfitlossRequestBuilder getAccountingProfitloss() {
@@ -1427,6 +1669,9 @@ public class Accounting {
 
     /**
      * Retrieve a profitloss
+     * 
+     * <p>Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1441,6 +1686,9 @@ public class Accounting {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingProjectRequestBuilder getAccountingProject() {
@@ -1449,6 +1697,9 @@ public class Accounting {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1463,6 +1714,9 @@ public class Accounting {
     /**
      * Retrieve a purchaseorder
      * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingPurchaseorderRequestBuilder getAccountingPurchaseorder() {
@@ -1471,6 +1725,9 @@ public class Accounting {
 
     /**
      * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1485,6 +1742,9 @@ public class Accounting {
     /**
      * Retrieve a purchasereceipt
      * 
+     * <p>Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingPurchasereceiptRequestBuilder getAccountingPurchasereceipt() {
@@ -1493,6 +1753,9 @@ public class Accounting {
 
     /**
      * Retrieve a purchasereceipt
+     * 
+     * <p>Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1507,6 +1770,9 @@ public class Accounting {
     /**
      * Retrieve a quote
      * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingQuoteRequestBuilder getAccountingQuote() {
@@ -1515,6 +1781,9 @@ public class Accounting {
 
     /**
      * Retrieve a quote
+     * 
+     * <p>Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1529,6 +1798,9 @@ public class Accounting {
     /**
      * Retrieve a salesorder
      * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingSalesorderRequestBuilder getAccountingSalesorder() {
@@ -1537,6 +1809,9 @@ public class Accounting {
 
     /**
      * Retrieve a salesorder
+     * 
+     * <p>Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1551,6 +1826,9 @@ public class Accounting {
     /**
      * Retrieve a salesreceipt
      * 
+     * <p>Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingSalesreceiptRequestBuilder getAccountingSalesreceipt() {
@@ -1559,6 +1837,9 @@ public class Accounting {
 
     /**
      * Retrieve a salesreceipt
+     * 
+     * <p>Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1573,6 +1854,9 @@ public class Accounting {
     /**
      * Retrieve a taxrate
      * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingTaxrateRequestBuilder getAccountingTaxrate() {
@@ -1581,6 +1865,9 @@ public class Accounting {
 
     /**
      * Retrieve a taxrate
+     * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1595,6 +1882,9 @@ public class Accounting {
     /**
      * Retrieve a transaction
      * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingTransactionRequestBuilder getAccountingTransaction() {
@@ -1603,6 +1893,9 @@ public class Accounting {
 
     /**
      * Retrieve a transaction
+     * 
+     * <p>Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1617,6 +1910,9 @@ public class Accounting {
     /**
      * Retrieve a trialbalance
      * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingTrialbalanceRequestBuilder getAccountingTrialbalance() {
@@ -1625,6 +1921,9 @@ public class Accounting {
 
     /**
      * Retrieve a trialbalance
+     * 
+     * <p>Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1639,6 +1938,9 @@ public class Accounting {
     /**
      * Retrieve a vendorcredit
      * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingVendorcreditRequestBuilder getAccountingVendorcredit() {
@@ -1647,6 +1949,9 @@ public class Accounting {
 
     /**
      * Retrieve a vendorcredit
+     * 
+     * <p>Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1661,6 +1966,13 @@ public class Accounting {
     /**
      * List all accounts
      * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingAccountsRequestBuilder listAccountingAccounts() {
@@ -1669,6 +1981,13 @@ public class Accounting {
 
     /**
      * List all accounts
+     * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1683,6 +2002,13 @@ public class Accounting {
     /**
      * List all agedpayables
      * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingAgedpayablesRequestBuilder listAccountingAgedpayables() {
@@ -1691,6 +2017,13 @@ public class Accounting {
 
     /**
      * List all agedpayables
+     * 
+     * <p>Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1705,6 +2038,13 @@ public class Accounting {
     /**
      * List all agedreceivables
      * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingAgedreceivablesRequestBuilder listAccountingAgedreceivables() {
@@ -1713,6 +2053,13 @@ public class Accounting {
 
     /**
      * List all agedreceivables
+     * 
+     * <p>Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1727,6 +2074,13 @@ public class Accounting {
     /**
      * List all balancesheets
      * 
+     * <p>Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingBalancesheetsRequestBuilder listAccountingBalancesheets() {
@@ -1735,6 +2089,13 @@ public class Accounting {
 
     /**
      * List all balancesheets
+     * 
+     * <p>Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1749,6 +2110,13 @@ public class Accounting {
     /**
      * List all bankfeedaccounts
      * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingBankfeedaccountsRequestBuilder listAccountingBankfeedaccounts() {
@@ -1757,6 +2125,13 @@ public class Accounting {
 
     /**
      * List all bankfeedaccounts
+     * 
+     * <p>Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1771,6 +2146,14 @@ public class Accounting {
     /**
      * List all bankfeedtransactions
      * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingBankfeedtransactionsRequestBuilder listAccountingBankfeedtransactions() {
@@ -1779,6 +2162,14 @@ public class Accounting {
 
     /**
      * List all bankfeedtransactions
+     * 
+     * <p>Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters
+     * before paging, then page through them with `limit` and `offset` (the default and maximum page size
+     * depend on the integration). Use `fields` to return only the fields you need and reduce the response
+     * size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1793,6 +2184,13 @@ public class Accounting {
     /**
      * List all bills
      * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingBillsRequestBuilder listAccountingBills() {
@@ -1801,6 +2199,13 @@ public class Accounting {
 
     /**
      * List all bills
+     * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1815,6 +2220,13 @@ public class Accounting {
     /**
      * List all cashflows
      * 
+     * <p>Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingCashflowsRequestBuilder listAccountingCashflows() {
@@ -1823,6 +2235,13 @@ public class Accounting {
 
     /**
      * List all cashflows
+     * 
+     * <p>Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1837,6 +2256,13 @@ public class Accounting {
     /**
      * List all categories
      * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingCategoriesRequestBuilder listAccountingCategories() {
@@ -1845,6 +2271,13 @@ public class Accounting {
 
     /**
      * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1859,6 +2292,13 @@ public class Accounting {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingContactsRequestBuilder listAccountingContacts() {
@@ -1867,6 +2307,13 @@ public class Accounting {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1881,6 +2328,13 @@ public class Accounting {
     /**
      * List all creditmemoes
      * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingCreditmemoesRequestBuilder listAccountingCreditmemoes() {
@@ -1889,6 +2343,13 @@ public class Accounting {
 
     /**
      * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1903,6 +2364,13 @@ public class Accounting {
     /**
      * List all expensereports
      * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingExpensereportsRequestBuilder listAccountingExpensereports() {
@@ -1911,6 +2379,13 @@ public class Accounting {
 
     /**
      * List all expensereports
+     * 
+     * <p>Returns a list of AccountingExpensereports. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1925,6 +2400,13 @@ public class Accounting {
     /**
      * List all expenses
      * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingExpensesRequestBuilder listAccountingExpenses() {
@@ -1933,6 +2415,13 @@ public class Accounting {
 
     /**
      * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1947,6 +2436,13 @@ public class Accounting {
     /**
      * List all invoices
      * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingInvoicesRequestBuilder listAccountingInvoices() {
@@ -1955,6 +2451,13 @@ public class Accounting {
 
     /**
      * List all invoices
+     * 
+     * <p>Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1969,6 +2472,13 @@ public class Accounting {
     /**
      * List all journals
      * 
+     * <p>Returns a list of AccountingJournals. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingJournalsRequestBuilder listAccountingJournals() {
@@ -1977,6 +2487,13 @@ public class Accounting {
 
     /**
      * List all journals
+     * 
+     * <p>Returns a list of AccountingJournals. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1991,8 +2508,17 @@ public class Accounting {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public ListAccountingOrdersRequestBuilder listAccountingOrders() {
         return new ListAccountingOrdersRequestBuilder(sdkConfiguration);
     }
@@ -2000,10 +2526,19 @@ public class Accounting {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
@@ -2013,6 +2548,13 @@ public class Accounting {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingOrganizationsRequestBuilder listAccountingOrganizations() {
@@ -2021,6 +2563,13 @@ public class Accounting {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of AccountingOrganizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2035,6 +2584,13 @@ public class Accounting {
     /**
      * List all paymentterms
      * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingPaymenttermsRequestBuilder listAccountingPaymentterms() {
@@ -2043,6 +2599,13 @@ public class Accounting {
 
     /**
      * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2057,6 +2620,13 @@ public class Accounting {
     /**
      * List all profitlosses
      * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingProfitlossesRequestBuilder listAccountingProfitlosses() {
@@ -2065,6 +2635,13 @@ public class Accounting {
 
     /**
      * List all profitlosses
+     * 
+     * <p>Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2079,6 +2656,13 @@ public class Accounting {
     /**
      * List all projects
      * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingProjectsRequestBuilder listAccountingProjects() {
@@ -2087,6 +2671,13 @@ public class Accounting {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2101,6 +2692,13 @@ public class Accounting {
     /**
      * List all purchaseorders
      * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingPurchaseordersRequestBuilder listAccountingPurchaseorders() {
@@ -2109,6 +2707,13 @@ public class Accounting {
 
     /**
      * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2123,6 +2728,13 @@ public class Accounting {
     /**
      * List all purchasereceipts
      * 
+     * <p>Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingPurchasereceiptsRequestBuilder listAccountingPurchasereceipts() {
@@ -2131,6 +2743,13 @@ public class Accounting {
 
     /**
      * List all purchasereceipts
+     * 
+     * <p>Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2145,6 +2764,13 @@ public class Accounting {
     /**
      * List all quotes
      * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingQuotesRequestBuilder listAccountingQuotes() {
@@ -2153,6 +2779,13 @@ public class Accounting {
 
     /**
      * List all quotes
+     * 
+     * <p>Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2167,6 +2800,13 @@ public class Accounting {
     /**
      * List all salesorders
      * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingSalesordersRequestBuilder listAccountingSalesorders() {
@@ -2175,6 +2815,13 @@ public class Accounting {
 
     /**
      * List all salesorders
+     * 
+     * <p>Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2189,6 +2836,13 @@ public class Accounting {
     /**
      * List all salesreceipts
      * 
+     * <p>Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingSalesreceiptsRequestBuilder listAccountingSalesreceipts() {
@@ -2197,6 +2851,13 @@ public class Accounting {
 
     /**
      * List all salesreceipts
+     * 
+     * <p>Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2211,6 +2872,13 @@ public class Accounting {
     /**
      * List all taxrates
      * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingTaxratesRequestBuilder listAccountingTaxrates() {
@@ -2219,6 +2887,13 @@ public class Accounting {
 
     /**
      * List all taxrates
+     * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2233,6 +2908,13 @@ public class Accounting {
     /**
      * List all transactions
      * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingTransactionsRequestBuilder listAccountingTransactions() {
@@ -2241,6 +2923,13 @@ public class Accounting {
 
     /**
      * List all transactions
+     * 
+     * <p>Returns a list of AccountingTransactions. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2255,6 +2944,13 @@ public class Accounting {
     /**
      * List all trialbalances
      * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingTrialbalancesRequestBuilder listAccountingTrialbalances() {
@@ -2263,6 +2959,13 @@ public class Accounting {
 
     /**
      * List all trialbalances
+     * 
+     * <p>Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2277,6 +2980,13 @@ public class Accounting {
     /**
      * List all vendorcredits
      * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingVendorcreditsRequestBuilder listAccountingVendorcredits() {
@@ -2285,6 +2995,13 @@ public class Accounting {
 
     /**
      * List all vendorcredits
+     * 
+     * <p>Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2299,6 +3016,9 @@ public class Accounting {
     /**
      * Update an account
      * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingAccountRequestBuilder patchAccountingAccount() {
@@ -2307,6 +3027,9 @@ public class Accounting {
 
     /**
      * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2321,6 +3044,9 @@ public class Accounting {
     /**
      * Update a bankfeedaccount
      * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingBankfeedaccountRequestBuilder patchAccountingBankfeedaccount() {
@@ -2329,6 +3055,9 @@ public class Accounting {
 
     /**
      * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2343,6 +3072,9 @@ public class Accounting {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingBankfeedtransactionRequestBuilder patchAccountingBankfeedtransaction() {
@@ -2351,6 +3083,9 @@ public class Accounting {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2365,6 +3100,9 @@ public class Accounting {
     /**
      * Update a bill
      * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingBillRequestBuilder patchAccountingBill() {
@@ -2373,6 +3111,9 @@ public class Accounting {
 
     /**
      * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2387,6 +3128,9 @@ public class Accounting {
     /**
      * Update a category
      * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingCategoryRequestBuilder patchAccountingCategory() {
@@ -2395,6 +3139,9 @@ public class Accounting {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2409,6 +3156,9 @@ public class Accounting {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingContactRequestBuilder patchAccountingContact() {
@@ -2417,6 +3167,9 @@ public class Accounting {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2431,6 +3184,9 @@ public class Accounting {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingCreditmemoRequestBuilder patchAccountingCreditmemo() {
@@ -2439,6 +3195,9 @@ public class Accounting {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2453,6 +3212,9 @@ public class Accounting {
     /**
      * Update an expense
      * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingExpenseRequestBuilder patchAccountingExpense() {
@@ -2461,6 +3223,9 @@ public class Accounting {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2475,6 +3240,9 @@ public class Accounting {
     /**
      * Update an expensereport
      * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingExpensereportRequestBuilder patchAccountingExpensereport() {
@@ -2483,6 +3251,9 @@ public class Accounting {
 
     /**
      * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2497,6 +3268,9 @@ public class Accounting {
     /**
      * Update an invoice
      * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingInvoiceRequestBuilder patchAccountingInvoice() {
@@ -2505,6 +3279,9 @@ public class Accounting {
 
     /**
      * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2519,6 +3296,9 @@ public class Accounting {
     /**
      * Update a journal
      * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingJournalRequestBuilder patchAccountingJournal() {
@@ -2527,6 +3307,9 @@ public class Accounting {
 
     /**
      * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2541,8 +3324,13 @@ public class Accounting {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public PatchAccountingOrderRequestBuilder patchAccountingOrder() {
         return new PatchAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -2550,10 +3338,15 @@ public class Accounting {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -2563,6 +3356,9 @@ public class Accounting {
     /**
      * Update a paymentterm
      * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingPaymenttermRequestBuilder patchAccountingPaymentterm() {
@@ -2571,6 +3367,9 @@ public class Accounting {
 
     /**
      * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2585,6 +3384,9 @@ public class Accounting {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingProjectRequestBuilder patchAccountingProject() {
@@ -2593,6 +3395,9 @@ public class Accounting {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2607,6 +3412,9 @@ public class Accounting {
     /**
      * Update a purchaseorder
      * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingPurchaseorderRequestBuilder patchAccountingPurchaseorder() {
@@ -2615,6 +3423,9 @@ public class Accounting {
 
     /**
      * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2629,6 +3440,9 @@ public class Accounting {
     /**
      * Update a quote
      * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingQuoteRequestBuilder patchAccountingQuote() {
@@ -2637,6 +3451,9 @@ public class Accounting {
 
     /**
      * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2651,6 +3468,9 @@ public class Accounting {
     /**
      * Update a salesorder
      * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingSalesorderRequestBuilder patchAccountingSalesorder() {
@@ -2659,6 +3479,9 @@ public class Accounting {
 
     /**
      * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2673,6 +3496,9 @@ public class Accounting {
     /**
      * Update a taxrate
      * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingTaxrateRequestBuilder patchAccountingTaxrate() {
@@ -2681,6 +3507,9 @@ public class Accounting {
 
     /**
      * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2695,6 +3524,9 @@ public class Accounting {
     /**
      * Update a transaction
      * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingTransactionRequestBuilder patchAccountingTransaction() {
@@ -2703,6 +3535,9 @@ public class Accounting {
 
     /**
      * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2717,6 +3552,9 @@ public class Accounting {
     /**
      * Update a vendorcredit
      * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingVendorcreditRequestBuilder patchAccountingVendorcredit() {
@@ -2725,6 +3563,9 @@ public class Accounting {
 
     /**
      * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2739,6 +3580,8 @@ public class Accounting {
     /**
      * Remove an account
      * 
+     * <p>Deletes the AccountingAccount identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingAccountRequestBuilder removeAccountingAccount() {
@@ -2747,6 +3590,8 @@ public class Accounting {
 
     /**
      * Remove an account
+     * 
+     * <p>Deletes the AccountingAccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2761,6 +3606,8 @@ public class Accounting {
     /**
      * Remove a bankfeedaccount
      * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingBankfeedaccountRequestBuilder removeAccountingBankfeedaccount() {
@@ -2769,6 +3616,8 @@ public class Accounting {
 
     /**
      * Remove a bankfeedaccount
+     * 
+     * <p>Deletes the AccountingBankfeedaccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2783,6 +3632,8 @@ public class Accounting {
     /**
      * Remove a bankfeedtransaction
      * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingBankfeedtransactionRequestBuilder removeAccountingBankfeedtransaction() {
@@ -2791,6 +3642,8 @@ public class Accounting {
 
     /**
      * Remove a bankfeedtransaction
+     * 
+     * <p>Deletes the AccountingBankfeedtransaction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2805,6 +3658,8 @@ public class Accounting {
     /**
      * Remove a bill
      * 
+     * <p>Deletes the AccountingBill identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingBillRequestBuilder removeAccountingBill() {
@@ -2813,6 +3668,8 @@ public class Accounting {
 
     /**
      * Remove a bill
+     * 
+     * <p>Deletes the AccountingBill identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2827,6 +3684,8 @@ public class Accounting {
     /**
      * Remove a category
      * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingCategoryRequestBuilder removeAccountingCategory() {
@@ -2835,6 +3694,8 @@ public class Accounting {
 
     /**
      * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2849,6 +3710,8 @@ public class Accounting {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingContactRequestBuilder removeAccountingContact() {
@@ -2857,6 +3720,8 @@ public class Accounting {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2871,6 +3736,8 @@ public class Accounting {
     /**
      * Remove a creditmemo
      * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingCreditmemoRequestBuilder removeAccountingCreditmemo() {
@@ -2879,6 +3746,8 @@ public class Accounting {
 
     /**
      * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2893,6 +3762,8 @@ public class Accounting {
     /**
      * Remove an expense
      * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingExpenseRequestBuilder removeAccountingExpense() {
@@ -2901,6 +3772,8 @@ public class Accounting {
 
     /**
      * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2915,6 +3788,8 @@ public class Accounting {
     /**
      * Remove an expensereport
      * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingExpensereportRequestBuilder removeAccountingExpensereport() {
@@ -2923,6 +3798,8 @@ public class Accounting {
 
     /**
      * Remove an expensereport
+     * 
+     * <p>Deletes the AccountingExpensereport identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2937,6 +3814,8 @@ public class Accounting {
     /**
      * Remove an invoice
      * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingInvoiceRequestBuilder removeAccountingInvoice() {
@@ -2945,6 +3824,8 @@ public class Accounting {
 
     /**
      * Remove an invoice
+     * 
+     * <p>Deletes the AccountingInvoice identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2959,6 +3840,8 @@ public class Accounting {
     /**
      * Remove a journal
      * 
+     * <p>Deletes the AccountingJournal identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingJournalRequestBuilder removeAccountingJournal() {
@@ -2967,6 +3850,8 @@ public class Accounting {
 
     /**
      * Remove a journal
+     * 
+     * <p>Deletes the AccountingJournal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -2981,8 +3866,12 @@ public class Accounting {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public RemoveAccountingOrderRequestBuilder removeAccountingOrder() {
         return new RemoveAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -2990,10 +3879,14 @@ public class Accounting {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -3003,6 +3896,8 @@ public class Accounting {
     /**
      * Remove a paymentterm
      * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingPaymenttermRequestBuilder removeAccountingPaymentterm() {
@@ -3011,6 +3906,8 @@ public class Accounting {
 
     /**
      * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3025,6 +3922,8 @@ public class Accounting {
     /**
      * Remove a project
      * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingProjectRequestBuilder removeAccountingProject() {
@@ -3033,6 +3932,8 @@ public class Accounting {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3047,6 +3948,8 @@ public class Accounting {
     /**
      * Remove a purchaseorder
      * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingPurchaseorderRequestBuilder removeAccountingPurchaseorder() {
@@ -3055,6 +3958,8 @@ public class Accounting {
 
     /**
      * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3069,6 +3974,8 @@ public class Accounting {
     /**
      * Remove a quote
      * 
+     * <p>Deletes the AccountingQuote identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingQuoteRequestBuilder removeAccountingQuote() {
@@ -3077,6 +3984,8 @@ public class Accounting {
 
     /**
      * Remove a quote
+     * 
+     * <p>Deletes the AccountingQuote identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3091,6 +4000,8 @@ public class Accounting {
     /**
      * Remove a salesorder
      * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingSalesorderRequestBuilder removeAccountingSalesorder() {
@@ -3099,6 +4010,8 @@ public class Accounting {
 
     /**
      * Remove a salesorder
+     * 
+     * <p>Deletes the AccountingSalesorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3113,6 +4026,8 @@ public class Accounting {
     /**
      * Remove a taxrate
      * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingTaxrateRequestBuilder removeAccountingTaxrate() {
@@ -3121,6 +4036,8 @@ public class Accounting {
 
     /**
      * Remove a taxrate
+     * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3135,6 +4052,8 @@ public class Accounting {
     /**
      * Remove a transaction
      * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingTransactionRequestBuilder removeAccountingTransaction() {
@@ -3143,6 +4062,8 @@ public class Accounting {
 
     /**
      * Remove a transaction
+     * 
+     * <p>Deletes the AccountingTransaction identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3157,6 +4078,8 @@ public class Accounting {
     /**
      * Remove a vendorcredit
      * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingVendorcreditRequestBuilder removeAccountingVendorcredit() {
@@ -3165,6 +4088,8 @@ public class Accounting {
 
     /**
      * Remove a vendorcredit
+     * 
+     * <p>Deletes the AccountingVendorcredit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3179,6 +4104,9 @@ public class Accounting {
     /**
      * Update an account
      * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingAccountRequestBuilder updateAccountingAccount() {
@@ -3187,6 +4115,9 @@ public class Accounting {
 
     /**
      * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3201,6 +4132,9 @@ public class Accounting {
     /**
      * Update a bankfeedaccount
      * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingBankfeedaccountRequestBuilder updateAccountingBankfeedaccount() {
@@ -3209,6 +4143,9 @@ public class Accounting {
 
     /**
      * Update a bankfeedaccount
+     * 
+     * <p>Updates the AccountingBankfeedaccount identified by `id`. Provide the unified
+     * AccountingBankfeedaccount fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3223,6 +4160,9 @@ public class Accounting {
     /**
      * Update a bankfeedtransaction
      * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingBankfeedtransactionRequestBuilder updateAccountingBankfeedtransaction() {
@@ -3231,6 +4171,9 @@ public class Accounting {
 
     /**
      * Update a bankfeedtransaction
+     * 
+     * <p>Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified
+     * AccountingBankfeedtransaction fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3245,6 +4188,9 @@ public class Accounting {
     /**
      * Update a bill
      * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingBillRequestBuilder updateAccountingBill() {
@@ -3253,6 +4199,9 @@ public class Accounting {
 
     /**
      * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3267,6 +4216,9 @@ public class Accounting {
     /**
      * Update a category
      * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingCategoryRequestBuilder updateAccountingCategory() {
@@ -3275,6 +4227,9 @@ public class Accounting {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3289,6 +4244,9 @@ public class Accounting {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingContactRequestBuilder updateAccountingContact() {
@@ -3297,6 +4255,9 @@ public class Accounting {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3311,6 +4272,9 @@ public class Accounting {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingCreditmemoRequestBuilder updateAccountingCreditmemo() {
@@ -3319,6 +4283,9 @@ public class Accounting {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3333,6 +4300,9 @@ public class Accounting {
     /**
      * Update an expense
      * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingExpenseRequestBuilder updateAccountingExpense() {
@@ -3341,6 +4311,9 @@ public class Accounting {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3355,6 +4328,9 @@ public class Accounting {
     /**
      * Update an expensereport
      * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingExpensereportRequestBuilder updateAccountingExpensereport() {
@@ -3363,6 +4339,9 @@ public class Accounting {
 
     /**
      * Update an expensereport
+     * 
+     * <p>Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3377,6 +4356,9 @@ public class Accounting {
     /**
      * Update an invoice
      * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingInvoiceRequestBuilder updateAccountingInvoice() {
@@ -3385,6 +4367,9 @@ public class Accounting {
 
     /**
      * Update an invoice
+     * 
+     * <p>Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3399,6 +4384,9 @@ public class Accounting {
     /**
      * Update a journal
      * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingJournalRequestBuilder updateAccountingJournal() {
@@ -3407,6 +4395,9 @@ public class Accounting {
 
     /**
      * Update a journal
+     * 
+     * <p>Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3421,8 +4412,13 @@ public class Accounting {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public UpdateAccountingOrderRequestBuilder updateAccountingOrder() {
         return new UpdateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -3430,10 +4426,15 @@ public class Accounting {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
@@ -3443,6 +4444,9 @@ public class Accounting {
     /**
      * Update a paymentterm
      * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingPaymenttermRequestBuilder updateAccountingPaymentterm() {
@@ -3451,6 +4455,9 @@ public class Accounting {
 
     /**
      * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3465,6 +4472,9 @@ public class Accounting {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingProjectRequestBuilder updateAccountingProject() {
@@ -3473,6 +4483,9 @@ public class Accounting {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3487,6 +4500,9 @@ public class Accounting {
     /**
      * Update a purchaseorder
      * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingPurchaseorderRequestBuilder updateAccountingPurchaseorder() {
@@ -3495,6 +4511,9 @@ public class Accounting {
 
     /**
      * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3509,6 +4528,9 @@ public class Accounting {
     /**
      * Update a quote
      * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingQuoteRequestBuilder updateAccountingQuote() {
@@ -3517,6 +4539,9 @@ public class Accounting {
 
     /**
      * Update a quote
+     * 
+     * <p>Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3531,6 +4556,9 @@ public class Accounting {
     /**
      * Update a salesorder
      * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingSalesorderRequestBuilder updateAccountingSalesorder() {
@@ -3539,6 +4567,9 @@ public class Accounting {
 
     /**
      * Update a salesorder
+     * 
+     * <p>Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3553,6 +4584,9 @@ public class Accounting {
     /**
      * Update a taxrate
      * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingTaxrateRequestBuilder updateAccountingTaxrate() {
@@ -3561,6 +4595,9 @@ public class Accounting {
 
     /**
      * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3575,6 +4612,9 @@ public class Accounting {
     /**
      * Update a transaction
      * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingTransactionRequestBuilder updateAccountingTransaction() {
@@ -3583,6 +4623,9 @@ public class Accounting {
 
     /**
      * Update a transaction
+     * 
+     * <p>Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -3597,6 +4640,9 @@ public class Accounting {
     /**
      * Update a vendorcredit
      * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingVendorcreditRequestBuilder updateAccountingVendorcredit() {
@@ -3605,6 +4651,9 @@ public class Accounting {
 
     /**
      * Update a vendorcredit
+     * 
+     * <p>Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

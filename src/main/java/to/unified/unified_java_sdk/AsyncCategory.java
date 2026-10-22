@@ -81,6 +81,9 @@ public class AsyncCategory {
     /**
      * Create a category
      * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
+     * 
      * @return The async call builder
      */
     public CreateAccountingCategoryRequestBuilder createAccountingCategory() {
@@ -89,6 +92,9 @@ public class AsyncCategory {
 
     /**
      * Create a category
+     * 
+     * <p>Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCategory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingCategoryResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncCategory {
     /**
      * Create a category
      * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
+     * 
      * @return The async call builder
      */
     public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
@@ -112,6 +121,9 @@ public class AsyncCategory {
 
     /**
      * Create a category
+     * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingCategoryResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncCategory {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingCategoryRequestBuilder getAccountingCategory() {
@@ -135,6 +150,9 @@ public class AsyncCategory {
 
     /**
      * Retrieve a category
+     * 
+     * <p>Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingCategoryResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncCategory {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTicketingCategoryRequestBuilder getTicketingCategory() {
@@ -158,6 +179,9 @@ public class AsyncCategory {
 
     /**
      * Retrieve a category
+     * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingCategoryResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncCategory {
     /**
      * List all categories
      * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingCategoriesRequestBuilder listAccountingCategories() {
@@ -181,6 +212,13 @@ public class AsyncCategory {
 
     /**
      * List all categories
+     * 
+     * <p>Returns a list of AccountingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingCategoriesResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncCategory {
     /**
      * List all categories
      * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
@@ -204,6 +249,13 @@ public class AsyncCategory {
 
     /**
      * List all categories
+     * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingCategoriesResponse>} - The async response
@@ -219,6 +271,9 @@ public class AsyncCategory {
     /**
      * Update a category
      * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingCategoryRequestBuilder patchAccountingCategory() {
@@ -227,6 +282,9 @@ public class AsyncCategory {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingCategoryResponse>} - The async response
@@ -242,6 +300,9 @@ public class AsyncCategory {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
@@ -250,6 +311,9 @@ public class AsyncCategory {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingCategoryResponse>} - The async response
@@ -265,6 +329,8 @@ public class AsyncCategory {
     /**
      * Remove a category
      * 
+     * <p>Deletes the AccountingCategory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingCategoryRequestBuilder removeAccountingCategory() {
@@ -273,6 +339,8 @@ public class AsyncCategory {
 
     /**
      * Remove a category
+     * 
+     * <p>Deletes the AccountingCategory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingCategoryResponse>} - The async response
@@ -288,6 +356,8 @@ public class AsyncCategory {
     /**
      * Remove a category
      * 
+     * <p>Deletes the TicketingCategory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
@@ -296,6 +366,8 @@ public class AsyncCategory {
 
     /**
      * Remove a category
+     * 
+     * <p>Deletes the TicketingCategory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingCategoryResponse>} - The async response
@@ -311,6 +383,9 @@ public class AsyncCategory {
     /**
      * Update a category
      * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingCategoryRequestBuilder updateAccountingCategory() {
@@ -319,6 +394,9 @@ public class AsyncCategory {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingCategoryResponse>} - The async response
@@ -334,6 +412,9 @@ public class AsyncCategory {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
@@ -342,6 +423,9 @@ public class AsyncCategory {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingCategoryResponse>} - The async response

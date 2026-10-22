@@ -79,6 +79,9 @@ public class Link {
     /**
      * Create a link
      * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
      * @return The call builder
      */
     public CreateCalendarLinkRequestBuilder createCalendarLink() {
@@ -87,6 +90,9 @@ public class Link {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -101,6 +107,9 @@ public class Link {
     /**
      * Create a link
      * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
      * @return The call builder
      */
     public CreatePaymentLinkRequestBuilder createPaymentLink() {
@@ -109,6 +118,9 @@ public class Link {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -123,6 +135,9 @@ public class Link {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarLinkRequestBuilder getCalendarLink() {
@@ -131,6 +146,9 @@ public class Link {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -145,6 +163,9 @@ public class Link {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentLinkRequestBuilder getPaymentLink() {
@@ -153,6 +174,9 @@ public class Link {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -167,6 +191,13 @@ public class Link {
     /**
      * List all links
      * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarLinksRequestBuilder listCalendarLinks() {
@@ -175,6 +206,13 @@ public class Link {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -189,6 +227,13 @@ public class Link {
     /**
      * List all links
      * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentLinksRequestBuilder listPaymentLinks() {
@@ -197,6 +242,13 @@ public class Link {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -211,6 +263,9 @@ public class Link {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCalendarLinkRequestBuilder patchCalendarLink() {
@@ -219,6 +274,9 @@ public class Link {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -233,6 +291,9 @@ public class Link {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchPaymentLinkRequestBuilder patchPaymentLink() {
@@ -241,6 +302,9 @@ public class Link {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -255,6 +319,8 @@ public class Link {
     /**
      * Remove a link
      * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
@@ -263,6 +329,8 @@ public class Link {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -277,6 +345,8 @@ public class Link {
     /**
      * Remove a link
      * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
      * @return The call builder
      */
     public RemovePaymentLinkRequestBuilder removePaymentLink() {
@@ -285,6 +355,8 @@ public class Link {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -299,6 +371,9 @@ public class Link {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
@@ -307,6 +382,9 @@ public class Link {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -321,6 +399,9 @@ public class Link {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
@@ -329,6 +410,9 @@ public class Link {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

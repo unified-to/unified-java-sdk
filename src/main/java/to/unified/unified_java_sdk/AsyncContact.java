@@ -105,6 +105,9 @@ public class AsyncContact {
     /**
      * Create a contact
      * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
+     * 
      * @return The async call builder
      */
     public CreateAccountingContactRequestBuilder createAccountingContact() {
@@ -113,6 +116,9 @@ public class AsyncContact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingContactResponse>} - The async response
@@ -128,6 +134,9 @@ public class AsyncContact {
     /**
      * Create a contact
      * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
      * @return The async call builder
      */
     public CreateCrmContactRequestBuilder createCrmContact() {
@@ -136,6 +145,9 @@ public class AsyncContact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
@@ -151,6 +163,9 @@ public class AsyncContact {
     /**
      * Create a contact
      * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
      * @return The async call builder
      */
     public CreateUcContactRequestBuilder createUcContact() {
@@ -159,6 +174,9 @@ public class AsyncContact {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
@@ -174,6 +192,9 @@ public class AsyncContact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingContactRequestBuilder getAccountingContact() {
@@ -182,6 +203,9 @@ public class AsyncContact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingContactResponse>} - The async response
@@ -197,6 +221,9 @@ public class AsyncContact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmContactRequestBuilder getCrmContact() {
@@ -205,6 +232,9 @@ public class AsyncContact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
@@ -220,6 +250,9 @@ public class AsyncContact {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcContactRequestBuilder getUcContact() {
@@ -228,6 +261,9 @@ public class AsyncContact {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
@@ -243,6 +279,13 @@ public class AsyncContact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingContactsRequestBuilder listAccountingContacts() {
@@ -251,6 +294,13 @@ public class AsyncContact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of AccountingContacts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingContactsResponse>} - The async response
@@ -266,6 +316,13 @@ public class AsyncContact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmContactsRequestBuilder listCrmContacts() {
@@ -274,6 +331,13 @@ public class AsyncContact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
@@ -289,6 +353,13 @@ public class AsyncContact {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcContactsRequestBuilder listUcContacts() {
@@ -297,6 +368,13 @@ public class AsyncContact {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
@@ -312,6 +390,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingContactRequestBuilder patchAccountingContact() {
@@ -320,6 +401,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingContactResponse>} - The async response
@@ -335,6 +419,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmContactRequestBuilder patchCrmContact() {
@@ -343,6 +430,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
@@ -358,6 +448,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchUcContactRequestBuilder patchUcContact() {
@@ -366,6 +459,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
@@ -381,6 +477,8 @@ public class AsyncContact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the AccountingContact identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingContactRequestBuilder removeAccountingContact() {
@@ -389,6 +487,8 @@ public class AsyncContact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the AccountingContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingContactResponse>} - The async response
@@ -404,6 +504,8 @@ public class AsyncContact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmContactRequestBuilder removeCrmContact() {
@@ -412,6 +514,8 @@ public class AsyncContact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
@@ -427,6 +531,8 @@ public class AsyncContact {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveUcContactRequestBuilder removeUcContact() {
@@ -435,6 +541,8 @@ public class AsyncContact {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
@@ -450,6 +558,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingContactRequestBuilder updateAccountingContact() {
@@ -458,6 +569,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingContactResponse>} - The async response
@@ -473,6 +587,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmContactRequestBuilder updateCrmContact() {
@@ -481,6 +598,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
@@ -496,6 +616,9 @@ public class AsyncContact {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateUcContactRequestBuilder updateUcContact() {
@@ -504,6 +627,9 @@ public class AsyncContact {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response

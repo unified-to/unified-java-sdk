@@ -63,6 +63,9 @@ public class Forms {
     /**
      * Create a form
      * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
+     * 
      * @return The call builder
      */
     public CreateFormsFormRequestBuilder createFormsForm() {
@@ -71,6 +74,9 @@ public class Forms {
 
     /**
      * Create a form
+     * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -85,6 +91,9 @@ public class Forms {
     /**
      * Retrieve a form
      * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetFormsFormRequestBuilder getFormsForm() {
@@ -93,6 +102,9 @@ public class Forms {
 
     /**
      * Retrieve a form
+     * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -107,6 +119,9 @@ public class Forms {
     /**
      * Retrieve a submission
      * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetFormsSubmissionRequestBuilder getFormsSubmission() {
@@ -115,6 +130,9 @@ public class Forms {
 
     /**
      * Retrieve a submission
+     * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +147,13 @@ public class Forms {
     /**
      * List all forms
      * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListFormsFormsRequestBuilder listFormsForms() {
@@ -137,6 +162,13 @@ public class Forms {
 
     /**
      * List all forms
+     * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +183,13 @@ public class Forms {
     /**
      * List all submissions
      * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListFormsSubmissionsRequestBuilder listFormsSubmissions() {
@@ -159,6 +198,13 @@ public class Forms {
 
     /**
      * List all submissions
+     * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +219,9 @@ public class Forms {
     /**
      * Update a form
      * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchFormsFormRequestBuilder patchFormsForm() {
@@ -181,6 +230,9 @@ public class Forms {
 
     /**
      * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +247,8 @@ public class Forms {
     /**
      * Remove a form
      * 
+     * <p>Deletes the FormsForm identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveFormsFormRequestBuilder removeFormsForm() {
@@ -203,6 +257,8 @@ public class Forms {
 
     /**
      * Remove a form
+     * 
+     * <p>Deletes the FormsForm identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +273,9 @@ public class Forms {
     /**
      * Update a form
      * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateFormsFormRequestBuilder updateFormsForm() {
@@ -225,6 +284,9 @@ public class Forms {
 
     /**
      * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

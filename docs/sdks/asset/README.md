@@ -10,7 +10,7 @@
 
 ## createAdsAsset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -40,12 +40,12 @@ public class Application {
                 .adsAsset(AdsAsset.builder()
                     .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
                     .height(400d)
-                    .id("0a4ceb6e-2a1f-40a6-a9b4-a6e4caf65209")
+                    .id("c6f60318-fbc8-4922-8dcf-215b32154ee2")
                     .metadata(List.of())
                     .mimeType("IMAGE_PNG")
                     .name("Lockman - DuBuque")
                     .type(AdsAssetType.IMAGE)
-                    .updatedAt(OffsetDateTime.parse("2022-03-25T04:39:40.732Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-03-25T12:13:29.909Z"))
                     .url("https://informal-perfection.com/")
                     .width(600d)
                     .build())
@@ -81,7 +81,7 @@ public class Application {
 
 ## getAdsAsset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ public class Application {
 
 ## listAdsAssets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

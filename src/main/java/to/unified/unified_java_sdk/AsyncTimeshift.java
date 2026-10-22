@@ -57,6 +57,9 @@ public class AsyncTimeshift {
     /**
      * Create a timeshift
      * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
+     * 
      * @return The async call builder
      */
     public CreateHrisTimeshiftRequestBuilder createHrisTimeshift() {
@@ -65,6 +68,9 @@ public class AsyncTimeshift {
 
     /**
      * Create a timeshift
+     * 
+     * <p>Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisTimeshift.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncTimeshift {
     /**
      * Retrieve a timeshift
      * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisTimeshiftRequestBuilder getHrisTimeshift() {
@@ -88,6 +97,9 @@ public class AsyncTimeshift {
 
     /**
      * Retrieve a timeshift
+     * 
+     * <p>Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncTimeshift {
     /**
      * List all timeshifts
      * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisTimeshiftsRequestBuilder listHrisTimeshifts() {
@@ -111,6 +130,13 @@ public class AsyncTimeshift {
 
     /**
      * List all timeshifts
+     * 
+     * <p>Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncTimeshift {
     /**
      * Update a timeshift
      * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisTimeshiftRequestBuilder patchHrisTimeshift() {
@@ -134,6 +163,9 @@ public class AsyncTimeshift {
 
     /**
      * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncTimeshift {
     /**
      * Remove a timeshift
      * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisTimeshiftRequestBuilder removeHrisTimeshift() {
@@ -157,6 +191,8 @@ public class AsyncTimeshift {
 
     /**
      * Remove a timeshift
+     * 
+     * <p>Deletes the HrisTimeshift identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncTimeshift {
     /**
      * Update a timeshift
      * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisTimeshiftRequestBuilder updateHrisTimeshift() {
@@ -180,6 +219,9 @@ public class AsyncTimeshift {
 
     /**
      * Update a timeshift
+     * 
+     * <p>Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response

@@ -57,6 +57,9 @@ public class AsyncVolume {
     /**
      * Create a volume
      * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
      * @return The async call builder
      */
     public CreateComputeVolumeRequestBuilder createComputeVolume() {
@@ -65,6 +68,9 @@ public class AsyncVolume {
 
     /**
      * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncVolume {
     /**
      * Retrieve a volume
      * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeVolumeRequestBuilder getComputeVolume() {
@@ -88,6 +97,9 @@ public class AsyncVolume {
 
     /**
      * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncVolume {
     /**
      * List all volumes
      * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeVolumesRequestBuilder listComputeVolumes() {
@@ -111,6 +130,13 @@ public class AsyncVolume {
 
     /**
      * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncVolume {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeVolumeRequestBuilder patchComputeVolume() {
@@ -134,6 +163,9 @@ public class AsyncVolume {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncVolume {
     /**
      * Remove a volume
      * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeVolumeRequestBuilder removeComputeVolume() {
@@ -157,6 +191,8 @@ public class AsyncVolume {
 
     /**
      * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncVolume {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeVolumeRequestBuilder updateComputeVolume() {
@@ -180,6 +219,9 @@ public class AsyncVolume {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response

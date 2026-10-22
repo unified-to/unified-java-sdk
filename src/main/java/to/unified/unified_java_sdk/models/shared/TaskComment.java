@@ -59,7 +59,9 @@ public class TaskComment {
     @JsonProperty("task_id")
     private String taskId;
 
-
+    /**
+     * The comment's text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     private String text;
@@ -150,6 +152,9 @@ public class TaskComment {
         return Optional.ofNullable(this.taskId);
     }
 
+    /**
+     * The comment's text
+     */
     public Optional<String> text() {
         return Optional.ofNullable(this.text);
     }
@@ -225,6 +230,9 @@ public class TaskComment {
     }
 
 
+    /**
+     * The comment's text
+     */
     public TaskComment withText(@Nullable String text) {
         this.text = text;
         return this;
@@ -373,6 +381,9 @@ public class TaskComment {
             return this;
         }
 
+        /**
+         * The comment's text
+         */
         public Builder text(@Nullable String text) {
             this.text = text;
             return this;

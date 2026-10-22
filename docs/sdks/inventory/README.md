@@ -13,7 +13,7 @@
 
 ## createCommerceInventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -43,9 +43,9 @@ public class Application {
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("dcef2a4d-305c-410d-a5e1-40e91fd1cfdb")
+                    .id("57fe415b-f739-4c85-9f57-4b383c62038f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.375Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.515Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -79,7 +79,7 @@ public class Application {
 
 ## getCommerceInventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ public class Application {
 
 ## listCommerceInventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ public class Application {
 
 ## patchCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -224,9 +224,9 @@ public class Application {
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8834e824-a557-43d0-99af-21ed08be69c9")
+                    .id("b51f8d88-fdfb-424a-b5f5-e30675879008")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.386Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.526Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -261,7 +261,7 @@ public class Application {
 
 ## removeCommerceInventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -317,7 +317,7 @@ public class Application {
 
 ## updateCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -347,9 +347,9 @@ public class Application {
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8834e824-a557-43d0-99af-21ed08be69c9")
+                    .id("b51f8d88-fdfb-424a-b5f5-e30675879008")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.386Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.526Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

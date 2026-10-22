@@ -109,6 +109,9 @@ public class AsyncCompany {
     /**
      * Create a company
      * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
      * @return The async call builder
      */
     public CreateAtsCompanyRequestBuilder createAtsCompany() {
@@ -117,6 +120,9 @@ public class AsyncCompany {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
@@ -132,6 +138,9 @@ public class AsyncCompany {
     /**
      * Create a company
      * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
      * @return The async call builder
      */
     public CreateCrmCompanyRequestBuilder createCrmCompany() {
@@ -140,6 +149,9 @@ public class AsyncCompany {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
@@ -155,6 +167,9 @@ public class AsyncCompany {
     /**
      * Create a company
      * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
      * @return The async call builder
      */
     public CreateHrisCompanyRequestBuilder createHrisCompany() {
@@ -163,6 +178,9 @@ public class AsyncCompany {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
@@ -178,6 +196,9 @@ public class AsyncCompany {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsCompanyRequestBuilder getAtsCompany() {
@@ -186,6 +207,9 @@ public class AsyncCompany {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
@@ -201,6 +225,9 @@ public class AsyncCompany {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmCompanyRequestBuilder getCrmCompany() {
@@ -209,6 +236,9 @@ public class AsyncCompany {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
@@ -224,6 +254,9 @@ public class AsyncCompany {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisCompanyRequestBuilder getHrisCompany() {
@@ -232,6 +265,9 @@ public class AsyncCompany {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
@@ -247,6 +283,13 @@ public class AsyncCompany {
     /**
      * List all companies
      * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsCompaniesRequestBuilder listAtsCompanies() {
@@ -255,6 +298,13 @@ public class AsyncCompany {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
@@ -270,6 +320,13 @@ public class AsyncCompany {
     /**
      * List all companies
      * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmCompaniesRequestBuilder listCrmCompanies() {
@@ -278,6 +335,13 @@ public class AsyncCompany {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
@@ -316,6 +380,13 @@ public class AsyncCompany {
     /**
      * List all companies
      * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisCompaniesRequestBuilder listHrisCompanies() {
@@ -324,6 +395,13 @@ public class AsyncCompany {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
@@ -339,6 +417,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsCompanyRequestBuilder patchAtsCompany() {
@@ -347,6 +428,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
@@ -362,6 +446,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCrmCompanyRequestBuilder patchCrmCompany() {
@@ -370,6 +457,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
@@ -385,6 +475,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisCompanyRequestBuilder patchHrisCompany() {
@@ -393,6 +486,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
@@ -408,6 +504,8 @@ public class AsyncCompany {
     /**
      * Remove a company
      * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
@@ -416,6 +514,8 @@ public class AsyncCompany {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
@@ -431,6 +531,8 @@ public class AsyncCompany {
     /**
      * Remove a company
      * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
@@ -439,6 +541,8 @@ public class AsyncCompany {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
@@ -454,6 +558,8 @@ public class AsyncCompany {
     /**
      * Remove a company
      * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
@@ -462,6 +568,8 @@ public class AsyncCompany {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
@@ -477,6 +585,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
@@ -485,6 +596,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
@@ -500,6 +614,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
@@ -508,6 +625,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
@@ -523,6 +643,9 @@ public class AsyncCompany {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
@@ -531,6 +654,9 @@ public class AsyncCompany {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response

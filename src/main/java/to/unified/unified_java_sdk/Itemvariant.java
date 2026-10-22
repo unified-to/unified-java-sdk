@@ -55,6 +55,9 @@ public class Itemvariant {
     /**
      * Create an itemvariant
      * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
      * @return The call builder
      */
     public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
@@ -63,6 +66,9 @@ public class Itemvariant {
 
     /**
      * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Itemvariant {
     /**
      * Retrieve an itemvariant
      * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
@@ -85,6 +94,9 @@ public class Itemvariant {
 
     /**
      * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Itemvariant {
     /**
      * List all itemvariants
      * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
@@ -107,6 +126,13 @@ public class Itemvariant {
 
     /**
      * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Itemvariant {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
@@ -129,6 +158,9 @@ public class Itemvariant {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Itemvariant {
     /**
      * Remove an itemvariant
      * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
@@ -151,6 +185,8 @@ public class Itemvariant {
 
     /**
      * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Itemvariant {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
@@ -173,6 +212,9 @@ public class Itemvariant {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

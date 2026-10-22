@@ -55,6 +55,9 @@ public class Candidate {
     /**
      * Create a candidate
      * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
      * @return The call builder
      */
     public CreateAtsCandidateRequestBuilder createAtsCandidate() {
@@ -63,6 +66,9 @@ public class Candidate {
 
     /**
      * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Candidate {
     /**
      * Retrieve a candidate
      * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsCandidateRequestBuilder getAtsCandidate() {
@@ -85,6 +94,9 @@ public class Candidate {
 
     /**
      * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Candidate {
     /**
      * List all candidates
      * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsCandidatesRequestBuilder listAtsCandidates() {
@@ -107,6 +126,13 @@ public class Candidate {
 
     /**
      * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Candidate {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchAtsCandidateRequestBuilder patchAtsCandidate() {
@@ -129,6 +158,9 @@ public class Candidate {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Candidate {
     /**
      * Remove a candidate
      * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsCandidateRequestBuilder removeAtsCandidate() {
@@ -151,6 +185,8 @@ public class Candidate {
 
     /**
      * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Candidate {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsCandidateRequestBuilder updateAtsCandidate() {
@@ -173,6 +212,9 @@ public class Candidate {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

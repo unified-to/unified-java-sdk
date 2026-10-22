@@ -57,6 +57,9 @@ public class AsyncPaymentterm {
     /**
      * Create a paymentterm
      * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+     * 
      * @return The async call builder
      */
     public CreateAccountingPaymenttermRequestBuilder createAccountingPaymentterm() {
@@ -65,6 +68,9 @@ public class AsyncPaymentterm {
 
     /**
      * Create a paymentterm
+     * 
+     * <p>Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingPaymenttermResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncPaymentterm {
     /**
      * Retrieve a paymentterm
      * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingPaymenttermRequestBuilder getAccountingPaymentterm() {
@@ -88,6 +97,9 @@ public class AsyncPaymentterm {
 
     /**
      * Retrieve a paymentterm
+     * 
+     * <p>Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingPaymenttermResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncPaymentterm {
     /**
      * List all paymentterms
      * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingPaymenttermsRequestBuilder listAccountingPaymentterms() {
@@ -111,6 +130,13 @@ public class AsyncPaymentterm {
 
     /**
      * List all paymentterms
+     * 
+     * <p>Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingPaymenttermsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncPaymentterm {
     /**
      * Update a paymentterm
      * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingPaymenttermRequestBuilder patchAccountingPaymentterm() {
@@ -134,6 +163,9 @@ public class AsyncPaymentterm {
 
     /**
      * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingPaymenttermResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncPaymentterm {
     /**
      * Remove a paymentterm
      * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingPaymenttermRequestBuilder removeAccountingPaymentterm() {
@@ -157,6 +191,8 @@ public class AsyncPaymentterm {
 
     /**
      * Remove a paymentterm
+     * 
+     * <p>Deletes the AccountingPaymentterm identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingPaymenttermResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncPaymentterm {
     /**
      * Update a paymentterm
      * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingPaymenttermRequestBuilder updateAccountingPaymentterm() {
@@ -180,6 +219,9 @@ public class AsyncPaymentterm {
 
     /**
      * Update a paymentterm
+     * 
+     * <p>Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingPaymenttermResponse>} - The async response

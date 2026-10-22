@@ -79,6 +79,9 @@ public class Expense {
     /**
      * Create an expense
      * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
+     * 
      * @return The call builder
      */
     public CreateAccountingExpenseRequestBuilder createAccountingExpense() {
@@ -87,6 +90,9 @@ public class Expense {
 
     /**
      * Create an expense
+     * 
+     * <p>Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingExpense.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -101,6 +107,9 @@ public class Expense {
     /**
      * Create an expense
      * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
+     * 
      * @return The call builder
      */
     public CreateLegalExpenseRequestBuilder createLegalExpense() {
@@ -109,6 +118,9 @@ public class Expense {
 
     /**
      * Create an expense
+     * 
+     * <p>Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped
+     * to the provider's API. Returns the created LegalExpense.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -123,6 +135,9 @@ public class Expense {
     /**
      * Retrieve an expense
      * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingExpenseRequestBuilder getAccountingExpense() {
@@ -131,6 +146,9 @@ public class Expense {
 
     /**
      * Retrieve an expense
+     * 
+     * <p>Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -145,6 +163,9 @@ public class Expense {
     /**
      * Retrieve an expense
      * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalExpenseRequestBuilder getLegalExpense() {
@@ -153,6 +174,9 @@ public class Expense {
 
     /**
      * Retrieve an expense
+     * 
+     * <p>Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -167,6 +191,13 @@ public class Expense {
     /**
      * List all expenses
      * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingExpensesRequestBuilder listAccountingExpenses() {
@@ -175,6 +206,13 @@ public class Expense {
 
     /**
      * List all expenses
+     * 
+     * <p>Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -189,6 +227,13 @@ public class Expense {
     /**
      * List all expenses
      * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalExpensesRequestBuilder listLegalExpenses() {
@@ -197,6 +242,13 @@ public class Expense {
 
     /**
      * List all expenses
+     * 
+     * <p>Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -211,6 +263,9 @@ public class Expense {
     /**
      * Update an expense
      * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingExpenseRequestBuilder patchAccountingExpense() {
@@ -219,6 +274,9 @@ public class Expense {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -233,6 +291,9 @@ public class Expense {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchLegalExpenseRequestBuilder patchLegalExpense() {
@@ -241,6 +302,9 @@ public class Expense {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -255,6 +319,8 @@ public class Expense {
     /**
      * Remove an expense
      * 
+     * <p>Deletes the AccountingExpense identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingExpenseRequestBuilder removeAccountingExpense() {
@@ -263,6 +329,8 @@ public class Expense {
 
     /**
      * Remove an expense
+     * 
+     * <p>Deletes the AccountingExpense identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -277,6 +345,8 @@ public class Expense {
     /**
      * Remove an expense
      * 
+     * <p>Deletes the LegalExpense identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalExpenseRequestBuilder removeLegalExpense() {
@@ -285,6 +355,8 @@ public class Expense {
 
     /**
      * Remove an expense
+     * 
+     * <p>Deletes the LegalExpense identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -299,6 +371,9 @@ public class Expense {
     /**
      * Update an expense
      * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingExpenseRequestBuilder updateAccountingExpense() {
@@ -307,6 +382,9 @@ public class Expense {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -321,6 +399,9 @@ public class Expense {
     /**
      * Update an expense
      * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalExpenseRequestBuilder updateLegalExpense() {
@@ -329,6 +410,9 @@ public class Expense {
 
     /**
      * Update an expense
+     * 
+     * <p>Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

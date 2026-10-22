@@ -57,6 +57,9 @@ public class AsyncDevice {
     /**
      * Create a device
      * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
+     * 
      * @return The async call builder
      */
     public CreateHrisDeviceRequestBuilder createHrisDevice() {
@@ -65,6 +68,9 @@ public class AsyncDevice {
 
     /**
      * Create a device
+     * 
+     * <p>Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisDevice.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncDevice {
     /**
      * Retrieve a device
      * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisDeviceRequestBuilder getHrisDevice() {
@@ -88,6 +97,9 @@ public class AsyncDevice {
 
     /**
      * Retrieve a device
+     * 
+     * <p>Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncDevice {
     /**
      * List all devices
      * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisDevicesRequestBuilder listHrisDevices() {
@@ -111,6 +130,13 @@ public class AsyncDevice {
 
     /**
      * List all devices
+     * 
+     * <p>Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncDevice {
     /**
      * Update a device
      * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisDeviceRequestBuilder patchHrisDevice() {
@@ -134,6 +163,9 @@ public class AsyncDevice {
 
     /**
      * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncDevice {
     /**
      * Remove a device
      * 
+     * <p>Deletes the HrisDevice identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisDeviceRequestBuilder removeHrisDevice() {
@@ -157,6 +191,8 @@ public class AsyncDevice {
 
     /**
      * Remove a device
+     * 
+     * <p>Deletes the HrisDevice identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncDevice {
     /**
      * Update a device
      * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisDeviceRequestBuilder updateHrisDevice() {
@@ -180,6 +219,9 @@ public class AsyncDevice {
 
     /**
      * Update a device
+     * 
+     * <p>Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response

@@ -13,7 +13,7 @@
 
 ## createHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -48,14 +48,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("f7b7133b-c29c-47a9-93f8-ce9c318e0a87")
+                    .id("1d7fce0c-6a8c-4104-ab44-fab47d9cc437")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.337Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.476Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.338Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.479Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,7 +89,7 @@ public class Application {
 
 ## getHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -239,14 +239,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("b907c754-283d-4c80-af30-a6edf6712491")
+                    .id("714024b7-2e30-4b2f-a28e-a32819762c3e")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.357Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.493Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.354Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.492Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -372,14 +372,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("b907c754-283d-4c80-af30-a6edf6712491")
+                    .id("714024b7-2e30-4b2f-a28e-a32819762c3e")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-03-15T07:42:19.357Z"))
+                    .startAt(OffsetDateTime.parse("2025-03-16T02:41:31.493Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-03-22T07:00:47.354Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-22T22:21:19.492Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

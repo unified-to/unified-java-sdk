@@ -13,7 +13,7 @@
 
 ## createComputeKey
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -42,11 +42,11 @@ public class Application {
         CreateComputeKeyRequest req = CreateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("4a81b272-7edd-4ddc-91e0-5d29785055a4")
+                    .id("0eebf45d-3b97-42bf-902a-37b91aada140")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.588Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.940Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,7 +80,7 @@ public class Application {
 
 ## getComputeKey
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ public class Application {
 
 ## listComputeKeys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## patchComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -224,11 +224,11 @@ public class Application {
         PatchComputeKeyRequest req = PatchComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("aab748b9-9044-444e-b8ac-3e0f1144ba8b")
+                    .id("9669b9a9-7354-4eda-9473-6d7c57dd7561")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.594Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -263,7 +263,7 @@ public class Application {
 
 ## removeComputeKey
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ public class Application {
 
 ## updateComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -348,11 +348,11 @@ public class Application {
         UpdateComputeKeyRequest req = UpdateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("aab748b9-9044-444e-b8ac-3e0f1144ba8b")
+                    .id("9669b9a9-7354-4eda-9473-6d7c57dd7561")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.594Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

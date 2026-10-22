@@ -13,7 +13,7 @@
 
 ## createKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -44,11 +44,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("1d31f646-5dcb-449c-bd34-3830c144a898")
+                    .id("f5074c93-8b04-4ee0-bfda-4325e50c035a")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.507Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -82,7 +82,7 @@ public class Application {
 
 ## getKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ public class Application {
 
 ## listKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ public class Application {
 
 ## patchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -228,11 +228,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("51504cd2-5ab4-43a8-8762-4aa07d1a1b05")
+                    .id("3cc76599-4490-4cbb-9b75-1056af9ed76d")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.275Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.516Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -267,7 +267,7 @@ public class Application {
 
 ## removeKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ public class Application {
 
 ## updateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -354,11 +354,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("51504cd2-5ab4-43a8-8762-4aa07d1a1b05")
+                    .id("3cc76599-4490-4cbb-9b75-1056af9ed76d")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.275Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.516Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

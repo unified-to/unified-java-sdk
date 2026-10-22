@@ -13,7 +13,7 @@
 
 ## createCrmDeal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -43,18 +43,18 @@ public class Application {
         CreateCrmDealRequest req = CreateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.075Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.617Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.158Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.470Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("66acf447-5f1a-4a3f-b95d-a45343f2a290")
+                    .id("b159275a-3d55-44c8-afe7-ca4f3439bf31")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("cb26c564-eb16-4cef-bb54-65d1e8209803")
+                            .id("95fc258a-5dce-40b1-a250-7285b13b9430")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -65,7 +65,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.577Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.806Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
@@ -100,7 +100,7 @@ public class Application {
 
 ## getCrmDeal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ public class Application {
 
 ## listCrmDeals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ public class Application {
 
 ## patchCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -245,18 +245,18 @@ public class Application {
         PatchCrmDealRequest req = PatchCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.080Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.632Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.165Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.491Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("96532c8c-044e-4298-851b-49bfdad6601b")
+                    .id("954ee7da-9ad2-409b-ac6c-757688542987")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("34f33d68-dcd7-42ea-9603-25f4b97ded77")
+                            .id("d959fdc0-fbdb-4979-a78d-63bb0dc99831")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -267,7 +267,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.819Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")
@@ -303,7 +303,7 @@ public class Application {
 
 ## removeCrmDeal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -359,7 +359,7 @@ public class Application {
 
 ## updateCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -389,18 +389,18 @@ public class Application {
         UpdateCrmDealRequest req = UpdateCrmDealRequest.builder()
                 .crmDeal(CrmDeal.builder()
                     .amount(98162d)
-                    .closedAt(OffsetDateTime.parse("2024-03-10T10:07:01.080Z"))
-                    .closingAt(OffsetDateTime.parse("2025-08-31T12:39:13.632Z"))
+                    .closedAt(OffsetDateTime.parse("2024-03-10T15:17:27.165Z"))
+                    .closingAt(OffsetDateTime.parse("2025-09-01T04:59:23.491Z"))
                     .createdAt(OffsetDateTime.parse("2023-07-04T12:48:48.470Z"))
                     .currency("USD")
                     .description("Comis tepidus sit cavus crustulum trans tubineus adfectus.")
-                    .id("96532c8c-044e-4298-851b-49bfdad6601b")
+                    .id("954ee7da-9ad2-409b-ac6c-757688542987")
                     .metadata(List.of(
                         CrmMetadata.builder()
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("34f33d68-dcd7-42ea-9603-25f4b97ded77")
+                            .id("d959fdc0-fbdb-4979-a78d-63bb0dc99831")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("conatus"))
@@ -411,7 +411,7 @@ public class Application {
                     .tags(List.of(
                         "causa",
                         "suus"))
-                    .updatedAt(OffsetDateTime.parse("2024-10-11T21:13:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-12T06:51:51.819Z"))
                     .wonReason("Usque libero soleo.")
                     .build())
                 .connectionId("<id>")

@@ -51,7 +51,7 @@
 
 ## createAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -86,11 +86,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("4dec3d03-294a-413e-bd5e-5aaa345755eb")
+                    .id("88e2621d-456a-45f2-b86f-35bbe55f87b8")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.893Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.836Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -124,7 +124,7 @@ public class Application {
 
 ## createAdsAsset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -154,12 +154,12 @@ public class Application {
                 .adsAsset(AdsAsset.builder()
                     .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
                     .height(400d)
-                    .id("0a4ceb6e-2a1f-40a6-a9b4-a6e4caf65209")
+                    .id("c6f60318-fbc8-4922-8dcf-215b32154ee2")
                     .metadata(List.of())
                     .mimeType("IMAGE_PNG")
                     .name("Lockman - DuBuque")
                     .type(AdsAssetType.IMAGE)
-                    .updatedAt(OffsetDateTime.parse("2022-03-25T04:39:40.732Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-03-25T12:13:29.909Z"))
                     .url("https://informal-perfection.com/")
                     .width(600d)
                     .build())
@@ -195,7 +195,7 @@ public class Application {
 
 ## createAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -229,18 +229,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.682Z"))
-                    .id("d8ed980e-cba0-4aec-bcea-801dd3e4a520")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.467Z"))
+                    .id("c737cc27-b48b-4ec8-a259-ada03eb0115f")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.920Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.379Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.040Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.104Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -274,7 +274,7 @@ public class Application {
 
 ## createAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -303,7 +303,7 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c61d33b4-6416-4808-ba2f-f2e15543ed4d")
+                    .id("8bfc6881-4a27-4128-91a5-4e3f52a688b9")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -311,7 +311,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.112Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -345,7 +345,7 @@ public class Application {
 
 ## createAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -379,16 +379,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:47.831Z"))
-                    .id("a7793b5b-01f8-492f-811e-c7a981a3df10")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.625Z"))
+                    .id("21f864e8-e0bc-4a78-8a90-355cadf75b45")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.437Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.699Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.465Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.592Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -422,7 +422,7 @@ public class Application {
 
 ## createAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -451,11 +451,11 @@ public class Application {
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("6c223517-c069-4a8d-8cdb-4774454728f3")
+                    .id("5b100592-2dd8-4bb8-b94a-28002e27ef82")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.742Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.622Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -489,7 +489,7 @@ public class Application {
 
 ## createAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -520,13 +520,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("76a6b5f6-c784-4d90-ad58-c5380824d9dc")
+                    .id("494370a5-e62e-414a-a1f8-984b36029eb5")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.230Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.932Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -560,7 +560,7 @@ public class Application {
 
 ## getAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -618,7 +618,7 @@ public class Application {
 
 ## getAdsAsset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -676,7 +676,7 @@ public class Application {
 
 ## getAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -734,7 +734,7 @@ public class Application {
 
 ## getAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -792,7 +792,7 @@ public class Application {
 
 ## getAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -850,7 +850,7 @@ public class Application {
 
 ## getAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -908,7 +908,7 @@ public class Application {
 
 ## getAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -966,7 +966,7 @@ public class Application {
 
 ## getAdsPromoted
 
-Retrieve a promoted
+Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1024,7 +1024,7 @@ public class Application {
 
 ## getAdsTarget
 
-Retrieve a target
+Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1082,7 +1082,7 @@ public class Application {
 
 ## listAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1139,7 +1139,7 @@ public class Application {
 
 ## listAdsAssets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1196,7 +1196,7 @@ public class Application {
 
 ## listAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1253,7 +1253,7 @@ public class Application {
 
 ## listAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1310,7 +1310,7 @@ public class Application {
 
 ## listAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1367,7 +1367,7 @@ public class Application {
 
 ## listAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1424,7 +1424,7 @@ public class Application {
 
 ## listAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1481,7 +1481,7 @@ public class Application {
 
 ## listAdsPromoteds
 
-List all promoteds
+Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1538,7 +1538,7 @@ public class Application {
 
 ## listAdsReports
 
-List all reports
+Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1595,7 +1595,7 @@ public class Application {
 
 ## listAdsTargets
 
-List all targets
+Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1652,7 +1652,7 @@ public class Application {
 
 ## patchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -1687,11 +1687,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("e676b5b2-b975-487c-b8f0-9f8aa1492235")
+                    .id("0376d34e-4424-4ef6-9357-244b799e0d9d")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.904Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.851Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1726,7 +1726,7 @@ public class Application {
 
 ## patchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -1760,18 +1760,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.798Z"))
-                    .id("7a3c20b5-0ea2-4ce0-8d8d-df575a0c46be")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.556Z"))
+                    .id("d0cfd385-36de-43dc-8959-bab95d88971b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.927Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.384Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.178Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.211Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1806,7 +1806,7 @@ public class Application {
 
 ## patchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -1835,7 +1835,7 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c88d08f3-efe0-4ebb-8532-030795c0badb")
+                    .id("e6b62062-9e63-42fe-96ca-69a375bcf9f3")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -1843,7 +1843,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.119Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1878,7 +1878,7 @@ public class Application {
 
 ## patchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1912,16 +1912,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:48.019Z"))
-                    .id("135a77f8-937b-4b74-8a97-e335f433bffd")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.751Z"))
+                    .id("05c82173-87ed-4bc4-9b96-610f1ee3ab0c")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.611Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.817Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.530Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.636Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1956,7 +1956,7 @@ public class Application {
 
 ## patchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -1985,11 +1985,11 @@ public class Application {
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("8a2573f5-f64b-4686-8e46-60f451639d48")
+                    .id("3e96314c-d9b2-4a4a-a076-670bb319cd67")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.743Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2024,7 +2024,7 @@ public class Application {
 
 ## patchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -2055,13 +2055,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("9df4004d-1633-45fe-bd89-16e5e0facbb2")
+                    .id("22e2d873-3bdf-4198-b0a8-10f1fe96450b")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2096,7 +2096,7 @@ public class Application {
 
 ## removeAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -2152,7 +2152,7 @@ public class Application {
 
 ## removeAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -2208,7 +2208,7 @@ public class Application {
 
 ## removeAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -2264,7 +2264,7 @@ public class Application {
 
 ## removeAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -2320,7 +2320,7 @@ public class Application {
 
 ## removeAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -2376,7 +2376,7 @@ public class Application {
 
 ## removeAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -2432,7 +2432,7 @@ public class Application {
 
 ## updateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -2467,11 +2467,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("e676b5b2-b975-487c-b8f0-9f8aa1492235")
+                    .id("0376d34e-4424-4ef6-9357-244b799e0d9d")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.904Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.851Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2506,7 +2506,7 @@ public class Application {
 
 ## updateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -2540,18 +2540,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-05-31T23:31:46.798Z"))
-                    .id("7a3c20b5-0ea2-4ce0-8d8d-df575a0c46be")
+                    .endAt(OffsetDateTime.parse("2025-06-01T16:37:55.556Z"))
+                    .id("d0cfd385-36de-43dc-8959-bab95d88971b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-21T10:50:25.927Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-21T11:47:04.384Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-01T14:09:29.178Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-02T10:34:38.211Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2586,7 +2586,7 @@ public class Application {
 
 ## updateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -2615,7 +2615,7 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c88d08f3-efe0-4ebb-8532-030795c0badb")
+                    .id("e6b62062-9e63-42fe-96ca-69a375bcf9f3")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -2623,7 +2623,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.119Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2658,7 +2658,7 @@ public class Application {
 
 ## updateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -2692,16 +2692,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:48.019Z"))
-                    .id("135a77f8-937b-4b74-8a97-e335f433bffd")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.751Z"))
+                    .id("05c82173-87ed-4bc4-9b96-610f1ee3ab0c")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.611Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.817Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.530Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.636Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2736,7 +2736,7 @@ public class Application {
 
 ## updateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -2765,11 +2765,11 @@ public class Application {
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("8a2573f5-f64b-4686-8e46-60f451639d48")
+                    .id("3e96314c-d9b2-4a4a-a076-670bb319cd67")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.743Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2804,7 +2804,7 @@ public class Application {
 
 ## updateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -2835,13 +2835,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("9df4004d-1633-45fe-bd89-16e5e0facbb2")
+                    .id("22e2d873-3bdf-4198-b0a8-10f1fe96450b")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-03-29T03:06:37.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-30T01:47:48.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

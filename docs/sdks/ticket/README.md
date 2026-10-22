@@ -13,7 +13,7 @@
 
 ## createTicketingTicket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("80fb6ac6-6af2-4fb1-954d-ccde06add8d7")
+                    .id("c8b54459-e703-4a68-b589-200d1b471094")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -53,7 +53,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
@@ -88,7 +88,7 @@ public class Application {
 
 ## getTicketingTicket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ public class Application {
 
 ## listTicketingTickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ public class Application {
 
 ## patchTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("244bedbd-82bc-4d49-a104-19950af1732f")
+                    .id("7bd4683c-d1dc-4772-8fc6-70f05a1c18fe")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -243,7 +243,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
@@ -279,7 +279,7 @@ public class Application {
 
 ## removeTicketingTicket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ public class Application {
 
 ## updateTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -367,7 +367,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("244bedbd-82bc-4d49-a104-19950af1732f")
+                    .id("7bd4683c-d1dc-4772-8fc6-70f05a1c18fe")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -375,7 +375,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")

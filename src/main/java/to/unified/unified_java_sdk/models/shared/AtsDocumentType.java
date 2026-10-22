@@ -18,6 +18,11 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * AtsDocumentType
+ * 
+ * <p>The kind of document
+ */
 public class AtsDocumentType {
 
     public static final AtsDocumentType RESUME = new AtsDocumentType("RESUME");

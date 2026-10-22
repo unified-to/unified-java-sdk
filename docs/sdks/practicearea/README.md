@@ -13,7 +13,7 @@
 
 ## createLegalPracticearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -43,11 +43,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("e2a14296-adc0-4625-82fa-eb4b67b469e4")
+                    .id("13151dc7-f5b1-43fb-b8ec-8b911af841c5")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.528Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.889Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -81,7 +81,7 @@ public class Application {
 
 ## getLegalPracticearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ public class Application {
 
 ## listLegalPracticeareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ public class Application {
 
 ## patchLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -226,11 +226,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("6344fe75-8815-4be8-bd9c-30e114b3c1cb")
+                    .id("54739f83-c9a7-4b91-b795-c79cb3a9974e")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.539Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.914Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -265,7 +265,7 @@ public class Application {
 
 ## removeLegalPracticearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -321,7 +321,7 @@ public class Application {
 
 ## updateLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -351,11 +351,11 @@ public class Application {
                 .legalPracticearea(LegalPracticearea.builder()
                     .code("QCA")
                     .createdAt(OffsetDateTime.parse("2023-01-28T21:00:26.264Z"))
-                    .id("6344fe75-8815-4be8-bd9c-30e114b3c1cb")
+                    .id("54739f83-c9a7-4b91-b795-c79cb3a9974e")
                     .metadata(List.of())
                     .name("witty Law")
                     .type(LegalPracticeareaType.EDUCATION)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:10:07.539Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T10:25:29.914Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

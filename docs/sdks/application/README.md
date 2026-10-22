@@ -13,7 +13,7 @@
 
 ## createAtsApplication
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -43,16 +43,16 @@ public class Application {
         CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.028Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.636Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.419Z"))
-                    .id("c96e3121-b613-4c3f-8943-47178a6e7814")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.277Z"))
+                    .id("4cc31204-75c0-4a65-b83b-7c8703d5ca29")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d3ca9362-bae3-4abb-acbd-f1c06cda6220")
+                            .id("8e4d11fc-0d16-4e9c-937a-63ade207a97c")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -60,12 +60,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.348Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.066Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.423Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.820Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -99,7 +99,7 @@ public class Application {
 
 ## getAtsApplication
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ public class Application {
 
 ## listAtsApplications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ public class Application {
 
 ## patchAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -244,16 +244,16 @@ public class Application {
         PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.044Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.660Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.440Z"))
-                    .id("cd68e010-ff31-4aea-8e82-4c6827f0765f")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.308Z"))
+                    .id("a12467d2-174a-413b-855c-1cb73439cba8")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d429998d-2666-4b67-9ff3-64bc5abfabbd")
+                            .id("e941b927-afaf-4776-bdfc-fce47dc837da")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -261,12 +261,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.373Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.102Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.448Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.856Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -301,7 +301,7 @@ public class Application {
 
 ## removeAtsApplication
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -357,7 +357,7 @@ public class Application {
 
 ## updateAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -387,16 +387,16 @@ public class Application {
         UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.044Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.660Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.440Z"))
-                    .id("cd68e010-ff31-4aea-8e82-4c6827f0765f")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.308Z"))
+                    .id("a12467d2-174a-413b-855c-1cb73439cba8")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d429998d-2666-4b67-9ff3-64bc5abfabbd")
+                            .id("e941b927-afaf-4776-bdfc-fce47dc837da")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -404,12 +404,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.373Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.102Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.448Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.856Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -13,7 +13,7 @@
 
 ## createHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -42,8 +42,8 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.581Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.699Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.734Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.585Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -52,28 +52,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.899Z"))
-                            .id("4d3e9e91-a31e-4eab-a339-e5db2d13b80e")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.619Z"))
+                            .id("a7e2619a-89ff-4a7b-96c8-b77d7c05b422")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.925Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.176Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("370c0b74-7869-415e-9e45-760313363b8e")
+                    .id("dea74055-5eec-465a-94f7-4db991b6ddac")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.115Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.924Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -107,7 +107,7 @@ public class Application {
 
 ## getHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ public class Application {
 
 ## listHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ public class Application {
 
 ## patchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -251,8 +251,8 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.595Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.700Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.745Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.586Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -261,28 +261,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.913Z"))
-                            .id("34421756-d8c5-4446-8599-a0005e420bfa")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.629Z"))
+                            .id("80940e5f-ae45-428c-b108-4070fc7fe36b")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.937Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.185Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("c0ed466a-c972-494d-be6b-a14833abc0e1")
+                    .id("a0af925b-5c23-4fdc-8829-cbb3ae5712b8")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.117Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.925Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -317,7 +317,7 @@ public class Application {
 
 ## removeHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -373,7 +373,7 @@ public class Application {
 
 ## updateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -402,8 +402,8 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-04-23T07:49:14.595Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-11T00:56:07.700Z"))
+                    .endAt(OffsetDateTime.parse("2024-04-23T20:47:17.745Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-11T02:08:51.586Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -412,28 +412,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:06:33.153Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-19T14:37:54.959Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-14T13:16:58.913Z"))
-                            .id("34421756-d8c5-4446-8599-a0005e420bfa")
+                            .endAt(OffsetDateTime.parse("2024-02-15T01:20:47.629Z"))
+                            .id("80940e5f-ae45-428c-b108-4070fc7fe36b")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-10-29T23:03:51.937Z"))
+                            .startAt(OffsetDateTime.parse("2023-10-30T09:42:49.185Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("c0ed466a-c972-494d-be6b-a14833abc0e1")
+                    .id("a0af925b-5c23-4fdc-8829-cbb3ae5712b8")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-19T21:04:45.117Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-19T23:12:33.925Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -175,6 +175,9 @@ public class Cdp {
     /**
      * Create an activation
      * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
+     * 
      * @return The call builder
      */
     public CreateCdpActivationRequestBuilder createCdpActivation() {
@@ -183,6 +186,9 @@ public class Cdp {
 
     /**
      * Create an activation
+     * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -197,6 +203,9 @@ public class Cdp {
     /**
      * Create a destination
      * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
+     * 
      * @return The call builder
      */
     public CreateCdpDestinationRequestBuilder createCdpDestination() {
@@ -205,6 +214,9 @@ public class Cdp {
 
     /**
      * Create a destination
+     * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -219,6 +231,9 @@ public class Cdp {
     /**
      * Create an event
      * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
      * @return The call builder
      */
     public CreateCdpEventRequestBuilder createCdpEvent() {
@@ -227,6 +242,9 @@ public class Cdp {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -241,6 +259,9 @@ public class Cdp {
     /**
      * Create a profile
      * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
      * @return The call builder
      */
     public CreateCdpProfileRequestBuilder createCdpProfile() {
@@ -249,6 +270,9 @@ public class Cdp {
 
     /**
      * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -263,6 +287,9 @@ public class Cdp {
     /**
      * Create a segment
      * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
      * @return The call builder
      */
     public CreateCdpSegmentRequestBuilder createCdpSegment() {
@@ -271,6 +298,9 @@ public class Cdp {
 
     /**
      * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -285,6 +315,9 @@ public class Cdp {
     /**
      * Create a source
      * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
      * @return The call builder
      */
     public CreateCdpSourceRequestBuilder createCdpSource() {
@@ -293,6 +326,9 @@ public class Cdp {
 
     /**
      * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -307,6 +343,9 @@ public class Cdp {
     /**
      * Retrieve an activation
      * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpActivationRequestBuilder getCdpActivation() {
@@ -315,6 +354,9 @@ public class Cdp {
 
     /**
      * Retrieve an activation
+     * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -329,6 +371,9 @@ public class Cdp {
     /**
      * Retrieve a destination
      * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpDestinationRequestBuilder getCdpDestination() {
@@ -337,6 +382,9 @@ public class Cdp {
 
     /**
      * Retrieve a destination
+     * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -351,6 +399,9 @@ public class Cdp {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpEventRequestBuilder getCdpEvent() {
@@ -359,6 +410,9 @@ public class Cdp {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -373,6 +427,9 @@ public class Cdp {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpProfileRequestBuilder getCdpProfile() {
@@ -381,6 +438,9 @@ public class Cdp {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -395,6 +455,9 @@ public class Cdp {
     /**
      * Retrieve a segment
      * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpSegmentRequestBuilder getCdpSegment() {
@@ -403,6 +466,9 @@ public class Cdp {
 
     /**
      * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -417,6 +483,9 @@ public class Cdp {
     /**
      * Retrieve a source
      * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCdpSourceRequestBuilder getCdpSource() {
@@ -425,6 +494,9 @@ public class Cdp {
 
     /**
      * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -439,6 +511,13 @@ public class Cdp {
     /**
      * List all activations
      * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpActivationsRequestBuilder listCdpActivations() {
@@ -447,6 +526,13 @@ public class Cdp {
 
     /**
      * List all activations
+     * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -461,6 +547,13 @@ public class Cdp {
     /**
      * List all destinations
      * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpDestinationsRequestBuilder listCdpDestinations() {
@@ -469,6 +562,13 @@ public class Cdp {
 
     /**
      * List all destinations
+     * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -483,6 +583,13 @@ public class Cdp {
     /**
      * List all events
      * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpEventsRequestBuilder listCdpEvents() {
@@ -491,6 +598,13 @@ public class Cdp {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -505,6 +619,13 @@ public class Cdp {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpProfilesRequestBuilder listCdpProfiles() {
@@ -513,6 +634,13 @@ public class Cdp {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -527,6 +655,13 @@ public class Cdp {
     /**
      * List all segments
      * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpSegmentsRequestBuilder listCdpSegments() {
@@ -535,6 +670,13 @@ public class Cdp {
 
     /**
      * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -549,6 +691,13 @@ public class Cdp {
     /**
      * List all sources
      * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCdpSourcesRequestBuilder listCdpSources() {
@@ -557,6 +706,13 @@ public class Cdp {
 
     /**
      * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -571,6 +727,9 @@ public class Cdp {
     /**
      * Update an activation
      * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchCdpActivationRequestBuilder patchCdpActivation() {
@@ -579,6 +738,9 @@ public class Cdp {
 
     /**
      * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -593,6 +755,9 @@ public class Cdp {
     /**
      * Update a destination
      * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchCdpDestinationRequestBuilder patchCdpDestination() {
@@ -601,6 +766,9 @@ public class Cdp {
 
     /**
      * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -615,6 +783,9 @@ public class Cdp {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpEventRequestBuilder patchCdpEvent() {
@@ -623,6 +794,9 @@ public class Cdp {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -637,6 +811,9 @@ public class Cdp {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpProfileRequestBuilder patchCdpProfile() {
@@ -645,6 +822,9 @@ public class Cdp {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -659,6 +839,9 @@ public class Cdp {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpSegmentRequestBuilder patchCdpSegment() {
@@ -667,6 +850,9 @@ public class Cdp {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -681,6 +867,9 @@ public class Cdp {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCdpSourceRequestBuilder patchCdpSource() {
@@ -689,6 +878,9 @@ public class Cdp {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -703,6 +895,8 @@ public class Cdp {
     /**
      * Remove an activation
      * 
+     * <p>Deletes the CdpActivation identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpActivationRequestBuilder removeCdpActivation() {
@@ -711,6 +905,8 @@ public class Cdp {
 
     /**
      * Remove an activation
+     * 
+     * <p>Deletes the CdpActivation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -725,6 +921,8 @@ public class Cdp {
     /**
      * Remove a destination
      * 
+     * <p>Deletes the CdpDestination identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpDestinationRequestBuilder removeCdpDestination() {
@@ -733,6 +931,8 @@ public class Cdp {
 
     /**
      * Remove a destination
+     * 
+     * <p>Deletes the CdpDestination identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -747,6 +947,8 @@ public class Cdp {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpEventRequestBuilder removeCdpEvent() {
@@ -755,6 +957,8 @@ public class Cdp {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -769,6 +973,8 @@ public class Cdp {
     /**
      * Remove a profile
      * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpProfileRequestBuilder removeCdpProfile() {
@@ -777,6 +983,8 @@ public class Cdp {
 
     /**
      * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -791,6 +999,8 @@ public class Cdp {
     /**
      * Remove a segment
      * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpSegmentRequestBuilder removeCdpSegment() {
@@ -799,6 +1009,8 @@ public class Cdp {
 
     /**
      * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -813,6 +1025,8 @@ public class Cdp {
     /**
      * Remove a source
      * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCdpSourceRequestBuilder removeCdpSource() {
@@ -821,6 +1035,8 @@ public class Cdp {
 
     /**
      * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -835,6 +1051,9 @@ public class Cdp {
     /**
      * Update an activation
      * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpActivationRequestBuilder updateCdpActivation() {
@@ -843,6 +1062,9 @@ public class Cdp {
 
     /**
      * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -857,6 +1079,9 @@ public class Cdp {
     /**
      * Update a destination
      * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpDestinationRequestBuilder updateCdpDestination() {
@@ -865,6 +1090,9 @@ public class Cdp {
 
     /**
      * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -879,6 +1107,9 @@ public class Cdp {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpEventRequestBuilder updateCdpEvent() {
@@ -887,6 +1118,9 @@ public class Cdp {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -901,6 +1135,9 @@ public class Cdp {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpProfileRequestBuilder updateCdpProfile() {
@@ -909,6 +1146,9 @@ public class Cdp {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -923,6 +1163,9 @@ public class Cdp {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpSegmentRequestBuilder updateCdpSegment() {
@@ -931,6 +1174,9 @@ public class Cdp {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -945,6 +1191,9 @@ public class Cdp {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCdpSourceRequestBuilder updateCdpSource() {
@@ -953,6 +1202,9 @@ public class Cdp {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -13,7 +13,7 @@
 
 ## createHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("75afe0e9-3b22-4157-be57-8a730d0f3968")
+                    .id("b0c1e98c-8856-4756-bb3d-94ab5bee2b78")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -56,7 +56,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.322Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.041Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -90,7 +90,7 @@ public class Application {
 
 ## getHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ public class Application {
 
 ## listHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ public class Application {
 
 ## patchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("4ef37b4e-17e0-4041-a5d9-01fc2a5de54f")
+                    .id("ca832996-acc5-4c24-a444-138bc2bf1954")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -248,7 +248,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.333Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.052Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -283,7 +283,7 @@ public class Application {
 
 ## removeHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ public class Application {
 
 ## updateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -374,7 +374,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("4ef37b4e-17e0-4041-a5d9-01fc2a5de54f")
+                    .id("ca832996-acc5-4c24-a444-138bc2bf1954")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -382,7 +382,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-01T06:22:58.333Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-02T02:37:21.052Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

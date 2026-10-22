@@ -13,7 +13,7 @@
 
 ## createDatastoreDatabase
 
-Create a database
+Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("7e2f773f-c7b0-47ef-b94e-5e2f7436dd34")
+                    .id("bda9f2ca-35dc-40b4-a0c7-6463330a3503")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.595Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.756Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -85,7 +85,7 @@ public class Application {
 
 ## getDatastoreDatabase
 
-Retrieve a database
+Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ public class Application {
 
 ## listDatastoreDatabases
 
-List all databases
+Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ public class Application {
 
 ## patchDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -231,13 +231,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("0e1059a5-ed94-4ea1-9381-8758de705356")
+                    .id("80cfc459-f2ba-4b83-80ba-dd6be0bab166")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.761Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")
@@ -273,7 +273,7 @@ public class Application {
 
 ## removeDatastoreDatabase
 
-Remove a database
+Deletes the DatastoreDatabase identified by `id`.
 
 ### Example Usage
 
@@ -329,7 +329,7 @@ public class Application {
 
 ## updateDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -360,13 +360,13 @@ public class Application {
                 .datastoreDatabase(DatastoreDatabase.builder()
                     .createdAt(OffsetDateTime.parse("2019-03-05T14:31:00.223Z"))
                     .description("Substantia tantillus coniuratio repellat coerceo amet vito vorago.")
-                    .id("0e1059a5-ed94-4ea1-9381-8758de705356")
+                    .id("80cfc459-f2ba-4b83-80ba-dd6be0bab166")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Rau - O'Reilly")
                     .password("iYLhYwOHm0NLDvI")
                     .region("France")
-                    .updatedAt(OffsetDateTime.parse("2023-06-30T19:49:53.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-07-01T09:57:23.761Z"))
                     .webUrl("https://optimal-signature.name")
                     .build())
                 .connectionId("<id>")

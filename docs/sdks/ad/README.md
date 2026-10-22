@@ -13,7 +13,7 @@
 
 ## createAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -48,11 +48,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("4dec3d03-294a-413e-bd5e-5aaa345755eb")
+                    .id("88e2621d-456a-45f2-b86f-35bbe55f87b8")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.893Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.836Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -86,7 +86,7 @@ public class Application {
 
 ## getAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## listAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## patchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -236,11 +236,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("e676b5b2-b975-487c-b8f0-9f8aa1492235")
+                    .id("0376d34e-4424-4ef6-9357-244b799e0d9d")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.904Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.851Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -275,7 +275,7 @@ public class Application {
 
 ## removeAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ public class Application {
 
 ## updateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -366,11 +366,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("e676b5b2-b975-487c-b8f0-9f8aa1492235")
+                    .id("0376d34e-4424-4ef6-9357-244b799e0d9d")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-18T13:40:26.904Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-18T23:50:39.851Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

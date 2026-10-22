@@ -55,6 +55,9 @@ public class Timeentry {
     /**
      * Create a timeentry
      * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
      * @return The call builder
      */
     public CreateLegalTimeentryRequestBuilder createLegalTimeentry() {
@@ -63,6 +66,9 @@ public class Timeentry {
 
     /**
      * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Timeentry {
     /**
      * Retrieve a timeentry
      * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLegalTimeentryRequestBuilder getLegalTimeentry() {
@@ -85,6 +94,9 @@ public class Timeentry {
 
     /**
      * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Timeentry {
     /**
      * List all timeentries
      * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLegalTimeentriesRequestBuilder listLegalTimeentries() {
@@ -107,6 +126,13 @@ public class Timeentry {
 
     /**
      * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Timeentry {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchLegalTimeentryRequestBuilder patchLegalTimeentry() {
@@ -129,6 +158,9 @@ public class Timeentry {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Timeentry {
     /**
      * Remove a timeentry
      * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLegalTimeentryRequestBuilder removeLegalTimeentry() {
@@ -151,6 +185,8 @@ public class Timeentry {
 
     /**
      * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Timeentry {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateLegalTimeentryRequestBuilder updateLegalTimeentry() {
@@ -173,6 +212,9 @@ public class Timeentry {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

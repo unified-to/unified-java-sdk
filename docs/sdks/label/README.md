@@ -13,7 +13,7 @@
 
 ## createShippingLabel
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -42,17 +42,17 @@ public class Application {
         CreateShippingLabelRequest req = CreateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("a902b0c3-9dd2-4ada-8831-30c9a50ad4aa")
+                    .id("45283bf0-5616-47b9-a039-3377a4ab4b8e")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://labels.example.com/a902b0c3-9dd2-4ada-8831-30c9a50ad4aa.pdf")
+                    .labelUrl("https://labels.example.com/45283bf0-5616-47b9-a039-3377a4ab4b8e.pdf")
                     .metadata(List.of())
                     .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
                     .trackingNumber("ZYV60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T21:54:35.471Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-29T07:05:21.648Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -86,7 +86,7 @@ public class Application {
 
 ## getShippingLabel
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## listShippingLabels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## patchShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -230,17 +230,17 @@ public class Application {
         PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("c36c1f51-9c3a-4ba6-aeef-259b097e0b2b")
+                    .id("db683e79-d275-4bcf-8e98-694821a2fbec")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://labels.example.com/c36c1f51-9c3a-4ba6-aeef-259b097e0b2b.pdf")
+                    .labelUrl("https://labels.example.com/db683e79-d275-4bcf-8e98-694821a2fbec.pdf")
                     .metadata(List.of())
                     .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
                     .trackingNumber("ZYV60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T21:54:35.479Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-29T07:05:21.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -275,7 +275,7 @@ public class Application {
 
 ## removeShippingLabel
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ public class Application {
 
 ## updateShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -360,17 +360,17 @@ public class Application {
         UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
                 .shippingLabel(ShippingLabel.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-18T16:45:38.067Z"))
-                    .id("c36c1f51-9c3a-4ba6-aeef-259b097e0b2b")
+                    .id("db683e79-d275-4bcf-8e98-694821a2fbec")
                     .isVoided(false)
                     .labelCost(40.83653403213248)
                     .labelCostCurrency("USD")
                     .labelFormat(LabelFormat.PNG)
-                    .labelUrl("https://labels.example.com/c36c1f51-9c3a-4ba6-aeef-259b097e0b2b.pdf")
+                    .labelUrl("https://labels.example.com/db683e79-d275-4bcf-8e98-694821a2fbec.pdf")
                     .metadata(List.of())
                     .serviceCode("Dzy")
                     .status(ShippingLabelStatus.EXCEPTION)
                     .trackingNumber("ZYV60FOIBUJ6")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T21:54:35.479Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-29T07:05:21.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

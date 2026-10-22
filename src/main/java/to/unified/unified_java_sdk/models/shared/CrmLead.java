@@ -32,7 +32,9 @@ public class CrmLead {
     @JsonProperty("company_id")
     private String companyId;
 
-
+    /**
+     * The name of the company the lead works for
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     private String companyName;
@@ -88,12 +90,17 @@ public class CrmLead {
     @JsonProperty("link_urls")
     private List<String> linkUrls;
 
-
+    /**
+     * Custom field values. Include only existing custom fields and only the ones being set; omit to leave
+     * them unchanged.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<CrmMetadata> metadata;
 
-
+    /**
+     * The lead's full name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -206,6 +213,9 @@ public class CrmLead {
         return Optional.ofNullable(this.companyId);
     }
 
+    /**
+     * The name of the company the lead works for
+     */
     public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
@@ -255,10 +265,17 @@ public class CrmLead {
         return Optional.ofNullable(this.linkUrls);
     }
 
+    /**
+     * Custom field values. Include only existing custom fields and only the ones being set; omit to leave
+     * them unchanged.
+     */
     public Optional<List<CrmMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The lead's full name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -320,6 +337,9 @@ public class CrmLead {
     }
 
 
+    /**
+     * The name of the company the lead works for
+     */
     public CrmLead withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
@@ -389,12 +409,19 @@ public class CrmLead {
     }
 
 
+    /**
+     * Custom field values. Include only existing custom fields and only the ones being set; omit to leave
+     * them unchanged.
+     */
     public CrmLead withMetadata(@Nullable List<CrmMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
 
+    /**
+     * The lead's full name
+     */
     public CrmLead withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -585,6 +612,9 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * The name of the company the lead works for
+         */
         public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
@@ -644,11 +674,18 @@ public class CrmLead {
             return this;
         }
 
+        /**
+         * Custom field values. Include only existing custom fields and only the ones being set; omit to leave
+         * them unchanged.
+         */
         public Builder metadata(@Nullable List<CrmMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
+        /**
+         * The lead's full name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

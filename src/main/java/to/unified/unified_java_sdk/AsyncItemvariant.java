@@ -57,6 +57,9 @@ public class AsyncItemvariant {
     /**
      * Create an itemvariant
      * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     * 
      * @return The async call builder
      */
     public CreateCommerceItemvariantRequestBuilder createCommerceItemvariant() {
@@ -65,6 +68,9 @@ public class AsyncItemvariant {
 
     /**
      * Create an itemvariant
+     * 
+     * <p>Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceItemvariant.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncItemvariant {
     /**
      * Retrieve an itemvariant
      * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceItemvariantRequestBuilder getCommerceItemvariant() {
@@ -88,6 +97,9 @@ public class AsyncItemvariant {
 
     /**
      * Retrieve an itemvariant
+     * 
+     * <p>Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncItemvariant {
     /**
      * List all itemvariants
      * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceItemvariantsRequestBuilder listCommerceItemvariants() {
@@ -111,6 +130,13 @@ public class AsyncItemvariant {
 
     /**
      * List all itemvariants
+     * 
+     * <p>Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncItemvariant {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceItemvariantRequestBuilder patchCommerceItemvariant() {
@@ -134,6 +163,9 @@ public class AsyncItemvariant {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncItemvariant {
     /**
      * Remove an itemvariant
      * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceItemvariantRequestBuilder removeCommerceItemvariant() {
@@ -157,6 +191,8 @@ public class AsyncItemvariant {
 
     /**
      * Remove an itemvariant
+     * 
+     * <p>Deletes the CommerceItemvariant identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncItemvariant {
     /**
      * Update an itemvariant
      * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceItemvariantRequestBuilder updateCommerceItemvariant() {
@@ -180,6 +219,9 @@ public class AsyncItemvariant {
 
     /**
      * Update an itemvariant
+     * 
+     * <p>Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response

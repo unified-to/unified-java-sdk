@@ -89,6 +89,9 @@ public class AsyncMessaging {
     /**
      * Create a channel
      * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
+     * 
      * @return The async call builder
      */
     public CreateMessagingChannelRequestBuilder createMessagingChannel() {
@@ -97,6 +100,9 @@ public class AsyncMessaging {
 
     /**
      * Create a channel
+     * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMessagingChannelResponse>} - The async response
@@ -112,6 +118,9 @@ public class AsyncMessaging {
     /**
      * Create a message
      * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
+     * 
      * @return The async call builder
      */
     public CreateMessagingMessageRequestBuilder createMessagingMessage() {
@@ -120,6 +129,9 @@ public class AsyncMessaging {
 
     /**
      * Create a message
+     * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMessagingMessageResponse>} - The async response
@@ -135,6 +147,9 @@ public class AsyncMessaging {
     /**
      * Retrieve a channel
      * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetMessagingChannelRequestBuilder getMessagingChannel() {
@@ -143,6 +158,9 @@ public class AsyncMessaging {
 
     /**
      * Retrieve a channel
+     * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
@@ -158,6 +176,9 @@ public class AsyncMessaging {
     /**
      * Retrieve a message
      * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetMessagingMessageRequestBuilder getMessagingMessage() {
@@ -166,6 +187,9 @@ public class AsyncMessaging {
 
     /**
      * Retrieve a message
+     * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMessagingMessageResponse>} - The async response
@@ -181,6 +205,13 @@ public class AsyncMessaging {
     /**
      * List all channels
      * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListMessagingChannelsRequestBuilder listMessagingChannels() {
@@ -189,6 +220,13 @@ public class AsyncMessaging {
 
     /**
      * List all channels
+     * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
@@ -204,6 +242,13 @@ public class AsyncMessaging {
     /**
      * List all messages
      * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListMessagingMessagesRequestBuilder listMessagingMessages() {
@@ -212,6 +257,13 @@ public class AsyncMessaging {
 
     /**
      * List all messages
+     * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMessagingMessagesResponse>} - The async response
@@ -227,6 +279,9 @@ public class AsyncMessaging {
     /**
      * Update a channel
      * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMessagingChannelRequestBuilder patchMessagingChannel() {
@@ -235,6 +290,9 @@ public class AsyncMessaging {
 
     /**
      * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingChannelResponse>} - The async response
@@ -250,6 +308,9 @@ public class AsyncMessaging {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMessagingEventRequestBuilder patchMessagingEvent() {
@@ -258,6 +319,9 @@ public class AsyncMessaging {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
@@ -273,6 +337,9 @@ public class AsyncMessaging {
     /**
      * Update a message
      * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMessagingMessageRequestBuilder patchMessagingMessage() {
@@ -281,6 +348,9 @@ public class AsyncMessaging {
 
     /**
      * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingMessageResponse>} - The async response
@@ -296,6 +366,8 @@ public class AsyncMessaging {
     /**
      * Remove a channel
      * 
+     * <p>Deletes the MessagingChannel identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveMessagingChannelRequestBuilder removeMessagingChannel() {
@@ -304,6 +376,8 @@ public class AsyncMessaging {
 
     /**
      * Remove a channel
+     * 
+     * <p>Deletes the MessagingChannel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMessagingChannelResponse>} - The async response
@@ -319,6 +393,8 @@ public class AsyncMessaging {
     /**
      * Remove a message
      * 
+     * <p>Deletes the MessagingMessage identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveMessagingMessageRequestBuilder removeMessagingMessage() {
@@ -327,6 +403,8 @@ public class AsyncMessaging {
 
     /**
      * Remove a message
+     * 
+     * <p>Deletes the MessagingMessage identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMessagingMessageResponse>} - The async response
@@ -342,6 +420,9 @@ public class AsyncMessaging {
     /**
      * Update a channel
      * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMessagingChannelRequestBuilder updateMessagingChannel() {
@@ -350,6 +431,9 @@ public class AsyncMessaging {
 
     /**
      * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingChannelResponse>} - The async response
@@ -365,6 +449,9 @@ public class AsyncMessaging {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
@@ -373,6 +460,9 @@ public class AsyncMessaging {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
@@ -388,6 +478,9 @@ public class AsyncMessaging {
     /**
      * Update a message
      * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMessagingMessageRequestBuilder updateMessagingMessage() {
@@ -396,6 +489,9 @@ public class AsyncMessaging {
 
     /**
      * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingMessageResponse>} - The async response

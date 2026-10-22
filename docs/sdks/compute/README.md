@@ -64,7 +64,7 @@
 
 ## createComputeDeployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -97,13 +97,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.266Z"))
-                    .id("eda5da66-5d06-4596-b43e-6a3928d7fbd4")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.518Z"))
+                    .id("5b51f71f-432e-4d52-bcd5-502996db428b")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.475Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.610Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.967Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.801Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -138,7 +138,7 @@ public class Application {
 
 ## createComputeDomain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -167,12 +167,12 @@ public class Application {
         CreateComputeDomainRequest req = CreateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("34c17795-0ba3-4d5b-a58c-2023a01c3026")
+                    .id("2bdbc93e-5feb-4074-a9fb-5ff67c88509b")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.795Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.672Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -206,7 +206,7 @@ public class Application {
 
 ## createComputeEnvvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -237,11 +237,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("8b556c5b-ed87-4ee3-a095-861966c824b6")
+                    .id("9f215b1e-dcd1-494e-a391-127acb401606")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.878Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -275,7 +275,7 @@ public class Application {
 
 ## createComputeInstance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("6112a0fe-d63c-4877-9365-31fb0bdfcb0e")
+                    .id("352d3ca9-8fb4-41fd-858e-fe79ed7475bb")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -334,11 +334,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:24.999Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.868Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.589Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.359Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -372,7 +372,7 @@ public class Application {
 
 ## createComputeKey
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -401,11 +401,11 @@ public class Application {
         CreateComputeKeyRequest req = CreateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("4a81b272-7edd-4ddc-91e0-5d29785055a4")
+                    .id("0eebf45d-3b97-42bf-902a-37b91aada140")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.588Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.940Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -439,7 +439,7 @@ public class Application {
 
 ## createComputeService
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -470,7 +470,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("6802d7fc-fd3d-4924-a272-8b1f1ba66951")
+                    .id("66088a7f-5034-4e14-8263-b823b6c97f51")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -481,7 +481,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.160Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -516,7 +516,7 @@ public class Application {
 
 ## createComputeSnapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -545,13 +545,13 @@ public class Application {
         CreateComputeSnapshotRequest req = CreateComputeSnapshotRequest.builder()
                 .computeSnapshot(ComputeSnapshot.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
-                    .id("b00c880f-f094-4719-b9c3-302686f17114")
+                    .id("f8ac9f9d-e2f8-483f-bd71-4c00466af28d")
                     .metadata(List.of())
                     .name("snap-alius")
                     .sizeMb(169984d)
                     .status(ComputeSnapshotStatus.DELETING)
                     .type(ComputeSnapshotType.DISK)
-                    .updatedAt(OffsetDateTime.parse("2026-03-30T21:26:14.148Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-31T19:37:39.522Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -585,7 +585,7 @@ public class Application {
 
 ## createComputeTemplate
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -619,17 +619,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("7ce5c3c0-abec-4d63-b1da-2186e4154868")
+                    .id("1656b998-385f-4805-862b-9c4b65d020c5")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.233Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.684Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.866Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.895Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -663,7 +663,7 @@ public class Application {
 
 ## createComputeVolume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -692,14 +692,14 @@ public class Application {
         CreateComputeVolumeRequest req = CreateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("40b1b660-248a-4116-9c05-9328148c87df")
+                    .id("70ff1c68-cd05-4cde-8fa1-fb5018496c21")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.056Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -734,7 +734,7 @@ public class Application {
 
 ## getComputeDeployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -792,7 +792,7 @@ public class Application {
 
 ## getComputeDomain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -850,7 +850,7 @@ public class Application {
 
 ## getComputeEnvvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -908,7 +908,7 @@ public class Application {
 
 ## getComputeGputype
 
-Retrieve a gputype
+Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -966,7 +966,7 @@ public class Application {
 
 ## getComputeInstance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1024,7 +1024,7 @@ public class Application {
 
 ## getComputeKey
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1082,7 +1082,7 @@ public class Application {
 
 ## getComputeRegion
 
-Retrieve a region
+Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1140,7 +1140,7 @@ public class Application {
 
 ## getComputeService
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1198,7 +1198,7 @@ public class Application {
 
 ## getComputeSnapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1256,7 +1256,7 @@ public class Application {
 
 ## getComputeTemplate
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1314,7 +1314,7 @@ public class Application {
 
 ## getComputeVolume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1372,7 +1372,7 @@ public class Application {
 
 ## listComputeDeployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1429,7 +1429,7 @@ public class Application {
 
 ## listComputeDomains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1486,7 +1486,7 @@ public class Application {
 
 ## listComputeEnvvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1543,7 +1543,7 @@ public class Application {
 
 ## listComputeGputypes
 
-List all gputypes
+Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1600,7 +1600,7 @@ public class Application {
 
 ## listComputeInstances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1657,7 +1657,7 @@ public class Application {
 
 ## listComputeKeys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1714,7 +1714,7 @@ public class Application {
 
 ## listComputeRegions
 
-List all regions
+Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1771,7 +1771,7 @@ public class Application {
 
 ## listComputeServices
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1828,7 +1828,7 @@ public class Application {
 
 ## listComputeSnapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1885,7 +1885,7 @@ public class Application {
 
 ## listComputeTemplates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1942,7 +1942,7 @@ public class Application {
 
 ## listComputeUsages
 
-List all usages
+Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1999,7 +1999,7 @@ public class Application {
 
 ## listComputeVolumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2056,7 +2056,7 @@ public class Application {
 
 ## patchComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -2089,13 +2089,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.276Z"))
-                    .id("0eb59d13-eff9-4d58-9f81-3ac0b1b19b9b")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.528Z"))
+                    .id("c0799480-8b43-418c-a539-68ba70877a24")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.484Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.619Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.978Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.813Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -2131,7 +2131,7 @@ public class Application {
 
 ## patchComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -2160,12 +2160,12 @@ public class Application {
         PatchComputeDomainRequest req = PatchComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("78fc5e22-26c0-4ec1-b03d-802493df3d05")
+                    .id("ed820268-bac9-4c62-bfe9-6594add307ce")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.800Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.677Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2200,7 +2200,7 @@ public class Application {
 
 ## patchComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -2231,11 +2231,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("dc1fa18c-0bdb-4086-a8a4-402ec1bc5281")
+                    .id("cb5b3468-593d-4466-8ebf-b30914cb96ac")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.064Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.884Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2270,7 +2270,7 @@ public class Application {
 
 ## patchComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -2314,7 +2314,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("9d7551dc-7aab-46a8-add2-2efaec388972")
+                    .id("e2a198ac-73f4-4ee8-a8da-c1b240dda396")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -2329,11 +2329,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:25.020Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.891Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.612Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.385Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2368,7 +2368,7 @@ public class Application {
 
 ## patchComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -2397,11 +2397,11 @@ public class Application {
         PatchComputeKeyRequest req = PatchComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("aab748b9-9044-444e-b8ac-3e0f1144ba8b")
+                    .id("9669b9a9-7354-4eda-9473-6d7c57dd7561")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.594Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2436,7 +2436,7 @@ public class Application {
 
 ## patchComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -2467,7 +2467,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("a8855da9-432e-4c85-acfa-db5d02c01299")
+                    .id("2d0b9b53-489b-4f63-8a3e-830d202db2dc")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -2478,7 +2478,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.873Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.168Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -2514,7 +2514,7 @@ public class Application {
 
 ## patchComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -2548,17 +2548,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("5c2a48c7-42f9-4994-ab9d-f488a549f8ba")
+                    .id("f41184e2-c111-4e40-9ff0-b1de45c66c52")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.252Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.704Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.877Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.908Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2593,7 +2593,7 @@ public class Application {
 
 ## patchComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -2622,14 +2622,14 @@ public class Application {
         PatchComputeVolumeRequest req = PatchComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("ba7c1bea-1c9b-492e-afc7-ea7b5c2d94fa")
+                    .id("f8b20221-6bce-49d7-a674-a07326c42989")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.059Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.060Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -2665,7 +2665,7 @@ public class Application {
 
 ## removeComputeDeployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -2721,7 +2721,7 @@ public class Application {
 
 ## removeComputeDomain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -2777,7 +2777,7 @@ public class Application {
 
 ## removeComputeEnvvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -2833,7 +2833,7 @@ public class Application {
 
 ## removeComputeInstance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -2889,7 +2889,7 @@ public class Application {
 
 ## removeComputeKey
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -2945,7 +2945,7 @@ public class Application {
 
 ## removeComputeService
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -3001,7 +3001,7 @@ public class Application {
 
 ## removeComputeSnapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 
@@ -3057,7 +3057,7 @@ public class Application {
 
 ## removeComputeTemplate
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -3113,7 +3113,7 @@ public class Application {
 
 ## removeComputeVolume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -3169,7 +3169,7 @@ public class Application {
 
 ## updateComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -3202,13 +3202,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.276Z"))
-                    .id("0eb59d13-eff9-4d58-9f81-3ac0b1b19b9b")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.528Z"))
+                    .id("c0799480-8b43-418c-a539-68ba70877a24")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.484Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.619Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.978Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.813Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -3244,7 +3244,7 @@ public class Application {
 
 ## updateComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -3273,12 +3273,12 @@ public class Application {
         UpdateComputeDomainRequest req = UpdateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("78fc5e22-26c0-4ec1-b03d-802493df3d05")
+                    .id("ed820268-bac9-4c62-bfe9-6594add307ce")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-03T15:12:59.800Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-04T05:27:42.677Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3313,7 +3313,7 @@ public class Application {
 
 ## updateComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -3344,11 +3344,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("dc1fa18c-0bdb-4086-a8a4-402ec1bc5281")
+                    .id("cb5b3468-593d-4466-8ebf-b30914cb96ac")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.064Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.884Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3383,7 +3383,7 @@ public class Application {
 
 ## updateComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -3427,7 +3427,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("9d7551dc-7aab-46a8-add2-2efaec388972")
+                    .id("e2a198ac-73f4-4ee8-a8da-c1b240dda396")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -3442,11 +3442,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:25.020Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.891Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.612Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.385Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3481,7 +3481,7 @@ public class Application {
 
 ## updateComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -3510,11 +3510,11 @@ public class Application {
         UpdateComputeKeyRequest req = UpdateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("aab748b9-9044-444e-b8ac-3e0f1144ba8b")
+                    .id("9669b9a9-7354-4eda-9473-6d7c57dd7561")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-06T23:21:27.594Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-07T08:16:41.944Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3549,7 +3549,7 @@ public class Application {
 
 ## updateComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -3580,7 +3580,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("a8855da9-432e-4c85-acfa-db5d02c01299")
+                    .id("2d0b9b53-489b-4f63-8a3e-830d202db2dc")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -3591,7 +3591,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.873Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.168Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -3627,7 +3627,7 @@ public class Application {
 
 ## updateComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -3661,17 +3661,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("5c2a48c7-42f9-4994-ab9d-f488a549f8ba")
+                    .id("f41184e2-c111-4e40-9ff0-b1de45c66c52")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.252Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.704Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.877Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.908Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3706,7 +3706,7 @@ public class Application {
 
 ## updateComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -3735,14 +3735,14 @@ public class Application {
         UpdateComputeVolumeRequest req = UpdateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("ba7c1bea-1c9b-492e-afc7-ea7b5c2d94fa")
+                    .id("f8b20221-6bce-49d7-a674-a07326c42989")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.059Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.060Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")

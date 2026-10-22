@@ -26,12 +26,16 @@ public class CommerceMetadata {
     @JsonProperty("extra_data")
     private CommerceMetadataExtraData extraData;
 
-
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private CommerceMetadataFormat format;
 
-
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -46,12 +50,19 @@ public class CommerceMetadata {
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private CommerceMetadataValue value;
@@ -90,10 +101,16 @@ public class CommerceMetadata {
         return Optional.ofNullable(this.extraData);
     }
 
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     public Optional<CommerceMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
 
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -106,10 +123,19 @@ public class CommerceMetadata {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     public Optional<CommerceMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
@@ -131,12 +157,18 @@ public class CommerceMetadata {
     }
 
 
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     public CommerceMetadata withFormat(@Nullable CommerceMetadataFormat format) {
         this.format = format;
         return this;
     }
 
 
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     public CommerceMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -155,12 +187,21 @@ public class CommerceMetadata {
     }
 
 
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     public CommerceMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     public CommerceMetadata withValue(@Nullable CommerceMetadataValue value) {
         this.value = value;
         return this;
@@ -241,11 +282,17 @@ public class CommerceMetadata {
             return this;
         }
 
+        /**
+         * The data type of the custom field, which determines how `value` is formatted.
+         */
         public Builder format(@Nullable CommerceMetadataFormat format) {
             this.format = format;
             return this;
         }
 
+        /**
+         * The ID of the custom field definition (from the metadata/metadata endpoint).
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -261,11 +308,20 @@ public class CommerceMetadata {
             return this;
         }
 
+        /**
+         * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+         * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+         * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+         * MULTIPLE_SELECT as an array of option values; otherwise a string.
+         */
         public Builder value(@Nullable CommerceMetadataValue value) {
             this.value = value;
             return this;

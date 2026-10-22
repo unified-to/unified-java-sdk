@@ -57,6 +57,9 @@ public class AsyncItem {
     /**
      * Create an item
      * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
+     * 
      * @return The async call builder
      */
     public CreateCommerceItemRequestBuilder createCommerceItem() {
@@ -65,6 +68,9 @@ public class AsyncItem {
 
     /**
      * Create an item
+     * 
+     * <p>Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped
+     * to the provider's API. Returns the created CommerceItem.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncItem {
     /**
      * Retrieve an item
      * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceItemRequestBuilder getCommerceItem() {
@@ -88,6 +97,9 @@ public class AsyncItem {
 
     /**
      * Retrieve an item
+     * 
+     * <p>Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncItem {
     /**
      * List all items
      * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceItemsRequestBuilder listCommerceItems() {
@@ -111,6 +130,13 @@ public class AsyncItem {
 
     /**
      * List all items
+     * 
+     * <p>Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncItem {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceItemRequestBuilder patchCommerceItem() {
@@ -134,6 +163,9 @@ public class AsyncItem {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncItem {
     /**
      * Remove an item
      * 
+     * <p>Deletes the CommerceItem identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceItemRequestBuilder removeCommerceItem() {
@@ -157,6 +191,8 @@ public class AsyncItem {
 
     /**
      * Remove an item
+     * 
+     * <p>Deletes the CommerceItem identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncItem {
     /**
      * Update an item
      * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceItemRequestBuilder updateCommerceItem() {
@@ -180,6 +219,9 @@ public class AsyncItem {
 
     /**
      * Update an item
+     * 
+     * <p>Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response

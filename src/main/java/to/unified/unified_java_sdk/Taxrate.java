@@ -55,6 +55,9 @@ public class Taxrate {
     /**
      * Create a taxrate
      * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
+     * 
      * @return The call builder
      */
     public CreateAccountingTaxrateRequestBuilder createAccountingTaxrate() {
@@ -63,6 +66,9 @@ public class Taxrate {
 
     /**
      * Create a taxrate
+     * 
+     * <p>Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingTaxrate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Taxrate {
     /**
      * Retrieve a taxrate
      * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingTaxrateRequestBuilder getAccountingTaxrate() {
@@ -85,6 +94,9 @@ public class Taxrate {
 
     /**
      * Retrieve a taxrate
+     * 
+     * <p>Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Taxrate {
     /**
      * List all taxrates
      * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingTaxratesRequestBuilder listAccountingTaxrates() {
@@ -107,6 +126,13 @@ public class Taxrate {
 
     /**
      * List all taxrates
+     * 
+     * <p>Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Taxrate {
     /**
      * Update a taxrate
      * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingTaxrateRequestBuilder patchAccountingTaxrate() {
@@ -129,6 +158,9 @@ public class Taxrate {
 
     /**
      * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Taxrate {
     /**
      * Remove a taxrate
      * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingTaxrateRequestBuilder removeAccountingTaxrate() {
@@ -151,6 +185,8 @@ public class Taxrate {
 
     /**
      * Remove a taxrate
+     * 
+     * <p>Deletes the AccountingTaxrate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Taxrate {
     /**
      * Update a taxrate
      * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingTaxrateRequestBuilder updateAccountingTaxrate() {
@@ -173,6 +212,9 @@ public class Taxrate {
 
     /**
      * Update a taxrate
+     * 
+     * <p>Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

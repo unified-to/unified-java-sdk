@@ -13,7 +13,7 @@
 
 ## createCommerceItemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("924dcb2a-5321-4d87-b6c0-3b4496e764c8")
+                    .id("7673985b-601b-4e8b-8f7f-a986b3e8ed23")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -56,10 +56,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("4df953a3-91cf-4ced-b170-b4717d8b5a42")
+                            .id("30de7c58-1b18-46f3-b224-b63001eb7e3f")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("aa4a8fd7-99d2-49ac-98d7-f65acdbb85f8")
+                                    .id("b5c25aeb-b7d3-445b-b113-97da871e7ef0")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -72,7 +72,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("3f577b09-5a13-4758-b14d-c9a6848bd13d")
+                            .id("fd352eda-00e9-403a-b6ca-9cf36f3b629a")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -83,14 +83,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("9006ca93-bb2a-4900-a1bf-ec10af5bcf86")
+                            .id("9a094088-f702-4292-ab96-9a31f30d54fa")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03ec021d-36f6-49f5-857d-eae6109c3a07")
+                            .id("9641b808-28c1-469a-b158-44b1f9eac4e3")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -106,7 +106,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.166Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -143,7 +143,7 @@ public class Application {
 
 ## getCommerceItemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## listCommerceItemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ public class Application {
 
 ## patchCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("aa6977be-5b80-45d5-8256-cc3301c976ab")
+                    .id("a001c92f-ab05-4447-b550-6bf8f9be5410")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -301,10 +301,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("c4674cb9-c127-46ef-bb5c-049506eb8a0e")
+                            .id("92269475-82ac-4ea1-9fe6-622303df6c68")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("83e4e04e-ac0b-44d9-b503-0fcf8a4225ad")
+                                    .id("db11b845-45c9-49a4-a081-8645b2569e3b")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -317,7 +317,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("467db122-797e-4b87-bca5-3ec6b7bbf5d6")
+                            .id("3cc31eb5-46cb-4650-9753-8fcb5c1c5395")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -328,14 +328,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("856d1277-f8e0-43d1-9fc3-68fdafe5838e")
+                            .id("596ce3bd-1059-42eb-ae8b-d5f63be26311")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03b14415-69f2-4843-9bae-9b1f31792035")
+                            .id("c60ea7c2-41ec-4af8-9ec4-58520ca0d4c1")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -351,7 +351,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.135Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.203Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -389,7 +389,7 @@ public class Application {
 
 ## removeCommerceItemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ public class Application {
 
 ## updateCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -478,7 +478,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("aa6977be-5b80-45d5-8256-cc3301c976ab")
+                    .id("a001c92f-ab05-4447-b550-6bf8f9be5410")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -488,10 +488,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("c4674cb9-c127-46ef-bb5c-049506eb8a0e")
+                            .id("92269475-82ac-4ea1-9fe6-622303df6c68")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("83e4e04e-ac0b-44d9-b503-0fcf8a4225ad")
+                                    .id("db11b845-45c9-49a4-a081-8645b2569e3b")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -504,7 +504,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("467db122-797e-4b87-bca5-3ec6b7bbf5d6")
+                            .id("3cc31eb5-46cb-4650-9753-8fcb5c1c5395")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -515,14 +515,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("856d1277-f8e0-43d1-9fc3-68fdafe5838e")
+                            .id("596ce3bd-1059-42eb-ae8b-d5f63be26311")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03b14415-69f2-4843-9bae-9b1f31792035")
+                            .id("c60ea7c2-41ec-4af8-9ec4-58520ca0d4c1")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -538,7 +538,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.135Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.203Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)

@@ -59,7 +59,9 @@ public class HrisGroup {
     @JsonProperty("metadata")
     private List<HrisMetadata> metadata;
 
-
+    /**
+     * The name of the group (e.g. a team or department)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -181,6 +183,9 @@ public class HrisGroup {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The name of the group (e.g. a team or department)
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -275,6 +280,9 @@ public class HrisGroup {
     }
 
 
+    /**
+     * The name of the group (e.g. a team or department)
+     */
     public HrisGroup withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -467,6 +475,9 @@ public class HrisGroup {
             return this;
         }
 
+        /**
+         * The name of the group (e.g. a team or department)
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

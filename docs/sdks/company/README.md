@@ -26,7 +26,7 @@
 
 ## createAtsCompany
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -55,10 +55,10 @@ public class Application {
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("5a63304a-a1a3-43da-a11b-9c9dd4b034b7")
+                    .id("4a212401-72c3-46ea-8fc2-1d674c7b1ff4")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.068Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -93,7 +93,7 @@ public class Application {
 
 ## createCrmCompany
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -149,7 +149,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("e4eb31a8-d84b-46c1-80e9-45ee52e55884")
+                    .id("25606022-373c-4dfb-99aa-dc21d903758a")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -159,7 +159,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("a127e2a7-1925-493c-8515-44b8d0f809ee")
+                            .id("96020060-73c1-4589-a3b4-46da770b6f7c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -175,7 +175,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.063Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.839Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -211,7 +211,7 @@ public class Application {
 
 ## createHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -248,11 +248,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("defc5c9e-25d6-4de3-8b59-cdbb7d6703ee")
+                    .id("13e2210c-c4b1-48cb-aab5-577f4d785978")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.283Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.573Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -286,7 +286,7 @@ public class Application {
 
 ## getAtsCompany
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -344,7 +344,7 @@ public class Application {
 
 ## getCrmCompany
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -402,7 +402,7 @@ public class Application {
 
 ## getHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -460,7 +460,7 @@ public class Application {
 
 ## listAtsCompanies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -517,7 +517,7 @@ public class Application {
 
 ## listCrmCompanies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -631,7 +631,7 @@ public class Application {
 
 ## listHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -688,7 +688,7 @@ public class Application {
 
 ## patchAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -717,10 +717,10 @@ public class Application {
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("e03f4e21-bb37-4272-aa49-5cfee71009f3")
+                    .id("b707bad0-729d-42e4-a41e-52ecdb28b92a")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.985Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.073Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -756,7 +756,7 @@ public class Application {
 
 ## patchCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -812,7 +812,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("4c8e7a4f-ada4-44c6-bd9d-769cce5b0dad")
+                    .id("fe640baf-be40-4a1a-8d7b-0cd44f17c525")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -822,7 +822,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("9b98421c-5c6f-48a7-bb06-1ad10930eef8")
+                            .id("ce2fc914-160f-41a4-8b5f-150711848a2c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -838,7 +838,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.087Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.863Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -875,7 +875,7 @@ public class Application {
 
 ## patchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -912,11 +912,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("6116b232-555b-4341-8e04-bca8ba641fe0")
+                    .id("29b7c8c3-9bd6-4de2-ac7d-0140841be8ed")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.297Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.588Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -951,7 +951,7 @@ public class Application {
 
 ## removeAtsCompany
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -1007,7 +1007,7 @@ public class Application {
 
 ## removeCrmCompany
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1063,7 +1063,7 @@ public class Application {
 
 ## removeHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -1119,7 +1119,7 @@ public class Application {
 
 ## updateAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1148,10 +1148,10 @@ public class Application {
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("e03f4e21-bb37-4272-aa49-5cfee71009f3")
+                    .id("b707bad0-729d-42e4-a41e-52ecdb28b92a")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.985Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.073Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -1187,7 +1187,7 @@ public class Application {
 
 ## updateCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1243,7 +1243,7 @@ public class Application {
                             .type(CrmEmailType.WORK)
                             .build()))
                     .employees(4177d)
-                    .id("4c8e7a4f-ada4-44c6-bd9d-769cce5b0dad")
+                    .id("fe640baf-be40-4a1a-8d7b-0cd44f17c525")
                     .industry("Metrics")
                     .isActive(true)
                     .linkUrls(List.of(
@@ -1253,7 +1253,7 @@ public class Application {
                             .extraData(CrmMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CrmMetadataFormat.TEXT)
-                            .id("9b98421c-5c6f-48a7-bb06-1ad10930eef8")
+                            .id("ce2fc914-160f-41a4-8b5f-150711848a2c")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CrmMetadataValue.of("unde"))
@@ -1269,7 +1269,7 @@ public class Application {
                             .type(CrmTelephoneType.HOME)
                             .build()))
                     .timezone("Atlantic/Azores")
-                    .updatedAt(OffsetDateTime.parse("2025-03-03T03:45:56.087Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-03T22:22:43.863Z"))
                     .websites(List.of(
                         "https://www.goodwinsons.com"))
                     .build())
@@ -1306,7 +1306,7 @@ public class Application {
 
 ## updateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1343,11 +1343,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("6116b232-555b-4341-8e04-bca8ba641fe0")
+                    .id("29b7c8c3-9bd6-4de2-ac7d-0140841be8ed")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-10-08T16:24:56.297Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-09T17:12:00.588Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -13,7 +13,7 @@
 
 ## createComputeDeployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -46,13 +46,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.266Z"))
-                    .id("eda5da66-5d06-4596-b43e-6a3928d7fbd4")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.518Z"))
+                    .id("5b51f71f-432e-4d52-bcd5-502996db428b")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.475Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.610Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.967Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.801Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -87,7 +87,7 @@ public class Application {
 
 ## getComputeDeployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ public class Application {
 
 ## listComputeDeployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ public class Application {
 
 ## patchComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -235,13 +235,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.276Z"))
-                    .id("0eb59d13-eff9-4d58-9f81-3ac0b1b19b9b")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.528Z"))
+                    .id("c0799480-8b43-418c-a539-68ba70877a24")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.484Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.619Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.978Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.813Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -277,7 +277,7 @@ public class Application {
 
 ## removeComputeDeployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ public class Application {
 
 ## updateComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -366,13 +366,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-08-29T15:07:21.276Z"))
-                    .id("0eb59d13-eff9-4d58-9f81-3ac0b1b19b9b")
+                    .finishedAt(OffsetDateTime.parse("2025-08-30T09:32:33.528Z"))
+                    .id("c0799480-8b43-418c-a539-68ba70877a24")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-10T07:31:31.484Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-10T23:44:18.619Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-02-28T18:04:56.978Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-01T15:21:44.813Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")

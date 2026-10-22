@@ -15,7 +15,7 @@
 
 ## createAtsScorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("48061e33-93b1-4788-82bf-d958bd6c960f")
+                    .id("810829b8-9d4b-4d79-8008-fb647630e62a")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -58,7 +58,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.696Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.156Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -92,7 +92,7 @@ public class Application {
 
 ## getAtsScorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ public class Application {
 
 ## getUcScorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ public class Application {
 
 ## listAtsScorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ public class Application {
 
 ## listUcScorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ public class Application {
 
 ## patchAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -352,7 +352,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("68fcb38d-6798-4850-b328-fa67ebb06ade")
+                    .id("7c072a2e-9905-43cc-a31d-1b83477dbffc")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -365,7 +365,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.700Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.161Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -400,7 +400,7 @@ public class Application {
 
 ## removeAtsScorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -456,7 +456,7 @@ public class Application {
 
 ## updateAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -486,7 +486,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("68fcb38d-6798-4850-b328-fa67ebb06ade")
+                    .id("7c072a2e-9905-43cc-a31d-1b83477dbffc")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -499,7 +499,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.700Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.161Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

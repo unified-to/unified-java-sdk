@@ -38,7 +38,7 @@
 
 ## createGenaiAgent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -68,11 +68,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("fec224f1-e39c-409b-9efd-e7ef9e2792b1")
+                    .id("9c48c1ea-1d57-4828-938b-d55dfaf2de8e")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-15T10:49:28.731Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-16T07:25:49.564Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -106,7 +106,7 @@ public class Application {
 
 ## createGenaiEmbedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Est.")
                     .encondingFormat(EncondingFormat.FLOAT)
-                    .id("06e847f1-c363-43b7-b050-cdfa6dffc271")
+                    .id("b4c1dba2-a933-4041-90f1-566e09296c38")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")
@@ -177,7 +177,7 @@ public class Application {
 
 ## createGenaiMemory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("14fa3c2c-5e37-40bb-aa00-8bf3a7158c44")
+                    .id("8c210fef-5535-453d-b1a8-ea0dbd6e1339")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -221,7 +221,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-25T21:29:33.814Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-26T05:01:08.195Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
@@ -256,7 +256,7 @@ public class Application {
 
 ## createGenaiOrganization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -286,10 +286,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("0bbeb865-8eff-4ea0-bf39-227105453659")
+                    .id("ce7f7bf2-4e6c-4bb2-95d5-1509bda61015")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.245Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.822Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -323,7 +323,7 @@ public class Application {
 
 ## createGenaiPrompt
 
-Create a prompt
+Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 
 ### Example Usage
 
@@ -447,7 +447,7 @@ public class Application {
 
 ## createGenaiTask
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -475,10 +475,10 @@ public class Application {
 
         CreateGenaiTaskRequest req = CreateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-10-01T06:42:01.030Z"))
+                    .completedAt(OffsetDateTime.parse("2025-10-02T03:14:59.795Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("93497343-7d93-4dba-a169-b2d45b77ec4c")
+                    .id("a87043ac-ed57-4f83-98df-162d2b03d0e0")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -492,12 +492,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-21T10:31:07.265Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-22T01:23:21.378Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-26T07:15:58.728Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-26T17:00:07.289Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -532,7 +532,7 @@ public class Application {
 
 ## getGenaiAgent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -590,7 +590,7 @@ public class Application {
 
 ## getGenaiMemory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -648,7 +648,7 @@ public class Application {
 
 ## getGenaiModel
 
-Retrieve a model
+Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -706,7 +706,7 @@ public class Application {
 
 ## getGenaiOrganization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -764,7 +764,7 @@ public class Application {
 
 ## getGenaiSkill
 
-Retrieve a skill
+Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -822,7 +822,7 @@ public class Application {
 
 ## getGenaiTask
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -880,7 +880,7 @@ public class Application {
 
 ## listGenaiAgents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -937,7 +937,7 @@ public class Application {
 
 ## listGenaiMemories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -994,7 +994,7 @@ public class Application {
 
 ## listGenaiModels
 
-List all models
+Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1051,7 +1051,7 @@ public class Application {
 
 ## listGenaiOrganizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1108,7 +1108,7 @@ public class Application {
 
 ## listGenaiSkills
 
-List all skills
+Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1165,7 +1165,7 @@ public class Application {
 
 ## listGenaiTasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1222,7 +1222,7 @@ public class Application {
 
 ## patchGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1252,11 +1252,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("d88c39be-e704-45bc-a4a3-bc02694a7f4a")
+                    .id("f2d5509b-1058-4ab0-a835-61fb5fb1d7e1")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-15T10:49:28.738Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-16T07:25:49.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1291,7 +1291,7 @@ public class Application {
 
 ## patchGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1322,7 +1322,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("85787a0c-a908-4f55-9ffd-7d2e95abcf9b")
+                    .id("183202d5-6a79-4378-aa9d-c1a0aa1c4ff8")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -1335,7 +1335,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-25T21:29:33.818Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-26T05:01:08.199Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
@@ -1371,7 +1371,7 @@ public class Application {
 
 ## patchGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1401,10 +1401,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("12e8213b-80a4-49e5-b4c2-d9c8dea6f714")
+                    .id("114dbef7-72cb-4d6b-a727-338e67e3e900")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.247Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.824Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1439,7 +1439,7 @@ public class Application {
 
 ## patchGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1467,10 +1467,10 @@ public class Application {
 
         PatchGenaiTaskRequest req = PatchGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-10-01T06:42:01.048Z"))
+                    .completedAt(OffsetDateTime.parse("2025-10-02T03:14:59.818Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("a33e32f9-5a32-42ec-b8b9-f7bf7eb5a96e")
+                    .id("e43fe66d-0f17-4038-933a-df153dc3d24b")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -1484,12 +1484,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-21T10:31:07.278Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-22T01:23:21.395Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-26T07:15:58.736Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-26T17:00:07.300Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1525,7 +1525,7 @@ public class Application {
 
 ## removeGenaiAgent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -1581,7 +1581,7 @@ public class Application {
 
 ## removeGenaiMemory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -1637,7 +1637,7 @@ public class Application {
 
 ## removeGenaiOrganization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1693,7 +1693,7 @@ public class Application {
 
 ## removeGenaiSkill
 
-Remove a skill
+Deletes the GenaiSkill identified by `id`.
 
 ### Example Usage
 
@@ -1749,7 +1749,7 @@ public class Application {
 
 ## removeGenaiTask
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1805,7 +1805,7 @@ public class Application {
 
 ## updateGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1835,11 +1835,11 @@ public class Application {
                 .genaiAgent(GenaiAgent.builder()
                     .createdAt(OffsetDateTime.parse("2020-12-18T02:23:33.723Z"))
                     .description("Assentator tero sequi.")
-                    .id("d88c39be-e704-45bc-a4a3-bc02694a7f4a")
+                    .id("f2d5509b-1058-4ab0-a835-61fb5fb1d7e1")
                     .instructions("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.")
                     .isActive(false)
                     .name("daughter with")
-                    .updatedAt(OffsetDateTime.parse("2025-10-15T10:49:28.738Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-16T07:25:49.570Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1874,7 +1874,7 @@ public class Application {
 
 ## updateGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1905,7 +1905,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("85787a0c-a908-4f55-9ffd-7d2e95abcf9b")
+                    .id("183202d5-6a79-4378-aa9d-c1a0aa1c4ff8")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -1918,7 +1918,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-25T21:29:33.818Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-26T05:01:08.199Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
@@ -1954,7 +1954,7 @@ public class Application {
 
 ## updateGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1984,10 +1984,10 @@ public class Application {
                 .genaiOrganization(GenaiOrganization.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-27T16:03:47.122Z"))
                     .description("Voluptates abeo subseco.")
-                    .id("12e8213b-80a4-49e5-b4c2-d9c8dea6f714")
+                    .id("114dbef7-72cb-4d6b-a727-338e67e3e900")
                     .isActive(false)
                     .name("officially about")
-                    .updatedAt(OffsetDateTime.parse("2023-01-26T10:39:20.247Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T20:01:34.824Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2022,7 +2022,7 @@ public class Application {
 
 ## updateGenaiTask
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -2050,10 +2050,10 @@ public class Application {
 
         UpdateGenaiTaskRequest req = UpdateGenaiTaskRequest.builder()
                 .genaiTask(GenaiTask.builder()
-                    .completedAt(OffsetDateTime.parse("2025-10-01T06:42:01.048Z"))
+                    .completedAt(OffsetDateTime.parse("2025-10-02T03:14:59.818Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-25T20:19:33.247Z"))
                     .filesChanged(19d)
-                    .id("a33e32f9-5a32-42ec-b8b9-f7bf7eb5a96e")
+                    .id("e43fe66d-0f17-4038-933a-df153dc3d24b")
                     .instructions("Benigne canonicus officiis solvo adsidue deleo angustus.")
                     .linesAdded(244d)
                     .linesDeleted(118d)
@@ -2067,12 +2067,12 @@ public class Application {
                     .pullrequestUrl("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383")
                     .repoUrl("https://github.com/berenice.satterfield/joshingly-ignorance")
                     .sourceBranchIdentifier("main")
-                    .startedAt(OffsetDateTime.parse("2024-05-21T10:31:07.278Z"))
+                    .startedAt(OffsetDateTime.parse("2024-05-22T01:23:21.395Z"))
                     .status(GenaiTaskStatus.BLOCKED)
                     .summary("Cur aeternus cogito vesper.")
                     .targetBranchIdentifier("agent/joshingly-ignorance")
                     .tokensUsed(2165d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-26T07:15:58.736Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-26T17:00:07.300Z"))
                     .webUrl("https://inexperienced-adrenalin.biz/")
                     .build())
                 .connectionId("<id>")

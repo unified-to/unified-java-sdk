@@ -34,7 +34,7 @@
 
 ## createCalendarCalendar
 
-Create a calendar
+Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
 
 ### Example Usage
 
@@ -65,12 +65,12 @@ public class Application {
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
                     .description("Acer supra vallum suasoria thesaurus.")
-                    .id("2a5cc4e1-8de4-4951-af94-1733516f242e")
+                    .id("c666ef84-afe6-4909-804e-2b45135fa8c4")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("Interviews")
                     .timezone("Asia/Kolkata")
-                    .updatedAt(OffsetDateTime.parse("2023-03-28T03:27:44.101Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-28T15:16:42.041Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -104,7 +104,7 @@ public class Application {
 
 ## createCalendarEvent
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -135,9 +135,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.706Z")
+                    .endAt("2020-05-24T09:48:11.260Z")
                     .hasConference(false)
-                    .id("3820c3e2-a581-46bb-aa69-ec4daee9aa5b")
+                    .id("ffe78a81-4e30-48bf-bc50-9887b7ef0982")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -147,14 +147,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.521Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.065Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.616Z"))
+                                "2024-02-03T10:20:10.604Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.608Z",
-                                "2025-01-23T21:41:57.513Z",
-                                "2024-04-01T23:42:31.133Z"))
+                                "2023-07-07T15:02:52.424Z",
+                                "2025-01-24T16:37:31.814Z",
+                                "2024-04-02T15:49:26.787Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -484,11 +484,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.461Z")
+                    .startAt("2020-05-24T00:34:20.913Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.904Z")
+                    .updatedAt("2020-06-30T08:31:48.081Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -523,7 +523,7 @@ public class Application {
 
 ## createCalendarLink
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -555,13 +555,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("1a008ae6-aaae-4750-bee5-dd2625cac803")
+                    .id("488c692c-8eea-435e-8c76-200396f276f0")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-15T13:02:31.838Z")
+                    .updatedAt("2024-03-15T20:05:21.480Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -595,7 +595,7 @@ public class Application {
 
 ## createCalendarWebinar
 
-Create a webinar
+Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
 
 ### Example Usage
 
@@ -625,10 +625,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-28T17:23:19.370Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-29T12:38:34.691Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("4aeaa2f0-ef66-403d-a956-9f3dd5a791e0")
+                    .id("70b05720-12c4-4475-8d9e-4d9952a0a5d6")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -638,12 +638,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T14:49:01.375Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T21:31:01.155Z"))
                             .excludedDates(List.of(
-                                "2025-02-13T00:37:15.597Z"))
+                                "2025-02-13T15:46:31.413Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-28T06:48:15.009Z"))
+                                "2024-04-28T17:19:58.766Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1028,15 +1028,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T16:13:46.234Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T17:36:02.502Z"))
                             .excludedDates(List.of(
-                                "2024-09-01T18:07:21.458Z",
-                                "2024-08-17T05:09:18.003Z"))
+                                "2024-09-02T06:39:48.785Z",
+                                "2024-08-17T17:26:55.270Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-25T04:13:05.865Z",
-                                "2026-01-13T09:42:39.388Z",
-                                "2023-08-14T06:22:51.433Z"))
+                                "2024-03-25T14:12:16.127Z",
+                                "2026-01-14T06:11:06.505Z",
+                                "2023-08-14T12:48:17.418Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -1174,15 +1174,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-26T12:51:21.443Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-27T12:25:07.275Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T14:29:57.013Z",
-                                "2023-06-07T15:20:25.160Z"))
+                                "2023-06-18T20:01:17.738Z",
+                                "2023-06-07T20:41:17.875Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-02T05:05:25.399Z",
-                                "2023-08-20T01:48:29.581Z",
-                                "2024-09-26T22:54:19.482Z"))
+                                "2024-04-02T15:12:15.935Z",
+                                "2023-08-20T08:19:28.299Z",
+                                "2024-09-27T11:50:50.079Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1328,11 +1328,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-30T13:50:12.907Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-01T06:12:33.108Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-30T12:07:37.446Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-01T12:44:21.642Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
@@ -1367,7 +1367,7 @@ public class Application {
 
 ## getCalendarCalendar
 
-Retrieve a calendar
+Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1425,7 +1425,7 @@ public class Application {
 
 ## getCalendarEvent
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1483,7 +1483,7 @@ public class Application {
 
 ## getCalendarLink
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1541,7 +1541,7 @@ public class Application {
 
 ## getCalendarRecording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1599,7 +1599,7 @@ public class Application {
 
 ## getCalendarWebinar
 
-Retrieve a webinar
+Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1657,7 +1657,7 @@ public class Application {
 
 ## listCalendarBusies
 
-List all busies
+Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1714,7 +1714,7 @@ public class Application {
 
 ## listCalendarCalendars
 
-List all calendars
+Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1771,7 +1771,7 @@ public class Application {
 
 ## listCalendarEvents
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1828,7 +1828,7 @@ public class Application {
 
 ## listCalendarLinks
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1885,7 +1885,7 @@ public class Application {
 
 ## listCalendarRecordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1942,7 +1942,7 @@ public class Application {
 
 ## listCalendarWebinars
 
-List all webinars
+Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1999,7 +1999,7 @@ public class Application {
 
 ## patchCalendarCalendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -2030,12 +2030,12 @@ public class Application {
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
                     .description("Acer supra vallum suasoria thesaurus.")
-                    .id("2240e93e-0b7a-4e77-b928-f6da13568d93")
+                    .id("dfdd0e45-e5d4-4af5-a512-7c2437ca822d")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("Interviews")
                     .timezone("Asia/Kolkata")
-                    .updatedAt(OffsetDateTime.parse("2023-03-28T03:27:44.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-28T15:16:42.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2070,7 +2070,7 @@ public class Application {
 
 ## patchCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2101,9 +2101,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.714Z")
+                    .endAt("2020-05-24T09:48:11.265Z")
                     .hasConference(false)
-                    .id("e3c378aa-f366-4ada-8448-27cfa3a8d7eb")
+                    .id("dc738ad5-cac0-45d3-9e5b-4a941bbb2a3c")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -2113,14 +2113,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.589Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.101Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.670Z"))
+                                "2024-02-03T10:20:10.634Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.656Z",
-                                "2025-01-23T21:41:57.580Z",
-                                "2024-04-01T23:42:31.190Z"))
+                                "2023-07-07T15:02:52.449Z",
+                                "2025-01-24T16:37:31.849Z",
+                                "2024-04-02T15:49:26.817Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -2450,11 +2450,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.469Z")
+                    .startAt("2020-05-24T00:34:20.918Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.913Z")
+                    .updatedAt("2020-06-30T08:31:48.087Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -2490,7 +2490,7 @@ public class Application {
 
 ## patchCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -2522,13 +2522,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("d157bda2-6390-462d-9ac4-0cb7aa35675b")
+                    .id("07fcd259-cd0f-457b-a9a7-ae4d40cc8c89")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-15T13:02:31.843Z")
+                    .updatedAt("2024-03-15T20:05:21.484Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2563,7 +2563,7 @@ public class Application {
 
 ## patchCalendarWebinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -2593,10 +2593,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-28T17:23:19.415Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-29T12:38:34.725Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("b26da9fe-ff1a-4888-abd0-9b34c4111f60")
+                    .id("d665caf6-d72d-4efe-943a-6ab653e8d4b2")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -2606,12 +2606,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T14:49:01.391Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T21:31:01.167Z"))
                             .excludedDates(List.of(
-                                "2025-02-13T00:37:15.632Z"))
+                                "2025-02-13T15:46:31.440Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-28T06:48:15.033Z"))
+                                "2024-04-28T17:19:58.785Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -2996,15 +2996,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T16:13:46.237Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T17:36:02.505Z"))
                             .excludedDates(List.of(
-                                "2024-09-01T18:07:21.487Z",
-                                "2024-08-17T05:09:18.031Z"))
+                                "2024-09-02T06:39:48.808Z",
+                                "2024-08-17T17:26:55.291Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-25T04:13:05.889Z",
-                                "2026-01-13T09:42:39.436Z",
-                                "2023-08-14T06:22:51.448Z"))
+                                "2024-03-25T14:12:16.145Z",
+                                "2026-01-14T06:11:06.541Z",
+                                "2023-08-14T12:48:17.429Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -3142,15 +3142,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-26T12:51:21.498Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-27T12:25:07.317Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T14:29:57.026Z",
-                                "2023-06-07T15:20:25.173Z"))
+                                "2023-06-18T20:01:17.748Z",
+                                "2023-06-07T20:41:17.885Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-02T05:05:25.422Z",
-                                "2023-08-20T01:48:29.596Z",
-                                "2024-09-26T22:54:19.512Z"))
+                                "2024-04-02T15:12:15.954Z",
+                                "2023-08-20T08:19:28.311Z",
+                                "2024-09-27T11:50:50.103Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -3296,11 +3296,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-30T13:50:12.945Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-01T06:12:33.137Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-30T12:07:37.503Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-01T12:44:21.685Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
@@ -3336,7 +3336,7 @@ public class Application {
 
 ## removeCalendarCalendar
 
-Remove a calendar
+Deletes the CalendarCalendar identified by `id`.
 
 ### Example Usage
 
@@ -3392,7 +3392,7 @@ public class Application {
 
 ## removeCalendarEvent
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -3448,7 +3448,7 @@ public class Application {
 
 ## removeCalendarLink
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -3504,7 +3504,7 @@ public class Application {
 
 ## removeCalendarWebinar
 
-Remove a webinar
+Deletes the CalendarWebinar identified by `id`.
 
 ### Example Usage
 
@@ -3560,7 +3560,7 @@ public class Application {
 
 ## updateCalendarCalendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -3591,12 +3591,12 @@ public class Application {
                 .calendarCalendar(CalendarCalendar.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T23:11:34.147Z"))
                     .description("Acer supra vallum suasoria thesaurus.")
-                    .id("2240e93e-0b7a-4e77-b928-f6da13568d93")
+                    .id("dfdd0e45-e5d4-4af5-a512-7c2437ca822d")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("Interviews")
                     .timezone("Asia/Kolkata")
-                    .updatedAt(OffsetDateTime.parse("2023-03-28T03:27:44.106Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-28T15:16:42.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3631,7 +3631,7 @@ public class Application {
 
 ## updateCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -3662,9 +3662,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.714Z")
+                    .endAt("2020-05-24T09:48:11.265Z")
                     .hasConference(false)
-                    .id("e3c378aa-f366-4ada-8448-27cfa3a8d7eb")
+                    .id("dc738ad5-cac0-45d3-9e5b-4a941bbb2a3c")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -3674,14 +3674,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.589Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.101Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.670Z"))
+                                "2024-02-03T10:20:10.634Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.656Z",
-                                "2025-01-23T21:41:57.580Z",
-                                "2024-04-01T23:42:31.190Z"))
+                                "2023-07-07T15:02:52.449Z",
+                                "2025-01-24T16:37:31.849Z",
+                                "2024-04-02T15:49:26.817Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -4011,11 +4011,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.469Z")
+                    .startAt("2020-05-24T00:34:20.918Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.913Z")
+                    .updatedAt("2020-06-30T08:31:48.087Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -4051,7 +4051,7 @@ public class Application {
 
 ## updateCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -4083,13 +4083,13 @@ public class Application {
                     .createdAt("2023-03-07T13:34:11.959Z")
                     .description("Vitium clibanus laboriosam uxor denuncio.")
                     .duration(74d)
-                    .id("d157bda2-6390-462d-9ac4-0cb7aa35675b")
+                    .id("07fcd259-cd0f-457b-a9a7-ae4d40cc8c89")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Sopor sopor ancilla animus anser dignissimos vito confero utilis.")
                     .priceAmount(44d)
                     .priceCurrency("USD")
-                    .updatedAt("2024-03-15T13:02:31.843Z")
+                    .updatedAt("2024-03-15T20:05:21.484Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4124,7 +4124,7 @@ public class Application {
 
 ## updateCalendarWebinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -4154,10 +4154,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-10-28T17:23:19.415Z"))
+                    .endAt(OffsetDateTime.parse("2025-10-29T12:38:34.725Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("b26da9fe-ff1a-4888-abd0-9b34c4111f60")
+                    .id("d665caf6-d72d-4efe-943a-6ab653e8d4b2")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -4167,12 +4167,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-08-31T14:49:01.391Z"))
+                            .endAt(OffsetDateTime.parse("2023-08-31T21:31:01.167Z"))
                             .excludedDates(List.of(
-                                "2025-02-13T00:37:15.632Z"))
+                                "2025-02-13T15:46:31.440Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-04-28T06:48:15.033Z"))
+                                "2024-04-28T17:19:58.785Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -4557,15 +4557,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-09-30T16:13:46.237Z"))
+                            .endAt(OffsetDateTime.parse("2022-09-30T17:36:02.505Z"))
                             .excludedDates(List.of(
-                                "2024-09-01T18:07:21.487Z",
-                                "2024-08-17T05:09:18.031Z"))
+                                "2024-09-02T06:39:48.808Z",
+                                "2024-08-17T17:26:55.291Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-03-25T04:13:05.889Z",
-                                "2026-01-13T09:42:39.436Z",
-                                "2023-08-14T06:22:51.448Z"))
+                                "2024-03-25T14:12:16.145Z",
+                                "2026-01-14T06:11:06.541Z",
+                                "2023-08-14T12:48:17.429Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -4703,15 +4703,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-07-26T12:51:21.498Z"))
+                            .endAt(OffsetDateTime.parse("2026-07-27T12:25:07.317Z"))
                             .excludedDates(List.of(
-                                "2023-06-18T14:29:57.026Z",
-                                "2023-06-07T15:20:25.173Z"))
+                                "2023-06-18T20:01:17.748Z",
+                                "2023-06-07T20:41:17.885Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-02T05:05:25.422Z",
-                                "2023-08-20T01:48:29.596Z",
-                                "2024-09-26T22:54:19.512Z"))
+                                "2024-04-02T15:12:15.954Z",
+                                "2023-08-20T08:19:28.311Z",
+                                "2024-09-27T11:50:50.103Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -4857,11 +4857,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-04-30T13:50:12.945Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-01T06:12:33.137Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-09-30T12:07:37.503Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-01T12:44:21.685Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")

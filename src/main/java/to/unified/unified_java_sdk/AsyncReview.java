@@ -81,6 +81,9 @@ public class AsyncReview {
     /**
      * Create a review
      * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
+     * 
      * @return The async call builder
      */
     public CreateCommerceReviewRequestBuilder createCommerceReview() {
@@ -89,6 +92,9 @@ public class AsyncReview {
 
     /**
      * Create a review
+     * 
+     * <p>Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are
+     * mapped to the provider's API. Returns the created CommerceReview.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncReview {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceReviewRequestBuilder getCommerceReview() {
@@ -112,6 +121,9 @@ public class AsyncReview {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncReview {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceReviewRequestBuilder getPerformanceReview() {
@@ -135,6 +150,9 @@ public class AsyncReview {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncReview {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSocialReviewRequestBuilder getSocialReview() {
@@ -158,6 +179,9 @@ public class AsyncReview {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSocialReviewResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncReview {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceReviewsRequestBuilder listCommerceReviews() {
@@ -181,6 +212,13 @@ public class AsyncReview {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncReview {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceReviewsRequestBuilder listPerformanceReviews() {
@@ -204,6 +249,13 @@ public class AsyncReview {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
@@ -219,6 +271,13 @@ public class AsyncReview {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSocialReviewsRequestBuilder listSocialReviews() {
@@ -227,6 +286,13 @@ public class AsyncReview {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSocialReviewsResponse>} - The async response
@@ -242,6 +308,9 @@ public class AsyncReview {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceReviewRequestBuilder patchCommerceReview() {
@@ -250,6 +319,9 @@ public class AsyncReview {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
@@ -265,6 +337,9 @@ public class AsyncReview {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchSocialReviewRequestBuilder patchSocialReview() {
@@ -273,6 +348,9 @@ public class AsyncReview {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchSocialReviewResponse>} - The async response
@@ -288,6 +366,8 @@ public class AsyncReview {
     /**
      * Remove a review
      * 
+     * <p>Deletes the CommerceReview identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceReviewRequestBuilder removeCommerceReview() {
@@ -296,6 +376,8 @@ public class AsyncReview {
 
     /**
      * Remove a review
+     * 
+     * <p>Deletes the CommerceReview identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
@@ -311,6 +393,9 @@ public class AsyncReview {
     /**
      * Update a review
      * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceReviewRequestBuilder updateCommerceReview() {
@@ -319,6 +404,9 @@ public class AsyncReview {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
@@ -334,6 +422,9 @@ public class AsyncReview {
     /**
      * Update a review
      * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateSocialReviewRequestBuilder updateSocialReview() {
@@ -342,6 +433,9 @@ public class AsyncReview {
 
     /**
      * Update a review
+     * 
+     * <p>Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateSocialReviewResponse>} - The async response

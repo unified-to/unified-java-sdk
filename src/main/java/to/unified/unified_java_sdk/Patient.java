@@ -51,6 +51,9 @@ public class Patient {
     /**
      * Create a patient
      * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
+     * 
      * @return The call builder
      */
     public CreateHealthcarePatientRequestBuilder createHealthcarePatient() {
@@ -59,6 +62,9 @@ public class Patient {
 
     /**
      * Create a patient
+     * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -73,6 +79,9 @@ public class Patient {
     /**
      * Retrieve a patient
      * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcarePatientRequestBuilder getHealthcarePatient() {
@@ -81,6 +90,9 @@ public class Patient {
 
     /**
      * Retrieve a patient
+     * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -95,6 +107,13 @@ public class Patient {
     /**
      * List all patients
      * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcarePatientsRequestBuilder listHealthcarePatients() {
@@ -103,6 +122,13 @@ public class Patient {
 
     /**
      * List all patients
+     * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -117,6 +143,9 @@ public class Patient {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchHealthcarePatientRequestBuilder patchHealthcarePatient() {
@@ -125,6 +154,9 @@ public class Patient {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -139,6 +171,9 @@ public class Patient {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHealthcarePatientRequestBuilder updateHealthcarePatient() {
@@ -147,6 +182,9 @@ public class Patient {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

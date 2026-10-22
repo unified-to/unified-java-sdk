@@ -209,6 +209,9 @@ public class AsyncAds {
     /**
      * Create an ad
      * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
+     * 
      * @return The async call builder
      */
     public CreateAdsAdRequestBuilder createAdsAd() {
@@ -217,6 +220,9 @@ public class AsyncAds {
 
     /**
      * Create an ad
+     * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsAdResponse>} - The async response
@@ -232,6 +238,9 @@ public class AsyncAds {
     /**
      * Create an asset
      * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
+     * 
      * @return The async call builder
      */
     public CreateAdsAssetRequestBuilder createAdsAsset() {
@@ -240,6 +249,9 @@ public class AsyncAds {
 
     /**
      * Create an asset
+     * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsAssetResponse>} - The async response
@@ -255,6 +267,9 @@ public class AsyncAds {
     /**
      * Create a campaign
      * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
      * @return The async call builder
      */
     public CreateAdsCampaignRequestBuilder createAdsCampaign() {
@@ -263,6 +278,9 @@ public class AsyncAds {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsCampaignResponse>} - The async response
@@ -278,6 +296,9 @@ public class AsyncAds {
     /**
      * Create a creative
      * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
      * @return The async call builder
      */
     public CreateAdsCreativeRequestBuilder createAdsCreative() {
@@ -286,6 +307,9 @@ public class AsyncAds {
 
     /**
      * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsCreativeResponse>} - The async response
@@ -301,6 +325,9 @@ public class AsyncAds {
     /**
      * Create a group
      * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
      * @return The async call builder
      */
     public CreateAdsGroupRequestBuilder createAdsGroup() {
@@ -309,6 +336,9 @@ public class AsyncAds {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
@@ -324,6 +354,9 @@ public class AsyncAds {
     /**
      * Create an insertionorder
      * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
+     * 
      * @return The async call builder
      */
     public CreateAdsInsertionorderRequestBuilder createAdsInsertionorder() {
@@ -332,6 +365,9 @@ public class AsyncAds {
 
     /**
      * Create an insertionorder
+     * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsInsertionorderResponse>} - The async response
@@ -347,6 +383,9 @@ public class AsyncAds {
     /**
      * Create an organization
      * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
+     * 
      * @return The async call builder
      */
     public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
@@ -355,6 +394,9 @@ public class AsyncAds {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
@@ -370,6 +412,9 @@ public class AsyncAds {
     /**
      * Retrieve an ad
      * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsAdRequestBuilder getAdsAd() {
@@ -378,6 +423,9 @@ public class AsyncAds {
 
     /**
      * Retrieve an ad
+     * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsAdResponse>} - The async response
@@ -393,6 +441,9 @@ public class AsyncAds {
     /**
      * Retrieve an asset
      * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsAssetRequestBuilder getAdsAsset() {
@@ -401,6 +452,9 @@ public class AsyncAds {
 
     /**
      * Retrieve an asset
+     * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsAssetResponse>} - The async response
@@ -416,6 +470,9 @@ public class AsyncAds {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsCampaignRequestBuilder getAdsCampaign() {
@@ -424,6 +481,9 @@ public class AsyncAds {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsCampaignResponse>} - The async response
@@ -439,6 +499,9 @@ public class AsyncAds {
     /**
      * Retrieve a creative
      * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsCreativeRequestBuilder getAdsCreative() {
@@ -447,6 +510,9 @@ public class AsyncAds {
 
     /**
      * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsCreativeResponse>} - The async response
@@ -462,6 +528,9 @@ public class AsyncAds {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsGroupRequestBuilder getAdsGroup() {
@@ -470,6 +539,9 @@ public class AsyncAds {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
@@ -485,6 +557,9 @@ public class AsyncAds {
     /**
      * Retrieve an insertionorder
      * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsInsertionorderRequestBuilder getAdsInsertionorder() {
@@ -493,6 +568,9 @@ public class AsyncAds {
 
     /**
      * Retrieve an insertionorder
+     * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsInsertionorderResponse>} - The async response
@@ -508,6 +586,9 @@ public class AsyncAds {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsOrganizationRequestBuilder getAdsOrganization() {
@@ -516,6 +597,9 @@ public class AsyncAds {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
@@ -531,6 +615,9 @@ public class AsyncAds {
     /**
      * Retrieve a promoted
      * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsPromotedRequestBuilder getAdsPromoted() {
@@ -539,6 +626,9 @@ public class AsyncAds {
 
     /**
      * Retrieve a promoted
+     * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsPromotedResponse>} - The async response
@@ -554,6 +644,9 @@ public class AsyncAds {
     /**
      * Retrieve a target
      * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsTargetRequestBuilder getAdsTarget() {
@@ -562,6 +655,9 @@ public class AsyncAds {
 
     /**
      * Retrieve a target
+     * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsTargetResponse>} - The async response
@@ -577,6 +673,13 @@ public class AsyncAds {
     /**
      * List all ads
      * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsAdsRequestBuilder listAdsAds() {
@@ -585,6 +688,13 @@ public class AsyncAds {
 
     /**
      * List all ads
+     * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsAdsResponse>} - The async response
@@ -600,6 +710,13 @@ public class AsyncAds {
     /**
      * List all assets
      * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsAssetsRequestBuilder listAdsAssets() {
@@ -608,6 +725,13 @@ public class AsyncAds {
 
     /**
      * List all assets
+     * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsAssetsResponse>} - The async response
@@ -623,6 +747,13 @@ public class AsyncAds {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
@@ -631,6 +762,13 @@ public class AsyncAds {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsCampaignsResponse>} - The async response
@@ -646,6 +784,13 @@ public class AsyncAds {
     /**
      * List all creatives
      * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsCreativesRequestBuilder listAdsCreatives() {
@@ -654,6 +799,13 @@ public class AsyncAds {
 
     /**
      * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsCreativesResponse>} - The async response
@@ -669,6 +821,13 @@ public class AsyncAds {
     /**
      * List all groups
      * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsGroupsRequestBuilder listAdsGroups() {
@@ -677,6 +836,13 @@ public class AsyncAds {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
@@ -692,6 +858,13 @@ public class AsyncAds {
     /**
      * List all insertionorders
      * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsInsertionordersRequestBuilder listAdsInsertionorders() {
@@ -700,6 +873,13 @@ public class AsyncAds {
 
     /**
      * List all insertionorders
+     * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsInsertionordersResponse>} - The async response
@@ -715,6 +895,13 @@ public class AsyncAds {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
@@ -723,6 +910,13 @@ public class AsyncAds {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
@@ -738,6 +932,13 @@ public class AsyncAds {
     /**
      * List all promoteds
      * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
@@ -746,6 +947,13 @@ public class AsyncAds {
 
     /**
      * List all promoteds
+     * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsPromotedsResponse>} - The async response
@@ -761,6 +969,13 @@ public class AsyncAds {
     /**
      * List all reports
      * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsReportsRequestBuilder listAdsReports() {
@@ -769,6 +984,13 @@ public class AsyncAds {
 
     /**
      * List all reports
+     * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsReportsResponse>} - The async response
@@ -784,6 +1006,13 @@ public class AsyncAds {
     /**
      * List all targets
      * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsTargetsRequestBuilder listAdsTargets() {
@@ -792,6 +1021,13 @@ public class AsyncAds {
 
     /**
      * List all targets
+     * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsTargetsResponse>} - The async response
@@ -807,6 +1043,9 @@ public class AsyncAds {
     /**
      * Update an ad
      * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchAdsAdRequestBuilder patchAdsAd() {
@@ -815,6 +1054,9 @@ public class AsyncAds {
 
     /**
      * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsAdResponse>} - The async response
@@ -830,6 +1072,9 @@ public class AsyncAds {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
@@ -838,6 +1083,9 @@ public class AsyncAds {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsCampaignResponse>} - The async response
@@ -853,6 +1101,9 @@ public class AsyncAds {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsCreativeRequestBuilder patchAdsCreative() {
@@ -861,6 +1112,9 @@ public class AsyncAds {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsCreativeResponse>} - The async response
@@ -876,6 +1130,9 @@ public class AsyncAds {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsGroupRequestBuilder patchAdsGroup() {
@@ -884,6 +1141,9 @@ public class AsyncAds {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
@@ -899,6 +1159,9 @@ public class AsyncAds {
     /**
      * Update an insertionorder
      * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsInsertionorderRequestBuilder patchAdsInsertionorder() {
@@ -907,6 +1170,9 @@ public class AsyncAds {
 
     /**
      * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsInsertionorderResponse>} - The async response
@@ -922,6 +1188,9 @@ public class AsyncAds {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
@@ -930,6 +1199,9 @@ public class AsyncAds {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
@@ -945,6 +1217,8 @@ public class AsyncAds {
     /**
      * Remove an ad
      * 
+     * <p>Deletes the AdsAd identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsAdRequestBuilder removeAdsAd() {
@@ -953,6 +1227,8 @@ public class AsyncAds {
 
     /**
      * Remove an ad
+     * 
+     * <p>Deletes the AdsAd identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsAdResponse>} - The async response
@@ -968,6 +1244,8 @@ public class AsyncAds {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
@@ -976,6 +1254,8 @@ public class AsyncAds {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsCampaignResponse>} - The async response
@@ -991,6 +1271,8 @@ public class AsyncAds {
     /**
      * Remove a creative
      * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
@@ -999,6 +1281,8 @@ public class AsyncAds {
 
     /**
      * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsCreativeResponse>} - The async response
@@ -1014,6 +1298,8 @@ public class AsyncAds {
     /**
      * Remove a group
      * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsGroupRequestBuilder removeAdsGroup() {
@@ -1022,6 +1308,8 @@ public class AsyncAds {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
@@ -1037,6 +1325,8 @@ public class AsyncAds {
     /**
      * Remove an insertionorder
      * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsInsertionorderRequestBuilder removeAdsInsertionorder() {
@@ -1045,6 +1335,8 @@ public class AsyncAds {
 
     /**
      * Remove an insertionorder
+     * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsInsertionorderResponse>} - The async response
@@ -1060,6 +1352,8 @@ public class AsyncAds {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the AdsOrganization identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
@@ -1068,6 +1362,8 @@ public class AsyncAds {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the AdsOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
@@ -1083,6 +1379,9 @@ public class AsyncAds {
     /**
      * Update an ad
      * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsAdRequestBuilder updateAdsAd() {
@@ -1091,6 +1390,9 @@ public class AsyncAds {
 
     /**
      * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsAdResponse>} - The async response
@@ -1106,6 +1408,9 @@ public class AsyncAds {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
@@ -1114,6 +1419,9 @@ public class AsyncAds {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsCampaignResponse>} - The async response
@@ -1129,6 +1437,9 @@ public class AsyncAds {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
@@ -1137,6 +1448,9 @@ public class AsyncAds {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsCreativeResponse>} - The async response
@@ -1152,6 +1466,9 @@ public class AsyncAds {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsGroupRequestBuilder updateAdsGroup() {
@@ -1160,6 +1477,9 @@ public class AsyncAds {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
@@ -1175,6 +1495,9 @@ public class AsyncAds {
     /**
      * Update an insertionorder
      * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsInsertionorderRequestBuilder updateAdsInsertionorder() {
@@ -1183,6 +1506,9 @@ public class AsyncAds {
 
     /**
      * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsInsertionorderResponse>} - The async response
@@ -1198,6 +1524,9 @@ public class AsyncAds {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
@@ -1206,6 +1535,9 @@ public class AsyncAds {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response

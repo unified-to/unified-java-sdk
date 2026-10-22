@@ -57,6 +57,9 @@ public class AsyncStorage {
     /**
      * Create a file
      * 
+     * <p>Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created StorageFile.
+     * 
      * @return The async call builder
      */
     public CreateStorageFileRequestBuilder createStorageFile() {
@@ -65,6 +68,9 @@ public class AsyncStorage {
 
     /**
      * Create a file
+     * 
+     * <p>Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped
+     * to the provider's API. Returns the created StorageFile.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncStorage {
     /**
      * Retrieve a file
      * 
+     * <p>Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetStorageFileRequestBuilder getStorageFile() {
@@ -88,6 +97,9 @@ public class AsyncStorage {
 
     /**
      * Retrieve a file
+     * 
+     * <p>Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncStorage {
     /**
      * List all files
      * 
+     * <p>Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListStorageFilesRequestBuilder listStorageFiles() {
@@ -111,6 +130,13 @@ public class AsyncStorage {
 
     /**
      * List all files
+     * 
+     * <p>Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncStorage {
     /**
      * Update a file
      * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchStorageFileRequestBuilder patchStorageFile() {
@@ -134,6 +163,9 @@ public class AsyncStorage {
 
     /**
      * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncStorage {
     /**
      * Remove a file
      * 
+     * <p>Deletes the StorageFile identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveStorageFileRequestBuilder removeStorageFile() {
@@ -157,6 +191,8 @@ public class AsyncStorage {
 
     /**
      * Remove a file
+     * 
+     * <p>Deletes the StorageFile identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncStorage {
     /**
      * Update a file
      * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateStorageFileRequestBuilder updateStorageFile() {
@@ -180,6 +219,9 @@ public class AsyncStorage {
 
     /**
      * Update a file
+     * 
+     * <p>Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response

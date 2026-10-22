@@ -79,6 +79,9 @@ public class Collection {
     /**
      * Create a collection
      * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
      * @return The call builder
      */
     public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
@@ -87,6 +90,9 @@ public class Collection {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -101,6 +107,9 @@ public class Collection {
     /**
      * Create a collection
      * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
      * @return The call builder
      */
     public CreateLmsCollectionRequestBuilder createLmsCollection() {
@@ -109,6 +118,9 @@ public class Collection {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -123,6 +135,9 @@ public class Collection {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCommerceCollectionRequestBuilder getCommerceCollection() {
@@ -131,6 +146,9 @@ public class Collection {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -145,6 +163,9 @@ public class Collection {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLmsCollectionRequestBuilder getLmsCollection() {
@@ -153,6 +174,9 @@ public class Collection {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -167,6 +191,13 @@ public class Collection {
     /**
      * List all collections
      * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
@@ -175,6 +206,13 @@ public class Collection {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -189,6 +227,13 @@ public class Collection {
     /**
      * List all collections
      * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLmsCollectionsRequestBuilder listLmsCollections() {
@@ -197,6 +242,13 @@ public class Collection {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -211,6 +263,9 @@ public class Collection {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
@@ -219,6 +274,9 @@ public class Collection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -233,6 +291,9 @@ public class Collection {
     /**
      * Update a collection
      * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchLmsCollectionRequestBuilder patchLmsCollection() {
@@ -241,6 +302,9 @@ public class Collection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -255,6 +319,8 @@ public class Collection {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
@@ -263,6 +329,8 @@ public class Collection {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -277,6 +345,8 @@ public class Collection {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLmsCollectionRequestBuilder removeLmsCollection() {
@@ -285,6 +355,8 @@ public class Collection {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -299,6 +371,9 @@ public class Collection {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
@@ -307,6 +382,9 @@ public class Collection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -321,6 +399,9 @@ public class Collection {
     /**
      * Update a collection
      * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateLmsCollectionRequestBuilder updateLmsCollection() {
@@ -329,6 +410,9 @@ public class Collection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

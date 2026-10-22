@@ -121,6 +121,9 @@ public class AsyncPayment {
     /**
      * Create a link
      * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
      * @return The async call builder
      */
     public CreatePaymentLinkRequestBuilder createPaymentLink() {
@@ -129,6 +132,9 @@ public class AsyncPayment {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
@@ -144,6 +150,9 @@ public class AsyncPayment {
     /**
      * Create a payment
      * 
+     * <p>Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are
+     * mapped to the provider's API. Returns the created PaymentPayment.
+     * 
      * @return The async call builder
      */
     public CreatePaymentPaymentRequestBuilder createPaymentPayment() {
@@ -152,6 +161,9 @@ public class AsyncPayment {
 
     /**
      * Create a payment
+     * 
+     * <p>Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are
+     * mapped to the provider's API. Returns the created PaymentPayment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePaymentPaymentResponse>} - The async response
@@ -167,6 +179,9 @@ public class AsyncPayment {
     /**
      * Create a subscription
      * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
+     * 
      * @return The async call builder
      */
     public CreatePaymentSubscriptionRequestBuilder createPaymentSubscription() {
@@ -175,6 +190,9 @@ public class AsyncPayment {
 
     /**
      * Create a subscription
+     * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePaymentSubscriptionResponse>} - The async response
@@ -190,6 +208,9 @@ public class AsyncPayment {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentLinkRequestBuilder getPaymentLink() {
@@ -198,6 +219,9 @@ public class AsyncPayment {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
@@ -213,6 +237,9 @@ public class AsyncPayment {
     /**
      * Retrieve a payment
      * 
+     * <p>Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentPaymentRequestBuilder getPaymentPayment() {
@@ -221,6 +248,9 @@ public class AsyncPayment {
 
     /**
      * Retrieve a payment
+     * 
+     * <p>Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentPaymentResponse>} - The async response
@@ -236,6 +266,9 @@ public class AsyncPayment {
     /**
      * Retrieve a payout
      * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentPayoutRequestBuilder getPaymentPayout() {
@@ -244,6 +277,9 @@ public class AsyncPayment {
 
     /**
      * Retrieve a payout
+     * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentPayoutResponse>} - The async response
@@ -259,6 +295,9 @@ public class AsyncPayment {
     /**
      * Retrieve a refund
      * 
+     * <p>Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentRefundRequestBuilder getPaymentRefund() {
@@ -267,6 +306,9 @@ public class AsyncPayment {
 
     /**
      * Retrieve a refund
+     * 
+     * <p>Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentRefundResponse>} - The async response
@@ -282,6 +324,9 @@ public class AsyncPayment {
     /**
      * Retrieve a subscription
      * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentSubscriptionRequestBuilder getPaymentSubscription() {
@@ -290,6 +335,9 @@ public class AsyncPayment {
 
     /**
      * Retrieve a subscription
+     * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentSubscriptionResponse>} - The async response
@@ -305,6 +353,13 @@ public class AsyncPayment {
     /**
      * List all links
      * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentLinksRequestBuilder listPaymentLinks() {
@@ -313,6 +368,13 @@ public class AsyncPayment {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
@@ -328,6 +390,13 @@ public class AsyncPayment {
     /**
      * List all payments
      * 
+     * <p>Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentPaymentsRequestBuilder listPaymentPayments() {
@@ -336,6 +405,13 @@ public class AsyncPayment {
 
     /**
      * List all payments
+     * 
+     * <p>Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentPaymentsResponse>} - The async response
@@ -351,6 +427,13 @@ public class AsyncPayment {
     /**
      * List all payouts
      * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
@@ -359,6 +442,13 @@ public class AsyncPayment {
 
     /**
      * List all payouts
+     * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentPayoutsResponse>} - The async response
@@ -374,6 +464,13 @@ public class AsyncPayment {
     /**
      * List all refunds
      * 
+     * <p>Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
@@ -382,6 +479,13 @@ public class AsyncPayment {
 
     /**
      * List all refunds
+     * 
+     * <p>Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentRefundsResponse>} - The async response
@@ -397,6 +501,13 @@ public class AsyncPayment {
     /**
      * List all subscriptions
      * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentSubscriptionsRequestBuilder listPaymentSubscriptions() {
@@ -405,6 +516,13 @@ public class AsyncPayment {
 
     /**
      * List all subscriptions
+     * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentSubscriptionsResponse>} - The async response
@@ -420,6 +538,9 @@ public class AsyncPayment {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchPaymentLinkRequestBuilder patchPaymentLink() {
@@ -428,6 +549,9 @@ public class AsyncPayment {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
@@ -443,6 +567,9 @@ public class AsyncPayment {
     /**
      * Update a payment
      * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchPaymentPaymentRequestBuilder patchPaymentPayment() {
@@ -451,6 +578,9 @@ public class AsyncPayment {
 
     /**
      * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPaymentPaymentResponse>} - The async response
@@ -466,6 +596,9 @@ public class AsyncPayment {
     /**
      * Update a subscription
      * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchPaymentSubscriptionRequestBuilder patchPaymentSubscription() {
@@ -474,6 +607,9 @@ public class AsyncPayment {
 
     /**
      * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPaymentSubscriptionResponse>} - The async response
@@ -489,6 +625,8 @@ public class AsyncPayment {
     /**
      * Remove a link
      * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemovePaymentLinkRequestBuilder removePaymentLink() {
@@ -497,6 +635,8 @@ public class AsyncPayment {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
@@ -512,6 +652,8 @@ public class AsyncPayment {
     /**
      * Remove a payment
      * 
+     * <p>Deletes the PaymentPayment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemovePaymentPaymentRequestBuilder removePaymentPayment() {
@@ -520,6 +662,8 @@ public class AsyncPayment {
 
     /**
      * Remove a payment
+     * 
+     * <p>Deletes the PaymentPayment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePaymentPaymentResponse>} - The async response
@@ -535,6 +679,8 @@ public class AsyncPayment {
     /**
      * Remove a subscription
      * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemovePaymentSubscriptionRequestBuilder removePaymentSubscription() {
@@ -543,6 +689,8 @@ public class AsyncPayment {
 
     /**
      * Remove a subscription
+     * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePaymentSubscriptionResponse>} - The async response
@@ -558,6 +706,9 @@ public class AsyncPayment {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
@@ -566,6 +717,9 @@ public class AsyncPayment {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
@@ -581,6 +735,9 @@ public class AsyncPayment {
     /**
      * Update a payment
      * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdatePaymentPaymentRequestBuilder updatePaymentPayment() {
@@ -589,6 +746,9 @@ public class AsyncPayment {
 
     /**
      * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePaymentPaymentResponse>} - The async response
@@ -604,6 +764,9 @@ public class AsyncPayment {
     /**
      * Update a subscription
      * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdatePaymentSubscriptionRequestBuilder updatePaymentSubscription() {
@@ -612,6 +775,9 @@ public class AsyncPayment {
 
     /**
      * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePaymentSubscriptionResponse>} - The async response

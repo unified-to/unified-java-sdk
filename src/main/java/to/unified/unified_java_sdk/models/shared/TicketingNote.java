@@ -31,7 +31,9 @@ public class TicketingNote {
     @JsonProperty("customer_id")
     private String customerId;
 
-
+    /**
+     * The note's text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
@@ -51,7 +53,9 @@ public class TicketingNote {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The ID of the ticket the note is added to (a TicketingTicket ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ticket_id")
     private String ticketId;
@@ -109,6 +113,9 @@ public class TicketingNote {
         return Optional.ofNullable(this.customerId);
     }
 
+    /**
+     * The note's text
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -125,6 +132,9 @@ public class TicketingNote {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The ID of the ticket the note is added to (a TicketingTicket ID)
+     */
     public Optional<String> ticketId() {
         return Optional.ofNullable(this.ticketId);
     }
@@ -163,6 +173,9 @@ public class TicketingNote {
     }
 
 
+    /**
+     * The note's text
+     */
     public TicketingNote withDescription(@Nullable String description) {
         this.description = description;
         return this;
@@ -187,6 +200,9 @@ public class TicketingNote {
     }
 
 
+    /**
+     * The ID of the ticket the note is added to (a TicketingTicket ID)
+     */
     public TicketingNote withTicketId(@Nullable String ticketId) {
         this.ticketId = ticketId;
         return this;
@@ -292,6 +308,9 @@ public class TicketingNote {
             return this;
         }
 
+        /**
+         * The note's text
+         */
         public Builder description(@Nullable String description) {
             this.description = description;
             return this;
@@ -312,6 +331,9 @@ public class TicketingNote {
             return this;
         }
 
+        /**
+         * The ID of the ticket the note is added to (a TicketingTicket ID)
+         */
         public Builder ticketId(@Nullable String ticketId) {
             this.ticketId = ticketId;
             return this;

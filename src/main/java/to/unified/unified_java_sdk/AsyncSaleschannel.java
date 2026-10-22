@@ -57,6 +57,9 @@ public class AsyncSaleschannel {
     /**
      * Create a saleschannel
      * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     * 
      * @return The async call builder
      */
     public CreateCommerceSaleschannelRequestBuilder createCommerceSaleschannel() {
@@ -65,6 +68,9 @@ public class AsyncSaleschannel {
 
     /**
      * Create a saleschannel
+     * 
+     * <p>Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceSaleschannel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncSaleschannel {
     /**
      * Retrieve a saleschannel
      * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceSaleschannelRequestBuilder getCommerceSaleschannel() {
@@ -88,6 +97,9 @@ public class AsyncSaleschannel {
 
     /**
      * Retrieve a saleschannel
+     * 
+     * <p>Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncSaleschannel {
     /**
      * List all saleschannels
      * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceSaleschannelsRequestBuilder listCommerceSaleschannels() {
@@ -111,6 +130,13 @@ public class AsyncSaleschannel {
 
     /**
      * List all saleschannels
+     * 
+     * <p>Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncSaleschannel {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceSaleschannelRequestBuilder patchCommerceSaleschannel() {
@@ -134,6 +163,9 @@ public class AsyncSaleschannel {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncSaleschannel {
     /**
      * Remove a saleschannel
      * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceSaleschannelRequestBuilder removeCommerceSaleschannel() {
@@ -157,6 +191,8 @@ public class AsyncSaleschannel {
 
     /**
      * Remove a saleschannel
+     * 
+     * <p>Deletes the CommerceSaleschannel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncSaleschannel {
     /**
      * Update a saleschannel
      * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceSaleschannelRequestBuilder updateCommerceSaleschannel() {
@@ -180,6 +219,9 @@ public class AsyncSaleschannel {
 
     /**
      * Update a saleschannel
+     * 
+     * <p>Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response

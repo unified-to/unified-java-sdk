@@ -13,7 +13,7 @@
 
 ## createAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("8dfc806c-bfc2-4fc3-a886-2e6570206ba2")
+                            .id("55974ccd-ac14-401c-b948-487fcef3a1c4")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("21594bfb-5b0e-4b0e-8b98-18ccba55312d")
+                            .id("5f26f813-19f3-4a14-8297-1c3ee1378b60")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -62,7 +62,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("bba0dc2c-5ad1-436e-a5d6-f6a31bfa551f")
+                    .id("75b6f5cd-7c51-41d5-a6ef-4271aa6e39d8")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -78,7 +78,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.992Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.490Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")
@@ -113,7 +113,7 @@ public class Application {
 
 ## getAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ public class Application {
 
 ## listAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -228,7 +228,7 @@ public class Application {
 
 ## patchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -259,13 +259,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("08b49dc4-8cdc-478a-aeae-f33829f57e16")
+                            .id("d77fdfb3-fd28-49b0-ab7e-a688cb81da0f")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("4a7247cd-eb8a-439e-a8f3-2509e1b65511")
+                            .id("af6e1baa-6bce-4e63-bf40-ecb99e3b7a0b")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -277,7 +277,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("590c99b0-b840-48b1-9596-4e22a418c311")
+                    .id("28bdc4c8-433d-46bd-a48d-99e8f98350ac")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -293,7 +293,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.999Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.496Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")
@@ -329,7 +329,7 @@ public class Application {
 
 ## removeAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ public class Application {
 
 ## updateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -416,13 +416,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://puny-foodstuffs.name")
-                            .id("08b49dc4-8cdc-478a-aeae-f33829f57e16")
+                            .id("d77fdfb3-fd28-49b0-ab7e-a688cb81da0f")
                             .mimeType("application/pdf")
                             .name("BILL-2466.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://grimy-characterization.net")
-                            .id("4a7247cd-eb8a-439e-a8f3-2509e1b65511")
+                            .id("af6e1baa-6bce-4e63-bf40-ecb99e3b7a0b")
                             .mimeType("application/pdf")
                             .name("BILL-2466-1.pdf")
                             .build()))
@@ -434,7 +434,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2019-09-07T23:03:14.104Z"))
                     .extendedNotes(List.of())
-                    .id("590c99b0-b840-48b1-9596-4e22a418c311")
+                    .id("28bdc4c8-433d-46bd-a48d-99e8f98350ac")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Admiratio deporto tutamen cilicium infit amissio ante demulceo.")
@@ -450,7 +450,7 @@ public class Application {
                     .taxAmount(0d)
                     .term(Term.NET90)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2020-06-01T05:48:23.999Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-06-01T08:34:06.496Z"))
                     .url("https://cluttered-importance.org/bills/BILL-2466")
                     .build())
                 .connectionId("<id>")

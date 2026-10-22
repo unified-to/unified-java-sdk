@@ -13,7 +13,7 @@
 
 ## createCrmPipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("81963c29-4c6b-4233-8f3f-61d8eea21189")
+                    .id("b7d797ed-3898-4dec-9d24-70be40ea4796")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -54,12 +54,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("c7591f42-15d9-4165-947e-7368cf0e25ba")
+                            .id("57405dfd-8b69-468f-9a3a-3da3211831b7")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.024Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.788Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.557Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.168Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## getCrmPipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ public class Application {
 
 ## listCrmPipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ public class Application {
 
 ## patchCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -239,7 +239,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("269a8fb5-425c-4efa-ae2e-50cece2038b9")
+                    .id("b9b22715-393f-4b7a-b625-7a0b8f968787")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -249,12 +249,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("a58adc67-0cf0-4cd6-8da7-440e9e0f2b99")
+                            .id("9085b7e1-8da1-4187-999d-38126e65cda4")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.038Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.801Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.182Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -289,7 +289,7 @@ public class Application {
 
 ## removeCrmPipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -345,7 +345,7 @@ public class Application {
 
 ## updateCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                     .dealProbability(99d)
                     .displayOrder(8d)
-                    .id("269a8fb5-425c-4efa-ae2e-50cece2038b9")
+                    .id("b9b22715-393f-4b7a-b625-7a0b8f968787")
                     .isActive(true)
                     .metadata(List.of())
                     .name("Small Steel Bacon")
@@ -386,12 +386,12 @@ public class Application {
                             .createdAt(OffsetDateTime.parse("2022-12-28T13:45:38.446Z"))
                             .dealProbability(84d)
                             .displayOrder(72d)
-                            .id("a58adc67-0cf0-4cd6-8da7-440e9e0f2b99")
+                            .id("9085b7e1-8da1-4187-999d-38126e65cda4")
                             .isClosed(true)
                             .name("Veniam.")
-                            .updatedAt(OffsetDateTime.parse("2025-10-10T12:30:01.038Z"))
+                            .updatedAt(OffsetDateTime.parse("2025-10-11T06:42:49.801Z"))
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-11-01T05:56:22.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-02T00:32:32.182Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

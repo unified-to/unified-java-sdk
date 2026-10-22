@@ -67,7 +67,9 @@ public class StorageFile {
     @JsonProperty("mime_type")
     private String mimeType;
 
-
+    /**
+     * The file or folder name, including the file's extension
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -87,7 +89,9 @@ public class StorageFile {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
-
+    /**
+     * The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     private List<StorageReference> references;
@@ -104,7 +108,9 @@ public class StorageFile {
     @JsonProperty("tags")
     private List<String> tags;
 
-
+    /**
+     * Whether this is a file or a folder
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private StorageFileType type;
@@ -229,6 +235,9 @@ public class StorageFile {
         return Optional.ofNullable(this.mimeType);
     }
 
+    /**
+     * The file or folder name, including the file's extension
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -245,6 +254,9 @@ public class StorageFile {
         return Optional.ofNullable(this.raw);
     }
 
+    /**
+     * The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
+     */
     public Optional<List<StorageReference>> references() {
         return Optional.ofNullable(this.references);
     }
@@ -260,6 +272,9 @@ public class StorageFile {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * Whether this is a file or a folder
+     */
     public Optional<StorageFileType> type() {
         return Optional.ofNullable(this.type);
     }
@@ -349,6 +364,9 @@ public class StorageFile {
     }
 
 
+    /**
+     * The file or folder name, including the file's extension
+     */
     public StorageFile withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -373,6 +391,9 @@ public class StorageFile {
     }
 
 
+    /**
+     * The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
+     */
     public StorageFile withReferences(@Nullable List<StorageReference> references) {
         this.references = references;
         return this;
@@ -394,6 +415,9 @@ public class StorageFile {
     }
 
 
+    /**
+     * Whether this is a file or a folder
+     */
     public StorageFile withType(@Nullable StorageFileType type) {
         this.type = type;
         return this;
@@ -596,6 +620,9 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * The file or folder name, including the file's extension
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -616,6 +643,9 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
+         */
         public Builder references(@Nullable List<StorageReference> references) {
             this.references = references;
             return this;
@@ -634,6 +664,9 @@ public class StorageFile {
             return this;
         }
 
+        /**
+         * Whether this is a file or a folder
+         */
         public Builder type(@Nullable StorageFileType type) {
             this.type = type;
             return this;

@@ -35,7 +35,10 @@ public class DatastoreRecord {
     @JsonProperty("database_id")
     private String databaseId;
 
-
+    /**
+     * The record's values, keyed by the table's field (column) names; each value is a typed value object
+     * (e.g. { "string": "Acme" } or { "number": 3 })
+     */
     @JsonProperty("fields")
     private Map<String, DatastoreFieldValue> fields;
 
@@ -118,6 +121,10 @@ public class DatastoreRecord {
         return Optional.ofNullable(this.databaseId);
     }
 
+    /**
+     * The record's values, keyed by the table's field (column) names; each value is a typed value object
+     * (e.g. { "string": "Acme" } or { "number": 3 })
+     */
     public Map<String, DatastoreFieldValue> fields() {
         return this.fields;
     }
@@ -175,6 +182,10 @@ public class DatastoreRecord {
     }
 
 
+    /**
+     * The record's values, keyed by the table's field (column) names; each value is a typed value object
+     * (e.g. { "string": "Acme" } or { "number": 3 })
+     */
     public DatastoreRecord withFields(@Nonnull Map<String, DatastoreFieldValue> fields) {
         this.fields = Utils.checkNotNull(fields, "fields");
         return this;
@@ -307,6 +318,10 @@ public class DatastoreRecord {
             return this;
         }
 
+        /**
+         * The record's values, keyed by the table's field (column) names; each value is a typed value object
+         * (e.g. { "string": "Acme" } or { "number": 3 })
+         */
         public Builder fields(@Nonnull Map<String, DatastoreFieldValue> fields) {
             this.fields = Utils.checkNotNull(fields, "fields");
             return this;

@@ -13,7 +13,7 @@
 
 ## createLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -54,7 +54,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("3b0ba57f-f43a-49b7-80c9-cd9ce12fd402")
+                    .id("50bc036d-fe80-4956-8a29-ebff8d31808e")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -72,7 +72,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.934Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.279Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -106,7 +106,7 @@ public class Application {
 
 ## getLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ public class Application {
 
 ## listLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ public class Application {
 
 ## patchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("19349d55-6d89-455e-bd73-378718c96028")
+                    .id("49f603b2-dc8b-4b0d-87b0-4388cbca7d59")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -280,7 +280,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.941Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.287Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -315,7 +315,7 @@ public class Application {
 
 ## removeLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -371,7 +371,7 @@ public class Application {
 
 ## updateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("19349d55-6d89-455e-bd73-378718c96028")
+                    .id("49f603b2-dc8b-4b0d-87b0-4388cbca7d59")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -430,7 +430,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.941Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.287Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

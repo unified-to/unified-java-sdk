@@ -55,6 +55,9 @@ public class Pipeline {
     /**
      * Create a pipeline
      * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
+     * 
      * @return The call builder
      */
     public CreateCrmPipelineRequestBuilder createCrmPipeline() {
@@ -63,6 +66,9 @@ public class Pipeline {
 
     /**
      * Create a pipeline
+     * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Pipeline {
     /**
      * Retrieve a pipeline
      * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmPipelineRequestBuilder getCrmPipeline() {
@@ -85,6 +94,9 @@ public class Pipeline {
 
     /**
      * Retrieve a pipeline
+     * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Pipeline {
     /**
      * List all pipelines
      * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmPipelinesRequestBuilder listCrmPipelines() {
@@ -107,6 +126,13 @@ public class Pipeline {
 
     /**
      * List all pipelines
+     * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Pipeline {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
@@ -129,6 +158,9 @@ public class Pipeline {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Pipeline {
     /**
      * Remove a pipeline
      * 
+     * <p>Deletes the CrmPipeline identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
@@ -151,6 +185,8 @@ public class Pipeline {
 
     /**
      * Remove a pipeline
+     * 
+     * <p>Deletes the CrmPipeline identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Pipeline {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
@@ -173,6 +212,9 @@ public class Pipeline {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

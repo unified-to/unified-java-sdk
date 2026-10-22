@@ -47,7 +47,9 @@ public class DatastoreDatabase {
     @JsonProperty("metadata")
     private List<DatastoreMetadata> metadata;
 
-
+    /**
+     * The database's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -135,6 +137,9 @@ public class DatastoreDatabase {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The database's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -200,6 +205,9 @@ public class DatastoreDatabase {
     }
 
 
+    /**
+     * The database's name
+     */
     public DatastoreDatabase withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -344,6 +352,9 @@ public class DatastoreDatabase {
             return this;
         }
 
+        /**
+         * The database's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

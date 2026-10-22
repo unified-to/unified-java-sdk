@@ -17,7 +17,7 @@
 
 ## createAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("f47d4132-999a-4af4-9f65-951ef89a026a")
+                    .id("8f6923e4-40bb-43a4-bc5e-66ecc88bed70")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -73,7 +73,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.032Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.926Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -142,7 +142,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("de1fd2e0-08b8-45f1-b065-a4761a2765e9")
+                    .id("4b5a7238-016a-4d9e-b8f6-8906b7c15422")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -154,7 +154,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.914Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -188,7 +188,7 @@ public class Application {
 
 ## getAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -361,7 +361,7 @@ public class Application {
 
 ## patchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -392,7 +392,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c9dc4d3d-252c-44a2-9322-36819bb1ea5a")
+                    .id("00ab58e0-68b6-41fc-bdc3-98098e36b057")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -417,7 +417,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.940Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -487,7 +487,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("88fca071-5f4f-4a96-a08b-afcf8efad7dc")
+                    .id("5cae9624-cc12-4fbc-8b0d-2143e3d93baa")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -499,7 +499,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.919Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -590,7 +590,7 @@ public class Application {
 
 ## updateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -621,7 +621,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c9dc4d3d-252c-44a2-9322-36819bb1ea5a")
+                    .id("00ab58e0-68b6-41fc-bdc3-98098e36b057")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -646,7 +646,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.940Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -716,7 +716,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("88fca071-5f4f-4a96-a08b-afcf8efad7dc")
+                    .id("5cae9624-cc12-4fbc-8b0d-2143e3d93baa")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -728,7 +728,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-25T09:14:59.919Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-25T14:39:27.852Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

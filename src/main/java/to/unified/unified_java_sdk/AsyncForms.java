@@ -65,6 +65,9 @@ public class AsyncForms {
     /**
      * Create a form
      * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
+     * 
      * @return The async call builder
      */
     public CreateFormsFormRequestBuilder createFormsForm() {
@@ -73,6 +76,9 @@ public class AsyncForms {
 
     /**
      * Create a form
+     * 
+     * <p>Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to
+     * the provider's API. Returns the created FormsForm.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateFormsFormResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncForms {
     /**
      * Retrieve a form
      * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetFormsFormRequestBuilder getFormsForm() {
@@ -96,6 +105,9 @@ public class AsyncForms {
 
     /**
      * Retrieve a form
+     * 
+     * <p>Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetFormsFormResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncForms {
     /**
      * Retrieve a submission
      * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetFormsSubmissionRequestBuilder getFormsSubmission() {
@@ -119,6 +134,9 @@ public class AsyncForms {
 
     /**
      * Retrieve a submission
+     * 
+     * <p>Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetFormsSubmissionResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncForms {
     /**
      * List all forms
      * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListFormsFormsRequestBuilder listFormsForms() {
@@ -142,6 +167,13 @@ public class AsyncForms {
 
     /**
      * List all forms
+     * 
+     * <p>Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListFormsFormsResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncForms {
     /**
      * List all submissions
      * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListFormsSubmissionsRequestBuilder listFormsSubmissions() {
@@ -165,6 +204,13 @@ public class AsyncForms {
 
     /**
      * List all submissions
+     * 
+     * <p>Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListFormsSubmissionsResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncForms {
     /**
      * Update a form
      * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchFormsFormRequestBuilder patchFormsForm() {
@@ -188,6 +237,9 @@ public class AsyncForms {
 
     /**
      * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchFormsFormResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncForms {
     /**
      * Remove a form
      * 
+     * <p>Deletes the FormsForm identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveFormsFormRequestBuilder removeFormsForm() {
@@ -211,6 +265,8 @@ public class AsyncForms {
 
     /**
      * Remove a form
+     * 
+     * <p>Deletes the FormsForm identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveFormsFormResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncForms {
     /**
      * Update a form
      * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateFormsFormRequestBuilder updateFormsForm() {
@@ -234,6 +293,9 @@ public class AsyncForms {
 
     /**
      * Update a form
+     * 
+     * <p>Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateFormsFormResponse>} - The async response

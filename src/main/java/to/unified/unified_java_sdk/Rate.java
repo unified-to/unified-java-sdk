@@ -35,6 +35,9 @@ public class Rate {
     /**
      * Create a rate
      * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
+     * 
      * @return The call builder
      */
     public CreateShippingRateRequestBuilder createShippingRate() {
@@ -43,6 +46,9 @@ public class Rate {
 
     /**
      * Create a rate
+     * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

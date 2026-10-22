@@ -25,7 +25,7 @@
 
 ## createAnalyticsEvent
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -55,13 +55,13 @@ public class Application {
                 .analyticsEvent(AnalyticsEvent.builder()
                     .createdAt(OffsetDateTime.parse("2023-06-21T03:13:22.954Z"))
                     .eventType(EventType.SCREEN_VIEW)
-                    .id("f62d9429-58c9-4a55-b01f-1fde2b5d92b2")
+                    .id("3b815b70-3e0a-4459-8f69-87e075a4d6a5")
                     .metadata(Map.ofEntries(
                         Map.entry("key", PropertyAnalyticsEventMetadata.builder()
                             .build())))
                     .name("page_view")
                     .pageUrl("https://golden-carboxyl.biz")
-                    .updatedAt(OffsetDateTime.parse("2023-09-24T16:23:13.268Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T18:20:36.849Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -95,7 +95,7 @@ public class Application {
 
 ## createAnalyticsProperty
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -125,10 +125,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("13d9f823-4a32-4eab-9f75-7171a274ebbf")
+                    .id("685f52bc-26ff-49a6-825b-68e63a8dec29")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -162,7 +162,7 @@ public class Application {
 
 ## createAnalyticsVisitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -193,13 +193,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("0056ddaa-7535-4f64-b3d2-8d426eb3cb75")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.355Z"))
+                    .id("c1a0e398-5c4f-464f-8a79-841d13567b41")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.972Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.323Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.146Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -233,7 +233,7 @@ public class Application {
 
 ## getAnalyticsEvent
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ public class Application {
 
 ## getAnalyticsProperty
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ public class Application {
 
 ## getAnalyticsSession
 
-Retrieve a session
+Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -407,7 +407,7 @@ public class Application {
 
 ## getAnalyticsVisitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -465,7 +465,7 @@ public class Application {
 
 ## listAnalyticsEvents
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -522,7 +522,7 @@ public class Application {
 
 ## listAnalyticsProperties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -579,7 +579,7 @@ public class Application {
 
 ## listAnalyticsReports
 
-List all reports
+Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -636,7 +636,7 @@ public class Application {
 
 ## listAnalyticsSessions
 
-List all sessions
+Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -693,7 +693,7 @@ public class Application {
 
 ## listAnalyticsVisitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -750,7 +750,7 @@ public class Application {
 
 ## patchAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -780,10 +780,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("4fd2a490-5b22-4d61-ab41-ecc1672384be")
+                    .id("39f93b38-d0dd-489e-a9a3-bb83a220d0dc")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -818,7 +818,7 @@ public class Application {
 
 ## patchAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -849,13 +849,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("2410711c-2c4b-4d20-aee1-08b709b64087")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.366Z"))
+                    .id("f8cedf29-792a-423a-aa05-e49c18f051d4")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.984Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.159Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -890,7 +890,7 @@ public class Application {
 
 ## removeAnalyticsProperty
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -946,7 +946,7 @@ public class Application {
 
 ## removeAnalyticsVisitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -1002,7 +1002,7 @@ public class Application {
 
 ## updateAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -1032,10 +1032,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("4fd2a490-5b22-4d61-ab41-ecc1672384be")
+                    .id("39f93b38-d0dd-489e-a9a3-bb83a220d0dc")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1070,7 +1070,7 @@ public class Application {
 
 ## updateAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -1101,13 +1101,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("2410711c-2c4b-4d20-aee1-08b709b64087")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.366Z"))
+                    .id("f8cedf29-792a-423a-aa05-e49c18f051d4")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.984Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.159Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

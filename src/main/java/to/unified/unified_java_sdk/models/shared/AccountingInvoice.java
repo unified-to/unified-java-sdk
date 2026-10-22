@@ -105,7 +105,9 @@ public class AccountingInvoice {
     @JsonProperty("is_inclusive_of_tax")
     private Boolean isInclusiveOfTax;
 
-
+    /**
+     * The invoice's line items: what is billed, with the quantity, price and amount of each
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
     private List<AccountingLineitem> lineitems;
@@ -446,6 +448,9 @@ public class AccountingInvoice {
         return Optional.ofNullable(this.isInclusiveOfTax);
     }
 
+    /**
+     * The invoice's line items: what is billed, with the quantity, price and amount of each
+     */
     public Optional<List<AccountingLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
     }
@@ -702,6 +707,9 @@ public class AccountingInvoice {
     }
 
 
+    /**
+     * The invoice's line items: what is billed, with the quantity, price and amount of each
+     */
     public AccountingInvoice withLineitems(@Nullable List<AccountingLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
@@ -1200,6 +1208,9 @@ public class AccountingInvoice {
             return this;
         }
 
+        /**
+         * The invoice's line items: what is billed, with the quantity, price and amount of each
+         */
         public Builder lineitems(@Nullable List<AccountingLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;

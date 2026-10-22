@@ -19,7 +19,7 @@
 
 ## createAccountingExpense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -50,13 +50,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("575f62f0-3628-48c6-80a9-05c6b4ae9c2b")
+                            .id("f515ff69-9c02-45f7-89b1-74007228cb69")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("2802f6de-9129-41b9-b0c0-117cb030df73")
+                            .id("aeede0b5-2b8d-41d9-bd85-813073355552")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -64,10 +64,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("b2eb4562-d004-4206-8455-c8da29897a11")
+                    .id("a3f4e533-b569-4939-b246-3d9663d1a7b7")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("de034837-53c0-457e-bb7e-9fcff7e16504")
+                            .id("947dc21a-0b5c-4bc2-8164-bd18beaa2667")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -75,7 +75,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("446027ba-b98e-4938-99d3-bfd864783ff4")
+                            .id("e5c1f775-c40e-4892-b089-8ee1af7942c1")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -83,7 +83,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("bce31a18-98b4-4629-9344-df0adac3c24e")
+                            .id("34eca38e-bc2e-4af8-b835-9664188515c9")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -92,7 +92,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("15da7132-b910-45fb-b329-c664b0ce7f79")
+                            .id("9fa9c199-2335-48bc-be1e-2cac606537fe")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -100,7 +100,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("68b0a867-3c28-4dee-ae17-187ab80d1e5a")
+                            .id("231ae283-9730-4c42-8338-6f0070ac9011")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -115,7 +115,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.454Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.236Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -149,7 +149,7 @@ public class Application {
 
 ## createLegalExpense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("7226121a-3015-4ea6-8474-2a10f7605b0e")
+                    .id("93e890d8-e66f-479d-9ec6-fb53d2430682")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -189,7 +189,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.236Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.919Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -223,7 +223,7 @@ public class Application {
 
 ## getAccountingExpense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ public class Application {
 
 ## getLegalExpense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ public class Application {
 
 ## listAccountingExpenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -396,7 +396,7 @@ public class Application {
 
 ## listLegalExpenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ public class Application {
 
 ## patchAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -484,13 +484,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("c82fca74-8d49-4c4f-a455-05e61693d578")
+                            .id("38787df5-7d1e-4012-8f30-33a53be9591b")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("9e0066d8-c229-4314-8825-22fdc48bfe8e")
+                            .id("2c816ee4-bcf8-47b8-99a7-8491f962bfb7")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -498,10 +498,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("c88ad427-510a-4813-ab28-b75fc23b72d0")
+                    .id("03d8d504-c36d-43b8-a7c8-4160e543fc7a")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("969e8636-12d2-4dcd-8ca8-a1bbc8cb2a2b")
+                            .id("d1ce435f-521b-4434-a782-12753bb24d6e")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -509,7 +509,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("925c2572-9f5d-4232-bd4b-561b25ca4c5e")
+                            .id("a57827d4-c90c-449e-bcd7-cfb55dd4d424")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -517,7 +517,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("29dfa075-c339-4136-a3a8-d83da7260587")
+                            .id("9aa820ab-f47c-4621-8227-20c31d816895")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -526,7 +526,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("54281082-b2c0-4e00-8a72-7395d0e72e82")
+                            .id("d9fb1392-9cc3-47b9-88b5-e5546515ffe1")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -534,7 +534,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("f134463a-1d08-4393-884e-2f7715a0ba1a")
+                            .id("508be7e8-a025-4e80-8042-ed47866315c2")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -549,7 +549,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.455Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -584,7 +584,7 @@ public class Application {
 
 ## patchLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -616,7 +616,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("860823ed-6ffe-436d-b897-db11369ec962")
+                    .id("2803c4a2-1772-42cf-aa26-81ee298b9f1a")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -624,7 +624,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.928Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -659,7 +659,7 @@ public class Application {
 
 ## removeAccountingExpense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -715,7 +715,7 @@ public class Application {
 
 ## removeLegalExpense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -771,7 +771,7 @@ public class Application {
 
 ## updateAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -802,13 +802,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://rubbery-couch.biz/")
-                            .id("c82fca74-8d49-4c4f-a455-05e61693d578")
+                            .id("38787df5-7d1e-4012-8f30-33a53be9591b")
                             .mimeType("application/pdf")
                             .name("receipt-9696.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://appropriate-smog.biz/")
-                            .id("9e0066d8-c229-4314-8825-22fdc48bfe8e")
+                            .id("2c816ee4-bcf8-47b8-99a7-8491f962bfb7")
                             .mimeType("application/pdf")
                             .name("receipt-9696-1.pdf")
                             .build()))
@@ -816,10 +816,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-06-11T03:39:37.305Z"))
                     .currency("GBP")
                     .externalNumber("EXP-38303")
-                    .id("c88ad427-510a-4813-ab28-b75fc23b72d0")
+                    .id("03d8d504-c36d-43b8-a7c8-4160e543fc7a")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("969e8636-12d2-4dcd-8ca8-a1bbc8cb2a2b")
+                            .id("d1ce435f-521b-4434-a782-12753bb24d6e")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(364.74)
@@ -827,7 +827,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("925c2572-9f5d-4232-bd4b-561b25ca4c5e")
+                            .id("a57827d4-c90c-449e-bcd7-cfb55dd4d424")
                             .itemName("Client dinner")
                             .taxAmount(0d)
                             .totalAmount(258.35)
@@ -835,7 +835,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("29dfa075-c339-4136-a3a8-d83da7260587")
+                            .id("9aa820ab-f47c-4621-8227-20c31d816895")
                             .itemName("Conference ticket")
                             .notes("Casus umquam conicio cinis demitto sint.")
                             .taxAmount(0d)
@@ -844,7 +844,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("54281082-b2c0-4e00-8a72-7395d0e72e82")
+                            .id("d9fb1392-9cc3-47b9-88b5-e5546515ffe1")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(157.04)
@@ -852,7 +852,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("f134463a-1d08-4393-884e-2f7715a0ba1a")
+                            .id("508be7e8-a025-4e80-8042-ed47866315c2")
                             .itemName("Hotel")
                             .taxAmount(0d)
                             .totalAmount(164.02)
@@ -867,7 +867,7 @@ public class Application {
                     .taxAmount(0d)
                     .totalAmount(972.29)
                     .type(AccountingExpenseType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2020-09-02T07:17:16.455Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-09-02T08:10:50.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -902,7 +902,7 @@ public class Application {
 
 ## updateLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -934,7 +934,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .currency("MVR")
                     .description("Temporibus agnitio sui.")
-                    .id("860823ed-6ffe-436d-b897-db11369ec962")
+                    .id("2803c4a2-1772-42cf-aa26-81ee298b9f1a")
                     .incurredAt(OffsetDateTime.parse("2020-11-08T00:41:42.356Z"))
                     .isBilled(false)
                     .metadata(List.of())
@@ -942,7 +942,7 @@ public class Application {
                     .quantity(3d)
                     .totalAmount(300d)
                     .type(LegalExpenseType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2024-03-30T23:22:22.243Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-31T13:35:29.928Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

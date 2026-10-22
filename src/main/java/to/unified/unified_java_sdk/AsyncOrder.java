@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import jakarta.annotation.Nonnull;
+import java.lang.Deprecated;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAssessmentOrderRequest;
@@ -73,8 +74,13 @@ public class AsyncOrder {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CreateAccountingOrderRequestBuilder createAccountingOrder() {
         return new CreateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -82,9 +88,14 @@ public class AsyncOrder {
     /**
      * Create an order
      * 
+     * <p>Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingOrder.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Async(sdkConfiguration, _headers);
@@ -96,6 +107,9 @@ public class AsyncOrder {
     /**
      * Create an order
      * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
+     * 
      * @return The async call builder
      */
     public CreateAssessmentOrderRequestBuilder createAssessmentOrder() {
@@ -104,6 +118,9 @@ public class AsyncOrder {
 
     /**
      * Create an order
+     * 
+     * <p>Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are
+     * mapped to the provider's API. Returns the created AssessmentOrder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAssessmentOrderResponse>} - The async response
@@ -119,8 +136,13 @@ public class AsyncOrder {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public GetAccountingOrderRequestBuilder getAccountingOrder() {
         return new GetAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -128,9 +150,14 @@ public class AsyncOrder {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Async(sdkConfiguration, _headers);
@@ -142,6 +169,9 @@ public class AsyncOrder {
     /**
      * Retrieve an order
      * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAssessmentOrderRequestBuilder getAssessmentOrder() {
@@ -150,6 +180,9 @@ public class AsyncOrder {
 
     /**
      * Retrieve an order
+     * 
+     * <p>Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAssessmentOrderResponse>} - The async response
@@ -165,8 +198,17 @@ public class AsyncOrder {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public ListAccountingOrdersRequestBuilder listAccountingOrders() {
         return new ListAccountingOrdersRequestBuilder(sdkConfiguration);
     }
@@ -174,9 +216,18 @@ public class AsyncOrder {
     /**
      * List all orders
      * 
+     * <p>Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingOrdersResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Async(sdkConfiguration, _headers);
@@ -188,8 +239,13 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public PatchAccountingOrderRequestBuilder patchAccountingOrder() {
         return new PatchAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -197,9 +253,14 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Async(sdkConfiguration, _headers);
@@ -211,6 +272,9 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
@@ -219,6 +283,9 @@ public class AsyncOrder {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAssessmentOrderResponse>} - The async response
@@ -234,8 +301,12 @@ public class AsyncOrder {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public RemoveAccountingOrderRequestBuilder removeAccountingOrder() {
         return new RemoveAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -243,9 +314,13 @@ public class AsyncOrder {
     /**
      * Remove an order
      * 
+     * <p>Deletes the AccountingOrder identified by `id`.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Async(sdkConfiguration, _headers);
@@ -257,8 +332,13 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public UpdateAccountingOrderRequestBuilder updateAccountingOrder() {
         return new UpdateAccountingOrderRequestBuilder(sdkConfiguration);
     }
@@ -266,9 +346,14 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change
+     * in the request body.
+     * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingOrderResponse>} - The async response
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
+    @Deprecated
     public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Async(sdkConfiguration, _headers);
@@ -280,6 +365,9 @@ public class AsyncOrder {
     /**
      * Update an order
      * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
@@ -288,6 +376,9 @@ public class AsyncOrder {
 
     /**
      * Update an order
+     * 
+     * <p>Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAssessmentOrderResponse>} - The async response

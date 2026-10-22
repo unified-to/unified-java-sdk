@@ -179,6 +179,9 @@ public class Crm {
     /**
      * Create a company
      * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
      * @return The call builder
      */
     public CreateCrmCompanyRequestBuilder createCrmCompany() {
@@ -187,6 +190,9 @@ public class Crm {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -201,6 +207,9 @@ public class Crm {
     /**
      * Create a contact
      * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
+     * 
      * @return The call builder
      */
     public CreateCrmContactRequestBuilder createCrmContact() {
@@ -209,6 +218,9 @@ public class Crm {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -223,6 +235,9 @@ public class Crm {
     /**
      * Create a deal
      * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
+     * 
      * @return The call builder
      */
     public CreateCrmDealRequestBuilder createCrmDeal() {
@@ -231,6 +246,9 @@ public class Crm {
 
     /**
      * Create a deal
+     * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -245,6 +263,9 @@ public class Crm {
     /**
      * Create an event
      * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
+     * 
      * @return The call builder
      */
     public CreateCrmEventRequestBuilder createCrmEvent() {
@@ -253,6 +274,9 @@ public class Crm {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -267,6 +291,9 @@ public class Crm {
     /**
      * Create a lead
      * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
+     * 
      * @return The call builder
      */
     public CreateCrmLeadRequestBuilder createCrmLead() {
@@ -275,6 +302,9 @@ public class Crm {
 
     /**
      * Create a lead
+     * 
+     * <p>Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmLead.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -289,6 +319,9 @@ public class Crm {
     /**
      * Create a pipeline
      * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
+     * 
      * @return The call builder
      */
     public CreateCrmPipelineRequestBuilder createCrmPipeline() {
@@ -297,6 +330,9 @@ public class Crm {
 
     /**
      * Create a pipeline
+     * 
+     * <p>Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped
+     * to the provider's API. Returns the created CrmPipeline.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -311,6 +347,9 @@ public class Crm {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmCompanyRequestBuilder getCrmCompany() {
@@ -319,6 +358,9 @@ public class Crm {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -333,6 +375,9 @@ public class Crm {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmContactRequestBuilder getCrmContact() {
@@ -341,6 +386,9 @@ public class Crm {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -355,6 +403,9 @@ public class Crm {
     /**
      * Retrieve a deal
      * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmDealRequestBuilder getCrmDeal() {
@@ -363,6 +414,9 @@ public class Crm {
 
     /**
      * Retrieve a deal
+     * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -377,6 +431,9 @@ public class Crm {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmEventRequestBuilder getCrmEvent() {
@@ -385,6 +442,9 @@ public class Crm {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -399,6 +459,9 @@ public class Crm {
     /**
      * Retrieve a lead
      * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmLeadRequestBuilder getCrmLead() {
@@ -407,6 +470,9 @@ public class Crm {
 
     /**
      * Retrieve a lead
+     * 
+     * <p>Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -421,6 +487,9 @@ public class Crm {
     /**
      * Retrieve a pipeline
      * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmPipelineRequestBuilder getCrmPipeline() {
@@ -429,6 +498,9 @@ public class Crm {
 
     /**
      * Retrieve a pipeline
+     * 
+     * <p>Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -443,6 +515,13 @@ public class Crm {
     /**
      * List all companies
      * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmCompaniesRequestBuilder listCrmCompanies() {
@@ -451,6 +530,13 @@ public class Crm {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -465,6 +551,13 @@ public class Crm {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmContactsRequestBuilder listCrmContacts() {
@@ -473,6 +566,13 @@ public class Crm {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -487,6 +587,13 @@ public class Crm {
     /**
      * List all deals
      * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmDealsRequestBuilder listCrmDeals() {
@@ -495,6 +602,13 @@ public class Crm {
 
     /**
      * List all deals
+     * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -509,6 +623,13 @@ public class Crm {
     /**
      * List all events
      * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmEventsRequestBuilder listCrmEvents() {
@@ -517,6 +638,13 @@ public class Crm {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -531,6 +659,13 @@ public class Crm {
     /**
      * List all leads
      * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmLeadsRequestBuilder listCrmLeads() {
@@ -539,6 +674,13 @@ public class Crm {
 
     /**
      * List all leads
+     * 
+     * <p>Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -553,6 +695,13 @@ public class Crm {
     /**
      * List all pipelines
      * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmPipelinesRequestBuilder listCrmPipelines() {
@@ -561,6 +710,13 @@ public class Crm {
 
     /**
      * List all pipelines
+     * 
+     * <p>Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -575,6 +731,13 @@ public class Crm {
     /**
      * List all taxonomies
      * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmTaxonomiesRequestBuilder listCrmTaxonomies() {
@@ -583,6 +746,13 @@ public class Crm {
 
     /**
      * List all taxonomies
+     * 
+     * <p>Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -597,6 +767,9 @@ public class Crm {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmCompanyRequestBuilder patchCrmCompany() {
@@ -605,6 +778,9 @@ public class Crm {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -619,6 +795,9 @@ public class Crm {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmContactRequestBuilder patchCrmContact() {
@@ -627,6 +806,9 @@ public class Crm {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -641,6 +823,9 @@ public class Crm {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public PatchCrmDealRequestBuilder patchCrmDeal() {
@@ -649,6 +834,9 @@ public class Crm {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -663,6 +851,9 @@ public class Crm {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmEventRequestBuilder patchCrmEvent() {
@@ -671,6 +862,9 @@ public class Crm {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -685,6 +879,9 @@ public class Crm {
     /**
      * Update a lead
      * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public PatchCrmLeadRequestBuilder patchCrmLead() {
@@ -693,6 +890,9 @@ public class Crm {
 
     /**
      * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -707,6 +907,9 @@ public class Crm {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmPipelineRequestBuilder patchCrmPipeline() {
@@ -715,6 +918,9 @@ public class Crm {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -729,6 +935,8 @@ public class Crm {
     /**
      * Remove a company
      * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
@@ -737,6 +945,8 @@ public class Crm {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -751,6 +961,8 @@ public class Crm {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the CrmContact identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmContactRequestBuilder removeCrmContact() {
@@ -759,6 +971,8 @@ public class Crm {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the CrmContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -773,6 +987,8 @@ public class Crm {
     /**
      * Remove a deal
      * 
+     * <p>Deletes the CrmDeal identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmDealRequestBuilder removeCrmDeal() {
@@ -781,6 +997,8 @@ public class Crm {
 
     /**
      * Remove a deal
+     * 
+     * <p>Deletes the CrmDeal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -795,6 +1013,8 @@ public class Crm {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CrmEvent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmEventRequestBuilder removeCrmEvent() {
@@ -803,6 +1023,8 @@ public class Crm {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CrmEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -817,6 +1039,8 @@ public class Crm {
     /**
      * Remove a lead
      * 
+     * <p>Deletes the CrmLead identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmLeadRequestBuilder removeCrmLead() {
@@ -825,6 +1049,8 @@ public class Crm {
 
     /**
      * Remove a lead
+     * 
+     * <p>Deletes the CrmLead identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -839,6 +1065,8 @@ public class Crm {
     /**
      * Remove a pipeline
      * 
+     * <p>Deletes the CrmPipeline identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmPipelineRequestBuilder removeCrmPipeline() {
@@ -847,6 +1075,8 @@ public class Crm {
 
     /**
      * Remove a pipeline
+     * 
+     * <p>Deletes the CrmPipeline identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -861,6 +1091,9 @@ public class Crm {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
@@ -869,6 +1102,9 @@ public class Crm {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -883,6 +1119,9 @@ public class Crm {
     /**
      * Update a contact
      * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmContactRequestBuilder updateCrmContact() {
@@ -891,6 +1130,9 @@ public class Crm {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -905,6 +1147,9 @@ public class Crm {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public UpdateCrmDealRequestBuilder updateCrmDeal() {
@@ -913,6 +1158,9 @@ public class Crm {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -927,6 +1175,9 @@ public class Crm {
     /**
      * Update an event
      * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmEventRequestBuilder updateCrmEvent() {
@@ -935,6 +1186,9 @@ public class Crm {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -949,6 +1203,9 @@ public class Crm {
     /**
      * Update a lead
      * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public UpdateCrmLeadRequestBuilder updateCrmLead() {
@@ -957,6 +1214,9 @@ public class Crm {
 
     /**
      * Update a lead
+     * 
+     * <p>Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -971,6 +1231,9 @@ public class Crm {
     /**
      * Update a pipeline
      * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmPipelineRequestBuilder updateCrmPipeline() {
@@ -979,6 +1242,9 @@ public class Crm {
 
     /**
      * Update a pipeline
+     * 
+     * <p>Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

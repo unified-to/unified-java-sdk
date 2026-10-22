@@ -55,6 +55,9 @@ public class Database {
     /**
      * Create a database
      * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
      * @return The call builder
      */
     public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
@@ -63,6 +66,9 @@ public class Database {
 
     /**
      * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Database {
     /**
      * Retrieve a database
      * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
@@ -85,6 +94,9 @@ public class Database {
 
     /**
      * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Database {
     /**
      * List all databases
      * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
@@ -107,6 +126,13 @@ public class Database {
 
     /**
      * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Database {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
@@ -129,6 +158,9 @@ public class Database {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Database {
     /**
      * Remove a database
      * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
@@ -151,6 +185,8 @@ public class Database {
 
     /**
      * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Database {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
@@ -173,6 +212,9 @@ public class Database {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

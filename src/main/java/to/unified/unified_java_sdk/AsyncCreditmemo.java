@@ -57,6 +57,9 @@ public class AsyncCreditmemo {
     /**
      * Create a creditmemo
      * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     * 
      * @return The async call builder
      */
     public CreateAccountingCreditmemoRequestBuilder createAccountingCreditmemo() {
@@ -65,6 +68,9 @@ public class AsyncCreditmemo {
 
     /**
      * Create a creditmemo
+     * 
+     * <p>Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body;
+     * they are mapped to the provider's API. Returns the created AccountingCreditmemo.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncCreditmemo {
     /**
      * Retrieve a creditmemo
      * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingCreditmemoRequestBuilder getAccountingCreditmemo() {
@@ -88,6 +97,9 @@ public class AsyncCreditmemo {
 
     /**
      * Retrieve a creditmemo
+     * 
+     * <p>Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncCreditmemo {
     /**
      * List all creditmemoes
      * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingCreditmemoesRequestBuilder listAccountingCreditmemoes() {
@@ -111,6 +130,13 @@ public class AsyncCreditmemo {
 
     /**
      * List all creditmemoes
+     * 
+     * <p>Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncCreditmemo {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingCreditmemoRequestBuilder patchAccountingCreditmemo() {
@@ -134,6 +163,9 @@ public class AsyncCreditmemo {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncCreditmemo {
     /**
      * Remove a creditmemo
      * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingCreditmemoRequestBuilder removeAccountingCreditmemo() {
@@ -157,6 +191,8 @@ public class AsyncCreditmemo {
 
     /**
      * Remove a creditmemo
+     * 
+     * <p>Deletes the AccountingCreditmemo identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncCreditmemo {
     /**
      * Update a creditmemo
      * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingCreditmemoRequestBuilder updateAccountingCreditmemo() {
@@ -180,6 +219,9 @@ public class AsyncCreditmemo {
 
     /**
      * Update a creditmemo
+     * 
+     * <p>Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response

@@ -57,6 +57,9 @@ public class AsyncInventory {
     /**
      * Create an inventory
      * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
+     * 
      * @return The async call builder
      */
     public CreateCommerceInventoryRequestBuilder createCommerceInventory() {
@@ -65,6 +68,9 @@ public class AsyncInventory {
 
     /**
      * Create an inventory
+     * 
+     * <p>Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they
+     * are mapped to the provider's API. Returns the created CommerceInventory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncInventory {
     /**
      * Retrieve an inventory
      * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceInventoryRequestBuilder getCommerceInventory() {
@@ -88,6 +97,9 @@ public class AsyncInventory {
 
     /**
      * Retrieve an inventory
+     * 
+     * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncInventory {
     /**
      * List all inventories
      * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceInventoriesRequestBuilder listCommerceInventories() {
@@ -111,6 +130,13 @@ public class AsyncInventory {
 
     /**
      * List all inventories
+     * 
+     * <p>Returns a list of CommerceInventories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncInventory {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceInventoryRequestBuilder patchCommerceInventory() {
@@ -134,6 +163,9 @@ public class AsyncInventory {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncInventory {
     /**
      * Remove an inventory
      * 
+     * <p>Deletes the CommerceInventory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceInventoryRequestBuilder removeCommerceInventory() {
@@ -157,6 +191,8 @@ public class AsyncInventory {
 
     /**
      * Remove an inventory
+     * 
+     * <p>Deletes the CommerceInventory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncInventory {
     /**
      * Update an inventory
      * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceInventoryRequestBuilder updateCommerceInventory() {
@@ -180,6 +219,9 @@ public class AsyncInventory {
 
     /**
      * Update an inventory
+     * 
+     * <p>Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response

@@ -49,7 +49,7 @@
 
 ## createLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -79,15 +79,15 @@ public class Application {
         CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.018Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.925Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("3ba61ca7-c020-4916-bb67-5f5d3536307d")
+                    .id("8bface63-5c2b-4bb9-8f61-9768fff416d4")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.300Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.325Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.757Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.250Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -121,7 +121,7 @@ public class Application {
 
 ## createLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("96ab6b81-552c-4664-a1b8-22cdc94f4e42")
+                    .id("23a86db1-07e5-4274-8b48-795e918a323e")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -170,7 +170,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.741Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.124Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -204,7 +204,7 @@ public class Application {
 
 ## createLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -234,7 +234,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("1c7ab687-a9c8-4f43-815c-ea58d126dbf9")
+                    .id("cce07da8-4012-4200-868d-81aaabc5a0d3")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -249,7 +249,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.541Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.452Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -283,7 +283,7 @@ public class Application {
 
 ## createLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -317,7 +317,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("28e3e7d8-f7f5-499c-8a7d-c586139a050c")
+                    .id("e3e02a38-e142-453f-9488-c5fa798319a2")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -371,7 +371,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.287Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.727Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -383,7 +383,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.126Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.984Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -417,7 +417,7 @@ public class Application {
 
 ## createLmsCourse
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("f8a49840-5087-4080-8070-363c44400169")
+                    .id("d0abec78-cba9-44b6-99f7-346549ae8345")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -476,13 +476,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.102Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.411Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -516,7 +516,7 @@ public class Application {
 
 ## createLmsInstructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -549,7 +549,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("a8def002-0461-4a7f-88b6-a39807fee563")
+                    .id("1e4d9cad-519b-4874-90db-1aaf168efed0")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -564,7 +564,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.207Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.611Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -598,7 +598,7 @@ public class Application {
 
 ## createLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -639,7 +639,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("3b0ba57f-f43a-49b7-80c9-cd9ce12fd402")
+                    .id("50bc036d-fe80-4956-8a29-ebff8d31808e")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -657,7 +657,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.934Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.279Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -691,7 +691,7 @@ public class Application {
 
 ## getLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -749,7 +749,7 @@ public class Application {
 
 ## getLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -807,7 +807,7 @@ public class Application {
 
 ## getLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -865,7 +865,7 @@ public class Application {
 
 ## getLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -923,7 +923,7 @@ public class Application {
 
 ## getLmsCourse
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -981,7 +981,7 @@ public class Application {
 
 ## getLmsInstructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1039,7 +1039,7 @@ public class Application {
 
 ## getLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1097,7 +1097,7 @@ public class Application {
 
 ## listLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1154,7 +1154,7 @@ public class Application {
 
 ## listLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1211,7 +1211,7 @@ public class Application {
 
 ## listLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1268,7 +1268,7 @@ public class Application {
 
 ## listLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1325,7 +1325,7 @@ public class Application {
 
 ## listLmsCourses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1382,7 +1382,7 @@ public class Application {
 
 ## listLmsInstructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1439,7 +1439,7 @@ public class Application {
 
 ## listLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1496,7 +1496,7 @@ public class Application {
 
 ## patchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1526,15 +1526,15 @@ public class Application {
         PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.024Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.932Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("ba944cbb-c06e-4d58-a007-5bc0c48a85f9")
+                    .id("eddac8ec-59eb-4920-afbd-a7314c96d53d")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.301Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.328Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.253Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1569,7 +1569,7 @@ public class Application {
 
 ## patchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -1599,7 +1599,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("1aa6741c-1d93-400e-a845-a67c7698edbc")
+                    .id("31bb4efa-7523-4af0-9a37-27ec06a61c14")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -1618,7 +1618,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.140Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1653,7 +1653,7 @@ public class Application {
 
 ## patchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1683,7 +1683,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("fda0f5c8-fac1-4166-8f91-1206148b9651")
+                    .id("814e5787-79d1-4f20-8849-63fcf0b37b93")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -1698,7 +1698,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.561Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.465Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1733,7 +1733,7 @@ public class Application {
 
 ## patchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -1767,7 +1767,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("45a9d1f0-6bad-4565-b5d8-ecea6210d591")
+                    .id("8b30b16f-fc50-484d-a664-d7139176c42e")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -1821,7 +1821,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.300Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.735Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -1833,7 +1833,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.992Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1868,7 +1868,7 @@ public class Application {
 
 ## patchLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -1903,7 +1903,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("5fc30f1c-c974-4c5d-a17d-cf77cd651739")
+                    .id("afa1cd4f-9509-4af5-9e69-7897b0be60d4")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -1927,13 +1927,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.413Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1968,7 +1968,7 @@ public class Application {
 
 ## patchLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -2001,7 +2001,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("935a3328-fb68-4c0b-b218-481806cb1d89")
+                    .id("201a51fd-07e5-42ad-8974-4c35034f664a")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -2016,7 +2016,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.223Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.624Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2051,7 +2051,7 @@ public class Application {
 
 ## patchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -2092,7 +2092,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("19349d55-6d89-455e-bd73-378718c96028")
+                    .id("49f603b2-dc8b-4b0d-87b0-4388cbca7d59")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -2110,7 +2110,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.941Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.287Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2145,7 +2145,7 @@ public class Application {
 
 ## removeLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2201,7 +2201,7 @@ public class Application {
 
 ## removeLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -2257,7 +2257,7 @@ public class Application {
 
 ## removeLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -2313,7 +2313,7 @@ public class Application {
 
 ## removeLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -2369,7 +2369,7 @@ public class Application {
 
 ## removeLmsCourse
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -2425,7 +2425,7 @@ public class Application {
 
 ## removeLmsInstructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -2481,7 +2481,7 @@ public class Application {
 
 ## removeLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -2537,7 +2537,7 @@ public class Application {
 
 ## updateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2567,15 +2567,15 @@ public class Application {
         UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.024Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.932Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("ba944cbb-c06e-4d58-a007-5bc0c48a85f9")
+                    .id("eddac8ec-59eb-4920-afbd-a7314c96d53d")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.301Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.328Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.253Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2610,7 +2610,7 @@ public class Application {
 
 ## updateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -2640,7 +2640,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("1aa6741c-1d93-400e-a845-a67c7698edbc")
+                    .id("31bb4efa-7523-4af0-9a37-27ec06a61c14")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -2659,7 +2659,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.140Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2694,7 +2694,7 @@ public class Application {
 
 ## updateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2724,7 +2724,7 @@ public class Application {
                 .lmsCollection(LmsCollection.builder()
                     .createdAt(OffsetDateTime.parse("2019-08-19T14:40:29.227Z"))
                     .description("Ab.")
-                    .id("fda0f5c8-fac1-4166-8f91-1206148b9651")
+                    .id("814e5787-79d1-4f20-8849-63fcf0b37b93")
                     .isActive(true)
                     .media(List.of(
                         LmsMedia.builder()
@@ -2739,7 +2739,7 @@ public class Application {
                             .build()))
                     .metadata(List.of())
                     .name("ara")
-                    .updatedAt(OffsetDateTime.parse("2026-07-30T07:06:55.561Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-07-31T07:15:58.465Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2774,7 +2774,7 @@ public class Application {
 
 ## updateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -2808,7 +2808,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("45a9d1f0-6bad-4565-b5d8-ecea6210d591")
+                    .id("8b30b16f-fc50-484d-a664-d7139176c42e")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -2862,7 +2862,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.300Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.735Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -2874,7 +2874,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.992Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2909,7 +2909,7 @@ public class Application {
 
 ## updateLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -2944,7 +2944,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("5fc30f1c-c974-4c5d-a17d-cf77cd651739")
+                    .id("afa1cd4f-9509-4af5-9e69-7897b0be60d4")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -2968,13 +2968,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.413Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3009,7 +3009,7 @@ public class Application {
 
 ## updateLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -3042,7 +3042,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("935a3328-fb68-4c0b-b218-481806cb1d89")
+                    .id("201a51fd-07e5-42ad-8974-4c35034f664a")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -3057,7 +3057,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.223Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.624Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3092,7 +3092,7 @@ public class Application {
 
 ## updateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -3133,7 +3133,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Marcella")
-                    .id("19349d55-6d89-455e-bd73-378718c96028")
+                    .id("49f603b2-dc8b-4b0d-87b0-4388cbca7d59")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg")
                     .lastName("Murazik")
                     .metadata(List.of())
@@ -3151,7 +3151,7 @@ public class Application {
                             .telephone("(980) 775-2940")
                             .type(LmsTelephoneType.FAX)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T23:27:29.941Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-01T08:04:11.287Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -13,7 +13,7 @@
 
 ## createAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -47,15 +47,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("e2c38db3-be60-4b3e-9a44-4eb78bb147b5")
+                    .id("f8352f66-ab52-44f7-8951-8439ccf0a999")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.737Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.138Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.328Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.612Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.423Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.360Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,7 +89,7 @@ public class Application {
 
 ## getAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -238,15 +238,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("c8a03fdd-e180-473e-b06d-dcc006c8952d")
+                    .id("55c21f72-7386-4b73-ae17-a72d26e3a1be")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.746Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.157Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.329Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.615Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.424Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -371,15 +371,15 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-03-24T23:41:08.374Z"))
                     .currency("CAD")
                     .description("Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.")
-                    .id("c8a03fdd-e180-473e-b06d-dcc006c8952d")
+                    .id("55c21f72-7386-4b73-ae17-a72d26e3a1be")
                     .isPending(true)
                     .merchantName("Buckridge - Feest")
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2025-04-14T19:59:20.746Z"))
+                    .postedAt(OffsetDateTime.parse("2025-04-15T12:39:25.157Z"))
                     .reference("79574105")
-                    .transactionAt(OffsetDateTime.parse("2022-07-30T08:10:21.329Z"))
+                    .transactionAt(OffsetDateTime.parse("2022-07-30T10:04:23.615Z"))
                     .type(AccountingBankfeedtransactionType.CREDIT)
-                    .updatedAt(OffsetDateTime.parse("2022-05-25T01:44:43.424Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-05-25T02:39:25.361Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

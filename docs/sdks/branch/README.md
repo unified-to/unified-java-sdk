@@ -13,7 +13,7 @@
 
 ## createRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -45,9 +45,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("5767ec36-0da6-42fd-8167-691c1a0f5bb9")
+                    .id("db8e72d2-7465-435f-8ced-5704f9cbfd3e")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.748Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -81,7 +81,7 @@ public class Application {
 
 ## getRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ public class Application {
 
 ## listRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ public class Application {
 
 ## patchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -228,9 +228,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("837fbce5-d184-472f-b560-7e137bb116de")
+                    .id("e069e7bb-9a29-4551-a671-e2e7a8d5640a")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.749Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.810Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -265,7 +265,7 @@ public class Application {
 
 ## removeRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -321,7 +321,7 @@ public class Application {
 
 ## updateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -353,9 +353,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("837fbce5-d184-472f-b560-7e137bb116de")
+                    .id("e069e7bb-9a29-4551-a671-e2e7a8d5640a")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.749Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.810Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -31,7 +31,7 @@
 
 ## createTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -62,11 +62,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("28e78990-31e0-497f-8b98-af4e038b9248")
+                    .id("f0df9b99-1579-4b8c-99c1-25c075c90704")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.127Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.001Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -100,7 +100,7 @@ public class Application {
 
 ## createTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("13441e6d-dd5a-44c5-87ec-beeafb30bd6e")
+                    .id("f6a3f02b-d9ba-4aa5-bb99-250219550e50")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -153,7 +153,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.020Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.712Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -187,7 +187,7 @@ public class Application {
 
 ## createTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -218,9 +218,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("a153a126-2d31-4688-ae84-1a5fbb812c34")
+                    .id("db892fbc-5dc9-4ba6-8f13-1f3fe0ea0133")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.435Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.275Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -254,7 +254,7 @@ public class Application {
 
 ## createTicketingTicket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("80fb6ac6-6af2-4fb1-954d-ccde06add8d7")
+                    .id("c8b54459-e703-4a68-b589-200d1b471094")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -294,7 +294,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
@@ -329,7 +329,7 @@ public class Application {
 
 ## getTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ public class Application {
 
 ## getTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ public class Application {
 
 ## getTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -503,7 +503,7 @@ public class Application {
 
 ## getTicketingTicket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -561,7 +561,7 @@ public class Application {
 
 ## listTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -618,7 +618,7 @@ public class Application {
 
 ## listTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -675,7 +675,7 @@ public class Application {
 
 ## listTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -732,7 +732,7 @@ public class Application {
 
 ## listTicketingTickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -789,7 +789,7 @@ public class Application {
 
 ## patchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -820,11 +820,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("e9c0a7e1-dd24-400c-aea7-3fd43686c66c")
+                    .id("444df8bc-efda-4f39-aabf-e0183d1443b4")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.014Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -859,7 +859,7 @@ public class Application {
 
 ## patchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -893,7 +893,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("997497f4-4dd4-4bb0-a110-d12f8f61409b")
+                    .id("4b0496b5-7765-425f-823a-b93fe9bd07c2")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -912,7 +912,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.036Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -947,7 +947,7 @@ public class Application {
 
 ## patchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -978,9 +978,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("6ca69f3e-e51a-477b-9895-d73591feb422")
+                    .id("ae2b10c4-d68d-4743-9eaf-ecf36b26781f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.446Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.283Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1015,7 +1015,7 @@ public class Application {
 
 ## patchTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -1047,7 +1047,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("244bedbd-82bc-4d49-a104-19950af1732f")
+                    .id("7bd4683c-d1dc-4772-8fc6-70f05a1c18fe")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -1055,7 +1055,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")
@@ -1091,7 +1091,7 @@ public class Application {
 
 ## removeTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -1147,7 +1147,7 @@ public class Application {
 
 ## removeTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -1203,7 +1203,7 @@ public class Application {
 
 ## removeTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -1259,7 +1259,7 @@ public class Application {
 
 ## removeTicketingTicket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -1315,7 +1315,7 @@ public class Application {
 
 ## updateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -1346,11 +1346,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("e9c0a7e1-dd24-400c-aea7-3fd43686c66c")
+                    .id("444df8bc-efda-4f39-aabf-e0183d1443b4")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-14T00:35:50.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-14T22:48:22.014Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1385,7 +1385,7 @@ public class Application {
 
 ## updateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -1419,7 +1419,7 @@ public class Application {
                             .email("christian.windler@gmail.com")
                             .type(TicketingEmailType.HOME)
                             .build()))
-                    .id("997497f4-4dd4-4bb0-a110-d12f8f61409b")
+                    .id("4b0496b5-7765-425f-823a-b93fe9bd07c2")
                     .metadata(List.of())
                     .name("Christian Windler")
                     .tags(List.of(
@@ -1438,7 +1438,7 @@ public class Application {
                             .telephone("(743) 328-3214")
                             .type(TicketingTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-04T01:58:10.036Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-05T01:12:50.725Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1473,7 +1473,7 @@ public class Application {
 
 ## updateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -1504,9 +1504,9 @@ public class Application {
                 .ticketingNote(TicketingNote.builder()
                     .createdAt(OffsetDateTime.parse("2019-07-23T15:05:03.241Z"))
                     .description("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.")
-                    .id("6ca69f3e-e51a-477b-9895-d73591feb422")
+                    .id("ae2b10c4-d68d-4743-9eaf-ecf36b26781f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-09-29T06:44:47.446Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-09-30T00:36:03.283Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1541,7 +1541,7 @@ public class Application {
 
 ## updateTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -1573,7 +1573,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-06-25T19:19:31.279Z"))
                     .description("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.")
                     .dueAt(OffsetDateTime.parse("2021-07-07T17:39:49.813Z"))
-                    .id("244bedbd-82bc-4d49-a104-19950af1732f")
+                    .id("7bd4683c-d1dc-4772-8fc6-70f05a1c18fe")
                     .metadata(List.of())
                     .priority("MEDIUM")
                     .source("email")
@@ -1581,7 +1581,7 @@ public class Application {
                     .subject("Thymbra ratione minus arbitro tricesimus cetera validus.")
                     .tags(List.of(
                         "vilicus"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:28:57.253Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-03T18:35:05.240Z"))
                     .url("https://similar-velocity.net/")
                     .build())
                 .connectionId("<id>")

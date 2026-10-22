@@ -32,7 +32,7 @@
 
 ## createAnalyticsEvent
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -62,13 +62,13 @@ public class Application {
                 .analyticsEvent(AnalyticsEvent.builder()
                     .createdAt(OffsetDateTime.parse("2023-06-21T03:13:22.954Z"))
                     .eventType(EventType.SCREEN_VIEW)
-                    .id("f62d9429-58c9-4a55-b01f-1fde2b5d92b2")
+                    .id("3b815b70-3e0a-4459-8f69-87e075a4d6a5")
                     .metadata(Map.ofEntries(
                         Map.entry("key", PropertyAnalyticsEventMetadata.builder()
                             .build())))
                     .name("page_view")
                     .pageUrl("https://golden-carboxyl.biz")
-                    .updatedAt(OffsetDateTime.parse("2023-09-24T16:23:13.268Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T18:20:36.849Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -102,7 +102,7 @@ public class Application {
 
 ## createCalendarEvent
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -133,9 +133,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.706Z")
+                    .endAt("2020-05-24T09:48:11.260Z")
                     .hasConference(false)
-                    .id("3820c3e2-a581-46bb-aa69-ec4daee9aa5b")
+                    .id("ffe78a81-4e30-48bf-bc50-9887b7ef0982")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -145,14 +145,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.521Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.065Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.616Z"))
+                                "2024-02-03T10:20:10.604Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.608Z",
-                                "2025-01-23T21:41:57.513Z",
-                                "2024-04-01T23:42:31.133Z"))
+                                "2023-07-07T15:02:52.424Z",
+                                "2025-01-24T16:37:31.814Z",
+                                "2024-04-02T15:49:26.787Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -482,11 +482,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.461Z")
+                    .startAt("2020-05-24T00:34:20.913Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.904Z")
+                    .updatedAt("2020-06-30T08:31:48.081Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -521,7 +521,7 @@ public class Application {
 
 ## createCdpEvent
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -581,7 +581,7 @@ public class Application {
 
 ## createCrmEvent
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -612,13 +612,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.866Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:22.995Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("51c2174f-eb37-47f6-b3ed-fbed807b02d4")
+                    .id("262f1ef2-b9f2-477a-98c5-d83f0bdbbe8f")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.429Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.395Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -652,7 +652,7 @@ public class Application {
 
 ## getAnalyticsEvent
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ public class Application {
 
 ## getCalendarEvent
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -768,7 +768,7 @@ public class Application {
 
 ## getCdpEvent
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -826,7 +826,7 @@ public class Application {
 
 ## getClubsEvent
 
-Retrieve an event
+Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -884,7 +884,7 @@ public class Application {
 
 ## getCrmEvent
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -942,7 +942,7 @@ public class Application {
 
 ## listAnalyticsEvents
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -999,7 +999,7 @@ public class Application {
 
 ## listCalendarEvents
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1056,7 +1056,7 @@ public class Application {
 
 ## listCdpEvents
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1113,7 +1113,7 @@ public class Application {
 
 ## listClubsEvents
 
-List all events
+Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1170,7 +1170,7 @@ public class Application {
 
 ## listCrmEvents
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1227,7 +1227,7 @@ public class Application {
 
 ## patchCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1258,9 +1258,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.714Z")
+                    .endAt("2020-05-24T09:48:11.265Z")
                     .hasConference(false)
-                    .id("e3c378aa-f366-4ada-8448-27cfa3a8d7eb")
+                    .id("dc738ad5-cac0-45d3-9e5b-4a941bbb2a3c")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -1270,14 +1270,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.589Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.101Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.670Z"))
+                                "2024-02-03T10:20:10.634Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.656Z",
-                                "2025-01-23T21:41:57.580Z",
-                                "2024-04-01T23:42:31.190Z"))
+                                "2023-07-07T15:02:52.449Z",
+                                "2025-01-24T16:37:31.849Z",
+                                "2024-04-02T15:49:26.817Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -1607,11 +1607,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.469Z")
+                    .startAt("2020-05-24T00:34:20.918Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.913Z")
+                    .updatedAt("2020-06-30T08:31:48.087Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -1647,7 +1647,7 @@ public class Application {
 
 ## patchCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1708,7 +1708,7 @@ public class Application {
 
 ## patchCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1739,13 +1739,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.908Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:23.028Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("a6bafef0-ce8b-44bb-b40e-cd1ddb1a8e97")
+                    .id("25074917-3acc-4b8f-98b0-afa91f4faf22")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.487Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.443Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1780,7 +1780,7 @@ public class Application {
 
 ## patchMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1813,7 +1813,7 @@ public class Application {
                         .name("")
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
-                    .id("0c3d20f6-1993-4a48-a62e-b6c80eee63a7")
+                    .id("9a4139ce-7004-4bcd-8e42-163857a1398d")
                     .isReplacingOriginal(false)
                     .metadata(List.of())
                     .type(MessagingEventType.BUTTON_CLICK)
@@ -1851,7 +1851,7 @@ public class Application {
 
 ## removeCalendarEvent
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -1907,7 +1907,7 @@ public class Application {
 
 ## removeCdpEvent
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1963,7 +1963,7 @@ public class Application {
 
 ## removeCrmEvent
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -2019,7 +2019,7 @@ public class Application {
 
 ## updateCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2050,9 +2050,9 @@ public class Application {
                     .attachments(List.of())
                     .conference(List.of())
                     .createdAt("2019-08-04T14:33:51.814Z")
-                    .endAt("2020-05-24T07:01:22.714Z")
+                    .endAt("2020-05-24T09:48:11.265Z")
                     .hasConference(false)
-                    .id("e3c378aa-f366-4ada-8448-27cfa3a8d7eb")
+                    .id("dc738ad5-cac0-45d3-9e5b-4a941bbb2a3c")
                     .isAllDay(false)
                     .isFree(false)
                     .isPrivate(false)
@@ -2062,14 +2062,14 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(4d)
-                            .endAt(OffsetDateTime.parse("2025-03-24T15:42:39.589Z"))
+                            .endAt(OffsetDateTime.parse("2025-03-25T11:12:10.101Z"))
                             .excludedDates(List.of(
-                                "2024-02-02T18:46:52.670Z"))
+                                "2024-02-03T10:20:10.634Z"))
                             .frequency(CalendarEventRecurrenceFrequency.YEARLY)
                             .includedDates(List.of(
-                                "2023-07-07T01:29:15.656Z",
-                                "2025-01-23T21:41:57.580Z",
-                                "2024-04-01T23:42:31.190Z"))
+                                "2023-07-07T15:02:52.449Z",
+                                "2025-01-24T16:37:31.849Z",
+                                "2024-04-02T15:49:26.817Z"))
                             .interval(7d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.TU,
@@ -2399,11 +2399,11 @@ public class Application {
                             .timezone("Asia/Ho_Chi_Minh")
                             .weekStart(WeekStart.TU)
                             .build()))
-                    .startAt("2020-05-23T21:47:45.469Z")
+                    .startAt("2020-05-24T00:34:20.918Z")
                     .status(CalendarEventStatus.CONFIRMED)
                     .subject("Sunt spargo tepidus bestia vigor credo coadunatio appello.")
                     .timezone("Asia/Bangkok")
-                    .updatedAt("2020-06-30T05:24:00.913Z")
+                    .updatedAt("2020-06-30T08:31:48.087Z")
                     .webUrl("https://another-pinstripe.com")
                     .build())
                 .connectionId("<id>")
@@ -2439,7 +2439,7 @@ public class Application {
 
 ## updateCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2500,7 +2500,7 @@ public class Application {
 
 ## updateCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2531,13 +2531,13 @@ public class Application {
                     .call(PropertyCrmEventCall.builder()
                         .description("Arbitro aptus.")
                         .duration(64d)
-                        .startAt(OffsetDateTime.parse("2024-12-11T00:49:45.908Z"))
+                        .startAt(OffsetDateTime.parse("2024-12-11T18:22:23.028Z"))
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-07-14T04:53:23.784Z"))
-                    .id("a6bafef0-ce8b-44bb-b40e-cd1ddb1a8e97")
+                    .id("25074917-3acc-4b8f-98b0-afa91f4faf22")
                     .metadata(List.of())
                     .type(CrmEventType.CALL)
-                    .updatedAt(OffsetDateTime.parse("2026-10-11T12:57:45.487Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-12T13:47:52.443Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2572,7 +2572,7 @@ public class Application {
 
 ## updateMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2605,7 +2605,7 @@ public class Application {
                         .name("")
                         .build())
                     .createdAt(OffsetDateTime.parse("2019-05-30T19:44:46.461Z"))
-                    .id("0c3d20f6-1993-4a48-a62e-b6c80eee63a7")
+                    .id("9a4139ce-7004-4bcd-8e42-163857a1398d")
                     .isReplacingOriginal(false)
                     .metadata(List.of())
                     .type(MessagingEventType.BUTTON_CLICK)

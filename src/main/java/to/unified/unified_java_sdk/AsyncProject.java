@@ -81,6 +81,9 @@ public class AsyncProject {
     /**
      * Create a project
      * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
      * @return The async call builder
      */
     public CreateAccountingProjectRequestBuilder createAccountingProject() {
@@ -89,6 +92,9 @@ public class AsyncProject {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingProjectResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncProject {
     /**
      * Create a project
      * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
      * @return The async call builder
      */
     public CreateTaskProjectRequestBuilder createTaskProject() {
@@ -112,6 +121,9 @@ public class AsyncProject {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncProject {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingProjectRequestBuilder getAccountingProject() {
@@ -135,6 +150,9 @@ public class AsyncProject {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingProjectResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncProject {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetTaskProjectRequestBuilder getTaskProject() {
@@ -158,6 +179,9 @@ public class AsyncProject {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncProject {
     /**
      * List all projects
      * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingProjectsRequestBuilder listAccountingProjects() {
@@ -181,6 +212,13 @@ public class AsyncProject {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingProjectsResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncProject {
     /**
      * List all projects
      * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListTaskProjectsRequestBuilder listTaskProjects() {
@@ -204,6 +249,13 @@ public class AsyncProject {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
@@ -219,6 +271,9 @@ public class AsyncProject {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingProjectRequestBuilder patchAccountingProject() {
@@ -227,6 +282,9 @@ public class AsyncProject {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingProjectResponse>} - The async response
@@ -242,6 +300,9 @@ public class AsyncProject {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchTaskProjectRequestBuilder patchTaskProject() {
@@ -250,6 +311,9 @@ public class AsyncProject {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
@@ -265,6 +329,8 @@ public class AsyncProject {
     /**
      * Remove a project
      * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingProjectRequestBuilder removeAccountingProject() {
@@ -273,6 +339,8 @@ public class AsyncProject {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingProjectResponse>} - The async response
@@ -288,6 +356,8 @@ public class AsyncProject {
     /**
      * Remove a project
      * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveTaskProjectRequestBuilder removeTaskProject() {
@@ -296,6 +366,8 @@ public class AsyncProject {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
@@ -311,6 +383,9 @@ public class AsyncProject {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingProjectRequestBuilder updateAccountingProject() {
@@ -319,6 +394,9 @@ public class AsyncProject {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingProjectResponse>} - The async response
@@ -334,6 +412,9 @@ public class AsyncProject {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateTaskProjectRequestBuilder updateTaskProject() {
@@ -342,6 +423,9 @@ public class AsyncProject {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response

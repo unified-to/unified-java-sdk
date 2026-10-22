@@ -13,7 +13,7 @@
 
 ## createAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("09e90a02-f567-4091-bf55-c914a0465bb3")
+                    .id("166d437e-4cd7-4c65-82fa-50fd5fdd711d")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -57,7 +57,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.244Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.031Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -91,7 +91,7 @@ public class Application {
 
 ## getAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -149,7 +149,7 @@ public class Application {
 
 ## listAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ public class Application {
 
 ## patchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -241,7 +241,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("bba119a9-42d9-4a79-b644-d063110c513b")
+                    .id("fca13d53-2bed-4438-ba2d-5943bb9ea5f4")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -250,7 +250,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.055Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -285,7 +285,7 @@ public class Application {
 
 ## removeAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -341,7 +341,7 @@ public class Application {
 
 ## updateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ public class Application {
                     .creditmemoNumber("CM-99537")
                     .currency("AUD")
                     .discountAmount(0d)
-                    .id("bba119a9-42d9-4a79-b644-d063110c513b")
+                    .id("fca13d53-2bed-4438-ba2d-5943bb9ea5f4")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .notes("Hic vorax dedecor amo adfero torqueo quas victoria.")
@@ -385,7 +385,7 @@ public class Application {
                     .status(AccountingCreditmemoStatus.AUTHORIZED)
                     .taxAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2025-09-11T07:58:40.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-11T23:57:40.055Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

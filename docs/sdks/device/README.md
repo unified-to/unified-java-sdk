@@ -13,7 +13,7 @@
 
 ## createHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -50,7 +50,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("49b5d703-8a3e-4737-b1bc-7a3fdcf1605c")
+                    .id("05131f9f-e2a2-4b8f-a802-8cf7151a4697")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -58,7 +58,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.617Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.178Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -93,7 +93,7 @@ public class Application {
 
 ## getHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ public class Application {
 
 ## listHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ public class Application {
 
 ## patchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("daf3d5af-82dc-4e79-8fca-d45df35f91e5")
+                    .id("7dca24d3-9d68-4849-8fa1-93beac3ae351")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -253,7 +253,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.626Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.186Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -289,7 +289,7 @@ public class Application {
 
 ## removeHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -345,7 +345,7 @@ public class Application {
 
 ## updateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("daf3d5af-82dc-4e79-8fca-d45df35f91e5")
+                    .id("7dca24d3-9d68-4849-8fa1-93beac3ae351")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -390,7 +390,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-08T07:22:04.626Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-08T21:10:16.186Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")

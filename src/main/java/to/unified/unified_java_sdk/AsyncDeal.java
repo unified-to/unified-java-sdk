@@ -57,6 +57,9 @@ public class AsyncDeal {
     /**
      * Create a deal
      * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
+     * 
      * @return The async call builder
      */
     public CreateCrmDealRequestBuilder createCrmDeal() {
@@ -65,6 +68,9 @@ public class AsyncDeal {
 
     /**
      * Create a deal
+     * 
+     * <p>Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the
+     * provider's API. Returns the created CrmDeal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncDeal {
     /**
      * Retrieve a deal
      * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCrmDealRequestBuilder getCrmDeal() {
@@ -88,6 +97,9 @@ public class AsyncDeal {
 
     /**
      * Retrieve a deal
+     * 
+     * <p>Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncDeal {
     /**
      * List all deals
      * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCrmDealsRequestBuilder listCrmDeals() {
@@ -111,6 +130,13 @@ public class AsyncDeal {
 
     /**
      * List all deals
+     * 
+     * <p>Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncDeal {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchCrmDealRequestBuilder patchCrmDeal() {
@@ -134,6 +163,9 @@ public class AsyncDeal {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncDeal {
     /**
      * Remove a deal
      * 
+     * <p>Deletes the CrmDeal identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCrmDealRequestBuilder removeCrmDeal() {
@@ -157,6 +191,8 @@ public class AsyncDeal {
 
     /**
      * Remove a deal
+     * 
+     * <p>Deletes the CrmDeal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncDeal {
     /**
      * Update a deal
      * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateCrmDealRequestBuilder updateCrmDeal() {
@@ -180,6 +219,9 @@ public class AsyncDeal {
 
     /**
      * Update a deal
+     * 
+     * <p>Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response

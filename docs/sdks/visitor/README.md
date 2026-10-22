@@ -13,7 +13,7 @@
 
 ## createAnalyticsVisitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("0056ddaa-7535-4f64-b3d2-8d426eb3cb75")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.355Z"))
+                    .id("c1a0e398-5c4f-464f-8a79-841d13567b41")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.972Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.323Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.146Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,7 +84,7 @@ public class Application {
 
 ## getAnalyticsVisitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listAnalyticsVisitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -230,13 +230,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("2410711c-2c4b-4d20-aee1-08b709b64087")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.366Z"))
+                    .id("f8cedf29-792a-423a-aa05-e49c18f051d4")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.984Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.159Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeAnalyticsVisitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -358,13 +358,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
                     .email("desiree.o.hara@icloud.com")
                     .firstSeenAt(OffsetDateTime.parse("2020-04-16T20:29:48.281Z"))
-                    .id("2410711c-2c4b-4d20-aee1-08b709b64087")
-                    .lastSeenAt(OffsetDateTime.parse("2025-01-11T07:33:22.366Z"))
+                    .id("f8cedf29-792a-423a-aa05-e49c18f051d4")
+                    .lastSeenAt(OffsetDateTime.parse("2025-01-12T01:42:08.984Z"))
                     .metadata(Map.ofEntries(
                         Map.entry("segment", PropertyAnalyticsVisitorMetadata.builder()
                             .build())))
                     .totalEvents(2916d)
-                    .updatedAt(OffsetDateTime.parse("2025-06-29T17:16:29.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-30T13:11:51.159Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

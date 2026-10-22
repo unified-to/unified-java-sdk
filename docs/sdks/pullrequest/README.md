@@ -13,7 +13,7 @@
 
 ## createRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -41,9 +41,9 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.969Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.360Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("5ed78bb7-e4ef-424f-8bd1-c73917d91d4e")
+                    .id("8bc988ca-a952-4faa-908f-c2e844c057bc")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -51,7 +51,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.462Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.730Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -85,7 +85,7 @@ public class Application {
 
 ## getRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ public class Application {
 
 ## listRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ public class Application {
 
 ## patchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -228,9 +228,9 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.980Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.367Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("0e38d452-35cf-4335-8e82-7873536e694f")
+                    .id("f02f6d26-e546-42ef-9158-c49d98ccfdae")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -238,7 +238,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.477Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.741Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -273,7 +273,7 @@ public class Application {
 
 ## removeRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -329,7 +329,7 @@ public class Application {
 
 ## updateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -357,9 +357,9 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.980Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.367Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("0e38d452-35cf-4335-8e82-7873536e694f")
+                    .id("f02f6d26-e546-42ef-9158-c49d98ccfdae")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -367,7 +367,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.477Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.741Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

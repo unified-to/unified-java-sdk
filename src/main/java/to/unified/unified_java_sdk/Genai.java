@@ -155,6 +155,9 @@ public class Genai {
     /**
      * Create an agent
      * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
+     * 
      * @return The call builder
      */
     public CreateGenaiAgentRequestBuilder createGenaiAgent() {
@@ -163,6 +166,9 @@ public class Genai {
 
     /**
      * Create an agent
+     * 
+     * <p>Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiAgent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -177,6 +183,9 @@ public class Genai {
     /**
      * Create an embedding
      * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
+     * 
      * @return The call builder
      */
     public CreateGenaiEmbeddingRequestBuilder createGenaiEmbedding() {
@@ -185,6 +194,9 @@ public class Genai {
 
     /**
      * Create an embedding
+     * 
+     * <p>Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are
+     * mapped to the provider's API. Returns the created GenaiEmbedding.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -199,6 +211,9 @@ public class Genai {
     /**
      * Create a memory
      * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
+     * 
      * @return The call builder
      */
     public CreateGenaiMemoryRequestBuilder createGenaiMemory() {
@@ -207,6 +222,9 @@ public class Genai {
 
     /**
      * Create a memory
+     * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -221,6 +239,9 @@ public class Genai {
     /**
      * Create an organization
      * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
+     * 
      * @return The call builder
      */
     public CreateGenaiOrganizationRequestBuilder createGenaiOrganization() {
@@ -229,6 +250,9 @@ public class Genai {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created GenaiOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -243,6 +267,9 @@ public class Genai {
     /**
      * Create a prompt
      * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
+     * 
      * @return The call builder
      */
     public CreateGenaiPromptRequestBuilder createGenaiPrompt() {
@@ -251,6 +278,9 @@ public class Genai {
 
     /**
      * Create a prompt
+     * 
+     * <p>Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiPrompt.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -265,6 +295,9 @@ public class Genai {
     /**
      * Create a task
      * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
      * @return The call builder
      */
     public CreateGenaiTaskRequestBuilder createGenaiTask() {
@@ -273,6 +306,9 @@ public class Genai {
 
     /**
      * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -287,6 +323,9 @@ public class Genai {
     /**
      * Retrieve an agent
      * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiAgentRequestBuilder getGenaiAgent() {
@@ -295,6 +334,9 @@ public class Genai {
 
     /**
      * Retrieve an agent
+     * 
+     * <p>Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -309,6 +351,9 @@ public class Genai {
     /**
      * Retrieve a memory
      * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiMemoryRequestBuilder getGenaiMemory() {
@@ -317,6 +362,9 @@ public class Genai {
 
     /**
      * Retrieve a memory
+     * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -331,6 +379,9 @@ public class Genai {
     /**
      * Retrieve a model
      * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiModelRequestBuilder getGenaiModel() {
@@ -339,6 +390,9 @@ public class Genai {
 
     /**
      * Retrieve a model
+     * 
+     * <p>Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -353,6 +407,9 @@ public class Genai {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiOrganizationRequestBuilder getGenaiOrganization() {
@@ -361,6 +418,9 @@ public class Genai {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -375,6 +435,9 @@ public class Genai {
     /**
      * Retrieve a skill
      * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiSkillRequestBuilder getGenaiSkill() {
@@ -383,6 +446,9 @@ public class Genai {
 
     /**
      * Retrieve a skill
+     * 
+     * <p>Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -397,6 +463,9 @@ public class Genai {
     /**
      * Retrieve a task
      * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiTaskRequestBuilder getGenaiTask() {
@@ -405,6 +474,9 @@ public class Genai {
 
     /**
      * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -419,6 +491,13 @@ public class Genai {
     /**
      * List all agents
      * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiAgentsRequestBuilder listGenaiAgents() {
@@ -427,6 +506,13 @@ public class Genai {
 
     /**
      * List all agents
+     * 
+     * <p>Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -441,6 +527,13 @@ public class Genai {
     /**
      * List all memories
      * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiMemoriesRequestBuilder listGenaiMemories() {
@@ -449,6 +542,13 @@ public class Genai {
 
     /**
      * List all memories
+     * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -463,6 +563,13 @@ public class Genai {
     /**
      * List all models
      * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiModelsRequestBuilder listGenaiModels() {
@@ -471,6 +578,13 @@ public class Genai {
 
     /**
      * List all models
+     * 
+     * <p>Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -485,6 +599,13 @@ public class Genai {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiOrganizationsRequestBuilder listGenaiOrganizations() {
@@ -493,6 +614,13 @@ public class Genai {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -507,6 +635,13 @@ public class Genai {
     /**
      * List all skills
      * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiSkillsRequestBuilder listGenaiSkills() {
@@ -515,6 +650,13 @@ public class Genai {
 
     /**
      * List all skills
+     * 
+     * <p>Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -529,6 +671,13 @@ public class Genai {
     /**
      * List all tasks
      * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiTasksRequestBuilder listGenaiTasks() {
@@ -537,6 +686,13 @@ public class Genai {
 
     /**
      * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -551,6 +707,9 @@ public class Genai {
     /**
      * Update an agent
      * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchGenaiAgentRequestBuilder patchGenaiAgent() {
@@ -559,6 +718,9 @@ public class Genai {
 
     /**
      * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -573,6 +735,9 @@ public class Genai {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchGenaiMemoryRequestBuilder patchGenaiMemory() {
@@ -581,6 +746,9 @@ public class Genai {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -595,6 +763,9 @@ public class Genai {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchGenaiOrganizationRequestBuilder patchGenaiOrganization() {
@@ -603,6 +774,9 @@ public class Genai {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -617,6 +791,9 @@ public class Genai {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchGenaiTaskRequestBuilder patchGenaiTask() {
@@ -625,6 +802,9 @@ public class Genai {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -639,6 +819,8 @@ public class Genai {
     /**
      * Remove an agent
      * 
+     * <p>Deletes the GenaiAgent identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiAgentRequestBuilder removeGenaiAgent() {
@@ -647,6 +829,8 @@ public class Genai {
 
     /**
      * Remove an agent
+     * 
+     * <p>Deletes the GenaiAgent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -661,6 +845,8 @@ public class Genai {
     /**
      * Remove a memory
      * 
+     * <p>Deletes the GenaiMemory identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiMemoryRequestBuilder removeGenaiMemory() {
@@ -669,6 +855,8 @@ public class Genai {
 
     /**
      * Remove a memory
+     * 
+     * <p>Deletes the GenaiMemory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -683,6 +871,8 @@ public class Genai {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiOrganizationRequestBuilder removeGenaiOrganization() {
@@ -691,6 +881,8 @@ public class Genai {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the GenaiOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -705,6 +897,8 @@ public class Genai {
     /**
      * Remove a skill
      * 
+     * <p>Deletes the GenaiSkill identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiSkillRequestBuilder removeGenaiSkill() {
@@ -713,6 +907,8 @@ public class Genai {
 
     /**
      * Remove a skill
+     * 
+     * <p>Deletes the GenaiSkill identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -727,6 +923,8 @@ public class Genai {
     /**
      * Remove a task
      * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiTaskRequestBuilder removeGenaiTask() {
@@ -735,6 +933,8 @@ public class Genai {
 
     /**
      * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -749,6 +949,9 @@ public class Genai {
     /**
      * Update an agent
      * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateGenaiAgentRequestBuilder updateGenaiAgent() {
@@ -757,6 +960,9 @@ public class Genai {
 
     /**
      * Update an agent
+     * 
+     * <p>Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -771,6 +977,9 @@ public class Genai {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateGenaiMemoryRequestBuilder updateGenaiMemory() {
@@ -779,6 +988,9 @@ public class Genai {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -793,6 +1005,9 @@ public class Genai {
     /**
      * Update an organization
      * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateGenaiOrganizationRequestBuilder updateGenaiOrganization() {
@@ -801,6 +1016,9 @@ public class Genai {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -815,6 +1033,9 @@ public class Genai {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateGenaiTaskRequestBuilder updateGenaiTask() {
@@ -823,6 +1044,9 @@ public class Genai {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

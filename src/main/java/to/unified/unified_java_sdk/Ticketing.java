@@ -127,6 +127,9 @@ public class Ticketing {
     /**
      * Create a category
      * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
+     * 
      * @return The call builder
      */
     public CreateTicketingCategoryRequestBuilder createTicketingCategory() {
@@ -135,6 +138,9 @@ public class Ticketing {
 
     /**
      * Create a category
+     * 
+     * <p>Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCategory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -149,6 +155,9 @@ public class Ticketing {
     /**
      * Create a customer
      * 
+     * <p>Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCustomer.
+     * 
      * @return The call builder
      */
     public CreateTicketingCustomerRequestBuilder createTicketingCustomer() {
@@ -157,6 +166,9 @@ public class Ticketing {
 
     /**
      * Create a customer
+     * 
+     * <p>Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they
+     * are mapped to the provider's API. Returns the created TicketingCustomer.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -171,6 +183,9 @@ public class Ticketing {
     /**
      * Create a note
      * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
+     * 
      * @return The call builder
      */
     public CreateTicketingNoteRequestBuilder createTicketingNote() {
@@ -179,6 +194,9 @@ public class Ticketing {
 
     /**
      * Create a note
+     * 
+     * <p>Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingNote.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -193,6 +211,9 @@ public class Ticketing {
     /**
      * Create a ticket
      * 
+     * <p>Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingTicket.
+     * 
      * @return The call builder
      */
     public CreateTicketingTicketRequestBuilder createTicketingTicket() {
@@ -201,6 +222,9 @@ public class Ticketing {
 
     /**
      * Create a ticket
+     * 
+     * <p>Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are
+     * mapped to the provider's API. Returns the created TicketingTicket.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -215,6 +239,9 @@ public class Ticketing {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTicketingCategoryRequestBuilder getTicketingCategory() {
@@ -223,6 +250,9 @@ public class Ticketing {
 
     /**
      * Retrieve a category
+     * 
+     * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -237,6 +267,9 @@ public class Ticketing {
     /**
      * Retrieve a customer
      * 
+     * <p>Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTicketingCustomerRequestBuilder getTicketingCustomer() {
@@ -245,6 +278,9 @@ public class Ticketing {
 
     /**
      * Retrieve a customer
+     * 
+     * <p>Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -259,6 +295,9 @@ public class Ticketing {
     /**
      * Retrieve a note
      * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTicketingNoteRequestBuilder getTicketingNote() {
@@ -267,6 +306,9 @@ public class Ticketing {
 
     /**
      * Retrieve a note
+     * 
+     * <p>Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -281,6 +323,9 @@ public class Ticketing {
     /**
      * Retrieve a ticket
      * 
+     * <p>Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTicketingTicketRequestBuilder getTicketingTicket() {
@@ -289,6 +334,9 @@ public class Ticketing {
 
     /**
      * Retrieve a ticket
+     * 
+     * <p>Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -303,6 +351,13 @@ public class Ticketing {
     /**
      * List all categories
      * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTicketingCategoriesRequestBuilder listTicketingCategories() {
@@ -311,6 +366,13 @@ public class Ticketing {
 
     /**
      * List all categories
+     * 
+     * <p>Returns a list of TicketingCategories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -325,6 +387,13 @@ public class Ticketing {
     /**
      * List all customers
      * 
+     * <p>Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTicketingCustomersRequestBuilder listTicketingCustomers() {
@@ -333,6 +402,13 @@ public class Ticketing {
 
     /**
      * List all customers
+     * 
+     * <p>Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -347,6 +423,13 @@ public class Ticketing {
     /**
      * List all notes
      * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTicketingNotesRequestBuilder listTicketingNotes() {
@@ -355,6 +438,13 @@ public class Ticketing {
 
     /**
      * List all notes
+     * 
+     * <p>Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -369,6 +459,13 @@ public class Ticketing {
     /**
      * List all tickets
      * 
+     * <p>Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTicketingTicketsRequestBuilder listTicketingTickets() {
@@ -377,6 +474,13 @@ public class Ticketing {
 
     /**
      * List all tickets
+     * 
+     * <p>Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -391,6 +495,9 @@ public class Ticketing {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchTicketingCategoryRequestBuilder patchTicketingCategory() {
@@ -399,6 +506,9 @@ public class Ticketing {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -413,6 +523,9 @@ public class Ticketing {
     /**
      * Update a customer
      * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchTicketingCustomerRequestBuilder patchTicketingCustomer() {
@@ -421,6 +534,9 @@ public class Ticketing {
 
     /**
      * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -435,6 +551,9 @@ public class Ticketing {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchTicketingNoteRequestBuilder patchTicketingNote() {
@@ -443,6 +562,9 @@ public class Ticketing {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -457,6 +579,9 @@ public class Ticketing {
     /**
      * Update a ticket
      * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchTicketingTicketRequestBuilder patchTicketingTicket() {
@@ -465,6 +590,9 @@ public class Ticketing {
 
     /**
      * Update a ticket
+     * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -479,6 +607,8 @@ public class Ticketing {
     /**
      * Remove a category
      * 
+     * <p>Deletes the TicketingCategory identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTicketingCategoryRequestBuilder removeTicketingCategory() {
@@ -487,6 +617,8 @@ public class Ticketing {
 
     /**
      * Remove a category
+     * 
+     * <p>Deletes the TicketingCategory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -501,6 +633,8 @@ public class Ticketing {
     /**
      * Remove a customer
      * 
+     * <p>Deletes the TicketingCustomer identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTicketingCustomerRequestBuilder removeTicketingCustomer() {
@@ -509,6 +643,8 @@ public class Ticketing {
 
     /**
      * Remove a customer
+     * 
+     * <p>Deletes the TicketingCustomer identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -523,6 +659,8 @@ public class Ticketing {
     /**
      * Remove a note
      * 
+     * <p>Deletes the TicketingNote identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTicketingNoteRequestBuilder removeTicketingNote() {
@@ -531,6 +669,8 @@ public class Ticketing {
 
     /**
      * Remove a note
+     * 
+     * <p>Deletes the TicketingNote identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -545,6 +685,8 @@ public class Ticketing {
     /**
      * Remove a ticket
      * 
+     * <p>Deletes the TicketingTicket identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTicketingTicketRequestBuilder removeTicketingTicket() {
@@ -553,6 +695,8 @@ public class Ticketing {
 
     /**
      * Remove a ticket
+     * 
+     * <p>Deletes the TicketingTicket identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -567,6 +711,9 @@ public class Ticketing {
     /**
      * Update a category
      * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateTicketingCategoryRequestBuilder updateTicketingCategory() {
@@ -575,6 +722,9 @@ public class Ticketing {
 
     /**
      * Update a category
+     * 
+     * <p>Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -589,6 +739,9 @@ public class Ticketing {
     /**
      * Update a customer
      * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateTicketingCustomerRequestBuilder updateTicketingCustomer() {
@@ -597,6 +750,9 @@ public class Ticketing {
 
     /**
      * Update a customer
+     * 
+     * <p>Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -611,6 +767,9 @@ public class Ticketing {
     /**
      * Update a note
      * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateTicketingNoteRequestBuilder updateTicketingNote() {
@@ -619,6 +778,9 @@ public class Ticketing {
 
     /**
      * Update a note
+     * 
+     * <p>Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -633,6 +795,9 @@ public class Ticketing {
     /**
      * Update a ticket
      * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateTicketingTicketRequestBuilder updateTicketingTicket() {
@@ -641,6 +806,9 @@ public class Ticketing {
 
     /**
      * Update a ticket
+     * 
+     * <p>Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

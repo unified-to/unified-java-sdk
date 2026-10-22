@@ -4,20 +4,22 @@
 
 ### Available Operations
 
-* [createAccountingOrder](#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](#createassessmentorder) - Create an order
-* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](#getassessmentorder) - Retrieve an order
-* [listAccountingOrders](#listaccountingorders) - List all orders
-* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
-* [removeAccountingOrder](#removeaccountingorder) - Remove an order
-* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](#updateassessmentorder) - Update an order
 
-## createAccountingOrder
+## ~~createAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -55,7 +57,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("15aca128-a668-41dd-801a-da5fb830d585")
+                    .id("737f31c8-0aaa-451f-a595-ef740b6d1938")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -70,7 +72,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.445Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -104,7 +106,7 @@ public class Application {
 
 ## createAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -135,7 +137,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("f47d4132-999a-4af4-9f65-951ef89a026a")
+                    .id("8f6923e4-40bb-43a4-bc5e-66ecc88bed70")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -160,7 +162,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.032Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.926Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,9 +194,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## getAccountingOrder
+## ~~getAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -252,7 +256,7 @@ public class Application {
 
 ## getAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -308,9 +312,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAccountingOrders
+## ~~listAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -365,9 +371,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## patchAccountingOrder
+## ~~patchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -405,7 +413,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("aa260150-da09-4d74-962e-fc4230c8bd8b")
+                    .id("e84e250a-5370-4900-a123-c6e66a3bb787")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -420,7 +428,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.650Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.454Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -455,7 +463,7 @@ public class Application {
 
 ## patchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -486,7 +494,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c9dc4d3d-252c-44a2-9322-36819bb1ea5a")
+                    .id("00ab58e0-68b6-41fc-bdc3-98098e36b057")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -511,7 +519,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.940Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -544,9 +552,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## removeAccountingOrder
+## ~~removeAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -600,9 +610,11 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## updateAccountingOrder
+## ~~updateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -640,7 +652,7 @@ public class Application {
                         .build())
                     .createdAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
                     .currency("GBP")
-                    .id("aa260150-da09-4d74-962e-fc4230c8bd8b")
+                    .id("e84e250a-5370-4900-a123-c6e66a3bb787")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-11-20T03:46:49.837Z"))
@@ -655,7 +667,7 @@ public class Application {
                     .status(AccountingOrderStatus.AUTHORIZED)
                     .totalAmount(0d)
                     .type(AccountingOrderType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2022-02-08T07:19:17.650Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-02-08T12:27:32.454Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -690,7 +702,7 @@ public class Application {
 
 ## updateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -721,7 +733,7 @@ public class Application {
                     .connectionId("<id>")
                     .workspaceId("<id>")
                     .createdAt(OffsetDateTime.parse("2021-09-18T10:33:57.803Z"))
-                    .id("c9dc4d3d-252c-44a2-9322-36819bb1ea5a")
+                    .id("00ab58e0-68b6-41fc-bdc3-98098e36b057")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -746,7 +758,7 @@ public class Application {
                     .responseUrl("https://rowdy-fisherman.biz/")
                     .status(AssessmentOrderStatus.REJECTED)
                     .targetUrl("https://cautious-turret.info")
-                    .updatedAt(OffsetDateTime.parse("2023-01-25T20:35:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-26T03:13:20.940Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

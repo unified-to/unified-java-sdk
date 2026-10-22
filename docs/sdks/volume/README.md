@@ -13,7 +13,7 @@
 
 ## createComputeVolume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -42,14 +42,14 @@ public class Application {
         CreateComputeVolumeRequest req = CreateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("40b1b660-248a-4116-9c05-9328148c87df")
+                    .id("70ff1c68-cd05-4cde-8fa1-fb5018496c21")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.056Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -84,7 +84,7 @@ public class Application {
 
 ## getComputeVolume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listComputeVolumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -228,14 +228,14 @@ public class Application {
         PatchComputeVolumeRequest req = PatchComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("ba7c1bea-1c9b-492e-afc7-ea7b5c2d94fa")
+                    .id("f8b20221-6bce-49d7-a674-a07326c42989")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.059Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.060Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeComputeVolume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -356,14 +356,14 @@ public class Application {
         UpdateComputeVolumeRequest req = UpdateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("ba7c1bea-1c9b-492e-afc7-ea7b5c2d94fa")
+                    .id("f8b20221-6bce-49d7-a674-a07326c42989")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-09T21:51:51.059Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-10T05:42:17.060Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")

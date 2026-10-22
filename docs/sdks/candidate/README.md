@@ -13,7 +13,7 @@
 
 ## createAtsCandidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -90,7 +90,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("a07a1a46-2ecc-4928-9c8e-28b8781fa18b")
+                    .id("88aab933-5bd2-4eed-9f7f-a36b0dc033aa")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -101,7 +101,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("1863944c-81c0-4cfd-b022-8bc94e3de78c")
+                            .id("39fea941-08d0-4ba8-91d6-91132be91b62")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -123,7 +123,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.874Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.166Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")
@@ -158,7 +158,7 @@ public class Application {
 
 ## getAtsCandidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ public class Application {
 
 ## listAtsCandidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ public class Application {
 
 ## patchAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("fce9aa30-b3fc-4f5c-bd4e-25a951f557ae")
+                    .id("f0d82c74-85b5-4037-a21b-d9071550d045")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -361,7 +361,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("3940c875-a6c1-4c1e-9533-79370e17c17c")
+                            .id("6a558dbe-3c3c-45d7-b8c2-a5ec40537de4")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -383,7 +383,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.883Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.175Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")
@@ -419,7 +419,7 @@ public class Application {
 
 ## removeAtsCandidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ public class Application {
 
 ## updateAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -552,7 +552,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("fce9aa30-b3fc-4f5c-bd4e-25a951f557ae")
+                    .id("f0d82c74-85b5-4037-a21b-d9071550d045")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -563,7 +563,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("3940c875-a6c1-4c1e-9533-79370e17c17c")
+                            .id("6a558dbe-3c3c-45d7-b8c2-a5ec40537de4")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -585,7 +585,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.883Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.175Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")

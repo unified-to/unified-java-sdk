@@ -65,6 +65,9 @@ public class AsyncMember {
     /**
      * Create a member
      * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
      * @return The async call builder
      */
     public CreateMartechMemberRequestBuilder createMartechMember() {
@@ -73,6 +76,9 @@ public class AsyncMember {
 
     /**
      * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncMember {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetClubsMemberRequestBuilder getClubsMember() {
@@ -96,6 +105,9 @@ public class AsyncMember {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetClubsMemberResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncMember {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetMartechMemberRequestBuilder getMartechMember() {
@@ -119,6 +134,9 @@ public class AsyncMember {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncMember {
     /**
      * List all members
      * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListClubsMembersRequestBuilder listClubsMembers() {
@@ -142,6 +167,13 @@ public class AsyncMember {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListClubsMembersResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncMember {
     /**
      * List all members
      * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListMartechMembersRequestBuilder listMartechMembers() {
@@ -165,6 +204,13 @@ public class AsyncMember {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncMember {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMartechMemberRequestBuilder patchMartechMember() {
@@ -188,6 +237,9 @@ public class AsyncMember {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncMember {
     /**
      * Remove a member
      * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveMartechMemberRequestBuilder removeMartechMember() {
@@ -211,6 +265,8 @@ public class AsyncMember {
 
     /**
      * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncMember {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMartechMemberRequestBuilder updateMartechMember() {
@@ -234,6 +293,9 @@ public class AsyncMember {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response

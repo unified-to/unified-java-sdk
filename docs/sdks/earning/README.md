@@ -13,7 +13,7 @@
 
 ## createHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -45,12 +45,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("ddad645f-3d19-42ec-a027-6c165e76b0f9")
+                    .id("106e4511-3016-4a4a-992b-ad7f2114635f")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.909Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.242Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.505Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.835Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,7 +84,7 @@ public class Application {
 
 ## getHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -231,12 +231,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("a5d34156-d19f-48f1-bb2c-7bccd7acd799")
+                    .id("0eddb385-71c2-4a79-83b6-55d61fd5cd54")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.917Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.250Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.837Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -359,12 +359,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("a5d34156-d19f-48f1-bb2c-7bccd7acd799")
+                    .id("0eddb385-71c2-4a79-83b6-55d61fd5cd54")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-07-25T11:49:42.917Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-25T23:05:40.250Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-08T20:33:08.507Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-08T23:53:33.837Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

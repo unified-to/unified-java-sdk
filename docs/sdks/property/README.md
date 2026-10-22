@@ -13,7 +13,7 @@
 
 ## createAnalyticsProperty
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -43,10 +43,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("13d9f823-4a32-4eab-9f75-7171a274ebbf")
+                    .id("685f52bc-26ff-49a6-825b-68e63a8dec29")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,7 +80,7 @@ public class Application {
 
 ## getAnalyticsProperty
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ public class Application {
 
 ## listAnalyticsProperties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## patchAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -225,10 +225,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("4fd2a490-5b22-4d61-ab41-ecc1672384be")
+                    .id("39f93b38-d0dd-489e-a9a3-bb83a220d0dc")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -263,7 +263,7 @@ public class Application {
 
 ## removeAnalyticsProperty
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ public class Application {
 
 ## updateAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -349,10 +349,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("4fd2a490-5b22-4d61-ab41-ecc1672384be")
+                    .id("39f93b38-d0dd-489e-a9a3-bb83a220d0dc")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:26:18.894Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T20:33:33.410Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

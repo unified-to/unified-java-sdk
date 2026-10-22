@@ -56,7 +56,7 @@
 
 ## createCommerceCollection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -87,7 +87,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("82223764-4c37-4ce0-bb41-a45eae6f2899")
+                    .id("dfd00974-a209-45aa-9216-2a7ff4041182")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -97,10 +97,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("a578c433-c574-4104-8001-6855ff5fc779")
+                            .id("15e6154e-feda-4332-ae72-535eff37de7b")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("72051fbf-21c5-42ac-a7d7-8d218365542e")
+                                    .id("30e82e03-73e7-41bd-b871-f3fccabd0b15")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -110,7 +110,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("57bbe6f6-1a4c-4a96-bea1-3337d3dd12df")
+                            .id("1eb408ca-6497-4c83-9ec0-1c25037002c8")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -121,7 +121,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.058Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.328Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -155,7 +155,7 @@ public class Application {
 
 ## createCommerceInventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -185,9 +185,9 @@ public class Application {
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("dcef2a4d-305c-410d-a5e1-40e91fd1cfdb")
+                    .id("57fe415b-f739-4c85-9f57-4b383c62038f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.375Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.515Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -221,7 +221,7 @@ public class Application {
 
 ## createCommerceItem
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("4ed37294-4c01-4ad5-9dfc-0a1d292c67e6")
+                    .id("88aa1e6e-9224-4dea-b79c-d1e5a8a415d6")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -265,10 +265,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("4a97b4ed-619a-4865-9ae0-b6886e33444f")
+                            .id("0e5f89b2-c5be-4cee-8901-969932447258")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("ba7afff1-ce0b-44c1-bc29-f6cd911a41c3")
+                                    .id("2e2eb9a0-8265-4059-8ba9-bd4fa2d5351e")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -280,10 +280,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("739e232c-6f68-44f9-a99e-1aa1041d3ad0")
+                            .id("27ce2945-2ffd-4626-b23a-541181f1efc7")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("300a35c8-c9bb-4dec-af8e-ca2bd5b21a7c")
+                                    .id("afb19915-16cd-4303-a458-c07b413dc996")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -296,7 +296,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("3b375a03-ba19-4a82-a1a6-49b78e286200")
+                            .id("f03ccb95-6c2d-4e75-993b-9a0ca020b56b")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -316,7 +316,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-19T12:02:19.652Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-19T21:39:16.611Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -353,7 +353,7 @@ public class Application {
 
 ## createCommerceItemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -386,7 +386,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("924dcb2a-5321-4d87-b6c0-3b4496e764c8")
+                    .id("7673985b-601b-4e8b-8f7f-a986b3e8ed23")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -396,10 +396,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("4df953a3-91cf-4ced-b170-b4717d8b5a42")
+                            .id("30de7c58-1b18-46f3-b224-b63001eb7e3f")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("aa4a8fd7-99d2-49ac-98d7-f65acdbb85f8")
+                                    .id("b5c25aeb-b7d3-445b-b113-97da871e7ef0")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -412,7 +412,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("3f577b09-5a13-4758-b14d-c9a6848bd13d")
+                            .id("fd352eda-00e9-403a-b6ca-9cf36f3b629a")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -423,14 +423,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("9006ca93-bb2a-4900-a1bf-ec10af5bcf86")
+                            .id("9a094088-f702-4292-ab96-9a31f30d54fa")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03ec021d-36f6-49f5-857d-eae6109c3a07")
+                            .id("9641b808-28c1-469a-b158-44b1f9eac4e3")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -446,7 +446,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.166Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -483,7 +483,7 @@ public class Application {
 
 ## createCommerceLocation
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -523,7 +523,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("334bc23e-e874-4b99-bbc0-2b920772b4bf")
+                    .id("ea8e8094-c170-404f-9432-2256deaecf5e")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -535,10 +535,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a64c488c-f41f-491c-9166-6c9993e5c98d")
+                            .id("19b31ed2-2f84-4ca4-a53d-af760d937e09")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("227722cc-0d1d-4f7c-8164-37f14f4be291")
+                                    .id("0c762a6f-ff06-48db-ac58-c5b367dad91a")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -560,7 +560,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.179Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.922Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -595,7 +595,7 @@ public class Application {
 
 ## createCommerceReservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -628,13 +628,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("3500a77e-f5f8-4937-9b5f-5881f304082b")
+                    .id("b3b81102-7acc-422c-8031-d1c20430d6ea")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.348Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.701Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -669,7 +669,7 @@ public class Application {
 
 ## createCommerceReview
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("05ab349b-36d5-46d1-9f44-117d8f5b2006")
+                    .id("06625455-9fba-44da-813d-cc7b880146e8")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -714,10 +714,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("77693121-421f-467e-aa2d-7a9b617c79d1")
+                            .id("d6c40eb7-2282-4152-85aa-791468a56d3c")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("244fd5d8-56f3-4247-81fc-c38213a5d394")
+                                    .id("3ae58c84-d9d9-467a-94cd-f4094a59e405")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -729,10 +729,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("ff83143c-b032-48b6-bc05-2dc6c4fd5979")
+                            .id("7e1b2237-d3b8-4fc6-80f3-f64d354f4460")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("feaadeda-1806-477e-83d1-37f73148797e")
+                                    .id("0ebad263-4fb8-4046-8324-be3b303d9fd6")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -745,7 +745,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.835Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.473Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -781,7 +781,7 @@ public class Application {
 
 ## createCommerceSaleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -813,11 +813,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("03fc5562-5020-49cc-ae24-89ca9758f169")
+                    .id("d77d6acc-aaea-474b-953c-5300bc5d9f62")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.281Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.227Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -851,7 +851,7 @@ public class Application {
 
 ## getCommerceCollection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -909,7 +909,7 @@ public class Application {
 
 ## getCommerceInventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -967,7 +967,7 @@ public class Application {
 
 ## getCommerceItem
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1025,7 +1025,7 @@ public class Application {
 
 ## getCommerceItemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1083,7 +1083,7 @@ public class Application {
 
 ## getCommerceLocation
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1141,7 +1141,7 @@ public class Application {
 
 ## getCommerceReservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1199,7 +1199,7 @@ public class Application {
 
 ## getCommerceReview
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1257,7 +1257,7 @@ public class Application {
 
 ## getCommerceSaleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1315,7 +1315,7 @@ public class Application {
 
 ## listCommerceAvailabilities
 
-List all availabilities
+Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1372,7 +1372,7 @@ public class Application {
 
 ## listCommerceCollections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1429,7 +1429,7 @@ public class Application {
 
 ## listCommerceInventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1486,7 +1486,7 @@ public class Application {
 
 ## listCommerceItems
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1543,7 +1543,7 @@ public class Application {
 
 ## listCommerceItemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1600,7 +1600,7 @@ public class Application {
 
 ## listCommerceLocations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1657,7 +1657,7 @@ public class Application {
 
 ## listCommerceReservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1714,7 +1714,7 @@ public class Application {
 
 ## listCommerceReviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1771,7 +1771,7 @@ public class Application {
 
 ## listCommerceSaleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1828,7 +1828,7 @@ public class Application {
 
 ## patchCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1859,7 +1859,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("6aaf2417-ac28-40d8-bef1-86febc55f6c8")
+                    .id("39b7e4bf-a51a-43ca-94af-06928234aa91")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -1869,10 +1869,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("ec1857de-5268-431a-a0ee-8892108c3ee0")
+                            .id("39dc9b95-3fcb-46c9-9cc2-851684fb1bac")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("4886e0ec-2694-4588-9e05-a4e306020558")
+                                    .id("f75e3530-8d99-4995-bfc6-d722653e2702")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -1882,7 +1882,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("69f15108-c40f-4d12-be24-c450cad87f17")
+                            .id("94ffe8e9-76da-4d47-bd92-edbaf7cdf299")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -1893,7 +1893,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.074Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.346Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1928,7 +1928,7 @@ public class Application {
 
 ## patchCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -1958,9 +1958,9 @@ public class Application {
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8834e824-a557-43d0-99af-21ed08be69c9")
+                    .id("b51f8d88-fdfb-424a-b5f5-e30675879008")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.386Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.526Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1995,7 +1995,7 @@ public class Application {
 
 ## patchCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -2029,7 +2029,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("03d0f203-a937-4232-9033-63adffda5422")
+                    .id("ade077bc-3c7a-4853-815e-53cf12e9a116")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -2039,10 +2039,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("9b51c78d-26bf-4921-9022-e510cb95b3c3")
+                            .id("a526d9c5-ace5-4461-960f-a0eabf84dd45")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("772c66b8-7550-4ff4-a20d-bb11c173db0e")
+                                    .id("9e8c546b-2223-411b-8ae1-0577aec495f3")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -2054,10 +2054,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("2b8817b6-808c-4081-b159-0e008d441500")
+                            .id("b3d78376-a163-4d54-9ded-40d57cbb0700")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("75e94659-3c68-4d2e-91e1-e62702dabddf")
+                                    .id("6e2d578a-76b8-455f-a66f-707c492537a7")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -2070,7 +2070,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("94f71e84-936d-46c5-9c40-d41011b6c21b")
+                            .id("f313c9d9-cc25-4092-bfe3-aab7069edffe")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -2090,7 +2090,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-19T12:02:19.668Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-19T21:39:16.629Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -2128,7 +2128,7 @@ public class Application {
 
 ## patchCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -2161,7 +2161,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("aa6977be-5b80-45d5-8256-cc3301c976ab")
+                    .id("a001c92f-ab05-4447-b550-6bf8f9be5410")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -2171,10 +2171,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("c4674cb9-c127-46ef-bb5c-049506eb8a0e")
+                            .id("92269475-82ac-4ea1-9fe6-622303df6c68")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("83e4e04e-ac0b-44d9-b503-0fcf8a4225ad")
+                                    .id("db11b845-45c9-49a4-a081-8645b2569e3b")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -2187,7 +2187,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("467db122-797e-4b87-bca5-3ec6b7bbf5d6")
+                            .id("3cc31eb5-46cb-4650-9753-8fcb5c1c5395")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -2198,14 +2198,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("856d1277-f8e0-43d1-9fc3-68fdafe5838e")
+                            .id("596ce3bd-1059-42eb-ae8b-d5f63be26311")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03b14415-69f2-4843-9bae-9b1f31792035")
+                            .id("c60ea7c2-41ec-4af8-9ec4-58520ca0d4c1")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -2221,7 +2221,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.135Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.203Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -2259,7 +2259,7 @@ public class Application {
 
 ## patchCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -2299,7 +2299,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("2c5034b8-e3ba-41af-97de-070154474788")
+                    .id("1106f5ae-9b76-4913-81b6-0f36ec78e4b8")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -2311,10 +2311,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a54f9654-a152-48a2-88ce-5f12bd269be0")
+                            .id("5f79cf75-f035-43fc-8c70-b6a1fb70178d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a70aab16-4e4d-4d35-933b-3dd0b85cf89f")
+                                    .id("f47a6dad-f383-4ac4-991d-d0aec30c211d")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -2336,7 +2336,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.190Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.938Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -2372,7 +2372,7 @@ public class Application {
 
 ## patchCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -2405,13 +2405,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("f2ef49e2-7efa-4cf5-8c36-a43db03260d6")
+                    .id("0ca690ec-4af9-4919-9ed3-f5436659cafc")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.351Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.705Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -2447,7 +2447,7 @@ public class Application {
 
 ## patchCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -2483,7 +2483,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("ef7bd05f-221b-4eaf-bc43-53ca74853c32")
+                    .id("68e33644-1e60-4c65-bfce-ac275bbdfbe3")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -2492,10 +2492,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("c5f22c61-6418-44bc-9c26-ab8a26709733")
+                            .id("7eafe126-d08c-4c7d-8527-25d472855291")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("03154479-f518-4db3-86ec-b33a75f6ed88")
+                                    .id("31d2f266-2928-41db-a232-01561da0d978")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -2507,10 +2507,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("eeb61fdc-a8bd-420a-8cb8-5ea635e77fa0")
+                            .id("b0c25ea6-9c57-412f-b539-83481c1150cd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("556f7e05-5e15-4b2c-96fc-cfa181e043bc")
+                                    .id("a934a3ae-1322-400a-a200-5b5e9d922651")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -2523,7 +2523,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.522Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -2560,7 +2560,7 @@ public class Application {
 
 ## patchCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -2592,11 +2592,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("0c0d6637-ef1c-4c97-8c07-2ec08efb7d97")
+                    .id("b0ca61e9-5770-4f0a-be74-3189ff6855ee")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2631,7 +2631,7 @@ public class Application {
 
 ## removeCommerceCollection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -2687,7 +2687,7 @@ public class Application {
 
 ## removeCommerceInventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -2743,7 +2743,7 @@ public class Application {
 
 ## removeCommerceItem
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -2799,7 +2799,7 @@ public class Application {
 
 ## removeCommerceItemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -2855,7 +2855,7 @@ public class Application {
 
 ## removeCommerceLocation
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -2911,7 +2911,7 @@ public class Application {
 
 ## removeCommerceReservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -2967,7 +2967,7 @@ public class Application {
 
 ## removeCommerceReview
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -3023,7 +3023,7 @@ public class Application {
 
 ## removeCommerceSaleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -3079,7 +3079,7 @@ public class Application {
 
 ## updateCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -3110,7 +3110,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("6aaf2417-ac28-40d8-bef1-86febc55f6c8")
+                    .id("39b7e4bf-a51a-43ca-94af-06928234aa91")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -3120,10 +3120,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("ec1857de-5268-431a-a0ee-8892108c3ee0")
+                            .id("39dc9b95-3fcb-46c9-9cc2-851684fb1bac")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("4886e0ec-2694-4588-9e05-a4e306020558")
+                                    .id("f75e3530-8d99-4995-bfc6-d722653e2702")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -3133,7 +3133,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("69f15108-c40f-4d12-be24-c450cad87f17")
+                            .id("94ffe8e9-76da-4d47-bd92-edbaf7cdf299")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -3144,7 +3144,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-15T01:19:23.074Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-15T14:03:14.346Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3179,7 +3179,7 @@ public class Application {
 
 ## updateCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -3209,9 +3209,9 @@ public class Application {
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8834e824-a557-43d0-99af-21ed08be69c9")
+                    .id("b51f8d88-fdfb-424a-b5f5-e30675879008")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T09:50:16.386Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T05:55:53.526Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3246,7 +3246,7 @@ public class Application {
 
 ## updateCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -3280,7 +3280,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("03d0f203-a937-4232-9033-63adffda5422")
+                    .id("ade077bc-3c7a-4853-815e-53cf12e9a116")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -3290,10 +3290,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("9b51c78d-26bf-4921-9022-e510cb95b3c3")
+                            .id("a526d9c5-ace5-4461-960f-a0eabf84dd45")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("772c66b8-7550-4ff4-a20d-bb11c173db0e")
+                                    .id("9e8c546b-2223-411b-8ae1-0577aec495f3")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -3305,10 +3305,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("2b8817b6-808c-4081-b159-0e008d441500")
+                            .id("b3d78376-a163-4d54-9ded-40d57cbb0700")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("75e94659-3c68-4d2e-91e1-e62702dabddf")
+                                    .id("6e2d578a-76b8-455f-a66f-707c492537a7")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -3321,7 +3321,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("94f71e84-936d-46c5-9c40-d41011b6c21b")
+                            .id("f313c9d9-cc25-4092-bfe3-aab7069edffe")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -3341,7 +3341,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-19T12:02:19.668Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-19T21:39:16.629Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -3379,7 +3379,7 @@ public class Application {
 
 ## updateCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -3412,7 +3412,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("aa6977be-5b80-45d5-8256-cc3301c976ab")
+                    .id("a001c92f-ab05-4447-b550-6bf8f9be5410")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -3422,10 +3422,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("c4674cb9-c127-46ef-bb5c-049506eb8a0e")
+                            .id("92269475-82ac-4ea1-9fe6-622303df6c68")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("83e4e04e-ac0b-44d9-b503-0fcf8a4225ad")
+                                    .id("db11b845-45c9-49a4-a081-8645b2569e3b")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -3438,7 +3438,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("467db122-797e-4b87-bca5-3ec6b7bbf5d6")
+                            .id("3cc31eb5-46cb-4650-9753-8fcb5c1c5395")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -3449,14 +3449,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("856d1277-f8e0-43d1-9fc3-68fdafe5838e")
+                            .id("596ce3bd-1059-42eb-ae8b-d5f63be26311")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("03b14415-69f2-4843-9bae-9b1f31792035")
+                            .id("c60ea7c2-41ec-4af8-9ec4-58520ca0d4c1")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -3472,7 +3472,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-09T16:22:29.135Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-10T14:04:24.203Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -3510,7 +3510,7 @@ public class Application {
 
 ## updateCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3550,7 +3550,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("2c5034b8-e3ba-41af-97de-070154474788")
+                    .id("1106f5ae-9b76-4913-81b6-0f36ec78e4b8")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -3562,10 +3562,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a54f9654-a152-48a2-88ce-5f12bd269be0")
+                            .id("5f79cf75-f035-43fc-8c70-b6a1fb70178d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a70aab16-4e4d-4d35-933b-3dd0b85cf89f")
+                                    .id("f47a6dad-f383-4ac4-991d-d0aec30c211d")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -3587,7 +3587,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.190Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.938Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -3623,7 +3623,7 @@ public class Application {
 
 ## updateCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -3656,13 +3656,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("f2ef49e2-7efa-4cf5-8c36-a43db03260d6")
+                    .id("0ca690ec-4af9-4919-9ed3-f5436659cafc")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-03T21:24:16.351Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-04T02:49:34.705Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -3698,7 +3698,7 @@ public class Application {
 
 ## updateCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -3734,7 +3734,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("ef7bd05f-221b-4eaf-bc43-53ca74853c32")
+                    .id("68e33644-1e60-4c65-bfce-ac275bbdfbe3")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -3743,10 +3743,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("c5f22c61-6418-44bc-9c26-ab8a26709733")
+                            .id("7eafe126-d08c-4c7d-8527-25d472855291")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("03154479-f518-4db3-86ec-b33a75f6ed88")
+                                    .id("31d2f266-2928-41db-a232-01561da0d978")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -3758,10 +3758,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("eeb61fdc-a8bd-420a-8cb8-5ea635e77fa0")
+                            .id("b0c25ea6-9c57-412f-b539-83481c1150cd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("556f7e05-5e15-4b2c-96fc-cfa181e043bc")
+                                    .id("a934a3ae-1322-400a-a200-5b5e9d922651")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -3774,7 +3774,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.522Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -3811,7 +3811,7 @@ public class Application {
 
 ## updateCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -3843,11 +3843,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("0c0d6637-ef1c-4c97-8c07-2ec08efb7d97")
+                    .id("b0ca61e9-5770-4f0a-be74-3189ff6855ee")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -19,7 +19,7 @@
 
 ## createAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -79,7 +79,7 @@ public class Application {
 
 ## createTaskProject
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -112,13 +112,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("120e5ac8-b1ae-4c33-9b4a-a756d0e10bbe")
+                    .id("ea63cc61-ab73-4c09-937c-d822986019b6")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("9669d95e-0ab8-4e4d-b1d7-9a59a531b087")
+                            .id("200f1a51-f0a6-4a02-8cd9-188fcf820ba5")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -127,13 +127,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("2291f15c-0e8d-400d-928c-e08b2ad34cc7")
+                            .id("1cb55ff8-daad-41b9-86bb-37c8a59b804c")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-11T14:30:44.092Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-11T16:46:03.512Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -167,7 +167,7 @@ public class Application {
 
 ## getAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ public class Application {
 
 ## getTaskProject
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -283,7 +283,7 @@ public class Application {
 
 ## listAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -340,7 +340,7 @@ public class Application {
 
 ## listTaskProjects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -397,7 +397,7 @@ public class Application {
 
 ## patchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -458,7 +458,7 @@ public class Application {
 
 ## patchTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -491,13 +491,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("295d599a-f47c-402b-9885-22a5396e7ca4")
+                    .id("4bf68125-08d5-42dc-89be-8f023977a17d")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("737a4020-4709-4513-9eee-8357287ce716")
+                            .id("2ce4b404-cfc1-41eb-ae2f-d1a52c4c8d59")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -506,13 +506,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("1ca124fc-6fd8-4561-b83b-c507a4ca885f")
+                            .id("4d121f39-ebc1-4080-8c20-82570cb3bb6a")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-11T14:30:44.095Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-11T16:46:03.513Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -547,7 +547,7 @@ public class Application {
 
 ## removeAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -603,7 +603,7 @@ public class Application {
 
 ## removeTaskProject
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -659,7 +659,7 @@ public class Application {
 
 ## updateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -720,7 +720,7 @@ public class Application {
 
 ## updateTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -753,13 +753,13 @@ public class Application {
                     .description("Valetudo aggredior accommodo curiositas vox.")
                     .hasChildren(false)
                     .hasTasks(false)
-                    .id("295d599a-f47c-402b-9885-22a5396e7ca4")
+                    .id("4bf68125-08d5-42dc-89be-8f023977a17d")
                     .metadata(List.of(
                         TaskMetadata.builder()
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("737a4020-4709-4513-9eee-8357287ce716")
+                            .id("2ce4b404-cfc1-41eb-ae2f-d1a52c4c8d59")
                             .namespace("custom")
                             .slug("decens")
                             .value(TaskMetadataValue.of("uterque"))
@@ -768,13 +768,13 @@ public class Application {
                             .extraData(TaskMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(TaskMetadataFormat.TEXT)
-                            .id("1ca124fc-6fd8-4561-b83b-c507a4ca885f")
+                            .id("4d121f39-ebc1-4080-8c20-82570cb3bb6a")
                             .namespace("custom")
                             .slug("benevolentia")
                             .value(TaskMetadataValue.of("pariatur"))
                             .build()))
                     .name("Garden")
-                    .updatedAt(OffsetDateTime.parse("2023-10-11T14:30:44.095Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-11T16:46:03.513Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

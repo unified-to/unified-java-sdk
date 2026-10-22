@@ -81,6 +81,9 @@ public class AsyncCollection {
     /**
      * Create a collection
      * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
+     * 
      * @return The async call builder
      */
     public CreateCommerceCollectionRequestBuilder createCommerceCollection() {
@@ -89,6 +92,9 @@ public class AsyncCollection {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body;
+     * they are mapped to the provider's API. Returns the created CommerceCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncCollection {
     /**
      * Create a collection
      * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
+     * 
      * @return The async call builder
      */
     public CreateLmsCollectionRequestBuilder createLmsCollection() {
@@ -112,6 +121,9 @@ public class AsyncCollection {
 
     /**
      * Create a collection
+     * 
+     * <p>Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are
+     * mapped to the provider's API. Returns the created LmsCollection.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsCollectionResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncCollection {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCommerceCollectionRequestBuilder getCommerceCollection() {
@@ -135,6 +150,9 @@ public class AsyncCollection {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncCollection {
     /**
      * Retrieve a collection
      * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLmsCollectionRequestBuilder getLmsCollection() {
@@ -158,6 +179,9 @@ public class AsyncCollection {
 
     /**
      * Retrieve a collection
+     * 
+     * <p>Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsCollectionResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncCollection {
     /**
      * List all collections
      * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCommerceCollectionsRequestBuilder listCommerceCollections() {
@@ -181,6 +212,13 @@ public class AsyncCollection {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of CommerceCollections. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncCollection {
     /**
      * List all collections
      * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLmsCollectionsRequestBuilder listLmsCollections() {
@@ -204,6 +249,13 @@ public class AsyncCollection {
 
     /**
      * List all collections
+     * 
+     * <p>Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsCollectionsResponse>} - The async response
@@ -219,6 +271,9 @@ public class AsyncCollection {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCommerceCollectionRequestBuilder patchCommerceCollection() {
@@ -227,6 +282,9 @@ public class AsyncCollection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
@@ -242,6 +300,9 @@ public class AsyncCollection {
     /**
      * Update a collection
      * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchLmsCollectionRequestBuilder patchLmsCollection() {
@@ -250,6 +311,9 @@ public class AsyncCollection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsCollectionResponse>} - The async response
@@ -265,6 +329,8 @@ public class AsyncCollection {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the CommerceCollection identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCommerceCollectionRequestBuilder removeCommerceCollection() {
@@ -273,6 +339,8 @@ public class AsyncCollection {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the CommerceCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
@@ -288,6 +356,8 @@ public class AsyncCollection {
     /**
      * Remove a collection
      * 
+     * <p>Deletes the LmsCollection identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLmsCollectionRequestBuilder removeLmsCollection() {
@@ -296,6 +366,8 @@ public class AsyncCollection {
 
     /**
      * Remove a collection
+     * 
+     * <p>Deletes the LmsCollection identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsCollectionResponse>} - The async response
@@ -311,6 +383,9 @@ public class AsyncCollection {
     /**
      * Update a collection
      * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCommerceCollectionRequestBuilder updateCommerceCollection() {
@@ -319,6 +394,9 @@ public class AsyncCollection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
@@ -334,6 +412,9 @@ public class AsyncCollection {
     /**
      * Update a collection
      * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateLmsCollectionRequestBuilder updateLmsCollection() {
@@ -342,6 +423,9 @@ public class AsyncCollection {
 
     /**
      * Update a collection
+     * 
+     * <p>Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsCollectionResponse>} - The async response

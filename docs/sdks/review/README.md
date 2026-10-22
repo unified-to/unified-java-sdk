@@ -19,7 +19,7 @@
 
 ## createCommerceReview
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -55,7 +55,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("05ab349b-36d5-46d1-9f44-117d8f5b2006")
+                    .id("06625455-9fba-44da-813d-cc7b880146e8")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -64,10 +64,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("77693121-421f-467e-aa2d-7a9b617c79d1")
+                            .id("d6c40eb7-2282-4152-85aa-791468a56d3c")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("244fd5d8-56f3-4247-81fc-c38213a5d394")
+                                    .id("3ae58c84-d9d9-467a-94cd-f4094a59e405")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -79,10 +79,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("ff83143c-b032-48b6-bc05-2dc6c4fd5979")
+                            .id("7e1b2237-d3b8-4fc6-80f3-f64d354f4460")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("feaadeda-1806-477e-83d1-37f73148797e")
+                                    .id("0ebad263-4fb8-4046-8324-be3b303d9fd6")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -95,7 +95,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.835Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.473Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -131,7 +131,7 @@ public class Application {
 
 ## getCommerceReview
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ public class Application {
 
 ## getPerformanceReview
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -247,7 +247,7 @@ public class Application {
 
 ## getSocialReview
 
-Retrieve a review
+Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -305,7 +305,7 @@ public class Application {
 
 ## listCommerceReviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ public class Application {
 
 ## listPerformanceReviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -419,7 +419,7 @@ public class Application {
 
 ## listSocialReviews
 
-List all reviews
+Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -476,7 +476,7 @@ public class Application {
 
 ## patchCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -512,7 +512,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("ef7bd05f-221b-4eaf-bc43-53ca74853c32")
+                    .id("68e33644-1e60-4c65-bfce-ac275bbdfbe3")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -521,10 +521,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("c5f22c61-6418-44bc-9c26-ab8a26709733")
+                            .id("7eafe126-d08c-4c7d-8527-25d472855291")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("03154479-f518-4db3-86ec-b33a75f6ed88")
+                                    .id("31d2f266-2928-41db-a232-01561da0d978")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -536,10 +536,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("eeb61fdc-a8bd-420a-8cb8-5ea635e77fa0")
+                            .id("b0c25ea6-9c57-412f-b539-83481c1150cd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("556f7e05-5e15-4b2c-96fc-cfa181e043bc")
+                                    .id("a934a3ae-1322-400a-a200-5b5e9d922651")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -552,7 +552,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.522Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -589,7 +589,7 @@ public class Application {
 
 ## patchSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 
@@ -650,7 +650,7 @@ public class Application {
 
 ## removeCommerceReview
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -706,7 +706,7 @@ public class Application {
 
 ## updateCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -742,7 +742,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("ef7bd05f-221b-4eaf-bc43-53ca74853c32")
+                    .id("68e33644-1e60-4c65-bfce-ac275bbdfbe3")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -751,10 +751,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("c5f22c61-6418-44bc-9c26-ab8a26709733")
+                            .id("7eafe126-d08c-4c7d-8527-25d472855291")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("03154479-f518-4db3-86ec-b33a75f6ed88")
+                                    .id("31d2f266-2928-41db-a232-01561da0d978")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -766,10 +766,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("eeb61fdc-a8bd-420a-8cb8-5ea635e77fa0")
+                            .id("b0c25ea6-9c57-412f-b539-83481c1150cd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("556f7e05-5e15-4b2c-96fc-cfa181e043bc")
+                                    .id("a934a3ae-1322-400a-a200-5b5e9d922651")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -782,7 +782,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-21T08:44:16.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-22T05:26:15.522Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -819,7 +819,7 @@ public class Application {
 
 ## updateSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 

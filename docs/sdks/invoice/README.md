@@ -13,7 +13,7 @@
 
 ## createAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("623d2b76-b9e6-4b7a-b361-f30ae3e365c1")
+                            .id("091a6129-6e50-4926-a8ce-4397da5d0b14")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("22b80d16-4f9a-47d3-85cc-62ff670d7597")
+                            .id("3059c8c3-711d-4da6-8380-13ac54e89ff1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -61,7 +61,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("6dd4cd9f-79cc-4737-b421-c64cc47cac05")
+                    .id("9962c2b4-a9ec-45dd-8027-f824fcf8abe8")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -79,7 +79,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.370Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.329Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")
@@ -114,7 +114,7 @@ public class Application {
 
 ## getAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ public class Application {
 
 ## listAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ public class Application {
 
 ## patchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -260,13 +260,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("a387063f-f673-41fc-af9b-2b7b73aa3727")
+                            .id("e02e1031-a00e-462f-8876-f5b6a58e3f2f")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("4c7e09cc-1e74-4a3a-9db4-dc1b3665ed45")
+                            .id("3015ebdf-a757-45be-8f3b-d81530a501c1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -277,7 +277,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("2fe32232-1ab6-4fdc-a897-a5fd9aee3a7a")
+                    .id("b2c369bb-8bb8-45ff-bf89-39a93004a343")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -295,7 +295,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.422Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.387Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")
@@ -331,7 +331,7 @@ public class Application {
 
 ## removeAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ public class Application {
 
 ## updateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -418,13 +418,13 @@ public class Application {
                     .attachments(List.of(
                         AccountingAttachment.builder()
                             .downloadUrl("https://glossy-markup.net/")
-                            .id("a387063f-f673-41fc-af9b-2b7b73aa3727")
+                            .id("e02e1031-a00e-462f-8876-f5b6a58e3f2f")
                             .mimeType("application/pdf")
                             .name("INV-77705.pdf")
                             .build(),
                         AccountingAttachment.builder()
                             .downloadUrl("https://earnest-giggle.net")
-                            .id("4c7e09cc-1e74-4a3a-9db4-dc1b3665ed45")
+                            .id("3015ebdf-a757-45be-8f3b-d81530a501c1")
                             .mimeType("application/pdf")
                             .name("INV-77705-1.pdf")
                             .build()))
@@ -435,7 +435,7 @@ public class Application {
                     .discountAmount(0d)
                     .dueAt(OffsetDateTime.parse("2022-12-07T14:17:29.587Z"))
                     .extendedNotes(List.of())
-                    .id("2fe32232-1ab6-4fdc-a897-a5fd9aee3a7a")
+                    .id("b2c369bb-8bb8-45ff-bf89-39a93004a343")
                     .invoiceNumber("INV-77705")
                     .isInclusiveOfTax(false)
                     .lineitems(List.of())
@@ -453,7 +453,7 @@ public class Application {
                     .term(AccountingInvoiceTerm.NET25)
                     .totalAmount(0d)
                     .type(AccountingInvoiceType.INVOICE)
-                    .updatedAt(OffsetDateTime.parse("2026-04-23T13:05:28.422Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-24T10:54:42.387Z"))
                     .url("https://gifted-yarmulke.info/invoices/INV-77705")
                     .build())
                 .connectionId("<id>")

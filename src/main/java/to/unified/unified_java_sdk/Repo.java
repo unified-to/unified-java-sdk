@@ -151,6 +151,9 @@ public class Repo {
     /**
      * Create a branch
      * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
+     * 
      * @return The call builder
      */
     public CreateRepoBranchRequestBuilder createRepoBranch() {
@@ -159,6 +162,9 @@ public class Repo {
 
     /**
      * Create a branch
+     * 
+     * <p>Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoBranch.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +179,9 @@ public class Repo {
     /**
      * Create a commit
      * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
+     * 
      * @return The call builder
      */
     public CreateRepoCommitRequestBuilder createRepoCommit() {
@@ -181,6 +190,9 @@ public class Repo {
 
     /**
      * Create a commit
+     * 
+     * <p>Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to
+     * the provider's API. Returns the created RepoCommit.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +207,9 @@ public class Repo {
     /**
      * Create an organization
      * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
+     * 
      * @return The call builder
      */
     public CreateRepoOrganizationRequestBuilder createRepoOrganization() {
@@ -203,6 +218,9 @@ public class Repo {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they
+     * are mapped to the provider's API. Returns the created RepoOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +235,9 @@ public class Repo {
     /**
      * Create a pullrequest
      * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
+     * 
      * @return The call builder
      */
     public CreateRepoPullrequestRequestBuilder createRepoPullrequest() {
@@ -225,6 +246,9 @@ public class Repo {
 
     /**
      * Create a pullrequest
+     * 
+     * <p>Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoPullrequest.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -239,6 +263,9 @@ public class Repo {
     /**
      * Create a repository
      * 
+     * <p>Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoRepository.
+     * 
      * @return The call builder
      */
     public CreateRepoRepositoryRequestBuilder createRepoRepository() {
@@ -247,6 +274,9 @@ public class Repo {
 
     /**
      * Create a repository
+     * 
+     * <p>Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are
+     * mapped to the provider's API. Returns the created RepoRepository.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -261,6 +291,9 @@ public class Repo {
     /**
      * Retrieve a branch
      * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoBranchRequestBuilder getRepoBranch() {
@@ -269,6 +302,9 @@ public class Repo {
 
     /**
      * Retrieve a branch
+     * 
+     * <p>Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -283,6 +319,9 @@ public class Repo {
     /**
      * Retrieve a commit
      * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoCommitRequestBuilder getRepoCommit() {
@@ -291,6 +330,9 @@ public class Repo {
 
     /**
      * Retrieve a commit
+     * 
+     * <p>Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -305,6 +347,9 @@ public class Repo {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoOrganizationRequestBuilder getRepoOrganization() {
@@ -313,6 +358,9 @@ public class Repo {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -327,6 +375,9 @@ public class Repo {
     /**
      * Retrieve a pullrequest
      * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoPullrequestRequestBuilder getRepoPullrequest() {
@@ -335,6 +386,9 @@ public class Repo {
 
     /**
      * Retrieve a pullrequest
+     * 
+     * <p>Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -349,6 +403,9 @@ public class Repo {
     /**
      * Retrieve a repository
      * 
+     * <p>Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetRepoRepositoryRequestBuilder getRepoRepository() {
@@ -357,6 +414,9 @@ public class Repo {
 
     /**
      * Retrieve a repository
+     * 
+     * <p>Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -371,6 +431,13 @@ public class Repo {
     /**
      * List all branches
      * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoBranchesRequestBuilder listRepoBranches() {
@@ -379,6 +446,13 @@ public class Repo {
 
     /**
      * List all branches
+     * 
+     * <p>Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -393,6 +467,13 @@ public class Repo {
     /**
      * List all commits
      * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoCommitsRequestBuilder listRepoCommits() {
@@ -401,6 +482,13 @@ public class Repo {
 
     /**
      * List all commits
+     * 
+     * <p>Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -415,6 +503,13 @@ public class Repo {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoOrganizationsRequestBuilder listRepoOrganizations() {
@@ -423,6 +518,13 @@ public class Repo {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -437,6 +539,13 @@ public class Repo {
     /**
      * List all pullrequests
      * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoPullrequestsRequestBuilder listRepoPullrequests() {
@@ -445,6 +554,13 @@ public class Repo {
 
     /**
      * List all pullrequests
+     * 
+     * <p>Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -459,6 +575,13 @@ public class Repo {
     /**
      * List all repositories
      * 
+     * <p>Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListRepoRepositoriesRequestBuilder listRepoRepositories() {
@@ -467,6 +590,13 @@ public class Repo {
 
     /**
      * List all repositories
+     * 
+     * <p>Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -481,6 +611,9 @@ public class Repo {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchRepoBranchRequestBuilder patchRepoBranch() {
@@ -489,6 +622,9 @@ public class Repo {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -503,6 +639,9 @@ public class Repo {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchRepoCommitRequestBuilder patchRepoCommit() {
@@ -511,6 +650,9 @@ public class Repo {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -525,6 +667,9 @@ public class Repo {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchRepoOrganizationRequestBuilder patchRepoOrganization() {
@@ -533,6 +678,9 @@ public class Repo {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -547,6 +695,9 @@ public class Repo {
     /**
      * Update a pullrequest
      * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchRepoPullrequestRequestBuilder patchRepoPullrequest() {
@@ -555,6 +706,9 @@ public class Repo {
 
     /**
      * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -569,6 +723,9 @@ public class Repo {
     /**
      * Update a repository
      * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchRepoRepositoryRequestBuilder patchRepoRepository() {
@@ -577,6 +734,9 @@ public class Repo {
 
     /**
      * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -591,6 +751,8 @@ public class Repo {
     /**
      * Remove a branch
      * 
+     * <p>Deletes the RepoBranch identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoBranchRequestBuilder removeRepoBranch() {
@@ -599,6 +761,8 @@ public class Repo {
 
     /**
      * Remove a branch
+     * 
+     * <p>Deletes the RepoBranch identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -613,6 +777,8 @@ public class Repo {
     /**
      * Remove a commit
      * 
+     * <p>Deletes the RepoCommit identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoCommitRequestBuilder removeRepoCommit() {
@@ -621,6 +787,8 @@ public class Repo {
 
     /**
      * Remove a commit
+     * 
+     * <p>Deletes the RepoCommit identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -635,6 +803,8 @@ public class Repo {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the RepoOrganization identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoOrganizationRequestBuilder removeRepoOrganization() {
@@ -643,6 +813,8 @@ public class Repo {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the RepoOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -657,6 +829,8 @@ public class Repo {
     /**
      * Remove a pullrequest
      * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoPullrequestRequestBuilder removeRepoPullrequest() {
@@ -665,6 +839,8 @@ public class Repo {
 
     /**
      * Remove a pullrequest
+     * 
+     * <p>Deletes the RepoPullrequest identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -679,6 +855,8 @@ public class Repo {
     /**
      * Remove a repository
      * 
+     * <p>Deletes the RepoRepository identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveRepoRepositoryRequestBuilder removeRepoRepository() {
@@ -687,6 +865,8 @@ public class Repo {
 
     /**
      * Remove a repository
+     * 
+     * <p>Deletes the RepoRepository identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -701,6 +881,9 @@ public class Repo {
     /**
      * Update a branch
      * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoBranchRequestBuilder updateRepoBranch() {
@@ -709,6 +892,9 @@ public class Repo {
 
     /**
      * Update a branch
+     * 
+     * <p>Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -723,6 +909,9 @@ public class Repo {
     /**
      * Update a commit
      * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoCommitRequestBuilder updateRepoCommit() {
@@ -731,6 +920,9 @@ public class Repo {
 
     /**
      * Update a commit
+     * 
+     * <p>Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -745,6 +937,9 @@ public class Repo {
     /**
      * Update an organization
      * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoOrganizationRequestBuilder updateRepoOrganization() {
@@ -753,6 +948,9 @@ public class Repo {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -767,6 +965,9 @@ public class Repo {
     /**
      * Update a pullrequest
      * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoPullrequestRequestBuilder updateRepoPullrequest() {
@@ -775,6 +976,9 @@ public class Repo {
 
     /**
      * Update a pullrequest
+     * 
+     * <p>Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -789,6 +993,9 @@ public class Repo {
     /**
      * Update a repository
      * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateRepoRepositoryRequestBuilder updateRepoRepository() {
@@ -797,6 +1004,9 @@ public class Repo {
 
     /**
      * Update a repository
+     * 
+     * <p>Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

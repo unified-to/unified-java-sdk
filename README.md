@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.49.28'
+implementation 'to.unified:unified-java-sdk:0.50.0'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.49.28</version>
+    <version>0.50.0</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -228,7 +228,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createAccountingExpensereport](docs/sdks/accounting/README.md#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
-* [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](docs/sdks/accounting/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAccountingPaymentterm](docs/sdks/accounting/README.md#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](docs/sdks/accounting/README.md#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](docs/sdks/accounting/README.md#createaccountingpurchaseorder) - Create a purchaseorder
@@ -252,7 +252,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getAccountingExpensereport](docs/sdks/accounting/README.md#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
-* [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [getAccountingPaymentterm](docs/sdks/accounting/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
@@ -281,7 +281,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
-* [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
+* [~~listAccountingOrders~~](docs/sdks/accounting/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [listAccountingPaymentterms](docs/sdks/accounting/README.md#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
@@ -306,7 +306,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchAccountingExpensereport](docs/sdks/accounting/README.md#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
-* [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
+* [~~patchAccountingOrder~~](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAccountingPaymentterm](docs/sdks/accounting/README.md#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](docs/sdks/accounting/README.md#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](docs/sdks/accounting/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -326,7 +326,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingExpensereport](docs/sdks/accounting/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
-* [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
+* [~~removeAccountingOrder~~](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [removeAccountingPaymentterm](docs/sdks/accounting/README.md#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](docs/sdks/accounting/README.md#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](docs/sdks/accounting/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -346,7 +346,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAccountingExpensereport](docs/sdks/accounting/README.md#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
-* [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
+* [~~updateAccountingOrder~~](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAccountingPaymentterm](docs/sdks/accounting/README.md#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](docs/sdks/accounting/README.md#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](docs/sdks/accounting/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -1970,15 +1970,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Order](docs/sdks/order/README.md)
 
-* [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](docs/sdks/order/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
-* [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
-* [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
-* [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [~~listAccountingOrders~~](docs/sdks/order/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~patchAccountingOrder~~](docs/sdks/order/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
-* [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
-* [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [~~removeAccountingOrder~~](docs/sdks/order/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~updateAccountingOrder~~](docs/sdks/order/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
@@ -2913,7 +2913,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2925,7 +2925,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2973,7 +2973,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2985,7 +2985,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3052,7 +3052,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                        .id("4fbde124-a614-4098-a367-dcad459c0699")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3064,7 +3064,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3219,7 +3219,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3231,7 +3231,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

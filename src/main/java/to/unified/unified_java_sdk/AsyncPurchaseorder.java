@@ -57,6 +57,9 @@ public class AsyncPurchaseorder {
     /**
      * Create a purchaseorder
      * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+     * 
      * @return The async call builder
      */
     public CreateAccountingPurchaseorderRequestBuilder createAccountingPurchaseorder() {
@@ -65,6 +68,9 @@ public class AsyncPurchaseorder {
 
     /**
      * Create a purchaseorder
+     * 
+     * <p>Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request
+     * body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingPurchaseorderResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncPurchaseorder {
     /**
      * Retrieve a purchaseorder
      * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingPurchaseorderRequestBuilder getAccountingPurchaseorder() {
@@ -88,6 +97,9 @@ public class AsyncPurchaseorder {
 
     /**
      * Retrieve a purchaseorder
+     * 
+     * <p>Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingPurchaseorderResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncPurchaseorder {
     /**
      * List all purchaseorders
      * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingPurchaseordersRequestBuilder listAccountingPurchaseorders() {
@@ -111,6 +130,13 @@ public class AsyncPurchaseorder {
 
     /**
      * List all purchaseorders
+     * 
+     * <p>Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingPurchaseordersResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncPurchaseorder {
     /**
      * Update a purchaseorder
      * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingPurchaseorderRequestBuilder patchAccountingPurchaseorder() {
@@ -134,6 +163,9 @@ public class AsyncPurchaseorder {
 
     /**
      * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingPurchaseorderResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncPurchaseorder {
     /**
      * Remove a purchaseorder
      * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingPurchaseorderRequestBuilder removeAccountingPurchaseorder() {
@@ -157,6 +191,8 @@ public class AsyncPurchaseorder {
 
     /**
      * Remove a purchaseorder
+     * 
+     * <p>Deletes the AccountingPurchaseorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingPurchaseorderResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncPurchaseorder {
     /**
      * Update a purchaseorder
      * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingPurchaseorderRequestBuilder updateAccountingPurchaseorder() {
@@ -180,6 +219,9 @@ public class AsyncPurchaseorder {
 
     /**
      * Update a purchaseorder
+     * 
+     * <p>Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingPurchaseorderResponse>} - The async response

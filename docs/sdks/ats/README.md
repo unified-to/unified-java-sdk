@@ -57,7 +57,7 @@
 
 ## createAtsActivity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -88,14 +88,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("3c14a299-3547-4e83-b99a-b57dc66403c4")
+                    .id("13c7fb8e-07a4-4aeb-8fb5-9bb5a32c16bd")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("f3e491bf-7b0b-4cbe-957e-7eef210c4b8b")
+                            .id("2b8b2e85-032f-4171-b289-b798e0ad711b")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -103,7 +103,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.298Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.676Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -137,7 +137,7 @@ public class Application {
 
 ## createAtsApplication
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -167,16 +167,16 @@ public class Application {
         CreateAtsApplicationRequest req = CreateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.028Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.636Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.419Z"))
-                    .id("c96e3121-b613-4c3f-8943-47178a6e7814")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.277Z"))
+                    .id("4cc31204-75c0-4a65-b83b-7c8703d5ca29")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d3ca9362-bae3-4abb-acbd-f1c06cda6220")
+                            .id("8e4d11fc-0d16-4e9c-937a-63ade207a97c")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -184,12 +184,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.348Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.066Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.423Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.820Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -223,7 +223,7 @@ public class Application {
 
 ## createAtsCandidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("a07a1a46-2ecc-4928-9c8e-28b8781fa18b")
+                    .id("88aab933-5bd2-4eed-9f7f-a36b0dc033aa")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -311,7 +311,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("1863944c-81c0-4cfd-b022-8bc94e3de78c")
+                            .id("39fea941-08d0-4ba8-91d6-91132be91b62")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -333,7 +333,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.874Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.166Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")
@@ -368,7 +368,7 @@ public class Application {
 
 ## createAtsCompany
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -397,10 +397,10 @@ public class Application {
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("5a63304a-a1a3-43da-a11b-9c9dd4b034b7")
+                    .id("4a212401-72c3-46ea-8fc2-1d674c7b1ff4")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.981Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.068Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -435,7 +435,7 @@ public class Application {
 
 ## createAtsDocument
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -466,10 +466,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("6ede5d86-a9b9-4048-82b1-6a1d2a50e6fb")
+                    .id("0458cf24-d3ef-4a30-9ae7-71b0b64a2b89")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.439Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.065Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -503,7 +503,7 @@ public class Application {
 
 ## createAtsInterview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -533,13 +533,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("bcf33989-03c5-44f0-a08b-10b02e1a1046")
+                    .id("67902ec5-16b8-4454-bd7b-197b5054b9ce")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.583Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.543Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -573,7 +573,7 @@ public class Application {
 
 ## createAtsJob
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -630,7 +630,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("47bb9c75-6134-460c-b078-5ff70cc96838")
+                    .id("49400747-bb3c-42f3-a446-96affba495d3")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -638,7 +638,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("0631621d-c219-4e98-a96a-f5a23966e3ef")
+                            .id("2154dbb0-f94d-41d0-8dcc-67a0fa29f60a")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -650,7 +650,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.238Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.344Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -663,14 +663,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:18.999Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.576Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("a886376b-9566-45be-a78f-130ae93a8ba6")
+                            .id("1c38f35c-1874-4bca-ae7c-1e611a2d91eb")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.114Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.736Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -680,7 +680,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("a7c17cdf-f5e3-4776-8b70-f4e93eee0567")
+                            .id("85a208e5-0b26-45be-8079-0688ff534c72")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -692,7 +692,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("711617fc-28fa-4c92-91d1-f6aef96a401b")
+                            .id("c0dc48e6-2c0d-4153-bdc9-600184ec835b")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -704,7 +704,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("eecfa3d2-0e05-4c85-9c11-08274cf73339")
+                            .id("37a2a2ce-8b64-45a7-b712-61b00cc04bc4")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -717,7 +717,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.552Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.871Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -751,7 +751,7 @@ public class Application {
 
 ## createAtsScorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -781,7 +781,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("48061e33-93b1-4788-82bf-d958bd6c960f")
+                    .id("810829b8-9d4b-4d79-8008-fb647630e62a")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -794,7 +794,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.696Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.156Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -828,7 +828,7 @@ public class Application {
 
 ## getAtsActivity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -886,7 +886,7 @@ public class Application {
 
 ## getAtsApplication
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -944,7 +944,7 @@ public class Application {
 
 ## getAtsApplicationstatus
 
-Retrieve an applicationstatus
+Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1002,7 +1002,7 @@ public class Application {
 
 ## getAtsCandidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1060,7 +1060,7 @@ public class Application {
 
 ## getAtsCompany
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1118,7 +1118,7 @@ public class Application {
 
 ## getAtsDocument
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1176,7 +1176,7 @@ public class Application {
 
 ## getAtsInterview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1234,7 +1234,7 @@ public class Application {
 
 ## getAtsJob
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1292,7 +1292,7 @@ public class Application {
 
 ## getAtsScorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1350,7 +1350,7 @@ public class Application {
 
 ## listAtsActivities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1407,7 +1407,7 @@ public class Application {
 
 ## listAtsApplications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1464,7 +1464,7 @@ public class Application {
 
 ## listAtsApplicationstatuses
 
-List all applicationstatuses
+Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1521,7 +1521,7 @@ public class Application {
 
 ## listAtsCandidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1578,7 +1578,7 @@ public class Application {
 
 ## listAtsCompanies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1635,7 +1635,7 @@ public class Application {
 
 ## listAtsDocuments
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1692,7 +1692,7 @@ public class Application {
 
 ## listAtsInterviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1749,7 +1749,7 @@ public class Application {
 
 ## listAtsJobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1806,7 +1806,7 @@ public class Application {
 
 ## listAtsScorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1863,7 +1863,7 @@ public class Application {
 
 ## patchAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1894,14 +1894,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("e8a70891-5a59-4cf0-8ba1-c6b7bc5e559f")
+                    .id("8c691a79-7db2-41cc-812a-17ca9f45c35c")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("7ebcf8cb-68d6-4497-876f-9749dcd46be6")
+                            .id("60bb0e99-8b26-4f29-98b2-86a60f79b119")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -1909,7 +1909,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.698Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1944,7 +1944,7 @@ public class Application {
 
 ## patchAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -1974,16 +1974,16 @@ public class Application {
         PatchAtsApplicationRequest req = PatchAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.044Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.660Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.440Z"))
-                    .id("cd68e010-ff31-4aea-8e82-4c6827f0765f")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.308Z"))
+                    .id("a12467d2-174a-413b-855c-1cb73439cba8")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d429998d-2666-4b67-9ff3-64bc5abfabbd")
+                            .id("e941b927-afaf-4776-bdfc-fce47dc837da")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -1991,12 +1991,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.373Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.102Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.448Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.856Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2031,7 +2031,7 @@ public class Application {
 
 ## patchAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -2108,7 +2108,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("fce9aa30-b3fc-4f5c-bd4e-25a951f557ae")
+                    .id("f0d82c74-85b5-4037-a21b-d9071550d045")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -2119,7 +2119,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("3940c875-a6c1-4c1e-9533-79370e17c17c")
+                            .id("6a558dbe-3c3c-45d7-b8c2-a5ec40537de4")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -2141,7 +2141,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.883Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.175Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")
@@ -2177,7 +2177,7 @@ public class Application {
 
 ## patchAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2206,10 +2206,10 @@ public class Application {
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("e03f4e21-bb37-4272-aa49-5cfee71009f3")
+                    .id("b707bad0-729d-42e4-a41e-52ecdb28b92a")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.985Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.073Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -2245,7 +2245,7 @@ public class Application {
 
 ## patchAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -2276,10 +2276,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("a214c743-edaf-4465-8097-647877814cb5")
+                    .id("0c890d49-14dc-407a-9c54-8680a5c4419e")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2314,7 +2314,7 @@ public class Application {
 
 ## patchAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -2344,13 +2344,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("d52c2892-06f7-45f3-b162-356262609fd3")
+                    .id("76639f90-a6b0-49c3-90e3-9d41e52c76b3")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.550Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2385,7 +2385,7 @@ public class Application {
 
 ## patchAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -2442,7 +2442,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("56d8529e-a986-4116-97c0-83e59897d8f0")
+                    .id("16f154c9-12c2-4306-9d21-5148af127b8e")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -2450,7 +2450,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("29d8ee67-39e3-41ea-9512-a611d055fc2e")
+                            .id("02e5183e-4fb5-4f43-bccf-33bd47d06b98")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -2462,7 +2462,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.289Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.411Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -2475,14 +2475,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:19.053Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.647Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("4e69e14e-5db6-45d7-86cd-54094fc71bd6")
+                            .id("f057f81e-c6ef-4971-b323-04d7a7997324")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.170Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.809Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -2492,7 +2492,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("7e7889dd-879d-44b6-9e8c-b7578ccfc95d")
+                            .id("cdc3d290-12bd-4083-aa16-e0bef9d83032")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -2504,7 +2504,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("675edef9-19d3-4a52-813c-a103c038afc2")
+                            .id("c7a8a0ee-42f6-4b05-9bc2-06ec42c02802")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -2516,7 +2516,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("dda17d3d-8409-424b-a2a1-8408a4046de1")
+                            .id("a197ee5c-ce35-4648-ad3c-1f8862d41af3")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -2529,7 +2529,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.598Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.932Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2564,7 +2564,7 @@ public class Application {
 
 ## patchAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -2594,7 +2594,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("68fcb38d-6798-4850-b328-fa67ebb06ade")
+                    .id("7c072a2e-9905-43cc-a31d-1b83477dbffc")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -2607,7 +2607,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.700Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.161Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2642,7 +2642,7 @@ public class Application {
 
 ## removeAtsActivity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2698,7 +2698,7 @@ public class Application {
 
 ## removeAtsApplication
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -2754,7 +2754,7 @@ public class Application {
 
 ## removeAtsCandidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -2810,7 +2810,7 @@ public class Application {
 
 ## removeAtsCompany
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -2866,7 +2866,7 @@ public class Application {
 
 ## removeAtsDocument
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -2922,7 +2922,7 @@ public class Application {
 
 ## removeAtsInterview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -2978,7 +2978,7 @@ public class Application {
 
 ## removeAtsJob
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -3034,7 +3034,7 @@ public class Application {
 
 ## removeAtsScorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -3090,7 +3090,7 @@ public class Application {
 
 ## updateAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -3121,14 +3121,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("e8a70891-5a59-4cf0-8ba1-c6b7bc5e559f")
+                    .id("8c691a79-7db2-41cc-812a-17ca9f45c35c")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("7ebcf8cb-68d6-4497-876f-9749dcd46be6")
+                            .id("60bb0e99-8b26-4f29-98b2-86a60f79b119")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -3136,7 +3136,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.698Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3171,7 +3171,7 @@ public class Application {
 
 ## updateAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -3201,16 +3201,16 @@ public class Application {
         UpdateAtsApplicationRequest req = UpdateAtsApplicationRequest.builder()
                 .atsApplication(AtsApplication.builder()
                     .answers(List.of())
-                    .appliedAt(OffsetDateTime.parse("2025-09-29T18:43:03.044Z"))
+                    .appliedAt(OffsetDateTime.parse("2025-09-30T10:53:50.660Z"))
                     .createdAt(OffsetDateTime.parse("2023-10-17T07:19:48.787Z"))
-                    .hiredAt(OffsetDateTime.parse("2026-05-12T18:32:18.440Z"))
-                    .id("cd68e010-ff31-4aea-8e82-4c6827f0765f")
+                    .hiredAt(OffsetDateTime.parse("2026-05-13T15:49:14.308Z"))
+                    .id("a12467d2-174a-413b-855c-1cb73439cba8")
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("d429998d-2666-4b67-9ff3-64bc5abfabbd")
+                            .id("e941b927-afaf-4776-bdfc-fce47dc837da")
                             .namespace("application")
                             .slug("stella")
                             .value(AtsMetadataValue.of("Caput."))
@@ -3218,12 +3218,12 @@ public class Application {
                     .offers(List.of())
                     .originalStatus("vomica")
                     .originalSubstatus("allatus")
-                    .rejectedAt(OffsetDateTime.parse("2026-10-11T13:09:05.373Z"))
+                    .rejectedAt(OffsetDateTime.parse("2026-10-12T13:52:32.102Z"))
                     .rejectedReason("Cometes amplitudo videlicet talio.")
                     .source("credo")
                     .status(AtsApplicationStatus.REVIEWING)
                     .summary("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.")
-                    .updatedAt(OffsetDateTime.parse("2026-10-18T09:23:22.448Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-19T10:16:07.856Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3258,7 +3258,7 @@ public class Application {
 
 ## updateAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -3335,7 +3335,7 @@ public class Application {
                             .title("Regional Applications Planner")
                             .build()))
                     .firstName("Ardith")
-                    .id("fce9aa30-b3fc-4f5c-bd4e-25a951f557ae")
+                    .id("f0d82c74-85b5-4037-a21b-d9071550d045")
                     .imageUrl("https://avatars.githubusercontent.com/u/27464445")
                     .jobIds(List.of())
                     .lastName("Beatty")
@@ -3346,7 +3346,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("3940c875-a6c1-4c1e-9533-79370e17c17c")
+                            .id("6a558dbe-3c3c-45d7-b8c2-a5ec40537de4")
                             .namespace("custom")
                             .slug("custom_field")
                             .value(AtsMetadataValue.of("officia"))
@@ -3368,7 +3368,7 @@ public class Application {
                             .type(AtsTelephoneType.MOBILE)
                             .build()))
                     .title("Customer Division Producer")
-                    .updatedAt(OffsetDateTime.parse("2024-04-28T17:47:53.883Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-28T22:13:39.175Z"))
                     .webUrl("https://fragrant-husband.net/")
                     .build())
                 .connectionId("<id>")
@@ -3404,7 +3404,7 @@ public class Application {
 
 ## updateAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3433,10 +3433,10 @@ public class Application {
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
                     .createdAt(OffsetDateTime.parse("2019-04-22T03:50:02.920Z"))
-                    .id("e03f4e21-bb37-4272-aa49-5cfee71009f3")
+                    .id("b707bad0-729d-42e4-a41e-52ecdb28b92a")
                     .name("Gulgowski, Dibbert and Wilderman")
                     .phone("1-882-360-2010")
-                    .updatedAt(OffsetDateTime.parse("2020-10-01T04:12:46.985Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-10-01T09:01:15.073Z"))
                     .websiteUrl("https://www.gulgowskidibbert.com")
                     .build())
                 .connectionId("<id>")
@@ -3472,7 +3472,7 @@ public class Application {
 
 ## updateAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3503,10 +3503,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("a214c743-edaf-4465-8097-647877814cb5")
+                    .id("0c890d49-14dc-407a-9c54-8680a5c4419e")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T05:00:25.443Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-07T11:16:03.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3541,7 +3541,7 @@ public class Application {
 
 ## updateAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -3571,13 +3571,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("d52c2892-06f7-45f3-b162-356262609fd3")
+                    .id("76639f90-a6b0-49c3-90e3-9d41e52c76b3")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.550Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3612,7 +3612,7 @@ public class Application {
 
 ## updateAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3669,7 +3669,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("56d8529e-a986-4116-97c0-83e59897d8f0")
+                    .id("16f154c9-12c2-4306-9d21-5148af127b8e")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -3677,7 +3677,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("29d8ee67-39e3-41ea-9512-a611d055fc2e")
+                            .id("02e5183e-4fb5-4f43-bccf-33bd47d06b98")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -3689,7 +3689,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.289Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.411Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -3702,14 +3702,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:19.053Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.647Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("4e69e14e-5db6-45d7-86cd-54094fc71bd6")
+                            .id("f057f81e-c6ef-4971-b323-04d7a7997324")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.170Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.809Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -3719,7 +3719,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("7e7889dd-879d-44b6-9e8c-b7578ccfc95d")
+                            .id("cdc3d290-12bd-4083-aa16-e0bef9d83032")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -3731,7 +3731,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("675edef9-19d3-4a52-813c-a103c038afc2")
+                            .id("c7a8a0ee-42f6-4b05-9bc2-06ec42c02802")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -3743,7 +3743,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("dda17d3d-8409-424b-a2a1-8408a4046de1")
+                            .id("a197ee5c-ce35-4648-ad3c-1f8862d41af3")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -3756,7 +3756,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.598Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.932Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3791,7 +3791,7 @@ public class Application {
 
 ## updateAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -3821,7 +3821,7 @@ public class Application {
                 .atsScorecard(AtsScorecard.builder()
                     .comment("Maiores enim.")
                     .createdAt(OffsetDateTime.parse("2022-02-20T17:09:45.498Z"))
-                    .id("68fcb38d-6798-4850-b328-fa67ebb06ade")
+                    .id("7c072a2e-9905-43cc-a31d-1b83477dbffc")
                     .metadata(List.of())
                     .questions(List.of(
                         AtsScorecardQuestion.builder()
@@ -3834,7 +3834,7 @@ public class Application {
                             .description("Conatus cicuta doloremque statua bonus.")
                             .build()))
                     .recommendation(Recommendation.STRONG_YES)
-                    .updatedAt(OffsetDateTime.parse("2023-06-05T13:40:37.700Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-05T20:33:23.161Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

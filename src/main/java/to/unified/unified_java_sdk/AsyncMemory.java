@@ -57,6 +57,9 @@ public class AsyncMemory {
     /**
      * Create a memory
      * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
+     * 
      * @return The async call builder
      */
     public CreateGenaiMemoryRequestBuilder createGenaiMemory() {
@@ -65,6 +68,9 @@ public class AsyncMemory {
 
     /**
      * Create a memory
+     * 
+     * <p>Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped
+     * to the provider's API. Returns the created GenaiMemory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiMemoryResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncMemory {
     /**
      * Retrieve a memory
      * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetGenaiMemoryRequestBuilder getGenaiMemory() {
@@ -88,6 +97,9 @@ public class AsyncMemory {
 
     /**
      * Retrieve a memory
+     * 
+     * <p>Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiMemoryResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncMemory {
     /**
      * List all memories
      * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListGenaiMemoriesRequestBuilder listGenaiMemories() {
@@ -111,6 +130,13 @@ public class AsyncMemory {
 
     /**
      * List all memories
+     * 
+     * <p>Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiMemoriesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncMemory {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchGenaiMemoryRequestBuilder patchGenaiMemory() {
@@ -134,6 +163,9 @@ public class AsyncMemory {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchGenaiMemoryResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncMemory {
     /**
      * Remove a memory
      * 
+     * <p>Deletes the GenaiMemory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveGenaiMemoryRequestBuilder removeGenaiMemory() {
@@ -157,6 +191,8 @@ public class AsyncMemory {
 
     /**
      * Remove a memory
+     * 
+     * <p>Deletes the GenaiMemory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveGenaiMemoryResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncMemory {
     /**
      * Update a memory
      * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateGenaiMemoryRequestBuilder updateGenaiMemory() {
@@ -180,6 +219,9 @@ public class AsyncMemory {
 
     /**
      * Update a memory
+     * 
+     * <p>Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateGenaiMemoryResponse>} - The async response

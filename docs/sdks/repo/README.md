@@ -37,7 +37,7 @@
 
 ## createRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -69,9 +69,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("5767ec36-0da6-42fd-8167-691c1a0f5bb9")
+                    .id("db8e72d2-7465-435f-8ced-5704f9cbfd3e")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.748Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -105,7 +105,7 @@ public class Application {
 
 ## createRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -136,13 +136,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("231c7198-c036-44d3-8cb5-457ddd6f61af")
+                    .id("6f31a351-20bb-4a84-911b-853e03e8ec2e")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.634Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.399Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -176,7 +176,7 @@ public class Application {
 
 ## createRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -208,10 +208,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("043427e9-9835-4fec-b66e-1f0a955306e9")
+                    .id("52e00ad2-eb5c-4fc2-81b6-5ee058c526f6")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.940Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.591Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -246,7 +246,7 @@ public class Application {
 
 ## createRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -274,9 +274,9 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.969Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.360Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("5ed78bb7-e4ef-424f-8bd1-c73917d91d4e")
+                    .id("8bc988ca-a952-4faa-908f-c2e844c057bc")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -284,7 +284,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.462Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.730Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -318,7 +318,7 @@ public class Application {
 
 ## createRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -350,10 +350,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("37d76763-2cda-4cff-86a4-6a57ada4b71c")
+                    .id("a008267f-c7b0-4c9b-8dcc-a68dd1ec50fc")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.845Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.347Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")
@@ -388,7 +388,7 @@ public class Application {
 
 ## getRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -446,7 +446,7 @@ public class Application {
 
 ## getRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -504,7 +504,7 @@ public class Application {
 
 ## getRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -562,7 +562,7 @@ public class Application {
 
 ## getRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -620,7 +620,7 @@ public class Application {
 
 ## getRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -678,7 +678,7 @@ public class Application {
 
 ## listRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -735,7 +735,7 @@ public class Application {
 
 ## listRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -792,7 +792,7 @@ public class Application {
 
 ## listRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ public class Application {
 
 ## listRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -906,7 +906,7 @@ public class Application {
 
 ## listRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -963,7 +963,7 @@ public class Application {
 
 ## patchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -995,9 +995,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("837fbce5-d184-472f-b560-7e137bb116de")
+                    .id("e069e7bb-9a29-4551-a671-e2e7a8d5640a")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.749Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.810Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1032,7 +1032,7 @@ public class Application {
 
 ## patchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1063,13 +1063,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("24f04575-92f1-40ef-8216-cdbe4e99e682")
+                    .id("9f4097d6-26a2-4464-b6b3-cd20467b4bd9")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.405Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1104,7 +1104,7 @@ public class Application {
 
 ## patchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1136,10 +1136,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("65a7440a-a987-4334-8013-ef632cf96c08")
+                    .id("df51ee73-f0cf-45b0-b943-0a1fbac8ff4f")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.945Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.594Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -1175,7 +1175,7 @@ public class Application {
 
 ## patchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1203,9 +1203,9 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.980Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.367Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("0e38d452-35cf-4335-8e82-7873536e694f")
+                    .id("f02f6d26-e546-42ef-9158-c49d98ccfdae")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -1213,7 +1213,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.477Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.741Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1248,7 +1248,7 @@ public class Application {
 
 ## patchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1280,10 +1280,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("0a203255-ab68-408a-95cc-a417d1ac0a4e")
+                    .id("b1019817-0313-41d4-843e-df319355c7af")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.349Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")
@@ -1319,7 +1319,7 @@ public class Application {
 
 ## removeRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -1375,7 +1375,7 @@ public class Application {
 
 ## removeRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -1431,7 +1431,7 @@ public class Application {
 
 ## removeRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1487,7 +1487,7 @@ public class Application {
 
 ## removeRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -1543,7 +1543,7 @@ public class Application {
 
 ## removeRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -1599,7 +1599,7 @@ public class Application {
 
 ## updateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -1631,9 +1631,9 @@ public class Application {
                     .name("transmitter-calculate")
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2019-02-24T09:33:48.540Z"))
-                    .id("837fbce5-d184-472f-b560-7e137bb116de")
+                    .id("e069e7bb-9a29-4551-a671-e2e7a8d5640a")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2020-01-07T08:03:09.749Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-01-07T10:52:47.810Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1668,7 +1668,7 @@ public class Application {
 
 ## updateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1699,13 +1699,13 @@ public class Application {
                 .repoCommit(RepoCommit.builder()
                     .repoId("<id>")
                     .createdAt(OffsetDateTime.parse("2020-07-12T16:20:42.520Z"))
-                    .id("24f04575-92f1-40ef-8216-cdbe4e99e682")
+                    .id("9f4097d6-26a2-4464-b6b3-cd20467b4bd9")
                     .linesAdded(313d)
                     .linesChanged(659d)
                     .linesDeleted(482d)
                     .message("quantify bluetooth bandwidth")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2023-05-31T06:52:23.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-31T18:19:46.405Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1740,7 +1740,7 @@ public class Application {
 
 ## updateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1772,10 +1772,10 @@ public class Application {
                     .avatarUrl("https://picsum.photos/seed/fGl6Lb/3157/3173")
                     .createdAt(OffsetDateTime.parse("2022-07-07T00:18:40.748Z"))
                     .description("Trepide defendo supra testimonium ager.")
-                    .id("65a7440a-a987-4334-8013-ef632cf96c08")
+                    .id("df51ee73-f0cf-45b0-b943-0a1fbac8ff4f")
                     .metadata(List.of())
                     .name("Denesik - Lemke")
-                    .updatedAt(OffsetDateTime.parse("2023-08-21T15:08:50.945Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-21T21:40:56.594Z"))
                     .webUrl("https://turbulent-overheard.biz")
                     .build())
                 .connectionId("<id>")
@@ -1811,7 +1811,7 @@ public class Application {
 
 ## updateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1839,9 +1839,9 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-01T13:54:08.980Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-02T04:46:33.367Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("0e38d452-35cf-4335-8e82-7873536e694f")
+                    .id("f02f6d26-e546-42ef-9158-c49d98ccfdae")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -1849,7 +1849,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-17T07:07:40.477Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-18T02:53:02.741Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1884,7 +1884,7 @@ public class Application {
 
 ## updateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1916,10 +1916,10 @@ public class Application {
                     .name("bah-bogus")
                     .createdAt(OffsetDateTime.parse("2023-06-12T09:42:00.080Z"))
                     .description("Sed somnus crastinus armarium.")
-                    .id("0a203255-ab68-408a-95cc-a417d1ac0a4e")
+                    .id("b1019817-0313-41d4-843e-df319355c7af")
                     .isPrivate(false)
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2024-03-01T02:05:31.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-03-01T07:25:58.349Z"))
                     .webUrl("https://neat-birdbath.org")
                     .build())
                 .connectionId("<id>")

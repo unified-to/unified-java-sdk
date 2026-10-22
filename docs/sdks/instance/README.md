@@ -13,7 +13,7 @@
 
 ## createComputeInstance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -57,7 +57,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("6112a0fe-d63c-4877-9365-31fb0bdfcb0e")
+                    .id("352d3ca9-8fb4-41fd-858e-fe79ed7475bb")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -72,11 +72,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:24.999Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.868Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.589Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.359Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -110,7 +110,7 @@ public class Application {
 
 ## getComputeInstance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ public class Application {
 
 ## listComputeInstances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ public class Application {
 
 ## patchComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -269,7 +269,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("9d7551dc-7aab-46a8-add2-2efaec388972")
+                    .id("e2a198ac-73f4-4ee8-a8da-c1b240dda396")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -284,11 +284,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:25.020Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.891Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.612Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.385Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -323,7 +323,7 @@ public class Application {
 
 ## removeComputeInstance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -379,7 +379,7 @@ public class Application {
 
 ## updateComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -423,7 +423,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("9d7551dc-7aab-46a8-add2-2efaec388972")
+                    .id("e2a198ac-73f4-4ee8-a8da-c1b240dda396")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -438,11 +438,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-03-23T23:19:25.020Z"))
+                    .startedAt(OffsetDateTime.parse("2025-03-24T14:31:07.891Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-06-16T04:52:05.612Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-06-16T21:29:17.385Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

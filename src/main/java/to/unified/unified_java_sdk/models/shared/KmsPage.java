@@ -70,7 +70,9 @@ public class KmsPage {
     @JsonProperty("space_id")
     private String spaceId;
 
-
+    /**
+     * The page's title
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
@@ -182,6 +184,9 @@ public class KmsPage {
         return Optional.ofNullable(this.spaceId);
     }
 
+    /**
+     * The page's title
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -273,6 +278,9 @@ public class KmsPage {
     }
 
 
+    /**
+     * The page's title
+     */
     public KmsPage withTitle(@Nullable String title) {
         this.title = title;
         return this;
@@ -450,6 +458,9 @@ public class KmsPage {
             return this;
         }
 
+        /**
+         * The page's title
+         */
         public Builder title(@Nullable String title) {
             this.title = title;
             return this;

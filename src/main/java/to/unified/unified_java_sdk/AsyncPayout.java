@@ -41,6 +41,9 @@ public class AsyncPayout {
     /**
      * Retrieve a payout
      * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPaymentPayoutRequestBuilder getPaymentPayout() {
@@ -49,6 +52,9 @@ public class AsyncPayout {
 
     /**
      * Retrieve a payout
+     * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentPayoutResponse>} - The async response
@@ -64,6 +70,13 @@ public class AsyncPayout {
     /**
      * List all payouts
      * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
@@ -72,6 +85,13 @@ public class AsyncPayout {
 
     /**
      * List all payouts
+     * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentPayoutsResponse>} - The async response

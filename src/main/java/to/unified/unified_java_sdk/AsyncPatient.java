@@ -53,6 +53,9 @@ public class AsyncPatient {
     /**
      * Create a patient
      * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
+     * 
      * @return The async call builder
      */
     public CreateHealthcarePatientRequestBuilder createHealthcarePatient() {
@@ -61,6 +64,9 @@ public class AsyncPatient {
 
     /**
      * Create a patient
+     * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHealthcarePatientResponse>} - The async response
@@ -76,6 +82,9 @@ public class AsyncPatient {
     /**
      * Retrieve a patient
      * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHealthcarePatientRequestBuilder getHealthcarePatient() {
@@ -84,6 +93,9 @@ public class AsyncPatient {
 
     /**
      * Retrieve a patient
+     * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHealthcarePatientResponse>} - The async response
@@ -99,6 +111,13 @@ public class AsyncPatient {
     /**
      * List all patients
      * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHealthcarePatientsRequestBuilder listHealthcarePatients() {
@@ -107,6 +126,13 @@ public class AsyncPatient {
 
     /**
      * List all patients
+     * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHealthcarePatientsResponse>} - The async response
@@ -122,6 +148,9 @@ public class AsyncPatient {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchHealthcarePatientRequestBuilder patchHealthcarePatient() {
@@ -130,6 +159,9 @@ public class AsyncPatient {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHealthcarePatientResponse>} - The async response
@@ -145,6 +177,9 @@ public class AsyncPatient {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHealthcarePatientRequestBuilder updateHealthcarePatient() {
@@ -153,6 +188,9 @@ public class AsyncPatient {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHealthcarePatientResponse>} - The async response

@@ -111,7 +111,9 @@ public class AtsJob {
     @JsonProperty("minimum_experience_years")
     private Double minimumExperienceYears;
 
-
+    /**
+     * The job's title
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -349,6 +351,9 @@ public class AtsJob {
         return Optional.ofNullable(this.minimumExperienceYears);
     }
 
+    /**
+     * The job's title
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -539,6 +544,9 @@ public class AtsJob {
     }
 
 
+    /**
+     * The job's title
+     */
     public AtsJob withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -895,6 +903,9 @@ public class AtsJob {
             return this;
         }
 
+        /**
+         * The job's title
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

@@ -107,6 +107,9 @@ public class Martech {
     /**
      * Create a campaign
      * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
      * @return The call builder
      */
     public CreateMartechCampaignRequestBuilder createMartechCampaign() {
@@ -115,6 +118,9 @@ public class Martech {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +135,9 @@ public class Martech {
     /**
      * Create a list
      * 
+     * <p>Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingList.
+     * 
      * @return The call builder
      */
     public CreateMartechListRequestBuilder createMartechList() {
@@ -137,6 +146,9 @@ public class Martech {
 
     /**
      * Create a list
+     * 
+     * <p>Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingList.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +163,9 @@ public class Martech {
     /**
      * Create a member
      * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
+     * 
      * @return The call builder
      */
     public CreateMartechMemberRequestBuilder createMartechMember() {
@@ -159,6 +174,9 @@ public class Martech {
 
     /**
      * Create a member
+     * 
+     * <p>Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are
+     * mapped to the provider's API. Returns the created MarketingMember.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +191,9 @@ public class Martech {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMartechCampaignRequestBuilder getMartechCampaign() {
@@ -181,6 +202,9 @@ public class Martech {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +219,9 @@ public class Martech {
     /**
      * Retrieve a list
      * 
+     * <p>Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMartechListRequestBuilder getMartechList() {
@@ -203,6 +230,9 @@ public class Martech {
 
     /**
      * Retrieve a list
+     * 
+     * <p>Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +247,9 @@ public class Martech {
     /**
      * Retrieve a member
      * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMartechMemberRequestBuilder getMartechMember() {
@@ -225,6 +258,9 @@ public class Martech {
 
     /**
      * Retrieve a member
+     * 
+     * <p>Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -239,6 +275,13 @@ public class Martech {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
@@ -247,6 +290,13 @@ public class Martech {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -261,6 +311,13 @@ public class Martech {
     /**
      * List all lists
      * 
+     * <p>Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechListsRequestBuilder listMartechLists() {
@@ -269,6 +326,13 @@ public class Martech {
 
     /**
      * List all lists
+     * 
+     * <p>Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -283,6 +347,13 @@ public class Martech {
     /**
      * List all members
      * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechMembersRequestBuilder listMartechMembers() {
@@ -291,6 +362,13 @@ public class Martech {
 
     /**
      * List all members
+     * 
+     * <p>Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -305,6 +383,13 @@ public class Martech {
     /**
      * List all reports
      * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMartechReportsRequestBuilder listMartechReports() {
@@ -313,6 +398,13 @@ public class Martech {
 
     /**
      * List all reports
+     * 
+     * <p>Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -327,6 +419,9 @@ public class Martech {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
@@ -335,6 +430,9 @@ public class Martech {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -349,6 +447,9 @@ public class Martech {
     /**
      * Update a list
      * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchMartechListRequestBuilder patchMartechList() {
@@ -357,6 +458,9 @@ public class Martech {
 
     /**
      * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -371,6 +475,9 @@ public class Martech {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchMartechMemberRequestBuilder patchMartechMember() {
@@ -379,6 +486,9 @@ public class Martech {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -393,6 +503,8 @@ public class Martech {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
@@ -401,6 +513,8 @@ public class Martech {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -415,6 +529,8 @@ public class Martech {
     /**
      * Remove a list
      * 
+     * <p>Deletes the MarketingList identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMartechListRequestBuilder removeMartechList() {
@@ -423,6 +539,8 @@ public class Martech {
 
     /**
      * Remove a list
+     * 
+     * <p>Deletes the MarketingList identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -437,6 +555,8 @@ public class Martech {
     /**
      * Remove a member
      * 
+     * <p>Deletes the MarketingMember identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMartechMemberRequestBuilder removeMartechMember() {
@@ -445,6 +565,8 @@ public class Martech {
 
     /**
      * Remove a member
+     * 
+     * <p>Deletes the MarketingMember identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -459,6 +581,9 @@ public class Martech {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
@@ -467,6 +592,9 @@ public class Martech {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -481,6 +609,9 @@ public class Martech {
     /**
      * Update a list
      * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateMartechListRequestBuilder updateMartechList() {
@@ -489,6 +620,9 @@ public class Martech {
 
     /**
      * Update a list
+     * 
+     * <p>Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -503,6 +637,9 @@ public class Martech {
     /**
      * Update a member
      * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMartechMemberRequestBuilder updateMartechMember() {
@@ -511,6 +648,9 @@ public class Martech {
 
     /**
      * Update a member
+     * 
+     * <p>Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

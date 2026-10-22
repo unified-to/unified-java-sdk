@@ -13,7 +13,7 @@
 
 ## createLmsInstructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("a8def002-0461-4a7f-88b6-a39807fee563")
+                    .id("1e4d9cad-519b-4874-90db-1aaf168efed0")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -61,7 +61,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.207Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.611Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -95,7 +95,7 @@ public class Application {
 
 ## getLmsInstructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ public class Application {
 
 ## listLmsInstructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ public class Application {
 
 ## patchLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -243,7 +243,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("935a3328-fb68-4c0b-b218-481806cb1d89")
+                    .id("201a51fd-07e5-42ad-8974-4c35034f664a")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -258,7 +258,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.223Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.624Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -293,7 +293,7 @@ public class Application {
 
 ## removeLmsInstructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ public class Application {
 
 ## updateLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ public class Application {
                         LmsEmail.builder()
                             .build()))
                     .firstName("Deangelo")
-                    .id("935a3328-fb68-4c0b-b218-481806cb1d89")
+                    .id("201a51fd-07e5-42ad-8974-4c35034f664a")
                     .imageUrl("https://avatars.githubusercontent.com/u/95131132")
                     .lastName("Ritchie")
                     .metadata(List.of())
@@ -397,7 +397,7 @@ public class Application {
                             .type(LmsTelephoneType.HOME)
                             .build()))
                     .title("Regional Security Agent")
-                    .updatedAt(OffsetDateTime.parse("2025-07-24T10:21:21.223Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-25T05:07:39.624Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

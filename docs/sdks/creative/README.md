@@ -13,7 +13,7 @@
 
 ## createAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c61d33b4-6416-4808-ba2f-f2e15543ed4d")
+                    .id("8bfc6881-4a27-4128-91a5-4e3f52a688b9")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -50,7 +50,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.131Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.112Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,7 +84,7 @@ public class Application {
 
 ## getAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -228,7 +228,7 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c88d08f3-efe0-4ebb-8532-030795c0badb")
+                    .id("e6b62062-9e63-42fe-96ca-69a375bcf9f3")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -236,7 +236,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.119Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("c88d08f3-efe0-4ebb-8532-030795c0badb")
+                    .id("e6b62062-9e63-42fe-96ca-69a375bcf9f3")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -364,7 +364,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-06-27T18:17:57.139Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-06-27T23:22:36.119Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

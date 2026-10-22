@@ -63,6 +63,9 @@ public class Template {
     /**
      * Create a template
      * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
      * @return The call builder
      */
     public CreateComputeTemplateRequestBuilder createComputeTemplate() {
@@ -71,6 +74,9 @@ public class Template {
 
     /**
      * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -85,6 +91,9 @@ public class Template {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetComputeTemplateRequestBuilder getComputeTemplate() {
@@ -93,6 +102,9 @@ public class Template {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -107,6 +119,9 @@ public class Template {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetSigningTemplateRequestBuilder getSigningTemplate() {
@@ -115,6 +130,9 @@ public class Template {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +147,13 @@ public class Template {
     /**
      * List all templates
      * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListComputeTemplatesRequestBuilder listComputeTemplates() {
@@ -137,6 +162,13 @@ public class Template {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +183,13 @@ public class Template {
     /**
      * List all templates
      * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListSigningTemplatesRequestBuilder listSigningTemplates() {
@@ -159,6 +198,13 @@ public class Template {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +219,9 @@ public class Template {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
@@ -181,6 +230,9 @@ public class Template {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +247,8 @@ public class Template {
     /**
      * Remove a template
      * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
@@ -203,6 +257,8 @@ public class Template {
 
     /**
      * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +273,9 @@ public class Template {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
@@ -225,6 +284,9 @@ public class Template {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

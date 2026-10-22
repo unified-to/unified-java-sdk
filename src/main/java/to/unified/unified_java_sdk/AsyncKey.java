@@ -57,6 +57,9 @@ public class AsyncKey {
     /**
      * Create a key
      * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
      * @return The async call builder
      */
     public CreateComputeKeyRequestBuilder createComputeKey() {
@@ -65,6 +68,9 @@ public class AsyncKey {
 
     /**
      * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncKey {
     /**
      * Retrieve a key
      * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeKeyRequestBuilder getComputeKey() {
@@ -88,6 +97,9 @@ public class AsyncKey {
 
     /**
      * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncKey {
     /**
      * List all keys
      * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeKeysRequestBuilder listComputeKeys() {
@@ -111,6 +130,13 @@ public class AsyncKey {
 
     /**
      * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncKey {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeKeyRequestBuilder patchComputeKey() {
@@ -134,6 +163,9 @@ public class AsyncKey {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncKey {
     /**
      * Remove a key
      * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeKeyRequestBuilder removeComputeKey() {
@@ -157,6 +191,8 @@ public class AsyncKey {
 
     /**
      * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncKey {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeKeyRequestBuilder updateComputeKey() {
@@ -180,6 +219,9 @@ public class AsyncKey {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response

@@ -99,6 +99,9 @@ public class Shipping {
     /**
      * Create a label
      * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
+     * 
      * @return The call builder
      */
     public CreateShippingLabelRequestBuilder createShippingLabel() {
@@ -107,6 +110,9 @@ public class Shipping {
 
     /**
      * Create a label
+     * 
+     * <p>Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are
+     * mapped to the provider's API. Returns the created ShippingLabel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +127,9 @@ public class Shipping {
     /**
      * Create a rate
      * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
+     * 
      * @return The call builder
      */
     public CreateShippingRateRequestBuilder createShippingRate() {
@@ -129,6 +138,9 @@ public class Shipping {
 
     /**
      * Create a rate
+     * 
+     * <p>Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped
+     * to the provider's API. Returns the created ShippingRate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +155,9 @@ public class Shipping {
     /**
      * Create a shipment
      * 
+     * <p>Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ShippingShipment.
+     * 
      * @return The call builder
      */
     public CreateShippingShipmentRequestBuilder createShippingShipment() {
@@ -151,6 +166,9 @@ public class Shipping {
 
     /**
      * Create a shipment
+     * 
+     * <p>Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ShippingShipment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +183,9 @@ public class Shipping {
     /**
      * Retrieve a carrier
      * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetShippingCarrierRequestBuilder getShippingCarrier() {
@@ -173,6 +194,9 @@ public class Shipping {
 
     /**
      * Retrieve a carrier
+     * 
+     * <p>Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -187,6 +211,9 @@ public class Shipping {
     /**
      * Retrieve a label
      * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetShippingLabelRequestBuilder getShippingLabel() {
@@ -195,6 +222,9 @@ public class Shipping {
 
     /**
      * Retrieve a label
+     * 
+     * <p>Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -209,6 +239,9 @@ public class Shipping {
     /**
      * Retrieve a shipment
      * 
+     * <p>Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetShippingShipmentRequestBuilder getShippingShipment() {
@@ -217,6 +250,9 @@ public class Shipping {
 
     /**
      * Retrieve a shipment
+     * 
+     * <p>Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -231,6 +267,9 @@ public class Shipping {
     /**
      * Retrieve a tracking
      * 
+     * <p>Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetShippingTrackingRequestBuilder getShippingTracking() {
@@ -239,6 +278,9 @@ public class Shipping {
 
     /**
      * Retrieve a tracking
+     * 
+     * <p>Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -253,6 +295,13 @@ public class Shipping {
     /**
      * List all carriers
      * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListShippingCarriersRequestBuilder listShippingCarriers() {
@@ -261,6 +310,13 @@ public class Shipping {
 
     /**
      * List all carriers
+     * 
+     * <p>Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -275,6 +331,13 @@ public class Shipping {
     /**
      * List all labels
      * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListShippingLabelsRequestBuilder listShippingLabels() {
@@ -283,6 +346,13 @@ public class Shipping {
 
     /**
      * List all labels
+     * 
+     * <p>Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -297,6 +367,13 @@ public class Shipping {
     /**
      * List all shipments
      * 
+     * <p>Returns a list of ShippingShipments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListShippingShipmentsRequestBuilder listShippingShipments() {
@@ -305,6 +382,13 @@ public class Shipping {
 
     /**
      * List all shipments
+     * 
+     * <p>Returns a list of ShippingShipments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -319,6 +403,13 @@ public class Shipping {
     /**
      * List all trackings
      * 
+     * <p>Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListShippingTrackingsRequestBuilder listShippingTrackings() {
@@ -327,6 +418,13 @@ public class Shipping {
 
     /**
      * List all trackings
+     * 
+     * <p>Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -341,6 +439,9 @@ public class Shipping {
     /**
      * Update a label
      * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchShippingLabelRequestBuilder patchShippingLabel() {
@@ -349,6 +450,9 @@ public class Shipping {
 
     /**
      * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -363,6 +467,9 @@ public class Shipping {
     /**
      * Update a shipment
      * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchShippingShipmentRequestBuilder patchShippingShipment() {
@@ -371,6 +478,9 @@ public class Shipping {
 
     /**
      * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -385,6 +495,8 @@ public class Shipping {
     /**
      * Remove a label
      * 
+     * <p>Deletes the ShippingLabel identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveShippingLabelRequestBuilder removeShippingLabel() {
@@ -393,6 +505,8 @@ public class Shipping {
 
     /**
      * Remove a label
+     * 
+     * <p>Deletes the ShippingLabel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -407,6 +521,8 @@ public class Shipping {
     /**
      * Remove a shipment
      * 
+     * <p>Deletes the ShippingShipment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveShippingShipmentRequestBuilder removeShippingShipment() {
@@ -415,6 +531,8 @@ public class Shipping {
 
     /**
      * Remove a shipment
+     * 
+     * <p>Deletes the ShippingShipment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -429,6 +547,9 @@ public class Shipping {
     /**
      * Update a label
      * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateShippingLabelRequestBuilder updateShippingLabel() {
@@ -437,6 +558,9 @@ public class Shipping {
 
     /**
      * Update a label
+     * 
+     * <p>Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -451,6 +575,9 @@ public class Shipping {
     /**
      * Update a shipment
      * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateShippingShipmentRequestBuilder updateShippingShipment() {
@@ -459,6 +586,9 @@ public class Shipping {
 
     /**
      * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

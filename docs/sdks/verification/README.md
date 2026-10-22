@@ -15,7 +15,7 @@
 
 ## createVerificationRequest
 
-Create a request
+Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ public class Application {
         CreateVerificationRequestRequest req = CreateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
-                    .id("88da7157-6286-4aba-bb79-bacb0a79e2ae")
+                    .id("777618c3-648d-4ebd-8bb7-198862d0f360")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -54,7 +54,7 @@ public class Application {
                     .responseDownloadUrls(List.of())
                     .responseSource("Implemented regional protocol")
                     .responseStatus(VerificationRequestResponseStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:01:12.388Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:53:05.068Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -88,7 +88,7 @@ public class Application {
 
 ## getVerificationPackage
 
-Retrieve a package
+Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ public class Application {
 
 ## getVerificationRequest
 
-Retrieve a request
+Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## listVerificationPackages
 
-List all packages
+Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ public class Application {
 
 ## listVerificationRequests
 
-List all requests
+Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ public class Application {
 
 ## patchVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ public class Application {
         PatchVerificationRequestRequest req = PatchVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
-                    .id("d6c386da-98ba-43f9-9bb2-11fe52a1f398")
+                    .id("2d32286d-c8ce-4443-bb9b-4c9868713dab")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -357,7 +357,7 @@ public class Application {
                     .responseDownloadUrls(List.of())
                     .responseSource("Implemented regional protocol")
                     .responseStatus(VerificationRequestResponseStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:01:12.390Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:53:05.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -392,7 +392,7 @@ public class Application {
 
 ## removeVerificationRequest
 
-Remove a request
+Deletes the VerificationRequest identified by `id`.
 
 ### Example Usage
 
@@ -448,7 +448,7 @@ public class Application {
 
 ## updateVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -477,7 +477,7 @@ public class Application {
         UpdateVerificationRequestRequest req = UpdateVerificationRequestRequest.builder()
                 .verificationRequest(VerificationRequest.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-20T08:17:29.950Z"))
-                    .id("d6c386da-98ba-43f9-9bb2-11fe52a1f398")
+                    .id("2d32286d-c8ce-4443-bb9b-4c9868713dab")
                     .metadata(List.of())
                     .parameters(List.of())
                     .profileAddresses(List.of())
@@ -487,7 +487,7 @@ public class Application {
                     .responseDownloadUrls(List.of())
                     .responseSource("Implemented regional protocol")
                     .responseStatus(VerificationRequestResponseStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:01:12.390Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-27T07:53:05.069Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

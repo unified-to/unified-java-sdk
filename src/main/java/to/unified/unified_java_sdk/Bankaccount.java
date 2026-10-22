@@ -55,6 +55,9 @@ public class Bankaccount {
     /**
      * Create a bankaccount
      * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
+     * 
      * @return The call builder
      */
     public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
@@ -63,6 +66,9 @@ public class Bankaccount {
 
     /**
      * Create a bankaccount
+     * 
+     * <p>Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisBankaccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Bankaccount {
     /**
      * Retrieve a bankaccount
      * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
@@ -85,6 +94,9 @@ public class Bankaccount {
 
     /**
      * Retrieve a bankaccount
+     * 
+     * <p>Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Bankaccount {
     /**
      * List all bankaccounts
      * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
@@ -107,6 +126,13 @@ public class Bankaccount {
 
     /**
      * List all bankaccounts
+     * 
+     * <p>Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Bankaccount {
     /**
      * Update a bankaccount
      * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
@@ -129,6 +158,9 @@ public class Bankaccount {
 
     /**
      * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Bankaccount {
     /**
      * Remove a bankaccount
      * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
@@ -151,6 +185,8 @@ public class Bankaccount {
 
     /**
      * Remove a bankaccount
+     * 
+     * <p>Deletes the HrisBankaccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Bankaccount {
     /**
      * Update a bankaccount
      * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
@@ -173,6 +212,9 @@ public class Bankaccount {
 
     /**
      * Update a bankaccount
+     * 
+     * <p>Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -129,6 +129,9 @@ public class AsyncUc {
     /**
      * Create a comment
      * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
+     * 
      * @return The async call builder
      */
     public CreateUcCommentRequestBuilder createUcComment() {
@@ -137,6 +140,9 @@ public class AsyncUc {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
@@ -152,6 +158,9 @@ public class AsyncUc {
     /**
      * Create a contact
      * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
+     * 
      * @return The async call builder
      */
     public CreateUcContactRequestBuilder createUcContact() {
@@ -160,6 +169,9 @@ public class AsyncUc {
 
     /**
      * Create a contact
+     * 
+     * <p>Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to
+     * the provider's API. Returns the created UcContact.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
@@ -175,6 +187,9 @@ public class AsyncUc {
     /**
      * Create a recording
      * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
      * @return The async call builder
      */
     public CreateUcRecordingRequestBuilder createUcRecording() {
@@ -183,6 +198,9 @@ public class AsyncUc {
 
     /**
      * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
@@ -198,6 +216,9 @@ public class AsyncUc {
     /**
      * Retrieve a call
      * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcCallRequestBuilder getUcCall() {
@@ -206,6 +227,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a call
+     * 
+     * <p>Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
@@ -221,6 +245,9 @@ public class AsyncUc {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcCommentRequestBuilder getUcComment() {
@@ -229,6 +256,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
@@ -244,6 +274,9 @@ public class AsyncUc {
     /**
      * Retrieve a contact
      * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcContactRequestBuilder getUcContact() {
@@ -252,6 +285,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a contact
+     * 
+     * <p>Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
@@ -267,6 +303,9 @@ public class AsyncUc {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcRecordingRequestBuilder getUcRecording() {
@@ -275,6 +314,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
@@ -290,6 +332,9 @@ public class AsyncUc {
     /**
      * Retrieve a scorecard
      * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcScorecardRequestBuilder getUcScorecard() {
@@ -298,6 +343,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcScorecardResponse>} - The async response
@@ -313,6 +361,9 @@ public class AsyncUc {
     /**
      * Retrieve a scorecardtemplate
      * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetUcScorecardtemplateRequestBuilder getUcScorecardtemplate() {
@@ -321,6 +372,9 @@ public class AsyncUc {
 
     /**
      * Retrieve a scorecardtemplate
+     * 
+     * <p>Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcScorecardtemplateResponse>} - The async response
@@ -336,6 +390,13 @@ public class AsyncUc {
     /**
      * List all calls
      * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcCallsRequestBuilder listUcCalls() {
@@ -344,6 +405,13 @@ public class AsyncUc {
 
     /**
      * List all calls
+     * 
+     * <p>Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
@@ -359,6 +427,13 @@ public class AsyncUc {
     /**
      * List all comments
      * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcCommentsRequestBuilder listUcComments() {
@@ -367,6 +442,13 @@ public class AsyncUc {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of UcComments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
@@ -382,6 +464,13 @@ public class AsyncUc {
     /**
      * List all contacts
      * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcContactsRequestBuilder listUcContacts() {
@@ -390,6 +479,13 @@ public class AsyncUc {
 
     /**
      * List all contacts
+     * 
+     * <p>Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
@@ -405,6 +501,13 @@ public class AsyncUc {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcRecordingsRequestBuilder listUcRecordings() {
@@ -413,6 +516,13 @@ public class AsyncUc {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
@@ -428,6 +538,13 @@ public class AsyncUc {
     /**
      * List all scorecards
      * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcScorecardsRequestBuilder listUcScorecards() {
@@ -436,6 +553,13 @@ public class AsyncUc {
 
     /**
      * List all scorecards
+     * 
+     * <p>Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcScorecardsResponse>} - The async response
@@ -451,6 +575,13 @@ public class AsyncUc {
     /**
      * List all scorecardtemplates
      * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListUcScorecardtemplatesRequestBuilder listUcScorecardtemplates() {
@@ -459,6 +590,13 @@ public class AsyncUc {
 
     /**
      * List all scorecardtemplates
+     * 
+     * <p>Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcScorecardtemplatesResponse>} - The async response
@@ -474,6 +612,9 @@ public class AsyncUc {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchUcCommentRequestBuilder patchUcComment() {
@@ -482,6 +623,9 @@ public class AsyncUc {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
@@ -497,6 +641,9 @@ public class AsyncUc {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchUcContactRequestBuilder patchUcContact() {
@@ -505,6 +652,9 @@ public class AsyncUc {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
@@ -520,6 +670,9 @@ public class AsyncUc {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchUcRecordingRequestBuilder patchUcRecording() {
@@ -528,6 +681,9 @@ public class AsyncUc {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
@@ -543,6 +699,8 @@ public class AsyncUc {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the UcComment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveUcCommentRequestBuilder removeUcComment() {
@@ -551,6 +709,8 @@ public class AsyncUc {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the UcComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
@@ -566,6 +726,8 @@ public class AsyncUc {
     /**
      * Remove a contact
      * 
+     * <p>Deletes the UcContact identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveUcContactRequestBuilder removeUcContact() {
@@ -574,6 +736,8 @@ public class AsyncUc {
 
     /**
      * Remove a contact
+     * 
+     * <p>Deletes the UcContact identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
@@ -589,6 +753,8 @@ public class AsyncUc {
     /**
      * Remove a recording
      * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveUcRecordingRequestBuilder removeUcRecording() {
@@ -597,6 +763,8 @@ public class AsyncUc {
 
     /**
      * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
@@ -612,6 +780,9 @@ public class AsyncUc {
     /**
      * Update a comment
      * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateUcCommentRequestBuilder updateUcComment() {
@@ -620,6 +791,9 @@ public class AsyncUc {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
@@ -635,6 +809,9 @@ public class AsyncUc {
     /**
      * Update a contact
      * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateUcContactRequestBuilder updateUcContact() {
@@ -643,6 +820,9 @@ public class AsyncUc {
 
     /**
      * Update a contact
+     * 
+     * <p>Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
@@ -658,6 +838,9 @@ public class AsyncUc {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateUcRecordingRequestBuilder updateUcRecording() {
@@ -666,6 +849,9 @@ public class AsyncUc {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response

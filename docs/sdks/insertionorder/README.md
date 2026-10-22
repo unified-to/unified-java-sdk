@@ -13,7 +13,7 @@
 
 ## createAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -42,11 +42,11 @@ public class Application {
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("6c223517-c069-4a8d-8cdb-4774454728f3")
+                    .id("5b100592-2dd8-4bb8-b94a-28002e27ef82")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.742Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.622Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -80,7 +80,7 @@ public class Application {
 
 ## getAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ public class Application {
 
 ## listAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ public class Application {
 
 ## patchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -224,11 +224,11 @@ public class Application {
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("8a2573f5-f64b-4686-8e46-60f451639d48")
+                    .id("3e96314c-d9b2-4a4a-a076-670bb319cd67")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.743Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -263,7 +263,7 @@ public class Application {
 
 ## removeAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ public class Application {
 
 ## updateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -348,11 +348,11 @@ public class Application {
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("8a2573f5-f64b-4686-8e46-60f451639d48")
+                    .id("3e96314c-d9b2-4a4a-a076-670bb319cd67")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-28T19:47:30.743Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-28T20:01:14.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

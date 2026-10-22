@@ -13,7 +13,7 @@
 
 ## createHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("fa2af286-94f0-4d68-98ef-143792930dd3")
+                    .id("157b7d44-27c3-4f21-8313-1266c03e2fb4")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -62,7 +62,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.589Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.130Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -96,7 +96,7 @@ public class Application {
 
 ## getHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ public class Application {
 
 ## listHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ public class Application {
 
 ## patchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("0b3b2cec-78f9-4e8e-8b63-19c6acabe6dd")
+                    .id("51fab7a2-d00b-4151-baa0-5c14f4853e59")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -260,7 +260,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -295,7 +295,7 @@ public class Application {
 
 ## removeHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -351,7 +351,7 @@ public class Application {
 
 ## updateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("0b3b2cec-78f9-4e8e-8b63-19c6acabe6dd")
+                    .id("51fab7a2-d00b-4151-baa0-5c14f4853e59")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -400,7 +400,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-19T10:42:49.603Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-20T05:09:30.149Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

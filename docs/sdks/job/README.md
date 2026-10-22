@@ -19,7 +19,7 @@
 
 ## createAtsJob
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -76,7 +76,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("47bb9c75-6134-460c-b078-5ff70cc96838")
+                    .id("49400747-bb3c-42f3-a446-96affba495d3")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -84,7 +84,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("0631621d-c219-4e98-a96a-f5a23966e3ef")
+                            .id("2154dbb0-f94d-41d0-8dcc-67a0fa29f60a")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -96,7 +96,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.238Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.344Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -109,14 +109,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:18.999Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.576Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("a886376b-9566-45be-a78f-130ae93a8ba6")
+                            .id("1c38f35c-1874-4bca-ae7c-1e611a2d91eb")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.114Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.736Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -126,7 +126,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("a7c17cdf-f5e3-4776-8b70-f4e93eee0567")
+                            .id("85a208e5-0b26-45be-8079-0688ff534c72")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -138,7 +138,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("711617fc-28fa-4c92-91d1-f6aef96a401b")
+                            .id("c0dc48e6-2c0d-4153-bdc9-600184ec835b")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -150,7 +150,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("eecfa3d2-0e05-4c85-9c11-08274cf73339")
+                            .id("37a2a2ce-8b64-45a7-b712-61b00cc04bc4")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -163,7 +163,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.552Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.871Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -197,7 +197,7 @@ public class Application {
 
 ## createHrisJob
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -229,11 +229,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("5d8307df-d5b8-4ce7-bd06-413f18e29148")
+                    .id("b7f28636-55eb-4818-a80c-f4a681b999bd")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.269Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.326Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -267,7 +267,7 @@ public class Application {
 
 ## getAtsJob
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ public class Application {
 
 ## getHrisJob
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -383,7 +383,7 @@ public class Application {
 
 ## listAtsJobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -440,7 +440,7 @@ public class Application {
 
 ## listHrisJobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -497,7 +497,7 @@ public class Application {
 
 ## patchAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -554,7 +554,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("56d8529e-a986-4116-97c0-83e59897d8f0")
+                    .id("16f154c9-12c2-4306-9d21-5148af127b8e")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -562,7 +562,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("29d8ee67-39e3-41ea-9512-a611d055fc2e")
+                            .id("02e5183e-4fb5-4f43-bccf-33bd47d06b98")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -574,7 +574,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.289Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.411Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -587,14 +587,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:19.053Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.647Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("4e69e14e-5db6-45d7-86cd-54094fc71bd6")
+                            .id("f057f81e-c6ef-4971-b323-04d7a7997324")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.170Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.809Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -604,7 +604,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("7e7889dd-879d-44b6-9e8c-b7578ccfc95d")
+                            .id("cdc3d290-12bd-4083-aa16-e0bef9d83032")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -616,7 +616,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("675edef9-19d3-4a52-813c-a103c038afc2")
+                            .id("c7a8a0ee-42f6-4b05-9bc2-06ec42c02802")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -628,7 +628,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("dda17d3d-8409-424b-a2a1-8408a4046de1")
+                            .id("a197ee5c-ce35-4648-ad3c-1f8862d41af3")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -641,7 +641,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.598Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.932Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -676,7 +676,7 @@ public class Application {
 
 ## patchHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -708,11 +708,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("e5871a20-4409-41b8-9755-0e2f14b010bd")
+                    .id("a39ef193-4268-415d-b260-a142179d82a5")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.332Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -747,7 +747,7 @@ public class Application {
 
 ## removeAtsJob
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -803,7 +803,7 @@ public class Application {
 
 ## removeHrisJob
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -859,7 +859,7 @@ public class Application {
 
 ## updateAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -916,7 +916,7 @@ public class Application {
                     .description("Global")
                     .employmentType(EmploymentType.FREELANCE)
                     .hiringManagers(List.of())
-                    .id("56d8529e-a986-4116-97c0-83e59897d8f0")
+                    .id("16f154c9-12c2-4306-9d21-5148af127b8e")
                     .industry("Handcrafted Bamboo Soap")
                     .languageLocale("en")
                     .metadata(List.of(
@@ -924,7 +924,7 @@ public class Application {
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("29d8ee67-39e3-41ea-9512-a611d055fc2e")
+                            .id("02e5183e-4fb5-4f43-bccf-33bd47d06b98")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(AtsMetadataValue.of("desolo"))
@@ -936,7 +936,7 @@ public class Application {
                     .openings(List.of(
                         AtsJobOpening.builder()
                             .closeReason("Admoveo trado textilis.")
-                            .openedAt(OffsetDateTime.parse("2026-06-07T21:29:55.289Z"))
+                            .openedAt(OffsetDateTime.parse("2026-06-08T19:40:51.411Z"))
                             .status(AtsJobOpeningStatus.OPEN)
                             .build()))
                     .postings(List.of(
@@ -949,14 +949,14 @@ public class Application {
                                 .region("Wisconsin")
                                 .regionCode("CO")
                                 .build())
-                            .createdAt(OffsetDateTime.parse("2026-08-02T00:31:19.053Z"))
+                            .createdAt(OffsetDateTime.parse("2026-08-02T23:49:43.647Z"))
                             .description("Beatus eum volutabrum balbus victus ipsa tubineus claustrum.")
-                            .id("4e69e14e-5db6-45d7-86cd-54094fc71bd6")
+                            .id("f057f81e-c6ef-4971-b323-04d7a7997324")
                             .isActive(false)
                             .location("1725 Hessel Keys")
                             .name("International Identity Manager")
                             .postingUrl("https://obedient-yak.com")
-                            .updatedAt(OffsetDateTime.parse("2026-08-28T07:54:21.170Z"))
+                            .updatedAt(OffsetDateTime.parse("2026-08-29T07:44:57.809Z"))
                             .build()))
                     .publicJobUrls(List.of(
                         "https://trustworthy-elver.info",
@@ -966,7 +966,7 @@ public class Application {
                             .question("Doloribus mollitia.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.")
-                            .id("7e7889dd-879d-44b6-9e8c-b7578ccfc95d")
+                            .id("cdc3d290-12bd-4083-aa16-e0bef9d83032")
                             .maxLength(117d)
                             .minLength(1d)
                             .options(List.of(
@@ -978,7 +978,7 @@ public class Application {
                         AtsJobQuestion.builder()
                             .question("Nam.")
                             .type(AtsJobQuestionType.TEXT)
-                            .id("675edef9-19d3-4a52-813c-a103c038afc2")
+                            .id("c7a8a0ee-42f6-4b05-9bc2-06ec42c02802")
                             .maxLength(453d)
                             .minLength(1d)
                             .options(List.of(
@@ -990,7 +990,7 @@ public class Application {
                             .question("Confero trepide.")
                             .type(AtsJobQuestionType.TEXT)
                             .description("Taceo rem compello spectaculum mollitia arcus compello.")
-                            .id("dda17d3d-8409-424b-a2a1-8408a4046de1")
+                            .id("a197ee5c-ce35-4648-ad3c-1f8862d41af3")
                             .maxLength(66d)
                             .minLength(1d)
                             .options(List.of(
@@ -1003,7 +1003,7 @@ public class Application {
                         "utrimque"))
                     .status(AtsJobStatus.ARCHIVED)
                     .summary("Crepusculum adsuesco vere.")
-                    .updatedAt(OffsetDateTime.parse("2026-02-27T09:48:55.598Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-02-28T05:56:51.932Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1038,7 +1038,7 @@ public class Application {
 
 ## updateHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -1070,11 +1070,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("e5871a20-4409-41b8-9755-0e2f14b010bd")
+                    .id("a39ef193-4268-415d-b260-a142179d82a5")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-01-30T05:19:26.332Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-30T14:44:06.374Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

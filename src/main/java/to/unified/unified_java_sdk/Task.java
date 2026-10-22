@@ -135,6 +135,9 @@ public class Task {
     /**
      * Create a task
      * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
+     * 
      * @return The call builder
      */
     public CreateGenaiTaskRequestBuilder createGenaiTask() {
@@ -143,6 +146,9 @@ public class Task {
 
     /**
      * Create a task
+     * 
+     * <p>Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to
+     * the provider's API. Returns the created GenaiTask.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -157,6 +163,9 @@ public class Task {
     /**
      * Create a comment
      * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
+     * 
      * @return The call builder
      */
     public CreateTaskCommentRequestBuilder createTaskComment() {
@@ -165,6 +174,9 @@ public class Task {
 
     /**
      * Create a comment
+     * 
+     * <p>Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskComment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -179,6 +191,9 @@ public class Task {
     /**
      * Create a project
      * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
      * @return The call builder
      */
     public CreateTaskProjectRequestBuilder createTaskProject() {
@@ -187,6 +202,9 @@ public class Task {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -201,6 +219,9 @@ public class Task {
     /**
      * Create a task
      * 
+     * <p>Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the
+     * provider's API. Returns the created TaskTask.
+     * 
      * @return The call builder
      */
     public CreateTaskTaskRequestBuilder createTaskTask() {
@@ -209,6 +230,9 @@ public class Task {
 
     /**
      * Create a task
+     * 
+     * <p>Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the
+     * provider's API. Returns the created TaskTask.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -223,6 +247,9 @@ public class Task {
     /**
      * Retrieve a task
      * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetGenaiTaskRequestBuilder getGenaiTask() {
@@ -231,6 +258,9 @@ public class Task {
 
     /**
      * Retrieve a task
+     * 
+     * <p>Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -245,6 +275,9 @@ public class Task {
     /**
      * Retrieve a change
      * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskChangeRequestBuilder getTaskChange() {
@@ -253,6 +286,9 @@ public class Task {
 
     /**
      * Retrieve a change
+     * 
+     * <p>Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -267,6 +303,9 @@ public class Task {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskCommentRequestBuilder getTaskComment() {
@@ -275,6 +314,9 @@ public class Task {
 
     /**
      * Retrieve a comment
+     * 
+     * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -289,6 +331,9 @@ public class Task {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskProjectRequestBuilder getTaskProject() {
@@ -297,6 +342,9 @@ public class Task {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -311,6 +359,9 @@ public class Task {
     /**
      * Retrieve a task
      * 
+     * <p>Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskTaskRequestBuilder getTaskTask() {
@@ -319,6 +370,9 @@ public class Task {
 
     /**
      * Retrieve a task
+     * 
+     * <p>Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -333,6 +387,13 @@ public class Task {
     /**
      * List all tasks
      * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListGenaiTasksRequestBuilder listGenaiTasks() {
@@ -341,6 +402,13 @@ public class Task {
 
     /**
      * List all tasks
+     * 
+     * <p>Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -355,6 +423,13 @@ public class Task {
     /**
      * List all changes
      * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskChangesRequestBuilder listTaskChanges() {
@@ -363,6 +438,13 @@ public class Task {
 
     /**
      * List all changes
+     * 
+     * <p>Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -377,6 +459,13 @@ public class Task {
     /**
      * List all comments
      * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskCommentsRequestBuilder listTaskComments() {
@@ -385,6 +474,13 @@ public class Task {
 
     /**
      * List all comments
+     * 
+     * <p>Returns a list of TaskComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -399,6 +495,13 @@ public class Task {
     /**
      * List all projects
      * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskProjectsRequestBuilder listTaskProjects() {
@@ -407,6 +510,13 @@ public class Task {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -421,6 +531,13 @@ public class Task {
     /**
      * List all tasks
      * 
+     * <p>Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskTasksRequestBuilder listTaskTasks() {
@@ -429,6 +546,13 @@ public class Task {
 
     /**
      * List all tasks
+     * 
+     * <p>Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -443,6 +567,9 @@ public class Task {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchGenaiTaskRequestBuilder patchGenaiTask() {
@@ -451,6 +578,9 @@ public class Task {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -465,6 +595,9 @@ public class Task {
     /**
      * Update a comment
      * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchTaskCommentRequestBuilder patchTaskComment() {
@@ -473,6 +606,9 @@ public class Task {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -487,6 +623,9 @@ public class Task {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchTaskProjectRequestBuilder patchTaskProject() {
@@ -495,6 +634,9 @@ public class Task {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -509,6 +651,9 @@ public class Task {
     /**
      * Update a task
      * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchTaskTaskRequestBuilder patchTaskTask() {
@@ -517,6 +662,9 @@ public class Task {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -531,6 +679,8 @@ public class Task {
     /**
      * Remove a task
      * 
+     * <p>Deletes the GenaiTask identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveGenaiTaskRequestBuilder removeGenaiTask() {
@@ -539,6 +689,8 @@ public class Task {
 
     /**
      * Remove a task
+     * 
+     * <p>Deletes the GenaiTask identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -553,6 +705,8 @@ public class Task {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the TaskComment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTaskCommentRequestBuilder removeTaskComment() {
@@ -561,6 +715,8 @@ public class Task {
 
     /**
      * Remove a comment
+     * 
+     * <p>Deletes the TaskComment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -575,6 +731,8 @@ public class Task {
     /**
      * Remove a project
      * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTaskProjectRequestBuilder removeTaskProject() {
@@ -583,6 +741,8 @@ public class Task {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -597,6 +757,8 @@ public class Task {
     /**
      * Remove a task
      * 
+     * <p>Deletes the TaskTask identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTaskTaskRequestBuilder removeTaskTask() {
@@ -605,6 +767,8 @@ public class Task {
 
     /**
      * Remove a task
+     * 
+     * <p>Deletes the TaskTask identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -619,6 +783,9 @@ public class Task {
     /**
      * Update a task
      * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateGenaiTaskRequestBuilder updateGenaiTask() {
@@ -627,6 +794,9 @@ public class Task {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -641,6 +811,9 @@ public class Task {
     /**
      * Update a comment
      * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateTaskCommentRequestBuilder updateTaskComment() {
@@ -649,6 +822,9 @@ public class Task {
 
     /**
      * Update a comment
+     * 
+     * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -663,6 +839,9 @@ public class Task {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateTaskProjectRequestBuilder updateTaskProject() {
@@ -671,6 +850,9 @@ public class Task {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -685,6 +867,9 @@ public class Task {
     /**
      * Update a task
      * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateTaskTaskRequestBuilder updateTaskTask() {
@@ -693,6 +878,9 @@ public class Task {
 
     /**
      * Update a task
+     * 
+     * <p>Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

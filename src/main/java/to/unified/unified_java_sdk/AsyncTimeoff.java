@@ -57,6 +57,9 @@ public class AsyncTimeoff {
     /**
      * Create a timeoff
      * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
+     * 
      * @return The async call builder
      */
     public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
@@ -65,6 +68,9 @@ public class AsyncTimeoff {
 
     /**
      * Create a timeoff
+     * 
+     * <p>Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisTimeoff.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncTimeoff {
     /**
      * Retrieve a timeoff
      * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisTimeoffRequestBuilder getHrisTimeoff() {
@@ -88,6 +97,9 @@ public class AsyncTimeoff {
 
     /**
      * Retrieve a timeoff
+     * 
+     * <p>Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncTimeoff {
     /**
      * List all timeoffs
      * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisTimeoffsRequestBuilder listHrisTimeoffs() {
@@ -111,6 +130,13 @@ public class AsyncTimeoff {
 
     /**
      * List all timeoffs
+     * 
+     * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncTimeoff {
     /**
      * Update a timeoff
      * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
@@ -134,6 +163,9 @@ public class AsyncTimeoff {
 
     /**
      * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncTimeoff {
     /**
      * Remove a timeoff
      * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
@@ -157,6 +191,8 @@ public class AsyncTimeoff {
 
     /**
      * Remove a timeoff
+     * 
+     * <p>Deletes the HrisTimeoff identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncTimeoff {
     /**
      * Update a timeoff
      * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
@@ -180,6 +219,9 @@ public class AsyncTimeoff {
 
     /**
      * Update a timeoff
+     * 
+     * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response

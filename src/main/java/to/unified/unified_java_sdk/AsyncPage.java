@@ -57,6 +57,9 @@ public class AsyncPage {
     /**
      * Create a page
      * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
+     * 
      * @return The async call builder
      */
     public CreateKmsPageRequestBuilder createKmsPage() {
@@ -65,6 +68,9 @@ public class AsyncPage {
 
     /**
      * Create a page
+     * 
+     * <p>Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the
+     * provider's API. Returns the created KmsPage.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncPage {
     /**
      * Retrieve a page
      * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetKmsPageRequestBuilder getKmsPage() {
@@ -88,6 +97,9 @@ public class AsyncPage {
 
     /**
      * Retrieve a page
+     * 
+     * <p>Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncPage {
     /**
      * List all pages
      * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListKmsPagesRequestBuilder listKmsPages() {
@@ -111,6 +130,13 @@ public class AsyncPage {
 
     /**
      * List all pages
+     * 
+     * <p>Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncPage {
     /**
      * Update a page
      * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchKmsPageRequestBuilder patchKmsPage() {
@@ -134,6 +163,9 @@ public class AsyncPage {
 
     /**
      * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncPage {
     /**
      * Remove a page
      * 
+     * <p>Deletes the KmsPage identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveKmsPageRequestBuilder removeKmsPage() {
@@ -157,6 +191,8 @@ public class AsyncPage {
 
     /**
      * Remove a page
+     * 
+     * <p>Deletes the KmsPage identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncPage {
     /**
      * Update a page
      * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateKmsPageRequestBuilder updateKmsPage() {
@@ -180,6 +219,9 @@ public class AsyncPage {
 
     /**
      * Update a page
+     * 
+     * <p>Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response

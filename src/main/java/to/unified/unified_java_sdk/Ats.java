@@ -231,6 +231,9 @@ public class Ats {
     /**
      * Create an activity
      * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
      * @return The call builder
      */
     public CreateAtsActivityRequestBuilder createAtsActivity() {
@@ -239,6 +242,9 @@ public class Ats {
 
     /**
      * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -253,6 +259,9 @@ public class Ats {
     /**
      * Create an application
      * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
+     * 
      * @return The call builder
      */
     public CreateAtsApplicationRequestBuilder createAtsApplication() {
@@ -261,6 +270,9 @@ public class Ats {
 
     /**
      * Create an application
+     * 
+     * <p>Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are
+     * mapped to the provider's API. Returns the created AtsApplication.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -275,6 +287,9 @@ public class Ats {
     /**
      * Create a candidate
      * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
      * @return The call builder
      */
     public CreateAtsCandidateRequestBuilder createAtsCandidate() {
@@ -283,6 +298,9 @@ public class Ats {
 
     /**
      * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -297,6 +315,9 @@ public class Ats {
     /**
      * Create a company
      * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
      * @return The call builder
      */
     public CreateAtsCompanyRequestBuilder createAtsCompany() {
@@ -305,6 +326,9 @@ public class Ats {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -319,6 +343,9 @@ public class Ats {
     /**
      * Create a document
      * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
+     * 
      * @return The call builder
      */
     public CreateAtsDocumentRequestBuilder createAtsDocument() {
@@ -327,6 +354,9 @@ public class Ats {
 
     /**
      * Create a document
+     * 
+     * <p>Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsDocument.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -341,6 +371,9 @@ public class Ats {
     /**
      * Create an interview
      * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
+     * 
      * @return The call builder
      */
     public CreateAtsInterviewRequestBuilder createAtsInterview() {
@@ -349,6 +382,9 @@ public class Ats {
 
     /**
      * Create an interview
+     * 
+     * <p>Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsInterview.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -363,6 +399,9 @@ public class Ats {
     /**
      * Create a job
      * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
      * @return The call builder
      */
     public CreateAtsJobRequestBuilder createAtsJob() {
@@ -371,6 +410,9 @@ public class Ats {
 
     /**
      * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -385,6 +427,9 @@ public class Ats {
     /**
      * Create a scorecard
      * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
+     * 
      * @return The call builder
      */
     public CreateAtsScorecardRequestBuilder createAtsScorecard() {
@@ -393,6 +438,9 @@ public class Ats {
 
     /**
      * Create a scorecard
+     * 
+     * <p>Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsScorecard.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -407,6 +455,9 @@ public class Ats {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsActivityRequestBuilder getAtsActivity() {
@@ -415,6 +466,9 @@ public class Ats {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -429,6 +483,9 @@ public class Ats {
     /**
      * Retrieve an application
      * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsApplicationRequestBuilder getAtsApplication() {
@@ -437,6 +494,9 @@ public class Ats {
 
     /**
      * Retrieve an application
+     * 
+     * <p>Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -451,6 +511,9 @@ public class Ats {
     /**
      * Retrieve an applicationstatus
      * 
+     * <p>Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsApplicationstatusRequestBuilder getAtsApplicationstatus() {
@@ -459,6 +522,9 @@ public class Ats {
 
     /**
      * Retrieve an applicationstatus
+     * 
+     * <p>Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -473,6 +539,9 @@ public class Ats {
     /**
      * Retrieve a candidate
      * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsCandidateRequestBuilder getAtsCandidate() {
@@ -481,6 +550,9 @@ public class Ats {
 
     /**
      * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -495,6 +567,9 @@ public class Ats {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsCompanyRequestBuilder getAtsCompany() {
@@ -503,6 +578,9 @@ public class Ats {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -517,6 +595,9 @@ public class Ats {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsDocumentRequestBuilder getAtsDocument() {
@@ -525,6 +606,9 @@ public class Ats {
 
     /**
      * Retrieve a document
+     * 
+     * <p>Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -539,6 +623,9 @@ public class Ats {
     /**
      * Retrieve an interview
      * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsInterviewRequestBuilder getAtsInterview() {
@@ -547,6 +634,9 @@ public class Ats {
 
     /**
      * Retrieve an interview
+     * 
+     * <p>Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -561,6 +651,9 @@ public class Ats {
     /**
      * Retrieve a job
      * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsJobRequestBuilder getAtsJob() {
@@ -569,6 +662,9 @@ public class Ats {
 
     /**
      * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -583,6 +679,9 @@ public class Ats {
     /**
      * Retrieve a scorecard
      * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsScorecardRequestBuilder getAtsScorecard() {
@@ -591,6 +690,9 @@ public class Ats {
 
     /**
      * Retrieve a scorecard
+     * 
+     * <p>Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -605,6 +707,13 @@ public class Ats {
     /**
      * List all activities
      * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsActivitiesRequestBuilder listAtsActivities() {
@@ -613,6 +722,13 @@ public class Ats {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -627,6 +743,13 @@ public class Ats {
     /**
      * List all applications
      * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsApplicationsRequestBuilder listAtsApplications() {
@@ -635,6 +758,13 @@ public class Ats {
 
     /**
      * List all applications
+     * 
+     * <p>Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -649,6 +779,13 @@ public class Ats {
     /**
      * List all applicationstatuses
      * 
+     * <p>Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsApplicationstatusesRequestBuilder listAtsApplicationstatuses() {
@@ -657,6 +794,13 @@ public class Ats {
 
     /**
      * List all applicationstatuses
+     * 
+     * <p>Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -671,6 +815,13 @@ public class Ats {
     /**
      * List all candidates
      * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsCandidatesRequestBuilder listAtsCandidates() {
@@ -679,6 +830,13 @@ public class Ats {
 
     /**
      * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -693,6 +851,13 @@ public class Ats {
     /**
      * List all companies
      * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsCompaniesRequestBuilder listAtsCompanies() {
@@ -701,6 +866,13 @@ public class Ats {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -715,6 +887,13 @@ public class Ats {
     /**
      * List all documents
      * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsDocumentsRequestBuilder listAtsDocuments() {
@@ -723,6 +902,13 @@ public class Ats {
 
     /**
      * List all documents
+     * 
+     * <p>Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -737,6 +923,13 @@ public class Ats {
     /**
      * List all interviews
      * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsInterviewsRequestBuilder listAtsInterviews() {
@@ -745,6 +938,13 @@ public class Ats {
 
     /**
      * List all interviews
+     * 
+     * <p>Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -759,6 +959,13 @@ public class Ats {
     /**
      * List all jobs
      * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsJobsRequestBuilder listAtsJobs() {
@@ -767,6 +974,13 @@ public class Ats {
 
     /**
      * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -781,6 +995,13 @@ public class Ats {
     /**
      * List all scorecards
      * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsScorecardsRequestBuilder listAtsScorecards() {
@@ -789,6 +1010,13 @@ public class Ats {
 
     /**
      * List all scorecards
+     * 
+     * <p>Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -803,6 +1031,9 @@ public class Ats {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAtsActivityRequestBuilder patchAtsActivity() {
@@ -811,6 +1042,9 @@ public class Ats {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -825,6 +1059,9 @@ public class Ats {
     /**
      * Update an application
      * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAtsApplicationRequestBuilder patchAtsApplication() {
@@ -833,6 +1070,9 @@ public class Ats {
 
     /**
      * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -847,6 +1087,9 @@ public class Ats {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchAtsCandidateRequestBuilder patchAtsCandidate() {
@@ -855,6 +1098,9 @@ public class Ats {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -869,6 +1115,9 @@ public class Ats {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAtsCompanyRequestBuilder patchAtsCompany() {
@@ -877,6 +1126,9 @@ public class Ats {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -891,6 +1143,9 @@ public class Ats {
     /**
      * Update a document
      * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAtsDocumentRequestBuilder patchAtsDocument() {
@@ -899,6 +1154,9 @@ public class Ats {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -913,6 +1171,9 @@ public class Ats {
     /**
      * Update an interview
      * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchAtsInterviewRequestBuilder patchAtsInterview() {
@@ -921,6 +1182,9 @@ public class Ats {
 
     /**
      * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -935,6 +1199,9 @@ public class Ats {
     /**
      * Update a job
      * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public PatchAtsJobRequestBuilder patchAtsJob() {
@@ -943,6 +1210,9 @@ public class Ats {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -957,6 +1227,9 @@ public class Ats {
     /**
      * Update a scorecard
      * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public PatchAtsScorecardRequestBuilder patchAtsScorecard() {
@@ -965,6 +1238,9 @@ public class Ats {
 
     /**
      * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -979,6 +1255,8 @@ public class Ats {
     /**
      * Remove an activity
      * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsActivityRequestBuilder removeAtsActivity() {
@@ -987,6 +1265,8 @@ public class Ats {
 
     /**
      * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1001,6 +1281,8 @@ public class Ats {
     /**
      * Remove an application
      * 
+     * <p>Deletes the AtsApplication identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsApplicationRequestBuilder removeAtsApplication() {
@@ -1009,6 +1291,8 @@ public class Ats {
 
     /**
      * Remove an application
+     * 
+     * <p>Deletes the AtsApplication identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1023,6 +1307,8 @@ public class Ats {
     /**
      * Remove a candidate
      * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsCandidateRequestBuilder removeAtsCandidate() {
@@ -1031,6 +1317,8 @@ public class Ats {
 
     /**
      * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1045,6 +1333,8 @@ public class Ats {
     /**
      * Remove a company
      * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
@@ -1053,6 +1343,8 @@ public class Ats {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1067,6 +1359,8 @@ public class Ats {
     /**
      * Remove a document
      * 
+     * <p>Deletes the AtsDocument identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsDocumentRequestBuilder removeAtsDocument() {
@@ -1075,6 +1369,8 @@ public class Ats {
 
     /**
      * Remove a document
+     * 
+     * <p>Deletes the AtsDocument identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1089,6 +1385,8 @@ public class Ats {
     /**
      * Remove an interview
      * 
+     * <p>Deletes the AtsInterview identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsInterviewRequestBuilder removeAtsInterview() {
@@ -1097,6 +1395,8 @@ public class Ats {
 
     /**
      * Remove an interview
+     * 
+     * <p>Deletes the AtsInterview identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1111,6 +1411,8 @@ public class Ats {
     /**
      * Remove a job
      * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsJobRequestBuilder removeAtsJob() {
@@ -1119,6 +1421,8 @@ public class Ats {
 
     /**
      * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1133,6 +1437,8 @@ public class Ats {
     /**
      * Remove a scorecard
      * 
+     * <p>Deletes the AtsScorecard identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsScorecardRequestBuilder removeAtsScorecard() {
@@ -1141,6 +1447,8 @@ public class Ats {
 
     /**
      * Remove a scorecard
+     * 
+     * <p>Deletes the AtsScorecard identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1155,6 +1463,9 @@ public class Ats {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsActivityRequestBuilder updateAtsActivity() {
@@ -1163,6 +1474,9 @@ public class Ats {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1177,6 +1491,9 @@ public class Ats {
     /**
      * Update an application
      * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsApplicationRequestBuilder updateAtsApplication() {
@@ -1185,6 +1502,9 @@ public class Ats {
 
     /**
      * Update an application
+     * 
+     * <p>Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1199,6 +1519,9 @@ public class Ats {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsCandidateRequestBuilder updateAtsCandidate() {
@@ -1207,6 +1530,9 @@ public class Ats {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1221,6 +1547,9 @@ public class Ats {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
@@ -1229,6 +1558,9 @@ public class Ats {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1243,6 +1575,9 @@ public class Ats {
     /**
      * Update a document
      * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsDocumentRequestBuilder updateAtsDocument() {
@@ -1251,6 +1586,9 @@ public class Ats {
 
     /**
      * Update a document
+     * 
+     * <p>Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1265,6 +1603,9 @@ public class Ats {
     /**
      * Update an interview
      * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsInterviewRequestBuilder updateAtsInterview() {
@@ -1273,6 +1614,9 @@ public class Ats {
 
     /**
      * Update an interview
+     * 
+     * <p>Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1287,6 +1631,9 @@ public class Ats {
     /**
      * Update a job
      * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public UpdateAtsJobRequestBuilder updateAtsJob() {
@@ -1295,6 +1642,9 @@ public class Ats {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1309,6 +1659,9 @@ public class Ats {
     /**
      * Update a scorecard
      * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsScorecardRequestBuilder updateAtsScorecard() {
@@ -1317,6 +1670,9 @@ public class Ats {
 
     /**
      * Update a scorecard
+     * 
+     * <p>Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

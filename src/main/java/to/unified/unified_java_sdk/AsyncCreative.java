@@ -57,6 +57,9 @@ public class AsyncCreative {
     /**
      * Create a creative
      * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
      * @return The async call builder
      */
     public CreateAdsCreativeRequestBuilder createAdsCreative() {
@@ -65,6 +68,9 @@ public class AsyncCreative {
 
     /**
      * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsCreativeResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncCreative {
     /**
      * Retrieve a creative
      * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsCreativeRequestBuilder getAdsCreative() {
@@ -88,6 +97,9 @@ public class AsyncCreative {
 
     /**
      * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsCreativeResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncCreative {
     /**
      * List all creatives
      * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsCreativesRequestBuilder listAdsCreatives() {
@@ -111,6 +130,13 @@ public class AsyncCreative {
 
     /**
      * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsCreativesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncCreative {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsCreativeRequestBuilder patchAdsCreative() {
@@ -134,6 +163,9 @@ public class AsyncCreative {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsCreativeResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncCreative {
     /**
      * Remove a creative
      * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
@@ -157,6 +191,8 @@ public class AsyncCreative {
 
     /**
      * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsCreativeResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncCreative {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
@@ -180,6 +219,9 @@ public class AsyncCreative {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsCreativeResponse>} - The async response

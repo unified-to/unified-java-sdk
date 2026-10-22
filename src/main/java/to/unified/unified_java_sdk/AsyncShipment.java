@@ -57,6 +57,9 @@ public class AsyncShipment {
     /**
      * Create a shipment
      * 
+     * <p>Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ShippingShipment.
+     * 
      * @return The async call builder
      */
     public CreateShippingShipmentRequestBuilder createShippingShipment() {
@@ -65,6 +68,9 @@ public class AsyncShipment {
 
     /**
      * Create a shipment
+     * 
+     * <p>Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ShippingShipment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingShipmentResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncShipment {
     /**
      * Retrieve a shipment
      * 
+     * <p>Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetShippingShipmentRequestBuilder getShippingShipment() {
@@ -88,6 +97,9 @@ public class AsyncShipment {
 
     /**
      * Retrieve a shipment
+     * 
+     * <p>Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingShipmentResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncShipment {
     /**
      * List all shipments
      * 
+     * <p>Returns a list of ShippingShipments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListShippingShipmentsRequestBuilder listShippingShipments() {
@@ -111,6 +130,13 @@ public class AsyncShipment {
 
     /**
      * List all shipments
+     * 
+     * <p>Returns a list of ShippingShipments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingShipmentsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncShipment {
     /**
      * Update a shipment
      * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchShippingShipmentRequestBuilder patchShippingShipment() {
@@ -134,6 +163,9 @@ public class AsyncShipment {
 
     /**
      * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchShippingShipmentResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncShipment {
     /**
      * Remove a shipment
      * 
+     * <p>Deletes the ShippingShipment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveShippingShipmentRequestBuilder removeShippingShipment() {
@@ -157,6 +191,8 @@ public class AsyncShipment {
 
     /**
      * Remove a shipment
+     * 
+     * <p>Deletes the ShippingShipment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveShippingShipmentResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncShipment {
     /**
      * Update a shipment
      * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateShippingShipmentRequestBuilder updateShippingShipment() {
@@ -180,6 +219,9 @@ public class AsyncShipment {
 
     /**
      * Update a shipment
+     * 
+     * <p>Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateShippingShipmentResponse>} - The async response

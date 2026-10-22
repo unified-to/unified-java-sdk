@@ -151,6 +151,9 @@ public class Healthcare {
     /**
      * Create an appointment
      * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     * 
      * @return The call builder
      */
     public CreateHealthcareAppointmentRequestBuilder createHealthcareAppointment() {
@@ -159,6 +162,9 @@ public class Healthcare {
 
     /**
      * Create an appointment
+     * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +179,9 @@ public class Healthcare {
     /**
      * Create an observation
      * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
+     * 
      * @return The call builder
      */
     public CreateHealthcareObservationRequestBuilder createHealthcareObservation() {
@@ -181,6 +190,9 @@ public class Healthcare {
 
     /**
      * Create an observation
+     * 
+     * <p>Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareObservation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +207,9 @@ public class Healthcare {
     /**
      * Create a patient
      * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
+     * 
      * @return The call builder
      */
     public CreateHealthcarePatientRequestBuilder createHealthcarePatient() {
@@ -203,6 +218,9 @@ public class Healthcare {
 
     /**
      * Create a patient
+     * 
+     * <p>Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they
+     * are mapped to the provider's API. Returns the created HealthcarePatient.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +235,9 @@ public class Healthcare {
     /**
      * Retrieve an allergy
      * 
+     * <p>Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareAllergyRequestBuilder getHealthcareAllergy() {
@@ -225,6 +246,9 @@ public class Healthcare {
 
     /**
      * Retrieve an allergy
+     * 
+     * <p>Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -239,6 +263,9 @@ public class Healthcare {
     /**
      * Retrieve an appointment
      * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareAppointmentRequestBuilder getHealthcareAppointment() {
@@ -247,6 +274,9 @@ public class Healthcare {
 
     /**
      * Retrieve an appointment
+     * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -261,6 +291,9 @@ public class Healthcare {
     /**
      * Retrieve a condition
      * 
+     * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareConditionRequestBuilder getHealthcareCondition() {
@@ -269,6 +302,9 @@ public class Healthcare {
 
     /**
      * Retrieve a condition
+     * 
+     * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -283,6 +319,9 @@ public class Healthcare {
     /**
      * Retrieve an encounter
      * 
+     * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareEncounterRequestBuilder getHealthcareEncounter() {
@@ -291,6 +330,9 @@ public class Healthcare {
 
     /**
      * Retrieve an encounter
+     * 
+     * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -305,6 +347,9 @@ public class Healthcare {
     /**
      * Retrieve an immunization
      * 
+     * <p>Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareImmunizationRequestBuilder getHealthcareImmunization() {
@@ -313,6 +358,9 @@ public class Healthcare {
 
     /**
      * Retrieve an immunization
+     * 
+     * <p>Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -327,6 +375,9 @@ public class Healthcare {
     /**
      * Retrieve a location
      * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareLocationRequestBuilder getHealthcareLocation() {
@@ -335,6 +386,9 @@ public class Healthcare {
 
     /**
      * Retrieve a location
+     * 
+     * <p>Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -349,6 +403,9 @@ public class Healthcare {
     /**
      * Retrieve a medication
      * 
+     * <p>Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareMedicationRequestBuilder getHealthcareMedication() {
@@ -357,6 +414,9 @@ public class Healthcare {
 
     /**
      * Retrieve a medication
+     * 
+     * <p>Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -371,6 +431,9 @@ public class Healthcare {
     /**
      * Retrieve an observation
      * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareObservationRequestBuilder getHealthcareObservation() {
@@ -379,6 +442,9 @@ public class Healthcare {
 
     /**
      * Retrieve an observation
+     * 
+     * <p>Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -393,6 +459,9 @@ public class Healthcare {
     /**
      * Retrieve a patient
      * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcarePatientRequestBuilder getHealthcarePatient() {
@@ -401,6 +470,9 @@ public class Healthcare {
 
     /**
      * Retrieve a patient
+     * 
+     * <p>Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -415,6 +487,9 @@ public class Healthcare {
     /**
      * Retrieve a practitioner
      * 
+     * <p>Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcarePractitionerRequestBuilder getHealthcarePractitioner() {
@@ -423,6 +498,9 @@ public class Healthcare {
 
     /**
      * Retrieve a practitioner
+     * 
+     * <p>Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding
+     * list endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -437,6 +515,9 @@ public class Healthcare {
     /**
      * Retrieve a slot
      * 
+     * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHealthcareSlotRequestBuilder getHealthcareSlot() {
@@ -445,6 +526,9 @@ public class Healthcare {
 
     /**
      * Retrieve a slot
+     * 
+     * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -459,6 +543,13 @@ public class Healthcare {
     /**
      * List all allergies
      * 
+     * <p>Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareAllergiesRequestBuilder listHealthcareAllergies() {
@@ -467,6 +558,13 @@ public class Healthcare {
 
     /**
      * List all allergies
+     * 
+     * <p>Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -481,6 +579,13 @@ public class Healthcare {
     /**
      * List all appointments
      * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareAppointmentsRequestBuilder listHealthcareAppointments() {
@@ -489,6 +594,13 @@ public class Healthcare {
 
     /**
      * List all appointments
+     * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -503,6 +615,13 @@ public class Healthcare {
     /**
      * List all conditions
      * 
+     * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareConditionsRequestBuilder listHealthcareConditions() {
@@ -511,6 +630,13 @@ public class Healthcare {
 
     /**
      * List all conditions
+     * 
+     * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -525,6 +651,13 @@ public class Healthcare {
     /**
      * List all encounters
      * 
+     * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareEncountersRequestBuilder listHealthcareEncounters() {
@@ -533,6 +666,13 @@ public class Healthcare {
 
     /**
      * List all encounters
+     * 
+     * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -547,6 +687,13 @@ public class Healthcare {
     /**
      * List all immunizations
      * 
+     * <p>Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareImmunizationsRequestBuilder listHealthcareImmunizations() {
@@ -555,6 +702,13 @@ public class Healthcare {
 
     /**
      * List all immunizations
+     * 
+     * <p>Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -569,6 +723,13 @@ public class Healthcare {
     /**
      * List all locations
      * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareLocationsRequestBuilder listHealthcareLocations() {
@@ -577,6 +738,13 @@ public class Healthcare {
 
     /**
      * List all locations
+     * 
+     * <p>Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -591,6 +759,13 @@ public class Healthcare {
     /**
      * List all medications
      * 
+     * <p>Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareMedicationsRequestBuilder listHealthcareMedications() {
@@ -599,6 +774,13 @@ public class Healthcare {
 
     /**
      * List all medications
+     * 
+     * <p>Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -613,6 +795,13 @@ public class Healthcare {
     /**
      * List all observations
      * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareObservationsRequestBuilder listHealthcareObservations() {
@@ -621,6 +810,13 @@ public class Healthcare {
 
     /**
      * List all observations
+     * 
+     * <p>Returns a list of HealthcareObservations. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -635,6 +831,13 @@ public class Healthcare {
     /**
      * List all patients
      * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcarePatientsRequestBuilder listHealthcarePatients() {
@@ -643,6 +846,13 @@ public class Healthcare {
 
     /**
      * List all patients
+     * 
+     * <p>Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -657,6 +867,13 @@ public class Healthcare {
     /**
      * List all practitioners
      * 
+     * <p>Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcarePractitionersRequestBuilder listHealthcarePractitioners() {
@@ -665,6 +882,13 @@ public class Healthcare {
 
     /**
      * List all practitioners
+     * 
+     * <p>Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -679,6 +903,13 @@ public class Healthcare {
     /**
      * List all slots
      * 
+     * <p>Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHealthcareSlotsRequestBuilder listHealthcareSlots() {
@@ -687,6 +918,13 @@ public class Healthcare {
 
     /**
      * List all slots
+     * 
+     * <p>Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -701,6 +939,9 @@ public class Healthcare {
     /**
      * Update an appointment
      * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchHealthcareAppointmentRequestBuilder patchHealthcareAppointment() {
@@ -709,6 +950,9 @@ public class Healthcare {
 
     /**
      * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -723,6 +967,9 @@ public class Healthcare {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchHealthcarePatientRequestBuilder patchHealthcarePatient() {
@@ -731,6 +978,9 @@ public class Healthcare {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -745,6 +995,8 @@ public class Healthcare {
     /**
      * Remove an appointment
      * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHealthcareAppointmentRequestBuilder removeHealthcareAppointment() {
@@ -753,6 +1005,8 @@ public class Healthcare {
 
     /**
      * Remove an appointment
+     * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -767,6 +1021,9 @@ public class Healthcare {
     /**
      * Update an appointment
      * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHealthcareAppointmentRequestBuilder updateHealthcareAppointment() {
@@ -775,6 +1032,9 @@ public class Healthcare {
 
     /**
      * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -789,6 +1049,9 @@ public class Healthcare {
     /**
      * Update a patient
      * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateHealthcarePatientRequestBuilder updateHealthcarePatient() {
@@ -797,6 +1060,9 @@ public class Healthcare {
 
     /**
      * Update a patient
+     * 
+     * <p>Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

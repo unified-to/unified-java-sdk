@@ -27,7 +27,7 @@
 
 ## createAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -61,16 +61,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:47.831Z"))
-                    .id("a7793b5b-01f8-492f-811e-c7a981a3df10")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.625Z"))
+                    .id("21f864e8-e0bc-4a78-8a90-355cadf75b45")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.437Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.699Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.465Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.592Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -104,7 +104,7 @@ public class Application {
 
 ## createHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -134,12 +134,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("f4b271d1-2f3e-4737-9832-7adfe3f09a3e")
+                    .id("3606725f-8165-4120-b28b-b59112af7590")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.823Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.838Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -234,7 +234,7 @@ public class Application {
 
 ## getAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ public class Application {
 
 ## getClubsGroup
 
-Retrieve a group
+Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ public class Application {
 
 ## getHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ public class Application {
 
 ## listAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -523,7 +523,7 @@ public class Application {
 
 ## listClubsGroups
 
-List all groups
+Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -580,7 +580,7 @@ public class Application {
 
 ## listHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -694,7 +694,7 @@ public class Application {
 
 ## patchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -728,16 +728,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:48.019Z"))
-                    .id("135a77f8-937b-4b74-8a97-e335f433bffd")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.751Z"))
+                    .id("05c82173-87ed-4bc4-9b96-610f1ee3ab0c")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.611Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.817Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.530Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.636Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -772,7 +772,7 @@ public class Application {
 
 ## patchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -802,12 +802,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("5e3ea6a8-0ae3-491b-9f33-f43f43bc971a")
+                    .id("962ea63f-f392-4847-bb59-a6be7f287e09")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.839Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.850Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -904,7 +904,7 @@ public class Application {
 
 ## removeAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -960,7 +960,7 @@ public class Application {
 
 ## removeHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -1072,7 +1072,7 @@ public class Application {
 
 ## updateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1106,16 +1106,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-06-25T01:36:48.019Z"))
-                    .id("135a77f8-937b-4b74-8a97-e335f433bffd")
+                    .endAt(OffsetDateTime.parse("2026-06-26T01:25:27.751Z"))
+                    .id("05c82173-87ed-4bc4-9b96-610f1ee3ab0c")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-09T06:50:59.611Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-10T05:04:00.817Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-13T16:14:41.530Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-14T00:32:24.636Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1150,7 +1150,7 @@ public class Application {
 
 ## updateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1180,12 +1180,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("5e3ea6a8-0ae3-491b-9f33-f43f43bc971a")
+                    .id("962ea63f-f392-4847-bb59-a6be7f287e09")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-05-21T23:29:25.839Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-22T20:55:58.850Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

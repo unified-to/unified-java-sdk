@@ -57,6 +57,9 @@ public class AsyncCandidate {
     /**
      * Create a candidate
      * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
+     * 
      * @return The async call builder
      */
     public CreateAtsCandidateRequestBuilder createAtsCandidate() {
@@ -65,6 +68,9 @@ public class AsyncCandidate {
 
     /**
      * Create a candidate
+     * 
+     * <p>Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsCandidate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncCandidate {
     /**
      * Retrieve a candidate
      * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsCandidateRequestBuilder getAtsCandidate() {
@@ -88,6 +97,9 @@ public class AsyncCandidate {
 
     /**
      * Retrieve a candidate
+     * 
+     * <p>Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncCandidate {
     /**
      * List all candidates
      * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsCandidatesRequestBuilder listAtsCandidates() {
@@ -111,6 +130,13 @@ public class AsyncCandidate {
 
     /**
      * List all candidates
+     * 
+     * <p>Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncCandidate {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsCandidateRequestBuilder patchAtsCandidate() {
@@ -134,6 +163,9 @@ public class AsyncCandidate {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncCandidate {
     /**
      * Remove a candidate
      * 
+     * <p>Deletes the AtsCandidate identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsCandidateRequestBuilder removeAtsCandidate() {
@@ -157,6 +191,8 @@ public class AsyncCandidate {
 
     /**
      * Remove a candidate
+     * 
+     * <p>Deletes the AtsCandidate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncCandidate {
     /**
      * Update a candidate
      * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsCandidateRequestBuilder updateAtsCandidate() {
@@ -180,6 +219,9 @@ public class AsyncCandidate {
 
     /**
      * Update a candidate
+     * 
+     * <p>Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response

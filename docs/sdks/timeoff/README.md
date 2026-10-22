@@ -13,7 +13,7 @@
 
 ## createHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -42,21 +42,21 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.900Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.895Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.839Z"))
-                    .id("59d751f0-771f-49d0-a64f-a59736d69c12")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.847Z"))
+                    .id("b311c144-2124-47d0-9132-e6af0ef9596d")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.830Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.150Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.794Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.471Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -90,7 +90,7 @@ public class Application {
 
 ## getHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ public class Application {
 
 ## listHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ public class Application {
 
 ## patchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -234,21 +234,21 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.901Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.896Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.848Z"))
-                    .id("96c16447-fd7f-4cf8-80d7-6805a29c8784")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.857Z"))
+                    .id("b38bfd41-8faa-45ef-a882-a4a62529f5a9")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.835Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.156Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.796Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.473Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -283,7 +283,7 @@ public class Application {
 
 ## removeHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ public class Application {
 
 ## updateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -368,21 +368,21 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-23T09:08:47.901Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-23T11:02:19.896Z"))
                     .comments("Blandior ventus curiositas amplitudo.")
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2024-12-28T17:19:34.848Z"))
-                    .id("96c16447-fd7f-4cf8-80d7-6805a29c8784")
+                    .endAt(OffsetDateTime.parse("2024-12-29T09:18:11.857Z"))
+                    .id("b38bfd41-8faa-45ef-a882-a4a62529f5a9")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-04T19:25:07.835Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-05T04:52:43.156Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-12T19:42:18.796Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-12T23:29:13.473Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

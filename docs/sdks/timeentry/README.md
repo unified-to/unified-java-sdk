@@ -13,7 +13,7 @@
 
 ## createLegalTimeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -46,13 +46,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("2a755b0b-8122-4dd5-b33a-37968de1fe05")
+                    .id("2d754bce-fc01-4baa-a2bb-0cf13964f811")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.408Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")
@@ -87,7 +87,7 @@ public class Application {
 
 ## getLegalTimeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ public class Application {
 
 ## listLegalTimeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ public class Application {
 
 ## patchLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -235,13 +235,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("f1a1bdb3-de0b-4f2d-9351-c897b387921d")
+                    .id("0c2aa461-de71-4f6d-ae89-9122e0c3940f")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.409Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")
@@ -277,7 +277,7 @@ public class Application {
 
 ## removeLegalTimeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ public class Application {
 
 ## updateLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -366,13 +366,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .currency("ZAR")
                     .description("Ea derideo adulatio torrens.")
-                    .id("f1a1bdb3-de0b-4f2d-9351-c897b387921d")
+                    .id("0c2aa461-de71-4f6d-ae89-9122e0c3940f")
                     .isBillable(true)
                     .metadata(List.of())
                     .minutes(390d)
                     .rateAmount(637d)
                     .totalAmount(4140.5)
-                    .updatedAt(OffsetDateTime.parse("2022-06-30T01:49:30.671Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-06-30T02:39:58.409Z"))
                     .workedAt(OffsetDateTime.parse("2022-05-06T03:26:03.756Z"))
                     .build())
                 .connectionId("<id>")

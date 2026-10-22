@@ -13,7 +13,7 @@
 
 ## createAtsInterview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -43,13 +43,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("bcf33989-03c5-44f0-a08b-10b02e1a1046")
+                    .id("67902ec5-16b8-4454-bd7b-197b5054b9ce")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.583Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.543Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,7 +83,7 @@ public class Application {
 
 ## getAtsInterview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ public class Application {
 
 ## listAtsInterviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ public class Application {
 
 ## patchAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -228,13 +228,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("d52c2892-06f7-45f3-b162-356262609fd3")
+                    .id("76639f90-a6b0-49c3-90e3-9d41e52c76b3")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.550Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -269,7 +269,7 @@ public class Application {
 
 ## removeAtsInterview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ public class Application {
 
 ## updateAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -355,13 +355,13 @@ public class Application {
                 .atsInterview(AtsInterview.builder()
                     .createdAt(OffsetDateTime.parse("2021-11-28T03:14:47.774Z"))
                     .endAt(OffsetDateTime.parse("2021-12-08T06:33:19.583Z"))
-                    .id("d52c2892-06f7-45f3-b162-356262609fd3")
+                    .id("76639f90-a6b0-49c3-90e3-9d41e52c76b3")
                     .location("26596 Halle Trafficway")
                     .meetingUrl("https://immaculate-foodstuffs.biz")
                     .metadata(List.of())
                     .startAt(OffsetDateTime.parse("2021-12-08T06:03:19.583Z"))
                     .status(AtsInterviewStatus.SCHEDULED)
-                    .updatedAt(OffsetDateTime.parse("2023-09-23T16:39:56.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-09-24T01:56:07.550Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

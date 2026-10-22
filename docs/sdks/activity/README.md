@@ -21,7 +21,7 @@
 
 ## createAtsActivity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -52,14 +52,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("3c14a299-3547-4e83-b99a-b57dc66403c4")
+                    .id("13c7fb8e-07a4-4aeb-8fb5-9bb5a32c16bd")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("f3e491bf-7b0b-4cbe-957e-7eef210c4b8b")
+                            .id("2b8b2e85-032f-4171-b289-b798e0ad711b")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -67,7 +67,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.298Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.676Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -101,7 +101,7 @@ public class Application {
 
 ## createLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -131,15 +131,15 @@ public class Application {
         CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.018Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.925Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("3ba61ca7-c020-4916-bb67-5f5d3536307d")
+                    .id("8bface63-5c2b-4bb9-8f61-9768fff416d4")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.300Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.325Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.757Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.250Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -173,7 +173,7 @@ public class Application {
 
 ## getAtsActivity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -231,7 +231,7 @@ public class Application {
 
 ## getClubsActivity
 
-Retrieve an activity
+Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ public class Application {
 
 ## getLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ public class Application {
 
 ## listAtsActivities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ public class Application {
 
 ## listClubsActivities
 
-List all activities
+Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -461,7 +461,7 @@ public class Application {
 
 ## listLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -518,7 +518,7 @@ public class Application {
 
 ## patchAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -549,14 +549,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("e8a70891-5a59-4cf0-8ba1-c6b7bc5e559f")
+                    .id("8c691a79-7db2-41cc-812a-17ca9f45c35c")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("7ebcf8cb-68d6-4497-876f-9749dcd46be6")
+                            .id("60bb0e99-8b26-4f29-98b2-86a60f79b119")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -564,7 +564,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.698Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -599,7 +599,7 @@ public class Application {
 
 ## patchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -629,15 +629,15 @@ public class Application {
         PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.024Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.932Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("ba944cbb-c06e-4d58-a007-5bc0c48a85f9")
+                    .id("eddac8ec-59eb-4920-afbd-a7314c96d53d")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.301Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.328Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.253Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -672,7 +672,7 @@ public class Application {
 
 ## removeAtsActivity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -728,7 +728,7 @@ public class Application {
 
 ## removeLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -784,7 +784,7 @@ public class Application {
 
 ## updateAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -815,14 +815,14 @@ public class Application {
                 .atsActivity(AtsActivity.builder()
                     .createdAt(OffsetDateTime.parse("2022-08-07T03:16:43.865Z"))
                     .description("Sapiente.")
-                    .id("e8a70891-5a59-4cf0-8ba1-c6b7bc5e559f")
+                    .id("8c691a79-7db2-41cc-812a-17ca9f45c35c")
                     .isPrivate(false)
                     .metadata(List.of(
                         AtsMetadata.builder()
                             .extraData(AtsMetadataExtraData.of(Map.ofEntries(
                             )))
                             .format(AtsMetadataFormat.TEXT)
-                            .id("7ebcf8cb-68d6-4497-876f-9749dcd46be6")
+                            .id("60bb0e99-8b26-4f29-98b2-86a60f79b119")
                             .namespace("activity")
                             .slug("cimentarius")
                             .value(AtsMetadataValue.of("Reprehenderit verto."))
@@ -830,7 +830,7 @@ public class Application {
                     .subType("TASK")
                     .title("Venio blandior aureus.")
                     .type(AtsActivityType.TASK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-04T06:40:00.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-05T04:21:43.698Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -865,7 +865,7 @@ public class Application {
 
 ## updateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -895,15 +895,15 @@ public class Application {
         UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
                 .lmsActivity(LmsActivity.builder()
                     .assignedGrade("summopere")
-                    .completedAt(OffsetDateTime.parse("2023-12-05T23:41:44.024Z"))
+                    .completedAt(OffsetDateTime.parse("2023-12-06T12:42:13.932Z"))
                     .createdAt(OffsetDateTime.parse("2020-10-17T01:25:21.745Z"))
                     .durationMinutes(55d)
-                    .id("ba944cbb-c06e-4d58-a007-5bc0c48a85f9")
+                    .id("eddac8ec-59eb-4920-afbd-a7314c96d53d")
                     .isCompleted(true)
                     .metadata(List.of())
                     .progressPercentage(100d)
-                    .startedAt(OffsetDateTime.parse("2021-04-25T04:23:43.301Z"))
-                    .updatedAt(OffsetDateTime.parse("2022-01-30T23:41:47.328Z"))
+                    .startedAt(OffsetDateTime.parse("2021-04-25T06:33:19.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-31T05:02:49.253Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -15,7 +15,7 @@
 
 ## createComputeTemplate
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -49,17 +49,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("7ce5c3c0-abec-4d63-b1da-2186e4154868")
+                    .id("1656b998-385f-4805-862b-9c4b65d020c5")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.233Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.684Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.866Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.895Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## getComputeTemplate
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ public class Application {
 
 ## getSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ public class Application {
 
 ## listComputeTemplates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -266,7 +266,7 @@ public class Application {
 
 ## listSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ public class Application {
 
 ## patchComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -357,17 +357,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("5c2a48c7-42f9-4994-ab9d-f488a549f8ba")
+                    .id("f41184e2-c111-4e40-9ff0-b1de45c66c52")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.252Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.704Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.877Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.908Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -402,7 +402,7 @@ public class Application {
 
 ## removeComputeTemplate
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -458,7 +458,7 @@ public class Application {
 
 ## updateComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -492,17 +492,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("5c2a48c7-42f9-4994-ab9d-f488a549f8ba")
+                    .id("f41184e2-c111-4e40-9ff0-b1de45c66c52")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-03-23T20:28:58.252Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-03-24T17:28:45.704Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-12T18:39:56.877Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-13T08:07:07.908Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

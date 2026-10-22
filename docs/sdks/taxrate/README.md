@@ -13,7 +13,7 @@
 
 ## createAccountingTaxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("7c47545f-5d9b-46c5-8545-85e2881f9fa1")
+                    .id("aff121fa-9169-4220-83a0-077c82eb636d")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -60,7 +60,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -94,7 +94,7 @@ public class Application {
 
 ## getAccountingTaxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ public class Application {
 
 ## listAccountingTaxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ public class Application {
 
 ## patchAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -247,7 +247,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("88211579-db4f-4526-9821-20286b551703")
+                    .id("02027e6a-ff36-4ae7-acb8-c6d5a33f1cb1")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -256,7 +256,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -291,7 +291,7 @@ public class Application {
 
 ## removeAccountingTaxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ public class Application {
 
 ## updateAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-01-04T10:37:56.894Z"))
                     .description("Exempt (0%)")
                     .effectiveRate(0d)
-                    .id("88211579-db4f-4526-9821-20286b551703")
+                    .id("02027e6a-ff36-4ae7-acb8-c6d5a33f1cb1")
                     .isActive(false)
                     .isCompound(false)
                     .metadata(List.of())
@@ -394,7 +394,7 @@ public class Application {
                     .region("KS")
                     .totalRate(0d)
                     .type(AccountingTaxrateType.SALES)
-                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:09:53.107Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-13T05:33:51.984Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

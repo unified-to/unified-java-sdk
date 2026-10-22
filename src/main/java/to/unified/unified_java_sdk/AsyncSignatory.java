@@ -57,6 +57,9 @@ public class AsyncSignatory {
     /**
      * Create a signatory
      * 
+     * <p>Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they
+     * are mapped to the provider's API. Returns the created SigningSignatory.
+     * 
      * @return The async call builder
      */
     public CreateSigningSignatoryRequestBuilder createSigningSignatory() {
@@ -65,6 +68,9 @@ public class AsyncSignatory {
 
     /**
      * Create a signatory
+     * 
+     * <p>Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they
+     * are mapped to the provider's API. Returns the created SigningSignatory.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateSigningSignatoryResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncSignatory {
     /**
      * Retrieve a signatory
      * 
+     * <p>Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSigningSignatoryRequestBuilder getSigningSignatory() {
@@ -88,6 +97,9 @@ public class AsyncSignatory {
 
     /**
      * Retrieve a signatory
+     * 
+     * <p>Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSigningSignatoryResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncSignatory {
     /**
      * List all signatories
      * 
+     * <p>Returns a list of SigningSignatories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSigningSignatoriesRequestBuilder listSigningSignatories() {
@@ -111,6 +130,13 @@ public class AsyncSignatory {
 
     /**
      * List all signatories
+     * 
+     * <p>Returns a list of SigningSignatories. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSigningSignatoriesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncSignatory {
     /**
      * Update a signatory
      * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchSigningSignatoryRequestBuilder patchSigningSignatory() {
@@ -134,6 +163,9 @@ public class AsyncSignatory {
 
     /**
      * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchSigningSignatoryResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncSignatory {
     /**
      * Remove a signatory
      * 
+     * <p>Deletes the SigningSignatory identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveSigningSignatoryRequestBuilder removeSigningSignatory() {
@@ -157,6 +191,8 @@ public class AsyncSignatory {
 
     /**
      * Remove a signatory
+     * 
+     * <p>Deletes the SigningSignatory identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveSigningSignatoryResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncSignatory {
     /**
      * Update a signatory
      * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateSigningSignatoryRequestBuilder updateSigningSignatory() {
@@ -180,6 +219,9 @@ public class AsyncSignatory {
 
     /**
      * Update a signatory
+     * 
+     * <p>Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateSigningSignatoryResponse>} - The async response

@@ -88,7 +88,9 @@ public class PropertyMessagingEventMessage {
     @JsonProperty("mentioned_members")
     private List<MessagingMember> mentionedMembers;
 
-
+    /**
+     * The message body as plain text
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     private String message;
@@ -281,6 +283,9 @@ public class PropertyMessagingEventMessage {
         return Optional.ofNullable(this.mentionedMembers);
     }
 
+    /**
+     * The message body as plain text
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -432,6 +437,9 @@ public class PropertyMessagingEventMessage {
     }
 
 
+    /**
+     * The message body as plain text
+     */
     public PropertyMessagingEventMessage withMessage(@Nullable String message) {
         this.message = message;
         return this;
@@ -720,6 +728,9 @@ public class PropertyMessagingEventMessage {
             return this;
         }
 
+        /**
+         * The message body as plain text
+         */
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;

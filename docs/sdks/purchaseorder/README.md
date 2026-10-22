@@ -13,7 +13,7 @@
 
 ## createAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -54,7 +54,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("b0e4088e-4da2-43fc-a71e-0d10378758ba")
+                    .id("6c281087-fb53-4446-a303-7198d131dfd2")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -68,7 +68,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.551Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.934Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -102,7 +102,7 @@ public class Application {
 
 ## getAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ public class Application {
 
 ## listAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -217,7 +217,7 @@ public class Application {
 
 ## patchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("9707c87d-b16c-4734-83cf-ce7be5880368")
+                    .id("23260f1f-6417-4b6b-9e91-8abb05d470fc")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -272,7 +272,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.556Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.939Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -307,7 +307,7 @@ public class Application {
 
 ## removeAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ public class Application {
 
 ## updateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ public class Application {
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
                     .currency("EUR")
-                    .id("9707c87d-b16c-4734-83cf-ce7be5880368")
+                    .id("23260f1f-6417-4b6b-9e91-8abb05d470fc")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .postedAt(OffsetDateTime.parse("2020-12-12T07:17:47.021Z"))
@@ -418,7 +418,7 @@ public class Application {
                         .build())
                     .status(AccountingPurchaseorderStatus.SUBMITTED)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2021-08-11T06:00:37.556Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-08-11T08:49:53.939Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

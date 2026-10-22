@@ -85,6 +85,9 @@ public class AsyncPerformance {
     /**
      * Create a feedback
      * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     * 
      * @return The async call builder
      */
     public CreatePerformanceFeedbackRequestBuilder createPerformanceFeedback() {
@@ -93,6 +96,9 @@ public class AsyncPerformance {
 
     /**
      * Create a feedback
+     * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePerformanceFeedbackResponse>} - The async response
@@ -108,6 +114,9 @@ public class AsyncPerformance {
     /**
      * Create a goal
      * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
+     * 
      * @return The async call builder
      */
     public CreatePerformanceGoalRequestBuilder createPerformanceGoal() {
@@ -116,6 +125,9 @@ public class AsyncPerformance {
 
     /**
      * Create a goal
+     * 
+     * <p>Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are
+     * mapped to the provider's API. Returns the created PerformanceGoal.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePerformanceGoalResponse>} - The async response
@@ -131,6 +143,9 @@ public class AsyncPerformance {
     /**
      * Retrieve a cycle
      * 
+     * <p>Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceCycleRequestBuilder getPerformanceCycle() {
@@ -139,6 +154,9 @@ public class AsyncPerformance {
 
     /**
      * Retrieve a cycle
+     * 
+     * <p>Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceCycleResponse>} - The async response
@@ -154,6 +172,9 @@ public class AsyncPerformance {
     /**
      * Retrieve a feedback
      * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceFeedbackRequestBuilder getPerformanceFeedback() {
@@ -162,6 +183,9 @@ public class AsyncPerformance {
 
     /**
      * Retrieve a feedback
+     * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceFeedbackResponse>} - The async response
@@ -177,6 +201,9 @@ public class AsyncPerformance {
     /**
      * Retrieve a goal
      * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceGoalRequestBuilder getPerformanceGoal() {
@@ -185,6 +212,9 @@ public class AsyncPerformance {
 
     /**
      * Retrieve a goal
+     * 
+     * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceGoalResponse>} - The async response
@@ -200,6 +230,9 @@ public class AsyncPerformance {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceReviewRequestBuilder getPerformanceReview() {
@@ -208,6 +241,9 @@ public class AsyncPerformance {
 
     /**
      * Retrieve a review
+     * 
+     * <p>Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceReviewResponse>} - The async response
@@ -223,6 +259,13 @@ public class AsyncPerformance {
     /**
      * List all cycles
      * 
+     * <p>Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceCyclesRequestBuilder listPerformanceCycles() {
@@ -231,6 +274,13 @@ public class AsyncPerformance {
 
     /**
      * List all cycles
+     * 
+     * <p>Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceCyclesResponse>} - The async response
@@ -246,6 +296,13 @@ public class AsyncPerformance {
     /**
      * List all feedbacks
      * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceFeedbacksRequestBuilder listPerformanceFeedbacks() {
@@ -254,6 +311,13 @@ public class AsyncPerformance {
 
     /**
      * List all feedbacks
+     * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceFeedbacksResponse>} - The async response
@@ -269,6 +333,13 @@ public class AsyncPerformance {
     /**
      * List all goals
      * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceGoalsRequestBuilder listPerformanceGoals() {
@@ -277,6 +348,13 @@ public class AsyncPerformance {
 
     /**
      * List all goals
+     * 
+     * <p>Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceGoalsResponse>} - The async response
@@ -292,6 +370,13 @@ public class AsyncPerformance {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceReviewsRequestBuilder listPerformanceReviews() {
@@ -300,6 +385,13 @@ public class AsyncPerformance {
 
     /**
      * List all reviews
+     * 
+     * <p>Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceReviewsResponse>} - The async response
@@ -315,6 +407,9 @@ public class AsyncPerformance {
     /**
      * Update a goal
      * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchPerformanceGoalRequestBuilder patchPerformanceGoal() {
@@ -323,6 +418,9 @@ public class AsyncPerformance {
 
     /**
      * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPerformanceGoalResponse>} - The async response
@@ -338,6 +436,8 @@ public class AsyncPerformance {
     /**
      * Remove a goal
      * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemovePerformanceGoalRequestBuilder removePerformanceGoal() {
@@ -346,6 +446,8 @@ public class AsyncPerformance {
 
     /**
      * Remove a goal
+     * 
+     * <p>Deletes the PerformanceGoal identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePerformanceGoalResponse>} - The async response
@@ -361,6 +463,9 @@ public class AsyncPerformance {
     /**
      * Update a goal
      * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdatePerformanceGoalRequestBuilder updatePerformanceGoal() {
@@ -369,6 +474,9 @@ public class AsyncPerformance {
 
     /**
      * Update a goal
+     * 
+     * <p>Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePerformanceGoalResponse>} - The async response

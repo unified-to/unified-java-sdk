@@ -141,6 +141,9 @@ public class AsyncCalendar {
     /**
      * Create a calendar
      * 
+     * <p>Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they
+     * are mapped to the provider's API. Returns the created CalendarCalendar.
+     * 
      * @return The async call builder
      */
     public CreateCalendarCalendarRequestBuilder createCalendarCalendar() {
@@ -149,6 +152,9 @@ public class AsyncCalendar {
 
     /**
      * Create a calendar
+     * 
+     * <p>Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they
+     * are mapped to the provider's API. Returns the created CalendarCalendar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarCalendarResponse>} - The async response
@@ -164,6 +170,9 @@ public class AsyncCalendar {
     /**
      * Create an event
      * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
+     * 
      * @return The async call builder
      */
     public CreateCalendarEventRequestBuilder createCalendarEvent() {
@@ -172,6 +181,9 @@ public class AsyncCalendar {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
@@ -187,6 +199,9 @@ public class AsyncCalendar {
     /**
      * Create a link
      * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
+     * 
      * @return The async call builder
      */
     public CreateCalendarLinkRequestBuilder createCalendarLink() {
@@ -195,6 +210,9 @@ public class AsyncCalendar {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
@@ -210,6 +228,9 @@ public class AsyncCalendar {
     /**
      * Create a webinar
      * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
+     * 
      * @return The async call builder
      */
     public CreateCalendarWebinarRequestBuilder createCalendarWebinar() {
@@ -218,6 +239,9 @@ public class AsyncCalendar {
 
     /**
      * Create a webinar
+     * 
+     * <p>Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are
+     * mapped to the provider's API. Returns the created CalendarWebinar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarWebinarResponse>} - The async response
@@ -233,6 +257,9 @@ public class AsyncCalendar {
     /**
      * Retrieve a calendar
      * 
+     * <p>Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarCalendarRequestBuilder getCalendarCalendar() {
@@ -241,6 +268,9 @@ public class AsyncCalendar {
 
     /**
      * Retrieve a calendar
+     * 
+     * <p>Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarCalendarResponse>} - The async response
@@ -256,6 +286,9 @@ public class AsyncCalendar {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarEventRequestBuilder getCalendarEvent() {
@@ -264,6 +297,9 @@ public class AsyncCalendar {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
@@ -279,6 +315,9 @@ public class AsyncCalendar {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarLinkRequestBuilder getCalendarLink() {
@@ -287,6 +326,9 @@ public class AsyncCalendar {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
@@ -302,6 +344,9 @@ public class AsyncCalendar {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarRecordingRequestBuilder getCalendarRecording() {
@@ -310,6 +355,9 @@ public class AsyncCalendar {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
@@ -325,6 +373,9 @@ public class AsyncCalendar {
     /**
      * Retrieve a webinar
      * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCalendarWebinarRequestBuilder getCalendarWebinar() {
@@ -333,6 +384,9 @@ public class AsyncCalendar {
 
     /**
      * Retrieve a webinar
+     * 
+     * <p>Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarWebinarResponse>} - The async response
@@ -348,6 +402,13 @@ public class AsyncCalendar {
     /**
      * List all busies
      * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarBusiesRequestBuilder listCalendarBusies() {
@@ -356,6 +417,13 @@ public class AsyncCalendar {
 
     /**
      * List all busies
+     * 
+     * <p>Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarBusiesResponse>} - The async response
@@ -371,6 +439,13 @@ public class AsyncCalendar {
     /**
      * List all calendars
      * 
+     * <p>Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarCalendarsRequestBuilder listCalendarCalendars() {
@@ -379,6 +454,13 @@ public class AsyncCalendar {
 
     /**
      * List all calendars
+     * 
+     * <p>Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarCalendarsResponse>} - The async response
@@ -394,6 +476,13 @@ public class AsyncCalendar {
     /**
      * List all events
      * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarEventsRequestBuilder listCalendarEvents() {
@@ -402,6 +491,13 @@ public class AsyncCalendar {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
@@ -417,6 +513,13 @@ public class AsyncCalendar {
     /**
      * List all links
      * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarLinksRequestBuilder listCalendarLinks() {
@@ -425,6 +528,13 @@ public class AsyncCalendar {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
@@ -440,6 +550,13 @@ public class AsyncCalendar {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
@@ -448,6 +565,13 @@ public class AsyncCalendar {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
@@ -463,6 +587,13 @@ public class AsyncCalendar {
     /**
      * List all webinars
      * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCalendarWebinarsRequestBuilder listCalendarWebinars() {
@@ -471,6 +602,13 @@ public class AsyncCalendar {
 
     /**
      * List all webinars
+     * 
+     * <p>Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarWebinarsResponse>} - The async response
@@ -486,6 +624,9 @@ public class AsyncCalendar {
     /**
      * Update a calendar
      * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCalendarCalendarRequestBuilder patchCalendarCalendar() {
@@ -494,6 +635,9 @@ public class AsyncCalendar {
 
     /**
      * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarCalendarResponse>} - The async response
@@ -509,6 +653,9 @@ public class AsyncCalendar {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCalendarEventRequestBuilder patchCalendarEvent() {
@@ -517,6 +664,9 @@ public class AsyncCalendar {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
@@ -532,6 +682,9 @@ public class AsyncCalendar {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCalendarLinkRequestBuilder patchCalendarLink() {
@@ -540,6 +693,9 @@ public class AsyncCalendar {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
@@ -555,6 +711,9 @@ public class AsyncCalendar {
     /**
      * Update a webinar
      * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCalendarWebinarRequestBuilder patchCalendarWebinar() {
@@ -563,6 +722,9 @@ public class AsyncCalendar {
 
     /**
      * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarWebinarResponse>} - The async response
@@ -578,6 +740,8 @@ public class AsyncCalendar {
     /**
      * Remove a calendar
      * 
+     * <p>Deletes the CalendarCalendar identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCalendarCalendarRequestBuilder removeCalendarCalendar() {
@@ -586,6 +750,8 @@ public class AsyncCalendar {
 
     /**
      * Remove a calendar
+     * 
+     * <p>Deletes the CalendarCalendar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarCalendarResponse>} - The async response
@@ -601,6 +767,8 @@ public class AsyncCalendar {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CalendarEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCalendarEventRequestBuilder removeCalendarEvent() {
@@ -609,6 +777,8 @@ public class AsyncCalendar {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CalendarEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
@@ -624,6 +794,8 @@ public class AsyncCalendar {
     /**
      * Remove a link
      * 
+     * <p>Deletes the CalendarLink identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCalendarLinkRequestBuilder removeCalendarLink() {
@@ -632,6 +804,8 @@ public class AsyncCalendar {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the CalendarLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
@@ -647,6 +821,8 @@ public class AsyncCalendar {
     /**
      * Remove a webinar
      * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCalendarWebinarRequestBuilder removeCalendarWebinar() {
@@ -655,6 +831,8 @@ public class AsyncCalendar {
 
     /**
      * Remove a webinar
+     * 
+     * <p>Deletes the CalendarWebinar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarWebinarResponse>} - The async response
@@ -670,6 +848,9 @@ public class AsyncCalendar {
     /**
      * Update a calendar
      * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCalendarCalendarRequestBuilder updateCalendarCalendar() {
@@ -678,6 +859,9 @@ public class AsyncCalendar {
 
     /**
      * Update a calendar
+     * 
+     * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarCalendarResponse>} - The async response
@@ -693,6 +877,9 @@ public class AsyncCalendar {
     /**
      * Update an event
      * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCalendarEventRequestBuilder updateCalendarEvent() {
@@ -701,6 +888,9 @@ public class AsyncCalendar {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
@@ -716,6 +906,9 @@ public class AsyncCalendar {
     /**
      * Update a link
      * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCalendarLinkRequestBuilder updateCalendarLink() {
@@ -724,6 +917,9 @@ public class AsyncCalendar {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
@@ -739,6 +935,9 @@ public class AsyncCalendar {
     /**
      * Update a webinar
      * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCalendarWebinarRequestBuilder updateCalendarWebinar() {
@@ -747,6 +946,9 @@ public class AsyncCalendar {
 
     /**
      * Update a webinar
+     * 
+     * <p>Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarWebinarResponse>} - The async response

@@ -17,7 +17,12 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-
+/**
+ * PropertyDatastoreQueryQuery
+ * 
+ * <p>What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset,
+ * aggregate)
+ */
 public class PropertyDatastoreQueryQuery {
 
     @JsonInclude(Include.NON_ABSENT)

@@ -107,6 +107,9 @@ public class Company {
     /**
      * Create a company
      * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
+     * 
      * @return The call builder
      */
     public CreateAtsCompanyRequestBuilder createAtsCompany() {
@@ -115,6 +118,9 @@ public class Company {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created AtsCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +135,9 @@ public class Company {
     /**
      * Create a company
      * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
+     * 
      * @return The call builder
      */
     public CreateCrmCompanyRequestBuilder createCrmCompany() {
@@ -137,6 +146,9 @@ public class Company {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to
+     * the provider's API. Returns the created CrmCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +163,9 @@ public class Company {
     /**
      * Create a company
      * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
+     * 
      * @return The call builder
      */
     public CreateHrisCompanyRequestBuilder createHrisCompany() {
@@ -159,6 +174,9 @@ public class Company {
 
     /**
      * Create a company
+     * 
+     * <p>Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped
+     * to the provider's API. Returns the created HrisCompany.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +191,9 @@ public class Company {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsCompanyRequestBuilder getAtsCompany() {
@@ -181,6 +202,9 @@ public class Company {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +219,9 @@ public class Company {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCrmCompanyRequestBuilder getCrmCompany() {
@@ -203,6 +230,9 @@ public class Company {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +247,9 @@ public class Company {
     /**
      * Retrieve a company
      * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetHrisCompanyRequestBuilder getHrisCompany() {
@@ -225,6 +258,9 @@ public class Company {
 
     /**
      * Retrieve a company
+     * 
+     * <p>Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -239,6 +275,13 @@ public class Company {
     /**
      * List all companies
      * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsCompaniesRequestBuilder listAtsCompanies() {
@@ -247,6 +290,13 @@ public class Company {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -261,6 +311,13 @@ public class Company {
     /**
      * List all companies
      * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCrmCompaniesRequestBuilder listCrmCompanies() {
@@ -269,6 +326,13 @@ public class Company {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -305,6 +369,13 @@ public class Company {
     /**
      * List all companies
      * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListHrisCompaniesRequestBuilder listHrisCompanies() {
@@ -313,6 +384,13 @@ public class Company {
 
     /**
      * List all companies
+     * 
+     * <p>Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -327,6 +405,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAtsCompanyRequestBuilder patchAtsCompany() {
@@ -335,6 +416,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -349,6 +433,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchCrmCompanyRequestBuilder patchCrmCompany() {
@@ -357,6 +444,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -371,6 +461,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchHrisCompanyRequestBuilder patchHrisCompany() {
@@ -379,6 +472,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -393,6 +489,8 @@ public class Company {
     /**
      * Remove a company
      * 
+     * <p>Deletes the AtsCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsCompanyRequestBuilder removeAtsCompany() {
@@ -401,6 +499,8 @@ public class Company {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the AtsCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -415,6 +515,8 @@ public class Company {
     /**
      * Remove a company
      * 
+     * <p>Deletes the CrmCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveCrmCompanyRequestBuilder removeCrmCompany() {
@@ -423,6 +525,8 @@ public class Company {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the CrmCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -437,6 +541,8 @@ public class Company {
     /**
      * Remove a company
      * 
+     * <p>Deletes the HrisCompany identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveHrisCompanyRequestBuilder removeHrisCompany() {
@@ -445,6 +551,8 @@ public class Company {
 
     /**
      * Remove a company
+     * 
+     * <p>Deletes the HrisCompany identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -459,6 +567,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsCompanyRequestBuilder updateAtsCompany() {
@@ -467,6 +578,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -481,6 +595,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateCrmCompanyRequestBuilder updateCrmCompany() {
@@ -489,6 +606,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -503,6 +623,9 @@ public class Company {
     /**
      * Update a company
      * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateHrisCompanyRequestBuilder updateHrisCompany() {
@@ -511,6 +634,9 @@ public class Company {
 
     /**
      * Update a company
+     * 
+     * <p>Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -10,7 +10,7 @@
 
 ## createPerformanceFeedback
 
-Create a feedback
+Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ public class Application {
                 .performanceFeedback(PerformanceFeedback.builder()
                     .userId("<id>")
                     .createdAt(OffsetDateTime.parse("2023-04-11T16:21:53.862Z"))
-                    .id("d6fad29c-e9b5-4b0e-93ca-143f7beef03b")
+                    .id("379cb0fe-946d-469c-bb59-5c70ace9ab82")
                     .isVisible(true)
                     .message("Tabernus corpus voluptate aestus.")
                     .metadata(List.of())
@@ -48,7 +48,7 @@ public class Application {
                         "well-to-do",
                         "hexagon"))
                     .type(PerformanceFeedbackType.PRAISE)
-                    .updatedAt(OffsetDateTime.parse("2025-09-04T02:29:25.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-04T19:27:20.147Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -82,7 +82,7 @@ public class Application {
 
 ## getPerformanceFeedback
 
-Retrieve a feedback
+Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ public class Application {
 
 ## listPerformanceFeedbacks
 
-List all feedbacks
+Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

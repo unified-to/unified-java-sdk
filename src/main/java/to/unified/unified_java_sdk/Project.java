@@ -79,6 +79,9 @@ public class Project {
     /**
      * Create a project
      * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
+     * 
      * @return The call builder
      */
     public CreateAccountingProjectRequestBuilder createAccountingProject() {
@@ -87,6 +90,9 @@ public class Project {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -101,6 +107,9 @@ public class Project {
     /**
      * Create a project
      * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
+     * 
      * @return The call builder
      */
     public CreateTaskProjectRequestBuilder createTaskProject() {
@@ -109,6 +118,9 @@ public class Project {
 
     /**
      * Create a project
+     * 
+     * <p>Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped
+     * to the provider's API. Returns the created TaskProject.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -123,6 +135,9 @@ public class Project {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingProjectRequestBuilder getAccountingProject() {
@@ -131,6 +146,9 @@ public class Project {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -145,6 +163,9 @@ public class Project {
     /**
      * Retrieve a project
      * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetTaskProjectRequestBuilder getTaskProject() {
@@ -153,6 +174,9 @@ public class Project {
 
     /**
      * Retrieve a project
+     * 
+     * <p>Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -167,6 +191,13 @@ public class Project {
     /**
      * List all projects
      * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingProjectsRequestBuilder listAccountingProjects() {
@@ -175,6 +206,13 @@ public class Project {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of AccountingProjects. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -189,6 +227,13 @@ public class Project {
     /**
      * List all projects
      * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListTaskProjectsRequestBuilder listTaskProjects() {
@@ -197,6 +242,13 @@ public class Project {
 
     /**
      * List all projects
+     * 
+     * <p>Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -211,6 +263,9 @@ public class Project {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingProjectRequestBuilder patchAccountingProject() {
@@ -219,6 +274,9 @@ public class Project {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -233,6 +291,9 @@ public class Project {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchTaskProjectRequestBuilder patchTaskProject() {
@@ -241,6 +302,9 @@ public class Project {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -255,6 +319,8 @@ public class Project {
     /**
      * Remove a project
      * 
+     * <p>Deletes the AccountingProject identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingProjectRequestBuilder removeAccountingProject() {
@@ -263,6 +329,8 @@ public class Project {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the AccountingProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -277,6 +345,8 @@ public class Project {
     /**
      * Remove a project
      * 
+     * <p>Deletes the TaskProject identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveTaskProjectRequestBuilder removeTaskProject() {
@@ -285,6 +355,8 @@ public class Project {
 
     /**
      * Remove a project
+     * 
+     * <p>Deletes the TaskProject identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -299,6 +371,9 @@ public class Project {
     /**
      * Update a project
      * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingProjectRequestBuilder updateAccountingProject() {
@@ -307,6 +382,9 @@ public class Project {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -321,6 +399,9 @@ public class Project {
     /**
      * Update a project
      * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateTaskProjectRequestBuilder updateTaskProject() {
@@ -329,6 +410,9 @@ public class Project {
 
     /**
      * Update a project
+     * 
+     * <p>Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

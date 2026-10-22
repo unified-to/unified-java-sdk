@@ -57,6 +57,9 @@ public class AsyncDomain {
     /**
      * Create a domain
      * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
      * @return The async call builder
      */
     public CreateComputeDomainRequestBuilder createComputeDomain() {
@@ -65,6 +68,9 @@ public class AsyncDomain {
 
     /**
      * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncDomain {
     /**
      * Retrieve a domain
      * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeDomainRequestBuilder getComputeDomain() {
@@ -88,6 +97,9 @@ public class AsyncDomain {
 
     /**
      * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncDomain {
     /**
      * List all domains
      * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeDomainsRequestBuilder listComputeDomains() {
@@ -111,6 +130,13 @@ public class AsyncDomain {
 
     /**
      * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncDomain {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeDomainRequestBuilder patchComputeDomain() {
@@ -134,6 +163,9 @@ public class AsyncDomain {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncDomain {
     /**
      * Remove a domain
      * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeDomainRequestBuilder removeComputeDomain() {
@@ -157,6 +191,8 @@ public class AsyncDomain {
 
     /**
      * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncDomain {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeDomainRequestBuilder updateComputeDomain() {
@@ -180,6 +219,9 @@ public class AsyncDomain {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response

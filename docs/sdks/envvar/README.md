@@ -13,7 +13,7 @@
 
 ## createComputeEnvvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -44,11 +44,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("8b556c5b-ed87-4ee3-a095-861966c824b6")
+                    .id("9f215b1e-dcd1-494e-a391-127acb401606")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.878Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -82,7 +82,7 @@ public class Application {
 
 ## getComputeEnvvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ public class Application {
 
 ## listComputeEnvvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ public class Application {
 
 ## patchComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -228,11 +228,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("dc1fa18c-0bdb-4086-a8a4-402ec1bc5281")
+                    .id("cb5b3468-593d-4466-8ebf-b30914cb96ac")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.064Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.884Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -267,7 +267,7 @@ public class Application {
 
 ## removeComputeEnvvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ public class Application {
 
 ## updateComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -354,11 +354,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("dc1fa18c-0bdb-4086-a8a4-402ec1bc5281")
+                    .id("cb5b3468-593d-4466-8ebf-b30914cb96ac")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-03T14:23:38.064Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-04T09:04:40.884Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

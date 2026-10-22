@@ -13,7 +13,7 @@
 
 ## createSigningSignatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -43,12 +43,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("93a49948-6566-45d2-aca8-ab5e9a7cd4cf")
+                    .id("224b519d-e885-4ca1-a941-c55fa2f0be36")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.228Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.927Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -82,7 +82,7 @@ public class Application {
 
 ## getSigningSignatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ public class Application {
 
 ## listSigningSignatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ public class Application {
 
 ## patchSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -227,12 +227,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("e62a43c3-471f-4954-b320-665c820ce324")
+                    .id("9ee6a5e8-e6e1-47a4-ad6e-228134a26d55")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.935Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -267,7 +267,7 @@ public class Application {
 
 ## removeSigningSignatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ public class Application {
 
 ## updateSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -353,12 +353,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("e62a43c3-471f-4954-b320-665c820ce324")
+                    .id("9ee6a5e8-e6e1-47a4-ad6e-228134a26d55")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.935Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

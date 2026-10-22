@@ -13,7 +13,7 @@
 
 ## createLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("28e3e7d8-f7f5-499c-8a7d-c586139a050c")
+                    .id("e3e02a38-e142-453f-9488-c5fa798319a2")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -101,7 +101,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.287Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.727Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -113,7 +113,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.126Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.984Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -147,7 +147,7 @@ public class Application {
 
 ## getLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ public class Application {
 
 ## listLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ public class Application {
 
 ## patchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("45a9d1f0-6bad-4565-b5d8-ecea6210d591")
+                    .id("8b30b16f-fc50-484d-a664-d7139176c42e")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -350,7 +350,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.300Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.735Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -362,7 +362,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.992Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -397,7 +397,7 @@ public class Application {
 
 ## removeLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ public class Application {
 
 ## updateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -487,7 +487,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("45a9d1f0-6bad-4565-b5d8-ecea6210d591")
+                    .id("8b30b16f-fc50-484d-a664-d7139176c42e")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -541,7 +541,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-03T06:19:12.300Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-03T14:04:13.735Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -553,7 +553,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-04T04:35:33.140Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-04T12:41:42.992Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

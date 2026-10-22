@@ -57,6 +57,9 @@ public class AsyncDatabase {
     /**
      * Create a database
      * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
@@ -65,6 +68,9 @@ public class AsyncDatabase {
 
     /**
      * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreDatabaseResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncDatabase {
     /**
      * Retrieve a database
      * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
@@ -88,6 +97,9 @@ public class AsyncDatabase {
 
     /**
      * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetDatastoreDatabaseResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncDatabase {
     /**
      * List all databases
      * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
@@ -111,6 +130,13 @@ public class AsyncDatabase {
 
     /**
      * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListDatastoreDatabasesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncDatabase {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
@@ -134,6 +163,9 @@ public class AsyncDatabase {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchDatastoreDatabaseResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncDatabase {
     /**
      * Remove a database
      * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
@@ -157,6 +191,8 @@ public class AsyncDatabase {
 
     /**
      * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveDatastoreDatabaseResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncDatabase {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
@@ -180,6 +219,9 @@ public class AsyncDatabase {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateDatastoreDatabaseResponse>} - The async response

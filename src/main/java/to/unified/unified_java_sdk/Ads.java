@@ -207,6 +207,9 @@ public class Ads {
     /**
      * Create an ad
      * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
+     * 
      * @return The call builder
      */
     public CreateAdsAdRequestBuilder createAdsAd() {
@@ -215,6 +218,9 @@ public class Ads {
 
     /**
      * Create an ad
+     * 
+     * <p>Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAd.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -229,6 +235,9 @@ public class Ads {
     /**
      * Create an asset
      * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
+     * 
      * @return The call builder
      */
     public CreateAdsAssetRequestBuilder createAdsAsset() {
@@ -237,6 +246,9 @@ public class Ads {
 
     /**
      * Create an asset
+     * 
+     * <p>Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsAsset.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -251,6 +263,9 @@ public class Ads {
     /**
      * Create a campaign
      * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
      * @return The call builder
      */
     public CreateAdsCampaignRequestBuilder createAdsCampaign() {
@@ -259,6 +274,9 @@ public class Ads {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -273,6 +291,9 @@ public class Ads {
     /**
      * Create a creative
      * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
+     * 
      * @return The call builder
      */
     public CreateAdsCreativeRequestBuilder createAdsCreative() {
@@ -281,6 +302,9 @@ public class Ads {
 
     /**
      * Create a creative
+     * 
+     * <p>Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCreative.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -295,6 +319,9 @@ public class Ads {
     /**
      * Create a group
      * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
      * @return The call builder
      */
     public CreateAdsGroupRequestBuilder createAdsGroup() {
@@ -303,6 +330,9 @@ public class Ads {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -317,6 +347,9 @@ public class Ads {
     /**
      * Create an insertionorder
      * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
+     * 
      * @return The call builder
      */
     public CreateAdsInsertionorderRequestBuilder createAdsInsertionorder() {
@@ -325,6 +358,9 @@ public class Ads {
 
     /**
      * Create an insertionorder
+     * 
+     * <p>Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they
+     * are mapped to the provider's API. Returns the created AdsInsertionorder.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -339,6 +375,9 @@ public class Ads {
     /**
      * Create an organization
      * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
+     * 
      * @return The call builder
      */
     public CreateAdsOrganizationRequestBuilder createAdsOrganization() {
@@ -347,6 +386,9 @@ public class Ads {
 
     /**
      * Create an organization
+     * 
+     * <p>Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are
+     * mapped to the provider's API. Returns the created AdsOrganization.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -361,6 +403,9 @@ public class Ads {
     /**
      * Retrieve an ad
      * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsAdRequestBuilder getAdsAd() {
@@ -369,6 +414,9 @@ public class Ads {
 
     /**
      * Retrieve an ad
+     * 
+     * <p>Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -383,6 +431,9 @@ public class Ads {
     /**
      * Retrieve an asset
      * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsAssetRequestBuilder getAdsAsset() {
@@ -391,6 +442,9 @@ public class Ads {
 
     /**
      * Retrieve an asset
+     * 
+     * <p>Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -405,6 +459,9 @@ public class Ads {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsCampaignRequestBuilder getAdsCampaign() {
@@ -413,6 +470,9 @@ public class Ads {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -427,6 +487,9 @@ public class Ads {
     /**
      * Retrieve a creative
      * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsCreativeRequestBuilder getAdsCreative() {
@@ -435,6 +498,9 @@ public class Ads {
 
     /**
      * Retrieve a creative
+     * 
+     * <p>Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -449,6 +515,9 @@ public class Ads {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsGroupRequestBuilder getAdsGroup() {
@@ -457,6 +526,9 @@ public class Ads {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -471,6 +543,9 @@ public class Ads {
     /**
      * Retrieve an insertionorder
      * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsInsertionorderRequestBuilder getAdsInsertionorder() {
@@ -479,6 +554,9 @@ public class Ads {
 
     /**
      * Retrieve an insertionorder
+     * 
+     * <p>Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -493,6 +571,9 @@ public class Ads {
     /**
      * Retrieve an organization
      * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsOrganizationRequestBuilder getAdsOrganization() {
@@ -501,6 +582,9 @@ public class Ads {
 
     /**
      * Retrieve an organization
+     * 
+     * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -515,6 +599,9 @@ public class Ads {
     /**
      * Retrieve a promoted
      * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsPromotedRequestBuilder getAdsPromoted() {
@@ -523,6 +610,9 @@ public class Ads {
 
     /**
      * Retrieve a promoted
+     * 
+     * <p>Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -537,6 +627,9 @@ public class Ads {
     /**
      * Retrieve a target
      * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAdsTargetRequestBuilder getAdsTarget() {
@@ -545,6 +638,9 @@ public class Ads {
 
     /**
      * Retrieve a target
+     * 
+     * <p>Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -559,6 +655,13 @@ public class Ads {
     /**
      * List all ads
      * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsAdsRequestBuilder listAdsAds() {
@@ -567,6 +670,13 @@ public class Ads {
 
     /**
      * List all ads
+     * 
+     * <p>Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -581,6 +691,13 @@ public class Ads {
     /**
      * List all assets
      * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsAssetsRequestBuilder listAdsAssets() {
@@ -589,6 +706,13 @@ public class Ads {
 
     /**
      * List all assets
+     * 
+     * <p>Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -603,6 +727,13 @@ public class Ads {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
@@ -611,6 +742,13 @@ public class Ads {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -625,6 +763,13 @@ public class Ads {
     /**
      * List all creatives
      * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsCreativesRequestBuilder listAdsCreatives() {
@@ -633,6 +778,13 @@ public class Ads {
 
     /**
      * List all creatives
+     * 
+     * <p>Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -647,6 +799,13 @@ public class Ads {
     /**
      * List all groups
      * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsGroupsRequestBuilder listAdsGroups() {
@@ -655,6 +814,13 @@ public class Ads {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -669,6 +835,13 @@ public class Ads {
     /**
      * List all insertionorders
      * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsInsertionordersRequestBuilder listAdsInsertionorders() {
@@ -677,6 +850,13 @@ public class Ads {
 
     /**
      * List all insertionorders
+     * 
+     * <p>Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -691,6 +871,13 @@ public class Ads {
     /**
      * List all organizations
      * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsOrganizationsRequestBuilder listAdsOrganizations() {
@@ -699,6 +886,13 @@ public class Ads {
 
     /**
      * List all organizations
+     * 
+     * <p>Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -713,6 +907,13 @@ public class Ads {
     /**
      * List all promoteds
      * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
@@ -721,6 +922,13 @@ public class Ads {
 
     /**
      * List all promoteds
+     * 
+     * <p>Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -735,6 +943,13 @@ public class Ads {
     /**
      * List all reports
      * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsReportsRequestBuilder listAdsReports() {
@@ -743,6 +958,13 @@ public class Ads {
 
     /**
      * List all reports
+     * 
+     * <p>Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -757,6 +979,13 @@ public class Ads {
     /**
      * List all targets
      * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAdsTargetsRequestBuilder listAdsTargets() {
@@ -765,6 +994,13 @@ public class Ads {
 
     /**
      * List all targets
+     * 
+     * <p>Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -779,6 +1015,9 @@ public class Ads {
     /**
      * Update an ad
      * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public PatchAdsAdRequestBuilder patchAdsAd() {
@@ -787,6 +1026,9 @@ public class Ads {
 
     /**
      * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -801,6 +1043,9 @@ public class Ads {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
@@ -809,6 +1054,9 @@ public class Ads {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -823,6 +1071,9 @@ public class Ads {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAdsCreativeRequestBuilder patchAdsCreative() {
@@ -831,6 +1082,9 @@ public class Ads {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -845,6 +1099,9 @@ public class Ads {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAdsGroupRequestBuilder patchAdsGroup() {
@@ -853,6 +1110,9 @@ public class Ads {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -867,6 +1127,9 @@ public class Ads {
     /**
      * Update an insertionorder
      * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAdsInsertionorderRequestBuilder patchAdsInsertionorder() {
@@ -875,6 +1138,9 @@ public class Ads {
 
     /**
      * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -889,6 +1155,9 @@ public class Ads {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchAdsOrganizationRequestBuilder patchAdsOrganization() {
@@ -897,6 +1166,9 @@ public class Ads {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -911,6 +1183,8 @@ public class Ads {
     /**
      * Remove an ad
      * 
+     * <p>Deletes the AdsAd identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsAdRequestBuilder removeAdsAd() {
@@ -919,6 +1193,8 @@ public class Ads {
 
     /**
      * Remove an ad
+     * 
+     * <p>Deletes the AdsAd identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -933,6 +1209,8 @@ public class Ads {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
@@ -941,6 +1219,8 @@ public class Ads {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -955,6 +1235,8 @@ public class Ads {
     /**
      * Remove a creative
      * 
+     * <p>Deletes the AdsCreative identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsCreativeRequestBuilder removeAdsCreative() {
@@ -963,6 +1245,8 @@ public class Ads {
 
     /**
      * Remove a creative
+     * 
+     * <p>Deletes the AdsCreative identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -977,6 +1261,8 @@ public class Ads {
     /**
      * Remove a group
      * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsGroupRequestBuilder removeAdsGroup() {
@@ -985,6 +1271,8 @@ public class Ads {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -999,6 +1287,8 @@ public class Ads {
     /**
      * Remove an insertionorder
      * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsInsertionorderRequestBuilder removeAdsInsertionorder() {
@@ -1007,6 +1297,8 @@ public class Ads {
 
     /**
      * Remove an insertionorder
+     * 
+     * <p>Deletes the AdsInsertionorder identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1021,6 +1313,8 @@ public class Ads {
     /**
      * Remove an organization
      * 
+     * <p>Deletes the AdsOrganization identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAdsOrganizationRequestBuilder removeAdsOrganization() {
@@ -1029,6 +1323,8 @@ public class Ads {
 
     /**
      * Remove an organization
+     * 
+     * <p>Deletes the AdsOrganization identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1043,6 +1339,9 @@ public class Ads {
     /**
      * Update an ad
      * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
+     * 
      * @return The call builder
      */
     public UpdateAdsAdRequestBuilder updateAdsAd() {
@@ -1051,6 +1350,9 @@ public class Ads {
 
     /**
      * Update an ad
+     * 
+     * <p>Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1065,6 +1367,9 @@ public class Ads {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
@@ -1073,6 +1378,9 @@ public class Ads {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1087,6 +1395,9 @@ public class Ads {
     /**
      * Update a creative
      * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsCreativeRequestBuilder updateAdsCreative() {
@@ -1095,6 +1406,9 @@ public class Ads {
 
     /**
      * Update a creative
+     * 
+     * <p>Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1109,6 +1423,9 @@ public class Ads {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsGroupRequestBuilder updateAdsGroup() {
@@ -1117,6 +1434,9 @@ public class Ads {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1131,6 +1451,9 @@ public class Ads {
     /**
      * Update an insertionorder
      * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsInsertionorderRequestBuilder updateAdsInsertionorder() {
@@ -1139,6 +1462,9 @@ public class Ads {
 
     /**
      * Update an insertionorder
+     * 
+     * <p>Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -1153,6 +1479,9 @@ public class Ads {
     /**
      * Update an organization
      * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAdsOrganizationRequestBuilder updateAdsOrganization() {
@@ -1161,6 +1490,9 @@ public class Ads {
 
     /**
      * Update an organization
+     * 
+     * <p>Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -89,6 +89,9 @@ public class AsyncActivity {
     /**
      * Create an activity
      * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
      * @return The async call builder
      */
     public CreateAtsActivityRequestBuilder createAtsActivity() {
@@ -97,6 +100,9 @@ public class AsyncActivity {
 
     /**
      * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
@@ -112,6 +118,9 @@ public class AsyncActivity {
     /**
      * Create an activity
      * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
      * @return The async call builder
      */
     public CreateLmsActivityRequestBuilder createLmsActivity() {
@@ -120,6 +129,9 @@ public class AsyncActivity {
 
     /**
      * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
@@ -135,6 +147,9 @@ public class AsyncActivity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsActivityRequestBuilder getAtsActivity() {
@@ -143,6 +158,9 @@ public class AsyncActivity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
@@ -158,6 +176,9 @@ public class AsyncActivity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetClubsActivityRequestBuilder getClubsActivity() {
@@ -166,6 +187,9 @@ public class AsyncActivity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
@@ -181,6 +205,9 @@ public class AsyncActivity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLmsActivityRequestBuilder getLmsActivity() {
@@ -189,6 +216,9 @@ public class AsyncActivity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
@@ -204,6 +234,13 @@ public class AsyncActivity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsActivitiesRequestBuilder listAtsActivities() {
@@ -212,6 +249,13 @@ public class AsyncActivity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
@@ -227,6 +271,13 @@ public class AsyncActivity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListClubsActivitiesRequestBuilder listClubsActivities() {
@@ -235,6 +286,13 @@ public class AsyncActivity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
@@ -250,6 +308,13 @@ public class AsyncActivity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLmsActivitiesRequestBuilder listLmsActivities() {
@@ -258,6 +323,13 @@ public class AsyncActivity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
@@ -273,6 +345,9 @@ public class AsyncActivity {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAtsActivityRequestBuilder patchAtsActivity() {
@@ -281,6 +356,9 @@ public class AsyncActivity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
@@ -296,6 +374,9 @@ public class AsyncActivity {
     /**
      * Update an activity
      * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchLmsActivityRequestBuilder patchLmsActivity() {
@@ -304,6 +385,9 @@ public class AsyncActivity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
@@ -319,6 +403,8 @@ public class AsyncActivity {
     /**
      * Remove an activity
      * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsActivityRequestBuilder removeAtsActivity() {
@@ -327,6 +413,8 @@ public class AsyncActivity {
 
     /**
      * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
@@ -342,6 +430,8 @@ public class AsyncActivity {
     /**
      * Remove an activity
      * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLmsActivityRequestBuilder removeLmsActivity() {
@@ -350,6 +440,8 @@ public class AsyncActivity {
 
     /**
      * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
@@ -365,6 +457,9 @@ public class AsyncActivity {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsActivityRequestBuilder updateAtsActivity() {
@@ -373,6 +468,9 @@ public class AsyncActivity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
@@ -388,6 +486,9 @@ public class AsyncActivity {
     /**
      * Update an activity
      * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateLmsActivityRequestBuilder updateLmsActivity() {
@@ -396,6 +497,9 @@ public class AsyncActivity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response

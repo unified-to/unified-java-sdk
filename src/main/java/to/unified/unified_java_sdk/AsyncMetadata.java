@@ -57,6 +57,9 @@ public class AsyncMetadata {
     /**
      * Create a metadata
      * 
+     * <p>Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they
+     * are mapped to the provider's API. Returns the created MetadataMetadata.
+     * 
      * @return The async call builder
      */
     public CreateMetadataMetadataRequestBuilder createMetadataMetadata() {
@@ -65,6 +68,9 @@ public class AsyncMetadata {
 
     /**
      * Create a metadata
+     * 
+     * <p>Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they
+     * are mapped to the provider's API. Returns the created MetadataMetadata.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMetadataMetadataResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncMetadata {
     /**
      * Retrieve a metadata
      * 
+     * <p>Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetMetadataMetadataRequestBuilder getMetadataMetadata() {
@@ -88,6 +97,9 @@ public class AsyncMetadata {
 
     /**
      * Retrieve a metadata
+     * 
+     * <p>Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMetadataMetadataResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncMetadata {
     /**
      * List all metadatas
      * 
+     * <p>Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListMetadataMetadatasRequestBuilder listMetadataMetadatas() {
@@ -111,6 +130,13 @@ public class AsyncMetadata {
 
     /**
      * List all metadatas
+     * 
+     * <p>Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMetadataMetadatasResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncMetadata {
     /**
      * Update a metadata
      * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMetadataMetadataRequestBuilder patchMetadataMetadata() {
@@ -134,6 +163,9 @@ public class AsyncMetadata {
 
     /**
      * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMetadataMetadataResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncMetadata {
     /**
      * Remove a metadata
      * 
+     * <p>Deletes the MetadataMetadata identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveMetadataMetadataRequestBuilder removeMetadataMetadata() {
@@ -157,6 +191,8 @@ public class AsyncMetadata {
 
     /**
      * Remove a metadata
+     * 
+     * <p>Deletes the MetadataMetadata identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMetadataMetadataResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncMetadata {
     /**
      * Update a metadata
      * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMetadataMetadataRequestBuilder updateMetadataMetadata() {
@@ -180,6 +219,9 @@ public class AsyncMetadata {
 
     /**
      * Update a metadata
+     * 
+     * <p>Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMetadataMetadataResponse>} - The async response

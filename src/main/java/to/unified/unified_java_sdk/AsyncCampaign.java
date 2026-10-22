@@ -81,6 +81,9 @@ public class AsyncCampaign {
     /**
      * Create a campaign
      * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
+     * 
      * @return The async call builder
      */
     public CreateAdsCampaignRequestBuilder createAdsCampaign() {
@@ -89,6 +92,9 @@ public class AsyncCampaign {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped
+     * to the provider's API. Returns the created AdsCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsCampaignResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncCampaign {
     /**
      * Create a campaign
      * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
+     * 
      * @return The async call builder
      */
     public CreateMartechCampaignRequestBuilder createMartechCampaign() {
@@ -112,6 +121,9 @@ public class AsyncCampaign {
 
     /**
      * Create a campaign
+     * 
+     * <p>Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they
+     * are mapped to the provider's API. Returns the created MarketingCampaign.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMartechCampaignResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncCampaign {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsCampaignRequestBuilder getAdsCampaign() {
@@ -135,6 +150,9 @@ public class AsyncCampaign {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsCampaignResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncCampaign {
     /**
      * Retrieve a campaign
      * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetMartechCampaignRequestBuilder getMartechCampaign() {
@@ -158,6 +179,9 @@ public class AsyncCampaign {
 
     /**
      * Retrieve a campaign
+     * 
+     * <p>Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMartechCampaignResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncCampaign {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsCampaignsRequestBuilder listAdsCampaigns() {
@@ -181,6 +212,13 @@ public class AsyncCampaign {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsCampaignsResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncCampaign {
     /**
      * List all campaigns
      * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
@@ -204,6 +249,13 @@ public class AsyncCampaign {
 
     /**
      * List all campaigns
+     * 
+     * <p>Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMartechCampaignsResponse>} - The async response
@@ -219,6 +271,9 @@ public class AsyncCampaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsCampaignRequestBuilder patchAdsCampaign() {
@@ -227,6 +282,9 @@ public class AsyncCampaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsCampaignResponse>} - The async response
@@ -242,6 +300,9 @@ public class AsyncCampaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
@@ -250,6 +311,9 @@ public class AsyncCampaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMartechCampaignResponse>} - The async response
@@ -265,6 +329,8 @@ public class AsyncCampaign {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the AdsCampaign identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsCampaignRequestBuilder removeAdsCampaign() {
@@ -273,6 +339,8 @@ public class AsyncCampaign {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the AdsCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsCampaignResponse>} - The async response
@@ -288,6 +356,8 @@ public class AsyncCampaign {
     /**
      * Remove a campaign
      * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
@@ -296,6 +366,8 @@ public class AsyncCampaign {
 
     /**
      * Remove a campaign
+     * 
+     * <p>Deletes the MarketingCampaign identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMartechCampaignResponse>} - The async response
@@ -311,6 +383,9 @@ public class AsyncCampaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsCampaignRequestBuilder updateAdsCampaign() {
@@ -319,6 +394,9 @@ public class AsyncCampaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsCampaignResponse>} - The async response
@@ -334,6 +412,9 @@ public class AsyncCampaign {
     /**
      * Update a campaign
      * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
@@ -342,6 +423,9 @@ public class AsyncCampaign {
 
     /**
      * Update a campaign
+     * 
+     * <p>Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMartechCampaignResponse>} - The async response

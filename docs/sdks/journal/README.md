@@ -13,7 +13,7 @@
 
 ## createAccountingJournal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -46,16 +46,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("279a8324-f2d2-48ba-9c34-ed5b2b52cae2")
+                    .id("dad1275b-1711-48d0-97b2-403b99d0fab0")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.976Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.455Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.336Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.939Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -89,7 +89,7 @@ public class Application {
 
 ## getAccountingJournal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ public class Application {
 
 ## listAccountingJournals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ public class Application {
 
 ## patchAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -237,16 +237,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("48f96c49-75d9-4118-9678-6ea894b8662f")
+                    .id("5d500c8d-494a-41d6-b89e-392cb3a3ba06")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.995Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.472Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.346Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.947Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -281,7 +281,7 @@ public class Application {
 
 ## removeAccountingJournal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ public class Application {
 
 ## updateAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -370,16 +370,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-02-20T15:14:55.881Z"))
                     .currency("CAD")
                     .description("Cilicium minima calco constans adipisci.")
-                    .id("48f96c49-75d9-4118-9678-6ea894b8662f")
+                    .id("5d500c8d-494a-41d6-b89e-392cb3a3ba06")
                     .isInclusiveOfTax(true)
                     .lineitems(List.of())
                     .metadata(List.of())
-                    .postedAt(OffsetDateTime.parse("2023-11-06T10:41:59.995Z"))
+                    .postedAt(OffsetDateTime.parse("2023-11-07T00:34:44.472Z"))
                     .reference("JE-78884")
                     .source("crustulum")
                     .status(AccountingJournalStatus.VOID)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2022-01-10T19:43:26.346Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-11T02:47:39.947Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

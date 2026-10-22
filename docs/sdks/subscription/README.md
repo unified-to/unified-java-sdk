@@ -13,7 +13,7 @@
 
 ## createPaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("d04e869d-3e4a-410b-844e-e2e55ffed157")
+                    .id("66b07dd9-faa8-4d36-b9fd-36134f7f006d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -56,7 +56,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.652Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.044Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -90,7 +90,7 @@ public class Application {
 
 ## getPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ public class Application {
 
 ## listPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ public class Application {
 
 ## patchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -239,7 +239,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("7e76a83d-ddcd-43da-a2aa-27623b87ef12")
+                    .id("4e764098-0267-4513-b3a6-0b8a1703834d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -248,7 +248,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.654Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -283,7 +283,7 @@ public class Application {
 
 ## removePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ public class Application {
 
 ## updatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -373,7 +373,7 @@ public class Application {
                     .currentPeriodStartAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .dayOfMonth(8d)
                     .description("Innovative Mouse featuring important technology and Bamboo construction")
-                    .id("7e76a83d-ddcd-43da-a2aa-27623b87ef12")
+                    .id("4e764098-0267-4513-b3a6-0b8a1703834d")
                     .interval(1d)
                     .intervalUnit(IntervalUnit.YEAR)
                     .lineitems(List.of())
@@ -382,7 +382,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2023-05-08T10:11:03.414Z"))
                     .status(PaymentSubscriptionStatus.ACTIVE)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-10-04T12:53:07.654Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-04T15:49:59.047Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

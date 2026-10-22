@@ -57,6 +57,9 @@ public class AsyncBill {
     /**
      * Create a bill
      * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
+     * 
      * @return The async call builder
      */
     public CreateAccountingBillRequestBuilder createAccountingBill() {
@@ -65,6 +68,9 @@ public class AsyncBill {
 
     /**
      * Create a bill
+     * 
+     * <p>Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are
+     * mapped to the provider's API. Returns the created AccountingBill.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingBillResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncBill {
     /**
      * Retrieve a bill
      * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAccountingBillRequestBuilder getAccountingBill() {
@@ -88,6 +97,9 @@ public class AsyncBill {
 
     /**
      * Retrieve a bill
+     * 
+     * <p>Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingBillResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncBill {
     /**
      * List all bills
      * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAccountingBillsRequestBuilder listAccountingBills() {
@@ -111,6 +130,13 @@ public class AsyncBill {
 
     /**
      * List all bills
+     * 
+     * <p>Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingBillsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncBill {
     /**
      * Update a bill
      * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchAccountingBillRequestBuilder patchAccountingBill() {
@@ -134,6 +163,9 @@ public class AsyncBill {
 
     /**
      * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingBillResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncBill {
     /**
      * Remove a bill
      * 
+     * <p>Deletes the AccountingBill identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAccountingBillRequestBuilder removeAccountingBill() {
@@ -157,6 +191,8 @@ public class AsyncBill {
 
     /**
      * Remove a bill
+     * 
+     * <p>Deletes the AccountingBill identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingBillResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncBill {
     /**
      * Update a bill
      * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateAccountingBillRequestBuilder updateAccountingBill() {
@@ -180,6 +219,9 @@ public class AsyncBill {
 
     /**
      * Update a bill
+     * 
+     * <p>Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingBillResponse>} - The async response

@@ -103,6 +103,9 @@ public class Analytics {
     /**
      * Create an event
      * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
+     * 
      * @return The call builder
      */
     public CreateAnalyticsEventRequestBuilder createAnalyticsEvent() {
@@ -111,6 +114,9 @@ public class Analytics {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are
+     * mapped to the provider's API. Returns the created AnalyticsEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -125,6 +131,9 @@ public class Analytics {
     /**
      * Create a property
      * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
+     * 
      * @return The call builder
      */
     public CreateAnalyticsPropertyRequestBuilder createAnalyticsProperty() {
@@ -133,6 +142,9 @@ public class Analytics {
 
     /**
      * Create a property
+     * 
+     * <p>Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsProperty.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -147,6 +159,9 @@ public class Analytics {
     /**
      * Create a visitor
      * 
+     * <p>Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsVisitor.
+     * 
      * @return The call builder
      */
     public CreateAnalyticsVisitorRequestBuilder createAnalyticsVisitor() {
@@ -155,6 +170,9 @@ public class Analytics {
 
     /**
      * Create a visitor
+     * 
+     * <p>Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they
+     * are mapped to the provider's API. Returns the created AnalyticsVisitor.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -169,6 +187,9 @@ public class Analytics {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsEventRequestBuilder getAnalyticsEvent() {
@@ -177,6 +198,9 @@ public class Analytics {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -191,6 +215,9 @@ public class Analytics {
     /**
      * Retrieve a property
      * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsPropertyRequestBuilder getAnalyticsProperty() {
@@ -199,6 +226,9 @@ public class Analytics {
 
     /**
      * Retrieve a property
+     * 
+     * <p>Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -213,6 +243,9 @@ public class Analytics {
     /**
      * Retrieve a session
      * 
+     * <p>Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsSessionRequestBuilder getAnalyticsSession() {
@@ -221,6 +254,9 @@ public class Analytics {
 
     /**
      * Retrieve a session
+     * 
+     * <p>Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -235,6 +271,9 @@ public class Analytics {
     /**
      * Retrieve a visitor
      * 
+     * <p>Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAnalyticsVisitorRequestBuilder getAnalyticsVisitor() {
@@ -243,6 +282,9 @@ public class Analytics {
 
     /**
      * Retrieve a visitor
+     * 
+     * <p>Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -257,6 +299,13 @@ public class Analytics {
     /**
      * List all events
      * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsEventsRequestBuilder listAnalyticsEvents() {
@@ -265,6 +314,13 @@ public class Analytics {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -279,6 +335,13 @@ public class Analytics {
     /**
      * List all properties
      * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsPropertiesRequestBuilder listAnalyticsProperties() {
@@ -287,6 +350,13 @@ public class Analytics {
 
     /**
      * List all properties
+     * 
+     * <p>Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -301,6 +371,13 @@ public class Analytics {
     /**
      * List all reports
      * 
+     * <p>Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsReportsRequestBuilder listAnalyticsReports() {
@@ -309,6 +386,13 @@ public class Analytics {
 
     /**
      * List all reports
+     * 
+     * <p>Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -323,6 +407,13 @@ public class Analytics {
     /**
      * List all sessions
      * 
+     * <p>Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsSessionsRequestBuilder listAnalyticsSessions() {
@@ -331,6 +422,13 @@ public class Analytics {
 
     /**
      * List all sessions
+     * 
+     * <p>Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -345,6 +443,13 @@ public class Analytics {
     /**
      * List all visitors
      * 
+     * <p>Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAnalyticsVisitorsRequestBuilder listAnalyticsVisitors() {
@@ -353,6 +458,13 @@ public class Analytics {
 
     /**
      * List all visitors
+     * 
+     * <p>Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -367,6 +479,9 @@ public class Analytics {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAnalyticsPropertyRequestBuilder patchAnalyticsProperty() {
@@ -375,6 +490,9 @@ public class Analytics {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -389,6 +507,9 @@ public class Analytics {
     /**
      * Update a visitor
      * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAnalyticsVisitorRequestBuilder patchAnalyticsVisitor() {
@@ -397,6 +518,9 @@ public class Analytics {
 
     /**
      * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -411,6 +535,8 @@ public class Analytics {
     /**
      * Remove a property
      * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAnalyticsPropertyRequestBuilder removeAnalyticsProperty() {
@@ -419,6 +545,8 @@ public class Analytics {
 
     /**
      * Remove a property
+     * 
+     * <p>Deletes the AnalyticsProperty identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -433,6 +561,8 @@ public class Analytics {
     /**
      * Remove a visitor
      * 
+     * <p>Deletes the AnalyticsVisitor identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAnalyticsVisitorRequestBuilder removeAnalyticsVisitor() {
@@ -441,6 +571,8 @@ public class Analytics {
 
     /**
      * Remove a visitor
+     * 
+     * <p>Deletes the AnalyticsVisitor identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -455,6 +587,9 @@ public class Analytics {
     /**
      * Update a property
      * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAnalyticsPropertyRequestBuilder updateAnalyticsProperty() {
@@ -463,6 +598,9 @@ public class Analytics {
 
     /**
      * Update a property
+     * 
+     * <p>Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -477,6 +615,9 @@ public class Analytics {
     /**
      * Update a visitor
      * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAnalyticsVisitorRequestBuilder updateAnalyticsVisitor() {
@@ -485,6 +626,9 @@ public class Analytics {
 
     /**
      * Update a visitor
+     * 
+     * <p>Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

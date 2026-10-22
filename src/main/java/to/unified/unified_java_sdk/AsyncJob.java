@@ -81,6 +81,9 @@ public class AsyncJob {
     /**
      * Create a job
      * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
+     * 
      * @return The async call builder
      */
     public CreateAtsJobRequestBuilder createAtsJob() {
@@ -89,6 +92,9 @@ public class AsyncJob {
 
     /**
      * Create a job
+     * 
+     * <p>Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created AtsJob.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
@@ -104,6 +110,9 @@ public class AsyncJob {
     /**
      * Create a job
      * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
+     * 
      * @return The async call builder
      */
     public CreateHrisJobRequestBuilder createHrisJob() {
@@ -112,6 +121,9 @@ public class AsyncJob {
 
     /**
      * Create a job
+     * 
+     * <p>Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the
+     * provider's API. Returns the created HrisJob.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisJobResponse>} - The async response
@@ -127,6 +139,9 @@ public class AsyncJob {
     /**
      * Retrieve a job
      * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAtsJobRequestBuilder getAtsJob() {
@@ -135,6 +150,9 @@ public class AsyncJob {
 
     /**
      * Retrieve a job
+     * 
+     * <p>Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
@@ -150,6 +168,9 @@ public class AsyncJob {
     /**
      * Retrieve a job
      * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisJobRequestBuilder getHrisJob() {
@@ -158,6 +179,9 @@ public class AsyncJob {
 
     /**
      * Retrieve a job
+     * 
+     * <p>Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisJobResponse>} - The async response
@@ -173,6 +197,13 @@ public class AsyncJob {
     /**
      * List all jobs
      * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAtsJobsRequestBuilder listAtsJobs() {
@@ -181,6 +212,13 @@ public class AsyncJob {
 
     /**
      * List all jobs
+     * 
+     * <p>Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
@@ -196,6 +234,13 @@ public class AsyncJob {
     /**
      * List all jobs
      * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisJobsRequestBuilder listHrisJobs() {
@@ -204,6 +249,13 @@ public class AsyncJob {
 
     /**
      * List all jobs
+     * 
+     * <p>Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisJobsResponse>} - The async response
@@ -219,6 +271,9 @@ public class AsyncJob {
     /**
      * Update a job
      * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchAtsJobRequestBuilder patchAtsJob() {
@@ -227,6 +282,9 @@ public class AsyncJob {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
@@ -242,6 +300,9 @@ public class AsyncJob {
     /**
      * Update a job
      * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public PatchHrisJobRequestBuilder patchHrisJob() {
@@ -250,6 +311,9 @@ public class AsyncJob {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisJobResponse>} - The async response
@@ -265,6 +329,8 @@ public class AsyncJob {
     /**
      * Remove a job
      * 
+     * <p>Deletes the AtsJob identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAtsJobRequestBuilder removeAtsJob() {
@@ -273,6 +339,8 @@ public class AsyncJob {
 
     /**
      * Remove a job
+     * 
+     * <p>Deletes the AtsJob identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
@@ -288,6 +356,8 @@ public class AsyncJob {
     /**
      * Remove a job
      * 
+     * <p>Deletes the HrisJob identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisJobRequestBuilder removeHrisJob() {
@@ -296,6 +366,8 @@ public class AsyncJob {
 
     /**
      * Remove a job
+     * 
+     * <p>Deletes the HrisJob identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisJobResponse>} - The async response
@@ -311,6 +383,9 @@ public class AsyncJob {
     /**
      * Update a job
      * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateAtsJobRequestBuilder updateAtsJob() {
@@ -319,6 +394,9 @@ public class AsyncJob {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
@@ -334,6 +412,9 @@ public class AsyncJob {
     /**
      * Update a job
      * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisJobRequestBuilder updateHrisJob() {
@@ -342,6 +423,9 @@ public class AsyncJob {
 
     /**
      * Update a job
+     * 
+     * <p>Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request
+     * body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisJobResponse>} - The async response

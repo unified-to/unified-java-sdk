@@ -13,7 +13,7 @@
 
 ## createCommerceSaleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -45,11 +45,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("03fc5562-5020-49cc-ae24-89ca9758f169")
+                    .id("d77d6acc-aaea-474b-953c-5300bc5d9f62")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.281Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.227Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -83,7 +83,7 @@ public class Application {
 
 ## getCommerceSaleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ public class Application {
 
 ## listCommerceSaleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ public class Application {
 
 ## patchCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -230,11 +230,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("0c0d6637-ef1c-4c97-8c07-2ec08efb7d97")
+                    .id("b0ca61e9-5770-4f0a-be74-3189ff6855ee")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -269,7 +269,7 @@ public class Application {
 
 ## removeCommerceSaleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ public class Application {
 
 ## updateCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -357,11 +357,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("0c0d6637-ef1c-4c97-8c07-2ec08efb7d97")
+                    .id("b0ca61e9-5770-4f0a-be74-3189ff6855ee")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-01-28T00:03:12.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-01-28T16:07:12.238Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

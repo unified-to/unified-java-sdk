@@ -8,7 +8,7 @@
 
 ## createGenaiEmbedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Est.")
                     .encondingFormat(EncondingFormat.FLOAT)
-                    .id("06e847f1-c363-43b7-b050-cdfa6dffc271")
+                    .id("b4c1dba2-a933-4041-90f1-566e09296c38")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")

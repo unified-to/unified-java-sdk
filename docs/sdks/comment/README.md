@@ -25,7 +25,7 @@
 
 ## createKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -56,10 +56,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("40d85362-97de-4a47-a596-d6c85a2e83e8")
+                    .id("0c4d060a-a6fd-41c4-9f46-3e6854432d7b")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.659Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## createTaskComment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -124,10 +124,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("60f484ca-68b3-4b2a-bfd1-eff517b98100")
+                    .id("d2173cc1-d841-4768-b552-a7b5a1783d93")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-03T08:00:09.568Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-03T15:01:00.641Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -161,7 +161,7 @@ public class Application {
 
 ## createUcComment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -191,9 +191,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("2a7ec724-79a6-4da6-bff1-eed568993c14")
+                    .id("739750a6-5d1d-44ed-9fce-e58c8241560c")
                     .metadata(List.of())
-                    .updatedAt("2024-02-09T18:30:32.905Z")
+                    .updatedAt("2024-02-10T00:31:23.535Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -227,7 +227,7 @@ public class Application {
 
 ## getKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -285,7 +285,7 @@ public class Application {
 
 ## getTaskComment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ public class Application {
 
 ## getUcComment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -401,7 +401,7 @@ public class Application {
 
 ## listKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -458,7 +458,7 @@ public class Application {
 
 ## listTaskComments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -515,7 +515,7 @@ public class Application {
 
 ## listUcComments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -572,7 +572,7 @@ public class Application {
 
 ## patchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -603,10 +603,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("39fbd94a-090a-48e4-82c1-3b0107dee49c")
+                    .id("a0c00574-4d80-4722-a7fc-d05d6460581d")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.292Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.664Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -641,7 +641,7 @@ public class Application {
 
 ## patchTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -672,10 +672,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("b76eb5a6-0149-4aea-87c6-75c11b20dc42")
+                    .id("eee28059-af6a-4391-a58a-d5e3f184eca5")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-03T08:00:09.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-03T15:01:00.644Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -710,7 +710,7 @@ public class Application {
 
 ## patchUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -740,9 +740,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("4a83bd04-0eef-4b63-93b3-1c409ff71388")
+                    .id("3bf577c0-f4cc-4be5-8f9d-a21378c027bc")
                     .metadata(List.of())
-                    .updatedAt("2024-02-09T18:30:32.909Z")
+                    .updatedAt("2024-02-10T00:31:23.538Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -777,7 +777,7 @@ public class Application {
 
 ## removeKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -833,7 +833,7 @@ public class Application {
 
 ## removeTaskComment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -889,7 +889,7 @@ public class Application {
 
 ## removeUcComment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -945,7 +945,7 @@ public class Application {
 
 ## updateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -976,10 +976,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("39fbd94a-090a-48e4-82c1-3b0107dee49c")
+                    .id("a0c00574-4d80-4722-a7fc-d05d6460581d")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.292Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.664Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1014,7 +1014,7 @@ public class Application {
 
 ## updateTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1045,10 +1045,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("b76eb5a6-0149-4aea-87c6-75c11b20dc42")
+                    .id("eee28059-af6a-4391-a58a-d5e3f184eca5")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-03T08:00:09.572Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-03T15:01:00.644Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1083,7 +1083,7 @@ public class Application {
 
 ## updateUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1113,9 +1113,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("4a83bd04-0eef-4b63-93b3-1c409ff71388")
+                    .id("3bf577c0-f4cc-4be5-8f9d-a21378c027bc")
                     .metadata(List.of())
-                    .updatedAt("2024-02-09T18:30:32.909Z")
+                    .updatedAt("2024-02-10T00:31:23.538Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

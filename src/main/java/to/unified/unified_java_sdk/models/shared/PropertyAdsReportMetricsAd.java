@@ -103,7 +103,9 @@ public class PropertyAdsReportMetricsAd {
     @JsonProperty("metadata")
     private List<AdsMetadata> metadata;
 
-
+    /**
+     * The ad's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -278,6 +280,9 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The ad's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -420,6 +425,9 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    /**
+     * The ad's name
+     */
     public PropertyAdsReportMetricsAd withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -690,6 +698,9 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        /**
+         * The ad's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

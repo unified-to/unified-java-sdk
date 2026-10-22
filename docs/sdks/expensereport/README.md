@@ -13,7 +13,7 @@
 
 ## createAccountingExpensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -41,16 +41,16 @@ public class Application {
 
         CreateAccountingExpensereportRequest req = CreateAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("2bdd4545-15d2-492a-ba9c-d0aad542d58e")
+                    .id("073ebf50-daf4-416e-bb1a-7f52c8aef73c")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("f1143d7b-18b1-4f16-b2cc-f5bee133aa29")
+                            .id("da3aa992-b207-4bc0-8773-66db39350a2e")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -58,7 +58,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("348619ee-842d-4940-8436-0ecf86cc470a")
+                            .id("207aa92e-5f36-4947-bbeb-0b47523b1d2d")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -67,7 +67,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("b6153d9d-54b9-44d9-b0a9-a2297e7660a7")
+                            .id("0136fa9f-dba7-43d8-a98c-5218dc133f15")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -76,7 +76,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("8ab2b72e-1abf-4d83-9e74-86b534c84a78")
+                            .id("818b5c18-3c3f-4394-8b04-deaecbc6cb25")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -87,11 +87,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.586Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.607Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -125,7 +125,7 @@ public class Application {
 
 ## getAccountingExpensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ public class Application {
 
 ## listAccountingExpensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ public class Application {
 
 ## patchAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -268,16 +268,16 @@ public class Application {
 
         PatchAccountingExpensereportRequest req = PatchAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("342c456a-5c0f-413a-841f-d76d51a0a505")
+                    .id("b9104d06-3de4-4edf-89d8-bd74a6032d0e")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("27fd7077-e2b4-447a-a247-1ff83931127f")
+                            .id("3c3bbc5a-d839-4f48-a3f5-0a2a5802f99c")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -285,7 +285,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("208eb5e8-4903-4bf5-a9f3-779d31f30f0b")
+                            .id("6130b795-0660-49e1-961d-304f65a23bab")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -294,7 +294,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("e94f7952-dc22-4d61-9de3-e127a1e31780")
+                            .id("8c8ea052-9a74-4874-b44e-4e9e697aaf2e")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -303,7 +303,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("86473631-5fbf-4d1d-8b69-f2101a125d2f")
+                            .id("f3e85a62-f1e3-4491-a7d8-b4739ac7d5a8")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -314,11 +314,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -353,7 +353,7 @@ public class Application {
 
 ## removeAccountingExpensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -409,7 +409,7 @@ public class Application {
 
 ## updateAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -437,16 +437,16 @@ public class Application {
 
         UpdateAccountingExpensereportRequest req = UpdateAccountingExpensereportRequest.builder()
                 .accountingExpensereport(AccountingExpensereport.builder()
-                    .approvedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .attachments(List.of())
                     .categoryIds(List.of())
                     .createdAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .currency("GBP")
                     .externalNumber("ER-31240")
-                    .id("342c456a-5c0f-413a-841f-d76d51a0a505")
+                    .id("b9104d06-3de4-4edf-89d8-bd74a6032d0e")
                     .lineitems(List.of(
                         AccountingLineitem.builder()
-                            .id("27fd7077-e2b4-447a-a247-1ff83931127f")
+                            .id("3c3bbc5a-d839-4f48-a3f5-0a2a5802f99c")
                             .itemName("Conference ticket")
                             .taxAmount(0d)
                             .totalAmount(39.9)
@@ -454,7 +454,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("208eb5e8-4903-4bf5-a9f3-779d31f30f0b")
+                            .id("6130b795-0660-49e1-961d-304f65a23bab")
                             .itemName("Flight")
                             .notes("Soluta omnis dolor.")
                             .taxAmount(0d)
@@ -463,7 +463,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("e94f7952-dc22-4d61-9de3-e127a1e31780")
+                            .id("8c8ea052-9a74-4874-b44e-4e9e697aaf2e")
                             .itemName("Client dinner")
                             .notes("Altus caveo capio.")
                             .taxAmount(0d)
@@ -472,7 +472,7 @@ public class Application {
                             .unitQuantity(1d)
                             .build(),
                         AccountingLineitem.builder()
-                            .id("86473631-5fbf-4d1d-8b69-f2101a125d2f")
+                            .id("f3e85a62-f1e3-4491-a7d8-b4739ac7d5a8")
                             .itemName("Flight")
                             .taxAmount(0d)
                             .totalAmount(445.27)
@@ -483,11 +483,11 @@ public class Application {
                     .name("Lolita Kunde - October expenses")
                     .postedAt(OffsetDateTime.parse("2020-05-29T02:04:59.078Z"))
                     .reimbursedAmount(908.46)
-                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .reimbursedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .status(AccountingExpensereportStatus.PAID)
                     .taxAmount(0d)
                     .totalAmount(908.46)
-                    .updatedAt(OffsetDateTime.parse("2021-04-19T11:29:30.591Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-19T14:57:56.613Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

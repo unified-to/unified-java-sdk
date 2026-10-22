@@ -113,6 +113,9 @@ public class AsyncGroup {
     /**
      * Create a group
      * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
+     * 
      * @return The async call builder
      */
     public CreateAdsGroupRequestBuilder createAdsGroup() {
@@ -121,6 +124,9 @@ public class AsyncGroup {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the
+     * provider's API. Returns the created AdsGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
@@ -136,6 +142,9 @@ public class AsyncGroup {
     /**
      * Create a group
      * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
+     * 
      * @return The async call builder
      */
     public CreateHrisGroupRequestBuilder createHrisGroup() {
@@ -144,6 +153,9 @@ public class AsyncGroup {
 
     /**
      * Create a group
+     * 
+     * <p>Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to
+     * the provider's API. Returns the created HrisGroup.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
@@ -182,6 +194,9 @@ public class AsyncGroup {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetAdsGroupRequestBuilder getAdsGroup() {
@@ -190,6 +205,9 @@ public class AsyncGroup {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
@@ -205,6 +223,9 @@ public class AsyncGroup {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetClubsGroupRequestBuilder getClubsGroup() {
@@ -213,6 +234,9 @@ public class AsyncGroup {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
@@ -228,6 +252,9 @@ public class AsyncGroup {
     /**
      * Retrieve a group
      * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisGroupRequestBuilder getHrisGroup() {
@@ -236,6 +263,9 @@ public class AsyncGroup {
 
     /**
      * Retrieve a group
+     * 
+     * <p>Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
@@ -274,6 +304,13 @@ public class AsyncGroup {
     /**
      * List all groups
      * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListAdsGroupsRequestBuilder listAdsGroups() {
@@ -282,6 +319,13 @@ public class AsyncGroup {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
@@ -297,6 +341,13 @@ public class AsyncGroup {
     /**
      * List all groups
      * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListClubsGroupsRequestBuilder listClubsGroups() {
@@ -305,6 +356,13 @@ public class AsyncGroup {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
@@ -320,6 +378,13 @@ public class AsyncGroup {
     /**
      * List all groups
      * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisGroupsRequestBuilder listHrisGroups() {
@@ -328,6 +393,13 @@ public class AsyncGroup {
 
     /**
      * List all groups
+     * 
+     * <p>Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
@@ -366,6 +438,9 @@ public class AsyncGroup {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchAdsGroupRequestBuilder patchAdsGroup() {
@@ -374,6 +449,9 @@ public class AsyncGroup {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
@@ -389,6 +467,9 @@ public class AsyncGroup {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisGroupRequestBuilder patchHrisGroup() {
@@ -397,6 +478,9 @@ public class AsyncGroup {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
@@ -435,6 +519,8 @@ public class AsyncGroup {
     /**
      * Remove a group
      * 
+     * <p>Deletes the AdsGroup identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveAdsGroupRequestBuilder removeAdsGroup() {
@@ -443,6 +529,8 @@ public class AsyncGroup {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the AdsGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
@@ -458,6 +546,8 @@ public class AsyncGroup {
     /**
      * Remove a group
      * 
+     * <p>Deletes the HrisGroup identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisGroupRequestBuilder removeHrisGroup() {
@@ -466,6 +556,8 @@ public class AsyncGroup {
 
     /**
      * Remove a group
+     * 
+     * <p>Deletes the HrisGroup identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
@@ -504,6 +596,9 @@ public class AsyncGroup {
     /**
      * Update a group
      * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateAdsGroupRequestBuilder updateAdsGroup() {
@@ -512,6 +607,9 @@ public class AsyncGroup {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
@@ -527,6 +625,9 @@ public class AsyncGroup {
     /**
      * Update a group
      * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisGroupRequestBuilder updateHrisGroup() {
@@ -535,6 +636,9 @@ public class AsyncGroup {
 
     /**
      * Update a group
+     * 
+     * <p>Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response

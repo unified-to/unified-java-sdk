@@ -41,7 +41,9 @@ public class AtsCompany {
     @JsonProperty("metadata")
     private List<AtsMetadata> metadata;
 
-
+    /**
+     * The company's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -130,6 +132,9 @@ public class AtsCompany {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The company's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -193,6 +198,9 @@ public class AtsCompany {
     }
 
 
+    /**
+     * The company's name
+     */
     public AtsCompany withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -338,6 +346,9 @@ public class AtsCompany {
             return this;
         }
 
+        /**
+         * The company's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

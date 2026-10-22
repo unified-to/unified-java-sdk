@@ -21,7 +21,7 @@
 
 ## createSigningDocument
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -52,12 +52,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("c9011624-4bb0-44ac-b565-327c1b35f285")
+                    .id("94da5626-939e-4486-91de-f17d825828c1")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.218Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.671Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.602Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.944Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -91,7 +91,7 @@ public class Application {
 
 ## createSigningSignatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -121,12 +121,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("93a49948-6566-45d2-aca8-ab5e9a7cd4cf")
+                    .id("224b519d-e885-4ca1-a941-c55fa2f0be36")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.228Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.927Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -160,7 +160,7 @@ public class Application {
 
 ## getSigningDocument
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ public class Application {
 
 ## getSigningSignatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ public class Application {
 
 ## getSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ public class Application {
 
 ## listSigningDocuments
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -391,7 +391,7 @@ public class Application {
 
 ## listSigningSignatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -448,7 +448,7 @@ public class Application {
 
 ## listSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -505,7 +505,7 @@ public class Application {
 
 ## patchSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -536,12 +536,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("4b22404f-785f-4cc1-bd23-291924ff209e")
+                    .id("5ae5f617-5cd1-401f-851f-08207d0e3640")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.221Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.674Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.615Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -576,7 +576,7 @@ public class Application {
 
 ## patchSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -606,12 +606,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("e62a43c3-471f-4954-b320-665c820ce324")
+                    .id("9ee6a5e8-e6e1-47a4-ad6e-228134a26d55")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.935Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -646,7 +646,7 @@ public class Application {
 
 ## removeSigningDocument
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -702,7 +702,7 @@ public class Application {
 
 ## removeSigningSignatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -758,7 +758,7 @@ public class Application {
 
 ## updateSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -789,12 +789,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("4b22404f-785f-4cc1-bd23-291924ff209e")
+                    .id("5ae5f617-5cd1-401f-851f-08207d0e3640")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-29T12:06:24.221Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-29T17:23:19.674Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-02T22:30:24.615Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-03T18:17:17.956Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -829,7 +829,7 @@ public class Application {
 
 ## updateSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -859,12 +859,12 @@ public class Application {
                 .signingSignatory(SigningSignatory.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-16T19:25:01.966Z"))
                     .email("anais.lakin@icloud.com")
-                    .id("e62a43c3-471f-4954-b320-665c820ce324")
+                    .id("9ee6a5e8-e6e1-47a4-ad6e-228134a26d55")
                     .metadata(List.of())
                     .name("Anais Lakin")
                     .role(SigningSignatoryRole.SIGNER)
                     .status(SigningSignatoryStatus.ERROR)
-                    .updatedAt(OffsetDateTime.parse("2024-05-17T19:58:45.235Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-05-18T07:30:32.935Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

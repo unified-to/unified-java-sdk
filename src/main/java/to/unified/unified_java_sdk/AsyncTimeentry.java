@@ -57,6 +57,9 @@ public class AsyncTimeentry {
     /**
      * Create a timeentry
      * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
+     * 
      * @return The async call builder
      */
     public CreateLegalTimeentryRequestBuilder createLegalTimeentry() {
@@ -65,6 +68,9 @@ public class AsyncTimeentry {
 
     /**
      * Create a timeentry
+     * 
+     * <p>Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are
+     * mapped to the provider's API. Returns the created LegalTimeentry.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLegalTimeentryResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncTimeentry {
     /**
      * Retrieve a timeentry
      * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetLegalTimeentryRequestBuilder getLegalTimeentry() {
@@ -88,6 +97,9 @@ public class AsyncTimeentry {
 
     /**
      * Retrieve a timeentry
+     * 
+     * <p>Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLegalTimeentryResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncTimeentry {
     /**
      * List all timeentries
      * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListLegalTimeentriesRequestBuilder listLegalTimeentries() {
@@ -111,6 +130,13 @@ public class AsyncTimeentry {
 
     /**
      * List all timeentries
+     * 
+     * <p>Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLegalTimeentriesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncTimeentry {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchLegalTimeentryRequestBuilder patchLegalTimeentry() {
@@ -134,6 +163,9 @@ public class AsyncTimeentry {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLegalTimeentryResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncTimeentry {
     /**
      * Remove a timeentry
      * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveLegalTimeentryRequestBuilder removeLegalTimeentry() {
@@ -157,6 +191,8 @@ public class AsyncTimeentry {
 
     /**
      * Remove a timeentry
+     * 
+     * <p>Deletes the LegalTimeentry identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLegalTimeentryResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncTimeentry {
     /**
      * Update a timeentry
      * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateLegalTimeentryRequestBuilder updateLegalTimeentry() {
@@ -180,6 +219,9 @@ public class AsyncTimeentry {
 
     /**
      * Update a timeentry
+     * 
+     * <p>Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLegalTimeentryResponse>} - The async response

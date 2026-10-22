@@ -45,6 +45,9 @@ public class AsyncFeedback {
     /**
      * Create a feedback
      * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     * 
      * @return The async call builder
      */
     public CreatePerformanceFeedbackRequestBuilder createPerformanceFeedback() {
@@ -53,6 +56,9 @@ public class AsyncFeedback {
 
     /**
      * Create a feedback
+     * 
+     * <p>Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body;
+     * they are mapped to the provider's API. Returns the created PerformanceFeedback.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePerformanceFeedbackResponse>} - The async response
@@ -68,6 +74,9 @@ public class AsyncFeedback {
     /**
      * Retrieve a feedback
      * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetPerformanceFeedbackRequestBuilder getPerformanceFeedback() {
@@ -76,6 +85,9 @@ public class AsyncFeedback {
 
     /**
      * Retrieve a feedback
+     * 
+     * <p>Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPerformanceFeedbackResponse>} - The async response
@@ -91,6 +103,13 @@ public class AsyncFeedback {
     /**
      * List all feedbacks
      * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListPerformanceFeedbacksRequestBuilder listPerformanceFeedbacks() {
@@ -99,6 +118,13 @@ public class AsyncFeedback {
 
     /**
      * List all feedbacks
+     * 
+     * <p>Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPerformanceFeedbacksResponse>} - The async response

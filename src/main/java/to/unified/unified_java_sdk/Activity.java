@@ -87,6 +87,9 @@ public class Activity {
     /**
      * Create an activity
      * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
+     * 
      * @return The call builder
      */
     public CreateAtsActivityRequestBuilder createAtsActivity() {
@@ -95,6 +98,9 @@ public class Activity {
 
     /**
      * Create an activity
+     * 
+     * <p>Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created AtsActivity.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -109,6 +115,9 @@ public class Activity {
     /**
      * Create an activity
      * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
+     * 
      * @return The call builder
      */
     public CreateLmsActivityRequestBuilder createLmsActivity() {
@@ -117,6 +126,9 @@ public class Activity {
 
     /**
      * Create an activity
+     * 
+     * <p>Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped
+     * to the provider's API. Returns the created LmsActivity.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -131,6 +143,9 @@ public class Activity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAtsActivityRequestBuilder getAtsActivity() {
@@ -139,6 +154,9 @@ public class Activity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -153,6 +171,9 @@ public class Activity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetClubsActivityRequestBuilder getClubsActivity() {
@@ -161,6 +182,9 @@ public class Activity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -175,6 +199,9 @@ public class Activity {
     /**
      * Retrieve an activity
      * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetLmsActivityRequestBuilder getLmsActivity() {
@@ -183,6 +210,9 @@ public class Activity {
 
     /**
      * Retrieve an activity
+     * 
+     * <p>Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -197,6 +227,13 @@ public class Activity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAtsActivitiesRequestBuilder listAtsActivities() {
@@ -205,6 +242,13 @@ public class Activity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -219,6 +263,13 @@ public class Activity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListClubsActivitiesRequestBuilder listClubsActivities() {
@@ -227,6 +278,13 @@ public class Activity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -241,6 +299,13 @@ public class Activity {
     /**
      * List all activities
      * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListLmsActivitiesRequestBuilder listLmsActivities() {
@@ -249,6 +314,13 @@ public class Activity {
 
     /**
      * List all activities
+     * 
+     * <p>Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -263,6 +335,9 @@ public class Activity {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchAtsActivityRequestBuilder patchAtsActivity() {
@@ -271,6 +346,9 @@ public class Activity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -285,6 +363,9 @@ public class Activity {
     /**
      * Update an activity
      * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchLmsActivityRequestBuilder patchLmsActivity() {
@@ -293,6 +374,9 @@ public class Activity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -307,6 +391,8 @@ public class Activity {
     /**
      * Remove an activity
      * 
+     * <p>Deletes the AtsActivity identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAtsActivityRequestBuilder removeAtsActivity() {
@@ -315,6 +401,8 @@ public class Activity {
 
     /**
      * Remove an activity
+     * 
+     * <p>Deletes the AtsActivity identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -329,6 +417,8 @@ public class Activity {
     /**
      * Remove an activity
      * 
+     * <p>Deletes the LmsActivity identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveLmsActivityRequestBuilder removeLmsActivity() {
@@ -337,6 +427,8 @@ public class Activity {
 
     /**
      * Remove an activity
+     * 
+     * <p>Deletes the LmsActivity identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -351,6 +443,9 @@ public class Activity {
     /**
      * Update an activity
      * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateAtsActivityRequestBuilder updateAtsActivity() {
@@ -359,6 +454,9 @@ public class Activity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -373,6 +471,9 @@ public class Activity {
     /**
      * Update an activity
      * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateLmsActivityRequestBuilder updateLmsActivity() {
@@ -381,6 +482,9 @@ public class Activity {
 
     /**
      * Update an activity
+     * 
+     * <p>Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

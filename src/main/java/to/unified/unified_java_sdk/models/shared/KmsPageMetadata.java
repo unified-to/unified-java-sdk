@@ -20,12 +20,16 @@ public class KmsPageMetadata {
     @JsonProperty("extra_data")
     private KmsPageMetadataExtraData extraData;
 
-
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     private KmsPageMetadataFormat format;
 
-
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
@@ -35,12 +39,19 @@ public class KmsPageMetadata {
     @JsonProperty("namespace")
     private String namespace;
 
-
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
-
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     private KmsPageMetadataValue value;
@@ -70,10 +81,16 @@ public class KmsPageMetadata {
         return Optional.ofNullable(this.extraData);
     }
 
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     public Optional<KmsPageMetadataFormat> format() {
         return Optional.ofNullable(this.format);
     }
 
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -82,10 +99,19 @@ public class KmsPageMetadata {
         return Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
 
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     public Optional<KmsPageMetadataValue> value() {
         return Optional.ofNullable(this.value);
     }
@@ -101,12 +127,18 @@ public class KmsPageMetadata {
     }
 
 
+    /**
+     * The data type of the custom field, which determines how `value` is formatted.
+     */
     public KmsPageMetadata withFormat(@Nullable KmsPageMetadataFormat format) {
         this.format = format;
         return this;
     }
 
 
+    /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
+     */
     public KmsPageMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -119,12 +151,21 @@ public class KmsPageMetadata {
     }
 
 
+    /**
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+     * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+     */
     public KmsPageMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
 
+    /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+     * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+     * MULTIPLE_SELECT as an array of option values; otherwise a string.
+     */
     public KmsPageMetadata withValue(@Nullable KmsPageMetadataValue value) {
         this.value = value;
         return this;
@@ -191,11 +232,17 @@ public class KmsPageMetadata {
             return this;
         }
 
+        /**
+         * The data type of the custom field, which determines how `value` is formatted.
+         */
         public Builder format(@Nullable KmsPageMetadataFormat format) {
             this.format = format;
             return this;
         }
 
+        /**
+         * The ID of the custom field definition (from the metadata/metadata endpoint).
+         */
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -206,11 +253,20 @@ public class KmsPageMetadata {
             return this;
         }
 
+        /**
+         * The integration's API name (key) of an existing custom field. List valid slugs for this object with
+         * the metadata/metadata endpoint; unknown slugs are rejected by the integration.
+         */
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
+        /**
+         * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for
+         * date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false;
+         * MULTIPLE_SELECT as an array of option values; otherwise a string.
+         */
         public Builder value(@Nullable KmsPageMetadataValue value) {
             this.value = value;
             return this;

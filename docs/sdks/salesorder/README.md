@@ -13,7 +13,7 @@
 
 ## createAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -51,13 +51,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.144Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.191Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("9cd920c1-6830-4199-b5e5-8584b193fc2c")
+                    .id("a7e62007-a4c6-4328-9f88-a8db8753098a")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -79,7 +79,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.144Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.191Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -113,7 +113,7 @@ public class Application {
 
 ## getAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ public class Application {
 
 ## listAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -228,7 +228,7 @@ public class Application {
 
 ## patchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -266,13 +266,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("da9eeed0-9f3c-46e3-8856-5b5e478ea07b")
+                    .id("c398d393-3647-4d70-a7a0-d6e5da942c54")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -294,7 +294,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -329,7 +329,7 @@ public class Application {
 
 ## removeAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ public class Application {
 
 ## updateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -423,13 +423,13 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .categoryIds(List.of())
-                    .closedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .closedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .createdAt(OffsetDateTime.parse("2022-01-17T16:11:50.310Z"))
                     .currency("USD")
                     .discountAmount(0d)
                     .fees(List.of())
                     .fulfillmentType(FulfillmentType.OTHER)
-                    .id("da9eeed0-9f3c-46e3-8856-5b5e478ea07b")
+                    .id("c398d393-3647-4d70-a7a0-d6e5da942c54")
                     .lineitems(List.of())
                     .metadata(List.of())
                     .orderNumber("832663")
@@ -451,7 +451,7 @@ public class Application {
                     .taxAmount(0d)
                     .tipAmount(0d)
                     .totalAmount(0d)
-                    .updatedAt(OffsetDateTime.parse("2023-03-25T12:57:53.156Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-03-25T19:09:50.206Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

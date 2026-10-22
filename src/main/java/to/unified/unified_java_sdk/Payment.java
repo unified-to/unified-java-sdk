@@ -119,6 +119,9 @@ public class Payment {
     /**
      * Create a link
      * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
+     * 
      * @return The call builder
      */
     public CreatePaymentLinkRequestBuilder createPaymentLink() {
@@ -127,6 +130,9 @@ public class Payment {
 
     /**
      * Create a link
+     * 
+     * <p>Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped
+     * to the provider's API. Returns the created PaymentLink.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -141,6 +147,9 @@ public class Payment {
     /**
      * Create a payment
      * 
+     * <p>Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are
+     * mapped to the provider's API. Returns the created PaymentPayment.
+     * 
      * @return The call builder
      */
     public CreatePaymentPaymentRequestBuilder createPaymentPayment() {
@@ -149,6 +158,9 @@ public class Payment {
 
     /**
      * Create a payment
+     * 
+     * <p>Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are
+     * mapped to the provider's API. Returns the created PaymentPayment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -163,6 +175,9 @@ public class Payment {
     /**
      * Create a subscription
      * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
+     * 
      * @return The call builder
      */
     public CreatePaymentSubscriptionRequestBuilder createPaymentSubscription() {
@@ -171,6 +186,9 @@ public class Payment {
 
     /**
      * Create a subscription
+     * 
+     * <p>Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body;
+     * they are mapped to the provider's API. Returns the created PaymentSubscription.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -185,6 +203,9 @@ public class Payment {
     /**
      * Retrieve a link
      * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentLinkRequestBuilder getPaymentLink() {
@@ -193,6 +214,9 @@ public class Payment {
 
     /**
      * Retrieve a link
+     * 
+     * <p>Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -207,6 +231,9 @@ public class Payment {
     /**
      * Retrieve a payment
      * 
+     * <p>Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentPaymentRequestBuilder getPaymentPayment() {
@@ -215,6 +242,9 @@ public class Payment {
 
     /**
      * Retrieve a payment
+     * 
+     * <p>Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -229,6 +259,9 @@ public class Payment {
     /**
      * Retrieve a payout
      * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentPayoutRequestBuilder getPaymentPayout() {
@@ -237,6 +270,9 @@ public class Payment {
 
     /**
      * Retrieve a payout
+     * 
+     * <p>Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -251,6 +287,9 @@ public class Payment {
     /**
      * Retrieve a refund
      * 
+     * <p>Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentRefundRequestBuilder getPaymentRefund() {
@@ -259,6 +298,9 @@ public class Payment {
 
     /**
      * Retrieve a refund
+     * 
+     * <p>Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -273,6 +315,9 @@ public class Payment {
     /**
      * Retrieve a subscription
      * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetPaymentSubscriptionRequestBuilder getPaymentSubscription() {
@@ -281,6 +326,9 @@ public class Payment {
 
     /**
      * Retrieve a subscription
+     * 
+     * <p>Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -295,6 +343,13 @@ public class Payment {
     /**
      * List all links
      * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentLinksRequestBuilder listPaymentLinks() {
@@ -303,6 +358,13 @@ public class Payment {
 
     /**
      * List all links
+     * 
+     * <p>Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -317,6 +379,13 @@ public class Payment {
     /**
      * List all payments
      * 
+     * <p>Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentPaymentsRequestBuilder listPaymentPayments() {
@@ -325,6 +394,13 @@ public class Payment {
 
     /**
      * List all payments
+     * 
+     * <p>Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -339,6 +415,13 @@ public class Payment {
     /**
      * List all payouts
      * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentPayoutsRequestBuilder listPaymentPayouts() {
@@ -347,6 +430,13 @@ public class Payment {
 
     /**
      * List all payouts
+     * 
+     * <p>Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -361,6 +451,13 @@ public class Payment {
     /**
      * List all refunds
      * 
+     * <p>Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentRefundsRequestBuilder listPaymentRefunds() {
@@ -369,6 +466,13 @@ public class Payment {
 
     /**
      * List all refunds
+     * 
+     * <p>Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -383,6 +487,13 @@ public class Payment {
     /**
      * List all subscriptions
      * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListPaymentSubscriptionsRequestBuilder listPaymentSubscriptions() {
@@ -391,6 +502,13 @@ public class Payment {
 
     /**
      * List all subscriptions
+     * 
+     * <p>Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -405,6 +523,9 @@ public class Payment {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchPaymentLinkRequestBuilder patchPaymentLink() {
@@ -413,6 +534,9 @@ public class Payment {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -427,6 +551,9 @@ public class Payment {
     /**
      * Update a payment
      * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchPaymentPaymentRequestBuilder patchPaymentPayment() {
@@ -435,6 +562,9 @@ public class Payment {
 
     /**
      * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -449,6 +579,9 @@ public class Payment {
     /**
      * Update a subscription
      * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public PatchPaymentSubscriptionRequestBuilder patchPaymentSubscription() {
@@ -457,6 +590,9 @@ public class Payment {
 
     /**
      * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -471,6 +607,8 @@ public class Payment {
     /**
      * Remove a link
      * 
+     * <p>Deletes the PaymentLink identified by `id`.
+     * 
      * @return The call builder
      */
     public RemovePaymentLinkRequestBuilder removePaymentLink() {
@@ -479,6 +617,8 @@ public class Payment {
 
     /**
      * Remove a link
+     * 
+     * <p>Deletes the PaymentLink identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -493,6 +633,8 @@ public class Payment {
     /**
      * Remove a payment
      * 
+     * <p>Deletes the PaymentPayment identified by `id`.
+     * 
      * @return The call builder
      */
     public RemovePaymentPaymentRequestBuilder removePaymentPayment() {
@@ -501,6 +643,8 @@ public class Payment {
 
     /**
      * Remove a payment
+     * 
+     * <p>Deletes the PaymentPayment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -515,6 +659,8 @@ public class Payment {
     /**
      * Remove a subscription
      * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
+     * 
      * @return The call builder
      */
     public RemovePaymentSubscriptionRequestBuilder removePaymentSubscription() {
@@ -523,6 +669,8 @@ public class Payment {
 
     /**
      * Remove a subscription
+     * 
+     * <p>Deletes the PaymentSubscription identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -537,6 +685,9 @@ public class Payment {
     /**
      * Update a link
      * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdatePaymentLinkRequestBuilder updatePaymentLink() {
@@ -545,6 +696,9 @@ public class Payment {
 
     /**
      * Update a link
+     * 
+     * <p>Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -559,6 +713,9 @@ public class Payment {
     /**
      * Update a payment
      * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdatePaymentPaymentRequestBuilder updatePaymentPayment() {
@@ -567,6 +724,9 @@ public class Payment {
 
     /**
      * Update a payment
+     * 
+     * <p>Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -581,6 +741,9 @@ public class Payment {
     /**
      * Update a subscription
      * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
+     * 
      * @return The call builder
      */
     public UpdatePaymentSubscriptionRequestBuilder updatePaymentSubscription() {
@@ -589,6 +752,9 @@ public class Payment {
 
     /**
      * Update a subscription
+     * 
+     * <p>Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

@@ -13,7 +13,7 @@
 
 ## createComputeService
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("6802d7fc-fd3d-4924-a272-8b1f1ba66951")
+                    .id("66088a7f-5034-4e14-8263-b823b6c97f51")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -55,7 +55,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.865Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.160Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -90,7 +90,7 @@ public class Application {
 
 ## getComputeService
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ public class Application {
 
 ## listComputeServices
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ public class Application {
 
 ## patchComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("a8855da9-432e-4c85-acfa-db5d02c01299")
+                    .id("2d0b9b53-489b-4f63-8a3e-830d202db2dc")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -247,7 +247,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.873Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.168Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -283,7 +283,7 @@ public class Application {
 
 ## removeComputeService
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ public class Application {
 
 ## updateComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -370,7 +370,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("a8855da9-432e-4c85-acfa-db5d02c01299")
+                    .id("2d0b9b53-489b-4f63-8a3e-830d202db2dc")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -381,7 +381,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-04T16:31:26.873Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-05T04:49:02.168Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")

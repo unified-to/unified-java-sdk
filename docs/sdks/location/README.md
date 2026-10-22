@@ -23,7 +23,7 @@
 
 ## createCommerceLocation
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -63,7 +63,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("334bc23e-e874-4b99-bbc0-2b920772b4bf")
+                    .id("ea8e8094-c170-404f-9432-2256deaecf5e")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -75,10 +75,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a64c488c-f41f-491c-9166-6c9993e5c98d")
+                            .id("19b31ed2-2f84-4ca4-a53d-af760d937e09")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("227722cc-0d1d-4f7c-8164-37f14f4be291")
+                                    .id("0c762a6f-ff06-48db-ac58-c5b367dad91a")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -100,7 +100,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.179Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.922Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -135,7 +135,7 @@ public class Application {
 
 ## createHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("32b8df3b-dc51-4e85-9e5d-2ddbd5b69acb")
+                    .id("6ea684d2-8ac8-463e-87b6-06668404342e")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -195,7 +195,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.149Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.678Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -229,7 +229,7 @@ public class Application {
 
 ## getClubsLocation
 
-Retrieve a location
+Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -287,7 +287,7 @@ public class Application {
 
 ## getCommerceLocation
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -345,7 +345,7 @@ public class Application {
 
 ## getHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -403,7 +403,7 @@ public class Application {
 
 ## getHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -461,7 +461,7 @@ public class Application {
 
 ## listClubsLocations
 
-List all locations
+Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -518,7 +518,7 @@ public class Application {
 
 ## listCommerceLocations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -575,7 +575,7 @@ public class Application {
 
 ## listHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -632,7 +632,7 @@ public class Application {
 
 ## listHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -689,7 +689,7 @@ public class Application {
 
 ## patchCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -729,7 +729,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("2c5034b8-e3ba-41af-97de-070154474788")
+                    .id("1106f5ae-9b76-4913-81b6-0f36ec78e4b8")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -741,10 +741,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a54f9654-a152-48a2-88ce-5f12bd269be0")
+                            .id("5f79cf75-f035-43fc-8c70-b6a1fb70178d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a70aab16-4e4d-4d35-933b-3dd0b85cf89f")
+                                    .id("f47a6dad-f383-4ac4-991d-d0aec30c211d")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -766,7 +766,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.190Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.938Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -802,7 +802,7 @@ public class Application {
 
 ## patchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -842,7 +842,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("d5b58849-cba9-48ad-bcd3-463c93359e4e")
+                    .id("21266f65-f4b1-4fb4-a48c-4d4ea0d1d0c4")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -862,7 +862,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.158Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.685Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -897,7 +897,7 @@ public class Application {
 
 ## removeCommerceLocation
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -953,7 +953,7 @@ public class Application {
 
 ## removeHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -1009,7 +1009,7 @@ public class Application {
 
 ## updateCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1049,7 +1049,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("2c5034b8-e3ba-41af-97de-070154474788")
+                    .id("1106f5ae-9b76-4913-81b6-0f36ec78e4b8")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -1061,10 +1061,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("a54f9654-a152-48a2-88ce-5f12bd269be0")
+                            .id("5f79cf75-f035-43fc-8c70-b6a1fb70178d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a70aab16-4e4d-4d35-933b-3dd0b85cf89f")
+                                    .id("f47a6dad-f383-4ac4-991d-d0aec30c211d")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -1086,7 +1086,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-20T17:57:32.190Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-21T02:32:01.938Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -1122,7 +1122,7 @@ public class Application {
 
 ## updateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1162,7 +1162,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("d5b58849-cba9-48ad-bcd3-463c93359e4e")
+                    .id("21266f65-f4b1-4fb4-a48c-4d4ea0d1d0c4")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -1182,7 +1182,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T02:28:19.158Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-21T11:35:45.685Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

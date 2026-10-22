@@ -65,6 +65,9 @@ public class AsyncVerification {
     /**
      * Create a request
      * 
+     * <p>Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body;
+     * they are mapped to the provider's API. Returns the created VerificationRequest.
+     * 
      * @return The async call builder
      */
     public CreateVerificationRequestRequestBuilder createVerificationRequest() {
@@ -73,6 +76,9 @@ public class AsyncVerification {
 
     /**
      * Create a request
+     * 
+     * <p>Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body;
+     * they are mapped to the provider's API. Returns the created VerificationRequest.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncVerification {
     /**
      * Retrieve a package
      * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetVerificationPackageRequestBuilder getVerificationPackage() {
@@ -96,6 +105,9 @@ public class AsyncVerification {
 
     /**
      * Retrieve a package
+     * 
+     * <p>Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncVerification {
     /**
      * Retrieve a request
      * 
+     * <p>Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetVerificationRequestRequestBuilder getVerificationRequest() {
@@ -119,6 +134,9 @@ public class AsyncVerification {
 
     /**
      * Retrieve a request
+     * 
+     * <p>Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncVerification {
     /**
      * List all packages
      * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListVerificationPackagesRequestBuilder listVerificationPackages() {
@@ -142,6 +167,13 @@ public class AsyncVerification {
 
     /**
      * List all packages
+     * 
+     * <p>Returns a list of VerificationPackages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncVerification {
     /**
      * List all requests
      * 
+     * <p>Returns a list of VerificationRequests. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListVerificationRequestsRequestBuilder listVerificationRequests() {
@@ -165,6 +204,13 @@ public class AsyncVerification {
 
     /**
      * List all requests
+     * 
+     * <p>Returns a list of VerificationRequests. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncVerification {
     /**
      * Update a request
      * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchVerificationRequestRequestBuilder patchVerificationRequest() {
@@ -188,6 +237,9 @@ public class AsyncVerification {
 
     /**
      * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncVerification {
     /**
      * Remove a request
      * 
+     * <p>Deletes the VerificationRequest identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveVerificationRequestRequestBuilder removeVerificationRequest() {
@@ -211,6 +265,8 @@ public class AsyncVerification {
 
     /**
      * Remove a request
+     * 
+     * <p>Deletes the VerificationRequest identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncVerification {
     /**
      * Update a request
      * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateVerificationRequestRequestBuilder updateVerificationRequest() {
@@ -234,6 +293,9 @@ public class AsyncVerification {
 
     /**
      * Update a request
+     * 
+     * <p>Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields
+     * to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response

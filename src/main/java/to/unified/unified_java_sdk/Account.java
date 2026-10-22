@@ -55,6 +55,9 @@ public class Account {
     /**
      * Create an account
      * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
+     * 
      * @return The call builder
      */
     public CreateAccountingAccountRequestBuilder createAccountingAccount() {
@@ -63,6 +66,9 @@ public class Account {
 
     /**
      * Create an account
+     * 
+     * <p>Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they
+     * are mapped to the provider's API. Returns the created AccountingAccount.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -77,6 +83,9 @@ public class Account {
     /**
      * Retrieve an account
      * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetAccountingAccountRequestBuilder getAccountingAccount() {
@@ -85,6 +94,9 @@ public class Account {
 
     /**
      * Retrieve an account
+     * 
+     * <p>Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -99,6 +111,13 @@ public class Account {
     /**
      * List all accounts
      * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListAccountingAccountsRequestBuilder listAccountingAccounts() {
@@ -107,6 +126,13 @@ public class Account {
 
     /**
      * List all accounts
+     * 
+     * <p>Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -121,6 +147,9 @@ public class Account {
     /**
      * Update an account
      * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchAccountingAccountRequestBuilder patchAccountingAccount() {
@@ -129,6 +158,9 @@ public class Account {
 
     /**
      * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -143,6 +175,8 @@ public class Account {
     /**
      * Remove an account
      * 
+     * <p>Deletes the AccountingAccount identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveAccountingAccountRequestBuilder removeAccountingAccount() {
@@ -151,6 +185,8 @@ public class Account {
 
     /**
      * Remove an account
+     * 
+     * <p>Deletes the AccountingAccount identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -165,6 +201,9 @@ public class Account {
     /**
      * Update an account
      * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateAccountingAccountRequestBuilder updateAccountingAccount() {
@@ -173,6 +212,9 @@ public class Account {
 
     /**
      * Update an account
+     * 
+     * <p>Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

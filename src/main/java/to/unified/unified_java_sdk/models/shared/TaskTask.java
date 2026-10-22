@@ -94,7 +94,9 @@ public class TaskTask {
     @JsonProperty("metadata")
     private List<TaskMetadata> metadata;
 
-
+    /**
+     * The task's title
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -325,6 +327,9 @@ public class TaskTask {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The task's title
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -501,6 +506,9 @@ public class TaskTask {
     }
 
 
+    /**
+     * The task's title
+     */
     public TaskTask withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -843,6 +851,9 @@ public class TaskTask {
             return this;
         }
 
+        /**
+         * The task's title
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

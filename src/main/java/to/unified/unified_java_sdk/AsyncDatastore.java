@@ -109,6 +109,9 @@ public class AsyncDatastore {
     /**
      * Create a database
      * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreDatabaseRequestBuilder createDatastoreDatabase() {
@@ -117,6 +120,9 @@ public class AsyncDatastore {
 
     /**
      * Create a database
+     * 
+     * <p>Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they
+     * are mapped to the provider's API. Returns the created DatastoreDatabase.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreDatabaseResponse>} - The async response
@@ -132,6 +138,9 @@ public class AsyncDatastore {
     /**
      * Create a query
      * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreQueryRequestBuilder createDatastoreQuery() {
@@ -140,6 +149,9 @@ public class AsyncDatastore {
 
     /**
      * Create a query
+     * 
+     * <p>Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreQuery.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreQueryResponse>} - The async response
@@ -155,6 +167,9 @@ public class AsyncDatastore {
     /**
      * Create a record
      * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreRecordRequestBuilder createDatastoreRecord() {
@@ -163,6 +178,9 @@ public class AsyncDatastore {
 
     /**
      * Create a record
+     * 
+     * <p>Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreRecord.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreRecordResponse>} - The async response
@@ -178,6 +196,9 @@ public class AsyncDatastore {
     /**
      * Create a table
      * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
+     * 
      * @return The async call builder
      */
     public CreateDatastoreTableRequestBuilder createDatastoreTable() {
@@ -186,6 +207,9 @@ public class AsyncDatastore {
 
     /**
      * Create a table
+     * 
+     * <p>Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are
+     * mapped to the provider's API. Returns the created DatastoreTable.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateDatastoreTableResponse>} - The async response
@@ -201,6 +225,9 @@ public class AsyncDatastore {
     /**
      * Retrieve a database
      * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetDatastoreDatabaseRequestBuilder getDatastoreDatabase() {
@@ -209,6 +236,9 @@ public class AsyncDatastore {
 
     /**
      * Retrieve a database
+     * 
+     * <p>Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetDatastoreDatabaseResponse>} - The async response
@@ -224,6 +254,9 @@ public class AsyncDatastore {
     /**
      * Retrieve a record
      * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetDatastoreRecordRequestBuilder getDatastoreRecord() {
@@ -232,6 +265,9 @@ public class AsyncDatastore {
 
     /**
      * Retrieve a record
+     * 
+     * <p>Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetDatastoreRecordResponse>} - The async response
@@ -247,6 +283,9 @@ public class AsyncDatastore {
     /**
      * Retrieve a table
      * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetDatastoreTableRequestBuilder getDatastoreTable() {
@@ -255,6 +294,9 @@ public class AsyncDatastore {
 
     /**
      * Retrieve a table
+     * 
+     * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetDatastoreTableResponse>} - The async response
@@ -270,6 +312,13 @@ public class AsyncDatastore {
     /**
      * List all databases
      * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListDatastoreDatabasesRequestBuilder listDatastoreDatabases() {
@@ -278,6 +327,13 @@ public class AsyncDatastore {
 
     /**
      * List all databases
+     * 
+     * <p>Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListDatastoreDatabasesResponse>} - The async response
@@ -293,6 +349,13 @@ public class AsyncDatastore {
     /**
      * List all records
      * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListDatastoreRecordsRequestBuilder listDatastoreRecords() {
@@ -301,6 +364,13 @@ public class AsyncDatastore {
 
     /**
      * List all records
+     * 
+     * <p>Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListDatastoreRecordsResponse>} - The async response
@@ -316,6 +386,13 @@ public class AsyncDatastore {
     /**
      * List all tables
      * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListDatastoreTablesRequestBuilder listDatastoreTables() {
@@ -324,6 +401,13 @@ public class AsyncDatastore {
 
     /**
      * List all tables
+     * 
+     * <p>Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListDatastoreTablesResponse>} - The async response
@@ -339,6 +423,9 @@ public class AsyncDatastore {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchDatastoreDatabaseRequestBuilder patchDatastoreDatabase() {
@@ -347,6 +434,9 @@ public class AsyncDatastore {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchDatastoreDatabaseResponse>} - The async response
@@ -362,6 +452,9 @@ public class AsyncDatastore {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchDatastoreRecordRequestBuilder patchDatastoreRecord() {
@@ -370,6 +463,9 @@ public class AsyncDatastore {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchDatastoreRecordResponse>} - The async response
@@ -385,6 +481,9 @@ public class AsyncDatastore {
     /**
      * Update a table
      * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchDatastoreTableRequestBuilder patchDatastoreTable() {
@@ -393,6 +492,9 @@ public class AsyncDatastore {
 
     /**
      * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchDatastoreTableResponse>} - The async response
@@ -408,6 +510,8 @@ public class AsyncDatastore {
     /**
      * Remove a database
      * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveDatastoreDatabaseRequestBuilder removeDatastoreDatabase() {
@@ -416,6 +520,8 @@ public class AsyncDatastore {
 
     /**
      * Remove a database
+     * 
+     * <p>Deletes the DatastoreDatabase identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveDatastoreDatabaseResponse>} - The async response
@@ -431,6 +537,8 @@ public class AsyncDatastore {
     /**
      * Remove a record
      * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveDatastoreRecordRequestBuilder removeDatastoreRecord() {
@@ -439,6 +547,8 @@ public class AsyncDatastore {
 
     /**
      * Remove a record
+     * 
+     * <p>Deletes the DatastoreRecord identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveDatastoreRecordResponse>} - The async response
@@ -454,6 +564,8 @@ public class AsyncDatastore {
     /**
      * Remove a table
      * 
+     * <p>Deletes the DatastoreTable identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveDatastoreTableRequestBuilder removeDatastoreTable() {
@@ -462,6 +574,8 @@ public class AsyncDatastore {
 
     /**
      * Remove a table
+     * 
+     * <p>Deletes the DatastoreTable identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveDatastoreTableResponse>} - The async response
@@ -477,6 +591,9 @@ public class AsyncDatastore {
     /**
      * Update a database
      * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateDatastoreDatabaseRequestBuilder updateDatastoreDatabase() {
@@ -485,6 +602,9 @@ public class AsyncDatastore {
 
     /**
      * Update a database
+     * 
+     * <p>Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateDatastoreDatabaseResponse>} - The async response
@@ -500,6 +620,9 @@ public class AsyncDatastore {
     /**
      * Update a record
      * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateDatastoreRecordRequestBuilder updateDatastoreRecord() {
@@ -508,6 +631,9 @@ public class AsyncDatastore {
 
     /**
      * Update a record
+     * 
+     * <p>Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateDatastoreRecordResponse>} - The async response
@@ -523,6 +649,9 @@ public class AsyncDatastore {
     /**
      * Update a table
      * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateDatastoreTableRequestBuilder updateDatastoreTable() {
@@ -531,6 +660,9 @@ public class AsyncDatastore {
 
     /**
      * Update a table
+     * 
+     * <p>Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateDatastoreTableResponse>} - The async response

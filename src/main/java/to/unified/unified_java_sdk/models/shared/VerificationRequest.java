@@ -44,7 +44,9 @@ public class VerificationRequest {
     @JsonProperty("metadata")
     private List<VerificationMetadata> metadata;
 
-
+    /**
+     * The ID of the verification package (the check) to run (a VerificationPackage ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_id")
     private String packageId;
@@ -66,7 +68,9 @@ public class VerificationRequest {
     @JsonProperty("profile_date_of_birth")
     private String profileDateOfBirth;
 
-
+    /**
+     * The email addresses of the person being verified
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_emails")
     private List<String> profileEmails;
@@ -83,7 +87,9 @@ public class VerificationRequest {
     @JsonProperty("profile_ip_address")
     private String profileIpAddress;
 
-
+    /**
+     * The full name of the person being verified
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_name")
     private String profileName;
@@ -271,6 +277,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The ID of the verification package (the check) to run (a VerificationPackage ID)
+     */
     public Optional<String> packageId() {
         return Optional.ofNullable(this.packageId);
     }
@@ -290,6 +299,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.profileDateOfBirth);
     }
 
+    /**
+     * The email addresses of the person being verified
+     */
     public Optional<List<String>> profileEmails() {
         return Optional.ofNullable(this.profileEmails);
     }
@@ -305,6 +317,9 @@ public class VerificationRequest {
         return Optional.ofNullable(this.profileIpAddress);
     }
 
+    /**
+     * The full name of the person being verified
+     */
     public Optional<String> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -431,6 +446,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * The ID of the verification package (the check) to run (a VerificationPackage ID)
+     */
     public VerificationRequest withPackageId(@Nullable String packageId) {
         this.packageId = packageId;
         return this;
@@ -458,6 +476,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * The email addresses of the person being verified
+     */
     public VerificationRequest withProfileEmails(@Nullable List<String> profileEmails) {
         this.profileEmails = profileEmails;
         return this;
@@ -479,6 +500,9 @@ public class VerificationRequest {
     }
 
 
+    /**
+     * The full name of the person being verified
+     */
     public VerificationRequest withProfileName(@Nullable String profileName) {
         this.profileName = profileName;
         return this;
@@ -768,6 +792,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * The ID of the verification package (the check) to run (a VerificationPackage ID)
+         */
         public Builder packageId(@Nullable String packageId) {
             this.packageId = packageId;
             return this;
@@ -791,6 +818,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * The email addresses of the person being verified
+         */
         public Builder profileEmails(@Nullable List<String> profileEmails) {
             this.profileEmails = profileEmails;
             return this;
@@ -809,6 +839,9 @@ public class VerificationRequest {
             return this;
         }
 
+        /**
+         * The full name of the person being verified
+         */
         public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;

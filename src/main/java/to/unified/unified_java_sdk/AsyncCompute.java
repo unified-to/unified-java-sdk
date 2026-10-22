@@ -261,6 +261,9 @@ public class AsyncCompute {
     /**
      * Create a deployment
      * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
+     * 
      * @return The async call builder
      */
     public CreateComputeDeploymentRequestBuilder createComputeDeployment() {
@@ -269,6 +272,9 @@ public class AsyncCompute {
 
     /**
      * Create a deployment
+     * 
+     * <p>Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they
+     * are mapped to the provider's API. Returns the created ComputeDeployment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeDeploymentResponse>} - The async response
@@ -284,6 +290,9 @@ public class AsyncCompute {
     /**
      * Create a domain
      * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
+     * 
      * @return The async call builder
      */
     public CreateComputeDomainRequestBuilder createComputeDomain() {
@@ -292,6 +301,9 @@ public class AsyncCompute {
 
     /**
      * Create a domain
+     * 
+     * <p>Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeDomain.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeDomainResponse>} - The async response
@@ -307,6 +319,9 @@ public class AsyncCompute {
     /**
      * Create an envvar
      * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
+     * 
      * @return The async call builder
      */
     public CreateComputeEnvvarRequestBuilder createComputeEnvvar() {
@@ -315,6 +330,9 @@ public class AsyncCompute {
 
     /**
      * Create an envvar
+     * 
+     * <p>Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeEnvvar.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeEnvvarResponse>} - The async response
@@ -330,6 +348,9 @@ public class AsyncCompute {
     /**
      * Create an instance
      * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
      * @return The async call builder
      */
     public CreateComputeInstanceRequestBuilder createComputeInstance() {
@@ -338,6 +359,9 @@ public class AsyncCompute {
 
     /**
      * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeInstanceResponse>} - The async response
@@ -353,6 +377,9 @@ public class AsyncCompute {
     /**
      * Create a key
      * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
+     * 
      * @return The async call builder
      */
     public CreateComputeKeyRequestBuilder createComputeKey() {
@@ -361,6 +388,9 @@ public class AsyncCompute {
 
     /**
      * Create a key
+     * 
+     * <p>Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to
+     * the provider's API. Returns the created ComputeKey.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeKeyResponse>} - The async response
@@ -376,6 +406,9 @@ public class AsyncCompute {
     /**
      * Create a service
      * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
+     * 
      * @return The async call builder
      */
     public CreateComputeServiceRequestBuilder createComputeService() {
@@ -384,6 +417,9 @@ public class AsyncCompute {
 
     /**
      * Create a service
+     * 
+     * <p>Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeService.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeServiceResponse>} - The async response
@@ -399,6 +435,9 @@ public class AsyncCompute {
     /**
      * Create a snapshot
      * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
+     * 
      * @return The async call builder
      */
     public CreateComputeSnapshotRequestBuilder createComputeSnapshot() {
@@ -407,6 +446,9 @@ public class AsyncCompute {
 
     /**
      * Create a snapshot
+     * 
+     * <p>Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeSnapshot.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeSnapshotResponse>} - The async response
@@ -422,6 +464,9 @@ public class AsyncCompute {
     /**
      * Create a template
      * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
      * @return The async call builder
      */
     public CreateComputeTemplateRequestBuilder createComputeTemplate() {
@@ -430,6 +475,9 @@ public class AsyncCompute {
 
     /**
      * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
@@ -445,6 +493,9 @@ public class AsyncCompute {
     /**
      * Create a volume
      * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
+     * 
      * @return The async call builder
      */
     public CreateComputeVolumeRequestBuilder createComputeVolume() {
@@ -453,6 +504,9 @@ public class AsyncCompute {
 
     /**
      * Create a volume
+     * 
+     * <p>Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeVolume.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeVolumeResponse>} - The async response
@@ -468,6 +522,9 @@ public class AsyncCompute {
     /**
      * Retrieve a deployment
      * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeDeploymentRequestBuilder getComputeDeployment() {
@@ -476,6 +533,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a deployment
+     * 
+     * <p>Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeDeploymentResponse>} - The async response
@@ -491,6 +551,9 @@ public class AsyncCompute {
     /**
      * Retrieve a domain
      * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeDomainRequestBuilder getComputeDomain() {
@@ -499,6 +562,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a domain
+     * 
+     * <p>Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeDomainResponse>} - The async response
@@ -514,6 +580,9 @@ public class AsyncCompute {
     /**
      * Retrieve an envvar
      * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeEnvvarRequestBuilder getComputeEnvvar() {
@@ -522,6 +591,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve an envvar
+     * 
+     * <p>Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeEnvvarResponse>} - The async response
@@ -537,6 +609,9 @@ public class AsyncCompute {
     /**
      * Retrieve a gputype
      * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeGputypeRequestBuilder getComputeGputype() {
@@ -545,6 +620,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a gputype
+     * 
+     * <p>Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeGputypeResponse>} - The async response
@@ -560,6 +638,9 @@ public class AsyncCompute {
     /**
      * Retrieve an instance
      * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeInstanceRequestBuilder getComputeInstance() {
@@ -568,6 +649,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeInstanceResponse>} - The async response
@@ -583,6 +667,9 @@ public class AsyncCompute {
     /**
      * Retrieve a key
      * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeKeyRequestBuilder getComputeKey() {
@@ -591,6 +678,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a key
+     * 
+     * <p>Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeKeyResponse>} - The async response
@@ -606,6 +696,9 @@ public class AsyncCompute {
     /**
      * Retrieve a region
      * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeRegionRequestBuilder getComputeRegion() {
@@ -614,6 +707,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a region
+     * 
+     * <p>Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeRegionResponse>} - The async response
@@ -629,6 +725,9 @@ public class AsyncCompute {
     /**
      * Retrieve a service
      * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeServiceRequestBuilder getComputeService() {
@@ -637,6 +736,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a service
+     * 
+     * <p>Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeServiceResponse>} - The async response
@@ -652,6 +754,9 @@ public class AsyncCompute {
     /**
      * Retrieve a snapshot
      * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeSnapshotRequestBuilder getComputeSnapshot() {
@@ -660,6 +765,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a snapshot
+     * 
+     * <p>Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeSnapshotResponse>} - The async response
@@ -675,6 +783,9 @@ public class AsyncCompute {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeTemplateRequestBuilder getComputeTemplate() {
@@ -683,6 +794,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
@@ -698,6 +812,9 @@ public class AsyncCompute {
     /**
      * Retrieve a volume
      * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeVolumeRequestBuilder getComputeVolume() {
@@ -706,6 +823,9 @@ public class AsyncCompute {
 
     /**
      * Retrieve a volume
+     * 
+     * <p>Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeVolumeResponse>} - The async response
@@ -721,6 +841,13 @@ public class AsyncCompute {
     /**
      * List all deployments
      * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeDeploymentsRequestBuilder listComputeDeployments() {
@@ -729,6 +856,13 @@ public class AsyncCompute {
 
     /**
      * List all deployments
+     * 
+     * <p>Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeDeploymentsResponse>} - The async response
@@ -744,6 +878,13 @@ public class AsyncCompute {
     /**
      * List all domains
      * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeDomainsRequestBuilder listComputeDomains() {
@@ -752,6 +893,13 @@ public class AsyncCompute {
 
     /**
      * List all domains
+     * 
+     * <p>Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeDomainsResponse>} - The async response
@@ -767,6 +915,13 @@ public class AsyncCompute {
     /**
      * List all envvars
      * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeEnvvarsRequestBuilder listComputeEnvvars() {
@@ -775,6 +930,13 @@ public class AsyncCompute {
 
     /**
      * List all envvars
+     * 
+     * <p>Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeEnvvarsResponse>} - The async response
@@ -790,6 +952,13 @@ public class AsyncCompute {
     /**
      * List all gputypes
      * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeGputypesRequestBuilder listComputeGputypes() {
@@ -798,6 +967,13 @@ public class AsyncCompute {
 
     /**
      * List all gputypes
+     * 
+     * <p>Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeGputypesResponse>} - The async response
@@ -813,6 +989,13 @@ public class AsyncCompute {
     /**
      * List all instances
      * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeInstancesRequestBuilder listComputeInstances() {
@@ -821,6 +1004,13 @@ public class AsyncCompute {
 
     /**
      * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeInstancesResponse>} - The async response
@@ -836,6 +1026,13 @@ public class AsyncCompute {
     /**
      * List all keys
      * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeKeysRequestBuilder listComputeKeys() {
@@ -844,6 +1041,13 @@ public class AsyncCompute {
 
     /**
      * List all keys
+     * 
+     * <p>Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeKeysResponse>} - The async response
@@ -859,6 +1063,13 @@ public class AsyncCompute {
     /**
      * List all regions
      * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeRegionsRequestBuilder listComputeRegions() {
@@ -867,6 +1078,13 @@ public class AsyncCompute {
 
     /**
      * List all regions
+     * 
+     * <p>Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeRegionsResponse>} - The async response
@@ -882,6 +1100,13 @@ public class AsyncCompute {
     /**
      * List all services
      * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeServicesRequestBuilder listComputeServices() {
@@ -890,6 +1115,13 @@ public class AsyncCompute {
 
     /**
      * List all services
+     * 
+     * <p>Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeServicesResponse>} - The async response
@@ -905,6 +1137,13 @@ public class AsyncCompute {
     /**
      * List all snapshots
      * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeSnapshotsRequestBuilder listComputeSnapshots() {
@@ -913,6 +1152,13 @@ public class AsyncCompute {
 
     /**
      * List all snapshots
+     * 
+     * <p>Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeSnapshotsResponse>} - The async response
@@ -928,6 +1174,13 @@ public class AsyncCompute {
     /**
      * List all templates
      * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeTemplatesRequestBuilder listComputeTemplates() {
@@ -936,6 +1189,13 @@ public class AsyncCompute {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
@@ -951,6 +1211,13 @@ public class AsyncCompute {
     /**
      * List all usages
      * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeUsagesRequestBuilder listComputeUsages() {
@@ -959,6 +1226,13 @@ public class AsyncCompute {
 
     /**
      * List all usages
+     * 
+     * <p>Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeUsagesResponse>} - The async response
@@ -974,6 +1248,13 @@ public class AsyncCompute {
     /**
      * List all volumes
      * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeVolumesRequestBuilder listComputeVolumes() {
@@ -982,6 +1263,13 @@ public class AsyncCompute {
 
     /**
      * List all volumes
+     * 
+     * <p>Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeVolumesResponse>} - The async response
@@ -997,6 +1285,9 @@ public class AsyncCompute {
     /**
      * Update a deployment
      * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeDeploymentRequestBuilder patchComputeDeployment() {
@@ -1005,6 +1296,9 @@ public class AsyncCompute {
 
     /**
      * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeDeploymentResponse>} - The async response
@@ -1020,6 +1314,9 @@ public class AsyncCompute {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeDomainRequestBuilder patchComputeDomain() {
@@ -1028,6 +1325,9 @@ public class AsyncCompute {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeDomainResponse>} - The async response
@@ -1043,6 +1343,9 @@ public class AsyncCompute {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeEnvvarRequestBuilder patchComputeEnvvar() {
@@ -1051,6 +1354,9 @@ public class AsyncCompute {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeEnvvarResponse>} - The async response
@@ -1066,6 +1372,9 @@ public class AsyncCompute {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeInstanceRequestBuilder patchComputeInstance() {
@@ -1074,6 +1383,9 @@ public class AsyncCompute {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeInstanceResponse>} - The async response
@@ -1089,6 +1401,9 @@ public class AsyncCompute {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeKeyRequestBuilder patchComputeKey() {
@@ -1097,6 +1412,9 @@ public class AsyncCompute {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeKeyResponse>} - The async response
@@ -1112,6 +1430,9 @@ public class AsyncCompute {
     /**
      * Update a service
      * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeServiceRequestBuilder patchComputeService() {
@@ -1120,6 +1441,9 @@ public class AsyncCompute {
 
     /**
      * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeServiceResponse>} - The async response
@@ -1135,6 +1459,9 @@ public class AsyncCompute {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
@@ -1143,6 +1470,9 @@ public class AsyncCompute {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
@@ -1158,6 +1488,9 @@ public class AsyncCompute {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeVolumeRequestBuilder patchComputeVolume() {
@@ -1166,6 +1499,9 @@ public class AsyncCompute {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeVolumeResponse>} - The async response
@@ -1181,6 +1517,8 @@ public class AsyncCompute {
     /**
      * Remove a deployment
      * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeDeploymentRequestBuilder removeComputeDeployment() {
@@ -1189,6 +1527,8 @@ public class AsyncCompute {
 
     /**
      * Remove a deployment
+     * 
+     * <p>Deletes the ComputeDeployment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeDeploymentResponse>} - The async response
@@ -1204,6 +1544,8 @@ public class AsyncCompute {
     /**
      * Remove a domain
      * 
+     * <p>Deletes the ComputeDomain identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeDomainRequestBuilder removeComputeDomain() {
@@ -1212,6 +1554,8 @@ public class AsyncCompute {
 
     /**
      * Remove a domain
+     * 
+     * <p>Deletes the ComputeDomain identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeDomainResponse>} - The async response
@@ -1227,6 +1571,8 @@ public class AsyncCompute {
     /**
      * Remove an envvar
      * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeEnvvarRequestBuilder removeComputeEnvvar() {
@@ -1235,6 +1581,8 @@ public class AsyncCompute {
 
     /**
      * Remove an envvar
+     * 
+     * <p>Deletes the ComputeEnvvar identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeEnvvarResponse>} - The async response
@@ -1250,6 +1598,8 @@ public class AsyncCompute {
     /**
      * Remove an instance
      * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeInstanceRequestBuilder removeComputeInstance() {
@@ -1258,6 +1608,8 @@ public class AsyncCompute {
 
     /**
      * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeInstanceResponse>} - The async response
@@ -1273,6 +1625,8 @@ public class AsyncCompute {
     /**
      * Remove a key
      * 
+     * <p>Deletes the ComputeKey identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeKeyRequestBuilder removeComputeKey() {
@@ -1281,6 +1635,8 @@ public class AsyncCompute {
 
     /**
      * Remove a key
+     * 
+     * <p>Deletes the ComputeKey identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeKeyResponse>} - The async response
@@ -1296,6 +1652,8 @@ public class AsyncCompute {
     /**
      * Remove a service
      * 
+     * <p>Deletes the ComputeService identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeServiceRequestBuilder removeComputeService() {
@@ -1304,6 +1662,8 @@ public class AsyncCompute {
 
     /**
      * Remove a service
+     * 
+     * <p>Deletes the ComputeService identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeServiceResponse>} - The async response
@@ -1319,6 +1679,8 @@ public class AsyncCompute {
     /**
      * Remove a snapshot
      * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeSnapshotRequestBuilder removeComputeSnapshot() {
@@ -1327,6 +1689,8 @@ public class AsyncCompute {
 
     /**
      * Remove a snapshot
+     * 
+     * <p>Deletes the ComputeSnapshot identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeSnapshotResponse>} - The async response
@@ -1342,6 +1706,8 @@ public class AsyncCompute {
     /**
      * Remove a template
      * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
@@ -1350,6 +1716,8 @@ public class AsyncCompute {
 
     /**
      * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
@@ -1365,6 +1733,8 @@ public class AsyncCompute {
     /**
      * Remove a volume
      * 
+     * <p>Deletes the ComputeVolume identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeVolumeRequestBuilder removeComputeVolume() {
@@ -1373,6 +1743,8 @@ public class AsyncCompute {
 
     /**
      * Remove a volume
+     * 
+     * <p>Deletes the ComputeVolume identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeVolumeResponse>} - The async response
@@ -1388,6 +1760,9 @@ public class AsyncCompute {
     /**
      * Update a deployment
      * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeDeploymentRequestBuilder updateComputeDeployment() {
@@ -1396,6 +1771,9 @@ public class AsyncCompute {
 
     /**
      * Update a deployment
+     * 
+     * <p>Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeDeploymentResponse>} - The async response
@@ -1411,6 +1789,9 @@ public class AsyncCompute {
     /**
      * Update a domain
      * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeDomainRequestBuilder updateComputeDomain() {
@@ -1419,6 +1800,9 @@ public class AsyncCompute {
 
     /**
      * Update a domain
+     * 
+     * <p>Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeDomainResponse>} - The async response
@@ -1434,6 +1818,9 @@ public class AsyncCompute {
     /**
      * Update an envvar
      * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeEnvvarRequestBuilder updateComputeEnvvar() {
@@ -1442,6 +1829,9 @@ public class AsyncCompute {
 
     /**
      * Update an envvar
+     * 
+     * <p>Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeEnvvarResponse>} - The async response
@@ -1457,6 +1847,9 @@ public class AsyncCompute {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeInstanceRequestBuilder updateComputeInstance() {
@@ -1465,6 +1858,9 @@ public class AsyncCompute {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeInstanceResponse>} - The async response
@@ -1480,6 +1876,9 @@ public class AsyncCompute {
     /**
      * Update a key
      * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeKeyRequestBuilder updateComputeKey() {
@@ -1488,6 +1887,9 @@ public class AsyncCompute {
 
     /**
      * Update a key
+     * 
+     * <p>Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeKeyResponse>} - The async response
@@ -1503,6 +1905,9 @@ public class AsyncCompute {
     /**
      * Update a service
      * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeServiceRequestBuilder updateComputeService() {
@@ -1511,6 +1916,9 @@ public class AsyncCompute {
 
     /**
      * Update a service
+     * 
+     * <p>Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeServiceResponse>} - The async response
@@ -1526,6 +1934,9 @@ public class AsyncCompute {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
@@ -1534,6 +1945,9 @@ public class AsyncCompute {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response
@@ -1549,6 +1963,9 @@ public class AsyncCompute {
     /**
      * Update a volume
      * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeVolumeRequestBuilder updateComputeVolume() {
@@ -1557,6 +1974,9 @@ public class AsyncCompute {
 
     /**
      * Update a volume
+     * 
+     * <p>Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeVolumeResponse>} - The async response

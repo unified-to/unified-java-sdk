@@ -25,7 +25,7 @@
 
 ## createKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -56,10 +56,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("40d85362-97de-4a47-a596-d6c85a2e83e8")
+                    .id("0c4d060a-a6fd-41c4-9f46-3e6854432d7b")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.287Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.659Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -93,7 +93,7 @@ public class Application {
 
 ## createKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -125,11 +125,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("6818ad8e-efc5-403b-a943-2650143cf089")
+                    .id("a6ff4274-4d1a-4e56-b740-133f523f823e")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.870Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.528Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -164,7 +164,7 @@ public class Application {
 
 ## createKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -195,11 +195,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("1d31f646-5dcb-449c-bd34-3830c144a898")
+                    .id("f5074c93-8b04-4ee0-bfda-4325e50c035a")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.507Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -233,7 +233,7 @@ public class Application {
 
 ## getKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ public class Application {
 
 ## getKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ public class Application {
 
 ## getKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -407,7 +407,7 @@ public class Application {
 
 ## listKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -464,7 +464,7 @@ public class Application {
 
 ## listKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -521,7 +521,7 @@ public class Application {
 
 ## listKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -578,7 +578,7 @@ public class Application {
 
 ## patchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -609,10 +609,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("39fbd94a-090a-48e4-82c1-3b0107dee49c")
+                    .id("a0c00574-4d80-4722-a7fc-d05d6460581d")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.292Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.664Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -647,7 +647,7 @@ public class Application {
 
 ## patchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -679,11 +679,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("48e82897-f194-47ba-aacc-8a7fcedd2153")
+                    .id("2a0782ab-b74b-4dcd-935f-d7e5de537c0c")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.885Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.541Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -719,7 +719,7 @@ public class Application {
 
 ## patchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -750,11 +750,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("51504cd2-5ab4-43a8-8762-4aa07d1a1b05")
+                    .id("3cc76599-4490-4cbb-9b75-1056af9ed76d")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.275Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.516Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -789,7 +789,7 @@ public class Application {
 
 ## removeKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -845,7 +845,7 @@ public class Application {
 
 ## removeKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -901,7 +901,7 @@ public class Application {
 
 ## removeKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -957,7 +957,7 @@ public class Application {
 
 ## updateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -988,10 +988,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("39fbd94a-090a-48e4-82c1-3b0107dee49c")
+                    .id("a0c00574-4d80-4722-a7fc-d05d6460581d")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-11-26T06:48:16.292Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-26T14:18:53.664Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1026,7 +1026,7 @@ public class Application {
 
 ## updateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -1058,11 +1058,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("48e82897-f194-47ba-aacc-8a7fcedd2153")
+                    .id("2a0782ab-b74b-4dcd-935f-d7e5de537c0c")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.885Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.541Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -1098,7 +1098,7 @@ public class Application {
 
 ## updateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -1129,11 +1129,11 @@ public class Application {
                 .kmsSpace(KmsSpace.builder()
                     .createdAt(OffsetDateTime.parse("2022-10-31T00:56:54.246Z"))
                     .description("Acer.")
-                    .id("51504cd2-5ab4-43a8-8762-4aa07d1a1b05")
+                    .id("3cc76599-4490-4cbb-9b75-1056af9ed76d")
                     .isActive(false)
                     .metadata(List.of())
                     .name("into nor afore")
-                    .updatedAt(OffsetDateTime.parse("2025-12-29T22:54:09.275Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-30T18:46:11.516Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

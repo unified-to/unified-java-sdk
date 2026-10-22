@@ -63,6 +63,9 @@ public class Recording {
     /**
      * Create a recording
      * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
+     * 
      * @return The call builder
      */
     public CreateUcRecordingRequestBuilder createUcRecording() {
@@ -71,6 +74,9 @@ public class Recording {
 
     /**
      * Create a recording
+     * 
+     * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
+     * to the provider's API. Returns the created UcRecording.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -85,6 +91,9 @@ public class Recording {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetCalendarRecordingRequestBuilder getCalendarRecording() {
@@ -93,6 +102,9 @@ public class Recording {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -107,6 +119,9 @@ public class Recording {
     /**
      * Retrieve a recording
      * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetUcRecordingRequestBuilder getUcRecording() {
@@ -115,6 +130,9 @@ public class Recording {
 
     /**
      * Retrieve a recording
+     * 
+     * <p>Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -129,6 +147,13 @@ public class Recording {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListCalendarRecordingsRequestBuilder listCalendarRecordings() {
@@ -137,6 +162,13 @@ public class Recording {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -151,6 +183,13 @@ public class Recording {
     /**
      * List all recordings
      * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListUcRecordingsRequestBuilder listUcRecordings() {
@@ -159,6 +198,13 @@ public class Recording {
 
     /**
      * List all recordings
+     * 
+     * <p>Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -173,6 +219,9 @@ public class Recording {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public PatchUcRecordingRequestBuilder patchUcRecording() {
@@ -181,6 +230,9 @@ public class Recording {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -195,6 +247,8 @@ public class Recording {
     /**
      * Remove a recording
      * 
+     * <p>Deletes the UcRecording identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveUcRecordingRequestBuilder removeUcRecording() {
@@ -203,6 +257,8 @@ public class Recording {
 
     /**
      * Remove a recording
+     * 
+     * <p>Deletes the UcRecording identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -217,6 +273,9 @@ public class Recording {
     /**
      * Update a recording
      * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
+     * 
      * @return The call builder
      */
     public UpdateUcRecordingRequestBuilder updateUcRecording() {
@@ -225,6 +284,9 @@ public class Recording {
 
     /**
      * Update a recording
+     * 
+     * <p>Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

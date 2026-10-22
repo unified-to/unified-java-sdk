@@ -66,7 +66,9 @@ public class AdsGroup {
     @JsonProperty("budget_unit")
     private AdsGroupBudgetUnit budgetUnit;
 
-
+    /**
+     * The ID of the campaign the ad group belongs to (an AdsCampaign ID)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_id")
     private String campaignId;
@@ -139,7 +141,9 @@ public class AdsGroup {
     @JsonProperty("metadata")
     private List<AdsMetadata> metadata;
 
-
+    /**
+     * The ad group's name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -328,6 +332,9 @@ public class AdsGroup {
         return Optional.ofNullable(this.budgetUnit);
     }
 
+    /**
+     * The ID of the campaign the ad group belongs to (an AdsCampaign ID)
+     */
     public Optional<String> campaignId() {
         return Optional.ofNullable(this.campaignId);
     }
@@ -392,6 +399,9 @@ public class AdsGroup {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The ad group's name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -509,6 +519,9 @@ public class AdsGroup {
     }
 
 
+    /**
+     * The ID of the campaign the ad group belongs to (an AdsCampaign ID)
+     */
     public AdsGroup withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -599,6 +612,9 @@ public class AdsGroup {
     }
 
 
+    /**
+     * The ad group's name
+     */
     public AdsGroup withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -899,6 +915,9 @@ public class AdsGroup {
             return this;
         }
 
+        /**
+         * The ID of the campaign the ad group belongs to (an AdsCampaign ID)
+         */
         public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
@@ -976,6 +995,9 @@ public class AdsGroup {
             return this;
         }
 
+        /**
+         * The ad group's name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

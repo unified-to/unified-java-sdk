@@ -19,7 +19,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GenaiEmbedding {
-
+    /**
+     * The texts to create embeddings for
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private List<GenaiEmbeddingContent> content;
@@ -106,6 +108,9 @@ public class GenaiEmbedding {
             null);
     }
 
+    /**
+     * The texts to create embeddings for
+     */
     public Optional<List<GenaiEmbeddingContent>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -160,6 +165,9 @@ public class GenaiEmbedding {
     }
 
 
+    /**
+     * The texts to create embeddings for
+     */
     public GenaiEmbedding withContent(@Nullable List<GenaiEmbeddingContent> content) {
         this.content = content;
         return this;
@@ -302,6 +310,9 @@ public class GenaiEmbedding {
           // force use of static builder() method
         }
 
+        /**
+         * The texts to create embeddings for
+         */
         public Builder content(@Nullable List<GenaiEmbeddingContent> content) {
             this.content = content;
             return this;

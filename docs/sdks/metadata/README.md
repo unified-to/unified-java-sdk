@@ -13,7 +13,7 @@
 
 ## createMetadataMetadata
 
-Create a metadata
+Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
 
 ### Example Usage
 
@@ -46,14 +46,14 @@ public class Application {
                     .objectType("social_review")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("2c9867e3-ad1b-42ee-9e15-3a918c3a6ff7")
+                    .id("84699cea-aa8a-4d43-a2f5-af26cc540653")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
                     .originalFormat("advoco")
                     .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-03-21T23:13:04.679Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-22T17:04:32.291Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -87,7 +87,7 @@ public class Application {
 
 ## getMetadataMetadata
 
-Retrieve a metadata
+Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ public class Application {
 
 ## listMetadataMetadatas
 
-List all metadatas
+Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ public class Application {
 
 ## patchMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -235,14 +235,14 @@ public class Application {
                     .objectType("social_review")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("81546312-ace9-494a-8e36-d2e7a3514f8d")
+                    .id("e59d26cc-cdbc-4af8-adbd-c46f2a7826df")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
                     .originalFormat("advoco")
                     .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-03-21T23:13:04.688Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-22T17:04:32.299Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -277,7 +277,7 @@ public class Application {
 
 ## removeMetadataMetadata
 
-Remove a metadata
+Deletes the MetadataMetadata identified by `id`.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ public class Application {
 
 ## updateMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -366,14 +366,14 @@ public class Application {
                     .objectType("social_review")
                     .createdAt(OffsetDateTime.parse("2021-03-25T03:02:17.656Z"))
                     .format(MetadataMetadataFormat.PRICE)
-                    .id("81546312-ace9-494a-8e36-d2e7a3514f8d")
+                    .id("e59d26cc-cdbc-4af8-adbd-c46f2a7826df")
                     .isRequired(false)
                     .objects(Map.ofEntries(
                     ))
                     .options(List.of())
                     .originalFormat("advoco")
                     .slug("arbustum")
-                    .updatedAt(OffsetDateTime.parse("2025-03-21T23:13:04.688Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-22T17:04:32.299Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

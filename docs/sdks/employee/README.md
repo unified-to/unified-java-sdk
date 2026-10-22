@@ -13,7 +13,7 @@
 
 ## createHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -76,7 +76,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("527e3173-0c4f-4538-b7bf-9252c8a96444")
+                    .id("75db520b-7e56-4d71-ae91-4b6e9a266879")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -87,7 +87,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("c9dfe339-8dc4-44b6-97e8-fab7a88709e2")
+                            .id("2902bb77-e2a7-47f3-84e3-431e2c4ec2fe")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -130,7 +130,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.863Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.079Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -164,7 +164,7 @@ public class Application {
 
 ## getHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ public class Application {
 
 ## listHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -279,7 +279,7 @@ public class Application {
 
 ## patchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -342,7 +342,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("3b9d737a-ab65-431c-aca0-5f13d99440e0")
+                    .id("f77ffe03-2906-4785-9f0f-a610ceb34dfe")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -353,7 +353,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("680e9785-887e-4d32-ba94-c952934f67ad")
+                            .id("7076aba6-22e1-4b59-a5f7-1b1364fdc997")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -396,7 +396,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.091Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -431,7 +431,7 @@ public class Application {
 
 ## removeHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -487,7 +487,7 @@ public class Application {
 
 ## updateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -550,7 +550,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("3b9d737a-ab65-431c-aca0-5f13d99440e0")
+                    .id("f77ffe03-2906-4785-9f0f-a610ceb34dfe")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -561,7 +561,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("680e9785-887e-4d32-ba94-c952934f67ad")
+                            .id("7076aba6-22e1-4b59-a5f7-1b1364fdc997")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -604,7 +604,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-19T04:12:57.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-19T07:09:58.091Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

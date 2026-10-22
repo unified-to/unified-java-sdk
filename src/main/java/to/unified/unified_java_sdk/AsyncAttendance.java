@@ -57,6 +57,9 @@ public class AsyncAttendance {
     /**
      * Create an attendance
      * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
+     * 
      * @return The async call builder
      */
     public CreateHrisAttendanceRequestBuilder createHrisAttendance() {
@@ -65,6 +68,9 @@ public class AsyncAttendance {
 
     /**
      * Create an attendance
+     * 
+     * <p>Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are
+     * mapped to the provider's API. Returns the created HrisAttendance.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisAttendanceResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncAttendance {
     /**
      * Retrieve an attendance
      * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHrisAttendanceRequestBuilder getHrisAttendance() {
@@ -88,6 +97,9 @@ public class AsyncAttendance {
 
     /**
      * Retrieve an attendance
+     * 
+     * <p>Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisAttendanceResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncAttendance {
     /**
      * List all attendances
      * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHrisAttendancesRequestBuilder listHrisAttendances() {
@@ -111,6 +130,13 @@ public class AsyncAttendance {
 
     /**
      * List all attendances
+     * 
+     * <p>Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisAttendancesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncAttendance {
     /**
      * Update an attendance
      * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchHrisAttendanceRequestBuilder patchHrisAttendance() {
@@ -134,6 +163,9 @@ public class AsyncAttendance {
 
     /**
      * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisAttendanceResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncAttendance {
     /**
      * Remove an attendance
      * 
+     * <p>Deletes the HrisAttendance identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHrisAttendanceRequestBuilder removeHrisAttendance() {
@@ -157,6 +191,8 @@ public class AsyncAttendance {
 
     /**
      * Remove an attendance
+     * 
+     * <p>Deletes the HrisAttendance identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisAttendanceResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncAttendance {
     /**
      * Update an attendance
      * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHrisAttendanceRequestBuilder updateHrisAttendance() {
@@ -180,6 +219,9 @@ public class AsyncAttendance {
 
     /**
      * Update an attendance
+     * 
+     * <p>Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisAttendanceResponse>} - The async response

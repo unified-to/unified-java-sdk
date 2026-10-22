@@ -87,6 +87,9 @@ public class Messaging {
     /**
      * Create a channel
      * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
+     * 
      * @return The call builder
      */
     public CreateMessagingChannelRequestBuilder createMessagingChannel() {
@@ -95,6 +98,9 @@ public class Messaging {
 
     /**
      * Create a channel
+     * 
+     * <p>Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingChannel.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -109,6 +115,9 @@ public class Messaging {
     /**
      * Create a message
      * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
+     * 
      * @return The call builder
      */
     public CreateMessagingMessageRequestBuilder createMessagingMessage() {
@@ -117,6 +126,9 @@ public class Messaging {
 
     /**
      * Create a message
+     * 
+     * <p>Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they
+     * are mapped to the provider's API. Returns the created MessagingMessage.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -131,6 +143,9 @@ public class Messaging {
     /**
      * Retrieve a channel
      * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMessagingChannelRequestBuilder getMessagingChannel() {
@@ -139,6 +154,9 @@ public class Messaging {
 
     /**
      * Retrieve a channel
+     * 
+     * <p>Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -153,6 +171,9 @@ public class Messaging {
     /**
      * Retrieve a message
      * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The call builder
      */
     public GetMessagingMessageRequestBuilder getMessagingMessage() {
@@ -161,6 +182,9 @@ public class Messaging {
 
     /**
      * Retrieve a message
+     * 
+     * <p>Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -175,6 +199,13 @@ public class Messaging {
     /**
      * List all channels
      * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMessagingChannelsRequestBuilder listMessagingChannels() {
@@ -183,6 +214,13 @@ public class Messaging {
 
     /**
      * List all channels
+     * 
+     * <p>Returns a list of MessagingChannels. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -197,6 +235,13 @@ public class Messaging {
     /**
      * List all messages
      * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The call builder
      */
     public ListMessagingMessagesRequestBuilder listMessagingMessages() {
@@ -205,6 +250,13 @@ public class Messaging {
 
     /**
      * List all messages
+     * 
+     * <p>Returns a list of MessagingMessages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -219,6 +271,9 @@ public class Messaging {
     /**
      * Update a channel
      * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchMessagingChannelRequestBuilder patchMessagingChannel() {
@@ -227,6 +282,9 @@ public class Messaging {
 
     /**
      * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -241,6 +299,9 @@ public class Messaging {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public PatchMessagingEventRequestBuilder patchMessagingEvent() {
@@ -249,6 +310,9 @@ public class Messaging {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -263,6 +327,9 @@ public class Messaging {
     /**
      * Update a message
      * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public PatchMessagingMessageRequestBuilder patchMessagingMessage() {
@@ -271,6 +338,9 @@ public class Messaging {
 
     /**
      * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -285,6 +355,8 @@ public class Messaging {
     /**
      * Remove a channel
      * 
+     * <p>Deletes the MessagingChannel identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMessagingChannelRequestBuilder removeMessagingChannel() {
@@ -293,6 +365,8 @@ public class Messaging {
 
     /**
      * Remove a channel
+     * 
+     * <p>Deletes the MessagingChannel identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -307,6 +381,8 @@ public class Messaging {
     /**
      * Remove a message
      * 
+     * <p>Deletes the MessagingMessage identified by `id`.
+     * 
      * @return The call builder
      */
     public RemoveMessagingMessageRequestBuilder removeMessagingMessage() {
@@ -315,6 +391,8 @@ public class Messaging {
 
     /**
      * Remove a message
+     * 
+     * <p>Deletes the MessagingMessage identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -329,6 +407,9 @@ public class Messaging {
     /**
      * Update a channel
      * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMessagingChannelRequestBuilder updateMessagingChannel() {
@@ -337,6 +418,9 @@ public class Messaging {
 
     /**
      * Update a channel
+     * 
+     * <p>Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -351,6 +435,9 @@ public class Messaging {
     /**
      * Update an event
      * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMessagingEventRequestBuilder updateMessagingEvent() {
@@ -359,6 +446,9 @@ public class Messaging {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
@@ -373,6 +463,9 @@ public class Messaging {
     /**
      * Update a message
      * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
+     * 
      * @return The call builder
      */
     public UpdateMessagingMessageRequestBuilder updateMessagingMessage() {
@@ -381,6 +474,9 @@ public class Messaging {
 
     /**
      * Update a message
+     * 
+     * <p>Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to
+     * change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call

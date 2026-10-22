@@ -13,7 +13,7 @@
 
 ## createLmsCourse
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("f8a49840-5087-4080-8070-363c44400169")
+                    .id("d0abec78-cba9-44b6-99f7-346549ae8345")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -72,13 +72,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.102Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.411Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -112,7 +112,7 @@ public class Application {
 
 ## getLmsCourse
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ public class Application {
 
 ## listLmsCourses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -227,7 +227,7 @@ public class Application {
 
 ## patchLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("5fc30f1c-c974-4c5d-a17d-cf77cd651739")
+                    .id("afa1cd4f-9509-4af5-9e69-7897b0be60d4")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -286,13 +286,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.413Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -327,7 +327,7 @@ public class Application {
 
 ## removeLmsCourse
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -383,7 +383,7 @@ public class Application {
 
 ## updateLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -418,7 +418,7 @@ public class Application {
                     .currency("FJD")
                     .description("Vinco alias aut capitulus.")
                     .durationMinutes(148d)
-                    .id("5fc30f1c-c974-4c5d-a17d-cf77cd651739")
+                    .id("afa1cd4f-9509-4af5-9e69-7897b0be60d4")
                     .instructors(List.of())
                     .isActive(true)
                     .isPrivate(false)
@@ -442,13 +442,13 @@ public class Application {
                     .name("comptus")
                     .priceAmount(84d)
                     .providerName("Homenick - Wunsch")
-                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:11:08.652Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-11-05T18:41:54.718Z"))
                     .skills(List.of(
                         "adiuvo",
                         "tam"))
                     .students(List.of())
                     .timeEstimateMinutes(100d)
-                    .updatedAt(OffsetDateTime.parse("2023-02-09T18:20:19.105Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T20:28:26.413Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

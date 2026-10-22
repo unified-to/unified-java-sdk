@@ -13,7 +13,7 @@
 
 ## createPerformanceGoal
 
-Create a goal
+Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 
 ### Example Usage
 
@@ -43,15 +43,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-07-29T18:26:44.498Z"))
-                    .id("a9caf1a6-5e29-4b93-b2a9-57eb49fb65ae")
+                    .dueAt(OffsetDateTime.parse("2026-07-30T18:32:44.156Z"))
+                    .id("1076e6df-dcb8-401f-a80f-8fa2393f6090")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-03T21:08:32.265Z"))
-                            .id("ed8c9f29-dccd-4cfd-a52e-52c1366ea0b1")
+                            .dueAt(OffsetDateTime.parse("2026-06-04T20:40:45.604Z"))
+                            .id("0058917d-d9ed-4560-bcf2-cf7e62bc79ac")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -60,8 +60,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-08T11:17:33.230Z"))
-                            .id("6890e3f1-ecc2-46a2-964e-9375aac880d7")
+                            .dueAt(OffsetDateTime.parse("2026-08-09T11:29:24.652Z"))
+                            .id("de5f1630-9912-4801-bf3b-2ba39c588a48")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -70,18 +70,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-10T10:07:36.493Z"))
-                            .id("632ec6f8-66c0-4970-a1b6-896f9ae91b0d")
+                            .dueAt(OffsetDateTime.parse("2026-10-11T10:57:30.348Z"))
+                            .id("35eee11e-e196-4bef-84d6-59cd7ba0be9b")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-23T09:13:33.096Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-24T05:35:07.465Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T01:29:53.520Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T11:20:23.867Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")
@@ -116,7 +116,7 @@ public class Application {
 
 ## getPerformanceGoal
 
-Retrieve a goal
+Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ public class Application {
 
 ## listPerformanceGoals
 
-List all goals
+Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -231,7 +231,7 @@ public class Application {
 
 ## patchPerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -261,15 +261,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-07-29T18:26:44.524Z"))
-                    .id("a6bdd2aa-509e-4498-bca2-b492a1f4b5e1")
+                    .dueAt(OffsetDateTime.parse("2026-07-30T18:32:44.178Z"))
+                    .id("f94fb1a7-ac5f-4f67-b03a-5c0c18bb9e88")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-03T21:08:32.291Z"))
-                            .id("c6d044e4-3b42-4334-9305-d8457e0f9db8")
+                            .dueAt(OffsetDateTime.parse("2026-06-04T20:40:45.624Z"))
+                            .id("91111001-ad1e-4960-b930-2b38407e96f5")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -278,8 +278,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-08T11:17:33.256Z"))
-                            .id("00b07a0f-843a-4770-83e8-7be60ff95f55")
+                            .dueAt(OffsetDateTime.parse("2026-08-09T11:29:24.674Z"))
+                            .id("cba5d32c-dce3-4d46-b5bf-ad56e031ccb6")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -288,18 +288,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-10T10:07:36.520Z"))
-                            .id("874784d6-ca5f-4ce2-8261-0768b4cf9fc5")
+                            .dueAt(OffsetDateTime.parse("2026-10-11T10:57:30.370Z"))
+                            .id("91d56431-051a-454b-bd23-1459a3e91648")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-23T09:13:33.118Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-24T05:35:07.483Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T01:29:53.531Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T11:20:23.876Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")
@@ -335,7 +335,7 @@ public class Application {
 
 ## removePerformanceGoal
 
-Remove a goal
+Deletes the PerformanceGoal identified by `id`.
 
 ### Example Usage
 
@@ -391,7 +391,7 @@ public class Application {
 
 ## updatePerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -421,15 +421,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-07-29T18:26:44.524Z"))
-                    .id("a6bdd2aa-509e-4498-bca2-b492a1f4b5e1")
+                    .dueAt(OffsetDateTime.parse("2026-07-30T18:32:44.178Z"))
+                    .id("f94fb1a7-ac5f-4f67-b03a-5c0c18bb9e88")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-03T21:08:32.291Z"))
-                            .id("c6d044e4-3b42-4334-9305-d8457e0f9db8")
+                            .dueAt(OffsetDateTime.parse("2026-06-04T20:40:45.624Z"))
+                            .id("91111001-ad1e-4960-b930-2b38407e96f5")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -438,8 +438,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-08T11:17:33.256Z"))
-                            .id("00b07a0f-843a-4770-83e8-7be60ff95f55")
+                            .dueAt(OffsetDateTime.parse("2026-08-09T11:29:24.674Z"))
+                            .id("cba5d32c-dce3-4d46-b5bf-ad56e031ccb6")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -448,18 +448,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-10T10:07:36.520Z"))
-                            .id("874784d6-ca5f-4ce2-8261-0768b4cf9fc5")
+                            .dueAt(OffsetDateTime.parse("2026-10-11T10:57:30.370Z"))
+                            .id("91d56431-051a-454b-bd23-1459a3e91648")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-23T09:13:33.118Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-24T05:35:07.483Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-13T01:29:53.531Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-13T11:20:23.876Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")

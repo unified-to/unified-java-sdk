@@ -28,7 +28,9 @@ public class PropertyDatastoreQueryResponseAggregates {
     @JsonProperty("count")
     private Double count;
 
-
+    /**
+     * Each item is one group row: a map of field name to value
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     private List<Map<String, DatastoreFieldValue>> groups;
@@ -77,6 +79,9 @@ public class PropertyDatastoreQueryResponseAggregates {
         return Optional.ofNullable(this.count);
     }
 
+    /**
+     * Each item is one group row: a map of field name to value
+     */
     public Optional<List<Map<String, DatastoreFieldValue>>> groups() {
         return Optional.ofNullable(this.groups);
     }
@@ -110,6 +115,9 @@ public class PropertyDatastoreQueryResponseAggregates {
     }
 
 
+    /**
+     * Each item is one group row: a map of field name to value
+     */
     public PropertyDatastoreQueryResponseAggregates withGroups(@Nullable List<Map<String, DatastoreFieldValue>> groups) {
         this.groups = groups;
         return this;
@@ -199,6 +207,9 @@ public class PropertyDatastoreQueryResponseAggregates {
             return this;
         }
 
+        /**
+         * Each item is one group row: a map of field name to value
+         */
         public Builder groups(@Nullable List<Map<String, DatastoreFieldValue>> groups) {
             this.groups = groups;
             return this;

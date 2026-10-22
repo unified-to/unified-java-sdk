@@ -11,7 +11,7 @@
 
 ## createHrisTaxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -45,13 +45,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
                     .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
                     .domain("Health")
-                    .id("49fc7e99-80ca-43f3-84cc-b92424413122")
+                    .id("918c4117-c82e-4e33-a837-37fa2756c1bf")
                     .isActive(false)
                     .metadata(List.of())
                     .name("International Functionality Architect")
                     .subcategory("Marble")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-05-29T07:25:29.505Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-05-29T12:47:30.146Z"))
                     .url("https://fixed-membership.biz/")
                     .build())
                 .connectionId("<id>")
@@ -86,7 +86,7 @@ public class Application {
 
 ## getHrisTaxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ public class Application {
 
 ## listCrmTaxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ public class Application {
 
 ## listHrisTaxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

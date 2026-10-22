@@ -13,7 +13,7 @@
 
 ## createKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -45,11 +45,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("6818ad8e-efc5-403b-a943-2650143cf089")
+                    .id("a6ff4274-4d1a-4e56-b740-133f523f823e")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.870Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.528Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -84,7 +84,7 @@ public class Application {
 
 ## getKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ public class Application {
 
 ## listKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ public class Application {
 
 ## patchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -231,11 +231,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("48e82897-f194-47ba-aacc-8a7fcedd2153")
+                    .id("2a0782ab-b74b-4dcd-935f-d7e5de537c0c")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.885Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.541Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")
@@ -271,7 +271,7 @@ public class Application {
 
 ## removeKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ public class Application {
 
 ## updateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -359,11 +359,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-05-20T18:06:50.749Z"))
                     .downloadUrl("https://agitated-validity.info")
                     .hasChildren(true)
-                    .id("48e82897-f194-47ba-aacc-8a7fcedd2153")
+                    .id("2a0782ab-b74b-4dcd-935f-d7e5de537c0c")
                     .isActive(true)
                     .metadata(List.of())
                     .title("even minister extract")
-                    .updatedAt(OffsetDateTime.parse("2025-10-09T04:24:20.885Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-10T01:52:36.541Z"))
                     .webUrl("https://another-petticoat.info")
                     .build())
                 .connectionId("<id>")

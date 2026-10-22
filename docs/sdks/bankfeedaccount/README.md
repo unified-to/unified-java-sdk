@@ -13,7 +13,7 @@
 
 ## createAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -49,12 +49,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("3f5a955e-32d2-4cc7-a19e-13f466e605e5")
+                    .id("031a9c67-e116-4543-ac01-28fe73ea668b")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.239Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.189Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -88,7 +88,7 @@ public class Application {
 
 ## getAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ public class Application {
 
 ## listAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ public class Application {
 
 ## patchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -239,12 +239,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("fbb3de69-fa19-4312-a3a0-25aa2a0951a4")
+                    .id("481943e1-31c5-4e42-821b-6f9c7d4ac246")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.195Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -279,7 +279,7 @@ public class Application {
 
 ## removeAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ public class Application {
 
 ## updateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -371,12 +371,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
                     .currency("AUD")
                     .feedStartAt(OffsetDateTime.parse("2022-10-31T16:42:19.277Z"))
-                    .id("fbb3de69-fa19-4312-a3a0-25aa2a0951a4")
+                    .id("481943e1-31c5-4e42-821b-6f9c7d4ac246")
                     .metadata(List.of())
                     .name("Corwin, Donnelly and Connelly Checking")
                     .routingNumber("694667752")
                     .status(AccountingBankfeedaccountStatus.ACTIVE)
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:57:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T05:14:23.195Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -65,6 +65,9 @@ public class AsyncTemplate {
     /**
      * Create a template
      * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
+     * 
      * @return The async call builder
      */
     public CreateComputeTemplateRequestBuilder createComputeTemplate() {
@@ -73,6 +76,9 @@ public class AsyncTemplate {
 
     /**
      * Create a template
+     * 
+     * <p>Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeTemplate.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeTemplateResponse>} - The async response
@@ -88,6 +94,9 @@ public class AsyncTemplate {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeTemplateRequestBuilder getComputeTemplate() {
@@ -96,6 +105,9 @@ public class AsyncTemplate {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeTemplateResponse>} - The async response
@@ -111,6 +123,9 @@ public class AsyncTemplate {
     /**
      * Retrieve a template
      * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetSigningTemplateRequestBuilder getSigningTemplate() {
@@ -119,6 +134,9 @@ public class AsyncTemplate {
 
     /**
      * Retrieve a template
+     * 
+     * <p>Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetSigningTemplateResponse>} - The async response
@@ -134,6 +152,13 @@ public class AsyncTemplate {
     /**
      * List all templates
      * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeTemplatesRequestBuilder listComputeTemplates() {
@@ -142,6 +167,13 @@ public class AsyncTemplate {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeTemplatesResponse>} - The async response
@@ -157,6 +189,13 @@ public class AsyncTemplate {
     /**
      * List all templates
      * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListSigningTemplatesRequestBuilder listSigningTemplates() {
@@ -165,6 +204,13 @@ public class AsyncTemplate {
 
     /**
      * List all templates
+     * 
+     * <p>Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListSigningTemplatesResponse>} - The async response
@@ -180,6 +226,9 @@ public class AsyncTemplate {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeTemplateRequestBuilder patchComputeTemplate() {
@@ -188,6 +237,9 @@ public class AsyncTemplate {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeTemplateResponse>} - The async response
@@ -203,6 +255,8 @@ public class AsyncTemplate {
     /**
      * Remove a template
      * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeTemplateRequestBuilder removeComputeTemplate() {
@@ -211,6 +265,8 @@ public class AsyncTemplate {
 
     /**
      * Remove a template
+     * 
+     * <p>Deletes the ComputeTemplate identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeTemplateResponse>} - The async response
@@ -226,6 +282,9 @@ public class AsyncTemplate {
     /**
      * Update a template
      * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeTemplateRequestBuilder updateComputeTemplate() {
@@ -234,6 +293,9 @@ public class AsyncTemplate {
 
     /**
      * Update a template
+     * 
+     * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeTemplateResponse>} - The async response

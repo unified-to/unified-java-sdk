@@ -13,7 +13,7 @@
 
 ## createAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1e70efe0-23d9-43d9-bdab-dacd7d1ad30b")
+                    .id("4fbde124-a614-4098-a367-dcad459c0699")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -58,7 +58,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.770Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.193Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -92,7 +92,7 @@ public class Application {
 
 ## getAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -150,7 +150,7 @@ public class Application {
 
 ## listAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ public class Application {
 
 ## patchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("dc5f837a-a1ac-4356-a56e-a1b513c09c12")
+                    .id("02f84203-c567-4992-ad19-ab7dd8adc4b9")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -252,7 +252,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.197Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -287,7 +287,7 @@ public class Application {
 
 ## removeAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ public class Application {
 
 ## updateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("dc5f837a-a1ac-4356-a56e-a1b513c09c12")
+                    .id("02f84203-c567-4992-ad19-ab7dd8adc4b9")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -388,7 +388,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-06T21:41:24.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T04:01:46.197Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

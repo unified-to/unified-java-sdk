@@ -57,6 +57,9 @@ public class AsyncAppointment {
     /**
      * Create an appointment
      * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     * 
      * @return The async call builder
      */
     public CreateHealthcareAppointmentRequestBuilder createHealthcareAppointment() {
@@ -65,6 +68,9 @@ public class AsyncAppointment {
 
     /**
      * Create an appointment
+     * 
+     * <p>Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request
+     * body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHealthcareAppointmentResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncAppointment {
     /**
      * Retrieve an appointment
      * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetHealthcareAppointmentRequestBuilder getHealthcareAppointment() {
@@ -88,6 +97,9 @@ public class AsyncAppointment {
 
     /**
      * Retrieve an appointment
+     * 
+     * <p>Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHealthcareAppointmentResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncAppointment {
     /**
      * List all appointments
      * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListHealthcareAppointmentsRequestBuilder listHealthcareAppointments() {
@@ -111,6 +130,13 @@ public class AsyncAppointment {
 
     /**
      * List all appointments
+     * 
+     * <p>Returns a list of HealthcareAppointments. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHealthcareAppointmentsResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncAppointment {
     /**
      * Update an appointment
      * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public PatchHealthcareAppointmentRequestBuilder patchHealthcareAppointment() {
@@ -134,6 +163,9 @@ public class AsyncAppointment {
 
     /**
      * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHealthcareAppointmentResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncAppointment {
     /**
      * Remove an appointment
      * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveHealthcareAppointmentRequestBuilder removeHealthcareAppointment() {
@@ -157,6 +191,8 @@ public class AsyncAppointment {
 
     /**
      * Remove an appointment
+     * 
+     * <p>Deletes the HealthcareAppointment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHealthcareAppointmentResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncAppointment {
     /**
      * Update an appointment
      * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateHealthcareAppointmentRequestBuilder updateHealthcareAppointment() {
@@ -180,6 +219,9 @@ public class AsyncAppointment {
 
     /**
      * Update an appointment
+     * 
+     * <p>Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment
+     * fields to change in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHealthcareAppointmentResponse>} - The async response

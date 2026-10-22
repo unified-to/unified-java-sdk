@@ -57,6 +57,9 @@ public class AsyncInstance {
     /**
      * Create an instance
      * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
+     * 
      * @return The async call builder
      */
     public CreateComputeInstanceRequestBuilder createComputeInstance() {
@@ -65,6 +68,9 @@ public class AsyncInstance {
 
     /**
      * Create an instance
+     * 
+     * <p>Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are
+     * mapped to the provider's API. Returns the created ComputeInstance.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateComputeInstanceResponse>} - The async response
@@ -80,6 +86,9 @@ public class AsyncInstance {
     /**
      * Retrieve an instance
      * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetComputeInstanceRequestBuilder getComputeInstance() {
@@ -88,6 +97,9 @@ public class AsyncInstance {
 
     /**
      * Retrieve an instance
+     * 
+     * <p>Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetComputeInstanceResponse>} - The async response
@@ -103,6 +115,13 @@ public class AsyncInstance {
     /**
      * List all instances
      * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListComputeInstancesRequestBuilder listComputeInstances() {
@@ -111,6 +130,13 @@ public class AsyncInstance {
 
     /**
      * List all instances
+     * 
+     * <p>Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListComputeInstancesResponse>} - The async response
@@ -126,6 +152,9 @@ public class AsyncInstance {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchComputeInstanceRequestBuilder patchComputeInstance() {
@@ -134,6 +163,9 @@ public class AsyncInstance {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchComputeInstanceResponse>} - The async response
@@ -149,6 +181,8 @@ public class AsyncInstance {
     /**
      * Remove an instance
      * 
+     * <p>Deletes the ComputeInstance identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveComputeInstanceRequestBuilder removeComputeInstance() {
@@ -157,6 +191,8 @@ public class AsyncInstance {
 
     /**
      * Remove an instance
+     * 
+     * <p>Deletes the ComputeInstance identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveComputeInstanceResponse>} - The async response
@@ -172,6 +208,9 @@ public class AsyncInstance {
     /**
      * Update an instance
      * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateComputeInstanceRequestBuilder updateComputeInstance() {
@@ -180,6 +219,9 @@ public class AsyncInstance {
 
     /**
      * Update an instance
+     * 
+     * <p>Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateComputeInstanceResponse>} - The async response

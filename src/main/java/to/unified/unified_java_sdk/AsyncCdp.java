@@ -177,6 +177,9 @@ public class AsyncCdp {
     /**
      * Create an activation
      * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
+     * 
      * @return The async call builder
      */
     public CreateCdpActivationRequestBuilder createCdpActivation() {
@@ -185,6 +188,9 @@ public class AsyncCdp {
 
     /**
      * Create an activation
+     * 
+     * <p>Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpActivation.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpActivationResponse>} - The async response
@@ -200,6 +206,9 @@ public class AsyncCdp {
     /**
      * Create a destination
      * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
+     * 
      * @return The async call builder
      */
     public CreateCdpDestinationRequestBuilder createCdpDestination() {
@@ -208,6 +217,9 @@ public class AsyncCdp {
 
     /**
      * Create a destination
+     * 
+     * <p>Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are
+     * mapped to the provider's API. Returns the created CdpDestination.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpDestinationResponse>} - The async response
@@ -223,6 +235,9 @@ public class AsyncCdp {
     /**
      * Create an event
      * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
+     * 
      * @return The async call builder
      */
     public CreateCdpEventRequestBuilder createCdpEvent() {
@@ -231,6 +246,9 @@ public class AsyncCdp {
 
     /**
      * Create an event
+     * 
+     * <p>Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the
+     * provider's API. Returns the created CdpEvent.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpEventResponse>} - The async response
@@ -246,6 +264,9 @@ public class AsyncCdp {
     /**
      * Create a profile
      * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
+     * 
      * @return The async call builder
      */
     public CreateCdpProfileRequestBuilder createCdpProfile() {
@@ -254,6 +275,9 @@ public class AsyncCdp {
 
     /**
      * Create a profile
+     * 
+     * <p>Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpProfile.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpProfileResponse>} - The async response
@@ -269,6 +293,9 @@ public class AsyncCdp {
     /**
      * Create a segment
      * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
+     * 
      * @return The async call builder
      */
     public CreateCdpSegmentRequestBuilder createCdpSegment() {
@@ -277,6 +304,9 @@ public class AsyncCdp {
 
     /**
      * Create a segment
+     * 
+     * <p>Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSegment.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpSegmentResponse>} - The async response
@@ -292,6 +322,9 @@ public class AsyncCdp {
     /**
      * Create a source
      * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
+     * 
      * @return The async call builder
      */
     public CreateCdpSourceRequestBuilder createCdpSource() {
@@ -300,6 +333,9 @@ public class AsyncCdp {
 
     /**
      * Create a source
+     * 
+     * <p>Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to
+     * the provider's API. Returns the created CdpSource.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCdpSourceResponse>} - The async response
@@ -315,6 +351,9 @@ public class AsyncCdp {
     /**
      * Retrieve an activation
      * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpActivationRequestBuilder getCdpActivation() {
@@ -323,6 +362,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve an activation
+     * 
+     * <p>Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpActivationResponse>} - The async response
@@ -338,6 +380,9 @@ public class AsyncCdp {
     /**
      * Retrieve a destination
      * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpDestinationRequestBuilder getCdpDestination() {
@@ -346,6 +391,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve a destination
+     * 
+     * <p>Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpDestinationResponse>} - The async response
@@ -361,6 +409,9 @@ public class AsyncCdp {
     /**
      * Retrieve an event
      * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpEventRequestBuilder getCdpEvent() {
@@ -369,6 +420,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve an event
+     * 
+     * <p>Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpEventResponse>} - The async response
@@ -384,6 +438,9 @@ public class AsyncCdp {
     /**
      * Retrieve a profile
      * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpProfileRequestBuilder getCdpProfile() {
@@ -392,6 +449,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve a profile
+     * 
+     * <p>Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpProfileResponse>} - The async response
@@ -407,6 +467,9 @@ public class AsyncCdp {
     /**
      * Retrieve a segment
      * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpSegmentRequestBuilder getCdpSegment() {
@@ -415,6 +478,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve a segment
+     * 
+     * <p>Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpSegmentResponse>} - The async response
@@ -430,6 +496,9 @@ public class AsyncCdp {
     /**
      * Retrieve a source
      * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
      * @return The async call builder
      */
     public GetCdpSourceRequestBuilder getCdpSource() {
@@ -438,6 +507,9 @@ public class AsyncCdp {
 
     /**
      * Retrieve a source
+     * 
+     * <p>Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCdpSourceResponse>} - The async response
@@ -453,6 +525,13 @@ public class AsyncCdp {
     /**
      * List all activations
      * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpActivationsRequestBuilder listCdpActivations() {
@@ -461,6 +540,13 @@ public class AsyncCdp {
 
     /**
      * List all activations
+     * 
+     * <p>Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpActivationsResponse>} - The async response
@@ -476,6 +562,13 @@ public class AsyncCdp {
     /**
      * List all destinations
      * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpDestinationsRequestBuilder listCdpDestinations() {
@@ -484,6 +577,13 @@ public class AsyncCdp {
 
     /**
      * List all destinations
+     * 
+     * <p>Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpDestinationsResponse>} - The async response
@@ -499,6 +599,13 @@ public class AsyncCdp {
     /**
      * List all events
      * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpEventsRequestBuilder listCdpEvents() {
@@ -507,6 +614,13 @@ public class AsyncCdp {
 
     /**
      * List all events
+     * 
+     * <p>Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpEventsResponse>} - The async response
@@ -522,6 +636,13 @@ public class AsyncCdp {
     /**
      * List all profiles
      * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpProfilesRequestBuilder listCdpProfiles() {
@@ -530,6 +651,13 @@ public class AsyncCdp {
 
     /**
      * List all profiles
+     * 
+     * <p>Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpProfilesResponse>} - The async response
@@ -545,6 +673,13 @@ public class AsyncCdp {
     /**
      * List all segments
      * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpSegmentsRequestBuilder listCdpSegments() {
@@ -553,6 +688,13 @@ public class AsyncCdp {
 
     /**
      * List all segments
+     * 
+     * <p>Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpSegmentsResponse>} - The async response
@@ -568,6 +710,13 @@ public class AsyncCdp {
     /**
      * List all sources
      * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
      * @return The async call builder
      */
     public ListCdpSourcesRequestBuilder listCdpSources() {
@@ -576,6 +725,13 @@ public class AsyncCdp {
 
     /**
      * List all sources
+     * 
+     * <p>Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCdpSourcesResponse>} - The async response
@@ -591,6 +747,9 @@ public class AsyncCdp {
     /**
      * Update an activation
      * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpActivationRequestBuilder patchCdpActivation() {
@@ -599,6 +758,9 @@ public class AsyncCdp {
 
     /**
      * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpActivationResponse>} - The async response
@@ -614,6 +776,9 @@ public class AsyncCdp {
     /**
      * Update a destination
      * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpDestinationRequestBuilder patchCdpDestination() {
@@ -622,6 +787,9 @@ public class AsyncCdp {
 
     /**
      * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpDestinationResponse>} - The async response
@@ -637,6 +805,9 @@ public class AsyncCdp {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpEventRequestBuilder patchCdpEvent() {
@@ -645,6 +816,9 @@ public class AsyncCdp {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpEventResponse>} - The async response
@@ -660,6 +834,9 @@ public class AsyncCdp {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpProfileRequestBuilder patchCdpProfile() {
@@ -668,6 +845,9 @@ public class AsyncCdp {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpProfileResponse>} - The async response
@@ -683,6 +863,9 @@ public class AsyncCdp {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpSegmentRequestBuilder patchCdpSegment() {
@@ -691,6 +874,9 @@ public class AsyncCdp {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpSegmentResponse>} - The async response
@@ -706,6 +892,9 @@ public class AsyncCdp {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public PatchCdpSourceRequestBuilder patchCdpSource() {
@@ -714,6 +903,9 @@ public class AsyncCdp {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCdpSourceResponse>} - The async response
@@ -729,6 +921,8 @@ public class AsyncCdp {
     /**
      * Remove an activation
      * 
+     * <p>Deletes the CdpActivation identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpActivationRequestBuilder removeCdpActivation() {
@@ -737,6 +931,8 @@ public class AsyncCdp {
 
     /**
      * Remove an activation
+     * 
+     * <p>Deletes the CdpActivation identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpActivationResponse>} - The async response
@@ -752,6 +948,8 @@ public class AsyncCdp {
     /**
      * Remove a destination
      * 
+     * <p>Deletes the CdpDestination identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpDestinationRequestBuilder removeCdpDestination() {
@@ -760,6 +958,8 @@ public class AsyncCdp {
 
     /**
      * Remove a destination
+     * 
+     * <p>Deletes the CdpDestination identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpDestinationResponse>} - The async response
@@ -775,6 +975,8 @@ public class AsyncCdp {
     /**
      * Remove an event
      * 
+     * <p>Deletes the CdpEvent identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpEventRequestBuilder removeCdpEvent() {
@@ -783,6 +985,8 @@ public class AsyncCdp {
 
     /**
      * Remove an event
+     * 
+     * <p>Deletes the CdpEvent identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpEventResponse>} - The async response
@@ -798,6 +1002,8 @@ public class AsyncCdp {
     /**
      * Remove a profile
      * 
+     * <p>Deletes the CdpProfile identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpProfileRequestBuilder removeCdpProfile() {
@@ -806,6 +1012,8 @@ public class AsyncCdp {
 
     /**
      * Remove a profile
+     * 
+     * <p>Deletes the CdpProfile identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpProfileResponse>} - The async response
@@ -821,6 +1029,8 @@ public class AsyncCdp {
     /**
      * Remove a segment
      * 
+     * <p>Deletes the CdpSegment identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpSegmentRequestBuilder removeCdpSegment() {
@@ -829,6 +1039,8 @@ public class AsyncCdp {
 
     /**
      * Remove a segment
+     * 
+     * <p>Deletes the CdpSegment identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpSegmentResponse>} - The async response
@@ -844,6 +1056,8 @@ public class AsyncCdp {
     /**
      * Remove a source
      * 
+     * <p>Deletes the CdpSource identified by `id`.
+     * 
      * @return The async call builder
      */
     public RemoveCdpSourceRequestBuilder removeCdpSource() {
@@ -852,6 +1066,8 @@ public class AsyncCdp {
 
     /**
      * Remove a source
+     * 
+     * <p>Deletes the CdpSource identified by `id`.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCdpSourceResponse>} - The async response
@@ -867,6 +1083,9 @@ public class AsyncCdp {
     /**
      * Update an activation
      * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpActivationRequestBuilder updateCdpActivation() {
@@ -875,6 +1094,9 @@ public class AsyncCdp {
 
     /**
      * Update an activation
+     * 
+     * <p>Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in
+     * the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpActivationResponse>} - The async response
@@ -890,6 +1112,9 @@ public class AsyncCdp {
     /**
      * Update a destination
      * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpDestinationRequestBuilder updateCdpDestination() {
@@ -898,6 +1123,9 @@ public class AsyncCdp {
 
     /**
      * Update a destination
+     * 
+     * <p>Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change
+     * in the request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpDestinationResponse>} - The async response
@@ -913,6 +1141,9 @@ public class AsyncCdp {
     /**
      * Update an event
      * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpEventRequestBuilder updateCdpEvent() {
@@ -921,6 +1152,9 @@ public class AsyncCdp {
 
     /**
      * Update an event
+     * 
+     * <p>Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpEventResponse>} - The async response
@@ -936,6 +1170,9 @@ public class AsyncCdp {
     /**
      * Update a profile
      * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpProfileRequestBuilder updateCdpProfile() {
@@ -944,6 +1181,9 @@ public class AsyncCdp {
 
     /**
      * Update a profile
+     * 
+     * <p>Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpProfileResponse>} - The async response
@@ -959,6 +1199,9 @@ public class AsyncCdp {
     /**
      * Update a segment
      * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpSegmentRequestBuilder updateCdpSegment() {
@@ -967,6 +1210,9 @@ public class AsyncCdp {
 
     /**
      * Update a segment
+     * 
+     * <p>Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpSegmentResponse>} - The async response
@@ -982,6 +1228,9 @@ public class AsyncCdp {
     /**
      * Update a source
      * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
+     * 
      * @return The async call builder
      */
     public UpdateCdpSourceRequestBuilder updateCdpSource() {
@@ -990,6 +1239,9 @@ public class AsyncCdp {
 
     /**
      * Update a source
+     * 
+     * <p>Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the
+     * request body.
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCdpSourceResponse>} - The async response

@@ -13,7 +13,7 @@
 
 ## createLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("96ab6b81-552c-4664-a1b8-22cdc94f4e42")
+                    .id("23a86db1-07e5-4274-8b48-795e918a323e")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -62,7 +62,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.741Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.124Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -96,7 +96,7 @@ public class Application {
 
 ## getLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ public class Application {
 
 ## listLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ public class Application {
 
 ## patchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -241,7 +241,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("1aa6741c-1d93-400e-a845-a67c7698edbc")
+                    .id("31bb4efa-7523-4af0-9a37-27ec06a61c14")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -260,7 +260,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.140Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -295,7 +295,7 @@ public class Application {
 
 ## removeLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -351,7 +351,7 @@ public class Application {
 
 ## updateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -381,7 +381,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("1aa6741c-1d93-400e-a845-a67c7698edbc")
+                    .id("31bb4efa-7523-4af0-9a37-27ec06a61c14")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -400,7 +400,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-03T21:32:23.758Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-04T17:56:20.140Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
