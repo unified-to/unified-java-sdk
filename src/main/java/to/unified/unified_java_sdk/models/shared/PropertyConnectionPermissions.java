@@ -190,6 +190,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_EARNING_READ = new PropertyConnectionPermissions("hris_earning_read");
     public static final PropertyConnectionPermissions HRIS_EARNING_WRITE = new PropertyConnectionPermissions("hris_earning_write");
     public static final PropertyConnectionPermissions UC_CALL_READ = new PropertyConnectionPermissions("uc_call_read");
+    public static final PropertyConnectionPermissions UC_CALL_WRITE = new PropertyConnectionPermissions("uc_call_write");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
     public static final PropertyConnectionPermissions UC_CONTACT_WRITE = new PropertyConnectionPermissions("uc_contact_write");
     public static final PropertyConnectionPermissions UC_COMMENT_READ = new PropertyConnectionPermissions("uc_comment_read");
@@ -659,6 +660,7 @@ public class PropertyConnectionPermissions {
         map.put("hris_earning_read", HRIS_EARNING_READ);
         map.put("hris_earning_write", HRIS_EARNING_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
+        map.put("uc_call_write", UC_CALL_WRITE);
         map.put("uc_contact_read", UC_CONTACT_READ);
         map.put("uc_contact_write", UC_CONTACT_WRITE);
         map.put("uc_comment_read", UC_COMMENT_READ);
@@ -1060,6 +1062,7 @@ public class PropertyConnectionPermissions {
         map.put("hris_earning_read", PropertyConnectionPermissionsEnum.HRIS_EARNING_READ);
         map.put("hris_earning_write", PropertyConnectionPermissionsEnum.HRIS_EARNING_WRITE);
         map.put("uc_call_read", PropertyConnectionPermissionsEnum.UC_CALL_READ);
+        map.put("uc_call_write", PropertyConnectionPermissionsEnum.UC_CALL_WRITE);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
         map.put("uc_contact_write", PropertyConnectionPermissionsEnum.UC_CONTACT_WRITE);
         map.put("uc_comment_read", PropertyConnectionPermissionsEnum.UC_COMMENT_READ);
@@ -1462,6 +1465,7 @@ public class PropertyConnectionPermissions {
         HRIS_EARNING_READ("hris_earning_read"),
         HRIS_EARNING_WRITE("hris_earning_write"),
         UC_CALL_READ("uc_call_read"),
+        UC_CALL_WRITE("uc_call_write"),
         UC_CONTACT_READ("uc_contact_read"),
         UC_CONTACT_WRITE("uc_contact_write"),
         UC_COMMENT_READ("uc_comment_read"),

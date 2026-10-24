@@ -4,6 +4,7 @@
 
 ### Available Operations
 
+* [createUcCall](#createuccall) - Create a call
 * [createUcComment](#createuccomment) - Create a comment
 * [createUcContact](#createuccontact) - Create a contact
 * [createUcRecording](#createucrecording) - Create a recording
@@ -19,15 +20,108 @@
 * [listUcRecordings](#listucrecordings) - List all recordings
 * [listUcScorecards](#listucscorecards) - List all scorecards
 * [listUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
+* [patchUcCall](#patchuccall) - Update a call
 * [patchUcComment](#patchuccomment) - Update a comment
 * [patchUcContact](#patchuccontact) - Update a contact
 * [patchUcRecording](#patchucrecording) - Update a recording
 * [removeUcComment](#removeuccomment) - Remove a comment
 * [removeUcContact](#removeuccontact) - Remove a contact
 * [removeUcRecording](#removeucrecording) - Remove a recording
+* [updateUcCall](#updateuccall) - Update a call
 * [updateUcComment](#updateuccomment) - Update a comment
 * [updateUcContact](#updateuccontact) - Update a contact
 * [updateUcRecording](#updateucrecording) - Update a recording
+
+## createUcCall
+
+Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the provider's API. Returns the created UcCall.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" example="uc_call" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateUcCallRequest req = CreateUcCallRequest.builder()
+                .ucCall(UcCall.builder()
+                    .answerAt(OffsetDateTime.parse("2025-05-15T10:09:20.039Z"))
+                    .contacts(List.of())
+                    .conversationIdentifier("dddfd7fa-5a0f-4dcb-abd0-41ab63b568dd")
+                    .costAmount(1.564)
+                    .createdAt(OffsetDateTime.parse("2023-04-22T19:05:34.882Z"))
+                    .currency("USD")
+                    .durationSeconds(2556d)
+                    .endAt(OffsetDateTime.parse("2024-05-31T00:32:41.093Z"))
+                    .id("dddfd7fa-5a0f-4dcb-abd0-41ab63b568dd")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        UcMetadata.builder()
+                            .extraData(UcMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(UcMetadataFormat.PRICE)
+                            .id("976bb701-3f71-41c1-949a-4bec3c1686e7")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(UcMetadataValue.of("tui"))
+                            .build()))
+                    .startAt(OffsetDateTime.parse("2023-12-17T23:36:45.966Z"))
+                    .status(UcCallStatus.IN_PROGRESS)
+                    .telephone(PropertyUcCallTelephone.builder()
+                        .telephone("(493) 534-0768")
+                        .type(PropertyUcCallTelephoneType.MOBILE)
+                        .build())
+                    .type(UcCallType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2023-08-03T14:25:02.536Z"))
+                    .userPhone("819-894-3317 x163")
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateUcCallResponse res = sdk.uc().createUcCall()
+                .request(req)
+                .call();
+
+        if (res.ucCall().isPresent()) {
+            System.out.println(res.ucCall().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [CreateUcCallRequest](../../models/operations/CreateUcCallRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[CreateUcCallResponse](../../models/operations/CreateUcCallResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createUcComment
 
@@ -61,9 +155,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("e17b67ed-a33a-4f3e-ad73-67117aeb25d9")
+                    .id("554fb245-a7db-4cc4-a626-b5d90fc731a3")
                     .metadata(List.of())
-                    .updatedAt("2024-02-10T06:00:22.688Z")
+                    .updatedAt("2024-02-10T12:02:21.633Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -133,7 +227,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("8c9e36c5-74e8-4f39-884f-9719c41c812b")
+                    .id("826b46c7-c5f5-48cc-950c-113fa03b4cad")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -151,7 +245,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-09T13:12:56.665Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-10T03:57:11.125Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -214,34 +308,34 @@ public class Application {
         CreateUcRecordingRequest req = CreateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("e8752359-e384-461b-8c78-97358ad090a1")
+                    .conversationIdentifier("cb99940b-4397-4f19-b392-d57f35aaf8f5")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:56:00.551Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-28T12:31:49.691Z"))
-                    .id("e8752359-e384-461b-8c78-97358ad090a1")
+                    .endAt(OffsetDateTime.parse("2024-05-06T04:53:54.724Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-29T10:34:48.627Z"))
+                    .id("cb99940b-4397-4f19-b392-d57f35aaf8f5")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-02T13:32:32.400Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T22:57:06.624Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-17T05:11:29.934Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-18T03:33:14.165Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-26T04:23:48.674Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-03T01:58:41.725Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-27T01:25:15.330Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-03T12:24:59.020Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-13T13:20:22.564Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-04T18:18:26.505Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-14T01:59:34.066Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-05T17:59:59.019Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-28T01:09:28.599Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-28T04:52:25.538Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-17T16:12:55.173Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-18T07:27:44.077Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())
@@ -965,6 +1059,98 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchUcCallRequest req = PatchUcCallRequest.builder()
+                .ucCall(UcCall.builder()
+                    .answerAt(OffsetDateTime.parse("2025-05-15T10:09:20.063Z"))
+                    .contacts(List.of())
+                    .conversationIdentifier("fabe8773-7f00-4ad3-8a66-274cf78c25cd")
+                    .costAmount(1.564)
+                    .createdAt(OffsetDateTime.parse("2023-04-22T19:05:34.882Z"))
+                    .currency("USD")
+                    .durationSeconds(2556d)
+                    .endAt(OffsetDateTime.parse("2024-05-31T00:32:41.105Z"))
+                    .id("fabe8773-7f00-4ad3-8a66-274cf78c25cd")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        UcMetadata.builder()
+                            .extraData(UcMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(UcMetadataFormat.PRICE)
+                            .id("f24d9654-a31c-4aef-9268-684b7c3484ed")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(UcMetadataValue.of("tui"))
+                            .build()))
+                    .startAt(OffsetDateTime.parse("2023-12-17T23:36:45.974Z"))
+                    .status(UcCallStatus.IN_PROGRESS)
+                    .telephone(PropertyUcCallTelephone.builder()
+                        .telephone("(493) 534-0768")
+                        .type(PropertyUcCallTelephoneType.MOBILE)
+                        .build())
+                    .type(UcCallType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2023-08-03T14:25:02.539Z"))
+                    .userPhone("819-894-3317 x163")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchUcCallResponse res = sdk.uc().patchUcCall()
+                .request(req)
+                .call();
+
+        if (res.ucCall().isPresent()) {
+            System.out.println(res.ucCall().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [PatchUcCallRequest](../../models/operations/PatchUcCallRequest.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+
+### Response
+
+**[PatchUcCallResponse](../../models/operations/PatchUcCallResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchUcComment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -997,9 +1183,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("0c297ab2-2e9b-45c3-98be-6ba21a203baf")
+                    .id("0aae7af5-8307-4ef5-9de0-c7bd48c2d2b0")
                     .metadata(List.of())
-                    .updatedAt("2024-02-10T06:00:22.690Z")
+                    .updatedAt("2024-02-10T12:02:21.635Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1070,7 +1256,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("171a1ff9-0cd1-46cc-b61f-32b560458ed2")
+                    .id("f9af77f1-053f-4714-a434-30ef424ad0d9")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -1088,7 +1274,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-09T13:12:56.675Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-10T03:57:11.134Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1152,34 +1338,34 @@ public class Application {
         PatchUcRecordingRequest req = PatchUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("9bd260fd-8a52-4f5b-9a62-c030f6df8d4a")
+                    .conversationIdentifier("384d9728-9a4d-4a40-89ba-c94c5f0dc091")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:56:00.562Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-28T12:31:49.715Z"))
-                    .id("9bd260fd-8a52-4f5b-9a62-c030f6df8d4a")
+                    .endAt(OffsetDateTime.parse("2024-05-06T04:53:54.737Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-29T10:34:48.656Z"))
+                    .id("384d9728-9a4d-4a40-89ba-c94c5f0dc091")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-02T13:32:32.411Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T22:57:06.636Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-17T05:11:29.959Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-18T03:33:14.194Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-26T04:23:48.698Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-03T01:58:41.736Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-27T01:25:15.357Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-03T12:24:59.034Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-13T13:20:22.579Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-04T18:18:26.532Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-14T01:59:34.083Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-05T17:59:59.050Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-28T01:09:28.603Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-28T04:52:25.543Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-17T16:12:55.189Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-18T07:27:44.097Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())
@@ -1382,6 +1568,98 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateUcCallRequest req = UpdateUcCallRequest.builder()
+                .ucCall(UcCall.builder()
+                    .answerAt(OffsetDateTime.parse("2025-05-15T10:09:20.063Z"))
+                    .contacts(List.of())
+                    .conversationIdentifier("fabe8773-7f00-4ad3-8a66-274cf78c25cd")
+                    .costAmount(1.564)
+                    .createdAt(OffsetDateTime.parse("2023-04-22T19:05:34.882Z"))
+                    .currency("USD")
+                    .durationSeconds(2556d)
+                    .endAt(OffsetDateTime.parse("2024-05-31T00:32:41.105Z"))
+                    .id("fabe8773-7f00-4ad3-8a66-274cf78c25cd")
+                    .isPrivate(false)
+                    .metadata(List.of(
+                        UcMetadata.builder()
+                            .extraData(UcMetadataExtraData.of(Map.ofEntries(
+                            )))
+                            .format(UcMetadataFormat.PRICE)
+                            .id("f24d9654-a31c-4aef-9268-684b7c3484ed")
+                            .namespace("custom")
+                            .slug("custom_field")
+                            .value(UcMetadataValue.of("tui"))
+                            .build()))
+                    .startAt(OffsetDateTime.parse("2023-12-17T23:36:45.974Z"))
+                    .status(UcCallStatus.IN_PROGRESS)
+                    .telephone(PropertyUcCallTelephone.builder()
+                        .telephone("(493) 534-0768")
+                        .type(PropertyUcCallTelephoneType.MOBILE)
+                        .build())
+                    .type(UcCallType.INBOUND)
+                    .updatedAt(OffsetDateTime.parse("2023-08-03T14:25:02.539Z"))
+                    .userPhone("819-894-3317 x163")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateUcCallResponse res = sdk.uc().updateUcCall()
+                .request(req)
+                .call();
+
+        if (res.ucCall().isPresent()) {
+            System.out.println(res.ucCall().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                             | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `request`                                                             | [UpdateUcCallRequest](../../models/operations/UpdateUcCallRequest.md) | :heavy_check_mark:                                                    | The request object to use for the request.                            |
+
+### Response
+
+**[UpdateUcCallResponse](../../models/operations/UpdateUcCallResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateUcComment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -1414,9 +1692,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("0c297ab2-2e9b-45c3-98be-6ba21a203baf")
+                    .id("0aae7af5-8307-4ef5-9de0-c7bd48c2d2b0")
                     .metadata(List.of())
-                    .updatedAt("2024-02-10T06:00:22.690Z")
+                    .updatedAt("2024-02-10T12:02:21.635Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1487,7 +1765,7 @@ public class Application {
                             .type(UcEmailType.WORK)
                             .build()))
                     .firstName("Luther")
-                    .id("171a1ff9-0cd1-46cc-b61f-32b560458ed2")
+                    .id("f9af77f1-053f-4714-a434-30ef424ad0d9")
                     .lastName("Rogahn")
                     .metadata(List.of())
                     .name("Luther Rogahn")
@@ -1505,7 +1783,7 @@ public class Application {
                             .type(UcTelephoneType.MOBILE)
                             .build()))
                     .title("Chief Optimization Executive")
-                    .updatedAt(OffsetDateTime.parse("2023-12-09T13:12:56.675Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-10T03:57:11.134Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1569,34 +1847,34 @@ public class Application {
         UpdateUcRecordingRequest req = UpdateUcRecordingRequest.builder()
                 .ucRecording(UcRecording.builder()
                     .contacts(List.of())
-                    .conversationIdentifier("9bd260fd-8a52-4f5b-9a62-c030f6df8d4a")
+                    .conversationIdentifier("384d9728-9a4d-4a40-89ba-c94c5f0dc091")
                     .createdAt(OffsetDateTime.parse("2022-09-17T19:41:46.956Z"))
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:56:00.562Z"))
-                    .expiresAt(OffsetDateTime.parse("2026-04-28T12:31:49.715Z"))
-                    .id("9bd260fd-8a52-4f5b-9a62-c030f6df8d4a")
+                    .endAt(OffsetDateTime.parse("2024-05-06T04:53:54.737Z"))
+                    .expiresAt(OffsetDateTime.parse("2026-04-29T10:34:48.656Z"))
+                    .id("384d9728-9a4d-4a40-89ba-c94c5f0dc091")
                     .media(List.of(
                         UcRecordingMedia.builder()
-                            .endAt(OffsetDateTime.parse("2024-04-02T13:32:32.411Z"))
+                            .endAt(OffsetDateTime.parse("2024-04-02T22:57:06.636Z"))
                             .language("en")
                             .recordingDownloadUrl("https://parched-wasabi.com/")
-                            .startAt(OffsetDateTime.parse("2026-05-17T05:11:29.959Z"))
+                            .startAt(OffsetDateTime.parse("2026-05-18T03:33:14.194Z"))
                             .transcriptDownloadUrl("https://colossal-cuckoo.name")
                             .transcripts(List.of(
                                 UcRecordingTranscript.builder()
                                     .text("Turpis maiores ducimus tero speculum.")
-                                    .endAt(OffsetDateTime.parse("2026-02-26T04:23:48.698Z"))
-                                    .startAt(OffsetDateTime.parse("2024-06-03T01:58:41.736Z"))
+                                    .endAt(OffsetDateTime.parse("2026-02-27T01:25:15.357Z"))
+                                    .startAt(OffsetDateTime.parse("2024-06-03T12:24:59.034Z"))
                                     .build(),
                                 UcRecordingTranscript.builder()
                                     .text("Magnam consuasor uxor tergiversatio subseco.")
-                                    .endAt(OffsetDateTime.parse("2024-10-13T13:20:22.579Z"))
-                                    .startAt(OffsetDateTime.parse("2026-08-04T18:18:26.532Z"))
+                                    .endAt(OffsetDateTime.parse("2024-10-14T01:59:34.083Z"))
+                                    .startAt(OffsetDateTime.parse("2026-08-05T17:59:59.050Z"))
                                     .build()))
                             .build()))
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-04-28T01:09:28.603Z"))
+                    .startAt(OffsetDateTime.parse("2023-04-28T04:52:25.543Z"))
                     .type(UcRecordingType.OUTBOUND)
-                    .updatedAt(OffsetDateTime.parse("2025-03-17T16:12:55.189Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-18T07:27:44.097Z"))
                     .userPhone("1-915-327-0429 x509")
                     .webUrl("https://spherical-comparison.org")
                     .build())

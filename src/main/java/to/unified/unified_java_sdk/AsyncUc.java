@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
@@ -22,15 +23,19 @@ import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcContactRequestBuilder;
@@ -61,6 +66,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsReque
 import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardtemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardtemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcContactRequestBuilder;
@@ -73,12 +80,15 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactReques
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingResponse;
+import to.unified.unified_java_sdk.operations.CreateUcCall;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
@@ -94,12 +104,14 @@ import to.unified.unified_java_sdk.operations.ListUcContacts;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
 import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
+import to.unified.unified_java_sdk.operations.PatchUcCall;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.RemoveUcContact;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
+import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
@@ -123,6 +135,35 @@ public class AsyncUc {
      */
     public Uc sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @return The async call builder
+     */
+    public CreateUcCallRequestBuilder createUcCall() {
+        return new CreateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcCallResponse> createUcCall(@Nonnull CreateUcCallRequest request) {
+        AsyncRequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
+              = new CreateUcCall.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -610,6 +651,35 @@ public class AsyncUc {
 
 
     /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The async call builder
+     */
+    public PatchUcCallRequestBuilder patchUcCall() {
+        return new PatchUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchUcCallResponse>} - The async response
+     */
+    public CompletableFuture<PatchUcCallResponse> patchUcCall(@Nonnull PatchUcCallRequest request) {
+        AsyncRequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
+              = new PatchUcCall.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a comment
      * 
      * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
@@ -772,6 +842,35 @@ public class AsyncUc {
     public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateUcCallRequestBuilder updateUcCall() {
+        return new UpdateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateUcCallResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUcCallResponse> updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        AsyncRequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
+              = new UpdateUcCall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

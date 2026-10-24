@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -20,6 +21,13 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class UcCall {
+    /**
+     * When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("answer_at")
+    private OffsetDateTime answerAt;
+
     /**
      * The contact ID for call (reference to UcContact)
      */
@@ -40,11 +48,32 @@ public class UcCall {
     private String conversationIdentifier;
 
     /**
+     * What the integration charged for the call
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cost_amount")
+    private Double costAmount;
+
+    /**
      * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
+
+    /**
+     * ISO 4217 currency of cost_amount
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    private String currency;
+
+    /**
+     * Call length in seconds
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration_seconds")
+    private Double durationSeconds;
 
     /**
      * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -60,6 +89,13 @@ public class UcCall {
     @JsonProperty("id")
     private String id;
 
+    /**
+     * Write-only: what the call does once answered (create/update only; never returned)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instructions")
+    private List<UcCallInstruction> instructions;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
@@ -69,6 +105,13 @@ public class UcCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     private List<UcMetadata> metadata;
+
+    /**
+     * The parent call (leg) that this call belongs to
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
 
     /**
      * The raw data returned by the integration for this call
@@ -83,6 +126,13 @@ public class UcCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
+
+    /**
+     * The current or final status of the call
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private UcCallStatus status;
 
     /**
      * The telephone number called
@@ -122,32 +172,46 @@ public class UcCall {
 
     @JsonCreator
     public UcCall(
+            @JsonProperty("answer_at") @Nullable OffsetDateTime answerAt,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("contacts") @Nullable List<UcContact> contacts,
             @JsonProperty("conversation_identifier") @Nullable String conversationIdentifier,
+            @JsonProperty("cost_amount") @Nullable Double costAmount,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("duration_seconds") @Nullable Double durationSeconds,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("instructions") @Nullable List<UcCallInstruction> instructions,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("metadata") @Nullable List<UcMetadata> metadata,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("status") @Nullable UcCallStatus status,
             @JsonProperty("telephone") @Nullable PropertyUcCallTelephone telephone,
             @JsonProperty("type") @Nullable UcCallType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
             @JsonProperty("user_name") @Nullable String userName,
             @JsonProperty("user_phone") @Nullable String userPhone) {
+        this.answerAt = answerAt;
         this.contactId = contactId;
         this.contacts = contacts;
         this.conversationIdentifier = conversationIdentifier;
+        this.costAmount = costAmount;
         this.createdAt = createdAt;
+        this.currency = currency;
+        this.durationSeconds = durationSeconds;
         this.endAt = endAt;
         this.id = id;
+        this.instructions = instructions;
         this.isPrivate = isPrivate;
         this.metadata = metadata;
+        this.parentId = parentId;
         this.raw = raw;
         this.startAt = startAt;
+        this.status = status;
         this.telephone = telephone;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -162,7 +226,16 @@ public class UcCall {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null);
+    }
+
+    /**
+     * When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> answerAt() {
+        return Optional.ofNullable(this.answerAt);
     }
 
     /**
@@ -184,10 +257,31 @@ public class UcCall {
     }
 
     /**
+     * What the integration charged for the call
+     */
+    public Optional<Double> costAmount() {
+        return Optional.ofNullable(this.costAmount);
+    }
+
+    /**
      * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    /**
+     * ISO 4217 currency of cost_amount
+     */
+    public Optional<String> currency() {
+        return Optional.ofNullable(this.currency);
+    }
+
+    /**
+     * Call length in seconds
+     */
+    public Optional<Double> durationSeconds() {
+        return Optional.ofNullable(this.durationSeconds);
     }
 
     /**
@@ -204,12 +298,26 @@ public class UcCall {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Write-only: what the call does once answered (create/update only; never returned)
+     */
+    public Optional<List<UcCallInstruction>> instructions() {
+        return Optional.ofNullable(this.instructions);
+    }
+
     public Optional<Boolean> isPrivate() {
         return Optional.ofNullable(this.isPrivate);
     }
 
     public Optional<List<UcMetadata>> metadata() {
         return Optional.ofNullable(this.metadata);
+    }
+
+    /**
+     * The parent call (leg) that this call belongs to
+     */
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -224,6 +332,13 @@ public class UcCall {
      */
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
+    }
+
+    /**
+     * The current or final status of the call
+     */
+    public Optional<UcCallStatus> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -265,6 +380,15 @@ public class UcCall {
 
 
     /**
+     * When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public UcCall withAnswerAt(@Nullable OffsetDateTime answerAt) {
+        this.answerAt = answerAt;
+        return this;
+    }
+
+
+    /**
      * The contact ID for call (reference to UcContact)
      */
     public UcCall withContactId(@Nullable String contactId) {
@@ -289,10 +413,37 @@ public class UcCall {
 
 
     /**
+     * What the integration charged for the call
+     */
+    public UcCall withCostAmount(@Nullable Double costAmount) {
+        this.costAmount = costAmount;
+        return this;
+    }
+
+
+    /**
      * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public UcCall withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    /**
+     * ISO 4217 currency of cost_amount
+     */
+    public UcCall withCurrency(@Nullable String currency) {
+        this.currency = currency;
+        return this;
+    }
+
+
+    /**
+     * Call length in seconds
+     */
+    public UcCall withDurationSeconds(@Nullable Double durationSeconds) {
+        this.durationSeconds = durationSeconds;
         return this;
     }
 
@@ -315,6 +466,15 @@ public class UcCall {
     }
 
 
+    /**
+     * Write-only: what the call does once answered (create/update only; never returned)
+     */
+    public UcCall withInstructions(@Nullable List<UcCallInstruction> instructions) {
+        this.instructions = instructions;
+        return this;
+    }
+
+
     public UcCall withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
@@ -323,6 +483,15 @@ public class UcCall {
 
     public UcCall withMetadata(@Nullable List<UcMetadata> metadata) {
         this.metadata = metadata;
+        return this;
+    }
+
+
+    /**
+     * The parent call (leg) that this call belongs to
+     */
+    public UcCall withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -341,6 +510,15 @@ public class UcCall {
      */
     public UcCall withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
+        return this;
+    }
+
+
+    /**
+     * The current or final status of the call
+     */
+    public UcCall withStatus(@Nullable UcCallStatus status) {
+        this.status = status;
         return this;
     }
 
@@ -400,16 +578,23 @@ public class UcCall {
         }
         UcCall other = (UcCall) o;
         return 
+            Utils.enhancedDeepEquals(this.answerAt, other.answerAt) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.conversationIdentifier, other.conversationIdentifier) &&
+            Utils.enhancedDeepEquals(this.costAmount, other.costAmount) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.durationSeconds, other.durationSeconds) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.instructions, other.instructions) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -421,27 +606,36 @@ public class UcCall {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            contactId, contacts, conversationIdentifier,
-            createdAt, endAt, id,
-            isPrivate, metadata, raw,
-            startAt, telephone, type,
-            updatedAt, userId, userName,
-            userPhone);
+            answerAt, contactId, contacts,
+            conversationIdentifier, costAmount, createdAt,
+            currency, durationSeconds, endAt,
+            id, instructions, isPrivate,
+            metadata, parentId, raw,
+            startAt, status, telephone,
+            type, updatedAt, userId,
+            userName, userPhone);
     }
     
     @Override
     public String toString() {
         return Utils.toString(UcCall.class,
+                "answerAt", answerAt,
                 "contactId", contactId,
                 "contacts", contacts,
                 "conversationIdentifier", conversationIdentifier,
+                "costAmount", costAmount,
                 "createdAt", createdAt,
+                "currency", currency,
+                "durationSeconds", durationSeconds,
                 "endAt", endAt,
                 "id", id,
+                "instructions", instructions,
                 "isPrivate", isPrivate,
                 "metadata", metadata,
+                "parentId", parentId,
                 "raw", raw,
                 "startAt", startAt,
+                "status", status,
                 "telephone", telephone,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -453,25 +647,39 @@ public class UcCall {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private OffsetDateTime answerAt;
+
         private String contactId;
 
         private List<UcContact> contacts;
 
         private String conversationIdentifier;
 
+        private Double costAmount;
+
         private OffsetDateTime createdAt;
+
+        private String currency;
+
+        private Double durationSeconds;
 
         private OffsetDateTime endAt;
 
         private String id;
 
+        private List<UcCallInstruction> instructions;
+
         private Boolean isPrivate;
 
         private List<UcMetadata> metadata;
 
+        private String parentId;
+
         private Map<String, Object> raw;
 
         private OffsetDateTime startAt;
+
+        private UcCallStatus status;
 
         private PropertyUcCallTelephone telephone;
 
@@ -487,6 +695,14 @@ public class UcCall {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder answerAt(@Nullable OffsetDateTime answerAt) {
+            this.answerAt = answerAt;
+            return this;
         }
 
         /**
@@ -511,10 +727,34 @@ public class UcCall {
         }
 
         /**
+         * What the integration charged for the call
+         */
+        public Builder costAmount(@Nullable Double costAmount) {
+            this.costAmount = costAmount;
+            return this;
+        }
+
+        /**
          * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        /**
+         * ISO 4217 currency of cost_amount
+         */
+        public Builder currency(@Nullable String currency) {
+            this.currency = currency;
+            return this;
+        }
+
+        /**
+         * Call length in seconds
+         */
+        public Builder durationSeconds(@Nullable Double durationSeconds) {
+            this.durationSeconds = durationSeconds;
             return this;
         }
 
@@ -534,6 +774,14 @@ public class UcCall {
             return this;
         }
 
+        /**
+         * Write-only: what the call does once answered (create/update only; never returned)
+         */
+        public Builder instructions(@Nullable List<UcCallInstruction> instructions) {
+            this.instructions = instructions;
+            return this;
+        }
+
         public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
@@ -541,6 +789,14 @@ public class UcCall {
 
         public Builder metadata(@Nullable List<UcMetadata> metadata) {
             this.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * The parent call (leg) that this call belongs to
+         */
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -557,6 +813,14 @@ public class UcCall {
          */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
+            return this;
+        }
+
+        /**
+         * The current or final status of the call
+         */
+        public Builder status(@Nullable UcCallStatus status) {
+            this.status = status;
             return this;
         }
 
@@ -601,12 +865,14 @@ public class UcCall {
 
         public UcCall build() {
             return new UcCall(
-                contactId, contacts, conversationIdentifier,
-                createdAt, endAt, id,
-                isPrivate, metadata, raw,
-                startAt, telephone, type,
-                updatedAt, userId, userName,
-                userPhone);
+                answerAt, contactId, contacts,
+                conversationIdentifier, costAmount, createdAt,
+                currency, durationSeconds, endAt,
+                id, instructions, isPrivate,
+                metadata, parentId, raw,
+                startAt, status, telephone,
+                type, updatedAt, userId,
+                userName, userPhone);
         }
 
     }

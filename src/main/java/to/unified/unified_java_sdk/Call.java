@@ -6,14 +6,26 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallResponse;
+import to.unified.unified_java_sdk.operations.CreateUcCall;
 import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
+import to.unified.unified_java_sdk.operations.PatchUcCall;
+import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -34,6 +46,34 @@ public class Call {
      */
     public AsyncCall async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @return The call builder
+     */
+    public CreateUcCallRequestBuilder createUcCall() {
+        return new CreateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcCallResponse createUcCall(@Nonnull CreateUcCallRequest request) {
+        RequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
+              = new CreateUcCall.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -97,6 +137,62 @@ public class Call {
     public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public PatchUcCallRequestBuilder patchUcCall() {
+        return new PatchUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcCallResponse patchUcCall(@Nonnull PatchUcCallRequest request) {
+        RequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
+              = new PatchUcCall.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public UpdateUcCallRequestBuilder updateUcCall() {
+        return new UpdateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcCallResponse updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        RequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
+              = new UpdateUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

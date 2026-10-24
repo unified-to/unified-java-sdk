@@ -6,6 +6,9 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
@@ -51,6 +54,9 @@ import to.unified.unified_java_sdk.models.operations.ListUcScorecardsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
@@ -69,6 +75,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUcCallResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
@@ -78,6 +87,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateUcContactResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
+import to.unified.unified_java_sdk.operations.CreateUcCall;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
@@ -93,12 +103,14 @@ import to.unified.unified_java_sdk.operations.ListUcContacts;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
 import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
+import to.unified.unified_java_sdk.operations.PatchUcCall;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.RemoveUcContact;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
+import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.operations.UpdateUcContact;
 import to.unified.unified_java_sdk.operations.UpdateUcRecording;
@@ -122,6 +134,34 @@ public class Uc {
      */
     public AsyncUc async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @return The call builder
+     */
+    public CreateUcCallRequestBuilder createUcCall() {
+        return new CreateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a call
+     * 
+     * <p>Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcCall.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcCallResponse createUcCall(@Nonnull CreateUcCallRequest request) {
+        RequestOperation<CreateUcCallRequest, CreateUcCallResponse> operation
+              = new CreateUcCall.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -593,6 +633,34 @@ public class Uc {
     }
 
     /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public PatchUcCallRequestBuilder patchUcCall() {
+        return new PatchUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUcCallResponse patchUcCall(@Nonnull PatchUcCallRequest request) {
+        RequestOperation<PatchUcCallRequest, PatchUcCallResponse> operation
+              = new PatchUcCall.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a comment
      * 
      * <p>Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the
@@ -751,6 +819,34 @@ public class Uc {
     public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @return The call builder
+     */
+    public UpdateUcCallRequestBuilder updateUcCall() {
+        return new UpdateUcCallRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a call
+     * 
+     * <p>Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request
+     * body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUcCallResponse updateUcCall(@Nonnull UpdateUcCallRequest request) {
+        RequestOperation<UpdateUcCallRequest, UpdateUcCallResponse> operation
+              = new UpdateUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -44,7 +44,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("9e4e43da-3252-45cc-8416-3011310ea7cf")
+                    .id("73c81f1d-0ec5-4313-826f-8a73f4807e3e")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -62,7 +62,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T21:58:27.892Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.063Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -242,7 +242,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("56b41f34-df78-4142-a3d7-880219c1f80c")
+                    .id("440c1720-972c-4b35-b659-b1c9fc8ff2a1")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -260,7 +260,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T21:58:27.908Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -382,7 +382,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("56b41f34-df78-4142-a3d7-880219c1f80c")
+                    .id("440c1720-972c-4b35-b659-b1c9fc8ff2a1")
                     .metadata(List.of())
                     .practitionerIds(List.of())
                     .reasons(List.of(
@@ -400,7 +400,7 @@ public class Application {
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-20T21:58:27.908Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.080Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
