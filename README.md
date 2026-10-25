@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.2'
+implementation 'to.unified:unified-java-sdk:0.50.3'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.2</version>
+    <version>0.50.3</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -727,6 +727,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
+### [Careplan](docs/sdks/careplan/README.md)
+
+* [getHealthcareCareplan](docs/sdks/careplan/README.md#gethealthcarecareplan) - Retrieve a careplan
+* [listHealthcareCareplans](docs/sdks/careplan/README.md#listhealthcarecareplans) - List all careplans
+
 ### [Carrier](docs/sdks/carrier/README.md)
 
 * [getShippingCarrier](docs/sdks/carrier/README.md#getshippingcarrier) - Retrieve a carrier
@@ -1060,6 +1065,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
 * [updateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
+### [Coverage](docs/sdks/coverage/README.md)
+
+* [getHealthcareCoverage](docs/sdks/coverage/README.md#gethealthcarecoverage) - Retrieve a coverage
+* [listHealthcareCoverages](docs/sdks/coverage/README.md#listhealthcarecoverages) - List all coverages
+
 ### [Creative](docs/sdks/creative/README.md)
 
 * [createAdsCreative](docs/sdks/creative/README.md#createadscreative) - Create a creative
@@ -1211,12 +1221,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [createHealthcareDocument](docs/sdks/document/README.md#createhealthcaredocument) - Create a document
 * [createHrisDocument](docs/sdks/document/README.md#createhrisdocument) - Create a document
 * [createSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [getHealthcareDocument](docs/sdks/document/README.md#gethealthcaredocument) - Retrieve a document
 * [getHrisDocument](docs/sdks/document/README.md#gethrisdocument) - Retrieve a document
 * [getSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [listHealthcareDocuments](docs/sdks/document/README.md#listhealthcaredocuments) - List all documents
 * [listHrisDocuments](docs/sdks/document/README.md#listhrisdocuments) - List all documents
 * [listSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [patchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
@@ -1409,7 +1422,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Goal](docs/sdks/goal/README.md)
 
 * [createPerformanceGoal](docs/sdks/goal/README.md#createperformancegoal) - Create a goal
+* [getHealthcareGoal](docs/sdks/goal/README.md#gethealthcaregoal) - Retrieve a goal
 * [getPerformanceGoal](docs/sdks/goal/README.md#getperformancegoal) - Retrieve a goal
+* [listHealthcareGoals](docs/sdks/goal/README.md#listhealthcaregoals) - List all goals
 * [listPerformanceGoals](docs/sdks/goal/README.md#listperformancegoals) - List all goals
 * [patchPerformanceGoal](docs/sdks/goal/README.md#patchperformancegoal) - Update a goal
 * [removePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
@@ -1446,29 +1461,42 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [createHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
+* [createHealthcareDocument](docs/sdks/healthcare/README.md#createhealthcaredocument) - Create a document
 * [createHealthcareObservation](docs/sdks/healthcare/README.md#createhealthcareobservation) - Create an observation
 * [createHealthcarePatient](docs/sdks/healthcare/README.md#createhealthcarepatient) - Create a patient
 * [getHealthcareAllergy](docs/sdks/healthcare/README.md#gethealthcareallergy) - Retrieve an allergy
 * [getHealthcareAppointment](docs/sdks/healthcare/README.md#gethealthcareappointment) - Retrieve an appointment
+* [getHealthcareCareplan](docs/sdks/healthcare/README.md#gethealthcarecareplan) - Retrieve a careplan
 * [getHealthcareCondition](docs/sdks/healthcare/README.md#gethealthcarecondition) - Retrieve a condition
+* [getHealthcareCoverage](docs/sdks/healthcare/README.md#gethealthcarecoverage) - Retrieve a coverage
+* [getHealthcareDocument](docs/sdks/healthcare/README.md#gethealthcaredocument) - Retrieve a document
 * [getHealthcareEncounter](docs/sdks/healthcare/README.md#gethealthcareencounter) - Retrieve an encounter
+* [getHealthcareGoal](docs/sdks/healthcare/README.md#gethealthcaregoal) - Retrieve a goal
 * [getHealthcareImmunization](docs/sdks/healthcare/README.md#gethealthcareimmunization) - Retrieve an immunization
 * [getHealthcareLocation](docs/sdks/healthcare/README.md#gethealthcarelocation) - Retrieve a location
 * [getHealthcareMedication](docs/sdks/healthcare/README.md#gethealthcaremedication) - Retrieve a medication
 * [getHealthcareObservation](docs/sdks/healthcare/README.md#gethealthcareobservation) - Retrieve an observation
 * [getHealthcarePatient](docs/sdks/healthcare/README.md#gethealthcarepatient) - Retrieve a patient
 * [getHealthcarePractitioner](docs/sdks/healthcare/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [getHealthcareProcedure](docs/sdks/healthcare/README.md#gethealthcareprocedure) - Retrieve a procedure
+* [getHealthcareReport](docs/sdks/healthcare/README.md#gethealthcarereport) - Retrieve a report
 * [getHealthcareSlot](docs/sdks/healthcare/README.md#gethealthcareslot) - Retrieve a slot
 * [listHealthcareAllergies](docs/sdks/healthcare/README.md#listhealthcareallergies) - List all allergies
 * [listHealthcareAppointments](docs/sdks/healthcare/README.md#listhealthcareappointments) - List all appointments
+* [listHealthcareCareplans](docs/sdks/healthcare/README.md#listhealthcarecareplans) - List all careplans
 * [listHealthcareConditions](docs/sdks/healthcare/README.md#listhealthcareconditions) - List all conditions
+* [listHealthcareCoverages](docs/sdks/healthcare/README.md#listhealthcarecoverages) - List all coverages
+* [listHealthcareDocuments](docs/sdks/healthcare/README.md#listhealthcaredocuments) - List all documents
 * [listHealthcareEncounters](docs/sdks/healthcare/README.md#listhealthcareencounters) - List all encounters
+* [listHealthcareGoals](docs/sdks/healthcare/README.md#listhealthcaregoals) - List all goals
 * [listHealthcareImmunizations](docs/sdks/healthcare/README.md#listhealthcareimmunizations) - List all immunizations
 * [listHealthcareLocations](docs/sdks/healthcare/README.md#listhealthcarelocations) - List all locations
 * [listHealthcareMedications](docs/sdks/healthcare/README.md#listhealthcaremedications) - List all medications
 * [listHealthcareObservations](docs/sdks/healthcare/README.md#listhealthcareobservations) - List all observations
 * [listHealthcarePatients](docs/sdks/healthcare/README.md#listhealthcarepatients) - List all patients
 * [listHealthcarePractitioners](docs/sdks/healthcare/README.md#listhealthcarepractitioners) - List all practitioners
+* [listHealthcareProcedures](docs/sdks/healthcare/README.md#listhealthcareprocedures) - List all procedures
+* [listHealthcareReports](docs/sdks/healthcare/README.md#listhealthcarereports) - List all reports
 * [listHealthcareSlots](docs/sdks/healthcare/README.md#listhealthcareslots) - List all slots
 * [patchHealthcareAppointment](docs/sdks/healthcare/README.md#patchhealthcareappointment) - Update an appointment
 * [patchHealthcarePatient](docs/sdks/healthcare/README.md#patchhealthcarepatient) - Update a patient
@@ -2152,6 +2180,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
 * [listHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
 
+### [Procedure](docs/sdks/procedure/README.md)
+
+* [getHealthcareProcedure](docs/sdks/procedure/README.md#gethealthcareprocedure) - Retrieve a procedure
+* [listHealthcareProcedures](docs/sdks/procedure/README.md#listhealthcareprocedures) - List all procedures
+
 ### [Profile](docs/sdks/profile/README.md)
 
 * [createCdpProfile](docs/sdks/profile/README.md#createcdpprofile) - Create a profile
@@ -2306,8 +2339,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Report](docs/sdks/report/README.md)
 
+* [getHealthcareReport](docs/sdks/report/README.md#gethealthcarereport) - Retrieve a report
 * [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 * [listAnalyticsReports](docs/sdks/report/README.md#listanalyticsreports) - List all reports
+* [listHealthcareReports](docs/sdks/report/README.md#listhealthcarereports) - List all reports
 * [listMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
@@ -2919,7 +2954,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2931,7 +2966,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2979,7 +3014,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2991,7 +3026,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3058,7 +3093,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                        .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3070,7 +3105,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3225,7 +3260,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("4c2bc402-a7bf-450d-bb55-223b2200260f")
+                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3237,7 +3272,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T16:10:06.240Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

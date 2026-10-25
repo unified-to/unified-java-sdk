@@ -49,6 +49,20 @@ public class HealthcareMedication {
     private String dosage;
 
     /**
+     * Amount of medication per dose
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dose_number")
+    private Double doseNumber;
+
+    /**
+     * Unit of the dose amount (e.g. mg, tablet)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("dose_unit")
+    private String doseUnit;
+
+    /**
      * The encounter in which the medication was ordered
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -119,6 +133,13 @@ public class HealthcareMedication {
     private Double refillCount;
 
     /**
+     * How the medication is taken (e.g. oral, intravenous)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("route")
+    private String route;
+
+    /**
      * When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -145,6 +166,8 @@ public class HealthcareMedication {
             @JsonProperty("codes") @Nullable List<HealthcareCode> codes,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("dosage") @Nullable String dosage,
+            @JsonProperty("dose_number") @Nullable Double doseNumber,
+            @JsonProperty("dose_unit") @Nullable String doseUnit,
             @JsonProperty("encounter_id") @Nullable String encounterId,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
@@ -155,6 +178,7 @@ public class HealthcareMedication {
             @JsonProperty("practitioner_id") @Nullable String practitionerId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("refill_count") @Nullable Double refillCount,
+            @JsonProperty("route") @Nullable String route,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable HealthcareMedicationStatus status,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -162,6 +186,8 @@ public class HealthcareMedication {
         this.codes = codes;
         this.createdAt = createdAt;
         this.dosage = dosage;
+        this.doseNumber = doseNumber;
+        this.doseUnit = doseUnit;
         this.encounterId = encounterId;
         this.endAt = endAt;
         this.id = id;
@@ -172,6 +198,7 @@ public class HealthcareMedication {
         this.practitionerId = practitionerId;
         this.raw = raw;
         this.refillCount = refillCount;
+        this.route = route;
         this.startAt = startAt;
         this.status = status;
         this.updatedAt = updatedAt;
@@ -179,6 +206,7 @@ public class HealthcareMedication {
     
     public HealthcareMedication() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -212,6 +240,20 @@ public class HealthcareMedication {
      */
     public Optional<String> dosage() {
         return Optional.ofNullable(this.dosage);
+    }
+
+    /**
+     * Amount of medication per dose
+     */
+    public Optional<Double> doseNumber() {
+        return Optional.ofNullable(this.doseNumber);
+    }
+
+    /**
+     * Unit of the dose amount (e.g. mg, tablet)
+     */
+    public Optional<String> doseUnit() {
+        return Optional.ofNullable(this.doseUnit);
     }
 
     /**
@@ -285,6 +327,13 @@ public class HealthcareMedication {
     }
 
     /**
+     * How the medication is taken (e.g. oral, intravenous)
+     */
+    public Optional<String> route() {
+        return Optional.ofNullable(this.route);
+    }
+
+    /**
      * When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> startAt() {
@@ -342,6 +391,24 @@ public class HealthcareMedication {
      */
     public HealthcareMedication withDosage(@Nullable String dosage) {
         this.dosage = dosage;
+        return this;
+    }
+
+
+    /**
+     * Amount of medication per dose
+     */
+    public HealthcareMedication withDoseNumber(@Nullable Double doseNumber) {
+        this.doseNumber = doseNumber;
+        return this;
+    }
+
+
+    /**
+     * Unit of the dose amount (e.g. mg, tablet)
+     */
+    public HealthcareMedication withDoseUnit(@Nullable String doseUnit) {
+        this.doseUnit = doseUnit;
         return this;
     }
 
@@ -437,6 +504,15 @@ public class HealthcareMedication {
 
 
     /**
+     * How the medication is taken (e.g. oral, intravenous)
+     */
+    public HealthcareMedication withRoute(@Nullable String route) {
+        this.route = route;
+        return this;
+    }
+
+
+    /**
      * When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public HealthcareMedication withStartAt(@Nullable OffsetDateTime startAt) {
@@ -477,6 +553,8 @@ public class HealthcareMedication {
             Utils.enhancedDeepEquals(this.codes, other.codes) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.dosage, other.dosage) &&
+            Utils.enhancedDeepEquals(this.doseNumber, other.doseNumber) &&
+            Utils.enhancedDeepEquals(this.doseUnit, other.doseUnit) &&
             Utils.enhancedDeepEquals(this.encounterId, other.encounterId) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -487,6 +565,7 @@ public class HealthcareMedication {
             Utils.enhancedDeepEquals(this.practitionerId, other.practitionerId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.refillCount, other.refillCount) &&
+            Utils.enhancedDeepEquals(this.route, other.route) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -496,10 +575,11 @@ public class HealthcareMedication {
     public int hashCode() {
         return Utils.enhancedHash(
             authoredAt, codes, createdAt,
-            dosage, encounterId, endAt,
-            id, metadata, name,
-            notes, patientId, practitionerId,
-            raw, refillCount, startAt,
+            dosage, doseNumber, doseUnit,
+            encounterId, endAt, id,
+            metadata, name, notes,
+            patientId, practitionerId, raw,
+            refillCount, route, startAt,
             status, updatedAt);
     }
     
@@ -510,6 +590,8 @@ public class HealthcareMedication {
                 "codes", codes,
                 "createdAt", createdAt,
                 "dosage", dosage,
+                "doseNumber", doseNumber,
+                "doseUnit", doseUnit,
                 "encounterId", encounterId,
                 "endAt", endAt,
                 "id", id,
@@ -520,6 +602,7 @@ public class HealthcareMedication {
                 "practitionerId", practitionerId,
                 "raw", raw,
                 "refillCount", refillCount,
+                "route", route,
                 "startAt", startAt,
                 "status", status,
                 "updatedAt", updatedAt);
@@ -535,6 +618,10 @@ public class HealthcareMedication {
         private OffsetDateTime createdAt;
 
         private String dosage;
+
+        private Double doseNumber;
+
+        private String doseUnit;
 
         private String encounterId;
 
@@ -555,6 +642,8 @@ public class HealthcareMedication {
         private Map<String, Object> raw;
 
         private Double refillCount;
+
+        private String route;
 
         private OffsetDateTime startAt;
 
@@ -595,6 +684,22 @@ public class HealthcareMedication {
          */
         public Builder dosage(@Nullable String dosage) {
             this.dosage = dosage;
+            return this;
+        }
+
+        /**
+         * Amount of medication per dose
+         */
+        public Builder doseNumber(@Nullable Double doseNumber) {
+            this.doseNumber = doseNumber;
+            return this;
+        }
+
+        /**
+         * Unit of the dose amount (e.g. mg, tablet)
+         */
+        public Builder doseUnit(@Nullable String doseUnit) {
+            this.doseUnit = doseUnit;
             return this;
         }
 
@@ -679,6 +784,14 @@ public class HealthcareMedication {
         }
 
         /**
+         * How the medication is taken (e.g. oral, intravenous)
+         */
+        public Builder route(@Nullable String route) {
+            this.route = route;
+            return this;
+        }
+
+        /**
          * When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startAt(@Nullable OffsetDateTime startAt) {
@@ -705,10 +818,11 @@ public class HealthcareMedication {
         public HealthcareMedication build() {
             return new HealthcareMedication(
                 authoredAt, codes, createdAt,
-                dosage, encounterId, endAt,
-                id, metadata, name,
-                notes, patientId, practitionerId,
-                raw, refillCount, startAt,
+                dosage, doseNumber, doseUnit,
+                encounterId, endAt, id,
+                metadata, name, notes,
+                patientId, practitionerId, raw,
+                refillCount, route, startAt,
                 status, updatedAt);
         }
 

@@ -176,7 +176,7 @@ public class HrisEmployee {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marital_status")
-    private MaritalStatus maritalStatus;
+    private HrisEmployeeMaritalStatus maritalStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -316,7 +316,7 @@ public class HrisEmployee {
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("locations") @Nullable List<HrisLocation> locations,
             @JsonProperty("manager_id") @Nullable String managerId,
-            @JsonProperty("marital_status") @Nullable MaritalStatus maritalStatus,
+            @JsonProperty("marital_status") @Nullable HrisEmployeeMaritalStatus maritalStatus,
             @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("pay_frequency") @Nullable PayFrequency payFrequency,
@@ -541,7 +541,7 @@ public class HrisEmployee {
         return Optional.ofNullable(this.managerId);
     }
 
-    public Optional<MaritalStatus> maritalStatus() {
+    public Optional<HrisEmployeeMaritalStatus> maritalStatus() {
         return Optional.ofNullable(this.maritalStatus);
     }
 
@@ -840,7 +840,7 @@ public class HrisEmployee {
     }
 
 
-    public HrisEmployee withMaritalStatus(@Nullable MaritalStatus maritalStatus) {
+    public HrisEmployee withMaritalStatus(@Nullable HrisEmployeeMaritalStatus maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
     }
@@ -1164,7 +1164,7 @@ public class HrisEmployee {
 
         private String managerId;
 
-        private MaritalStatus maritalStatus;
+        private HrisEmployeeMaritalStatus maritalStatus;
 
         private List<HrisMetadata> metadata;
 
@@ -1373,7 +1373,7 @@ public class HrisEmployee {
             return this;
         }
 
-        public Builder maritalStatus(@Nullable MaritalStatus maritalStatus) {
+        public Builder maritalStatus(@Nullable HrisEmployeeMaritalStatus maritalStatus) {
             this.maritalStatus = maritalStatus;
             return this;
         }

@@ -238,6 +238,12 @@ public class WebhookObjectType {
     public static final WebhookObjectType HEALTHCARE_MEDICATION = new WebhookObjectType("healthcare_medication");
     public static final WebhookObjectType HEALTHCARE_OBSERVATION = new WebhookObjectType("healthcare_observation");
     public static final WebhookObjectType HEALTHCARE_IMMUNIZATION = new WebhookObjectType("healthcare_immunization");
+    public static final WebhookObjectType HEALTHCARE_DOCUMENT = new WebhookObjectType("healthcare_document");
+    public static final WebhookObjectType HEALTHCARE_COVERAGE = new WebhookObjectType("healthcare_coverage");
+    public static final WebhookObjectType HEALTHCARE_PROCEDURE = new WebhookObjectType("healthcare_procedure");
+    public static final WebhookObjectType HEALTHCARE_REPORT = new WebhookObjectType("healthcare_report");
+    public static final WebhookObjectType HEALTHCARE_CAREPLAN = new WebhookObjectType("healthcare_careplan");
+    public static final WebhookObjectType HEALTHCARE_GOAL = new WebhookObjectType("healthcare_goal");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -524,6 +530,12 @@ public class WebhookObjectType {
         map.put("healthcare_medication", HEALTHCARE_MEDICATION);
         map.put("healthcare_observation", HEALTHCARE_OBSERVATION);
         map.put("healthcare_immunization", HEALTHCARE_IMMUNIZATION);
+        map.put("healthcare_document", HEALTHCARE_DOCUMENT);
+        map.put("healthcare_coverage", HEALTHCARE_COVERAGE);
+        map.put("healthcare_procedure", HEALTHCARE_PROCEDURE);
+        map.put("healthcare_report", HEALTHCARE_REPORT);
+        map.put("healthcare_careplan", HEALTHCARE_CAREPLAN);
+        map.put("healthcare_goal", HEALTHCARE_GOAL);
         return map;
     }
 
@@ -742,6 +754,12 @@ public class WebhookObjectType {
         map.put("healthcare_medication", WebhookObjectTypeEnum.HEALTHCARE_MEDICATION);
         map.put("healthcare_observation", WebhookObjectTypeEnum.HEALTHCARE_OBSERVATION);
         map.put("healthcare_immunization", WebhookObjectTypeEnum.HEALTHCARE_IMMUNIZATION);
+        map.put("healthcare_document", WebhookObjectTypeEnum.HEALTHCARE_DOCUMENT);
+        map.put("healthcare_coverage", WebhookObjectTypeEnum.HEALTHCARE_COVERAGE);
+        map.put("healthcare_procedure", WebhookObjectTypeEnum.HEALTHCARE_PROCEDURE);
+        map.put("healthcare_report", WebhookObjectTypeEnum.HEALTHCARE_REPORT);
+        map.put("healthcare_careplan", WebhookObjectTypeEnum.HEALTHCARE_CAREPLAN);
+        map.put("healthcare_goal", WebhookObjectTypeEnum.HEALTHCARE_GOAL);
         return map;
     }
     
@@ -960,7 +978,13 @@ public class WebhookObjectType {
         HEALTHCARE_ALLERGY("healthcare_allergy"),
         HEALTHCARE_MEDICATION("healthcare_medication"),
         HEALTHCARE_OBSERVATION("healthcare_observation"),
-        HEALTHCARE_IMMUNIZATION("healthcare_immunization"),;
+        HEALTHCARE_IMMUNIZATION("healthcare_immunization"),
+        HEALTHCARE_DOCUMENT("healthcare_document"),
+        HEALTHCARE_COVERAGE("healthcare_coverage"),
+        HEALTHCARE_PROCEDURE("healthcare_procedure"),
+        HEALTHCARE_REPORT("healthcare_report"),
+        HEALTHCARE_CAREPLAN("healthcare_careplan"),
+        HEALTHCARE_GOAL("healthcare_goal"),;
 
         private final String value;
 

@@ -8,29 +8,42 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcarePatientRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAllergyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareConditionRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareMedicationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareObservationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePatientRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePractitionerRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAllergiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareConditionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareMedicationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareObservationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePatientsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePractitionersRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHealthcarePatientRequest;
@@ -39,6 +52,8 @@ import to.unified.unified_java_sdk.models.operations.UpdateHealthcareAppointment
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareObservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareObservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcarePatientRequestBuilder;
@@ -47,10 +62,18 @@ import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAllergyR
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAllergyResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareCareplanRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareCareplanResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareConditionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareConditionResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareCoverageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareCoverageResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareEncounterRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareEncounterResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareGoalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareGoalResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareImmunizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareImmunizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareLocationRequestBuilder;
@@ -63,16 +86,28 @@ import to.unified.unified_java_sdk.models.operations.async.GetHealthcarePatientR
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcarePatientResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcarePractitionerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcarePractitionerResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareProcedureRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareProcedureResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareReportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareReportResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareSlotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareSlotResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAllergiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAllergiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAppointmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareAppointmentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareCareplansRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareCareplansResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareConditionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareConditionsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareCoveragesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareCoveragesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareEncountersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareEncountersResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareGoalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareGoalsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareImmunizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareImmunizationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareLocationsRequestBuilder;
@@ -85,6 +120,10 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcarePatient
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcarePatientsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcarePractitionersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcarePractitionersResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareProceduresRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareProceduresResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareSlotsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareSlotsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHealthcareAppointmentRequestBuilder;
@@ -98,29 +137,42 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHealthcareAppoi
 import to.unified.unified_java_sdk.models.operations.async.UpdateHealthcarePatientRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHealthcarePatientResponse;
 import to.unified.unified_java_sdk.operations.CreateHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHealthcareObservation;
 import to.unified.unified_java_sdk.operations.CreateHealthcarePatient;
 import to.unified.unified_java_sdk.operations.GetHealthcareAllergy;
 import to.unified.unified_java_sdk.operations.GetHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.GetHealthcareCareplan;
 import to.unified.unified_java_sdk.operations.GetHealthcareCondition;
+import to.unified.unified_java_sdk.operations.GetHealthcareCoverage;
+import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHealthcareEncounter;
+import to.unified.unified_java_sdk.operations.GetHealthcareGoal;
 import to.unified.unified_java_sdk.operations.GetHealthcareImmunization;
 import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHealthcareMedication;
 import to.unified.unified_java_sdk.operations.GetHealthcareObservation;
 import to.unified.unified_java_sdk.operations.GetHealthcarePatient;
 import to.unified.unified_java_sdk.operations.GetHealthcarePractitioner;
+import to.unified.unified_java_sdk.operations.GetHealthcareProcedure;
+import to.unified.unified_java_sdk.operations.GetHealthcareReport;
 import to.unified.unified_java_sdk.operations.GetHealthcareSlot;
 import to.unified.unified_java_sdk.operations.ListHealthcareAllergies;
 import to.unified.unified_java_sdk.operations.ListHealthcareAppointments;
+import to.unified.unified_java_sdk.operations.ListHealthcareCareplans;
 import to.unified.unified_java_sdk.operations.ListHealthcareConditions;
+import to.unified.unified_java_sdk.operations.ListHealthcareCoverages;
+import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHealthcareEncounters;
+import to.unified.unified_java_sdk.operations.ListHealthcareGoals;
 import to.unified.unified_java_sdk.operations.ListHealthcareImmunizations;
 import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
 import to.unified.unified_java_sdk.operations.ListHealthcareMedications;
 import to.unified.unified_java_sdk.operations.ListHealthcareObservations;
 import to.unified.unified_java_sdk.operations.ListHealthcarePatients;
 import to.unified.unified_java_sdk.operations.ListHealthcarePractitioners;
+import to.unified.unified_java_sdk.operations.ListHealthcareProcedures;
+import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.operations.ListHealthcareSlots;
 import to.unified.unified_java_sdk.operations.PatchHealthcareAppointment;
 import to.unified.unified_java_sdk.operations.PatchHealthcarePatient;
@@ -174,6 +226,35 @@ public class AsyncHealthcare {
     public CompletableFuture<CreateHealthcareAppointmentResponse> createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request) {
         AsyncRequestOperation<CreateHealthcareAppointmentRequest, CreateHealthcareAppointmentResponse> operation
               = new CreateHealthcareAppointment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @return The async call builder
+     */
+    public CreateHealthcareDocumentRequestBuilder createHealthcareDocument() {
+        return new CreateHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHealthcareDocumentResponse> createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        AsyncRequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
+              = new CreateHealthcareDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -296,6 +377,35 @@ public class AsyncHealthcare {
 
 
     /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareCareplanRequestBuilder getHealthcareCareplan() {
+        return new GetHealthcareCareplanRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareCareplanResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareCareplanResponse> getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request) {
+        AsyncRequestOperation<GetHealthcareCareplanRequest, GetHealthcareCareplanResponse> operation
+              = new GetHealthcareCareplan.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a condition
      * 
      * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
@@ -325,6 +435,64 @@ public class AsyncHealthcare {
 
 
     /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareCoverageRequestBuilder getHealthcareCoverage() {
+        return new GetHealthcareCoverageRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareCoverageResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareCoverageResponse> getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request) {
+        AsyncRequestOperation<GetHealthcareCoverageRequest, GetHealthcareCoverageResponse> operation
+              = new GetHealthcareCoverage.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareDocumentRequestBuilder getHealthcareDocument() {
+        return new GetHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareDocumentResponse> getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        AsyncRequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
+              = new GetHealthcareDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve an encounter
      * 
      * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
@@ -348,6 +516,35 @@ public class AsyncHealthcare {
     public CompletableFuture<GetHealthcareEncounterResponse> getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request) {
         AsyncRequestOperation<GetHealthcareEncounterRequest, GetHealthcareEncounterResponse> operation
               = new GetHealthcareEncounter.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareGoalRequestBuilder getHealthcareGoal() {
+        return new GetHealthcareGoalRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareGoalResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareGoalResponse> getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request) {
+        AsyncRequestOperation<GetHealthcareGoalRequest, GetHealthcareGoalResponse> operation
+              = new GetHealthcareGoal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -528,6 +725,64 @@ public class AsyncHealthcare {
 
 
     /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareProcedureRequestBuilder getHealthcareProcedure() {
+        return new GetHealthcareProcedureRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareProcedureResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareProcedureResponse> getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request) {
+        AsyncRequestOperation<GetHealthcareProcedureRequest, GetHealthcareProcedureResponse> operation
+              = new GetHealthcareProcedure.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareReportRequestBuilder getHealthcareReport() {
+        return new GetHealthcareReportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareReportResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareReportResponse> getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        AsyncRequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
+              = new GetHealthcareReport.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a slot
      * 
      * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
@@ -631,6 +886,43 @@ public class AsyncHealthcare {
 
 
     /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareCareplansRequestBuilder listHealthcareCareplans() {
+        return new ListHealthcareCareplansRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareCareplansResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareCareplansResponse> listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request) {
+        AsyncRequestOperation<ListHealthcareCareplansRequest, ListHealthcareCareplansResponse> operation
+              = new ListHealthcareCareplans.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all conditions
      * 
      * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
@@ -668,6 +960,80 @@ public class AsyncHealthcare {
 
 
     /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareCoveragesRequestBuilder listHealthcareCoverages() {
+        return new ListHealthcareCoveragesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareCoveragesResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareCoveragesResponse> listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request) {
+        AsyncRequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
+              = new ListHealthcareCoverages.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareDocumentsRequestBuilder listHealthcareDocuments() {
+        return new ListHealthcareDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareDocumentsResponse> listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        AsyncRequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
+              = new ListHealthcareDocuments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all encounters
      * 
      * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
@@ -699,6 +1065,43 @@ public class AsyncHealthcare {
     public CompletableFuture<ListHealthcareEncountersResponse> listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request) {
         AsyncRequestOperation<ListHealthcareEncountersRequest, ListHealthcareEncountersResponse> operation
               = new ListHealthcareEncounters.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareGoalsRequestBuilder listHealthcareGoals() {
+        return new ListHealthcareGoalsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareGoalsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareGoalsResponse> listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request) {
+        AsyncRequestOperation<ListHealthcareGoalsRequest, ListHealthcareGoalsResponse> operation
+              = new ListHealthcareGoals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -921,6 +1324,80 @@ public class AsyncHealthcare {
     public CompletableFuture<ListHealthcarePractitionersResponse> listHealthcarePractitioners(@Nonnull ListHealthcarePractitionersRequest request) {
         AsyncRequestOperation<ListHealthcarePractitionersRequest, ListHealthcarePractitionersResponse> operation
               = new ListHealthcarePractitioners.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareProceduresRequestBuilder listHealthcareProcedures() {
+        return new ListHealthcareProceduresRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareProceduresResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareProceduresResponse> listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request) {
+        AsyncRequestOperation<ListHealthcareProceduresRequest, ListHealthcareProceduresResponse> operation
+              = new ListHealthcareProcedures.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareReportsRequestBuilder listHealthcareReports() {
+        return new ListHealthcareReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareReportsResponse> listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        AsyncRequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
+              = new ListHealthcareReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createPerformanceGoal](#createperformancegoal) - Create a goal
+* [getHealthcareGoal](#gethealthcaregoal) - Retrieve a goal
 * [getPerformanceGoal](#getperformancegoal) - Retrieve a goal
+* [listHealthcareGoals](#listhealthcaregoals) - List all goals
 * [listPerformanceGoals](#listperformancegoals) - List all goals
 * [patchPerformanceGoal](#patchperformancegoal) - Update a goal
 * [removePerformanceGoal](#removeperformancegoal) - Remove a goal
@@ -43,15 +45,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-08-01T16:41:39.362Z"))
-                    .id("a43b3ecf-00da-4d48-8a70-51d850b74dfd")
+                    .dueAt(OffsetDateTime.parse("2026-08-02T11:59:14.286Z"))
+                    .id("892e9e64-08fa-4c1c-a05d-0796d31e1dd8")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-06T17:45:00.629Z"))
-                            .id("c3db7bd6-9569-4aad-a95f-c236274044e5")
+                            .dueAt(OffsetDateTime.parse("2026-06-07T12:35:33.394Z"))
+                            .id("c9c68307-088b-4ca1-969b-7ff60d0a9947")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -60,8 +62,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-11T09:49:33.447Z"))
-                            .id("6360bee9-e8fa-4517-ae79-7f9986a3abe7")
+                            .dueAt(OffsetDateTime.parse("2026-08-12T05:11:49.974Z"))
+                            .id("8b3fe105-fc9b-4f34-a14e-c28c36f611d0")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -70,18 +72,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-13T10:30:29.750Z"))
-                            .id("96f1dc7e-4ab3-4d86-be89-5822e3e615d0")
+                            .dueAt(OffsetDateTime.parse("2026-10-14T06:23:13.463Z"))
+                            .id("89d3f628-4e04-43df-baa3-e3e4eba02f55")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-25T20:34:18.122Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-26T12:52:13.489Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-14T06:11:09.085Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-14T14:03:52.636Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")
@@ -107,6 +109,64 @@ public class Application {
 ### Response
 
 **[CreatePerformanceGoalResponse](../../models/operations/CreatePerformanceGoalResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareGoal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareGoalRequest req = GetHealthcareGoalRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareGoalResponse res = sdk.goal().getHealthcareGoal()
+                .request(req)
+                .call();
+
+        if (res.healthcareGoal().isPresent()) {
+            System.out.println(res.healthcareGoal().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetHealthcareGoalRequest](../../models/operations/GetHealthcareGoalRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetHealthcareGoalResponse](../../models/operations/GetHealthcareGoalResponse.md)**
 
 ### Errors
 
@@ -165,6 +225,63 @@ public class Application {
 ### Response
 
 **[GetPerformanceGoalResponse](../../models/operations/GetPerformanceGoalResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHealthcareGoals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareGoalsRequest req = ListHealthcareGoalsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareGoalsResponse res = sdk.goal().listHealthcareGoals()
+                .request(req)
+                .call();
+
+        if (res.healthcareGoals().isPresent()) {
+            System.out.println(res.healthcareGoals().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListHealthcareGoalsRequest](../../models/operations/ListHealthcareGoalsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListHealthcareGoalsResponse](../../models/operations/ListHealthcareGoalsResponse.md)**
 
 ### Errors
 
@@ -261,15 +378,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-08-01T16:41:39.390Z"))
-                    .id("1a799490-4706-4edc-ac03-3f8d38c2187a")
+                    .dueAt(OffsetDateTime.parse("2026-08-02T11:59:14.301Z"))
+                    .id("82ce43b2-a015-4652-8c87-033ab1895e94")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-06T17:45:00.656Z"))
-                            .id("86a32a01-71f0-4e73-ba18-a5b44a6b7069")
+                            .dueAt(OffsetDateTime.parse("2026-06-07T12:35:33.409Z"))
+                            .id("833cee38-dee2-4b08-a213-0025a7c3c340")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -278,8 +395,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-11T09:49:33.475Z"))
-                            .id("4c67a94c-bef4-4e79-aa60-8f2a01c70e59")
+                            .dueAt(OffsetDateTime.parse("2026-08-12T05:11:49.990Z"))
+                            .id("903d55a1-959a-4e20-9961-6a89714b28e6")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -288,18 +405,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-13T10:30:29.778Z"))
-                            .id("f0b2a3c6-e60e-4796-aa54-1157b26cdf6c")
+                            .dueAt(OffsetDateTime.parse("2026-10-14T06:23:13.480Z"))
+                            .id("c1d0dc12-1d2d-4603-9e33-1a0252a0387e")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-25T20:34:18.145Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-26T12:52:13.502Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-14T06:11:09.097Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-14T14:03:52.643Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")
@@ -421,15 +538,15 @@ public class Application {
                 .performanceGoal(PerformanceGoal.builder()
                     .createdAt(OffsetDateTime.parse("2020-01-09T20:43:07.380Z"))
                     .description("Suscipit suspendo vulnero vel facere valeo vallum degero.")
-                    .dueAt(OffsetDateTime.parse("2026-08-01T16:41:39.390Z"))
-                    .id("1a799490-4706-4edc-ac03-3f8d38c2187a")
+                    .dueAt(OffsetDateTime.parse("2026-08-02T11:59:14.301Z"))
+                    .id("82ce43b2-a015-4652-8c87-033ab1895e94")
                     .metadata(List.of())
                     .milestones(List.of(
                         PerformanceGoalMilestone.builder()
                             .name("Team-oriented secondary matrix")
                             .currentValue(10d)
-                            .dueAt(OffsetDateTime.parse("2026-06-06T17:45:00.656Z"))
-                            .id("86a32a01-71f0-4e73-ba18-a5b44a6b7069")
+                            .dueAt(OffsetDateTime.parse("2026-06-07T12:35:33.409Z"))
+                            .id("833cee38-dee2-4b08-a213-0025a7c3c340")
                             .isCompleted(true)
                             .targetValue(32d)
                             .unit("%")
@@ -438,8 +555,8 @@ public class Application {
                         PerformanceGoalMilestone.builder()
                             .name("Exclusive client-server conglomeration")
                             .currentValue(0d)
-                            .dueAt(OffsetDateTime.parse("2026-08-11T09:49:33.475Z"))
-                            .id("4c67a94c-bef4-4e79-aa60-8f2a01c70e59")
+                            .dueAt(OffsetDateTime.parse("2026-08-12T05:11:49.990Z"))
+                            .id("903d55a1-959a-4e20-9961-6a89714b28e6")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
@@ -448,18 +565,18 @@ public class Application {
                             .name("Synchronised immersive success")
                             .currentValue(31d)
                             .description("Hic explicabo odit.")
-                            .dueAt(OffsetDateTime.parse("2026-10-13T10:30:29.778Z"))
-                            .id("f0b2a3c6-e60e-4796-aa54-1157b26cdf6c")
+                            .dueAt(OffsetDateTime.parse("2026-10-14T06:23:13.480Z"))
+                            .id("c1d0dc12-1d2d-4603-9e33-1a0252a0387e")
                             .isCompleted(true)
                             .targetValue(32d)
                             .weight(5d)
                             .build()))
                     .name("Proactive national protocol")
                     .progress(3d)
-                    .startAt(OffsetDateTime.parse("2025-07-25T20:34:18.145Z"))
+                    .startAt(OffsetDateTime.parse("2025-07-26T12:52:13.502Z"))
                     .status(PerformanceGoalStatus.CLOSED)
                     .type(PerformanceGoalSchemasType.COMPANY)
-                    .updatedAt(OffsetDateTime.parse("2022-09-14T06:11:09.097Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-09-14T14:03:52.643Z"))
                     .weight(5d)
                     .build())
                 .connectionId("<id>")

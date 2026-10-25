@@ -251,9 +251,15 @@ public class AsyncUnifiedTo {
 
     private final AsyncAppointment appointment;
 
+    private final AsyncCareplan careplan;
+
     private final AsyncCondition condition;
 
+    private final AsyncCoverage coverage;
+
     private final AsyncEncounter encounter;
+
+    private final AsyncGoal goal;
 
     private final AsyncImmunization immunization;
 
@@ -264,6 +270,8 @@ public class AsyncUnifiedTo {
     private final AsyncPatient patient;
 
     private final AsyncPractitioner practitioner;
+
+    private final AsyncProcedure procedure;
 
     private final AsyncSlot slot;
 
@@ -348,8 +356,6 @@ public class AsyncUnifiedTo {
     private final AsyncCycle cycle;
 
     private final AsyncFeedback feedback;
-
-    private final AsyncGoal goal;
 
     private final AsyncRepo repo;
 
@@ -911,12 +917,24 @@ public class AsyncUnifiedTo {
         return appointment;
     }
 
+    public AsyncCareplan careplan() {
+        return careplan;
+    }
+
     public AsyncCondition condition() {
         return condition;
     }
 
+    public AsyncCoverage coverage() {
+        return coverage;
+    }
+
     public AsyncEncounter encounter() {
         return encounter;
+    }
+
+    public AsyncGoal goal() {
+        return goal;
     }
 
     public AsyncImmunization immunization() {
@@ -937,6 +955,10 @@ public class AsyncUnifiedTo {
 
     public AsyncPractitioner practitioner() {
         return practitioner;
+    }
+
+    public AsyncProcedure procedure() {
+        return procedure;
     }
 
     public AsyncSlot slot() {
@@ -1105,10 +1127,6 @@ public class AsyncUnifiedTo {
 
     public AsyncFeedback feedback() {
         return feedback;
-    }
-
-    public AsyncGoal goal() {
-        return goal;
     }
 
     public AsyncRepo repo() {
@@ -1404,13 +1422,17 @@ public class AsyncUnifiedTo {
         this.healthcare = new AsyncHealthcare(syncSDK.healthcare(), sdkConfiguration);
         this.allergy = new AsyncAllergy(syncSDK.allergy(), sdkConfiguration);
         this.appointment = new AsyncAppointment(syncSDK.appointment(), sdkConfiguration);
+        this.careplan = new AsyncCareplan(syncSDK.careplan(), sdkConfiguration);
         this.condition = new AsyncCondition(syncSDK.condition(), sdkConfiguration);
+        this.coverage = new AsyncCoverage(syncSDK.coverage(), sdkConfiguration);
         this.encounter = new AsyncEncounter(syncSDK.encounter(), sdkConfiguration);
+        this.goal = new AsyncGoal(syncSDK.goal(), sdkConfiguration);
         this.immunization = new AsyncImmunization(syncSDK.immunization(), sdkConfiguration);
         this.medication = new AsyncMedication(syncSDK.medication(), sdkConfiguration);
         this.observation = new AsyncObservation(syncSDK.observation(), sdkConfiguration);
         this.patient = new AsyncPatient(syncSDK.patient(), sdkConfiguration);
         this.practitioner = new AsyncPractitioner(syncSDK.practitioner(), sdkConfiguration);
+        this.procedure = new AsyncProcedure(syncSDK.procedure(), sdkConfiguration);
         this.slot = new AsyncSlot(syncSDK.slot(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
         this.attendance = new AsyncAttendance(syncSDK.attendance(), sdkConfiguration);
@@ -1453,7 +1475,6 @@ public class AsyncUnifiedTo {
         this.performance = new AsyncPerformance(syncSDK.performance(), sdkConfiguration);
         this.cycle = new AsyncCycle(syncSDK.cycle(), sdkConfiguration);
         this.feedback = new AsyncFeedback(syncSDK.feedback(), sdkConfiguration);
-        this.goal = new AsyncGoal(syncSDK.goal(), sdkConfiguration);
         this.repo = new AsyncRepo(syncSDK.repo(), sdkConfiguration);
         this.branch = new AsyncBranch(syncSDK.branch(), sdkConfiguration);
         this.commit = new AsyncCommit(syncSDK.commit(), sdkConfiguration);

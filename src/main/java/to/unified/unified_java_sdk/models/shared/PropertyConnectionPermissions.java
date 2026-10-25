@@ -417,6 +417,18 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HEALTHCARE_OBSERVATION_WRITE = new PropertyConnectionPermissions("healthcare_observation_write");
     public static final PropertyConnectionPermissions HEALTHCARE_IMMUNIZATION_READ = new PropertyConnectionPermissions("healthcare_immunization_read");
     public static final PropertyConnectionPermissions HEALTHCARE_IMMUNIZATION_WRITE = new PropertyConnectionPermissions("healthcare_immunization_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_DOCUMENT_READ = new PropertyConnectionPermissions("healthcare_document_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_DOCUMENT_WRITE = new PropertyConnectionPermissions("healthcare_document_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_COVERAGE_READ = new PropertyConnectionPermissions("healthcare_coverage_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_COVERAGE_WRITE = new PropertyConnectionPermissions("healthcare_coverage_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_PROCEDURE_READ = new PropertyConnectionPermissions("healthcare_procedure_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_PROCEDURE_WRITE = new PropertyConnectionPermissions("healthcare_procedure_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_REPORT_READ = new PropertyConnectionPermissions("healthcare_report_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_REPORT_WRITE = new PropertyConnectionPermissions("healthcare_report_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_CAREPLAN_READ = new PropertyConnectionPermissions("healthcare_careplan_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_CAREPLAN_WRITE = new PropertyConnectionPermissions("healthcare_careplan_write");
+    public static final PropertyConnectionPermissions HEALTHCARE_GOAL_READ = new PropertyConnectionPermissions("healthcare_goal_read");
+    public static final PropertyConnectionPermissions HEALTHCARE_GOAL_WRITE = new PropertyConnectionPermissions("healthcare_goal_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -887,6 +899,18 @@ public class PropertyConnectionPermissions {
         map.put("healthcare_observation_write", HEALTHCARE_OBSERVATION_WRITE);
         map.put("healthcare_immunization_read", HEALTHCARE_IMMUNIZATION_READ);
         map.put("healthcare_immunization_write", HEALTHCARE_IMMUNIZATION_WRITE);
+        map.put("healthcare_document_read", HEALTHCARE_DOCUMENT_READ);
+        map.put("healthcare_document_write", HEALTHCARE_DOCUMENT_WRITE);
+        map.put("healthcare_coverage_read", HEALTHCARE_COVERAGE_READ);
+        map.put("healthcare_coverage_write", HEALTHCARE_COVERAGE_WRITE);
+        map.put("healthcare_procedure_read", HEALTHCARE_PROCEDURE_READ);
+        map.put("healthcare_procedure_write", HEALTHCARE_PROCEDURE_WRITE);
+        map.put("healthcare_report_read", HEALTHCARE_REPORT_READ);
+        map.put("healthcare_report_write", HEALTHCARE_REPORT_WRITE);
+        map.put("healthcare_careplan_read", HEALTHCARE_CAREPLAN_READ);
+        map.put("healthcare_careplan_write", HEALTHCARE_CAREPLAN_WRITE);
+        map.put("healthcare_goal_read", HEALTHCARE_GOAL_READ);
+        map.put("healthcare_goal_write", HEALTHCARE_GOAL_WRITE);
         return map;
     }
 
@@ -1289,6 +1313,18 @@ public class PropertyConnectionPermissions {
         map.put("healthcare_observation_write", PropertyConnectionPermissionsEnum.HEALTHCARE_OBSERVATION_WRITE);
         map.put("healthcare_immunization_read", PropertyConnectionPermissionsEnum.HEALTHCARE_IMMUNIZATION_READ);
         map.put("healthcare_immunization_write", PropertyConnectionPermissionsEnum.HEALTHCARE_IMMUNIZATION_WRITE);
+        map.put("healthcare_document_read", PropertyConnectionPermissionsEnum.HEALTHCARE_DOCUMENT_READ);
+        map.put("healthcare_document_write", PropertyConnectionPermissionsEnum.HEALTHCARE_DOCUMENT_WRITE);
+        map.put("healthcare_coverage_read", PropertyConnectionPermissionsEnum.HEALTHCARE_COVERAGE_READ);
+        map.put("healthcare_coverage_write", PropertyConnectionPermissionsEnum.HEALTHCARE_COVERAGE_WRITE);
+        map.put("healthcare_procedure_read", PropertyConnectionPermissionsEnum.HEALTHCARE_PROCEDURE_READ);
+        map.put("healthcare_procedure_write", PropertyConnectionPermissionsEnum.HEALTHCARE_PROCEDURE_WRITE);
+        map.put("healthcare_report_read", PropertyConnectionPermissionsEnum.HEALTHCARE_REPORT_READ);
+        map.put("healthcare_report_write", PropertyConnectionPermissionsEnum.HEALTHCARE_REPORT_WRITE);
+        map.put("healthcare_careplan_read", PropertyConnectionPermissionsEnum.HEALTHCARE_CAREPLAN_READ);
+        map.put("healthcare_careplan_write", PropertyConnectionPermissionsEnum.HEALTHCARE_CAREPLAN_WRITE);
+        map.put("healthcare_goal_read", PropertyConnectionPermissionsEnum.HEALTHCARE_GOAL_READ);
+        map.put("healthcare_goal_write", PropertyConnectionPermissionsEnum.HEALTHCARE_GOAL_WRITE);
         return map;
     }
     
@@ -1691,7 +1727,19 @@ public class PropertyConnectionPermissions {
         HEALTHCARE_OBSERVATION_READ("healthcare_observation_read"),
         HEALTHCARE_OBSERVATION_WRITE("healthcare_observation_write"),
         HEALTHCARE_IMMUNIZATION_READ("healthcare_immunization_read"),
-        HEALTHCARE_IMMUNIZATION_WRITE("healthcare_immunization_write"),;
+        HEALTHCARE_IMMUNIZATION_WRITE("healthcare_immunization_write"),
+        HEALTHCARE_DOCUMENT_READ("healthcare_document_read"),
+        HEALTHCARE_DOCUMENT_WRITE("healthcare_document_write"),
+        HEALTHCARE_COVERAGE_READ("healthcare_coverage_read"),
+        HEALTHCARE_COVERAGE_WRITE("healthcare_coverage_write"),
+        HEALTHCARE_PROCEDURE_READ("healthcare_procedure_read"),
+        HEALTHCARE_PROCEDURE_WRITE("healthcare_procedure_write"),
+        HEALTHCARE_REPORT_READ("healthcare_report_read"),
+        HEALTHCARE_REPORT_WRITE("healthcare_report_write"),
+        HEALTHCARE_CAREPLAN_READ("healthcare_careplan_read"),
+        HEALTHCARE_CAREPLAN_WRITE("healthcare_careplan_write"),
+        HEALTHCARE_GOAL_READ("healthcare_goal_read"),
+        HEALTHCARE_GOAL_WRITE("healthcare_goal_write"),;
 
         private final String value;
 

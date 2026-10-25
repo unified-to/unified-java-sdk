@@ -24,6 +24,9 @@ public enum ListHealthcareMedicationsQueryParamFields {
     START_AT("start_at"),
     END_AT("end_at"),
     NOTES("notes"),
+    ROUTE("route"),
+    DOSE_NUMBER("dose_number"),
+    DOSE_UNIT("dose_unit"),
     METADATA("metadata"),
     RAW("raw");
 

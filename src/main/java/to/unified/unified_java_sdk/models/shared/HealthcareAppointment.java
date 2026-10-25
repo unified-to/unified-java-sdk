@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -55,11 +56,25 @@ public class HealthcareAppointment {
     private String id;
 
     /**
+     * Whether the appointment is a telehealth/virtual visit
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_virtual")
+    private Boolean isVirtual;
+
+    /**
      * Where the appointment takes place
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     private String locationId;
+
+    /**
+     * Join link for a telehealth/virtual visit
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("meeting_url")
+    private String meetingUrl;
 
     /**
      * Custom field values
@@ -145,7 +160,9 @@ public class HealthcareAppointment {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_virtual") @Nullable Boolean isVirtual,
             @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("meeting_url") @Nullable String meetingUrl,
             @JsonProperty("metadata") @Nullable List<HealthcareMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("patient_id") @Nullable String patientId,
@@ -162,7 +179,9 @@ public class HealthcareAppointment {
         this.description = description;
         this.endAt = endAt;
         this.id = id;
+        this.isVirtual = isVirtual;
         this.locationId = locationId;
+        this.meetingUrl = meetingUrl;
         this.metadata = metadata;
         this.notes = notes;
         this.patientId = patientId;
@@ -182,7 +201,8 @@ public class HealthcareAppointment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -221,10 +241,24 @@ public class HealthcareAppointment {
     }
 
     /**
+     * Whether the appointment is a telehealth/virtual visit
+     */
+    public Optional<Boolean> isVirtual() {
+        return Optional.ofNullable(this.isVirtual);
+    }
+
+    /**
      * Where the appointment takes place
      */
     public Optional<String> locationId() {
         return Optional.ofNullable(this.locationId);
+    }
+
+    /**
+     * Join link for a telehealth/virtual visit
+     */
+    public Optional<String> meetingUrl() {
+        return Optional.ofNullable(this.meetingUrl);
     }
 
     /**
@@ -355,10 +389,28 @@ public class HealthcareAppointment {
 
 
     /**
+     * Whether the appointment is a telehealth/virtual visit
+     */
+    public HealthcareAppointment withIsVirtual(@Nullable Boolean isVirtual) {
+        this.isVirtual = isVirtual;
+        return this;
+    }
+
+
+    /**
      * Where the appointment takes place
      */
     public HealthcareAppointment withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
+        return this;
+    }
+
+
+    /**
+     * Join link for a telehealth/virtual visit
+     */
+    public HealthcareAppointment withMeetingUrl(@Nullable String meetingUrl) {
+        this.meetingUrl = meetingUrl;
         return this;
     }
 
@@ -477,7 +529,9 @@ public class HealthcareAppointment {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isVirtual, other.isVirtual) &&
             Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
+            Utils.enhancedDeepEquals(this.meetingUrl, other.meetingUrl) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.patientId, other.patientId) &&
@@ -495,11 +549,12 @@ public class HealthcareAppointment {
     public int hashCode() {
         return Utils.enhancedHash(
             cancellationReason, createdAt, description,
-            endAt, id, locationId,
-            metadata, notes, patientId,
-            practitionerIds, raw, reasons,
-            serviceTypes, slotIds, startAt,
-            status, updatedAt);
+            endAt, id, isVirtual,
+            locationId, meetingUrl, metadata,
+            notes, patientId, practitionerIds,
+            raw, reasons, serviceTypes,
+            slotIds, startAt, status,
+            updatedAt);
     }
     
     @Override
@@ -510,7 +565,9 @@ public class HealthcareAppointment {
                 "description", description,
                 "endAt", endAt,
                 "id", id,
+                "isVirtual", isVirtual,
                 "locationId", locationId,
+                "meetingUrl", meetingUrl,
                 "metadata", metadata,
                 "notes", notes,
                 "patientId", patientId,
@@ -537,7 +594,11 @@ public class HealthcareAppointment {
 
         private String id;
 
+        private Boolean isVirtual;
+
         private String locationId;
+
+        private String meetingUrl;
 
         private List<HealthcareMetadata> metadata;
 
@@ -606,10 +667,26 @@ public class HealthcareAppointment {
         }
 
         /**
+         * Whether the appointment is a telehealth/virtual visit
+         */
+        public Builder isVirtual(@Nullable Boolean isVirtual) {
+            this.isVirtual = isVirtual;
+            return this;
+        }
+
+        /**
          * Where the appointment takes place
          */
         public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
+            return this;
+        }
+
+        /**
+         * Join link for a telehealth/virtual visit
+         */
+        public Builder meetingUrl(@Nullable String meetingUrl) {
+            this.meetingUrl = meetingUrl;
             return this;
         }
 
@@ -704,11 +781,12 @@ public class HealthcareAppointment {
         public HealthcareAppointment build() {
             return new HealthcareAppointment(
                 cancellationReason, createdAt, description,
-                endAt, id, locationId,
-                metadata, notes, patientId,
-                practitionerIds, raw, reasons,
-                serviceTypes, slotIds, startAt,
-                status, updatedAt);
+                endAt, id, isVirtual,
+                locationId, meetingUrl, metadata,
+                notes, patientId, practitionerIds,
+                raw, reasons, serviceTypes,
+                slotIds, startAt, status,
+                updatedAt);
         }
 
     }

@@ -24,6 +24,8 @@ public enum GetHealthcareAppointmentQueryParamFields {
     REASONS("reasons"),
     CANCELLATION_REASON("cancellation_reason"),
     NOTES("notes"),
+    IS_VIRTUAL("is_virtual"),
+    MEETING_URL("meeting_url"),
     METADATA("metadata"),
     RAW("raw");
 

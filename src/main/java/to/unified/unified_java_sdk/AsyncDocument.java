@@ -8,12 +8,15 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
@@ -27,18 +30,24 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningDocumentsRequestBuilder;
@@ -62,12 +71,15 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDocumentRes
 import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHrisDocument;
 import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisDocuments;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
@@ -126,6 +138,35 @@ public class AsyncDocument {
     public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @return The async call builder
+     */
+    public CreateHealthcareDocumentRequestBuilder createHealthcareDocument() {
+        return new CreateHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreateHealthcareDocumentResponse> createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        AsyncRequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
+              = new CreateHealthcareDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,6 +262,35 @@ public class AsyncDocument {
     /**
      * Retrieve a document
      * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareDocumentRequestBuilder getHealthcareDocument() {
+        return new GetHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareDocumentResponse> getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        AsyncRequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
+              = new GetHealthcareDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a document
+     * 
      * <p>Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -308,6 +378,43 @@ public class AsyncDocument {
     public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareDocumentsRequestBuilder listHealthcareDocuments() {
+        return new ListHealthcareDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareDocumentsResponse> listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        AsyncRequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
+              = new ListHealthcareDocuments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

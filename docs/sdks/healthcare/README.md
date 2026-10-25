@@ -5,29 +5,42 @@
 ### Available Operations
 
 * [createHealthcareAppointment](#createhealthcareappointment) - Create an appointment
+* [createHealthcareDocument](#createhealthcaredocument) - Create a document
 * [createHealthcareObservation](#createhealthcareobservation) - Create an observation
 * [createHealthcarePatient](#createhealthcarepatient) - Create a patient
 * [getHealthcareAllergy](#gethealthcareallergy) - Retrieve an allergy
 * [getHealthcareAppointment](#gethealthcareappointment) - Retrieve an appointment
+* [getHealthcareCareplan](#gethealthcarecareplan) - Retrieve a careplan
 * [getHealthcareCondition](#gethealthcarecondition) - Retrieve a condition
+* [getHealthcareCoverage](#gethealthcarecoverage) - Retrieve a coverage
+* [getHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [getHealthcareEncounter](#gethealthcareencounter) - Retrieve an encounter
+* [getHealthcareGoal](#gethealthcaregoal) - Retrieve a goal
 * [getHealthcareImmunization](#gethealthcareimmunization) - Retrieve an immunization
 * [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHealthcareMedication](#gethealthcaremedication) - Retrieve a medication
 * [getHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
 * [getHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
 * [getHealthcarePractitioner](#gethealthcarepractitioner) - Retrieve a practitioner
+* [getHealthcareProcedure](#gethealthcareprocedure) - Retrieve a procedure
+* [getHealthcareReport](#gethealthcarereport) - Retrieve a report
 * [getHealthcareSlot](#gethealthcareslot) - Retrieve a slot
 * [listHealthcareAllergies](#listhealthcareallergies) - List all allergies
 * [listHealthcareAppointments](#listhealthcareappointments) - List all appointments
+* [listHealthcareCareplans](#listhealthcarecareplans) - List all careplans
 * [listHealthcareConditions](#listhealthcareconditions) - List all conditions
+* [listHealthcareCoverages](#listhealthcarecoverages) - List all coverages
+* [listHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [listHealthcareEncounters](#listhealthcareencounters) - List all encounters
+* [listHealthcareGoals](#listhealthcaregoals) - List all goals
 * [listHealthcareImmunizations](#listhealthcareimmunizations) - List all immunizations
 * [listHealthcareLocations](#listhealthcarelocations) - List all locations
 * [listHealthcareMedications](#listhealthcaremedications) - List all medications
 * [listHealthcareObservations](#listhealthcareobservations) - List all observations
 * [listHealthcarePatients](#listhealthcarepatients) - List all patients
 * [listHealthcarePractitioners](#listhealthcarepractitioners) - List all practitioners
+* [listHealthcareProcedures](#listhealthcareprocedures) - List all procedures
+* [listHealthcareReports](#listhealthcarereports) - List all reports
 * [listHealthcareSlots](#listhealthcareslots) - List all slots
 * [patchHealthcareAppointment](#patchhealthcareappointment) - Update an appointment
 * [patchHealthcarePatient](#patchhealthcarepatient) - Update a patient
@@ -68,25 +81,22 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("73c81f1d-0ec5-4313-826f-8a73f4807e3e")
+                    .id("7693c382-e157-486c-b981-26bc70047846")
+                    .isVirtual(true)
+                    .meetingUrl("https://expensive-slipper.name/")
                     .metadata(List.of())
+                    .notes("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.")
                     .practitionerIds(List.of())
-                    .reasons(List.of(
-                        HealthcareCode.builder()
-                            .code("12762740")
-                            .display("cubicularis caput")
-                            .system("http://snomed.info/sct")
-                            .build()))
                     .serviceTypes(List.of(
                         HealthcareCode.builder()
-                            .code("61128108")
-                            .display("Annual physical")
+                            .code("12762740")
+                            .display("New patient visit")
                             .system("http://snomed.info/sct")
                             .build()))
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.063Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-26T00:08:45.146Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -111,6 +121,84 @@ public class Application {
 ### Response
 
 **[CreateHealthcareAppointmentResponse](../../models/operations/CreateHealthcareAppointmentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHealthcareDocumentRequest req = CreateHealthcareDocumentRequest.builder()
+                .healthcareDocument(HealthcareDocument.builder()
+                    .authoredAt(OffsetDateTime.parse("2023-07-16T04:00:25.853Z"))
+                    .codes(List.of(
+                        HealthcareCode.builder()
+                            .code("23671711")
+                            .display("History and physical")
+                            .system("http://loinc.org")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-07-16T04:00:25.853Z"))
+                    .documentUrl("https://overcooked-yogurt.org")
+                    .filename("ugh_after.elc")
+                    .id("944b8395-80c9-4ec1-9096-4c1634e2f1af")
+                    .metadata(List.of())
+                    .mimeType("application/pdf")
+                    .name("History and physical")
+                    .status(HealthcareDocumentStatus.SUPERSEDED)
+                    .type(HealthcareDocumentType.CONSULTATION_NOTE)
+                    .updatedAt(OffsetDateTime.parse("2024-12-28T11:40:08.793Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHealthcareDocumentResponse res = sdk.healthcare().createHealthcareDocument()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocument().isPresent()) {
+            System.out.println(res.healthcareDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateHealthcareDocumentRequest](../../models/operations/CreateHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[CreateHealthcareDocumentResponse](../../models/operations/CreateHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -176,15 +264,15 @@ public class Application {
                             .valueUnit("mm[Hg]")
                             .build()))
                     .createdAt(OffsetDateTime.parse("2022-12-06T21:34:04.293Z"))
-                    .id("5b30bb2f-8773-4427-a48c-7e1e45fb8e7b")
+                    .id("50733398-2523-4d96-a2e4-37c9f358953c")
                     .interpretation(Interpretation.CRITICAL_HIGH)
-                    .issuedAt(OffsetDateTime.parse("2025-05-13T08:05:10.562Z"))
+                    .issuedAt(OffsetDateTime.parse("2025-05-13T20:36:08.190Z"))
                     .metadata(List.of())
                     .name("Blood pressure panel")
-                    .observedAt(OffsetDateTime.parse("2025-01-21T19:52:37.069Z"))
+                    .observedAt(OffsetDateTime.parse("2025-01-22T06:49:19.472Z"))
                     .status(HealthcareObservationStatus.CORRECTED)
                     .type(HealthcareObservationType.VITAL_SIGNS)
-                    .updatedAt(OffsetDateTime.parse("2026-03-26T20:18:00.885Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-27T13:17:21.150Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -254,6 +342,17 @@ public class Application {
                         .region("Nebraska")
                         .build())
                     .birthdate("2025-02-15")
+                    .contacts(List.of(
+                        HealthcarePatientContact.builder()
+                            .emails(List.of())
+                            .name("Antonia Lebsack")
+                            .relationship("Spouse")
+                            .telephones(List.of(
+                                HealthcareTelephone.builder()
+                                    .telephone("(695) 328-7029 x4412")
+                                    .type(HealthcareTelephoneType.MOBILE)
+                                    .build()))
+                            .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -262,7 +361,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("b16287a9-c5da-469b-9860-afd2421c2737")
+                    .id("cfc5529c-d78c-4d43-be5c-ae45fea5616f")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -280,7 +379,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-25T16:35:02.724Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-26T11:19:34.305Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -428,6 +527,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHealthcareCareplan
+
+Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareCareplan" method="get" path="/healthcare/{connection_id}/careplan/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareCareplanRequest req = GetHealthcareCareplanRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareCareplanResponse res = sdk.healthcare().getHealthcareCareplan()
+                .request(req)
+                .call();
+
+        if (res.healthcareCareplan().isPresent()) {
+            System.out.println(res.healthcareCareplan().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetHealthcareCareplanRequest](../../models/operations/GetHealthcareCareplanRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetHealthcareCareplanResponse](../../models/operations/GetHealthcareCareplanResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHealthcareCondition
 
 Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -486,6 +643,122 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHealthcareCoverage
+
+Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareCoverage" method="get" path="/healthcare/{connection_id}/coverage/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareCoverageRequest req = GetHealthcareCoverageRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareCoverageResponse res = sdk.healthcare().getHealthcareCoverage()
+                .request(req)
+                .call();
+
+        if (res.healthcareCoverage().isPresent()) {
+            System.out.println(res.healthcareCoverage().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetHealthcareCoverageRequest](../../models/operations/GetHealthcareCoverageRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetHealthcareCoverageResponse](../../models/operations/GetHealthcareCoverageResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareDocumentRequest req = GetHealthcareDocumentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareDocumentResponse res = sdk.healthcare().getHealthcareDocument()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocument().isPresent()) {
+            System.out.println(res.healthcareDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetHealthcareDocumentRequest](../../models/operations/GetHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetHealthcareDocumentResponse](../../models/operations/GetHealthcareDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHealthcareEncounter
 
 Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -537,6 +810,64 @@ public class Application {
 ### Response
 
 **[GetHealthcareEncounterResponse](../../models/operations/GetHealthcareEncounterResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareGoal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareGoalRequest req = GetHealthcareGoalRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareGoalResponse res = sdk.healthcare().getHealthcareGoal()
+                .request(req)
+                .call();
+
+        if (res.healthcareGoal().isPresent()) {
+            System.out.println(res.healthcareGoal().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetHealthcareGoalRequest](../../models/operations/GetHealthcareGoalRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetHealthcareGoalResponse](../../models/operations/GetHealthcareGoalResponse.md)**
 
 ### Errors
 
@@ -892,6 +1223,122 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getHealthcareProcedure
+
+Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareProcedure" method="get" path="/healthcare/{connection_id}/procedure/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareProcedureRequest req = GetHealthcareProcedureRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareProcedureResponse res = sdk.healthcare().getHealthcareProcedure()
+                .request(req)
+                .call();
+
+        if (res.healthcareProcedure().isPresent()) {
+            System.out.println(res.healthcareProcedure().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetHealthcareProcedureRequest](../../models/operations/GetHealthcareProcedureRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[GetHealthcareProcedureResponse](../../models/operations/GetHealthcareProcedureResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareReport
+
+Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareReport" method="get" path="/healthcare/{connection_id}/report/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareReportRequest req = GetHealthcareReportRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareReportResponse res = sdk.healthcare().getHealthcareReport()
+                .request(req)
+                .call();
+
+        if (res.healthcareReport().isPresent()) {
+            System.out.println(res.healthcareReport().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetHealthcareReportRequest](../../models/operations/GetHealthcareReportRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[GetHealthcareReportResponse](../../models/operations/GetHealthcareReportResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHealthcareSlot
 
 Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -1064,6 +1511,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHealthcareCareplans
+
+Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareCareplans" method="get" path="/healthcare/{connection_id}/careplan" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareCareplansRequest req = ListHealthcareCareplansRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareCareplansResponse res = sdk.healthcare().listHealthcareCareplans()
+                .request(req)
+                .call();
+
+        if (res.healthcareCareplans().isPresent()) {
+            System.out.println(res.healthcareCareplans().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListHealthcareCareplansRequest](../../models/operations/ListHealthcareCareplansRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListHealthcareCareplansResponse](../../models/operations/ListHealthcareCareplansResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHealthcareConditions
 
 Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1121,6 +1625,120 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHealthcareCoverages
+
+Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareCoverages" method="get" path="/healthcare/{connection_id}/coverage" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareCoveragesRequest req = ListHealthcareCoveragesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareCoveragesResponse res = sdk.healthcare().listHealthcareCoverages()
+                .request(req)
+                .call();
+
+        if (res.healthcareCoverages().isPresent()) {
+            System.out.println(res.healthcareCoverages().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListHealthcareCoveragesRequest](../../models/operations/ListHealthcareCoveragesRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListHealthcareCoveragesResponse](../../models/operations/ListHealthcareCoveragesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareDocumentsRequest req = ListHealthcareDocumentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareDocumentsResponse res = sdk.healthcare().listHealthcareDocuments()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocuments().isPresent()) {
+            System.out.println(res.healthcareDocuments().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListHealthcareDocumentsRequest](../../models/operations/ListHealthcareDocumentsRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListHealthcareDocumentsResponse](../../models/operations/ListHealthcareDocumentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHealthcareEncounters
 
 Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1171,6 +1789,63 @@ public class Application {
 ### Response
 
 **[ListHealthcareEncountersResponse](../../models/operations/ListHealthcareEncountersResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHealthcareGoals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareGoalsRequest req = ListHealthcareGoalsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareGoalsResponse res = sdk.healthcare().listHealthcareGoals()
+                .request(req)
+                .call();
+
+        if (res.healthcareGoals().isPresent()) {
+            System.out.println(res.healthcareGoals().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListHealthcareGoalsRequest](../../models/operations/ListHealthcareGoalsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListHealthcareGoalsResponse](../../models/operations/ListHealthcareGoalsResponse.md)**
 
 ### Errors
 
@@ -1520,6 +2195,120 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHealthcareProcedures
+
+Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareProcedures" method="get" path="/healthcare/{connection_id}/procedure" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareProceduresRequest req = ListHealthcareProceduresRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareProceduresResponse res = sdk.healthcare().listHealthcareProcedures()
+                .request(req)
+                .call();
+
+        if (res.healthcareProcedures().isPresent()) {
+            System.out.println(res.healthcareProcedures().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListHealthcareProceduresRequest](../../models/operations/ListHealthcareProceduresRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[ListHealthcareProceduresResponse](../../models/operations/ListHealthcareProceduresResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listHealthcareReports
+
+Returns a list of HealthcareReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareReports" method="get" path="/healthcare/{connection_id}/report" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareReportsRequest req = ListHealthcareReportsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareReportsResponse res = sdk.healthcare().listHealthcareReports()
+                .request(req)
+                .call();
+
+        if (res.healthcareReports().isPresent()) {
+            System.out.println(res.healthcareReports().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListHealthcareReportsRequest](../../models/operations/ListHealthcareReportsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListHealthcareReportsResponse](../../models/operations/ListHealthcareReportsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHealthcareSlots
 
 Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1610,25 +2399,22 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("440c1720-972c-4b35-b659-b1c9fc8ff2a1")
+                    .id("c0833e06-7b06-4bf2-844f-2673c9d03834")
+                    .isVirtual(true)
+                    .meetingUrl("https://expensive-slipper.name/")
                     .metadata(List.of())
+                    .notes("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.")
                     .practitionerIds(List.of())
-                    .reasons(List.of(
-                        HealthcareCode.builder()
-                            .code("12762740")
-                            .display("cubicularis caput")
-                            .system("http://snomed.info/sct")
-                            .build()))
                     .serviceTypes(List.of(
                         HealthcareCode.builder()
-                            .code("61128108")
-                            .display("Annual physical")
+                            .code("12762740")
+                            .display("New patient visit")
                             .system("http://snomed.info/sct")
                             .build()))
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.080Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-26T00:08:45.164Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1699,6 +2485,17 @@ public class Application {
                         .region("Nebraska")
                         .build())
                     .birthdate("2025-02-15")
+                    .contacts(List.of(
+                        HealthcarePatientContact.builder()
+                            .emails(List.of())
+                            .name("Antonia Lebsack")
+                            .relationship("Spouse")
+                            .telephones(List.of(
+                                HealthcareTelephone.builder()
+                                    .telephone("(695) 328-7029 x4412")
+                                    .type(HealthcareTelephoneType.MOBILE)
+                                    .build()))
+                            .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -1707,7 +2504,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("a14f7140-fb14-4832-b536-0696887b6da0")
+                    .id("f74311fc-2420-4077-8af3-fab68bc37b57")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -1725,7 +2522,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-25T16:35:02.752Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-26T11:19:34.352Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1847,25 +2644,22 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2023-04-11T08:16:20.874Z"))
                     .description("clarus aptus cetera")
                     .endAt(OffsetDateTime.parse("2023-12-12T13:04:41.451Z"))
-                    .id("440c1720-972c-4b35-b659-b1c9fc8ff2a1")
+                    .id("c0833e06-7b06-4bf2-844f-2673c9d03834")
+                    .isVirtual(true)
+                    .meetingUrl("https://expensive-slipper.name/")
                     .metadata(List.of())
+                    .notes("Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.")
                     .practitionerIds(List.of())
-                    .reasons(List.of(
-                        HealthcareCode.builder()
-                            .code("12762740")
-                            .display("cubicularis caput")
-                            .system("http://snomed.info/sct")
-                            .build()))
                     .serviceTypes(List.of(
                         HealthcareCode.builder()
-                            .code("61128108")
-                            .display("Annual physical")
+                            .code("12762740")
+                            .display("New patient visit")
                             .system("http://snomed.info/sct")
                             .build()))
                     .slotIds(List.of())
                     .startAt(OffsetDateTime.parse("2023-12-12T12:34:41.451Z"))
                     .status(HealthcareAppointmentStatus.BOOKED)
-                    .updatedAt(OffsetDateTime.parse("2025-11-21T16:28:40.080Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-26T00:08:45.164Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1936,6 +2730,17 @@ public class Application {
                         .region("Nebraska")
                         .build())
                     .birthdate("2025-02-15")
+                    .contacts(List.of(
+                        HealthcarePatientContact.builder()
+                            .emails(List.of())
+                            .name("Antonia Lebsack")
+                            .relationship("Spouse")
+                            .telephones(List.of(
+                                HealthcareTelephone.builder()
+                                    .telephone("(695) 328-7029 x4412")
+                                    .type(HealthcareTelephoneType.MOBILE)
+                                    .build()))
+                            .build()))
                     .createdAt(OffsetDateTime.parse("2021-06-05T21:08:04.917Z"))
                     .emails(List.of(
                         HealthcareEmail.builder()
@@ -1944,7 +2749,7 @@ public class Application {
                             .build()))
                     .firstName("Alejandrin")
                     .gender(HealthcarePatientGender.FEMALE)
-                    .id("a14f7140-fb14-4832-b536-0696887b6da0")
+                    .id("f74311fc-2420-4077-8af3-fab68bc37b57")
                     .identifiers(List.of(
                         HealthcareIdentifier.builder()
                             .value("57992636")
@@ -1962,7 +2767,7 @@ public class Application {
                             .telephone("1-219-555-9023 x08295")
                             .type(HealthcareTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2026-06-25T16:35:02.752Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-26T11:19:34.352Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

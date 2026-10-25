@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareObservationResponse;
@@ -21,12 +24,24 @@ import to.unified.unified_java_sdk.models.operations.GetHealthcareAllergyRespons
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareAppointmentResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCareplanResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareConditionRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareConditionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareConditionResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareCoverageResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareEncounterResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareImmunizationResponse;
@@ -45,6 +60,12 @@ import to.unified.unified_java_sdk.models.operations.GetHealthcarePatientRespons
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePractitionerRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePractitionerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcarePractitionerResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareProcedureResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportResponse;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareSlotResponse;
@@ -54,12 +75,24 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareAllergiesResp
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareAppointmentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCareplansResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareConditionsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareConditionsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareConditionsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareCoveragesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareEncountersResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareImmunizationsResponse;
@@ -78,6 +111,12 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcarePatientsRespo
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePractitionersRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePractitionersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcarePractitionersResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareProceduresResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareSlotsResponse;
@@ -97,29 +136,42 @@ import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientRequ
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHealthcarePatientResponse;
 import to.unified.unified_java_sdk.operations.CreateHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHealthcareObservation;
 import to.unified.unified_java_sdk.operations.CreateHealthcarePatient;
 import to.unified.unified_java_sdk.operations.GetHealthcareAllergy;
 import to.unified.unified_java_sdk.operations.GetHealthcareAppointment;
+import to.unified.unified_java_sdk.operations.GetHealthcareCareplan;
 import to.unified.unified_java_sdk.operations.GetHealthcareCondition;
+import to.unified.unified_java_sdk.operations.GetHealthcareCoverage;
+import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHealthcareEncounter;
+import to.unified.unified_java_sdk.operations.GetHealthcareGoal;
 import to.unified.unified_java_sdk.operations.GetHealthcareImmunization;
 import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHealthcareMedication;
 import to.unified.unified_java_sdk.operations.GetHealthcareObservation;
 import to.unified.unified_java_sdk.operations.GetHealthcarePatient;
 import to.unified.unified_java_sdk.operations.GetHealthcarePractitioner;
+import to.unified.unified_java_sdk.operations.GetHealthcareProcedure;
+import to.unified.unified_java_sdk.operations.GetHealthcareReport;
 import to.unified.unified_java_sdk.operations.GetHealthcareSlot;
 import to.unified.unified_java_sdk.operations.ListHealthcareAllergies;
 import to.unified.unified_java_sdk.operations.ListHealthcareAppointments;
+import to.unified.unified_java_sdk.operations.ListHealthcareCareplans;
 import to.unified.unified_java_sdk.operations.ListHealthcareConditions;
+import to.unified.unified_java_sdk.operations.ListHealthcareCoverages;
+import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHealthcareEncounters;
+import to.unified.unified_java_sdk.operations.ListHealthcareGoals;
 import to.unified.unified_java_sdk.operations.ListHealthcareImmunizations;
 import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
 import to.unified.unified_java_sdk.operations.ListHealthcareMedications;
 import to.unified.unified_java_sdk.operations.ListHealthcareObservations;
 import to.unified.unified_java_sdk.operations.ListHealthcarePatients;
 import to.unified.unified_java_sdk.operations.ListHealthcarePractitioners;
+import to.unified.unified_java_sdk.operations.ListHealthcareProcedures;
+import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.operations.ListHealthcareSlots;
 import to.unified.unified_java_sdk.operations.PatchHealthcareAppointment;
 import to.unified.unified_java_sdk.operations.PatchHealthcarePatient;
@@ -173,6 +225,34 @@ public class Healthcare {
     public CreateHealthcareAppointmentResponse createHealthcareAppointment(@Nonnull CreateHealthcareAppointmentRequest request) {
         RequestOperation<CreateHealthcareAppointmentRequest, CreateHealthcareAppointmentResponse> operation
               = new CreateHealthcareAppointment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @return The call builder
+     */
+    public CreateHealthcareDocumentRequestBuilder createHealthcareDocument() {
+        return new CreateHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        RequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
+              = new CreateHealthcareDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -289,6 +369,34 @@ public class Healthcare {
     }
 
     /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareCareplanRequestBuilder getHealthcareCareplan() {
+        return new GetHealthcareCareplanRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a careplan
+     * 
+     * <p>Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCareplanResponse getHealthcareCareplan(@Nonnull GetHealthcareCareplanRequest request) {
+        RequestOperation<GetHealthcareCareplanRequest, GetHealthcareCareplanResponse> operation
+              = new GetHealthcareCareplan.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a condition
      * 
      * <p>Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list
@@ -317,6 +425,62 @@ public class Healthcare {
     }
 
     /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareCoverageRequestBuilder getHealthcareCoverage() {
+        return new GetHealthcareCoverageRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a coverage
+     * 
+     * <p>Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareCoverageResponse getHealthcareCoverage(@Nonnull GetHealthcareCoverageRequest request) {
+        RequestOperation<GetHealthcareCoverageRequest, GetHealthcareCoverageResponse> operation
+              = new GetHealthcareCoverage.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareDocumentRequestBuilder getHealthcareDocument() {
+        return new GetHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        RequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
+              = new GetHealthcareDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve an encounter
      * 
      * <p>Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list
@@ -341,6 +505,34 @@ public class Healthcare {
     public GetHealthcareEncounterResponse getHealthcareEncounter(@Nonnull GetHealthcareEncounterRequest request) {
         RequestOperation<GetHealthcareEncounterRequest, GetHealthcareEncounterResponse> operation
               = new GetHealthcareEncounter.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareGoalRequestBuilder getHealthcareGoal() {
+        return new GetHealthcareGoalRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareGoalResponse getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request) {
+        RequestOperation<GetHealthcareGoalRequest, GetHealthcareGoalResponse> operation
+              = new GetHealthcareGoal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -513,6 +705,62 @@ public class Healthcare {
     }
 
     /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareProcedureRequestBuilder getHealthcareProcedure() {
+        return new GetHealthcareProcedureRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a procedure
+     * 
+     * <p>Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareProcedureResponse getHealthcareProcedure(@Nonnull GetHealthcareProcedureRequest request) {
+        RequestOperation<GetHealthcareProcedureRequest, GetHealthcareProcedureResponse> operation
+              = new GetHealthcareProcedure.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareReportRequestBuilder getHealthcareReport() {
+        return new GetHealthcareReportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        RequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
+              = new GetHealthcareReport.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a slot
      * 
      * <p>Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list
@@ -613,6 +861,42 @@ public class Healthcare {
     }
 
     /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareCareplansRequestBuilder listHealthcareCareplans() {
+        return new ListHealthcareCareplansRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all careplans
+     * 
+     * <p>Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCareplansResponse listHealthcareCareplans(@Nonnull ListHealthcareCareplansRequest request) {
+        RequestOperation<ListHealthcareCareplansRequest, ListHealthcareCareplansResponse> operation
+              = new ListHealthcareCareplans.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all conditions
      * 
      * <p>Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging,
@@ -649,6 +933,78 @@ public class Healthcare {
     }
 
     /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareCoveragesRequestBuilder listHealthcareCoverages() {
+        return new ListHealthcareCoveragesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all coverages
+     * 
+     * <p>Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareCoveragesResponse listHealthcareCoverages(@Nonnull ListHealthcareCoveragesRequest request) {
+        RequestOperation<ListHealthcareCoveragesRequest, ListHealthcareCoveragesResponse> operation
+              = new ListHealthcareCoverages.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareDocumentsRequestBuilder listHealthcareDocuments() {
+        return new ListHealthcareDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        RequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
+              = new ListHealthcareDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all encounters
      * 
      * <p>Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging,
@@ -681,6 +1037,42 @@ public class Healthcare {
     public ListHealthcareEncountersResponse listHealthcareEncounters(@Nonnull ListHealthcareEncountersRequest request) {
         RequestOperation<ListHealthcareEncountersRequest, ListHealthcareEncountersResponse> operation
               = new ListHealthcareEncounters.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareGoalsRequestBuilder listHealthcareGoals() {
+        return new ListHealthcareGoalsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareGoalsResponse listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request) {
+        RequestOperation<ListHealthcareGoalsRequest, ListHealthcareGoalsResponse> operation
+              = new ListHealthcareGoals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -897,6 +1289,78 @@ public class Healthcare {
     public ListHealthcarePractitionersResponse listHealthcarePractitioners(@Nonnull ListHealthcarePractitionersRequest request) {
         RequestOperation<ListHealthcarePractitionersRequest, ListHealthcarePractitionersResponse> operation
               = new ListHealthcarePractitioners.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareProceduresRequestBuilder listHealthcareProcedures() {
+        return new ListHealthcareProceduresRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all procedures
+     * 
+     * <p>Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareProceduresResponse listHealthcareProcedures(@Nonnull ListHealthcareProceduresRequest request) {
+        RequestOperation<ListHealthcareProceduresRequest, ListHealthcareProceduresResponse> operation
+              = new ListHealthcareProcedures.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareReportsRequestBuilder listHealthcareReports() {
+        return new ListHealthcareReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        RequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
+              = new ListHealthcareReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

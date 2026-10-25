@@ -5,12 +5,15 @@
 ### Available Operations
 
 * [createAtsDocument](#createatsdocument) - Create a document
+* [createHealthcareDocument](#createhealthcaredocument) - Create a document
 * [createHrisDocument](#createhrisdocument) - Create a document
 * [createSigningDocument](#createsigningdocument) - Create a document
 * [getAtsDocument](#getatsdocument) - Retrieve a document
+* [getHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [getHrisDocument](#gethrisdocument) - Retrieve a document
 * [getSigningDocument](#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](#listatsdocuments) - List all documents
+* [listHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [listHrisDocuments](#listhrisdocuments) - List all documents
 * [listSigningDocuments](#listsigningdocuments) - List all documents
 * [patchAtsDocument](#patchatsdocument) - Update a document
@@ -56,10 +59,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("09153b84-443c-4283-a5e6-e3cd8b4daee1")
+                    .id("816b23e4-6c03-460b-b859-ddc0b376bb56")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T23:15:19.641Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-08T04:16:02.409Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,6 +87,84 @@ public class Application {
 ### Response
 
 **[CreateAtsDocumentResponse](../../models/operations/CreateAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHealthcareDocumentRequest req = CreateHealthcareDocumentRequest.builder()
+                .healthcareDocument(HealthcareDocument.builder()
+                    .authoredAt(OffsetDateTime.parse("2023-07-16T04:00:25.853Z"))
+                    .codes(List.of(
+                        HealthcareCode.builder()
+                            .code("23671711")
+                            .display("History and physical")
+                            .system("http://loinc.org")
+                            .build()))
+                    .createdAt(OffsetDateTime.parse("2023-07-16T04:00:25.853Z"))
+                    .documentUrl("https://overcooked-yogurt.org")
+                    .filename("ugh_after.elc")
+                    .id("944b8395-80c9-4ec1-9096-4c1634e2f1af")
+                    .metadata(List.of())
+                    .mimeType("application/pdf")
+                    .name("History and physical")
+                    .status(HealthcareDocumentStatus.SUPERSEDED)
+                    .type(HealthcareDocumentType.CONSULTATION_NOTE)
+                    .updatedAt(OffsetDateTime.parse("2024-12-28T11:40:08.793Z"))
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHealthcareDocumentResponse res = sdk.document().createHealthcareDocument()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocument().isPresent()) {
+            System.out.println(res.healthcareDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [CreateHealthcareDocumentRequest](../../models/operations/CreateHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[CreateHealthcareDocumentResponse](../../models/operations/CreateHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -124,10 +205,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("c3bd9212-518b-4e6d-870f-5b93b74f6c3a")
+                    .id("68230db6-caf0-4632-9559-9104a372b885")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T20:06:23.318Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:55:55.215Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -192,12 +273,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("b43b3a06-b6e2-4faa-b1ce-4d1e8669cebe")
+                    .id("db197632-9b96-4007-a6a2-40c922bc626b")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-30T03:30:12.149Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-30T07:43:54.922Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-05T08:10:03.578Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-06T00:00:13.238Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -280,6 +361,64 @@ public class Application {
 ### Response
 
 **[GetAtsDocumentResponse](../../models/operations/GetAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHealthcareDocumentRequest req = GetHealthcareDocumentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHealthcareDocumentResponse res = sdk.document().getHealthcareDocument()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocument().isPresent()) {
+            System.out.println(res.healthcareDocument().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [GetHealthcareDocumentRequest](../../models/operations/GetHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[GetHealthcareDocumentResponse](../../models/operations/GetHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -460,6 +599,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHealthcareDocumentsRequest req = ListHealthcareDocumentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHealthcareDocumentsResponse res = sdk.document().listHealthcareDocuments()
+                .request(req)
+                .call();
+
+        if (res.healthcareDocuments().isPresent()) {
+            System.out.println(res.healthcareDocuments().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [ListHealthcareDocumentsRequest](../../models/operations/ListHealthcareDocumentsRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[ListHealthcareDocumentsResponse](../../models/operations/ListHealthcareDocumentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisDocuments
 
 Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -607,10 +803,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("8a4fe119-088f-4009-a658-679756eafb26")
+                    .id("c6e8b725-bf04-43f0-8cad-b65138f053ad")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T23:15:19.647Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-08T04:16:02.412Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -676,10 +872,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("099bee0d-1e8f-4ac8-bfa8-35da03888a2e")
+                    .id("15d274de-f9b6-4eb7-b6ab-2ca625e152bb")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T20:06:23.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:55:55.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -745,12 +941,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("02310b61-61fc-46a7-b2cc-d9c2dc9afd30")
+                    .id("f81c4d18-1377-47c9-93c1-dfa582f7ad29")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-30T03:30:12.155Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-30T07:43:54.924Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-05T08:10:03.599Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-06T00:00:13.246Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -984,10 +1180,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-20T08:00:27.437Z"))
                     .documentUrl("https://vengeful-lashes.biz")
                     .filename("lonzo_schowalter_resume.pdf")
-                    .id("8a4fe119-088f-4009-a658-679756eafb26")
+                    .id("c6e8b725-bf04-43f0-8cad-b65138f053ad")
                     .metadata(List.of())
                     .type(AtsDocumentType.COVER_LETTER)
-                    .updatedAt(OffsetDateTime.parse("2022-12-07T23:15:19.647Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-12-08T04:16:02.412Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1053,10 +1249,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("099bee0d-1e8f-4ac8-bfa8-35da03888a2e")
+                    .id("15d274de-f9b6-4eb7-b6ab-2ca625e152bb")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-13T20:06:23.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-14T10:55:55.226Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1122,12 +1318,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-05-02T09:35:23.679Z"))
                     .description("Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.")
                     .expiresAt(OffsetDateTime.parse("2021-06-04T01:21:34.949Z"))
-                    .id("02310b61-61fc-46a7-b2cc-d9c2dc9afd30")
+                    .id("f81c4d18-1377-47c9-93c1-dfa582f7ad29")
                     .metadata(List.of())
                     .name("Denesik Group NDA")
-                    .sentAt(OffsetDateTime.parse("2022-06-30T03:30:12.155Z"))
+                    .sentAt(OffsetDateTime.parse("2022-06-30T07:43:54.924Z"))
                     .status(SigningDocumentStatus.DRAFT)
-                    .updatedAt(OffsetDateTime.parse("2025-09-05T08:10:03.599Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-06T00:00:13.246Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

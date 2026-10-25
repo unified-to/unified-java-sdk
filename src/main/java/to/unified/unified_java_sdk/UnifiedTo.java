@@ -398,10 +398,19 @@ public class UnifiedTo {
     private final Appointment appointment;
 
 
+    private final Careplan careplan;
+
+
     private final Condition condition;
 
 
+    private final Coverage coverage;
+
+
     private final Encounter encounter;
+
+
+    private final Goal goal;
 
 
     private final Immunization immunization;
@@ -417,6 +426,9 @@ public class UnifiedTo {
 
 
     private final Practitioner practitioner;
+
+
+    private final Procedure procedure;
 
 
     private final Slot slot;
@@ -543,9 +555,6 @@ public class UnifiedTo {
 
 
     private final Feedback feedback;
-
-
-    private final Goal goal;
 
 
     private final Repo repo;
@@ -1269,13 +1278,28 @@ public class UnifiedTo {
     }
 
 
+    public Careplan careplan() {
+        return careplan;
+    }
+
+
     public Condition condition() {
         return condition;
     }
 
 
+    public Coverage coverage() {
+        return coverage;
+    }
+
+
     public Encounter encounter() {
         return encounter;
+    }
+
+
+    public Goal goal() {
+        return goal;
     }
 
 
@@ -1301,6 +1325,11 @@ public class UnifiedTo {
 
     public Practitioner practitioner() {
         return practitioner;
+    }
+
+
+    public Procedure procedure() {
+        return procedure;
     }
 
 
@@ -1511,11 +1540,6 @@ public class UnifiedTo {
 
     public Feedback feedback() {
         return feedback;
-    }
-
-
-    public Goal goal() {
-        return goal;
     }
 
 
@@ -1984,13 +2008,17 @@ public class UnifiedTo {
         this.healthcare = new Healthcare(sdkConfiguration);
         this.allergy = new Allergy(sdkConfiguration);
         this.appointment = new Appointment(sdkConfiguration);
+        this.careplan = new Careplan(sdkConfiguration);
         this.condition = new Condition(sdkConfiguration);
+        this.coverage = new Coverage(sdkConfiguration);
         this.encounter = new Encounter(sdkConfiguration);
+        this.goal = new Goal(sdkConfiguration);
         this.immunization = new Immunization(sdkConfiguration);
         this.medication = new Medication(sdkConfiguration);
         this.observation = new Observation(sdkConfiguration);
         this.patient = new Patient(sdkConfiguration);
         this.practitioner = new Practitioner(sdkConfiguration);
+        this.procedure = new Procedure(sdkConfiguration);
         this.slot = new Slot(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
         this.attendance = new Attendance(sdkConfiguration);
@@ -2033,7 +2061,6 @@ public class UnifiedTo {
         this.performance = new Performance(sdkConfiguration);
         this.cycle = new Cycle(sdkConfiguration);
         this.feedback = new Feedback(sdkConfiguration);
-        this.goal = new Goal(sdkConfiguration);
         this.repo = new Repo(sdkConfiguration);
         this.branch = new Branch(sdkConfiguration);
         this.commit = new Commit(sdkConfiguration);

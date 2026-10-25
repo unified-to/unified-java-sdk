@@ -35,6 +35,13 @@ public class HealthcarePatient {
     private String birthdate;
 
     /**
+     * Emergency contacts, guardians and other contact persons for the patient
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contacts")
+    private List<HealthcarePatientContact> contacts;
+
+    /**
      * When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -54,6 +61,13 @@ public class HealthcarePatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     private List<HealthcareEmail> emails;
+
+    /**
+     * Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ethnicities")
+    private List<HealthcareCode> ethnicities;
 
     /**
      * Given name of the patient
@@ -112,6 +126,13 @@ public class HealthcarePatient {
     private String lastName;
 
     /**
+     * Marital status of the patient
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("marital_status")
+    private MaritalStatus maritalStatus;
+
+    /**
      * Custom field values
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -131,6 +152,13 @@ public class HealthcarePatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("practitioner_ids")
     private List<String> practitionerIds;
+
+    /**
+     * Codings for the patient's race (e.g. CDC race codes)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("races")
+    private List<HealthcareCode> races;
 
     /**
      * Raw data from integration
@@ -157,9 +185,11 @@ public class HealthcarePatient {
     public HealthcarePatient(
             @JsonProperty("address") @Nullable PropertyHealthcarePatientAddress address,
             @JsonProperty("birthdate") @Nullable String birthdate,
+            @JsonProperty("contacts") @Nullable List<HealthcarePatientContact> contacts,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("deceased_at") @Nullable OffsetDateTime deceasedAt,
             @JsonProperty("emails") @Nullable List<HealthcareEmail> emails,
+            @JsonProperty("ethnicities") @Nullable List<HealthcareCode> ethnicities,
             @JsonProperty("first_name") @Nullable String firstName,
             @JsonProperty("gender") @Nullable HealthcarePatientGender gender,
             @JsonProperty("id") @Nullable String id,
@@ -168,17 +198,21 @@ public class HealthcarePatient {
             @JsonProperty("is_deceased") @Nullable Boolean isDeceased,
             @JsonProperty("language") @Nullable String language,
             @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("marital_status") @Nullable MaritalStatus maritalStatus,
             @JsonProperty("metadata") @Nullable List<HealthcareMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("practitioner_ids") @Nullable List<String> practitionerIds,
+            @JsonProperty("races") @Nullable List<HealthcareCode> races,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("telephones") @Nullable List<HealthcareTelephone> telephones,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.address = address;
         this.birthdate = birthdate;
+        this.contacts = contacts;
         this.createdAt = createdAt;
         this.deceasedAt = deceasedAt;
         this.emails = emails;
+        this.ethnicities = ethnicities;
         this.firstName = firstName;
         this.gender = gender;
         this.id = id;
@@ -187,9 +221,11 @@ public class HealthcarePatient {
         this.isDeceased = isDeceased;
         this.language = language;
         this.lastName = lastName;
+        this.maritalStatus = maritalStatus;
         this.metadata = metadata;
         this.name = name;
         this.practitionerIds = practitionerIds;
+        this.races = races;
         this.raw = raw;
         this.telephones = telephones;
         this.updatedAt = updatedAt;
@@ -202,7 +238,8 @@ public class HealthcarePatient {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null);
     }
 
     /**
@@ -217,6 +254,13 @@ public class HealthcarePatient {
      */
     public Optional<String> birthdate() {
         return Optional.ofNullable(this.birthdate);
+    }
+
+    /**
+     * Emergency contacts, guardians and other contact persons for the patient
+     */
+    public Optional<List<HealthcarePatientContact>> contacts() {
+        return Optional.ofNullable(this.contacts);
     }
 
     /**
@@ -238,6 +282,13 @@ public class HealthcarePatient {
      */
     public Optional<List<HealthcareEmail>> emails() {
         return Optional.ofNullable(this.emails);
+    }
+
+    /**
+     * Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+     */
+    public Optional<List<HealthcareCode>> ethnicities() {
+        return Optional.ofNullable(this.ethnicities);
     }
 
     /**
@@ -297,6 +348,13 @@ public class HealthcarePatient {
     }
 
     /**
+     * Marital status of the patient
+     */
+    public Optional<MaritalStatus> maritalStatus() {
+        return Optional.ofNullable(this.maritalStatus);
+    }
+
+    /**
      * Custom field values
      */
     public Optional<List<HealthcareMetadata>> metadata() {
@@ -315,6 +373,13 @@ public class HealthcarePatient {
      */
     public Optional<List<String>> practitionerIds() {
         return Optional.ofNullable(this.practitionerIds);
+    }
+
+    /**
+     * Codings for the patient's race (e.g. CDC race codes)
+     */
+    public Optional<List<HealthcareCode>> races() {
+        return Optional.ofNullable(this.races);
     }
 
     /**
@@ -362,6 +427,15 @@ public class HealthcarePatient {
 
 
     /**
+     * Emergency contacts, guardians and other contact persons for the patient
+     */
+    public HealthcarePatient withContacts(@Nullable List<HealthcarePatientContact> contacts) {
+        this.contacts = contacts;
+        return this;
+    }
+
+
+    /**
      * When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public HealthcarePatient withCreatedAt(@Nullable OffsetDateTime createdAt) {
@@ -384,6 +458,15 @@ public class HealthcarePatient {
      */
     public HealthcarePatient withEmails(@Nullable List<HealthcareEmail> emails) {
         this.emails = emails;
+        return this;
+    }
+
+
+    /**
+     * Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+     */
+    public HealthcarePatient withEthnicities(@Nullable List<HealthcareCode> ethnicities) {
+        this.ethnicities = ethnicities;
         return this;
     }
 
@@ -461,6 +544,15 @@ public class HealthcarePatient {
 
 
     /**
+     * Marital status of the patient
+     */
+    public HealthcarePatient withMaritalStatus(@Nullable MaritalStatus maritalStatus) {
+        this.maritalStatus = maritalStatus;
+        return this;
+    }
+
+
+    /**
      * Custom field values
      */
     public HealthcarePatient withMetadata(@Nullable List<HealthcareMetadata> metadata) {
@@ -483,6 +575,15 @@ public class HealthcarePatient {
      */
     public HealthcarePatient withPractitionerIds(@Nullable List<String> practitionerIds) {
         this.practitionerIds = practitionerIds;
+        return this;
+    }
+
+
+    /**
+     * Codings for the patient's race (e.g. CDC race codes)
+     */
+    public HealthcarePatient withRaces(@Nullable List<HealthcareCode> races) {
+        this.races = races;
         return this;
     }
 
@@ -526,9 +627,11 @@ public class HealthcarePatient {
         return 
             Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.birthdate, other.birthdate) &&
+            Utils.enhancedDeepEquals(this.contacts, other.contacts) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.deceasedAt, other.deceasedAt) &&
             Utils.enhancedDeepEquals(this.emails, other.emails) &&
+            Utils.enhancedDeepEquals(this.ethnicities, other.ethnicities) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.gender, other.gender) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -537,9 +640,11 @@ public class HealthcarePatient {
             Utils.enhancedDeepEquals(this.isDeceased, other.isDeceased) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
+            Utils.enhancedDeepEquals(this.maritalStatus, other.maritalStatus) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.practitionerIds, other.practitionerIds) &&
+            Utils.enhancedDeepEquals(this.races, other.races) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -548,13 +653,14 @@ public class HealthcarePatient {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, birthdate, createdAt,
-            deceasedAt, emails, firstName,
-            gender, id, identifiers,
-            isActive, isDeceased, language,
-            lastName, metadata, name,
-            practitionerIds, raw, telephones,
-            updatedAt);
+            address, birthdate, contacts,
+            createdAt, deceasedAt, emails,
+            ethnicities, firstName, gender,
+            id, identifiers, isActive,
+            isDeceased, language, lastName,
+            maritalStatus, metadata, name,
+            practitionerIds, races, raw,
+            telephones, updatedAt);
     }
     
     @Override
@@ -562,9 +668,11 @@ public class HealthcarePatient {
         return Utils.toString(HealthcarePatient.class,
                 "address", address,
                 "birthdate", birthdate,
+                "contacts", contacts,
                 "createdAt", createdAt,
                 "deceasedAt", deceasedAt,
                 "emails", emails,
+                "ethnicities", ethnicities,
                 "firstName", firstName,
                 "gender", gender,
                 "id", id,
@@ -573,9 +681,11 @@ public class HealthcarePatient {
                 "isDeceased", isDeceased,
                 "language", language,
                 "lastName", lastName,
+                "maritalStatus", maritalStatus,
                 "metadata", metadata,
                 "name", name,
                 "practitionerIds", practitionerIds,
+                "races", races,
                 "raw", raw,
                 "telephones", telephones,
                 "updatedAt", updatedAt);
@@ -588,11 +698,15 @@ public class HealthcarePatient {
 
         private String birthdate;
 
+        private List<HealthcarePatientContact> contacts;
+
         private OffsetDateTime createdAt;
 
         private OffsetDateTime deceasedAt;
 
         private List<HealthcareEmail> emails;
+
+        private List<HealthcareCode> ethnicities;
 
         private String firstName;
 
@@ -610,11 +724,15 @@ public class HealthcarePatient {
 
         private String lastName;
 
+        private MaritalStatus maritalStatus;
+
         private List<HealthcareMetadata> metadata;
 
         private String name;
 
         private List<String> practitionerIds;
+
+        private List<HealthcareCode> races;
 
         private Map<String, Object> raw;
 
@@ -643,6 +761,14 @@ public class HealthcarePatient {
         }
 
         /**
+         * Emergency contacts, guardians and other contact persons for the patient
+         */
+        public Builder contacts(@Nullable List<HealthcarePatientContact> contacts) {
+            this.contacts = contacts;
+            return this;
+        }
+
+        /**
          * When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -663,6 +789,14 @@ public class HealthcarePatient {
          */
         public Builder emails(@Nullable List<HealthcareEmail> emails) {
             this.emails = emails;
+            return this;
+        }
+
+        /**
+         * Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+         */
+        public Builder ethnicities(@Nullable List<HealthcareCode> ethnicities) {
+            this.ethnicities = ethnicities;
             return this;
         }
 
@@ -731,6 +865,14 @@ public class HealthcarePatient {
         }
 
         /**
+         * Marital status of the patient
+         */
+        public Builder maritalStatus(@Nullable MaritalStatus maritalStatus) {
+            this.maritalStatus = maritalStatus;
+            return this;
+        }
+
+        /**
          * Custom field values
          */
         public Builder metadata(@Nullable List<HealthcareMetadata> metadata) {
@@ -751,6 +893,14 @@ public class HealthcarePatient {
          */
         public Builder practitionerIds(@Nullable List<String> practitionerIds) {
             this.practitionerIds = practitionerIds;
+            return this;
+        }
+
+        /**
+         * Codings for the patient's race (e.g. CDC race codes)
+         */
+        public Builder races(@Nullable List<HealthcareCode> races) {
+            this.races = races;
             return this;
         }
 
@@ -780,13 +930,14 @@ public class HealthcarePatient {
 
         public HealthcarePatient build() {
             return new HealthcarePatient(
-                address, birthdate, createdAt,
-                deceasedAt, emails, firstName,
-                gender, id, identifiers,
-                isActive, isDeceased, language,
-                lastName, metadata, name,
-                practitionerIds, raw, telephones,
-                updatedAt);
+                address, birthdate, contacts,
+                createdAt, deceasedAt, emails,
+                ethnicities, firstName, gender,
+                id, identifiers, isActive,
+                isDeceased, language, lastName,
+                maritalStatus, metadata, name,
+                practitionerIds, races, raw,
+                telephones, updatedAt);
         }
 
     }

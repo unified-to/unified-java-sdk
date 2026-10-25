@@ -9,9 +9,15 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalResponse;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceGoalResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsResponse;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceGoalsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceGoalsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceGoalsResponse;
@@ -25,7 +31,9 @@ import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalReques
 import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalResponse;
 import to.unified.unified_java_sdk.operations.CreatePerformanceGoal;
+import to.unified.unified_java_sdk.operations.GetHealthcareGoal;
 import to.unified.unified_java_sdk.operations.GetPerformanceGoal;
+import to.unified.unified_java_sdk.operations.ListHealthcareGoals;
 import to.unified.unified_java_sdk.operations.ListPerformanceGoals;
 import to.unified.unified_java_sdk.operations.PatchPerformanceGoal;
 import to.unified.unified_java_sdk.operations.RemovePerformanceGoal;
@@ -83,6 +91,34 @@ public class Goal {
     /**
      * Retrieve a goal
      * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareGoalRequestBuilder getHealthcareGoal() {
+        return new GetHealthcareGoalRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareGoalResponse getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request) {
+        RequestOperation<GetHealthcareGoalRequest, GetHealthcareGoalResponse> operation
+              = new GetHealthcareGoal.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a goal
+     * 
      * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -105,6 +141,42 @@ public class Goal {
     public GetPerformanceGoalResponse getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request) {
         RequestOperation<GetPerformanceGoalRequest, GetPerformanceGoalResponse> operation
               = new GetPerformanceGoal.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareGoalsRequestBuilder listHealthcareGoals() {
+        return new ListHealthcareGoalsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareGoalsResponse listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request) {
+        RequestOperation<ListHealthcareGoalsRequest, ListHealthcareGoalsResponse> operation
+              = new ListHealthcareGoals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

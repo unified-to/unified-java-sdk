@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
@@ -18,6 +21,9 @@ import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRespon
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
@@ -27,6 +33,9 @@ import to.unified.unified_java_sdk.models.operations.GetSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
@@ -61,12 +70,15 @@ import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentReques
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisDocument;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHrisDocument;
 import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisDocuments;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
@@ -125,6 +137,34 @@ public class Document {
     public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @return The call builder
+     */
+    public CreateHealthcareDocumentRequestBuilder createHealthcareDocument() {
+        return new CreateHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body;
+     * they are mapped to the provider's API. Returns the created HealthcareDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHealthcareDocumentResponse createHealthcareDocument(@Nonnull CreateHealthcareDocumentRequest request) {
+        RequestOperation<CreateHealthcareDocumentRequest, CreateHealthcareDocumentResponse> operation
+              = new CreateHealthcareDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,6 +249,34 @@ public class Document {
     public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareDocumentRequestBuilder getHealthcareDocument() {
+        return new GetHealthcareDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareDocumentResponse getHealthcareDocument(@Nonnull GetHealthcareDocumentRequest request) {
+        RequestOperation<GetHealthcareDocumentRequest, GetHealthcareDocumentResponse> operation
+              = new GetHealthcareDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,6 +369,42 @@ public class Document {
     public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareDocumentsRequestBuilder listHealthcareDocuments() {
+        return new ListHealthcareDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareDocumentsResponse listHealthcareDocuments(@Nonnull ListHealthcareDocumentsRequest request) {
+        RequestOperation<ListHealthcareDocumentsRequest, ListHealthcareDocumentsResponse> operation
+              = new ListHealthcareDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

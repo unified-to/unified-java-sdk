@@ -18,10 +18,22 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
+/**
+ * MaritalStatus
+ * 
+ * <p>Marital status of the patient
+ */
 public class MaritalStatus {
 
     public static final MaritalStatus MARRIED = new MaritalStatus("MARRIED");
     public static final MaritalStatus SINGLE = new MaritalStatus("SINGLE");
+    public static final MaritalStatus DOMESTIC_PARTNER = new MaritalStatus("DOMESTIC_PARTNER");
+    public static final MaritalStatus SEPARATED = new MaritalStatus("SEPARATED");
+    public static final MaritalStatus DIVORCED = new MaritalStatus("DIVORCED");
+    public static final MaritalStatus WIDOWED = new MaritalStatus("WIDOWED");
+    public static final MaritalStatus ANNULLED = new MaritalStatus("ANNULLED");
+    public static final MaritalStatus UNKNOWN = new MaritalStatus("UNKNOWN");
+    public static final MaritalStatus OTHER = new MaritalStatus("OTHER");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -97,6 +109,13 @@ public class MaritalStatus {
         Map<String, MaritalStatus> map = new LinkedHashMap<>();
         map.put("MARRIED", MARRIED);
         map.put("SINGLE", SINGLE);
+        map.put("DOMESTIC_PARTNER", DOMESTIC_PARTNER);
+        map.put("SEPARATED", SEPARATED);
+        map.put("DIVORCED", DIVORCED);
+        map.put("WIDOWED", WIDOWED);
+        map.put("ANNULLED", ANNULLED);
+        map.put("UNKNOWN", UNKNOWN);
+        map.put("OTHER", OTHER);
         return map;
     }
 
@@ -104,6 +123,13 @@ public class MaritalStatus {
         Map<String, MaritalStatusEnum> map = new HashMap<>();
         map.put("MARRIED", MaritalStatusEnum.MARRIED);
         map.put("SINGLE", MaritalStatusEnum.SINGLE);
+        map.put("DOMESTIC_PARTNER", MaritalStatusEnum.DOMESTIC_PARTNER);
+        map.put("SEPARATED", MaritalStatusEnum.SEPARATED);
+        map.put("DIVORCED", MaritalStatusEnum.DIVORCED);
+        map.put("WIDOWED", MaritalStatusEnum.WIDOWED);
+        map.put("ANNULLED", MaritalStatusEnum.ANNULLED);
+        map.put("UNKNOWN", MaritalStatusEnum.UNKNOWN);
+        map.put("OTHER", MaritalStatusEnum.OTHER);
         return map;
     }
     
@@ -111,7 +137,14 @@ public class MaritalStatus {
     public enum MaritalStatusEnum {
 
         MARRIED("MARRIED"),
-        SINGLE("SINGLE"),;
+        SINGLE("SINGLE"),
+        DOMESTIC_PARTNER("DOMESTIC_PARTNER"),
+        SEPARATED("SEPARATED"),
+        DIVORCED("DIVORCED"),
+        WIDOWED("WIDOWED"),
+        ANNULLED("ANNULLED"),
+        UNKNOWN("UNKNOWN"),
+        OTHER("OTHER"),;
 
         private final String value;
 

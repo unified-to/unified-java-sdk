@@ -6,17 +6,25 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareReportResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAnalyticsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareReportsResponse;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
+import to.unified.unified_java_sdk.operations.GetHealthcareReport;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.operations.ListAnalyticsReports;
+import to.unified.unified_java_sdk.operations.ListHealthcareReports;
 import to.unified.unified_java_sdk.operations.ListMartechReports;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -38,6 +46,34 @@ public class Report {
      */
     public AsyncReport async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHealthcareReportRequestBuilder getHealthcareReport() {
+        return new GetHealthcareReportRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a report
+     * 
+     * <p>Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHealthcareReportResponse getHealthcareReport(@Nonnull GetHealthcareReportRequest request) {
+        RequestOperation<GetHealthcareReportRequest, GetHealthcareReportResponse> operation
+              = new GetHealthcareReport.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -109,6 +145,42 @@ public class Report {
     public ListAnalyticsReportsResponse listAnalyticsReports(@Nonnull ListAnalyticsReportsRequest request) {
         RequestOperation<ListAnalyticsReportsRequest, ListAnalyticsReportsResponse> operation
               = new ListAnalyticsReports.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHealthcareReportsRequestBuilder listHealthcareReports() {
+        return new ListHealthcareReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * <p>Returns a list of HealthcareReports. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHealthcareReportsResponse listHealthcareReports(@Nonnull ListHealthcareReportsRequest request) {
+        RequestOperation<ListHealthcareReportsRequest, ListHealthcareReportsResponse> operation
+              = new ListHealthcareReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

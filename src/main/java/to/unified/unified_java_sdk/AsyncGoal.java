@@ -8,15 +8,21 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePerformanceGoalRequest;
+import to.unified.unified_java_sdk.models.operations.GetHealthcareGoalRequest;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceGoalRequest;
+import to.unified.unified_java_sdk.models.operations.ListHealthcareGoalsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceGoalsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePerformanceGoalRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreatePerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreatePerformanceGoalResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareGoalRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHealthcareGoalResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetPerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetPerformanceGoalResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareGoalsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHealthcareGoalsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListPerformanceGoalsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListPerformanceGoalsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchPerformanceGoalRequestBuilder;
@@ -26,7 +32,9 @@ import to.unified.unified_java_sdk.models.operations.async.RemovePerformanceGoal
 import to.unified.unified_java_sdk.models.operations.async.UpdatePerformanceGoalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePerformanceGoalResponse;
 import to.unified.unified_java_sdk.operations.CreatePerformanceGoal;
+import to.unified.unified_java_sdk.operations.GetHealthcareGoal;
 import to.unified.unified_java_sdk.operations.GetPerformanceGoal;
+import to.unified.unified_java_sdk.operations.ListHealthcareGoals;
 import to.unified.unified_java_sdk.operations.ListPerformanceGoals;
 import to.unified.unified_java_sdk.operations.PatchPerformanceGoal;
 import to.unified.unified_java_sdk.operations.RemovePerformanceGoal;
@@ -86,6 +94,35 @@ public class AsyncGoal {
     /**
      * Retrieve a goal
      * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetHealthcareGoalRequestBuilder getHealthcareGoal() {
+        return new GetHealthcareGoalRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a goal
+     * 
+     * <p>Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHealthcareGoalResponse>} - The async response
+     */
+    public CompletableFuture<GetHealthcareGoalResponse> getHealthcareGoal(@Nonnull GetHealthcareGoalRequest request) {
+        AsyncRequestOperation<GetHealthcareGoalRequest, GetHealthcareGoalResponse> operation
+              = new GetHealthcareGoal.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a goal
+     * 
      * <p>Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -107,6 +144,43 @@ public class AsyncGoal {
     public CompletableFuture<GetPerformanceGoalResponse> getPerformanceGoal(@Nonnull GetPerformanceGoalRequest request) {
         AsyncRequestOperation<GetPerformanceGoalRequest, GetPerformanceGoalResponse> operation
               = new GetPerformanceGoal.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListHealthcareGoalsRequestBuilder listHealthcareGoals() {
+        return new ListHealthcareGoalsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all goals
+     * 
+     * <p>Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHealthcareGoalsResponse>} - The async response
+     */
+    public CompletableFuture<ListHealthcareGoalsResponse> listHealthcareGoals(@Nonnull ListHealthcareGoalsRequest request) {
+        AsyncRequestOperation<ListHealthcareGoalsRequest, ListHealthcareGoalsResponse> operation
+              = new ListHealthcareGoals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

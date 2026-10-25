@@ -30,5 +30,9 @@ UpdateHealthcarePatientQueryParamFields value = UpdateHealthcarePatientQueryPara
 | `IDENTIFIERS`      | identifiers        |
 | `PRACTITIONER_IDS` | practitioner_ids   |
 | `IS_ACTIVE`        | is_active          |
+| `RACES`            | races              |
+| `ETHNICITIES`      | ethnicities        |
+| `MARITAL_STATUS`   | marital_status     |
+| `CONTACTS`         | contacts           |
 | `METADATA`         | metadata           |
 | `RAW`              | raw                |
