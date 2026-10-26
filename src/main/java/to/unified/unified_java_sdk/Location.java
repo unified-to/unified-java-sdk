@@ -12,6 +12,9 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
@@ -24,6 +27,9 @@ import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRespon
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
@@ -56,10 +62,12 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBu
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetCalendarLocation;
 import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListCalendarLocations;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
@@ -145,6 +153,34 @@ public class Location {
     public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCalendarLocationRequestBuilder getCalendarLocation() {
+        return new GetCalendarLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        RequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
+              = new GetCalendarLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -257,6 +293,42 @@ public class Location {
     public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCalendarLocationsRequestBuilder listCalendarLocations() {
+        return new ListCalendarLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        RequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
+              = new ListCalendarLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

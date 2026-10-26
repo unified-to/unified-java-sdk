@@ -133,7 +133,11 @@ public class AsyncUnifiedTo {
 
     private final AsyncLink link;
 
+    private final AsyncLocation location;
+
     private final AsyncRecording recording;
+
+    private final AsyncRoom room;
 
     private final AsyncWebinar webinar;
 
@@ -150,8 +154,6 @@ public class AsyncUnifiedTo {
     private final AsyncSource source;
 
     private final AsyncClubs clubs;
-
-    private final AsyncLocation location;
 
     private final AsyncMember member;
 
@@ -681,8 +683,16 @@ public class AsyncUnifiedTo {
         return link;
     }
 
+    public AsyncLocation location() {
+        return location;
+    }
+
     public AsyncRecording recording() {
         return recording;
+    }
+
+    public AsyncRoom room() {
+        return room;
     }
 
     public AsyncWebinar webinar() {
@@ -715,10 +725,6 @@ public class AsyncUnifiedTo {
 
     public AsyncClubs clubs() {
         return clubs;
-    }
-
-    public AsyncLocation location() {
-        return location;
     }
 
     public AsyncMember member() {
@@ -1363,7 +1369,9 @@ public class AsyncUnifiedTo {
         this.calendar = new AsyncCalendar(syncSDK.calendar(), sdkConfiguration);
         this.busy = new AsyncBusy(syncSDK.busy(), sdkConfiguration);
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
+        this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
+        this.room = new AsyncRoom(syncSDK.room(), sdkConfiguration);
         this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
         this.cdp = new AsyncCdp(syncSDK.cdp(), sdkConfiguration);
         this.activation = new AsyncActivation(syncSDK.activation(), sdkConfiguration);
@@ -1372,7 +1380,6 @@ public class AsyncUnifiedTo {
         this.segment = new AsyncSegment(syncSDK.segment(), sdkConfiguration);
         this.source = new AsyncSource(syncSDK.source(), sdkConfiguration);
         this.clubs = new AsyncClubs(syncSDK.clubs(), sdkConfiguration);
-        this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.member = new AsyncMember(syncSDK.member(), sdkConfiguration);
         this.commerce = new AsyncCommerce(syncSDK.commerce(), sdkConfiguration);
         this.availability = new AsyncAvailability(syncSDK.availability(), sdkConfiguration);

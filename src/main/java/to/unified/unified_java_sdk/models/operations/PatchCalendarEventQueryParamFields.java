@@ -34,7 +34,8 @@ public enum PatchCalendarEventQueryParamFields {
     SEND_NOTIFICATIONS("send_notifications"),
     MATTER_ID("matter_id"),
     METADATA("metadata"),
-    RAW("raw");
+    RAW("raw"),
+    ROOM_IDS("room_ids");
 
     @JsonValue
     private final String value;

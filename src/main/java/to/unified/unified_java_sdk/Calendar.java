@@ -27,9 +27,15 @@ import to.unified.unified_java_sdk.models.operations.GetCalendarEventResponse;
 import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCalendarLinkResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingResponse;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRoomRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRoomRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCalendarRoomResponse;
 import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarResponse;
@@ -45,9 +51,15 @@ import to.unified.unified_java_sdk.models.operations.ListCalendarEventsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarLinksRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarLinksResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRoomsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRoomsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCalendarRoomsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsResponse;
@@ -94,13 +106,17 @@ import to.unified.unified_java_sdk.operations.CreateCalendarWebinar;
 import to.unified.unified_java_sdk.operations.GetCalendarCalendar;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarLink;
+import to.unified.unified_java_sdk.operations.GetCalendarLocation;
 import to.unified.unified_java_sdk.operations.GetCalendarRecording;
+import to.unified.unified_java_sdk.operations.GetCalendarRoom;
 import to.unified.unified_java_sdk.operations.GetCalendarWebinar;
 import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 import to.unified.unified_java_sdk.operations.ListCalendarCalendars;
 import to.unified.unified_java_sdk.operations.ListCalendarEvents;
 import to.unified.unified_java_sdk.operations.ListCalendarLinks;
+import to.unified.unified_java_sdk.operations.ListCalendarLocations;
 import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
+import to.unified.unified_java_sdk.operations.ListCalendarRooms;
 import to.unified.unified_java_sdk.operations.ListCalendarWebinars;
 import to.unified.unified_java_sdk.operations.PatchCalendarCalendar;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
@@ -333,6 +349,34 @@ public class Calendar {
     }
 
     /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCalendarLocationRequestBuilder getCalendarLocation() {
+        return new GetCalendarLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarLocationResponse getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        RequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
+              = new GetCalendarLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a recording
      * 
      * <p>Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list
@@ -357,6 +401,34 @@ public class Calendar {
     public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
               = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a room
+     * 
+     * <p>Retrieves a single CalendarRoom by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCalendarRoomRequestBuilder getCalendarRoom() {
+        return new GetCalendarRoomRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a room
+     * 
+     * <p>Retrieves a single CalendarRoom by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCalendarRoomResponse getCalendarRoom(@Nonnull GetCalendarRoomRequest request) {
+        RequestOperation<GetCalendarRoomRequest, GetCalendarRoomResponse> operation
+              = new GetCalendarRoom.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -533,6 +605,42 @@ public class Calendar {
     }
 
     /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCalendarLocationsRequestBuilder listCalendarLocations() {
+        return new ListCalendarLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarLocationsResponse listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        RequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
+              = new ListCalendarLocations.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all recordings
      * 
      * <p>Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging,
@@ -565,6 +673,42 @@ public class Calendar {
     public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
               = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all rooms
+     * 
+     * <p>Returns a list of CalendarRooms. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCalendarRoomsRequestBuilder listCalendarRooms() {
+        return new ListCalendarRoomsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all rooms
+     * 
+     * <p>Returns a list of CalendarRooms. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCalendarRoomsResponse listCalendarRooms(@Nonnull ListCalendarRoomsRequest request) {
+        RequestOperation<ListCalendarRoomsRequest, ListCalendarRoomsResponse> operation
+              = new ListCalendarRooms.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

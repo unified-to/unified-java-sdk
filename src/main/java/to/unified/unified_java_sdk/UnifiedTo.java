@@ -221,7 +221,13 @@ public class UnifiedTo {
     private final Link link;
 
 
+    private final Location location;
+
+
     private final Recording recording;
+
+
+    private final Room room;
 
 
     private final Webinar webinar;
@@ -246,9 +252,6 @@ public class UnifiedTo {
 
 
     private final Clubs clubs;
-
-
-    private final Location location;
 
 
     private final Member member;
@@ -983,8 +986,18 @@ public class UnifiedTo {
     }
 
 
+    public Location location() {
+        return location;
+    }
+
+
     public Recording recording() {
         return recording;
+    }
+
+
+    public Room room() {
+        return room;
     }
 
 
@@ -1025,11 +1038,6 @@ public class UnifiedTo {
 
     public Clubs clubs() {
         return clubs;
-    }
-
-
-    public Location location() {
-        return location;
     }
 
 
@@ -1949,7 +1957,9 @@ public class UnifiedTo {
         this.calendar = new Calendar(sdkConfiguration);
         this.busy = new Busy(sdkConfiguration);
         this.link = new Link(sdkConfiguration);
+        this.location = new Location(sdkConfiguration);
         this.recording = new Recording(sdkConfiguration);
+        this.room = new Room(sdkConfiguration);
         this.webinar = new Webinar(sdkConfiguration);
         this.cdp = new Cdp(sdkConfiguration);
         this.activation = new Activation(sdkConfiguration);
@@ -1958,7 +1968,6 @@ public class UnifiedTo {
         this.segment = new Segment(sdkConfiguration);
         this.source = new Source(sdkConfiguration);
         this.clubs = new Clubs(sdkConfiguration);
-        this.location = new Location(sdkConfiguration);
         this.member = new Member(sdkConfiguration);
         this.commerce = new Commerce(sdkConfiguration);
         this.availability = new Availability(sdkConfiguration);

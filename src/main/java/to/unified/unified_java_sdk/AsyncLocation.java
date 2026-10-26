@@ -9,10 +9,12 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareLocationsRequest;
@@ -27,6 +29,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocatio
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationRequestBuilder;
@@ -35,6 +39,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetHealthcareLocation
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsRequestBuilder;
@@ -57,10 +63,12 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationReq
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetCalendarLocation;
 import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetHealthcareLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListCalendarLocations;
 import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListHealthcareLocations;
@@ -147,6 +155,35 @@ public class AsyncLocation {
     public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetCalendarLocationRequestBuilder getCalendarLocation() {
+        return new GetCalendarLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * <p>Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetCalendarLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarLocationResponse> getCalendarLocation(@Nonnull GetCalendarLocationRequest request) {
+        AsyncRequestOperation<GetCalendarLocationRequest, GetCalendarLocationResponse> operation
+              = new GetCalendarLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -263,6 +300,43 @@ public class AsyncLocation {
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListCalendarLocationsRequestBuilder listCalendarLocations() {
+        return new ListCalendarLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * <p>Returns a list of CalendarLocations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCalendarLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarLocationsResponse> listCalendarLocations(@Nonnull ListCalendarLocationsRequest request) {
+        AsyncRequestOperation<ListCalendarLocationsRequest, ListCalendarLocationsResponse> operation
+              = new ListCalendarLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

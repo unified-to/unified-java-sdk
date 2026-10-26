@@ -276,6 +276,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CALENDAR_RECORDING_WRITE = new PropertyConnectionPermissions("calendar_recording_write");
     public static final PropertyConnectionPermissions CALENDAR_WEBINAR_READ = new PropertyConnectionPermissions("calendar_webinar_read");
     public static final PropertyConnectionPermissions CALENDAR_WEBINAR_WRITE = new PropertyConnectionPermissions("calendar_webinar_write");
+    public static final PropertyConnectionPermissions CALENDAR_ROOM_READ = new PropertyConnectionPermissions("calendar_room_read");
+    public static final PropertyConnectionPermissions CALENDAR_LOCATION_READ = new PropertyConnectionPermissions("calendar_location_read");
     public static final PropertyConnectionPermissions ENRICH_PERSON_READ = new PropertyConnectionPermissions("enrich_person_read");
     public static final PropertyConnectionPermissions ENRICH_COMPANY_READ = new PropertyConnectionPermissions("enrich_company_read");
     public static final PropertyConnectionPermissions ADS_AD_READ = new PropertyConnectionPermissions("ads_ad_read");
@@ -758,6 +760,8 @@ public class PropertyConnectionPermissions {
         map.put("calendar_recording_write", CALENDAR_RECORDING_WRITE);
         map.put("calendar_webinar_read", CALENDAR_WEBINAR_READ);
         map.put("calendar_webinar_write", CALENDAR_WEBINAR_WRITE);
+        map.put("calendar_room_read", CALENDAR_ROOM_READ);
+        map.put("calendar_location_read", CALENDAR_LOCATION_READ);
         map.put("enrich_person_read", ENRICH_PERSON_READ);
         map.put("enrich_company_read", ENRICH_COMPANY_READ);
         map.put("ads_ad_read", ADS_AD_READ);
@@ -1172,6 +1176,8 @@ public class PropertyConnectionPermissions {
         map.put("calendar_recording_write", PropertyConnectionPermissionsEnum.CALENDAR_RECORDING_WRITE);
         map.put("calendar_webinar_read", PropertyConnectionPermissionsEnum.CALENDAR_WEBINAR_READ);
         map.put("calendar_webinar_write", PropertyConnectionPermissionsEnum.CALENDAR_WEBINAR_WRITE);
+        map.put("calendar_room_read", PropertyConnectionPermissionsEnum.CALENDAR_ROOM_READ);
+        map.put("calendar_location_read", PropertyConnectionPermissionsEnum.CALENDAR_LOCATION_READ);
         map.put("enrich_person_read", PropertyConnectionPermissionsEnum.ENRICH_PERSON_READ);
         map.put("enrich_company_read", PropertyConnectionPermissionsEnum.ENRICH_COMPANY_READ);
         map.put("ads_ad_read", PropertyConnectionPermissionsEnum.ADS_AD_READ);
@@ -1587,6 +1593,8 @@ public class PropertyConnectionPermissions {
         CALENDAR_RECORDING_WRITE("calendar_recording_write"),
         CALENDAR_WEBINAR_READ("calendar_webinar_read"),
         CALENDAR_WEBINAR_WRITE("calendar_webinar_write"),
+        CALENDAR_ROOM_READ("calendar_room_read"),
+        CALENDAR_LOCATION_READ("calendar_location_read"),
         ENRICH_PERSON_READ("enrich_person_read"),
         ENRICH_COMPANY_READ("enrich_company_read"),
         ADS_AD_READ("ads_ad_read"),

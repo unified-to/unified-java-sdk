@@ -163,6 +163,8 @@ public class WebhookObjectType {
     public static final WebhookObjectType CALENDAR_LINK = new WebhookObjectType("calendar_link");
     public static final WebhookObjectType CALENDAR_RECORDING = new WebhookObjectType("calendar_recording");
     public static final WebhookObjectType CALENDAR_WEBINAR = new WebhookObjectType("calendar_webinar");
+    public static final WebhookObjectType CALENDAR_ROOM = new WebhookObjectType("calendar_room");
+    public static final WebhookObjectType CALENDAR_LOCATION = new WebhookObjectType("calendar_location");
     public static final WebhookObjectType ADS_ORGANIZATION = new WebhookObjectType("ads_organization");
     public static final WebhookObjectType ADS_AD = new WebhookObjectType("ads_ad");
     public static final WebhookObjectType ADS_CAMPAIGN = new WebhookObjectType("ads_campaign");
@@ -455,6 +457,8 @@ public class WebhookObjectType {
         map.put("calendar_link", CALENDAR_LINK);
         map.put("calendar_recording", CALENDAR_RECORDING);
         map.put("calendar_webinar", CALENDAR_WEBINAR);
+        map.put("calendar_room", CALENDAR_ROOM);
+        map.put("calendar_location", CALENDAR_LOCATION);
         map.put("ads_organization", ADS_ORGANIZATION);
         map.put("ads_ad", ADS_AD);
         map.put("ads_campaign", ADS_CAMPAIGN);
@@ -679,6 +683,8 @@ public class WebhookObjectType {
         map.put("calendar_link", WebhookObjectTypeEnum.CALENDAR_LINK);
         map.put("calendar_recording", WebhookObjectTypeEnum.CALENDAR_RECORDING);
         map.put("calendar_webinar", WebhookObjectTypeEnum.CALENDAR_WEBINAR);
+        map.put("calendar_room", WebhookObjectTypeEnum.CALENDAR_ROOM);
+        map.put("calendar_location", WebhookObjectTypeEnum.CALENDAR_LOCATION);
         map.put("ads_organization", WebhookObjectTypeEnum.ADS_ORGANIZATION);
         map.put("ads_ad", WebhookObjectTypeEnum.ADS_AD);
         map.put("ads_campaign", WebhookObjectTypeEnum.ADS_CAMPAIGN);
@@ -904,6 +910,8 @@ public class WebhookObjectType {
         CALENDAR_LINK("calendar_link"),
         CALENDAR_RECORDING("calendar_recording"),
         CALENDAR_WEBINAR("calendar_webinar"),
+        CALENDAR_ROOM("calendar_room"),
+        CALENDAR_LOCATION("calendar_location"),
         ADS_ORGANIZATION("ads_organization"),
         ADS_AD("ads_ad"),
         ADS_CAMPAIGN("ads_campaign"),

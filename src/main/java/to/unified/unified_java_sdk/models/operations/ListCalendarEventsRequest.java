@@ -79,6 +79,12 @@ public class ListCalendarEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private String raw;
 
+    /**
+     * The room ID to filter by. Returns the events that booked this room.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=room_id")
+    private String roomId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
@@ -109,6 +115,7 @@ public class ListCalendarEventsRequest {
             @Nullable String order,
             @Nullable String query,
             @Nullable String raw,
+            @Nullable String roomId,
             @Nullable String sort,
             @Nullable String startGte,
             @Nullable String updatedGte) {
@@ -124,6 +131,7 @@ public class ListCalendarEventsRequest {
         this.order = order;
         this.query = query;
         this.raw = raw;
+        this.roomId = roomId;
         this.sort = sort;
         this.startGte = startGte;
         this.updatedGte = updatedGte;
@@ -135,7 +143,7 @@ public class ListCalendarEventsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -206,6 +214,13 @@ public class ListCalendarEventsRequest {
      */
     public Optional<String> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    /**
+     * The room ID to filter by. Returns the events that booked this room.
+     */
+    public Optional<String> roomId() {
+        return Optional.ofNullable(this.roomId);
     }
 
     public Optional<String> sort() {
@@ -324,6 +339,15 @@ public class ListCalendarEventsRequest {
     }
 
 
+    /**
+     * The room ID to filter by. Returns the events that booked this room.
+     */
+    public ListCalendarEventsRequest withRoomId(@Nullable String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+
+
     public ListCalendarEventsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
@@ -370,6 +394,7 @@ public class ListCalendarEventsRequest {
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.roomId, other.roomId) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
@@ -381,8 +406,8 @@ public class ListCalendarEventsRequest {
             calendarId, connectionId, endLt,
             expand, fields, limit,
             matterId, offset, order,
-            query, raw, sort,
-            startGte, updatedGte);
+            query, raw, roomId,
+            sort, startGte, updatedGte);
     }
     
     @Override
@@ -399,6 +424,7 @@ public class ListCalendarEventsRequest {
                 "order", order,
                 "query", query,
                 "raw", raw,
+                "roomId", roomId,
                 "sort", sort,
                 "startGte", startGte,
                 "updatedGte", updatedGte);
@@ -428,6 +454,8 @@ public class ListCalendarEventsRequest {
         private String query;
 
         private String raw;
+
+        private String roomId;
 
         private String sort;
 
@@ -520,6 +548,14 @@ public class ListCalendarEventsRequest {
             return this;
         }
 
+        /**
+         * The room ID to filter by. Returns the events that booked this room.
+         */
+        public Builder roomId(@Nullable String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+
         public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
@@ -547,8 +583,8 @@ public class ListCalendarEventsRequest {
                 calendarId, connectionId, endLt,
                 expand, fields, limit,
                 matterId, offset, order,
-                query, raw, sort,
-                startGte, updatedGte);
+                query, raw, roomId,
+                sort, startGte, updatedGte);
         }
 
     }

@@ -67,6 +67,12 @@ public class ListCalendarBusiesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private String raw;
 
+    /**
+     * The room ID to get availability for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=room_id")
+    private String roomId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
@@ -101,6 +107,7 @@ public class ListCalendarBusiesRequest {
             @Nullable String order,
             @Nullable String query,
             @Nullable String raw,
+            @Nullable String roomId,
             @Nullable String sort,
             @Nullable String startGte,
             @Nullable String updatedGte,
@@ -115,6 +122,7 @@ public class ListCalendarBusiesRequest {
         this.order = order;
         this.query = query;
         this.raw = raw;
+        this.roomId = roomId;
         this.sort = sort;
         this.startGte = startGte;
         this.updatedGte = updatedGte;
@@ -127,7 +135,7 @@ public class ListCalendarBusiesRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -185,6 +193,13 @@ public class ListCalendarBusiesRequest {
      */
     public Optional<String> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    /**
+     * The room ID to get availability for.
+     */
+    public Optional<String> roomId() {
+        return Optional.ofNullable(this.roomId);
     }
 
     public Optional<String> sort() {
@@ -293,6 +308,15 @@ public class ListCalendarBusiesRequest {
     }
 
 
+    /**
+     * The room ID to get availability for.
+     */
+    public ListCalendarBusiesRequest withRoomId(@Nullable String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+
+
     public ListCalendarBusiesRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
@@ -346,6 +370,7 @@ public class ListCalendarBusiesRequest {
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.roomId, other.roomId) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
@@ -358,8 +383,8 @@ public class ListCalendarBusiesRequest {
             calendarId, connectionId, endLt,
             fields, limit, offset,
             order, query, raw,
-            sort, startGte, updatedGte,
-            userId);
+            roomId, sort, startGte,
+            updatedGte, userId);
     }
     
     @Override
@@ -374,6 +399,7 @@ public class ListCalendarBusiesRequest {
                 "order", order,
                 "query", query,
                 "raw", raw,
+                "roomId", roomId,
                 "sort", sort,
                 "startGte", startGte,
                 "updatedGte", updatedGte,
@@ -400,6 +426,8 @@ public class ListCalendarBusiesRequest {
         private String query;
 
         private String raw;
+
+        private String roomId;
 
         private String sort;
 
@@ -479,6 +507,14 @@ public class ListCalendarBusiesRequest {
             return this;
         }
 
+        /**
+         * The room ID to get availability for.
+         */
+        public Builder roomId(@Nullable String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+
         public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
@@ -514,8 +550,8 @@ public class ListCalendarBusiesRequest {
                 calendarId, connectionId, endLt,
                 fields, limit, offset,
                 order, query, raw,
-                sort, startGte, updatedGte,
-                userId);
+                roomId, sort, startGte,
+                updatedGte, userId);
         }
 
     }

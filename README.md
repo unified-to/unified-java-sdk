@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.3'
+implementation 'to.unified:unified-java-sdk:0.50.4'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.3</version>
+    <version>0.50.4</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -674,13 +674,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
+* [getCalendarLocation](docs/sdks/calendar/README.md#getcalendarlocation) - Retrieve a location
 * [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [getCalendarRoom](docs/sdks/calendar/README.md#getcalendarroom) - Retrieve a room
 * [getCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
 * [listCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
+* [listCalendarLocations](docs/sdks/calendar/README.md#listcalendarlocations) - List all locations
 * [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [listCalendarRooms](docs/sdks/calendar/README.md#listcalendarrooms) - List all rooms
 * [listCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
@@ -1865,10 +1869,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
+* [getCalendarLocation](docs/sdks/location/README.md#getcalendarlocation) - Retrieve a location
 * [getClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [getCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
 * [getHealthcareLocation](docs/sdks/location/README.md#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
+* [listCalendarLocations](docs/sdks/location/README.md#listcalendarlocations) - List all locations
 * [listClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [listCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
 * [listHealthcareLocations](docs/sdks/location/README.md#listhealthcarelocations) - List all locations
@@ -2386,6 +2392,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
 * [updateSocialReview](docs/sdks/review/README.md#updatesocialreview) - Update a review
+
+### [Room](docs/sdks/room/README.md)
+
+* [getCalendarRoom](docs/sdks/room/README.md#getcalendarroom) - Retrieve a room
+* [listCalendarRooms](docs/sdks/room/README.md#listcalendarrooms) - List all rooms
 
 ### [Saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2954,7 +2965,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2966,7 +2977,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3014,7 +3025,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3026,7 +3037,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3093,7 +3104,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                        .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3105,7 +3116,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3260,7 +3271,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("0889c647-7661-49c1-8852-0f2e35bf650c")
+                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3272,7 +3283,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-07T21:14:36.262Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

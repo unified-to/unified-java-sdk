@@ -6,10 +6,12 @@
 
 * [createCommerceLocation](#createcommercelocation) - Create a location
 * [createHrisLocation](#createhrislocation) - Create a location
+* [getCalendarLocation](#getcalendarlocation) - Retrieve a location
 * [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
 * [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listCalendarLocations](#listcalendarlocations) - List all locations
 * [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
 * [listHealthcareLocations](#listhealthcarelocations) - List all locations
@@ -63,7 +65,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("beb278b6-3ef8-4fd4-883c-24e3802e7c81")
+                    .id("0932908f-4406-4ecb-b39d-ca225951a7d6")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -75,10 +77,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("035e50e9-d784-418f-b366-446ae60d3c2f")
+                            .id("4767ee1a-7409-444a-b698-81c86d7900f4")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("18335524-42ce-4ada-af27-9ba042a6b808")
+                                    .id("a14481ad-ee54-4601-8c85-0dc4e15e1b33")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -100,7 +102,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-22T01:49:06.455Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T10:30:30.935Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -175,7 +177,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("cddf422c-c90d-4fe1-aa44-4a7a5fdc6d05")
+                    .id("ccbf89ee-be5f-40d8-8d98-5149ca960749")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -195,7 +197,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-22T12:22:18.040Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T21:37:05.478Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -220,6 +222,64 @@ public class Application {
 ### Response
 
 **[CreateHrisLocationResponse](../../models/operations/CreateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCalendarLocation
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCalendarLocationRequest req = GetCalendarLocationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCalendarLocationResponse res = sdk.location().getCalendarLocation()
+                .request(req)
+                .call();
+
+        if (res.calendarLocation().isPresent()) {
+            System.out.println(res.calendarLocation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [GetCalendarLocationRequest](../../models/operations/GetCalendarLocationRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[GetCalendarLocationResponse](../../models/operations/GetCalendarLocationResponse.md)**
 
 ### Errors
 
@@ -452,6 +512,63 @@ public class Application {
 ### Response
 
 **[GetHrisLocationResponse](../../models/operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listCalendarLocations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCalendarLocationsRequest req = ListCalendarLocationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCalendarLocationsResponse res = sdk.location().listCalendarLocations()
+                .request(req)
+                .call();
+
+        if (res.calendarLocations().isPresent()) {
+            System.out.println(res.calendarLocations().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListCalendarLocationsRequest](../../models/operations/ListCalendarLocationsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListCalendarLocationsResponse](../../models/operations/ListCalendarLocationsResponse.md)**
 
 ### Errors
 
@@ -729,7 +846,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("e8a8631f-4c03-406e-83ec-d56c6f0b5b70")
+                    .id("14e2db8a-d1c6-423b-a7ae-a61e893ce0ea")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -741,10 +858,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("02a599b8-5447-46e3-b286-08bcba368cec")
+                            .id("78dce793-0d85-4fa0-9917-140234aa4676")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("d9da09a4-e6b5-4b35-8bc5-f2e91338a28c")
+                                    .id("0d26a923-6ecc-48f3-b455-85084c9163b0")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -766,7 +883,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-22T01:49:06.464Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T10:30:30.952Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -842,7 +959,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("25aee3d3-dca7-4b2b-9122-44db7abc6987")
+                    .id("f63c9861-ec5e-44cc-9015-d699551887b9")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -862,7 +979,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-22T12:22:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T21:37:05.488Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1049,7 +1166,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("e8a8631f-4c03-406e-83ec-d56c6f0b5b70")
+                    .id("14e2db8a-d1c6-423b-a7ae-a61e893ce0ea")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -1061,10 +1178,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("02a599b8-5447-46e3-b286-08bcba368cec")
+                            .id("78dce793-0d85-4fa0-9917-140234aa4676")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("d9da09a4-e6b5-4b35-8bc5-f2e91338a28c")
+                                    .id("0d26a923-6ecc-48f3-b455-85084c9163b0")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -1086,7 +1203,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-22T01:49:06.464Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-22T10:30:30.952Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -1162,7 +1279,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("25aee3d3-dca7-4b2b-9122-44db7abc6987")
+                    .id("f63c9861-ec5e-44cc-9015-d699551887b9")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -1182,7 +1299,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-22T12:22:18.047Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T21:37:05.488Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
