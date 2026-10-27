@@ -29,7 +29,7 @@ public class CrmContact {
     private PropertyCrmContactAddress address;
 
     /**
-     * The companyorganization name  of the contact
+     * The company/organization name  of the contact
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
@@ -68,7 +68,9 @@ public class CrmContact {
     @JsonProperty("emails")
     private List<CrmEmail> emails;
 
-
+    /**
+     * The contact's first (given) name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     private String firstName;
@@ -85,7 +87,9 @@ public class CrmContact {
     @JsonProperty("image_url")
     private String imageUrl;
 
-
+    /**
+     * The contact's last (family) name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private String lastName;
@@ -201,7 +205,7 @@ public class CrmContact {
     }
 
     /**
-     * The companyorganization name  of the contact
+     * The company/organization name  of the contact
      */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
@@ -239,6 +243,9 @@ public class CrmContact {
         return Optional.ofNullable(this.emails);
     }
 
+    /**
+     * The contact's first (given) name
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -254,6 +261,9 @@ public class CrmContact {
         return Optional.ofNullable(this.imageUrl);
     }
 
+    /**
+     * The contact's last (family) name
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -323,7 +333,7 @@ public class CrmContact {
 
 
     /**
-     * The companyorganization name  of the contact
+     * The company/organization name  of the contact
      */
     public CrmContact withCompany(@Nullable String company) {
         this.company = company;
@@ -373,6 +383,9 @@ public class CrmContact {
     }
 
 
+    /**
+     * The contact's first (given) name
+     */
     public CrmContact withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
@@ -394,6 +407,9 @@ public class CrmContact {
     }
 
 
+    /**
+     * The contact's last (family) name
+     */
     public CrmContact withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
@@ -587,7 +603,7 @@ public class CrmContact {
         }
 
         /**
-         * The companyorganization name  of the contact
+         * The company/organization name  of the contact
          */
         public Builder company(@Nullable String company) {
             this.company = company;
@@ -631,6 +647,9 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The contact's first (given) name
+         */
         public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
@@ -649,6 +668,9 @@ public class CrmContact {
             return this;
         }
 
+        /**
+         * The contact's last (family) name
+         */
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;

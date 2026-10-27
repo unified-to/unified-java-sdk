@@ -46,7 +46,7 @@ public class EnrichPerson {
     private String birthdate;
 
     /**
-     * The companyorganization name  of the person
+     * The company/organization name  of the person
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
@@ -290,7 +290,7 @@ public class EnrichPerson {
     }
 
     /**
-     * The companyorganization name  of the person
+     * The company/organization name  of the person
      */
     public Optional<String> company() {
         return Optional.ofNullable(this.company);
@@ -474,7 +474,7 @@ public class EnrichPerson {
 
 
     /**
-     * The companyorganization name  of the person
+     * The company/organization name  of the person
      */
     public EnrichPerson withCompany(@Nullable String company) {
         this.company = company;
@@ -838,7 +838,7 @@ public class EnrichPerson {
         }
 
         /**
-         * The companyorganization name  of the person
+         * The company/organization name  of the person
          */
         public Builder company(@Nullable String company) {
             this.company = company;

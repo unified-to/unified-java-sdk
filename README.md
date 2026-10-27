@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.4'
+implementation 'to.unified:unified-java-sdk:0.50.5'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.4</version>
+    <version>0.50.5</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                    .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                    .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2836,6 +2836,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
+* [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
@@ -2843,6 +2844,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
+* [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
 ### [Usage](docs/sdks/usage/README.md)
@@ -2902,9 +2904,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedWebhook](docs/sdks/webhook/README.md#patchunifiedwebhook) - Update webhook subscription
+* [patchUnifiedWebhookResume](docs/sdks/webhook/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/webhook/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedWebhook](docs/sdks/webhook/README.md#updateunifiedwebhook) - Update webhook subscription
+* [updateUnifiedWebhookResume](docs/sdks/webhook/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
 ### [Webinar](docs/sdks/webinar/README.md)
@@ -2965,7 +2969,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                    .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2977,7 +2981,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3025,7 +3029,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                    .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3037,7 +3041,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3104,7 +3108,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                        .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3116,7 +3120,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3271,7 +3275,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c64d32d9-f338-4fde-a7b9-63526fb3c272")
+                    .id("0aba55b9-4485-4420-bf95-827ebdb33a38")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3283,7 +3287,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T03:40:04.119Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-08T09:48:14.634Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

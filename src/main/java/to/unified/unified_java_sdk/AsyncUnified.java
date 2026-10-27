@@ -29,6 +29,7 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersR
 import to.unified.unified_java_sdk.models.operations.ListUnifiedWebhooksRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookResumeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedEnvironmentRequest;
@@ -36,6 +37,7 @@ import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanager
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedConnectionRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookResumeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWebhookTriggerRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionReauthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedConnectionReauthResponse;
@@ -85,6 +87,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedConnectio
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookResumeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookResumeResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookTriggerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedConnectionRequestBuilder;
@@ -99,6 +103,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnecti
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookResumeRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookResumeResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookTriggerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedWebhookTriggerResponse;
 import to.unified.unified_java_sdk.models.shared.Connection;
@@ -127,6 +133,7 @@ import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
 import to.unified.unified_java_sdk.operations.ListUnifiedWebhooks;
 import to.unified.unified_java_sdk.operations.PatchUnifiedConnection;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.PatchUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedConnection;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedEnvironment;
@@ -134,6 +141,7 @@ import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedWebhook;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedConnection;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookResume;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhookTrigger;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -745,6 +753,57 @@ public class AsyncUnified {
 
 
     /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @return The async call builder
+     */
+    public PatchUnifiedWebhookResumeRequestBuilder patchUnifiedWebhookResume() {
+        return new PatchUnifiedWebhookResumeRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedWebhookResumeResponse> patchUnifiedWebhookResume(@Nonnull PatchUnifiedWebhookResumeRequest request) {
+        AsyncRequestOperation<PatchUnifiedWebhookResumeRequest, PatchUnifiedWebhookResumeResponse> operation
+              = new PatchUnifiedWebhookResume.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Trigger webhook
      * 
      * @return The async call builder
@@ -900,6 +959,57 @@ public class AsyncUnified {
     public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
               = new UpdateUnifiedWebhook.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @return The async call builder
+     */
+    public UpdateUnifiedWebhookResumeRequestBuilder updateUnifiedWebhookResume() {
+        return new UpdateUnifiedWebhookResumeRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Resume an unhealthy webhook subscription
+     * 
+     * <p>Sets is_healthy back to true and restarts the webhook. Fix the cause first (hook_url, connection
+     * auth); the connection must be healthy. Virtual: continues from where it stopped.
+     * 
+     * <p>A webhook that went unhealthy mid-initial-sync before resume was available restarts its initial
+     * sync, so deleting and recreating it is safer. Native: re-subscribes if the provider subscription is
+     * missing or expired. Events received while the webhook was unhealthy are not re-sent.
+     * 
+     * <p>Webhook sync (beta): continues from the stored sync token. Page cursors are not stored yet, so a
+     * resume can re-send some records. Virtual and initial-sync webhooks that have been unhealthy for more
+     * than 7 days cannot be resumed, because resuming would re-send every change since then; delete and
+     * recreate them instead.
+     * 
+     * <p>MCP Events subscriptions cannot be resumed; they are managed by their MCP client.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateUnifiedWebhookResumeResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedWebhookResumeResponse> updateUnifiedWebhookResume(@Nonnull UpdateUnifiedWebhookResumeRequest request) {
+        AsyncRequestOperation<UpdateUnifiedWebhookResumeRequest, UpdateUnifiedWebhookResumeResponse> operation
+              = new UpdateUnifiedWebhookResume.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
