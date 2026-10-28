@@ -45,7 +45,8 @@ public class GetUnifiedIntegrationLoginRequest {
     /**
      * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
      * parameter will be appended to the URL which will contain a name and email of the user who just
-     * signed-in.
+     * signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains
+     * configured, this host must be on that list.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success_redirect")
     private String successRedirect;
@@ -117,7 +118,8 @@ public class GetUnifiedIntegrationLoginRequest {
     /**
      * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
      * parameter will be appended to the URL which will contain a name and email of the user who just
-     * signed-in.
+     * signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains
+     * configured, this host must be on that list.
      */
     public Optional<String> successRedirect() {
         return Optional.ofNullable(this.successRedirect);
@@ -178,7 +180,8 @@ public class GetUnifiedIntegrationLoginRequest {
     /**
      * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
      * parameter will be appended to the URL which will contain a name and email of the user who just
-     * signed-in.
+     * signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains
+     * configured, this host must be on that list.
      */
     public GetUnifiedIntegrationLoginRequest withSuccessRedirect(@Nullable String successRedirect) {
         this.successRedirect = successRedirect;
@@ -293,7 +296,8 @@ public class GetUnifiedIntegrationLoginRequest {
         /**
          * The URL where you want the user to be redirect to after a successful authentication/sign-in. A "jwt"
          * parameter will be appended to the URL which will contain a name and email of the user who just
-         * signed-in.
+         * signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains
+         * configured, this host must be on that list.
          */
         public Builder successRedirect(@Nullable String successRedirect) {
             this.successRedirect = successRedirect;
