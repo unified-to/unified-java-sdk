@@ -47,7 +47,7 @@ afterEvaluate {
                     description = config.description
                     url = 'https://github.com/unified-to/unified-java-sdk'
                     scm {
-                        url = 'github.com/unified-to/unified-java-sdk'
+                        url = 'https://github.com/unified-to/unified-java-sdk'
                         connection = 'scm:git:ssh://git@github.com/unified-to/unified-java-sdk.git'
                     }
                     licenses {
