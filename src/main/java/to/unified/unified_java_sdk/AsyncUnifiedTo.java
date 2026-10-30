@@ -359,6 +359,14 @@ public class AsyncUnifiedTo {
 
     private final AsyncFeedback feedback;
 
+    private final AsyncConversation conversation;
+
+    private final AsyncGuest guest;
+
+    private final AsyncListing listing;
+
+    private final AsyncUnittype unittype;
+
     private final AsyncRepo repo;
 
     private final AsyncBranch branch;
@@ -1135,6 +1143,22 @@ public class AsyncUnifiedTo {
         return feedback;
     }
 
+    public AsyncConversation conversation() {
+        return conversation;
+    }
+
+    public AsyncGuest guest() {
+        return guest;
+    }
+
+    public AsyncListing listing() {
+        return listing;
+    }
+
+    public AsyncUnittype unittype() {
+        return unittype;
+    }
+
     public AsyncRepo repo() {
         return repo;
     }
@@ -1482,6 +1506,10 @@ public class AsyncUnifiedTo {
         this.performance = new AsyncPerformance(syncSDK.performance(), sdkConfiguration);
         this.cycle = new AsyncCycle(syncSDK.cycle(), sdkConfiguration);
         this.feedback = new AsyncFeedback(syncSDK.feedback(), sdkConfiguration);
+        this.conversation = new AsyncConversation(syncSDK.conversation(), sdkConfiguration);
+        this.guest = new AsyncGuest(syncSDK.guest(), sdkConfiguration);
+        this.listing = new AsyncListing(syncSDK.listing(), sdkConfiguration);
+        this.unittype = new AsyncUnittype(syncSDK.unittype(), sdkConfiguration);
         this.repo = new AsyncRepo(syncSDK.repo(), sdkConfiguration);
         this.branch = new AsyncBranch(syncSDK.branch(), sdkConfiguration);
         this.commit = new AsyncCommit(syncSDK.commit(), sdkConfiguration);

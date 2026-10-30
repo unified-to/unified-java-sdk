@@ -9,7 +9,11 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesResponse;
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
+import to.unified.unified_java_sdk.operations.ListPropertyAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -65,6 +69,42 @@ public class Availability {
     public ListCommerceAvailabilitiesResponse listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
         RequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
               = new ListCommerceAvailabilities.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPropertyAvailabilitiesRequestBuilder listPropertyAvailabilities() {
+        return new ListPropertyAvailabilitiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyAvailabilitiesResponse listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        RequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
+              = new ListPropertyAvailabilities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

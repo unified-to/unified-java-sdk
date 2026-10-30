@@ -8,29 +8,49 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReservationsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReservationsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyReservationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyReservationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyReservationResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReservation;
+import to.unified.unified_java_sdk.operations.CreatePropertyReservation;
 import to.unified.unified_java_sdk.operations.GetCommerceReservation;
+import to.unified.unified_java_sdk.operations.GetPropertyReservation;
 import to.unified.unified_java_sdk.operations.ListCommerceReservations;
+import to.unified.unified_java_sdk.operations.ListPropertyReservations;
 import to.unified.unified_java_sdk.operations.PatchCommerceReservation;
+import to.unified.unified_java_sdk.operations.PatchPropertyReservation;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReservation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
+import to.unified.unified_java_sdk.operations.UpdatePropertyReservation;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -84,6 +104,35 @@ public class AsyncReservation {
 
 
     /**
+     * Create a reservation
+     * 
+     * <p>Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyReservation.
+     * 
+     * @return The async call builder
+     */
+    public CreatePropertyReservationRequestBuilder createPropertyReservation() {
+        return new CreatePropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a reservation
+     * 
+     * <p>Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body;
+     * they are mapped to the provider's API. Returns the created PropertyReservation.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyReservationResponse> createPropertyReservation(@Nonnull CreatePropertyReservationRequest request) {
+        AsyncRequestOperation<CreatePropertyReservationRequest, CreatePropertyReservationResponse> operation
+              = new CreatePropertyReservation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a reservation
      * 
      * <p>Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list
@@ -107,6 +156,35 @@ public class AsyncReservation {
     public CompletableFuture<GetCommerceReservationResponse> getCommerceReservation(@Nonnull GetCommerceReservationRequest request) {
         AsyncRequestOperation<GetCommerceReservationRequest, GetCommerceReservationResponse> operation
               = new GetCommerceReservation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPropertyReservationRequestBuilder getPropertyReservation() {
+        return new GetPropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a reservation
+     * 
+     * <p>Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyReservationResponse> getPropertyReservation(@Nonnull GetPropertyReservationRequest request) {
+        AsyncRequestOperation<GetPropertyReservationRequest, GetPropertyReservationResponse> operation
+              = new GetPropertyReservation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -150,6 +228,43 @@ public class AsyncReservation {
 
 
     /**
+     * List all reservations
+     * 
+     * <p>Returns a list of PropertyReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPropertyReservationsRequestBuilder listPropertyReservations() {
+        return new ListPropertyReservationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reservations
+     * 
+     * <p>Returns a list of PropertyReservations. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPropertyReservationsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyReservationsResponse> listPropertyReservations(@Nonnull ListPropertyReservationsRequest request) {
+        AsyncRequestOperation<ListPropertyReservationsRequest, ListPropertyReservationsResponse> operation
+              = new ListPropertyReservations.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a reservation
      * 
      * <p>Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields
@@ -173,6 +288,35 @@ public class AsyncReservation {
     public CompletableFuture<PatchCommerceReservationResponse> patchCommerceReservation(@Nonnull PatchCommerceReservationRequest request) {
         AsyncRequestOperation<PatchCommerceReservationRequest, PatchCommerceReservationResponse> operation
               = new PatchCommerceReservation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchPropertyReservationRequestBuilder patchPropertyReservation() {
+        return new PatchPropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchPropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyReservationResponse> patchPropertyReservation(@Nonnull PatchPropertyReservationRequest request) {
+        AsyncRequestOperation<PatchPropertyReservationRequest, PatchPropertyReservationResponse> operation
+              = new PatchPropertyReservation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -229,6 +373,35 @@ public class AsyncReservation {
     public CompletableFuture<UpdateCommerceReservationResponse> updateCommerceReservation(@Nonnull UpdateCommerceReservationRequest request) {
         AsyncRequestOperation<UpdateCommerceReservationRequest, UpdateCommerceReservationResponse> operation
               = new UpdateCommerceReservation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdatePropertyReservationRequestBuilder updatePropertyReservation() {
+        return new UpdatePropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a reservation
+     * 
+     * <p>Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields
+     * to change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdatePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyReservationResponse> updatePropertyReservation(@Nonnull UpdatePropertyReservationRequest request) {
+        AsyncRequestOperation<UpdatePropertyReservationRequest, UpdatePropertyReservationResponse> operation
+              = new UpdatePropertyReservation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

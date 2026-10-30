@@ -51,3 +51,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `LEGAL`        | legal          |
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
+| `PROPERTY`     | property       |

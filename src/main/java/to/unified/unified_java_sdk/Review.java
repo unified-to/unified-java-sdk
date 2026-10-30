@@ -15,6 +15,9 @@ import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewResponse;
@@ -24,12 +27,18 @@ import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewResponse;
@@ -39,20 +48,27 @@ import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRespons
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
 import to.unified.unified_java_sdk.operations.GetPerformanceReview;
+import to.unified.unified_java_sdk.operations.GetPropertyReview;
 import to.unified.unified_java_sdk.operations.GetSocialReview;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
 import to.unified.unified_java_sdk.operations.ListPerformanceReviews;
+import to.unified.unified_java_sdk.operations.ListPropertyReviews;
 import to.unified.unified_java_sdk.operations.ListSocialReviews;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.PatchPropertyReview;
 import to.unified.unified_java_sdk.operations.PatchSocialReview;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -163,6 +179,34 @@ public class Review {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPropertyReviewRequestBuilder getPropertyReview() {
+        return new GetPropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPropertyReviewResponse getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        RequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
+              = new GetPropertyReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a review
+     * 
      * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -263,6 +307,42 @@ public class Review {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPropertyReviewsRequestBuilder listPropertyReviews() {
+        return new ListPropertyReviewsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPropertyReviewsResponse listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        RequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
+              = new ListPropertyReviews.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reviews
+     * 
      * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
      * page through them with `limit` and `offset` (the default and maximum page size depend on the
      * integration). Use `fields` to return only the fields you need and reduce the response size.
@@ -321,6 +401,34 @@ public class Review {
     public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchPropertyReviewRequestBuilder patchPropertyReview() {
+        return new PatchPropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPropertyReviewResponse patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        RequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
+              = new PatchPropertyReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -403,6 +511,34 @@ public class Review {
     public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdatePropertyReviewRequestBuilder updatePropertyReview() {
+        return new UpdatePropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePropertyReviewResponse updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        RequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
+              = new UpdatePropertyReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

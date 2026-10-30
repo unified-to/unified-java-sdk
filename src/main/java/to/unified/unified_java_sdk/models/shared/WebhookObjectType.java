@@ -246,6 +246,14 @@ public class WebhookObjectType {
     public static final WebhookObjectType HEALTHCARE_REPORT = new WebhookObjectType("healthcare_report");
     public static final WebhookObjectType HEALTHCARE_CAREPLAN = new WebhookObjectType("healthcare_careplan");
     public static final WebhookObjectType HEALTHCARE_GOAL = new WebhookObjectType("healthcare_goal");
+    public static final WebhookObjectType PROPERTY_LISTING = new WebhookObjectType("property_listing");
+    public static final WebhookObjectType PROPERTY_UNITTYPE = new WebhookObjectType("property_unittype");
+    public static final WebhookObjectType PROPERTY_GUEST = new WebhookObjectType("property_guest");
+    public static final WebhookObjectType PROPERTY_RESERVATION = new WebhookObjectType("property_reservation");
+    public static final WebhookObjectType PROPERTY_AVAILABILITY = new WebhookObjectType("property_availability");
+    public static final WebhookObjectType PROPERTY_QUOTE = new WebhookObjectType("property_quote");
+    public static final WebhookObjectType PROPERTY_REVIEW = new WebhookObjectType("property_review");
+    public static final WebhookObjectType PROPERTY_CONVERSATION = new WebhookObjectType("property_conversation");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -540,6 +548,14 @@ public class WebhookObjectType {
         map.put("healthcare_report", HEALTHCARE_REPORT);
         map.put("healthcare_careplan", HEALTHCARE_CAREPLAN);
         map.put("healthcare_goal", HEALTHCARE_GOAL);
+        map.put("property_listing", PROPERTY_LISTING);
+        map.put("property_unittype", PROPERTY_UNITTYPE);
+        map.put("property_guest", PROPERTY_GUEST);
+        map.put("property_reservation", PROPERTY_RESERVATION);
+        map.put("property_availability", PROPERTY_AVAILABILITY);
+        map.put("property_quote", PROPERTY_QUOTE);
+        map.put("property_review", PROPERTY_REVIEW);
+        map.put("property_conversation", PROPERTY_CONVERSATION);
         return map;
     }
 
@@ -766,6 +782,14 @@ public class WebhookObjectType {
         map.put("healthcare_report", WebhookObjectTypeEnum.HEALTHCARE_REPORT);
         map.put("healthcare_careplan", WebhookObjectTypeEnum.HEALTHCARE_CAREPLAN);
         map.put("healthcare_goal", WebhookObjectTypeEnum.HEALTHCARE_GOAL);
+        map.put("property_listing", WebhookObjectTypeEnum.PROPERTY_LISTING);
+        map.put("property_unittype", WebhookObjectTypeEnum.PROPERTY_UNITTYPE);
+        map.put("property_guest", WebhookObjectTypeEnum.PROPERTY_GUEST);
+        map.put("property_reservation", WebhookObjectTypeEnum.PROPERTY_RESERVATION);
+        map.put("property_availability", WebhookObjectTypeEnum.PROPERTY_AVAILABILITY);
+        map.put("property_quote", WebhookObjectTypeEnum.PROPERTY_QUOTE);
+        map.put("property_review", WebhookObjectTypeEnum.PROPERTY_REVIEW);
+        map.put("property_conversation", WebhookObjectTypeEnum.PROPERTY_CONVERSATION);
         return map;
     }
     
@@ -992,7 +1016,15 @@ public class WebhookObjectType {
         HEALTHCARE_PROCEDURE("healthcare_procedure"),
         HEALTHCARE_REPORT("healthcare_report"),
         HEALTHCARE_CAREPLAN("healthcare_careplan"),
-        HEALTHCARE_GOAL("healthcare_goal"),;
+        HEALTHCARE_GOAL("healthcare_goal"),
+        PROPERTY_LISTING("property_listing"),
+        PROPERTY_UNITTYPE("property_unittype"),
+        PROPERTY_GUEST("property_guest"),
+        PROPERTY_RESERVATION("property_reservation"),
+        PROPERTY_AVAILABILITY("property_availability"),
+        PROPERTY_QUOTE("property_quote"),
+        PROPERTY_REVIEW("property_review"),
+        PROPERTY_CONVERSATION("property_conversation"),;
 
         private final String value;
 

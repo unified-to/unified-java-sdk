@@ -27,7 +27,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -39,7 +39,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

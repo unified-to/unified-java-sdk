@@ -431,6 +431,20 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HEALTHCARE_CAREPLAN_WRITE = new PropertyConnectionPermissions("healthcare_careplan_write");
     public static final PropertyConnectionPermissions HEALTHCARE_GOAL_READ = new PropertyConnectionPermissions("healthcare_goal_read");
     public static final PropertyConnectionPermissions HEALTHCARE_GOAL_WRITE = new PropertyConnectionPermissions("healthcare_goal_write");
+    public static final PropertyConnectionPermissions PROPERTY_LISTING_READ = new PropertyConnectionPermissions("property_listing_read");
+    public static final PropertyConnectionPermissions PROPERTY_LISTING_WRITE = new PropertyConnectionPermissions("property_listing_write");
+    public static final PropertyConnectionPermissions PROPERTY_UNITTYPE_READ = new PropertyConnectionPermissions("property_unittype_read");
+    public static final PropertyConnectionPermissions PROPERTY_GUEST_READ = new PropertyConnectionPermissions("property_guest_read");
+    public static final PropertyConnectionPermissions PROPERTY_GUEST_WRITE = new PropertyConnectionPermissions("property_guest_write");
+    public static final PropertyConnectionPermissions PROPERTY_RESERVATION_READ = new PropertyConnectionPermissions("property_reservation_read");
+    public static final PropertyConnectionPermissions PROPERTY_RESERVATION_WRITE = new PropertyConnectionPermissions("property_reservation_write");
+    public static final PropertyConnectionPermissions PROPERTY_AVAILABILITY_READ = new PropertyConnectionPermissions("property_availability_read");
+    public static final PropertyConnectionPermissions PROPERTY_QUOTE_READ = new PropertyConnectionPermissions("property_quote_read");
+    public static final PropertyConnectionPermissions PROPERTY_QUOTE_WRITE = new PropertyConnectionPermissions("property_quote_write");
+    public static final PropertyConnectionPermissions PROPERTY_REVIEW_READ = new PropertyConnectionPermissions("property_review_read");
+    public static final PropertyConnectionPermissions PROPERTY_REVIEW_WRITE = new PropertyConnectionPermissions("property_review_write");
+    public static final PropertyConnectionPermissions PROPERTY_CONVERSATION_READ = new PropertyConnectionPermissions("property_conversation_read");
+    public static final PropertyConnectionPermissions PROPERTY_CONVERSATION_WRITE = new PropertyConnectionPermissions("property_conversation_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -915,6 +929,20 @@ public class PropertyConnectionPermissions {
         map.put("healthcare_careplan_write", HEALTHCARE_CAREPLAN_WRITE);
         map.put("healthcare_goal_read", HEALTHCARE_GOAL_READ);
         map.put("healthcare_goal_write", HEALTHCARE_GOAL_WRITE);
+        map.put("property_listing_read", PROPERTY_LISTING_READ);
+        map.put("property_listing_write", PROPERTY_LISTING_WRITE);
+        map.put("property_unittype_read", PROPERTY_UNITTYPE_READ);
+        map.put("property_guest_read", PROPERTY_GUEST_READ);
+        map.put("property_guest_write", PROPERTY_GUEST_WRITE);
+        map.put("property_reservation_read", PROPERTY_RESERVATION_READ);
+        map.put("property_reservation_write", PROPERTY_RESERVATION_WRITE);
+        map.put("property_availability_read", PROPERTY_AVAILABILITY_READ);
+        map.put("property_quote_read", PROPERTY_QUOTE_READ);
+        map.put("property_quote_write", PROPERTY_QUOTE_WRITE);
+        map.put("property_review_read", PROPERTY_REVIEW_READ);
+        map.put("property_review_write", PROPERTY_REVIEW_WRITE);
+        map.put("property_conversation_read", PROPERTY_CONVERSATION_READ);
+        map.put("property_conversation_write", PROPERTY_CONVERSATION_WRITE);
         return map;
     }
 
@@ -1331,6 +1359,20 @@ public class PropertyConnectionPermissions {
         map.put("healthcare_careplan_write", PropertyConnectionPermissionsEnum.HEALTHCARE_CAREPLAN_WRITE);
         map.put("healthcare_goal_read", PropertyConnectionPermissionsEnum.HEALTHCARE_GOAL_READ);
         map.put("healthcare_goal_write", PropertyConnectionPermissionsEnum.HEALTHCARE_GOAL_WRITE);
+        map.put("property_listing_read", PropertyConnectionPermissionsEnum.PROPERTY_LISTING_READ);
+        map.put("property_listing_write", PropertyConnectionPermissionsEnum.PROPERTY_LISTING_WRITE);
+        map.put("property_unittype_read", PropertyConnectionPermissionsEnum.PROPERTY_UNITTYPE_READ);
+        map.put("property_guest_read", PropertyConnectionPermissionsEnum.PROPERTY_GUEST_READ);
+        map.put("property_guest_write", PropertyConnectionPermissionsEnum.PROPERTY_GUEST_WRITE);
+        map.put("property_reservation_read", PropertyConnectionPermissionsEnum.PROPERTY_RESERVATION_READ);
+        map.put("property_reservation_write", PropertyConnectionPermissionsEnum.PROPERTY_RESERVATION_WRITE);
+        map.put("property_availability_read", PropertyConnectionPermissionsEnum.PROPERTY_AVAILABILITY_READ);
+        map.put("property_quote_read", PropertyConnectionPermissionsEnum.PROPERTY_QUOTE_READ);
+        map.put("property_quote_write", PropertyConnectionPermissionsEnum.PROPERTY_QUOTE_WRITE);
+        map.put("property_review_read", PropertyConnectionPermissionsEnum.PROPERTY_REVIEW_READ);
+        map.put("property_review_write", PropertyConnectionPermissionsEnum.PROPERTY_REVIEW_WRITE);
+        map.put("property_conversation_read", PropertyConnectionPermissionsEnum.PROPERTY_CONVERSATION_READ);
+        map.put("property_conversation_write", PropertyConnectionPermissionsEnum.PROPERTY_CONVERSATION_WRITE);
         return map;
     }
     
@@ -1747,7 +1789,21 @@ public class PropertyConnectionPermissions {
         HEALTHCARE_CAREPLAN_READ("healthcare_careplan_read"),
         HEALTHCARE_CAREPLAN_WRITE("healthcare_careplan_write"),
         HEALTHCARE_GOAL_READ("healthcare_goal_read"),
-        HEALTHCARE_GOAL_WRITE("healthcare_goal_write"),;
+        HEALTHCARE_GOAL_WRITE("healthcare_goal_write"),
+        PROPERTY_LISTING_READ("property_listing_read"),
+        PROPERTY_LISTING_WRITE("property_listing_write"),
+        PROPERTY_UNITTYPE_READ("property_unittype_read"),
+        PROPERTY_GUEST_READ("property_guest_read"),
+        PROPERTY_GUEST_WRITE("property_guest_write"),
+        PROPERTY_RESERVATION_READ("property_reservation_read"),
+        PROPERTY_RESERVATION_WRITE("property_reservation_write"),
+        PROPERTY_AVAILABILITY_READ("property_availability_read"),
+        PROPERTY_QUOTE_READ("property_quote_read"),
+        PROPERTY_QUOTE_WRITE("property_quote_write"),
+        PROPERTY_REVIEW_READ("property_review_read"),
+        PROPERTY_REVIEW_WRITE("property_review_write"),
+        PROPERTY_CONVERSATION_READ("property_conversation_read"),
+        PROPERTY_CONVERSATION_WRITE("property_conversation_write"),;
 
         private final String value;
 

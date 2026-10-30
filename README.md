@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.7'
+implementation 'to.unified:unified-java-sdk:0.50.8'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.7</version>
+    <version>0.50.8</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -601,6 +601,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Availability](docs/sdks/availability/README.md)
 
 * [listCommerceAvailabilities](docs/sdks/availability/README.md#listcommerceavailabilities) - List all availabilities
+* [listPropertyAvailabilities](docs/sdks/availability/README.md#listpropertyavailabilities) - List all availabilities
 
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
@@ -1060,6 +1061,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeLmsContent](docs/sdks/content/README.md#removelmscontent) - Remove a content
 * [updateLmsContent](docs/sdks/content/README.md#updatelmscontent) - Update a content
 
+### [Conversation](docs/sdks/conversation/README.md)
+
+* [createPropertyConversation](docs/sdks/conversation/README.md#createpropertyconversation) - Create a conversation
+* [getPropertyConversation](docs/sdks/conversation/README.md#getpropertyconversation) - Retrieve a conversation
+* [listPropertyConversations](docs/sdks/conversation/README.md#listpropertyconversations) - List all conversations
+
 ### [Course](docs/sdks/course/README.md)
 
 * [createLmsCourse](docs/sdks/course/README.md#createlmscourse) - Create a course
@@ -1462,6 +1469,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [updateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
 
+### [Guest](docs/sdks/guest/README.md)
+
+* [createPropertyGuest](docs/sdks/guest/README.md#createpropertyguest) - Create a guest
+* [getPropertyGuest](docs/sdks/guest/README.md#getpropertyguest) - Retrieve a guest
+* [listPropertyGuests](docs/sdks/guest/README.md#listpropertyguests) - List all guests
+* [patchPropertyGuest](docs/sdks/guest/README.md#patchpropertyguest) - Update a guest
+* [updatePropertyGuest](docs/sdks/guest/README.md#updatepropertyguest) - Update a guest
+
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [createHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
@@ -1819,6 +1834,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchMartechList](docs/sdks/list/README.md#patchmartechlist) - Update a list
 * [removeMartechList](docs/sdks/list/README.md#removemartechlist) - Remove a list
 * [updateMartechList](docs/sdks/list/README.md#updatemartechlist) - Update a list
+
+### [Listing](docs/sdks/listing/README.md)
+
+* [createPropertyListing](docs/sdks/listing/README.md#createpropertylisting) - Create a listing
+* [getPropertyListing](docs/sdks/listing/README.md#getpropertylisting) - Retrieve a listing
+* [listPropertyListings](docs/sdks/listing/README.md#listpropertylistings) - List all listings
+* [patchPropertyListing](docs/sdks/listing/README.md#patchpropertylisting) - Update a listing
+* [removePropertyListing](docs/sdks/listing/README.md#removepropertylisting) - Remove a listing
+* [updatePropertyListing](docs/sdks/listing/README.md#updatepropertylisting) - Update a listing
 
 ### [Lms](docs/sdks/lms/README.md)
 
@@ -2234,11 +2258,38 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Property](docs/sdks/property/README.md)
 
 * [createAnalyticsProperty](docs/sdks/property/README.md#createanalyticsproperty) - Create a property
+* [createPropertyConversation](docs/sdks/property/README.md#createpropertyconversation) - Create a conversation
+* [createPropertyGuest](docs/sdks/property/README.md#createpropertyguest) - Create a guest
+* [createPropertyListing](docs/sdks/property/README.md#createpropertylisting) - Create a listing
+* [createPropertyQuote](docs/sdks/property/README.md#createpropertyquote) - Create a quote
+* [createPropertyReservation](docs/sdks/property/README.md#createpropertyreservation) - Create a reservation
 * [getAnalyticsProperty](docs/sdks/property/README.md#getanalyticsproperty) - Retrieve a property
+* [getPropertyConversation](docs/sdks/property/README.md#getpropertyconversation) - Retrieve a conversation
+* [getPropertyGuest](docs/sdks/property/README.md#getpropertyguest) - Retrieve a guest
+* [getPropertyListing](docs/sdks/property/README.md#getpropertylisting) - Retrieve a listing
+* [getPropertyReservation](docs/sdks/property/README.md#getpropertyreservation) - Retrieve a reservation
+* [getPropertyReview](docs/sdks/property/README.md#getpropertyreview) - Retrieve a review
+* [getPropertyUnittype](docs/sdks/property/README.md#getpropertyunittype) - Retrieve an unittype
 * [listAnalyticsProperties](docs/sdks/property/README.md#listanalyticsproperties) - List all properties
+* [listPropertyAvailabilities](docs/sdks/property/README.md#listpropertyavailabilities) - List all availabilities
+* [listPropertyConversations](docs/sdks/property/README.md#listpropertyconversations) - List all conversations
+* [listPropertyGuests](docs/sdks/property/README.md#listpropertyguests) - List all guests
+* [listPropertyListings](docs/sdks/property/README.md#listpropertylistings) - List all listings
+* [listPropertyReservations](docs/sdks/property/README.md#listpropertyreservations) - List all reservations
+* [listPropertyReviews](docs/sdks/property/README.md#listpropertyreviews) - List all reviews
+* [listPropertyUnittypes](docs/sdks/property/README.md#listpropertyunittypes) - List all unittypes
 * [patchAnalyticsProperty](docs/sdks/property/README.md#patchanalyticsproperty) - Update a property
+* [patchPropertyGuest](docs/sdks/property/README.md#patchpropertyguest) - Update a guest
+* [patchPropertyListing](docs/sdks/property/README.md#patchpropertylisting) - Update a listing
+* [patchPropertyReservation](docs/sdks/property/README.md#patchpropertyreservation) - Update a reservation
+* [patchPropertyReview](docs/sdks/property/README.md#patchpropertyreview) - Update a review
 * [removeAnalyticsProperty](docs/sdks/property/README.md#removeanalyticsproperty) - Remove a property
+* [removePropertyListing](docs/sdks/property/README.md#removepropertylisting) - Remove a listing
 * [updateAnalyticsProperty](docs/sdks/property/README.md#updateanalyticsproperty) - Update a property
+* [updatePropertyGuest](docs/sdks/property/README.md#updatepropertyguest) - Update a guest
+* [updatePropertyListing](docs/sdks/property/README.md#updatepropertylisting) - Update a listing
+* [updatePropertyReservation](docs/sdks/property/README.md#updatepropertyreservation) - Update a reservation
+* [updatePropertyReview](docs/sdks/property/README.md#updatepropertyreview) - Update a review
 
 ### [Pullrequest](docs/sdks/pullrequest/README.md)
 
@@ -2270,6 +2321,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Quote](docs/sdks/quote/README.md)
 
 * [createAccountingQuote](docs/sdks/quote/README.md#createaccountingquote) - Create a quote
+* [createPropertyQuote](docs/sdks/quote/README.md#createpropertyquote) - Create a quote
 * [getAccountingQuote](docs/sdks/quote/README.md#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](docs/sdks/quote/README.md#listaccountingquotes) - List all quotes
 * [patchAccountingQuote](docs/sdks/quote/README.md#patchaccountingquote) - Update a quote
@@ -2372,25 +2424,34 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Reservation](docs/sdks/reservation/README.md)
 
 * [createCommerceReservation](docs/sdks/reservation/README.md#createcommercereservation) - Create a reservation
+* [createPropertyReservation](docs/sdks/reservation/README.md#createpropertyreservation) - Create a reservation
 * [getCommerceReservation](docs/sdks/reservation/README.md#getcommercereservation) - Retrieve a reservation
+* [getPropertyReservation](docs/sdks/reservation/README.md#getpropertyreservation) - Retrieve a reservation
 * [listCommerceReservations](docs/sdks/reservation/README.md#listcommercereservations) - List all reservations
+* [listPropertyReservations](docs/sdks/reservation/README.md#listpropertyreservations) - List all reservations
 * [patchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
+* [patchPropertyReservation](docs/sdks/reservation/README.md#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
 * [updateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
+* [updatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 
 * [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [getCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
 * [getPerformanceReview](docs/sdks/review/README.md#getperformancereview) - Retrieve a review
+* [getPropertyReview](docs/sdks/review/README.md#getpropertyreview) - Retrieve a review
 * [getSocialReview](docs/sdks/review/README.md#getsocialreview) - Retrieve a review
 * [listCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
 * [listPerformanceReviews](docs/sdks/review/README.md#listperformancereviews) - List all reviews
+* [listPropertyReviews](docs/sdks/review/README.md#listpropertyreviews) - List all reviews
 * [listSocialReviews](docs/sdks/review/README.md#listsocialreviews) - List all reviews
 * [patchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
+* [patchPropertyReview](docs/sdks/review/README.md#patchpropertyreview) - Update a review
 * [patchSocialReview](docs/sdks/review/README.md#patchsocialreview) - Update a review
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
+* [updatePropertyReview](docs/sdks/review/README.md#updatepropertyreview) - Update a review
 * [updateSocialReview](docs/sdks/review/README.md#updatesocialreview) - Update a review
 
 ### [Room](docs/sdks/room/README.md)
@@ -2847,6 +2908,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+### [Unittype](docs/sdks/unittype/README.md)
+
+* [getPropertyUnittype](docs/sdks/unittype/README.md#getpropertyunittype) - Retrieve an unittype
+* [listPropertyUnittypes](docs/sdks/unittype/README.md#listpropertyunittypes) - List all unittypes
+
 ### [Usage](docs/sdks/usage/README.md)
 
 * [listComputeUsages](docs/sdks/usage/README.md#listcomputeusages) - List all usages
@@ -2969,7 +3035,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -2981,7 +3047,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3029,7 +3095,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3041,7 +3107,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3108,7 +3174,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                        .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3120,7 +3186,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3275,7 +3341,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("10d91247-ded1-4d1d-9568-80e29a471e72")
+                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3287,7 +3353,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-08T20:25:09.921Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

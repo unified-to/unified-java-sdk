@@ -7,14 +7,18 @@
 * [createCommerceReview](#createcommercereview) - Create a review
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getPerformanceReview](#getperformancereview) - Retrieve a review
+* [getPropertyReview](#getpropertyreview) - Retrieve a review
 * [getSocialReview](#getsocialreview) - Retrieve a review
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listPerformanceReviews](#listperformancereviews) - List all reviews
+* [listPropertyReviews](#listpropertyreviews) - List all reviews
 * [listSocialReviews](#listsocialreviews) - List all reviews
 * [patchCommerceReview](#patchcommercereview) - Update a review
+* [patchPropertyReview](#patchpropertyreview) - Update a review
 * [patchSocialReview](#patchsocialreview) - Update a review
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [updateCommerceReview](#updatecommercereview) - Update a review
+* [updatePropertyReview](#updatepropertyreview) - Update a review
 * [updateSocialReview](#updatesocialreview) - Update a review
 
 ## createCommerceReview
@@ -55,7 +59,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("3d4d31eb-6be7-46ff-bcd6-14db1295c6e4")
+                    .id("f96eb103-736a-4d7d-b3c5-ce670c5bc4e0")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -64,10 +68,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("8f5eddd7-2476-45d4-a773-a4fd740645c9")
+                            .id("51814271-3d46-49b8-a555-f6384c619c31")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("5a8d652a-d0ce-46a4-bb04-97fdb1beef7a")
+                                    .id("fc12732c-d713-4f6f-b5fb-e8d5f9f9552d")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -79,10 +83,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("d2924f18-417e-4e3d-ba59-72a891f01529")
+                            .id("58bb9698-d9ff-4dea-bd9e-7fdf62fd3b02")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("6bc9cb03-7b1a-40e8-9a52-798a09b4ae38")
+                                    .id("f61b7cc8-b914-4c93-8b3a-8400c5683ae9")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -95,7 +99,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:19:20.590Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.873Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -238,6 +242,64 @@ public class Application {
 ### Response
 
 **[GetPerformanceReviewResponse](../../models/operations/GetPerformanceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getPropertyReview
+
+Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPropertyReview" method="get" path="/property/{connection_id}/review/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPropertyReviewRequest req = GetPropertyReviewRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPropertyReviewResponse res = sdk.review().getPropertyReview()
+                .request(req)
+                .call();
+
+        if (res.propertyReview().isPresent()) {
+            System.out.println(res.propertyReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetPropertyReviewRequest](../../models/operations/GetPropertyReviewRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetPropertyReviewResponse](../../models/operations/GetPropertyReviewResponse.md)**
 
 ### Errors
 
@@ -417,6 +479,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listPropertyReviews
+
+Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPropertyReviews" method="get" path="/property/{connection_id}/review" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPropertyReviewsRequest req = ListPropertyReviewsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPropertyReviewsResponse res = sdk.review().listPropertyReviews()
+                .request(req)
+                .call();
+
+        if (res.propertyReviews().isPresent()) {
+            System.out.println(res.propertyReviews().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListPropertyReviewsRequest](../../models/operations/ListPropertyReviewsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListPropertyReviewsResponse](../../models/operations/ListPropertyReviewsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listSocialReviews
 
 Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -512,7 +631,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("bffcefdf-1286-41fc-99f7-1286cdf55635")
+                    .id("a364c5cb-eafb-4ade-a073-e50c16b0756d")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -521,10 +640,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("3b56bb82-45b0-4c58-bc27-e1a5cbe3ff89")
+                            .id("f012a2a5-85a7-47dd-ac47-d98c1a3ee4eb")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("2be425f2-b2a6-435a-8fd8-174980ce3937")
+                                    .id("9b232b16-c011-43c7-9348-f7f9364779a1")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -536,10 +655,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("4c0f18d7-99bc-44c8-8bd4-583d524a40e9")
+                            .id("a30454b6-4bb3-40bf-aaf2-4fb35f332c77")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a50c14eb-194d-48aa-ae83-74f8dd8d8023")
+                                    .id("9661964e-9b69-43ac-acca-2bd145d9430f")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -552,7 +671,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:19:20.614Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.913Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -580,6 +699,106 @@ public class Application {
 ### Response
 
 **[PatchCommerceReviewResponse](../../models/operations/PatchCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchPropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchPropertyReviewRequest req = PatchPropertyReviewRequest.builder()
+                .propertyReview(PropertyReview.builder()
+                    .authorName("Benton Jast")
+                    .categoryRatings(List.of(
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.CLEANLINESS)
+                            .comment("Umquam perferendis amitto voluptas sum blanditiis terreo.")
+                            .rating(5d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.ACCURACY)
+                            .comment("Capitulus dolorem verus.")
+                            .rating(4d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.COMMUNICATION)
+                            .rating(1d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.CHECKIN)
+                            .rating(1d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.LOCATION)
+                            .rating(2d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.VALUE)
+                            .comment("Quos constans aperte tero sollers.")
+                            .rating(5d)
+                            .build()))
+                    .content("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.")
+                    .createdAt(OffsetDateTime.parse("2022-10-17T11:17:07.682Z"))
+                    .id("38caa1f0-7db7-4c6e-ab17-9fb11e635c8d")
+                    .isPublic(true)
+                    .metadata(List.of())
+                    .privateFeedback("Tripudio neque communis.")
+                    .rating(3d)
+                    .source("Airbnb")
+                    .updatedAt(OffsetDateTime.parse("2026-02-18T06:29:38.507Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchPropertyReviewResponse res = sdk.review().patchPropertyReview()
+                .request(req)
+                .call();
+
+        if (res.propertyReview().isPresent()) {
+            System.out.println(res.propertyReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [PatchPropertyReviewRequest](../../models/operations/PatchPropertyReviewRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[PatchPropertyReviewResponse](../../models/operations/PatchPropertyReviewResponse.md)**
 
 ### Errors
 
@@ -742,7 +961,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("bffcefdf-1286-41fc-99f7-1286cdf55635")
+                    .id("a364c5cb-eafb-4ade-a073-e50c16b0756d")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -751,10 +970,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("3b56bb82-45b0-4c58-bc27-e1a5cbe3ff89")
+                            .id("f012a2a5-85a7-47dd-ac47-d98c1a3ee4eb")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("2be425f2-b2a6-435a-8fd8-174980ce3937")
+                                    .id("9b232b16-c011-43c7-9348-f7f9364779a1")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -766,10 +985,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("4c0f18d7-99bc-44c8-8bd4-583d524a40e9")
+                            .id("a30454b6-4bb3-40bf-aaf2-4fb35f332c77")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("a50c14eb-194d-48aa-ae83-74f8dd8d8023")
+                                    .id("9661964e-9b69-43ac-acca-2bd145d9430f")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -782,7 +1001,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-27T17:19:20.614Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.913Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -810,6 +1029,106 @@ public class Application {
 ### Response
 
 **[UpdateCommerceReviewResponse](../../models/operations/UpdateCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updatePropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdatePropertyReviewRequest req = UpdatePropertyReviewRequest.builder()
+                .propertyReview(PropertyReview.builder()
+                    .authorName("Benton Jast")
+                    .categoryRatings(List.of(
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.CLEANLINESS)
+                            .comment("Umquam perferendis amitto voluptas sum blanditiis terreo.")
+                            .rating(5d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.ACCURACY)
+                            .comment("Capitulus dolorem verus.")
+                            .rating(4d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.COMMUNICATION)
+                            .rating(1d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.CHECKIN)
+                            .rating(1d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.LOCATION)
+                            .rating(2d)
+                            .build(),
+                        PropertyCategoryrating.builder()
+                            .category(PropertyCategoryratingCategory.VALUE)
+                            .comment("Quos constans aperte tero sollers.")
+                            .rating(5d)
+                            .build()))
+                    .content("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.")
+                    .createdAt(OffsetDateTime.parse("2022-10-17T11:17:07.682Z"))
+                    .id("38caa1f0-7db7-4c6e-ab17-9fb11e635c8d")
+                    .isPublic(true)
+                    .metadata(List.of())
+                    .privateFeedback("Tripudio neque communis.")
+                    .rating(3d)
+                    .source("Airbnb")
+                    .updatedAt(OffsetDateTime.parse("2026-02-18T06:29:38.507Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdatePropertyReviewResponse res = sdk.review().updatePropertyReview()
+                .request(req)
+                .call();
+
+        if (res.propertyReview().isPresent()) {
+            System.out.println(res.propertyReview().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [UpdatePropertyReviewRequest](../../models/operations/UpdatePropertyReviewRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[UpdatePropertyReviewResponse](../../models/operations/UpdatePropertyReviewResponse.md)**
 
 ### Errors
 

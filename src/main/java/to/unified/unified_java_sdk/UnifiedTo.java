@@ -560,6 +560,18 @@ public class UnifiedTo {
     private final Feedback feedback;
 
 
+    private final Conversation conversation;
+
+
+    private final Guest guest;
+
+
+    private final Listing listing;
+
+
+    private final Unittype unittype;
+
+
     private final Repo repo;
 
 
@@ -1551,6 +1563,26 @@ public class UnifiedTo {
     }
 
 
+    public Conversation conversation() {
+        return conversation;
+    }
+
+
+    public Guest guest() {
+        return guest;
+    }
+
+
+    public Listing listing() {
+        return listing;
+    }
+
+
+    public Unittype unittype() {
+        return unittype;
+    }
+
+
     public Repo repo() {
         return repo;
     }
@@ -2070,6 +2102,10 @@ public class UnifiedTo {
         this.performance = new Performance(sdkConfiguration);
         this.cycle = new Cycle(sdkConfiguration);
         this.feedback = new Feedback(sdkConfiguration);
+        this.conversation = new Conversation(sdkConfiguration);
+        this.guest = new Guest(sdkConfiguration);
+        this.listing = new Listing(sdkConfiguration);
+        this.unittype = new Unittype(sdkConfiguration);
         this.repo = new Repo(sdkConfiguration);
         this.branch = new Branch(sdkConfiguration);
         this.commit = new Commit(sdkConfiguration);

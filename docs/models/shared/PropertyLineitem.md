@@ -1,0 +1,12 @@
+# PropertyLineitem
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `amount`                                                                       | *Optional\<Double>*                                                            | :heavy_minus_sign:                                                             | the line item amount (discounts are negative)                                  |
+| `description`                                                                  | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | free-text description of the line item                                         |
+| `isMandatory`                                                                  | *Optional\<Boolean>*                                                           | :heavy_minus_sign:                                                             | whether the line item is mandatory                                             |
+| `name`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | the line item name, eg. Cleaning fee                                           |
+| `type`                                                                         | [Optional\<PropertyLineitemType>](../../models/shared/PropertyLineitemType.md) | :heavy_minus_sign:                                                             | base price, fee, tax, discount or deposit                                      |

@@ -58,6 +58,7 @@ public class PropertyIntegrationCategories {
     public static final PropertyIntegrationCategories LEGAL = new PropertyIntegrationCategories("legal");
     public static final PropertyIntegrationCategories COMPUTE = new PropertyIntegrationCategories("compute");
     public static final PropertyIntegrationCategories HEALTHCARE = new PropertyIntegrationCategories("healthcare");
+    public static final PropertyIntegrationCategories PROPERTY = new PropertyIntegrationCategories("property");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -169,6 +170,7 @@ public class PropertyIntegrationCategories {
         map.put("legal", LEGAL);
         map.put("compute", COMPUTE);
         map.put("healthcare", HEALTHCARE);
+        map.put("property", PROPERTY);
         return map;
     }
 
@@ -212,6 +214,7 @@ public class PropertyIntegrationCategories {
         map.put("legal", PropertyIntegrationCategoriesEnum.LEGAL);
         map.put("compute", PropertyIntegrationCategoriesEnum.COMPUTE);
         map.put("healthcare", PropertyIntegrationCategoriesEnum.HEALTHCARE);
+        map.put("property", PropertyIntegrationCategoriesEnum.PROPERTY);
         return map;
     }
     
@@ -255,7 +258,8 @@ public class PropertyIntegrationCategories {
         SOCIAL("social"),
         LEGAL("legal"),
         COMPUTE("compute"),
-        HEALTHCARE("healthcare"),;
+        HEALTHCARE("healthcare"),
+        PROPERTY("property"),;
 
         private final String value;
 

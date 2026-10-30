@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createAccountingQuote](#createaccountingquote) - Create a quote
+* [createPropertyQuote](#createpropertyquote) - Create a quote
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
 * [patchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -64,6 +65,97 @@ public class Application {
 ### Response
 
 **[CreateAccountingQuoteResponse](../../models/operations/CreateAccountingQuoteResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createPropertyQuote
+
+Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" example="property_quote" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreatePropertyQuoteRequest req = CreatePropertyQuoteRequest.builder()
+                .propertyQuote(PropertyQuote.builder()
+                    .adults(1d)
+                    .children(1d)
+                    .createdAt(OffsetDateTime.parse("2020-12-18T19:14:11.415Z"))
+                    .currency("USD")
+                    .depositAmount(594.54)
+                    .endAt(OffsetDateTime.parse("2026-11-13"))
+                    .guests(2d)
+                    .id("fb19b5bc-be42-4f4e-8b1c-c5eff900855e")
+                    .lineItems(List.of(
+                        PropertyLineitem.builder()
+                            .amount(1665d)
+                            .description("9 nights")
+                            .isMandatory(true)
+                            .name("Accommodation")
+                            .type(PropertyLineitemType.BASE)
+                            .build(),
+                        PropertyLineitem.builder()
+                            .amount(117d)
+                            .isMandatory(true)
+                            .name("Cleaning fee")
+                            .type(PropertyLineitemType.FEE)
+                            .build(),
+                        PropertyLineitem.builder()
+                            .amount(199.8)
+                            .isMandatory(true)
+                            .name("Lodging tax")
+                            .type(PropertyLineitemType.TAX)
+                            .build()))
+                    .startAt(OffsetDateTime.parse("2026-11-04"))
+                    .totalAmount(1981.8)
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreatePropertyQuoteResponse res = sdk.quote().createPropertyQuote()
+                .request(req)
+                .call();
+
+        if (res.propertyQuote().isPresent()) {
+            System.out.println(res.propertyQuote().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreatePropertyQuoteRequest](../../models/operations/CreatePropertyQuoteRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreatePropertyQuoteResponse](../../models/operations/CreatePropertyQuoteResponse.md)**
 
 ### Errors
 

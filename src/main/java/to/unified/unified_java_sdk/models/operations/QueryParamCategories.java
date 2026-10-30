@@ -46,7 +46,8 @@ public enum QueryParamCategories {
     SOCIAL("social"),
     LEGAL("legal"),
     COMPUTE("compute"),
-    HEALTHCARE("healthcare");
+    HEALTHCARE("healthcare"),
+    PROPERTY("property");
 
     @JsonValue
     private final String value;

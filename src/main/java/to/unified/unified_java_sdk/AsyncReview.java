@@ -10,14 +10,18 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetPerformanceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.GetPropertyReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListPerformanceReviewsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReviewRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePropertyReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReviewResponse;
@@ -25,35 +29,47 @@ import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewRequ
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetPerformanceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetPerformanceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetSocialReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListPerformanceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListPerformanceReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyReviewsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListSocialReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListSocialReviewsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchSocialReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReviewResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyReviewRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateSocialReviewResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
 import to.unified.unified_java_sdk.operations.GetPerformanceReview;
+import to.unified.unified_java_sdk.operations.GetPropertyReview;
 import to.unified.unified_java_sdk.operations.GetSocialReview;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
 import to.unified.unified_java_sdk.operations.ListPerformanceReviews;
+import to.unified.unified_java_sdk.operations.ListPropertyReviews;
 import to.unified.unified_java_sdk.operations.ListSocialReviews;
 import to.unified.unified_java_sdk.operations.PatchCommerceReview;
+import to.unified.unified_java_sdk.operations.PatchPropertyReview;
 import to.unified.unified_java_sdk.operations.PatchSocialReview;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReview;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReview;
+import to.unified.unified_java_sdk.operations.UpdatePropertyReview;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -168,6 +184,35 @@ public class AsyncReview {
     /**
      * Retrieve a review
      * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPropertyReviewRequestBuilder getPropertyReview() {
+        return new GetPropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a review
+     * 
+     * <p>Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<GetPropertyReviewResponse> getPropertyReview(@Nonnull GetPropertyReviewRequest request) {
+        AsyncRequestOperation<GetPropertyReviewRequest, GetPropertyReviewResponse> operation
+              = new GetPropertyReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a review
+     * 
      * <p>Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -271,6 +316,43 @@ public class AsyncReview {
     /**
      * List all reviews
      * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPropertyReviewsRequestBuilder listPropertyReviews() {
+        return new ListPropertyReviewsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reviews
+     * 
+     * <p>Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPropertyReviewsResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyReviewsResponse> listPropertyReviews(@Nonnull ListPropertyReviewsRequest request) {
+        AsyncRequestOperation<ListPropertyReviewsRequest, ListPropertyReviewsResponse> operation
+              = new ListPropertyReviews.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all reviews
+     * 
      * <p>Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then
      * page through them with `limit` and `offset` (the default and maximum page size depend on the
      * integration). Use `fields` to return only the fields you need and reduce the response size.
@@ -329,6 +411,35 @@ public class AsyncReview {
     public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchPropertyReviewRequestBuilder patchPropertyReview() {
+        return new PatchPropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchPropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<PatchPropertyReviewResponse> patchPropertyReview(@Nonnull PatchPropertyReviewRequest request) {
+        AsyncRequestOperation<PatchPropertyReviewRequest, PatchPropertyReviewResponse> operation
+              = new PatchPropertyReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -414,6 +525,35 @@ public class AsyncReview {
     public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdatePropertyReviewRequestBuilder updatePropertyReview() {
+        return new UpdatePropertyReviewRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a review
+     * 
+     * <p>Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdatePropertyReviewResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePropertyReviewResponse> updatePropertyReview(@Nonnull UpdatePropertyReviewRequest request) {
+        AsyncRequestOperation<UpdatePropertyReviewRequest, UpdatePropertyReviewResponse> operation
+              = new UpdatePropertyReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

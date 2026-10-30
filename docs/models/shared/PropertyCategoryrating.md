@@ -1,0 +1,10 @@
+# PropertyCategoryrating
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `category`                                                                                         | [Optional\<PropertyCategoryratingCategory>](../../models/shared/PropertyCategoryratingCategory.md) | :heavy_minus_sign:                                                                                 | the rated category                                                                                 |
+| `comment`                                                                                          | *Optional\<String>*                                                                                | :heavy_minus_sign:                                                                                 | the guest comment for this category                                                                |
+| `rating`                                                                                           | *Optional\<Double>*                                                                                | :heavy_minus_sign:                                                                                 | the category rating                                                                                |

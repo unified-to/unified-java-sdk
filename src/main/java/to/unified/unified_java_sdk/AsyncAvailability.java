@@ -8,9 +8,13 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPropertyAvailabilitiesRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceAvailabilitiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyAvailabilitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPropertyAvailabilitiesResponse;
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
+import to.unified.unified_java_sdk.operations.ListPropertyAvailabilities;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -66,6 +70,43 @@ public class AsyncAvailability {
     public CompletableFuture<ListCommerceAvailabilitiesResponse> listCommerceAvailabilities(@Nonnull ListCommerceAvailabilitiesRequest request) {
         AsyncRequestOperation<ListCommerceAvailabilitiesRequest, ListCommerceAvailabilitiesResponse> operation
               = new ListCommerceAvailabilities.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPropertyAvailabilitiesRequestBuilder listPropertyAvailabilities() {
+        return new ListPropertyAvailabilitiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all availabilities
+     * 
+     * <p>Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before
+     * paging, then page through them with `limit` and `offset` (the default and maximum page size depend
+     * on the integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPropertyAvailabilitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListPropertyAvailabilitiesResponse> listPropertyAvailabilities(@Nonnull ListPropertyAvailabilitiesRequest request) {
+        AsyncRequestOperation<ListPropertyAvailabilitiesRequest, ListPropertyAvailabilitiesResponse> operation
+              = new ListPropertyAvailabilities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

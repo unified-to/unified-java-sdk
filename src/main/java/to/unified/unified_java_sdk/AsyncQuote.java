@@ -8,6 +8,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingQuotesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingQuoteRequest;
@@ -15,6 +16,8 @@ import to.unified.unified_java_sdk.models.operations.RemoveAccountingQuoteReques
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePropertyQuoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePropertyQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingQuotesRequestBuilder;
@@ -26,6 +29,7 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveAccountingQuote
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAccountingQuoteResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingQuote;
+import to.unified.unified_java_sdk.operations.CreatePropertyQuote;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
 import to.unified.unified_java_sdk.operations.PatchAccountingQuote;
@@ -78,6 +82,35 @@ public class AsyncQuote {
     public CompletableFuture<CreateAccountingQuoteResponse> createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
         AsyncRequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
               = new CreateAccountingQuote.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @return The async call builder
+     */
+    public CreatePropertyQuoteRequestBuilder createPropertyQuote() {
+        return new CreatePropertyQuoteRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePropertyQuoteResponse>} - The async response
+     */
+    public CompletableFuture<CreatePropertyQuoteResponse> createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        AsyncRequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
+              = new CreatePropertyQuote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

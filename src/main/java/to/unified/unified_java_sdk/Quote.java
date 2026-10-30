@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingQuoteResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePropertyQuoteResponse;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingQuoteResponse;
@@ -25,6 +28,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteReques
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingQuoteResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingQuote;
+import to.unified.unified_java_sdk.operations.CreatePropertyQuote;
 import to.unified.unified_java_sdk.operations.GetAccountingQuote;
 import to.unified.unified_java_sdk.operations.ListAccountingQuotes;
 import to.unified.unified_java_sdk.operations.PatchAccountingQuote;
@@ -77,6 +81,34 @@ public class Quote {
     public CreateAccountingQuoteResponse createAccountingQuote(@Nonnull CreateAccountingQuoteRequest request) {
         RequestOperation<CreateAccountingQuoteRequest, CreateAccountingQuoteResponse> operation
               = new CreateAccountingQuote.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @return The call builder
+     */
+    public CreatePropertyQuoteRequestBuilder createPropertyQuote() {
+        return new CreatePropertyQuoteRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a quote
+     * 
+     * <p>Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are
+     * mapped to the provider's API. Returns the created PropertyQuote.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePropertyQuoteResponse createPropertyQuote(@Nonnull CreatePropertyQuoteRequest request) {
+        RequestOperation<CreatePropertyQuoteRequest, CreatePropertyQuoteResponse> operation
+              = new CreatePropertyQuote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
