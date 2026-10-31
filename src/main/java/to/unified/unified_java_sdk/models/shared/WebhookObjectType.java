@@ -67,6 +67,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType COMMERCE_SALESCHANNEL = new WebhookObjectType("commerce_saleschannel");
     public static final WebhookObjectType COMMERCE_ITEMVARIANT = new WebhookObjectType("commerce_itemvariant");
     public static final WebhookObjectType COMMERCE_RESERVATION = new WebhookObjectType("commerce_reservation");
+    public static final WebhookObjectType COMMERCE_RETURN = new WebhookObjectType("commerce_return");
     public static final WebhookObjectType COMMERCE_AVAILABILITY = new WebhookObjectType("commerce_availability");
     public static final WebhookObjectType VERIFICATION_PACKAGE = new WebhookObjectType("verification_package");
     public static final WebhookObjectType VERIFICATION_REQUEST = new WebhookObjectType("verification_request");
@@ -369,6 +370,7 @@ public class WebhookObjectType {
         map.put("commerce_saleschannel", COMMERCE_SALESCHANNEL);
         map.put("commerce_itemvariant", COMMERCE_ITEMVARIANT);
         map.put("commerce_reservation", COMMERCE_RESERVATION);
+        map.put("commerce_return", COMMERCE_RETURN);
         map.put("commerce_availability", COMMERCE_AVAILABILITY);
         map.put("verification_package", VERIFICATION_PACKAGE);
         map.put("verification_request", VERIFICATION_REQUEST);
@@ -603,6 +605,7 @@ public class WebhookObjectType {
         map.put("commerce_saleschannel", WebhookObjectTypeEnum.COMMERCE_SALESCHANNEL);
         map.put("commerce_itemvariant", WebhookObjectTypeEnum.COMMERCE_ITEMVARIANT);
         map.put("commerce_reservation", WebhookObjectTypeEnum.COMMERCE_RESERVATION);
+        map.put("commerce_return", WebhookObjectTypeEnum.COMMERCE_RETURN);
         map.put("commerce_availability", WebhookObjectTypeEnum.COMMERCE_AVAILABILITY);
         map.put("verification_package", WebhookObjectTypeEnum.VERIFICATION_PACKAGE);
         map.put("verification_request", WebhookObjectTypeEnum.VERIFICATION_REQUEST);
@@ -838,6 +841,7 @@ public class WebhookObjectType {
         COMMERCE_SALESCHANNEL("commerce_saleschannel"),
         COMMERCE_ITEMVARIANT("commerce_itemvariant"),
         COMMERCE_RESERVATION("commerce_reservation"),
+        COMMERCE_RETURN("commerce_return"),
         COMMERCE_AVAILABILITY("commerce_availability"),
         VERIFICATION_PACKAGE("verification_package"),
         VERIFICATION_REQUEST("verification_request"),

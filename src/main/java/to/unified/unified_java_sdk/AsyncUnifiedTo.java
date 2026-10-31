@@ -171,6 +171,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncReservation reservation;
 
+    private final AsyncReturn return_;
+
     private final AsyncReview review;
 
     private final AsyncSaleschannel saleschannel;
@@ -765,6 +767,10 @@ public class AsyncUnifiedTo {
 
     public AsyncReservation reservation() {
         return reservation;
+    }
+
+    public AsyncReturn return_() {
+        return return_;
     }
 
     public AsyncReview review() {
@@ -1412,6 +1418,7 @@ public class AsyncUnifiedTo {
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
         this.itemvariant = new AsyncItemvariant(syncSDK.itemvariant(), sdkConfiguration);
         this.reservation = new AsyncReservation(syncSDK.reservation(), sdkConfiguration);
+        this.return_ = new AsyncReturn(syncSDK.return_(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
         this.compute = new AsyncCompute(syncSDK.compute(), sdkConfiguration);

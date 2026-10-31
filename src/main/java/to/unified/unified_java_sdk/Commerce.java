@@ -48,6 +48,9 @@ import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse
 import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReturnRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReturnRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReturnResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
@@ -75,6 +78,9 @@ import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRespon
 import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReturnsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReturnsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReturnsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse;
@@ -167,6 +173,7 @@ import to.unified.unified_java_sdk.operations.GetCommerceItem;
 import to.unified.unified_java_sdk.operations.GetCommerceItemvariant;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceReservation;
+import to.unified.unified_java_sdk.operations.GetCommerceReturn;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
@@ -176,6 +183,7 @@ import to.unified.unified_java_sdk.operations.ListCommerceItems;
 import to.unified.unified_java_sdk.operations.ListCommerceItemvariants;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceReservations;
+import to.unified.unified_java_sdk.operations.ListCommerceReturns;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
 import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
 import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
@@ -617,6 +625,34 @@ public class Commerce {
     }
 
     /**
+     * Retrieve a return
+     * 
+     * <p>Retrieves a single CommerceReturn by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCommerceReturnRequestBuilder getCommerceReturn() {
+        return new GetCommerceReturnRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a return
+     * 
+     * <p>Retrieves a single CommerceReturn by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceReturnResponse getCommerceReturn(@Nonnull GetCommerceReturnRequest request) {
+        RequestOperation<GetCommerceReturnRequest, GetCommerceReturnResponse> operation
+              = new GetCommerceReturn.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a review
      * 
      * <p>Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list
@@ -921,6 +957,42 @@ public class Commerce {
     public ListCommerceReservationsResponse listCommerceReservations(@Nonnull ListCommerceReservationsRequest request) {
         RequestOperation<ListCommerceReservationsRequest, ListCommerceReservationsResponse> operation
               = new ListCommerceReservations.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all returns
+     * 
+     * <p>Returns a list of CommerceReturns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCommerceReturnsRequestBuilder listCommerceReturns() {
+        return new ListCommerceReturnsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all returns
+     * 
+     * <p>Returns a list of CommerceReturns. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceReturnsResponse listCommerceReturns(@Nonnull ListCommerceReturnsRequest request) {
+        RequestOperation<ListCommerceReturnsRequest, ListCommerceReturnsResponse> operation
+              = new ListCommerceReturns.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

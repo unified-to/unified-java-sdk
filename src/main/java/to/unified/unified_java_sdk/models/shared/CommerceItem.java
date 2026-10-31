@@ -106,7 +106,9 @@ public class CommerceItem {
     @JsonProperty("metadata")
     private List<CommerceMetadata> metadata;
 
-
+    /**
+     * The item's (product's) name
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -339,6 +341,9 @@ public class CommerceItem {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The item's (product's) name
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -518,6 +523,9 @@ public class CommerceItem {
     }
 
 
+    /**
+     * The item's (product's) name
+     */
     public CommerceItem withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -866,6 +874,9 @@ public class CommerceItem {
             return this;
         }
 
+        /**
+         * The item's (product's) name
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;

@@ -99,6 +99,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions COMMERCE_ITEMVARIANT_WRITE = new PropertyConnectionPermissions("commerce_itemvariant_write");
     public static final PropertyConnectionPermissions COMMERCE_RESERVATION_READ = new PropertyConnectionPermissions("commerce_reservation_read");
     public static final PropertyConnectionPermissions COMMERCE_RESERVATION_WRITE = new PropertyConnectionPermissions("commerce_reservation_write");
+    public static final PropertyConnectionPermissions COMMERCE_RETURN_READ = new PropertyConnectionPermissions("commerce_return_read");
+    public static final PropertyConnectionPermissions COMMERCE_RETURN_WRITE = new PropertyConnectionPermissions("commerce_return_write");
     public static final PropertyConnectionPermissions COMMERCE_AVAILABILITY_READ = new PropertyConnectionPermissions("commerce_availability_read");
     public static final PropertyConnectionPermissions COMMERCE_AVAILABILITY_WRITE = new PropertyConnectionPermissions("commerce_availability_write");
     public static final PropertyConnectionPermissions VERIFICATION_PACKAGE_READ = new PropertyConnectionPermissions("verification_package_read");
@@ -597,6 +599,8 @@ public class PropertyConnectionPermissions {
         map.put("commerce_itemvariant_write", COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_reservation_read", COMMERCE_RESERVATION_READ);
         map.put("commerce_reservation_write", COMMERCE_RESERVATION_WRITE);
+        map.put("commerce_return_read", COMMERCE_RETURN_READ);
+        map.put("commerce_return_write", COMMERCE_RETURN_WRITE);
         map.put("commerce_availability_read", COMMERCE_AVAILABILITY_READ);
         map.put("commerce_availability_write", COMMERCE_AVAILABILITY_WRITE);
         map.put("verification_package_read", VERIFICATION_PACKAGE_READ);
@@ -1027,6 +1031,8 @@ public class PropertyConnectionPermissions {
         map.put("commerce_itemvariant_write", PropertyConnectionPermissionsEnum.COMMERCE_ITEMVARIANT_WRITE);
         map.put("commerce_reservation_read", PropertyConnectionPermissionsEnum.COMMERCE_RESERVATION_READ);
         map.put("commerce_reservation_write", PropertyConnectionPermissionsEnum.COMMERCE_RESERVATION_WRITE);
+        map.put("commerce_return_read", PropertyConnectionPermissionsEnum.COMMERCE_RETURN_READ);
+        map.put("commerce_return_write", PropertyConnectionPermissionsEnum.COMMERCE_RETURN_WRITE);
         map.put("commerce_availability_read", PropertyConnectionPermissionsEnum.COMMERCE_AVAILABILITY_READ);
         map.put("commerce_availability_write", PropertyConnectionPermissionsEnum.COMMERCE_AVAILABILITY_WRITE);
         map.put("verification_package_read", PropertyConnectionPermissionsEnum.VERIFICATION_PACKAGE_READ);
@@ -1458,6 +1464,8 @@ public class PropertyConnectionPermissions {
         COMMERCE_ITEMVARIANT_WRITE("commerce_itemvariant_write"),
         COMMERCE_RESERVATION_READ("commerce_reservation_read"),
         COMMERCE_RESERVATION_WRITE("commerce_reservation_write"),
+        COMMERCE_RETURN_READ("commerce_return_read"),
+        COMMERCE_RETURN_WRITE("commerce_return_write"),
         COMMERCE_AVAILABILITY_READ("commerce_availability_read"),
         COMMERCE_AVAILABILITY_WRITE("commerce_availability_write"),
         VERIFICATION_PACKAGE_READ("verification_package_read"),

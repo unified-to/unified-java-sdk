@@ -60,6 +60,7 @@ WebhookObjectType custom = WebhookObjectType.of("custom_value");
 | `COMMERCE_SALESCHANNEL`          | commerce_saleschannel            |
 | `COMMERCE_ITEMVARIANT`           | commerce_itemvariant             |
 | `COMMERCE_RESERVATION`           | commerce_reservation             |
+| `COMMERCE_RETURN`                | commerce_return                  |
 | `COMMERCE_AVAILABILITY`          | commerce_availability            |
 | `VERIFICATION_PACKAGE`           | verification_package             |
 | `VERIFICATION_REQUEST`           | verification_request             |

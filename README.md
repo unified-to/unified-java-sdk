@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.8'
+implementation 'to.unified:unified-java-sdk:0.50.9'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.8</version>
+    <version>0.50.9</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                    .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                    .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -889,6 +889,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
 * [getCommerceReservation](docs/sdks/commerce/README.md#getcommercereservation) - Retrieve a reservation
+* [getCommerceReturn](docs/sdks/commerce/README.md#getcommercereturn) - Retrieve a return
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
 * [listCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
@@ -898,6 +899,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
 * [listCommerceReservations](docs/sdks/commerce/README.md#listcommercereservations) - List all reservations
+* [listCommerceReturns](docs/sdks/commerce/README.md#listcommercereturns) - List all returns
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
@@ -2435,6 +2437,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 * [updatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
+### [Return](docs/sdks/return/README.md)
+
+* [getCommerceReturn](docs/sdks/return/README.md#getcommercereturn) - Retrieve a return
+* [listCommerceReturns](docs/sdks/return/README.md#listcommercereturns) - List all returns
+
 ### [Review](docs/sdks/review/README.md)
 
 * [createCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
@@ -3035,7 +3042,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                    .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3047,7 +3054,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3095,7 +3102,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                    .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3107,7 +3114,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3174,7 +3181,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                        .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3186,7 +3193,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3341,7 +3348,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("1187fd6e-4b16-4f3b-8d20-74c10163fec0")
+                    .id("715400e9-62d6-42ee-8435-e94dc08b109e")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3353,7 +3360,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-09T03:47:54.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-09T10:04:54.441Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

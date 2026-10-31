@@ -278,6 +278,9 @@ public class UnifiedTo {
     private final Reservation reservation;
 
 
+    private final Return return_;
+
+
     private final Review review;
 
 
@@ -1090,6 +1093,11 @@ public class UnifiedTo {
 
     public Reservation reservation() {
         return reservation;
+    }
+
+
+    public Return return_() {
+        return return_;
     }
 
 
@@ -2008,6 +2016,7 @@ public class UnifiedTo {
         this.item = new Item(sdkConfiguration);
         this.itemvariant = new Itemvariant(sdkConfiguration);
         this.reservation = new Reservation(sdkConfiguration);
+        this.return_ = new Return(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
         this.compute = new Compute(sdkConfiguration);

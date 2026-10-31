@@ -18,6 +18,7 @@
 * [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
 * [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
+* [getCommerceReturn](#getcommercereturn) - Retrieve a return
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
 * [listCommerceAvailabilities](#listcommerceavailabilities) - List all availabilities
@@ -27,6 +28,7 @@
 * [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](#listcommercelocations) - List all locations
 * [listCommerceReservations](#listcommercereservations) - List all reservations
+* [listCommerceReturns](#listcommercereturns) - List all returns
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
@@ -87,7 +89,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("9e19b072-3c74-46b1-b0b5-e2290b85d8c0")
+                    .id("7a8a9a88-3253-466c-8bcf-1cf411a50089")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -97,10 +99,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("2f05c3e0-eda3-4807-b2cc-e82aa51cd469")
+                            .id("58ba27fa-1fad-4f63-b36a-ffbc79e4d86d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("0b1a8789-1c72-4321-864b-737158837b6e")
+                                    .id("d0f66988-9dd1-4f33-b8f7-d1cdd1f79728")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -110,7 +112,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("69f2c2aa-ad58-4094-aba4-6f63e9a1de31")
+                            .id("9f9cda62-b08b-44fd-b4f6-262f176e9386")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -121,7 +123,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-19T13:59:10.032Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-20T02:36:16.824Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -185,9 +187,9 @@ public class Application {
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("3e918f4d-a6ed-40ac-8c53-6631b2e6b3aa")
+                    .id("4a5dcb80-844e-484c-8d38-0044810b5a32")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-27T13:20:40.716Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-28T09:15:39.416Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -255,7 +257,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("98b403fc-e63b-41c0-bbe2-a9f163302f70")
+                    .id("7aad6c13-e818-424d-a54e-c4b3b1f9e7af")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -265,10 +267,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("22261f1d-b6cb-4184-b441-f584fde23191")
+                            .id("84bad7c0-d64c-4283-9c2a-be2340f14a48")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("80414ec2-d77a-45ed-ba19-890fb44e0100")
+                                    .id("df88bb8a-9786-461b-9180-fec65d016fa3")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -280,10 +282,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("c059bd96-6395-4f6d-ac71-388ea646ec3a")
+                            .id("c96bb135-b42d-479e-aba4-162733c5fa9a")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("aea1a549-8620-4133-9bef-816599e19107")
+                                    .id("3d240d37-f129-4206-bfea-a285cd886c1b")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -296,7 +298,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("966fccb9-ca68-4c35-9cd3-635b1ba1bb37")
+                            .id("7a306f4f-dfdb-415f-804d-e6a89353580e")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -316,7 +318,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-22T22:06:48.299Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-23T07:38:39.764Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -386,7 +388,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("b39a046a-86a7-4e08-8c73-14d6909f5bdc")
+                    .id("ef16c694-785a-4a0f-aeb5-3da18ac51b43")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -396,10 +398,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("3d84ed24-72e8-47a2-916a-e94adb750600")
+                            .id("2671f111-3666-4c47-93eb-5171ac3a407d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("8357524a-da79-4a67-9372-6698fbb96c1f")
+                                    .id("f4ad11fe-7b43-4a12-b7fd-e5aac23e9b5a")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -412,7 +414,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("0d7662b2-1191-4abf-889a-2c046e8ee589")
+                            .id("e9bdba25-dff0-4a1f-9f3b-ad6345f0b4b2")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -423,14 +425,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("bc7b2cea-e65d-4541-91c1-d093a223a069")
+                            .id("3fa95ede-aaea-4f22-a249-09c759042eaf")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("80acaeeb-277d-431e-9b30-fbd20441cbc1")
+                            .id("9a85344b-2d28-4e2a-b74a-f7cb99417738")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -446,7 +448,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-17T09:34:49.549Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-18T07:05:14.997Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -523,7 +525,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("a8c39d4e-31d8-41bd-9612-a0caf047c462")
+                    .id("deb203e3-bd3d-48c0-b1b0-8304e7249d3e")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -535,10 +537,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("45da0755-454c-424c-ae3c-d74b2d419112")
+                            .id("68bdb82b-9424-4046-b26a-bf1d81fa8296")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("c6f6f582-0667-4bc9-974a-1070360c07ee")
+                                    .id("29727f5c-895a-423b-a0ce-6a7f7aaed951")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -560,7 +562,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:08:56.880Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T03:38:54.162Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -628,13 +630,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("62e192e8-cdd4-48db-ae72-84e7594e7b10")
+                    .id("be012a96-80c2-49b6-a52b-f4f06b243498")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T19:40:52.623Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T01:03:18.676Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -705,7 +707,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("f96eb103-736a-4d7d-b3c5-ce670c5bc4e0")
+                    .id("17905b0c-53f3-4fb3-b351-dd591dc5739d")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -714,10 +716,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("51814271-3d46-49b8-a555-f6384c619c31")
+                            .id("f8e03f66-b53e-489d-a255-bdef7ead7a9d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("fc12732c-d713-4f6f-b5fb-e8d5f9f9552d")
+                                    .id("9bd71f0c-59eb-4856-be3f-aaca45579b68")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -729,10 +731,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("58bb9698-d9ff-4dea-bd9e-7fdf62fd3b02")
+                            .id("04a12ac7-3f27-4b96-ab0c-f84f42224719")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("f61b7cc8-b914-4c93-8b3a-8400c5683ae9")
+                                    .id("29907d95-9559-48df-bffa-5693606264a4")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -745,7 +747,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.873Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-29T13:56:01.746Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -813,11 +815,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("81daa89f-e8d3-4653-a52f-7e5b906dc479")
+                    .id("518dadb8-7c1b-40d5-bd57-684848497552")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-02-02T17:11:17.316Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-03T09:06:46.662Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1190,6 +1192,64 @@ public class Application {
 ### Response
 
 **[GetCommerceReservationResponse](../../models/operations/GetCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCommerceReturn
+
+Retrieves a single CommerceReturn by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCommerceReturn" method="get" path="/commerce/{connection_id}/return/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReturnRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReturnResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCommerceReturnRequest req = GetCommerceReturnRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCommerceReturnResponse res = sdk.commerce().getCommerceReturn()
+                .request(req)
+                .call();
+
+        if (res.commerceReturn().isPresent()) {
+            System.out.println(res.commerceReturn().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [GetCommerceReturnRequest](../../models/operations/GetCommerceReturnRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[GetCommerceReturnResponse](../../models/operations/GetCommerceReturnResponse.md)**
 
 ### Errors
 
@@ -1712,6 +1772,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCommerceReturns
+
+Returns a list of CommerceReturns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCommerceReturns" method="get" path="/commerce/{connection_id}/return" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReturnsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReturnsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCommerceReturnsRequest req = ListCommerceReturnsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCommerceReturnsResponse res = sdk.commerce().listCommerceReturns()
+                .request(req)
+                .call();
+
+        if (res.commerceReturns().isPresent()) {
+            System.out.println(res.commerceReturns().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListCommerceReturnsRequest](../../models/operations/ListCommerceReturnsRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListCommerceReturnsResponse](../../models/operations/ListCommerceReturnsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listCommerceReviews
 
 Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1859,7 +1976,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("0571eb32-bd91-4c2f-a743-c85d13025252")
+                    .id("e3def6a3-36eb-4c95-a984-65d0de79fa6a")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -1869,10 +1986,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("68dd5208-e818-4fe4-8f5f-0a06ecca4edb")
+                            .id("2ea68a02-c007-4cce-9cd3-9231a003055f")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("722c10b5-dfe5-4c59-a89e-d5f7f49f14ba")
+                                    .id("9130acff-92bc-44cc-bd20-3c55ba748996")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -1882,7 +1999,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("2cfb510c-ae84-450c-a5b6-ac08f032d59e")
+                            .id("16a3812c-005e-4665-8c87-3f27eb89246b")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -1893,7 +2010,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-19T13:59:10.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-20T02:36:16.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1958,9 +2075,9 @@ public class Application {
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("198eb296-a525-45fa-a446-c76ba6994a53")
+                    .id("a498fdf1-5d7d-4d9c-a78b-9fab2847662f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-27T13:20:40.727Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-28T09:15:39.423Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2029,7 +2146,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("de24e892-f492-4355-bcbf-85d645b16238")
+                    .id("2d23e5b7-0dff-46c1-a53b-f99b0d9c90d3")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -2039,10 +2156,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("7ff8b12e-0d83-4099-8a73-dc658a1870eb")
+                            .id("f7bd9d5d-474b-4db6-8a26-dc8b7cc6f138")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("45f1d871-1675-4ff2-a40c-a4fe1d532fd5")
+                                    .id("1b67ae0f-f8ce-4905-8b13-ca95933178b4")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -2054,10 +2171,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("d5b13814-b266-48c7-ab7c-887b44cf8123")
+                            .id("33873aec-ad2b-4107-947d-6af2c4c74ff7")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("8cff2c28-d363-4cbc-b1f3-849a29c0313e")
+                                    .id("3a685d58-ef3f-4d90-861b-fed940752f5f")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -2070,7 +2187,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("705e7043-929c-4a18-b35a-480019d7958d")
+                            .id("8ce7d9d0-ce29-4bf0-b08c-8987803b6816")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -2090,7 +2207,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-22T22:06:48.316Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-23T07:38:39.774Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -2161,7 +2278,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("f3d73a4b-a8ec-44c5-ab4c-a3b084fbc582")
+                    .id("35fd72eb-00fa-43f0-bd53-7ab030e1e6f8")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -2171,10 +2288,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("ccc1f73a-7eb9-4d91-932c-16b1dd719301")
+                            .id("0fa7055f-cd7d-4be9-a78e-88c8f2c5cd1d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("1ee08a5e-e237-40e0-a561-2ccf9f8dc428")
+                                    .id("e80cdc77-b00b-4db8-b386-48076fc4cc6c")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -2187,7 +2304,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("35519a9a-7b04-452a-8103-a3215cc3497d")
+                            .id("30723cf1-9814-4b43-bd62-d170e596f269")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -2198,14 +2315,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("4cccf87a-579c-464b-b1a3-ac3c8ab5ecf0")
+                            .id("ce8db83d-ef63-4dea-89e1-5440934b4aaa")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("76cf6673-ac6a-4ef3-aa32-56ad17e79b81")
+                            .id("ca715070-fd28-4af3-b4fa-7c5b4e4db0ba")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -2221,7 +2338,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-17T09:34:49.585Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-18T07:05:15.019Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -2299,7 +2416,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("f912d679-c877-4d79-b087-7f78440eb9a8")
+                    .id("5f3718e6-50f7-400a-a33d-eb5902b589db")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -2311,10 +2428,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("13f0ac02-8f64-49f4-86d9-db9fae9984bc")
+                            .id("87c6c6f7-fa1d-4c4a-ae43-6a5b2e87e2bd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("cd2a0552-126d-4f7e-b040-c52bd554790a")
+                                    .id("99230176-b640-4b8b-a4b6-f01fa2a00b04")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -2336,7 +2453,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:08:56.895Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T03:38:54.171Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -2405,13 +2522,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("743e16e6-6aee-43d2-851c-bd1793023bb8")
+                    .id("59131147-c5e8-4d49-a711-7da5b44372f8")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T19:40:52.627Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T01:03:18.679Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -2483,7 +2600,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("a364c5cb-eafb-4ade-a073-e50c16b0756d")
+                    .id("7af59255-91df-4020-ad10-070a0b1d3043")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -2492,10 +2609,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("f012a2a5-85a7-47dd-ac47-d98c1a3ee4eb")
+                            .id("14a136f0-fc63-42dc-ba70-555dce64f006")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("9b232b16-c011-43c7-9348-f7f9364779a1")
+                                    .id("8f3bbc94-0f5b-431b-a822-656af99e7ef0")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -2507,10 +2624,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("a30454b6-4bb3-40bf-aaf2-4fb35f332c77")
+                            .id("1b9fa081-61df-4daf-bf0d-90e98dd4f95c")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("9661964e-9b69-43ac-acca-2bd145d9430f")
+                                    .id("d88b9536-d326-4ea6-8341-c0873a4347f4")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -2523,7 +2640,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.913Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-29T13:56:01.770Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -2592,11 +2709,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("95d49974-c528-4573-a66d-5612f81c7d9f")
+                    .id("b934dc1b-3343-4d20-8404-8ae82dbf20e6")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-02-02T17:11:17.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-03T09:06:46.668Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3110,7 +3227,7 @@ public class Application {
                     .name("Small Marble Chips")
                     .createdAt(OffsetDateTime.parse("2023-07-14T00:42:54.742Z"))
                     .description("The Integrated leading edge website Cheese offers reliable performance and productive design")
-                    .id("0571eb32-bd91-4c2f-a743-c85d13025252")
+                    .id("e3def6a3-36eb-4c95-a984-65d0de79fa6a")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -3120,10 +3237,10 @@ public class Application {
                             .url("https://loremflickr.com/1319/1257?lock=7280448425732025")
                             .alt("Defungo adopto thorax.")
                             .height(759d)
-                            .id("68dd5208-e818-4fe4-8f5f-0a06ecca4edb")
+                            .id("2ea68a02-c007-4cce-9cd3-9231a003055f")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("722c10b5-dfe5-4c59-a89e-d5f7f49f14ba")
+                                    .id("9130acff-92bc-44cc-bd20-3c55ba748996")
                                     .slug("censura")
                                     .value(CommerceMetadataValue.of("toties"))
                                     .build()))
@@ -3133,7 +3250,7 @@ public class Application {
                             .build()))
                     .metadata(List.of(
                         CommerceMetadata.builder()
-                            .id("2cfb510c-ae84-450c-a5b6-ac08f032d59e")
+                            .id("16a3812c-005e-4665-8c87-3f27eb89246b")
                             .slug("aetas")
                             .value(CommerceMetadataValue.of("consuasor"))
                             .build()))
@@ -3144,7 +3261,7 @@ public class Application {
                         "adeptio",
                         "contego"))
                     .type(CommerceCollectionType.COLLECTION)
-                    .updatedAt(OffsetDateTime.parse("2025-03-19T13:59:10.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-03-20T02:36:16.835Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3209,9 +3326,9 @@ public class Application {
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("198eb296-a525-45fa-a446-c76ba6994a53")
+                    .id("a498fdf1-5d7d-4d9c-a78b-9fab2847662f")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-11-27T13:20:40.727Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-11-28T09:15:39.423Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3280,7 +3397,7 @@ public class Application {
                     .description("Decretum vulnero ustulo abeo.")
                     .duration(104d)
                     .globalCode("978-0-85270-680-0")
-                    .id("de24e892-f492-4355-bcbf-85d645b16238")
+                    .id("2d23e5b7-0dff-46c1-a53b-f99b0d9c90d3")
                     .isActive(false)
                     .isFeatured(false)
                     .isTaxable(true)
@@ -3290,10 +3407,10 @@ public class Application {
                             .url("https://picsum.photos/seed/v73y0uzyK/3001/972")
                             .alt("Caterva eveniet acies candidus.")
                             .height(876d)
-                            .id("7ff8b12e-0d83-4099-8a73-dc658a1870eb")
+                            .id("f7bd9d5d-474b-4db6-8a26-dc8b7cc6f138")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("45f1d871-1675-4ff2-a40c-a4fe1d532fd5")
+                                    .id("1b67ae0f-f8ce-4905-8b13-ca95933178b4")
                                     .slug("doloremque")
                                     .value(CommerceMetadataValue.of("allatus"))
                                     .build()))
@@ -3305,10 +3422,10 @@ public class Application {
                             .url("https://picsum.photos/seed/Ao4iatfO/771/3906")
                             .alt("Comedo.")
                             .height(651d)
-                            .id("d5b13814-b266-48c7-ab7c-887b44cf8123")
+                            .id("33873aec-ad2b-4107-947d-6af2c4c74ff7")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("8cff2c28-d363-4cbc-b1f3-849a29c0313e")
+                                    .id("3a685d58-ef3f-4d90-861b-fed940752f5f")
                                     .slug("bis")
                                     .value(CommerceMetadataValue.of("somniculosus"))
                                     .build()))
@@ -3321,7 +3438,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("705e7043-929c-4a18-b35a-480019d7958d")
+                            .id("8ce7d9d0-ce29-4bf0-b08c-8987803b6816")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("abstergo"))
@@ -3341,7 +3458,7 @@ public class Application {
                         "blanditiis"))
                     .totalStock(682d)
                     .type("SERVICE")
-                    .updatedAt(OffsetDateTime.parse("2022-04-22T22:06:48.316Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-23T07:38:39.774Z"))
                     .vendorName("Mayer - Flatley")
                     .weight(37d)
                     .weightUnit(WeightUnit.OZ)
@@ -3412,7 +3529,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("f3d73a4b-a8ec-44c5-ab4c-a3b084fbc582")
+                    .id("35fd72eb-00fa-43f0-bd53-7ab030e1e6f8")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -3422,10 +3539,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("ccc1f73a-7eb9-4d91-932c-16b1dd719301")
+                            .id("0fa7055f-cd7d-4be9-a78e-88c8f2c5cd1d")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("1ee08a5e-e237-40e0-a561-2ccf9f8dc428")
+                                    .id("e80cdc77-b00b-4db8-b386-48076fc4cc6c")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -3438,7 +3555,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("35519a9a-7b04-452a-8103-a3215cc3497d")
+                            .id("30723cf1-9814-4b43-bd62-d170e596f269")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -3449,14 +3566,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("4cccf87a-579c-464b-b1a3-ac3c8ab5ecf0")
+                            .id("ce8db83d-ef63-4dea-89e1-5440934b4aaa")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("76cf6673-ac6a-4ef3-aa32-56ad17e79b81")
+                            .id("ca715070-fd28-4af3-b4fa-7c5b4e4db0ba")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -3472,7 +3589,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-03-17T09:34:49.585Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-18T07:05:15.019Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -3550,7 +3667,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-12-29T04:15:21.195Z"))
                     .currency("XCD")
                     .description("Adsidue audentia.")
-                    .id("f912d679-c877-4d79-b087-7f78440eb9a8")
+                    .id("5f3718e6-50f7-400a-a33d-eb5902b589db")
                     .imageUrl("https://picsum.photos/seed/hjFt1/1036/2220")
                     .isActive(false)
                     .languageLocale("vulgaris")
@@ -3562,10 +3679,10 @@ public class Application {
                             .url("https://picsum.photos/seed/QVh7ViTV/3964/1567")
                             .alt("Addo.")
                             .height(283d)
-                            .id("13f0ac02-8f64-49f4-86d9-db9fae9984bc")
+                            .id("87c6c6f7-fa1d-4c4a-ae43-6a5b2e87e2bd")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("cd2a0552-126d-4f7e-b040-c52bd554790a")
+                                    .id("99230176-b640-4b8b-a4b6-f01fa2a00b04")
                                     .slug("abutor")
                                     .value(CommerceMetadataValue.of("damno"))
                                     .build()))
@@ -3587,7 +3704,7 @@ public class Application {
                             .telephone("(236) 274-2445")
                             .type(CommerceTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2024-04-23T19:08:56.895Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-24T03:38:54.171Z"))
                     .webUrl("https://chilly-edge.info")
                     .build())
                 .connectionId("<id>")
@@ -3656,13 +3773,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("743e16e6-6aee-43d2-851c-bd1793023bb8")
+                    .id("59131147-c5e8-4d49-a711-7da5b44372f8")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-05T19:40:52.627Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-06T01:03:18.679Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -3734,7 +3851,7 @@ public class Application {
                     .content("Taedium thymum adipiscor amicitia cui.")
                     .createdAt(OffsetDateTime.parse("2019-12-12T18:10:22.988Z"))
                     .helpfulVotes(66d)
-                    .id("a364c5cb-eafb-4ade-a073-e50c16b0756d")
+                    .id("7af59255-91df-4020-ad10-070a0b1d3043")
                     .isFeatured(false)
                     .isPublic(true)
                     .isVerified(false)
@@ -3743,10 +3860,10 @@ public class Application {
                             .url("https://loremflickr.com/196/2041?lock=5845524773114807")
                             .alt("Desipio carpo sol laudantium colo.")
                             .height(749d)
-                            .id("f012a2a5-85a7-47dd-ac47-d98c1a3ee4eb")
+                            .id("14a136f0-fc63-42dc-ba70-555dce64f006")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("9b232b16-c011-43c7-9348-f7f9364779a1")
+                                    .id("8f3bbc94-0f5b-431b-a822-656af99e7ef0")
                                     .slug("textor")
                                     .value(CommerceMetadataValue.of("quos"))
                                     .build()))
@@ -3758,10 +3875,10 @@ public class Application {
                             .url("https://loremflickr.com/1178/2175?lock=5466640101053206")
                             .alt("Adopto teneo numquam.")
                             .height(957d)
-                            .id("a30454b6-4bb3-40bf-aaf2-4fb35f332c77")
+                            .id("1b9fa081-61df-4daf-bf0d-90e98dd4f95c")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("9661964e-9b69-43ac-acca-2bd145d9430f")
+                                    .id("d88b9536-d326-4ea6-8341-c0873a4347f4")
                                     .slug("bos")
                                     .value(CommerceMetadataValue.of("casso"))
                                     .build()))
@@ -3774,7 +3891,7 @@ public class Application {
                     .status(CommerceReviewStatus.APPROVED)
                     .title("Coepi adamo amicitia auxilium toties.")
                     .unhelpfulVotes(88d)
-                    .updatedAt(OffsetDateTime.parse("2025-08-28T17:25:00.913Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-29T13:56:01.770Z"))
                     .url("https://diligent-bandwidth.biz")
                     .verifiedPurchase(true)
                     .build())
@@ -3843,11 +3960,11 @@ public class Application {
                     .collections(List.of())
                     .createdAt(OffsetDateTime.parse("2021-12-12T06:19:55.421Z"))
                     .description("Utroque denuncio solutio.")
-                    .id("95d49974-c528-4573-a66d-5612f81c7d9f")
+                    .id("b934dc1b-3343-4d20-8404-8ae82dbf20e6")
                     .isActive(false)
                     .metadata(List.of())
                     .slug("amiculum-congregatio-suspendo")
-                    .updatedAt(OffsetDateTime.parse("2025-02-02T17:11:17.325Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-03T09:06:46.668Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

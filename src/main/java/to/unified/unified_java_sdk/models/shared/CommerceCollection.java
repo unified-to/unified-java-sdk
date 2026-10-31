@@ -72,7 +72,9 @@ public class CommerceCollection {
     @JsonProperty("metadata")
     private List<CommerceMetadata> metadata;
 
-
+    /**
+     * The collection's name
+     */
     @JsonProperty("name")
     private String name;
 
@@ -201,6 +203,9 @@ public class CommerceCollection {
         return Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The collection's name
+     */
     public String name() {
         return this.name;
     }
@@ -298,6 +303,9 @@ public class CommerceCollection {
     }
 
 
+    /**
+     * The collection's name
+     */
     public CommerceCollection withName(@Nonnull String name) {
         this.name = Utils.checkNotNull(name, "name");
         return this;
@@ -500,6 +508,9 @@ public class CommerceCollection {
             return this;
         }
 
+        /**
+         * The collection's name
+         */
         public Builder name(@Nonnull String name) {
             this.name = Utils.checkNotNull(name, "name");
             return this;
