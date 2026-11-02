@@ -41,9 +41,9 @@ public class Application {
 
         CreateRepoPullrequestRequest req = CreateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-08T03:15:10.839Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-08T18:04:37.032Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("e91d5ee1-1534-4532-aa21-b25d33f3b106")
+                    .id("521d1252-b39c-456f-b265-7daaf18c0917")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -51,7 +51,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-26T00:08:03.883Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-26T19:49:29.454Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -228,9 +228,9 @@ public class Application {
 
         PatchRepoPullrequestRequest req = PatchRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-08T03:15:10.849Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-08T18:04:37.042Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("13473b91-4fd3-4ab5-9f99-b6e0e3783aa7")
+                    .id("7b66b483-fe59-4d7d-9811-9ddf1a5aca8b")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -238,7 +238,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-26T00:08:03.896Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-26T19:49:29.467Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -357,9 +357,9 @@ public class Application {
 
         UpdateRepoPullrequestRequest req = UpdateRepoPullrequestRequest.builder()
                 .repoPullrequest(RepoPullrequest.builder()
-                    .closedAt(OffsetDateTime.parse("2025-05-08T03:15:10.849Z"))
+                    .closedAt(OffsetDateTime.parse("2025-05-08T18:04:37.042Z"))
                     .createdAt(OffsetDateTime.parse("2023-02-27T09:37:13.663Z"))
-                    .id("13473b91-4fd3-4ab5-9f99-b6e0e3783aa7")
+                    .id("7b66b483-fe59-4d7d-9811-9ddf1a5aca8b")
                     .labels(List.of(
                         "creptio",
                         "tutamen"))
@@ -367,7 +367,7 @@ public class Application {
                     .notes("Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.")
                     .status(RepoPullrequestStatus.APPROVED)
                     .title("reboot mobile application")
-                    .updatedAt(OffsetDateTime.parse("2026-01-26T00:08:03.896Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-26T19:49:29.467Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

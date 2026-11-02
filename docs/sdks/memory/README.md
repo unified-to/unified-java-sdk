@@ -44,7 +44,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("c57fe731-546d-4f3f-95cb-da6937c8f3ab")
+                    .id("fb95ba13-a308-4fef-bccd-4ddcd9404724")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -57,7 +57,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-29T05:06:52.141Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-29T12:36:56.170Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
@@ -238,7 +238,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("95f96f95-8068-44ed-ae2d-14418c29e001")
+                    .id("3fb2608a-f7e8-407f-8714-e77b0c1f605e")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -251,7 +251,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-29T05:06:52.147Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-29T12:36:56.173Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
@@ -374,7 +374,7 @@ public class Application {
                 .genaiMemory(GenaiMemory.builder()
                     .content("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.")
                     .createdAt(OffsetDateTime.parse("2021-10-22T04:14:41.668Z"))
-                    .id("95f96f95-8068-44ed-ae2d-14418c29e001")
+                    .id("3fb2608a-f7e8-407f-8714-e77b0c1f605e")
                     .metadata(List.of(
                         GenaiMetadata.builder()
                             .extraData(GenaiMetadataExtraData.of(Map.ofEntries(
@@ -387,7 +387,7 @@ public class Application {
                             .build()))
                     .name("sponte.md")
                     .type(GenaiMemoryType.MEMORY)
-                    .updatedAt(OffsetDateTime.parse("2023-04-29T05:06:52.147Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-29T12:36:56.173Z"))
                     .userIdentifier("9d170613-4338-447d-bdb6-8ea96a2d7513")
                     .build())
                 .connectionId("<id>")
