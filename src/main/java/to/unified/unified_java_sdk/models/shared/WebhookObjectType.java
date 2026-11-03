@@ -255,6 +255,11 @@ public class WebhookObjectType {
     public static final WebhookObjectType PROPERTY_QUOTE = new WebhookObjectType("property_quote");
     public static final WebhookObjectType PROPERTY_REVIEW = new WebhookObjectType("property_review");
     public static final WebhookObjectType PROPERTY_CONVERSATION = new WebhookObjectType("property_conversation");
+    public static final WebhookObjectType PLM_PART = new WebhookObjectType("plm_part");
+    public static final WebhookObjectType PLM_BOMLINE = new WebhookObjectType("plm_bomline");
+    public static final WebhookObjectType PLM_DOCUMENT = new WebhookObjectType("plm_document");
+    public static final WebhookObjectType PLM_CHANGE = new WebhookObjectType("plm_change");
+    public static final WebhookObjectType PLM_CATEGORY = new WebhookObjectType("plm_category");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -558,6 +563,11 @@ public class WebhookObjectType {
         map.put("property_quote", PROPERTY_QUOTE);
         map.put("property_review", PROPERTY_REVIEW);
         map.put("property_conversation", PROPERTY_CONVERSATION);
+        map.put("plm_part", PLM_PART);
+        map.put("plm_bomline", PLM_BOMLINE);
+        map.put("plm_document", PLM_DOCUMENT);
+        map.put("plm_change", PLM_CHANGE);
+        map.put("plm_category", PLM_CATEGORY);
         return map;
     }
 
@@ -793,6 +803,11 @@ public class WebhookObjectType {
         map.put("property_quote", WebhookObjectTypeEnum.PROPERTY_QUOTE);
         map.put("property_review", WebhookObjectTypeEnum.PROPERTY_REVIEW);
         map.put("property_conversation", WebhookObjectTypeEnum.PROPERTY_CONVERSATION);
+        map.put("plm_part", WebhookObjectTypeEnum.PLM_PART);
+        map.put("plm_bomline", WebhookObjectTypeEnum.PLM_BOMLINE);
+        map.put("plm_document", WebhookObjectTypeEnum.PLM_DOCUMENT);
+        map.put("plm_change", WebhookObjectTypeEnum.PLM_CHANGE);
+        map.put("plm_category", WebhookObjectTypeEnum.PLM_CATEGORY);
         return map;
     }
     
@@ -1028,7 +1043,12 @@ public class WebhookObjectType {
         PROPERTY_AVAILABILITY("property_availability"),
         PROPERTY_QUOTE("property_quote"),
         PROPERTY_REVIEW("property_review"),
-        PROPERTY_CONVERSATION("property_conversation"),;
+        PROPERTY_CONVERSATION("property_conversation"),
+        PLM_PART("plm_part"),
+        PLM_BOMLINE("plm_bomline"),
+        PLM_DOCUMENT("plm_document"),
+        PLM_CHANGE("plm_change"),
+        PLM_CATEGORY("plm_category"),;
 
         private final String value;
 

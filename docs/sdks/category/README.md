@@ -7,8 +7,10 @@
 * [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createTicketingCategory](#createticketingcategory) - Create a category
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
+* [getPlmCategory](#getplmcategory) - Retrieve a category
 * [getTicketingCategory](#getticketingcategory) - Retrieve a category
 * [listAccountingCategories](#listaccountingcategories) - List all categories
+* [listPlmCategories](#listplmcategories) - List all categories
 * [listTicketingCategories](#listticketingcategories) - List all categories
 * [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchTicketingCategory](#patchticketingcategory) - Update a category
@@ -50,11 +52,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("7fb2fa66-68fc-49cd-80de-03e17906b14a")
+                    .id("ddcc7bed-40b8-4975-99b9-d5394fad7b87")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T14:40:56.806Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-20T06:40:59.616Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -119,11 +121,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("e6afcd53-319a-41f1-b6e4-1ada1af1c715")
+                    .id("ef6d6d42-3714-42d0-b5a8-02bdd0a7d2de")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-24T17:41:07.260Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-25T14:50:15.662Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -206,6 +208,64 @@ public class Application {
 ### Response
 
 **[GetAccountingCategoryResponse](../../models/operations/GetAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getPlmCategory
+
+Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getPlmCategory" method="get" path="/plm/{connection_id}/category/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetPlmCategoryRequest req = GetPlmCategoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetPlmCategoryResponse res = sdk.category().getPlmCategory()
+                .request(req)
+                .call();
+
+        if (res.plmCategory().isPresent()) {
+            System.out.println(res.plmCategory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetPlmCategoryRequest](../../models/operations/GetPlmCategoryRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetPlmCategoryResponse](../../models/operations/GetPlmCategoryResponse.md)**
 
 ### Errors
 
@@ -328,6 +388,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listPlmCategories
+
+Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listPlmCategories" method="get" path="/plm/{connection_id}/category" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListPlmCategoriesRequest req = ListPlmCategoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListPlmCategoriesResponse res = sdk.category().listPlmCategories()
+                .request(req)
+                .call();
+
+        if (res.plmCategories().isPresent()) {
+            System.out.println(res.plmCategories().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListPlmCategoriesRequest](../../models/operations/ListPlmCategoriesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListPlmCategoriesResponse](../../models/operations/ListPlmCategoriesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listTicketingCategories
 
 Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -418,11 +535,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("028950fa-eae5-4a3c-8574-dad64d48fd62")
+                    .id("5678860b-0160-4191-a2b4-baae6df77da0")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T14:40:56.817Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-20T06:40:59.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -488,11 +605,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("73ea2cef-cfda-4cfa-91c2-13a7379a0084")
+                    .id("0e877cde-044b-408f-97b5-771cf27ef77c")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-24T17:41:07.270Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-25T14:50:15.673Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -670,11 +787,11 @@ public class Application {
                 .accountingCategory(AccountingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2023-05-30T12:29:04.257Z"))
                     .description("Textus ab thymum labore basium.")
-                    .id("028950fa-eae5-4a3c-8574-dad64d48fd62")
+                    .id("5678860b-0160-4191-a2b4-baae6df77da0")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Beauty")
-                    .updatedAt(OffsetDateTime.parse("2025-09-19T14:40:56.817Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-09-20T06:40:59.623Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -740,11 +857,11 @@ public class Application {
                 .ticketingCategory(TicketingCategory.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-19T22:02:51.067Z"))
                     .description("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.")
-                    .id("73ea2cef-cfda-4cfa-91c2-13a7379a0084")
+                    .id("0e877cde-044b-408f-97b5-771cf27ef77c")
                     .isActive(true)
                     .metadata(List.of())
                     .name("amicitia")
-                    .updatedAt(OffsetDateTime.parse("2026-01-24T17:41:07.270Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-25T14:50:15.673Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

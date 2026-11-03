@@ -10,8 +10,10 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingCategoryRequest;
@@ -25,10 +27,14 @@ import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCatego
 import to.unified.unified_java_sdk.models.operations.async.CreateTicketingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPlmCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPlmCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetTicketingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingCategoriesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPlmCategoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPlmCategoriesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListTicketingCategoriesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAccountingCategoryRequestBuilder;
@@ -46,8 +52,10 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateTicketingCatego
 import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
 import to.unified.unified_java_sdk.operations.CreateTicketingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
+import to.unified.unified_java_sdk.operations.GetPlmCategory;
 import to.unified.unified_java_sdk.operations.GetTicketingCategory;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
+import to.unified.unified_java_sdk.operations.ListPlmCategories;
 import to.unified.unified_java_sdk.operations.ListTicketingCategories;
 import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
 import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
@@ -168,6 +176,35 @@ public class AsyncCategory {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPlmCategoryRequestBuilder getPlmCategory() {
+        return new GetPlmCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPlmCategoryResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmCategoryResponse> getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        AsyncRequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
+              = new GetPlmCategory.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a category
+     * 
      * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -226,6 +263,43 @@ public class AsyncCategory {
     public CompletableFuture<ListAccountingCategoriesResponse> listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
         AsyncRequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
               = new ListAccountingCategories.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPlmCategoriesRequestBuilder listPlmCategories() {
+        return new ListPlmCategoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPlmCategoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmCategoriesResponse> listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        AsyncRequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
+              = new ListPlmCategories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

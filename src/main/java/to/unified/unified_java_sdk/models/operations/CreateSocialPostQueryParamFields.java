@@ -13,7 +13,7 @@ public enum CreateSocialPostQueryParamFields {
     CREATED_AT("created_at"),
     UPDATED_AT("updated_at"),
     PROFILE_ID("profile_id"),
-    PARENT_POST_ID("parent_post_id"),
+    PARENT_ID("parent_id"),
     TITLE("title"),
     BODY("body"),
     STATUS("status"),

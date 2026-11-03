@@ -59,6 +59,7 @@ public class PropertyConnectionCategories {
     public static final PropertyConnectionCategories COMPUTE = new PropertyConnectionCategories("compute");
     public static final PropertyConnectionCategories HEALTHCARE = new PropertyConnectionCategories("healthcare");
     public static final PropertyConnectionCategories PROPERTY = new PropertyConnectionCategories("property");
+    public static final PropertyConnectionCategories PLM = new PropertyConnectionCategories("plm");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -171,6 +172,7 @@ public class PropertyConnectionCategories {
         map.put("compute", COMPUTE);
         map.put("healthcare", HEALTHCARE);
         map.put("property", PROPERTY);
+        map.put("plm", PLM);
         return map;
     }
 
@@ -215,6 +217,7 @@ public class PropertyConnectionCategories {
         map.put("compute", PropertyConnectionCategoriesEnum.COMPUTE);
         map.put("healthcare", PropertyConnectionCategoriesEnum.HEALTHCARE);
         map.put("property", PropertyConnectionCategoriesEnum.PROPERTY);
+        map.put("plm", PropertyConnectionCategoriesEnum.PLM);
         return map;
     }
     
@@ -259,7 +262,8 @@ public class PropertyConnectionCategories {
         LEGAL("legal"),
         COMPUTE("compute"),
         HEALTHCARE("healthcare"),
-        PROPERTY("property"),;
+        PROPERTY("property"),
+        PLM("plm"),;
 
         private final String value;
 

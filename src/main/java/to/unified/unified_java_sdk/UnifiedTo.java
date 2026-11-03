@@ -563,6 +563,18 @@ public class UnifiedTo {
     private final Feedback feedback;
 
 
+    private final Plm plm;
+
+
+    private final Bomline bomline;
+
+
+    private final Change change;
+
+
+    private final Part part;
+
+
     private final Conversation conversation;
 
 
@@ -633,9 +645,6 @@ public class UnifiedTo {
 
 
     private final File file;
-
-
-    private final Change change;
 
 
     private final Ticketing ticketing;
@@ -1571,6 +1580,26 @@ public class UnifiedTo {
     }
 
 
+    public Plm plm() {
+        return plm;
+    }
+
+
+    public Bomline bomline() {
+        return bomline;
+    }
+
+
+    public Change change() {
+        return change;
+    }
+
+
+    public Part part() {
+        return part;
+    }
+
+
     public Conversation conversation() {
         return conversation;
     }
@@ -1688,11 +1717,6 @@ public class UnifiedTo {
 
     public File file() {
         return file;
-    }
-
-
-    public Change change() {
-        return change;
     }
 
 
@@ -2111,6 +2135,10 @@ public class UnifiedTo {
         this.performance = new Performance(sdkConfiguration);
         this.cycle = new Cycle(sdkConfiguration);
         this.feedback = new Feedback(sdkConfiguration);
+        this.plm = new Plm(sdkConfiguration);
+        this.bomline = new Bomline(sdkConfiguration);
+        this.change = new Change(sdkConfiguration);
+        this.part = new Part(sdkConfiguration);
         this.conversation = new Conversation(sdkConfiguration);
         this.guest = new Guest(sdkConfiguration);
         this.listing = new Listing(sdkConfiguration);
@@ -2135,7 +2163,6 @@ public class UnifiedTo {
         this.post = new Post(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
-        this.change = new Change(sdkConfiguration);
         this.ticketing = new Ticketing(sdkConfiguration);
         this.customer = new Customer(sdkConfiguration);
         this.note = new Note(sdkConfiguration);

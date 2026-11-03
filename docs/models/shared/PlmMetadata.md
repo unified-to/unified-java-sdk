@@ -1,0 +1,13 @@
+# PlmMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [Optional\<PlmMetadataExtraData>](../../models/shared/PlmMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [Optional\<PlmMetadataFormat>](../../models/shared/PlmMetadataFormat.md)       | :heavy_minus_sign:                                                             | The data type of the custom field, which determines how `value` is formatted.  |
+| `id`                                                                           | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | The ID of the custom field definition (from the metadata/metadata endpoint).   |
+| `namespace`                                                                    | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | The integration's API name (key) of an existing custom field.                  |
+| `value`                                                                        | [Optional\<PlmMetadataValue>](../../models/shared/PlmMetadataValue.md)         | :heavy_minus_sign:                                                             | The field's value, typed by `format`.                                          |

@@ -77,8 +77,8 @@ public class SocialPost {
      * The post this one replies to or references
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_post_id")
-    private String parentPostId;
+    @JsonProperty("parent_id")
+    private String parentId;
 
     /**
      * The social profile (page/handle/listing) that owns this post
@@ -146,7 +146,7 @@ public class SocialPost {
             @JsonProperty("media") @Nullable List<SocialMedia> media,
             @JsonProperty("metadata") @Nullable List<SocialMetadata> metadata,
             @JsonProperty("metrics") @Nullable PropertySocialPostMetrics metrics,
-            @JsonProperty("parent_post_id") @Nullable String parentPostId,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("profile_id") @Nullable String profileId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("scheduled_at") @Nullable OffsetDateTime scheduledAt,
@@ -163,7 +163,7 @@ public class SocialPost {
         this.media = media;
         this.metadata = metadata;
         this.metrics = metrics;
-        this.parentPostId = parentPostId;
+        this.parentId = parentId;
         this.profileId = profileId;
         this.raw = raw;
         this.scheduledAt = scheduledAt;
@@ -239,8 +239,8 @@ public class SocialPost {
     /**
      * The post this one replies to or references
      */
-    public Optional<String> parentPostId() {
-        return Optional.ofNullable(this.parentPostId);
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -376,8 +376,8 @@ public class SocialPost {
     /**
      * The post this one replies to or references
      */
-    public SocialPost withParentPostId(@Nullable String parentPostId) {
-        this.parentPostId = parentPostId;
+    public SocialPost withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -472,7 +472,7 @@ public class SocialPost {
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.metrics, other.metrics) &&
-            Utils.enhancedDeepEquals(this.parentPostId, other.parentPostId) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.profileId, other.profileId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.scheduledAt, other.scheduledAt) &&
@@ -488,7 +488,7 @@ public class SocialPost {
         return Utils.enhancedHash(
             body, callToAction, createdAt,
             id, language, media,
-            metadata, metrics, parentPostId,
+            metadata, metrics, parentId,
             profileId, raw, scheduledAt,
             status, title, type,
             updatedAt, url);
@@ -505,7 +505,7 @@ public class SocialPost {
                 "media", media,
                 "metadata", metadata,
                 "metrics", metrics,
-                "parentPostId", parentPostId,
+                "parentId", parentId,
                 "profileId", profileId,
                 "raw", raw,
                 "scheduledAt", scheduledAt,
@@ -535,7 +535,7 @@ public class SocialPost {
 
         private PropertySocialPostMetrics metrics;
 
-        private String parentPostId;
+        private String parentId;
 
         private String profileId;
 
@@ -621,8 +621,8 @@ public class SocialPost {
         /**
          * The post this one replies to or references
          */
-        public Builder parentPostId(@Nullable String parentPostId) {
-            this.parentPostId = parentPostId;
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -694,7 +694,7 @@ public class SocialPost {
             return new SocialPost(
                 body, callToAction, createdAt,
                 id, language, media,
-                metadata, metrics, parentPostId,
+                metadata, metrics, parentId,
                 profileId, raw, scheduledAt,
                 status, title, type,
                 updatedAt, url);

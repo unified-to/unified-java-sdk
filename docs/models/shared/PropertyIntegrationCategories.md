@@ -55,3 +55,4 @@ PropertyIntegrationCategories custom = PropertyIntegrationCategories.of("custom_
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
+| `PLM`          | plm            |

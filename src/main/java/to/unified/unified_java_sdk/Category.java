@@ -15,12 +15,18 @@ import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResp
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPlmCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCategoryResponse;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesResponse;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPlmCategoriesResponse;
 import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListTicketingCategoriesResponse;
@@ -45,8 +51,10 @@ import to.unified.unified_java_sdk.models.operations.UpdateTicketingCategoryResp
 import to.unified.unified_java_sdk.operations.CreateAccountingCategory;
 import to.unified.unified_java_sdk.operations.CreateTicketingCategory;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
+import to.unified.unified_java_sdk.operations.GetPlmCategory;
 import to.unified.unified_java_sdk.operations.GetTicketingCategory;
 import to.unified.unified_java_sdk.operations.ListAccountingCategories;
+import to.unified.unified_java_sdk.operations.ListPlmCategories;
 import to.unified.unified_java_sdk.operations.ListTicketingCategories;
 import to.unified.unified_java_sdk.operations.PatchAccountingCategory;
 import to.unified.unified_java_sdk.operations.PatchTicketingCategory;
@@ -163,6 +171,34 @@ public class Category {
     /**
      * Retrieve a category
      * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPlmCategoryRequestBuilder getPlmCategory() {
+        return new GetPlmCategoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a category
+     * 
+     * <p>Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmCategoryResponse getPlmCategory(@Nonnull GetPlmCategoryRequest request) {
+        RequestOperation<GetPlmCategoryRequest, GetPlmCategoryResponse> operation
+              = new GetPlmCategory.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a category
+     * 
      * <p>Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -221,6 +257,42 @@ public class Category {
     public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
               = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPlmCategoriesRequestBuilder listPlmCategories() {
+        return new ListPlmCategoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all categories
+     * 
+     * <p>Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmCategoriesResponse listPlmCategories(@Nonnull ListPlmCategoriesRequest request) {
+        RequestOperation<ListPlmCategoriesRequest, ListPlmCategoriesResponse> operation
+              = new ListPlmCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -47,7 +47,8 @@ public enum Categories {
     LEGAL("legal"),
     COMPUTE("compute"),
     HEALTHCARE("healthcare"),
-    PROPERTY("property");
+    PROPERTY("property"),
+    PLM("plm");
 
     @JsonValue
     private final String value;

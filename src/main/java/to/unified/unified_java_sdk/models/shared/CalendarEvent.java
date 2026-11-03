@@ -125,11 +125,11 @@ public class CalendarEvent {
     private String recurringEventId;
 
     /**
-     * pointers to Calendar Rooms booked for this event
+     * Calendar Rooms booked for this event
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("room_ids")
-    private List<String> roomIds;
+    @JsonProperty("rooms")
+    private List<CalendarReference> rooms;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -191,7 +191,7 @@ public class CalendarEvent {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("recurrence") @Nullable List<CalendarEventRecurrence> recurrence,
             @JsonProperty("recurring_event_id") @Nullable String recurringEventId,
-            @JsonProperty("room_ids") @Nullable List<String> roomIds,
+            @JsonProperty("rooms") @Nullable List<CalendarReference> rooms,
             @JsonProperty("send_notifications") @Nullable Boolean sendNotifications,
             @JsonProperty("start_at") @Nullable String startAt,
             @JsonProperty("status") @Nullable CalendarEventStatus status,
@@ -218,7 +218,7 @@ public class CalendarEvent {
         this.raw = raw;
         this.recurrence = recurrence;
         this.recurringEventId = recurringEventId;
-        this.roomIds = roomIds;
+        this.rooms = rooms;
         this.sendNotifications = sendNotifications;
         this.startAt = startAt;
         this.status = status;
@@ -332,10 +332,10 @@ public class CalendarEvent {
     }
 
     /**
-     * pointers to Calendar Rooms booked for this event
+     * Calendar Rooms booked for this event
      */
-    public Optional<List<String>> roomIds() {
-        return Optional.ofNullable(this.roomIds);
+    public Optional<List<CalendarReference>> rooms() {
+        return Optional.ofNullable(this.rooms);
     }
 
     public Optional<Boolean> sendNotifications() {
@@ -507,10 +507,10 @@ public class CalendarEvent {
 
 
     /**
-     * pointers to Calendar Rooms booked for this event
+     * Calendar Rooms booked for this event
      */
-    public CalendarEvent withRoomIds(@Nullable List<String> roomIds) {
-        this.roomIds = roomIds;
+    public CalendarEvent withRooms(@Nullable List<CalendarReference> rooms) {
+        this.rooms = rooms;
         return this;
     }
 
@@ -592,7 +592,7 @@ public class CalendarEvent {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.recurrence, other.recurrence) &&
             Utils.enhancedDeepEquals(this.recurringEventId, other.recurringEventId) &&
-            Utils.enhancedDeepEquals(this.roomIds, other.roomIds) &&
+            Utils.enhancedDeepEquals(this.rooms, other.rooms) &&
             Utils.enhancedDeepEquals(this.sendNotifications, other.sendNotifications) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -611,7 +611,7 @@ public class CalendarEvent {
             isFree, isPrivate, location,
             matterId, metadata, notes,
             organizer, raw, recurrence,
-            recurringEventId, roomIds, sendNotifications,
+            recurringEventId, rooms, sendNotifications,
             startAt, status, subject,
             timezone, updatedAt, webUrl);
     }
@@ -638,7 +638,7 @@ public class CalendarEvent {
                 "raw", raw,
                 "recurrence", recurrence,
                 "recurringEventId", recurringEventId,
-                "roomIds", roomIds,
+                "rooms", rooms,
                 "sendNotifications", sendNotifications,
                 "startAt", startAt,
                 "status", status,
@@ -689,7 +689,7 @@ public class CalendarEvent {
 
         private String recurringEventId;
 
-        private List<String> roomIds;
+        private List<CalendarReference> rooms;
 
         private Boolean sendNotifications;
 
@@ -820,10 +820,10 @@ public class CalendarEvent {
         }
 
         /**
-         * pointers to Calendar Rooms booked for this event
+         * Calendar Rooms booked for this event
          */
-        public Builder roomIds(@Nullable List<String> roomIds) {
-            this.roomIds = roomIds;
+        public Builder rooms(@Nullable List<CalendarReference> rooms) {
+            this.rooms = rooms;
             return this;
         }
 
@@ -876,7 +876,7 @@ public class CalendarEvent {
                 isFree, isPrivate, location,
                 matterId, metadata, notes,
                 organizer, raw, recurrence,
-                recurringEventId, roomIds, sendNotifications,
+                recurringEventId, rooms, sendNotifications,
                 startAt, status, subject,
                 timezone, updatedAt, webUrl);
         }

@@ -15,6 +15,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRes
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreatePlmDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreatePlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
@@ -27,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRespon
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetPlmDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetPlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetPlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentResponse;
@@ -39,6 +45,9 @@ import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsResp
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListPlmDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPlmDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListPlmDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsResponse;
@@ -48,6 +57,9 @@ import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchPlmDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchPlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
@@ -66,29 +78,37 @@ import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdatePlmDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdatePlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
 import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisDocument;
+import to.unified.unified_java_sdk.operations.CreatePlmDocument;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
 import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHrisDocument;
+import to.unified.unified_java_sdk.operations.GetPlmDocument;
 import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
 import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisDocuments;
+import to.unified.unified_java_sdk.operations.ListPlmDocuments;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
 import to.unified.unified_java_sdk.operations.PatchHrisDocument;
+import to.unified.unified_java_sdk.operations.PatchPlmDocument;
 import to.unified.unified_java_sdk.operations.PatchSigningDocument;
 import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
 import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
 import to.unified.unified_java_sdk.operations.RemoveSigningDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
+import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -193,6 +213,34 @@ public class Document {
     public CreateHrisDocumentResponse createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
         RequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
               = new CreateHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @return The call builder
+     */
+    public CreatePlmDocumentRequestBuilder createPlmDocument() {
+        return new CreatePlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreatePlmDocumentResponse createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        RequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
+              = new CreatePlmDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -305,6 +353,34 @@ public class Document {
     public GetHrisDocumentResponse getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
         RequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
               = new GetHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetPlmDocumentRequestBuilder getPlmDocument() {
+        return new GetPlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetPlmDocumentResponse getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        RequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
+              = new GetPlmDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -447,6 +523,42 @@ public class Document {
     /**
      * List all documents
      * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListPlmDocumentsRequestBuilder listPlmDocuments() {
+        return new ListPlmDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListPlmDocumentsResponse listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        RequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
+              = new ListPlmDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all documents
+     * 
      * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
      * page through them with `limit` and `offset` (the default and maximum page size depend on the
      * integration). Use `fields` to return only the fields you need and reduce the response size.
@@ -533,6 +645,34 @@ public class Document {
     public PatchHrisDocumentResponse patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
         RequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
               = new PatchHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @return The call builder
+     */
+    public PatchPlmDocumentRequestBuilder patchPlmDocument() {
+        return new PatchPlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchPlmDocumentResponse patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        RequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
+              = new PatchPlmDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -695,6 +835,34 @@ public class Document {
     public UpdateHrisDocumentResponse updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
         RequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
               = new UpdateHrisDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @return The call builder
+     */
+    public UpdatePlmDocumentRequestBuilder updatePlmDocument() {
+        return new UpdatePlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdatePlmDocumentResponse updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        RequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
+              = new UpdatePlmDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

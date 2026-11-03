@@ -10,23 +10,28 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreatePlmDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHealthcareDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetPlmDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHealthcareDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListPlmDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchPlmDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdatePlmDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsDocumentResponse;
@@ -34,6 +39,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocum
 import to.unified.unified_java_sdk.models.operations.async.CreateHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreatePlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreatePlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsDocumentRequestBuilder;
@@ -42,6 +49,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocument
 import to.unified.unified_java_sdk.models.operations.async.GetHealthcareDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetPlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetPlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsDocumentsRequestBuilder;
@@ -50,12 +59,16 @@ import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumen
 import to.unified.unified_java_sdk.models.operations.async.ListHealthcareDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListPlmDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListPlmDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListSigningDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchPlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchPlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsDocumentRequestBuilder;
@@ -68,28 +81,35 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocumentRequ
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePlmDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdatePlmDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
 import to.unified.unified_java_sdk.operations.CreateHealthcareDocument;
 import to.unified.unified_java_sdk.operations.CreateHrisDocument;
+import to.unified.unified_java_sdk.operations.CreatePlmDocument;
 import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
 import to.unified.unified_java_sdk.operations.GetHealthcareDocument;
 import to.unified.unified_java_sdk.operations.GetHrisDocument;
+import to.unified.unified_java_sdk.operations.GetPlmDocument;
 import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
 import to.unified.unified_java_sdk.operations.ListHealthcareDocuments;
 import to.unified.unified_java_sdk.operations.ListHrisDocuments;
+import to.unified.unified_java_sdk.operations.ListPlmDocuments;
 import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
 import to.unified.unified_java_sdk.operations.PatchHrisDocument;
+import to.unified.unified_java_sdk.operations.PatchPlmDocument;
 import to.unified.unified_java_sdk.operations.PatchSigningDocument;
 import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
 import to.unified.unified_java_sdk.operations.RemoveHrisDocument;
 import to.unified.unified_java_sdk.operations.RemoveSigningDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
 import to.unified.unified_java_sdk.operations.UpdateHrisDocument;
+import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
 import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -196,6 +216,35 @@ public class AsyncDocument {
     public CompletableFuture<CreateHrisDocumentResponse> createHrisDocument(@Nonnull CreateHrisDocumentRequest request) {
         AsyncRequestOperation<CreateHrisDocumentRequest, CreateHrisDocumentResponse> operation
               = new CreateHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @return The async call builder
+     */
+    public CreatePlmDocumentRequestBuilder createPlmDocument() {
+        return new CreatePlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * <p>Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped
+     * to the provider's API. Returns the created PlmDocument.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<CreatePlmDocumentResponse> createPlmDocument(@Nonnull CreatePlmDocumentRequest request) {
+        AsyncRequestOperation<CreatePlmDocumentRequest, CreatePlmDocumentResponse> operation
+              = new CreatePlmDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -312,6 +361,35 @@ public class AsyncDocument {
     public CompletableFuture<GetHrisDocumentResponse> getHrisDocument(@Nonnull GetHrisDocumentRequest request) {
         AsyncRequestOperation<GetHrisDocumentRequest, GetHrisDocumentResponse> operation
               = new GetHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetPlmDocumentRequestBuilder getPlmDocument() {
+        return new GetPlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * <p>Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<GetPlmDocumentResponse> getPlmDocument(@Nonnull GetPlmDocumentRequest request) {
+        AsyncRequestOperation<GetPlmDocumentRequest, GetPlmDocumentResponse> operation
+              = new GetPlmDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -460,6 +538,43 @@ public class AsyncDocument {
     /**
      * List all documents
      * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListPlmDocumentsRequestBuilder listPlmDocuments() {
+        return new ListPlmDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * <p>Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListPlmDocumentsResponse>} - The async response
+     */
+    public CompletableFuture<ListPlmDocumentsResponse> listPlmDocuments(@Nonnull ListPlmDocumentsRequest request) {
+        AsyncRequestOperation<ListPlmDocumentsRequest, ListPlmDocumentsResponse> operation
+              = new ListPlmDocuments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all documents
+     * 
      * <p>Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then
      * page through them with `limit` and `offset` (the default and maximum page size depend on the
      * integration). Use `fields` to return only the fields you need and reduce the response size.
@@ -547,6 +662,35 @@ public class AsyncDocument {
     public CompletableFuture<PatchHrisDocumentResponse> patchHrisDocument(@Nonnull PatchHrisDocumentRequest request) {
         AsyncRequestOperation<PatchHrisDocumentRequest, PatchHrisDocumentResponse> operation
               = new PatchHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchPlmDocumentRequestBuilder patchPlmDocument() {
+        return new PatchPlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchPlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<PatchPlmDocumentResponse> patchPlmDocument(@Nonnull PatchPlmDocumentRequest request) {
+        AsyncRequestOperation<PatchPlmDocumentRequest, PatchPlmDocumentResponse> operation
+              = new PatchPlmDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -715,6 +859,35 @@ public class AsyncDocument {
     public CompletableFuture<UpdateHrisDocumentResponse> updateHrisDocument(@Nonnull UpdateHrisDocumentRequest request) {
         AsyncRequestOperation<UpdateHrisDocumentRequest, UpdateHrisDocumentResponse> operation
               = new UpdateHrisDocument.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdatePlmDocumentRequestBuilder updatePlmDocument() {
+        return new UpdatePlmDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * <p>Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdatePlmDocumentResponse>} - The async response
+     */
+    public CompletableFuture<UpdatePlmDocumentResponse> updatePlmDocument(@Nonnull UpdatePlmDocumentRequest request) {
+        AsyncRequestOperation<UpdatePlmDocumentRequest, UpdatePlmDocumentResponse> operation
+              = new UpdatePlmDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

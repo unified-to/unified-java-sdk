@@ -447,6 +447,16 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions PROPERTY_REVIEW_WRITE = new PropertyConnectionPermissions("property_review_write");
     public static final PropertyConnectionPermissions PROPERTY_CONVERSATION_READ = new PropertyConnectionPermissions("property_conversation_read");
     public static final PropertyConnectionPermissions PROPERTY_CONVERSATION_WRITE = new PropertyConnectionPermissions("property_conversation_write");
+    public static final PropertyConnectionPermissions PLM_PART_READ = new PropertyConnectionPermissions("plm_part_read");
+    public static final PropertyConnectionPermissions PLM_PART_WRITE = new PropertyConnectionPermissions("plm_part_write");
+    public static final PropertyConnectionPermissions PLM_BOMLINE_READ = new PropertyConnectionPermissions("plm_bomline_read");
+    public static final PropertyConnectionPermissions PLM_BOMLINE_WRITE = new PropertyConnectionPermissions("plm_bomline_write");
+    public static final PropertyConnectionPermissions PLM_DOCUMENT_READ = new PropertyConnectionPermissions("plm_document_read");
+    public static final PropertyConnectionPermissions PLM_DOCUMENT_WRITE = new PropertyConnectionPermissions("plm_document_write");
+    public static final PropertyConnectionPermissions PLM_CHANGE_READ = new PropertyConnectionPermissions("plm_change_read");
+    public static final PropertyConnectionPermissions PLM_CHANGE_WRITE = new PropertyConnectionPermissions("plm_change_write");
+    public static final PropertyConnectionPermissions PLM_CATEGORY_READ = new PropertyConnectionPermissions("plm_category_read");
+    public static final PropertyConnectionPermissions PLM_CATEGORY_WRITE = new PropertyConnectionPermissions("plm_category_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -947,6 +957,16 @@ public class PropertyConnectionPermissions {
         map.put("property_review_write", PROPERTY_REVIEW_WRITE);
         map.put("property_conversation_read", PROPERTY_CONVERSATION_READ);
         map.put("property_conversation_write", PROPERTY_CONVERSATION_WRITE);
+        map.put("plm_part_read", PLM_PART_READ);
+        map.put("plm_part_write", PLM_PART_WRITE);
+        map.put("plm_bomline_read", PLM_BOMLINE_READ);
+        map.put("plm_bomline_write", PLM_BOMLINE_WRITE);
+        map.put("plm_document_read", PLM_DOCUMENT_READ);
+        map.put("plm_document_write", PLM_DOCUMENT_WRITE);
+        map.put("plm_change_read", PLM_CHANGE_READ);
+        map.put("plm_change_write", PLM_CHANGE_WRITE);
+        map.put("plm_category_read", PLM_CATEGORY_READ);
+        map.put("plm_category_write", PLM_CATEGORY_WRITE);
         return map;
     }
 
@@ -1379,6 +1399,16 @@ public class PropertyConnectionPermissions {
         map.put("property_review_write", PropertyConnectionPermissionsEnum.PROPERTY_REVIEW_WRITE);
         map.put("property_conversation_read", PropertyConnectionPermissionsEnum.PROPERTY_CONVERSATION_READ);
         map.put("property_conversation_write", PropertyConnectionPermissionsEnum.PROPERTY_CONVERSATION_WRITE);
+        map.put("plm_part_read", PropertyConnectionPermissionsEnum.PLM_PART_READ);
+        map.put("plm_part_write", PropertyConnectionPermissionsEnum.PLM_PART_WRITE);
+        map.put("plm_bomline_read", PropertyConnectionPermissionsEnum.PLM_BOMLINE_READ);
+        map.put("plm_bomline_write", PropertyConnectionPermissionsEnum.PLM_BOMLINE_WRITE);
+        map.put("plm_document_read", PropertyConnectionPermissionsEnum.PLM_DOCUMENT_READ);
+        map.put("plm_document_write", PropertyConnectionPermissionsEnum.PLM_DOCUMENT_WRITE);
+        map.put("plm_change_read", PropertyConnectionPermissionsEnum.PLM_CHANGE_READ);
+        map.put("plm_change_write", PropertyConnectionPermissionsEnum.PLM_CHANGE_WRITE);
+        map.put("plm_category_read", PropertyConnectionPermissionsEnum.PLM_CATEGORY_READ);
+        map.put("plm_category_write", PropertyConnectionPermissionsEnum.PLM_CATEGORY_WRITE);
         return map;
     }
     
@@ -1811,7 +1841,17 @@ public class PropertyConnectionPermissions {
         PROPERTY_REVIEW_READ("property_review_read"),
         PROPERTY_REVIEW_WRITE("property_review_write"),
         PROPERTY_CONVERSATION_READ("property_conversation_read"),
-        PROPERTY_CONVERSATION_WRITE("property_conversation_write"),;
+        PROPERTY_CONVERSATION_WRITE("property_conversation_write"),
+        PLM_PART_READ("plm_part_read"),
+        PLM_PART_WRITE("plm_part_write"),
+        PLM_BOMLINE_READ("plm_bomline_read"),
+        PLM_BOMLINE_WRITE("plm_bomline_write"),
+        PLM_DOCUMENT_READ("plm_document_read"),
+        PLM_DOCUMENT_WRITE("plm_document_write"),
+        PLM_CHANGE_READ("plm_change_read"),
+        PLM_CHANGE_WRITE("plm_change_write"),
+        PLM_CATEGORY_READ("plm_category_read"),
+        PLM_CATEGORY_WRITE("plm_category_write"),;
 
         private final String value;
 

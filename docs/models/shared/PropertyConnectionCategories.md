@@ -55,3 +55,4 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
+| `PLM`          | plm            |

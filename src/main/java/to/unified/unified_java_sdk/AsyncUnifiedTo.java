@@ -361,6 +361,14 @@ public class AsyncUnifiedTo {
 
     private final AsyncFeedback feedback;
 
+    private final AsyncPlm plm;
+
+    private final AsyncBomline bomline;
+
+    private final AsyncChange change;
+
+    private final AsyncPart part;
+
     private final AsyncConversation conversation;
 
     private final AsyncGuest guest;
@@ -408,8 +416,6 @@ public class AsyncUnifiedTo {
     private final AsyncStorage storage;
 
     private final AsyncFile file;
-
-    private final AsyncChange change;
 
     private final AsyncTicketing ticketing;
 
@@ -1149,6 +1155,22 @@ public class AsyncUnifiedTo {
         return feedback;
     }
 
+    public AsyncPlm plm() {
+        return plm;
+    }
+
+    public AsyncBomline bomline() {
+        return bomline;
+    }
+
+    public AsyncChange change() {
+        return change;
+    }
+
+    public AsyncPart part() {
+        return part;
+    }
+
     public AsyncConversation conversation() {
         return conversation;
     }
@@ -1243,10 +1265,6 @@ public class AsyncUnifiedTo {
 
     public AsyncFile file() {
         return file;
-    }
-
-    public AsyncChange change() {
-        return change;
     }
 
     public AsyncTicketing ticketing() {
@@ -1513,6 +1531,10 @@ public class AsyncUnifiedTo {
         this.performance = new AsyncPerformance(syncSDK.performance(), sdkConfiguration);
         this.cycle = new AsyncCycle(syncSDK.cycle(), sdkConfiguration);
         this.feedback = new AsyncFeedback(syncSDK.feedback(), sdkConfiguration);
+        this.plm = new AsyncPlm(syncSDK.plm(), sdkConfiguration);
+        this.bomline = new AsyncBomline(syncSDK.bomline(), sdkConfiguration);
+        this.change = new AsyncChange(syncSDK.change(), sdkConfiguration);
+        this.part = new AsyncPart(syncSDK.part(), sdkConfiguration);
         this.conversation = new AsyncConversation(syncSDK.conversation(), sdkConfiguration);
         this.guest = new AsyncGuest(syncSDK.guest(), sdkConfiguration);
         this.listing = new AsyncListing(syncSDK.listing(), sdkConfiguration);
@@ -1537,7 +1559,6 @@ public class AsyncUnifiedTo {
         this.post = new AsyncPost(syncSDK.post(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
-        this.change = new AsyncChange(syncSDK.change(), sdkConfiguration);
         this.ticketing = new AsyncTicketing(syncSDK.ticketing(), sdkConfiguration);
         this.customer = new AsyncCustomer(syncSDK.customer(), sdkConfiguration);
         this.note = new AsyncNote(syncSDK.note(), sdkConfiguration);
