@@ -36,6 +36,13 @@ public class ListUnifiedIntegrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
 
+    /**
+     * Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep
+     * the response small
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_types")
+    private List<String> objectTypes;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Double offset;
@@ -50,6 +57,12 @@ public class ListUnifiedIntegrationsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
 
+    /**
+     * Filter the results for only these integration types (e.g. hubspot,salesforce)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    private List<String> types;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private String updatedGte;
@@ -60,24 +73,29 @@ public class ListUnifiedIntegrationsRequest {
             @Nullable List<ListUnifiedIntegrationsQueryParamCategories> categories,
             @Nullable String env,
             @Nullable Double limit,
+            @Nullable List<String> objectTypes,
             @Nullable Double offset,
             @Nullable Boolean summary,
             @Nullable String type,
+            @Nullable List<String> types,
             @Nullable String updatedGte) {
         this.active = active;
         this.categories = categories;
         this.env = env;
         this.limit = limit;
+        this.objectTypes = objectTypes;
         this.offset = offset;
         this.summary = summary;
         this.type = type;
+        this.types = types;
         this.updatedGte = updatedGte;
     }
     
     public ListUnifiedIntegrationsRequest() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -102,6 +120,14 @@ public class ListUnifiedIntegrationsRequest {
         return Optional.ofNullable(this.limit);
     }
 
+    /**
+     * Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep
+     * the response small
+     */
+    public Optional<List<String>> objectTypes() {
+        return Optional.ofNullable(this.objectTypes);
+    }
+
     public Optional<Double> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -115,6 +141,13 @@ public class ListUnifiedIntegrationsRequest {
      */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
+    }
+
+    /**
+     * Filter the results for only these integration types (e.g. hubspot,salesforce)
+     */
+    public Optional<List<String>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     public Optional<String> updatedGte() {
@@ -156,6 +189,16 @@ public class ListUnifiedIntegrationsRequest {
     }
 
 
+    /**
+     * Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep
+     * the response small
+     */
+    public ListUnifiedIntegrationsRequest withObjectTypes(@Nullable List<String> objectTypes) {
+        this.objectTypes = objectTypes;
+        return this;
+    }
+
+
     public ListUnifiedIntegrationsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
@@ -173,6 +216,15 @@ public class ListUnifiedIntegrationsRequest {
      */
     public ListUnifiedIntegrationsRequest withType(@Nullable String type) {
         this.type = type;
+        return this;
+    }
+
+
+    /**
+     * Filter the results for only these integration types (e.g. hubspot,salesforce)
+     */
+    public ListUnifiedIntegrationsRequest withTypes(@Nullable List<String> types) {
+        this.types = types;
         return this;
     }
 
@@ -197,9 +249,11 @@ public class ListUnifiedIntegrationsRequest {
             Utils.enhancedDeepEquals(this.categories, other.categories) &&
             Utils.enhancedDeepEquals(this.env, other.env) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.objectTypes, other.objectTypes) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.summary, other.summary) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
+            Utils.enhancedDeepEquals(this.types, other.types) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -207,8 +261,9 @@ public class ListUnifiedIntegrationsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             active, categories, env,
-            limit, offset, summary,
-            type, updatedGte);
+            limit, objectTypes, offset,
+            summary, type, types,
+            updatedGte);
     }
     
     @Override
@@ -218,9 +273,11 @@ public class ListUnifiedIntegrationsRequest {
                 "categories", categories,
                 "env", env,
                 "limit", limit,
+                "objectTypes", objectTypes,
                 "offset", offset,
                 "summary", summary,
                 "type", type,
+                "types", types,
                 "updatedGte", updatedGte);
     }
 
@@ -235,11 +292,15 @@ public class ListUnifiedIntegrationsRequest {
 
         private Double limit;
 
+        private List<String> objectTypes;
+
         private Double offset;
 
         private Boolean summary;
 
         private String type;
+
+        private List<String> types;
 
         private String updatedGte;
 
@@ -273,6 +334,15 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+        /**
+         * Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep
+         * the response small
+         */
+        public Builder objectTypes(@Nullable List<String> objectTypes) {
+            this.objectTypes = objectTypes;
+            return this;
+        }
+
         public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
@@ -291,6 +361,14 @@ public class ListUnifiedIntegrationsRequest {
             return this;
         }
 
+        /**
+         * Filter the results for only these integration types (e.g. hubspot,salesforce)
+         */
+        public Builder types(@Nullable List<String> types) {
+            this.types = types;
+            return this;
+        }
+
         public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
@@ -299,8 +377,9 @@ public class ListUnifiedIntegrationsRequest {
         public ListUnifiedIntegrationsRequest build() {
             return new ListUnifiedIntegrationsRequest(
                 active, categories, env,
-                limit, offset, summary,
-                type, updatedGte);
+                limit, objectTypes, offset,
+                summary, type, types,
+                updatedGte);
         }
 
     }
