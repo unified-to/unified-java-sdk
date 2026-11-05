@@ -164,6 +164,8 @@ public class WebhookObjectType {
     public static final WebhookObjectType CALENDAR_LINK = new WebhookObjectType("calendar_link");
     public static final WebhookObjectType CALENDAR_RECORDING = new WebhookObjectType("calendar_recording");
     public static final WebhookObjectType CALENDAR_WEBINAR = new WebhookObjectType("calendar_webinar");
+    public static final WebhookObjectType CALENDAR_BOT = new WebhookObjectType("calendar_bot");
+    public static final WebhookObjectType CALENDAR_BOTEVENT = new WebhookObjectType("calendar_botevent");
     public static final WebhookObjectType CALENDAR_ROOM = new WebhookObjectType("calendar_room");
     public static final WebhookObjectType CALENDAR_LOCATION = new WebhookObjectType("calendar_location");
     public static final WebhookObjectType ADS_ORGANIZATION = new WebhookObjectType("ads_organization");
@@ -472,6 +474,8 @@ public class WebhookObjectType {
         map.put("calendar_link", CALENDAR_LINK);
         map.put("calendar_recording", CALENDAR_RECORDING);
         map.put("calendar_webinar", CALENDAR_WEBINAR);
+        map.put("calendar_bot", CALENDAR_BOT);
+        map.put("calendar_botevent", CALENDAR_BOTEVENT);
         map.put("calendar_room", CALENDAR_ROOM);
         map.put("calendar_location", CALENDAR_LOCATION);
         map.put("ads_organization", ADS_ORGANIZATION);
@@ -712,6 +716,8 @@ public class WebhookObjectType {
         map.put("calendar_link", WebhookObjectTypeEnum.CALENDAR_LINK);
         map.put("calendar_recording", WebhookObjectTypeEnum.CALENDAR_RECORDING);
         map.put("calendar_webinar", WebhookObjectTypeEnum.CALENDAR_WEBINAR);
+        map.put("calendar_bot", WebhookObjectTypeEnum.CALENDAR_BOT);
+        map.put("calendar_botevent", WebhookObjectTypeEnum.CALENDAR_BOTEVENT);
         map.put("calendar_room", WebhookObjectTypeEnum.CALENDAR_ROOM);
         map.put("calendar_location", WebhookObjectTypeEnum.CALENDAR_LOCATION);
         map.put("ads_organization", WebhookObjectTypeEnum.ADS_ORGANIZATION);
@@ -953,6 +959,8 @@ public class WebhookObjectType {
         CALENDAR_LINK("calendar_link"),
         CALENDAR_RECORDING("calendar_recording"),
         CALENDAR_WEBINAR("calendar_webinar"),
+        CALENDAR_BOT("calendar_bot"),
+        CALENDAR_BOTEVENT("calendar_botevent"),
         CALENDAR_ROOM("calendar_room"),
         CALENDAR_LOCATION("calendar_location"),
         ADS_ORGANIZATION("ads_organization"),

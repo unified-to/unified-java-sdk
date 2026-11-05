@@ -215,6 +215,9 @@ public class UnifiedTo {
     private final Calendar calendar;
 
 
+    private final Bot bot;
+
+
     private final Busy busy;
 
 
@@ -997,6 +1000,11 @@ public class UnifiedTo {
 
     public Calendar calendar() {
         return calendar;
+    }
+
+
+    public Bot bot() {
+        return bot;
     }
 
 
@@ -2019,6 +2027,7 @@ public class UnifiedTo {
         this.job = new Job(sdkConfiguration);
         this.scorecard = new Scorecard(sdkConfiguration);
         this.calendar = new Calendar(sdkConfiguration);
+        this.bot = new Bot(sdkConfiguration);
         this.busy = new Busy(sdkConfiguration);
         this.link = new Link(sdkConfiguration);
         this.location = new Location(sdkConfiguration);

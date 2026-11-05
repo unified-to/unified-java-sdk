@@ -129,6 +129,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncCalendar calendar;
 
+    private final AsyncBot bot;
+
     private final AsyncBusy busy;
 
     private final AsyncLink link;
@@ -689,6 +691,10 @@ public class AsyncUnifiedTo {
 
     public AsyncCalendar calendar() {
         return calendar;
+    }
+
+    public AsyncBot bot() {
+        return bot;
     }
 
     public AsyncBusy busy() {
@@ -1415,6 +1421,7 @@ public class AsyncUnifiedTo {
         this.job = new AsyncJob(syncSDK.job(), sdkConfiguration);
         this.scorecard = new AsyncScorecard(syncSDK.scorecard(), sdkConfiguration);
         this.calendar = new AsyncCalendar(syncSDK.calendar(), sdkConfiguration);
+        this.bot = new AsyncBot(syncSDK.bot(), sdkConfiguration);
         this.busy = new AsyncBusy(syncSDK.busy(), sdkConfiguration);
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
         this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);

@@ -70,7 +70,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("6a5efd36-5765-4e82-9cf5-a70bbd813312")
+                    .id("a6443ab2-3700-4f71-92c9-2f2f1cee9ee7")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -86,7 +86,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-11T15:42:14.942Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-12T13:37:31.770Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")
@@ -293,7 +293,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("b732acd1-0e42-4699-bf6b-2fe79628c70c")
+                    .id("08faa2ba-96a1-49b3-84f6-e78262fd8e59")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -309,7 +309,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-11T15:42:14.977Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-12T13:37:31.806Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")
@@ -458,7 +458,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("b732acd1-0e42-4699-bf6b-2fe79628c70c")
+                    .id("08faa2ba-96a1-49b3-84f6-e78262fd8e59")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -474,7 +474,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-11T15:42:14.977Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-12T13:37:31.806Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")

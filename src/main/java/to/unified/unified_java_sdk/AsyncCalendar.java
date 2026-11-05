@@ -7,10 +7,12 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarLinkRequest;
@@ -18,6 +20,7 @@ import to.unified.unified_java_sdk.models.operations.GetCalendarLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRoomRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarBotsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarCalendarsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
@@ -26,18 +29,23 @@ import to.unified.unified_java_sdk.models.operations.ListCalendarLocationsReques
 import to.unified.unified_java_sdk.models.operations.ListCalendarRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarRoomsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarBotRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarBotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateCalendarBotResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarCalendarResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarEventRequestBuilder;
@@ -46,6 +54,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkReq
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarLinkResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarBotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCalendarBotResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarCalendarResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarEventRequestBuilder;
@@ -60,6 +70,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetCalendarRoomReques
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarRoomResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBotsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCalendarBotsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarBusiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarCalendarsRequestBuilder;
@@ -76,6 +88,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListCalendarRoomsRequ
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarRoomsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinarsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarWebinarsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarBotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchCalendarBotResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarCalendarResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventRequestBuilder;
@@ -84,6 +98,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkRequ
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarLinkResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarBotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarBotResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarCalendarResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarEventRequestBuilder;
@@ -92,6 +108,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkReq
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarLinkResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarBotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarBotResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarCalendarResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarEventRequestBuilder;
@@ -100,10 +118,12 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkReq
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarLinkResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCalendarWebinarResponse;
+import to.unified.unified_java_sdk.operations.CreateCalendarBot;
 import to.unified.unified_java_sdk.operations.CreateCalendarCalendar;
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
 import to.unified.unified_java_sdk.operations.CreateCalendarLink;
 import to.unified.unified_java_sdk.operations.CreateCalendarWebinar;
+import to.unified.unified_java_sdk.operations.GetCalendarBot;
 import to.unified.unified_java_sdk.operations.GetCalendarCalendar;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarLink;
@@ -111,6 +131,7 @@ import to.unified.unified_java_sdk.operations.GetCalendarLocation;
 import to.unified.unified_java_sdk.operations.GetCalendarRecording;
 import to.unified.unified_java_sdk.operations.GetCalendarRoom;
 import to.unified.unified_java_sdk.operations.GetCalendarWebinar;
+import to.unified.unified_java_sdk.operations.ListCalendarBots;
 import to.unified.unified_java_sdk.operations.ListCalendarBusies;
 import to.unified.unified_java_sdk.operations.ListCalendarCalendars;
 import to.unified.unified_java_sdk.operations.ListCalendarEvents;
@@ -119,14 +140,17 @@ import to.unified.unified_java_sdk.operations.ListCalendarLocations;
 import to.unified.unified_java_sdk.operations.ListCalendarRecordings;
 import to.unified.unified_java_sdk.operations.ListCalendarRooms;
 import to.unified.unified_java_sdk.operations.ListCalendarWebinars;
+import to.unified.unified_java_sdk.operations.PatchCalendarBot;
 import to.unified.unified_java_sdk.operations.PatchCalendarCalendar;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
 import to.unified.unified_java_sdk.operations.PatchCalendarLink;
 import to.unified.unified_java_sdk.operations.PatchCalendarWebinar;
+import to.unified.unified_java_sdk.operations.RemoveCalendarBot;
 import to.unified.unified_java_sdk.operations.RemoveCalendarCalendar;
 import to.unified.unified_java_sdk.operations.RemoveCalendarEvent;
 import to.unified.unified_java_sdk.operations.RemoveCalendarLink;
 import to.unified.unified_java_sdk.operations.RemoveCalendarWebinar;
+import to.unified.unified_java_sdk.operations.UpdateCalendarBot;
 import to.unified.unified_java_sdk.operations.UpdateCalendarCalendar;
 import to.unified.unified_java_sdk.operations.UpdateCalendarEvent;
 import to.unified.unified_java_sdk.operations.UpdateCalendarLink;
@@ -151,6 +175,35 @@ public class AsyncCalendar {
      */
     public Calendar sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a bot
+     * 
+     * <p>Creates a CalendarBot. Provide the unified CalendarBot fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarBot.
+     * 
+     * @return The async call builder
+     */
+    public CreateCalendarBotRequestBuilder createCalendarBot() {
+        return new CreateCalendarBotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a bot
+     * 
+     * <p>Creates a CalendarBot. Provide the unified CalendarBot fields in the request body; they are mapped
+     * to the provider's API. Returns the created CalendarBot.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateCalendarBotResponse>} - The async response
+     */
+    public CompletableFuture<CreateCalendarBotResponse> createCalendarBot(@Nonnull CreateCalendarBotRequest request) {
+        AsyncRequestOperation<CreateCalendarBotRequest, CreateCalendarBotResponse> operation
+              = new CreateCalendarBot.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -265,6 +318,35 @@ public class AsyncCalendar {
     public CompletableFuture<CreateCalendarWebinarResponse> createCalendarWebinar(@Nonnull CreateCalendarWebinarRequest request) {
         AsyncRequestOperation<CreateCalendarWebinarRequest, CreateCalendarWebinarResponse> operation
               = new CreateCalendarWebinar.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a bot
+     * 
+     * <p>Retrieves a single CalendarBot by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetCalendarBotRequestBuilder getCalendarBot() {
+        return new GetCalendarBotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a bot
+     * 
+     * <p>Retrieves a single CalendarBot by its `id`. Obtain `id` values from the corresponding list endpoint.
+     * Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetCalendarBotResponse>} - The async response
+     */
+    public CompletableFuture<GetCalendarBotResponse> getCalendarBot(@Nonnull GetCalendarBotRequest request) {
+        AsyncRequestOperation<GetCalendarBotRequest, GetCalendarBotResponse> operation
+              = new GetCalendarBot.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -468,6 +550,43 @@ public class AsyncCalendar {
     public CompletableFuture<GetCalendarWebinarResponse> getCalendarWebinar(@Nonnull GetCalendarWebinarRequest request) {
         AsyncRequestOperation<GetCalendarWebinarRequest, GetCalendarWebinarResponse> operation
               = new GetCalendarWebinar.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all bots
+     * 
+     * <p>Returns a list of CalendarBots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListCalendarBotsRequestBuilder listCalendarBots() {
+        return new ListCalendarBotsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all bots
+     * 
+     * <p>Returns a list of CalendarBots. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCalendarBotsResponse>} - The async response
+     */
+    public CompletableFuture<ListCalendarBotsResponse> listCalendarBots(@Nonnull ListCalendarBotsRequest request) {
+        AsyncRequestOperation<ListCalendarBotsRequest, ListCalendarBotsResponse> operation
+              = new ListCalendarBots.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -770,6 +889,35 @@ public class AsyncCalendar {
 
 
     /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchCalendarBotRequestBuilder patchCalendarBot() {
+        return new PatchCalendarBotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchCalendarBotResponse>} - The async response
+     */
+    public CompletableFuture<PatchCalendarBotResponse> patchCalendarBot(@Nonnull PatchCalendarBotRequest request) {
+        AsyncRequestOperation<PatchCalendarBotRequest, PatchCalendarBotResponse> operation
+              = new PatchCalendarBot.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a calendar
      * 
      * <p>Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to
@@ -886,6 +1034,33 @@ public class AsyncCalendar {
 
 
     /**
+     * Remove a bot
+     * 
+     * <p>Deletes the CalendarBot identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveCalendarBotRequestBuilder removeCalendarBot() {
+        return new RemoveCalendarBotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a bot
+     * 
+     * <p>Deletes the CalendarBot identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveCalendarBotResponse>} - The async response
+     */
+    public CompletableFuture<RemoveCalendarBotResponse> removeCalendarBot(@Nonnull RemoveCalendarBotRequest request) {
+        AsyncRequestOperation<RemoveCalendarBotRequest, RemoveCalendarBotResponse> operation
+              = new RemoveCalendarBot.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove a calendar
      * 
      * <p>Deletes the CalendarCalendar identified by `id`.
@@ -988,6 +1163,35 @@ public class AsyncCalendar {
     public CompletableFuture<RemoveCalendarWebinarResponse> removeCalendarWebinar(@Nonnull RemoveCalendarWebinarRequest request) {
         AsyncRequestOperation<RemoveCalendarWebinarRequest, RemoveCalendarWebinarResponse> operation
               = new RemoveCalendarWebinar.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateCalendarBotRequestBuilder updateCalendarBot() {
+        return new UpdateCalendarBotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bot
+     * 
+     * <p>Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the
+     * request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateCalendarBotResponse>} - The async response
+     */
+    public CompletableFuture<UpdateCalendarBotResponse> updateCalendarBot(@Nonnull UpdateCalendarBotRequest request) {
+        AsyncRequestOperation<UpdateCalendarBotRequest, UpdateCalendarBotResponse> operation
+              = new UpdateCalendarBot.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
