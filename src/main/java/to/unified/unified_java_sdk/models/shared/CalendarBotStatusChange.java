@@ -23,7 +23,9 @@ public class CalendarBotStatusChange {
     @JsonProperty("changed_at")
     private OffsetDateTime changedAt;
 
-
+    /**
+     * Human-readable status message
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     private String message;
@@ -33,7 +35,9 @@ public class CalendarBotStatusChange {
     @JsonProperty("status")
     private CalendarBotStatusChangeStatus status;
 
-
+    /**
+     * Platform-specific status sub-code
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_code")
     private String subCode;
@@ -62,6 +66,9 @@ public class CalendarBotStatusChange {
         return Optional.ofNullable(this.changedAt);
     }
 
+    /**
+     * Human-readable status message
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -70,6 +77,9 @@ public class CalendarBotStatusChange {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * Platform-specific status sub-code
+     */
     public Optional<String> subCode() {
         return Optional.ofNullable(this.subCode);
     }
@@ -88,6 +98,9 @@ public class CalendarBotStatusChange {
     }
 
 
+    /**
+     * Human-readable status message
+     */
     public CalendarBotStatusChange withMessage(@Nullable String message) {
         this.message = message;
         return this;
@@ -100,6 +113,9 @@ public class CalendarBotStatusChange {
     }
 
 
+    /**
+     * Platform-specific status sub-code
+     */
     public CalendarBotStatusChange withSubCode(@Nullable String subCode) {
         this.subCode = subCode;
         return this;
@@ -161,6 +177,9 @@ public class CalendarBotStatusChange {
             return this;
         }
 
+        /**
+         * Human-readable status message
+         */
         public Builder message(@Nullable String message) {
             this.message = message;
             return this;
@@ -171,6 +190,9 @@ public class CalendarBotStatusChange {
             return this;
         }
 
+        /**
+         * Platform-specific status sub-code
+         */
         public Builder subCode(@Nullable String subCode) {
             this.subCode = subCode;
             return this;

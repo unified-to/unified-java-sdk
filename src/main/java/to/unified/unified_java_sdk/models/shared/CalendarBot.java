@@ -32,14 +32,14 @@ public class CalendarBot {
     private OffsetDateTime createdAt;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ended_at")
     private OffsetDateTime endedAt;
 
     /**
-     * (reference to CalendarEvent)
+     * Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_id")
@@ -51,7 +51,7 @@ public class CalendarBot {
     private String id;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("join_at")
@@ -62,12 +62,16 @@ public class CalendarBot {
     @JsonProperty("meeting_metadata")
     private PropertyCalendarBotMeetingMetadata meetingMetadata;
 
-
+    /**
+     * URL of the meeting to join
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meeting_url")
     private String meetingUrl;
 
-
+    /**
+     * Display name for the bot in the meeting
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
@@ -87,13 +91,15 @@ public class CalendarBot {
     @JsonProperty("recording_config")
     private PropertyCalendarBotRecordingConfig recordingConfig;
 
-
+    /**
+     * Reference to calendar_recording when ready
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording_id")
     private String recordingId;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
@@ -104,7 +110,9 @@ public class CalendarBot {
     @JsonProperty("status")
     private CalendarBotStatus status;
 
-
+    /**
+     * History of status changes
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_changes")
     private List<CalendarBotStatusChange> statusChanges;
@@ -175,14 +183,14 @@ public class CalendarBot {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> endedAt() {
         return Optional.ofNullable(this.endedAt);
     }
 
     /**
-     * (reference to CalendarEvent)
+     * Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
      */
     public Optional<String> eventId() {
         return Optional.ofNullable(this.eventId);
@@ -193,7 +201,7 @@ public class CalendarBot {
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> joinAt() {
         return Optional.ofNullable(this.joinAt);
@@ -203,10 +211,16 @@ public class CalendarBot {
         return Optional.ofNullable(this.meetingMetadata);
     }
 
+    /**
+     * URL of the meeting to join
+     */
     public Optional<String> meetingUrl() {
         return Optional.ofNullable(this.meetingUrl);
     }
 
+    /**
+     * Display name for the bot in the meeting
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -223,12 +237,15 @@ public class CalendarBot {
         return Optional.ofNullable(this.recordingConfig);
     }
 
+    /**
+     * Reference to calendar_recording when ready
+     */
     public Optional<String> recordingId() {
         return Optional.ofNullable(this.recordingId);
     }
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> startedAt() {
         return Optional.ofNullable(this.startedAt);
@@ -238,6 +255,9 @@ public class CalendarBot {
         return Optional.ofNullable(this.status);
     }
 
+    /**
+     * History of status changes
+     */
     public Optional<List<CalendarBotStatusChange>> statusChanges() {
         return Optional.ofNullable(this.statusChanges);
     }
@@ -270,7 +290,7 @@ public class CalendarBot {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public CalendarBot withEndedAt(@Nullable OffsetDateTime endedAt) {
         this.endedAt = endedAt;
@@ -279,7 +299,7 @@ public class CalendarBot {
 
 
     /**
-     * (reference to CalendarEvent)
+     * Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
      */
     public CalendarBot withEventId(@Nullable String eventId) {
         this.eventId = eventId;
@@ -294,7 +314,7 @@ public class CalendarBot {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public CalendarBot withJoinAt(@Nullable OffsetDateTime joinAt) {
         this.joinAt = joinAt;
@@ -308,12 +328,18 @@ public class CalendarBot {
     }
 
 
+    /**
+     * URL of the meeting to join
+     */
     public CalendarBot withMeetingUrl(@Nullable String meetingUrl) {
         this.meetingUrl = meetingUrl;
         return this;
     }
 
 
+    /**
+     * Display name for the bot in the meeting
+     */
     public CalendarBot withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -338,6 +364,9 @@ public class CalendarBot {
     }
 
 
+    /**
+     * Reference to calendar_recording when ready
+     */
     public CalendarBot withRecordingId(@Nullable String recordingId) {
         this.recordingId = recordingId;
         return this;
@@ -345,7 +374,7 @@ public class CalendarBot {
 
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public CalendarBot withStartedAt(@Nullable OffsetDateTime startedAt) {
         this.startedAt = startedAt;
@@ -359,6 +388,9 @@ public class CalendarBot {
     }
 
 
+    /**
+     * History of status changes
+     */
     public CalendarBot withStatusChanges(@Nullable List<CalendarBotStatusChange> statusChanges) {
         this.statusChanges = statusChanges;
         return this;
@@ -491,7 +523,7 @@ public class CalendarBot {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder endedAt(@Nullable OffsetDateTime endedAt) {
             this.endedAt = endedAt;
@@ -499,7 +531,7 @@ public class CalendarBot {
         }
 
         /**
-         * (reference to CalendarEvent)
+         * Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
          */
         public Builder eventId(@Nullable String eventId) {
             this.eventId = eventId;
@@ -512,7 +544,7 @@ public class CalendarBot {
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder joinAt(@Nullable OffsetDateTime joinAt) {
             this.joinAt = joinAt;
@@ -524,11 +556,17 @@ public class CalendarBot {
             return this;
         }
 
+        /**
+         * URL of the meeting to join
+         */
         public Builder meetingUrl(@Nullable String meetingUrl) {
             this.meetingUrl = meetingUrl;
             return this;
         }
 
+        /**
+         * Display name for the bot in the meeting
+         */
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -549,13 +587,16 @@ public class CalendarBot {
             return this;
         }
 
+        /**
+         * Reference to calendar_recording when ready
+         */
         public Builder recordingId(@Nullable String recordingId) {
             this.recordingId = recordingId;
             return this;
         }
 
         /**
-         * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         * When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder startedAt(@Nullable OffsetDateTime startedAt) {
             this.startedAt = startedAt;
@@ -567,6 +608,9 @@ public class CalendarBot {
             return this;
         }
 
+        /**
+         * History of status changes
+         */
         public Builder statusChanges(@Nullable List<CalendarBotStatusChange> statusChanges) {
             this.statusChanges = statusChanges;
             return this;

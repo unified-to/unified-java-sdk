@@ -17,17 +17,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PropertyCalendarBotAutomaticLeave {
-
+    /**
+     * Whether to leave if only bots remain
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detect_bots")
     private Boolean detectBots;
 
-
+    /**
+     * Seconds to wait when no other participants before leaving (default: 2)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no_participants_timeout")
     private Double noParticipantsTimeout;
 
-
+    /**
+     * Seconds to wait in waiting room before leaving (default: 1200)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waiting_room_timeout")
     private Double waitingRoomTimeout;
@@ -46,14 +52,23 @@ public class PropertyCalendarBotAutomaticLeave {
         this(null, null, null);
     }
 
+    /**
+     * Whether to leave if only bots remain
+     */
     public Optional<Boolean> detectBots() {
         return Optional.ofNullable(this.detectBots);
     }
 
+    /**
+     * Seconds to wait when no other participants before leaving (default: 2)
+     */
     public Optional<Double> noParticipantsTimeout() {
         return Optional.ofNullable(this.noParticipantsTimeout);
     }
 
+    /**
+     * Seconds to wait in waiting room before leaving (default: 1200)
+     */
     public Optional<Double> waitingRoomTimeout() {
         return Optional.ofNullable(this.waitingRoomTimeout);
     }
@@ -63,18 +78,27 @@ public class PropertyCalendarBotAutomaticLeave {
     }
 
 
+    /**
+     * Whether to leave if only bots remain
+     */
     public PropertyCalendarBotAutomaticLeave withDetectBots(@Nullable Boolean detectBots) {
         this.detectBots = detectBots;
         return this;
     }
 
 
+    /**
+     * Seconds to wait when no other participants before leaving (default: 2)
+     */
     public PropertyCalendarBotAutomaticLeave withNoParticipantsTimeout(@Nullable Double noParticipantsTimeout) {
         this.noParticipantsTimeout = noParticipantsTimeout;
         return this;
     }
 
 
+    /**
+     * Seconds to wait in waiting room before leaving (default: 1200)
+     */
     public PropertyCalendarBotAutomaticLeave withWaitingRoomTimeout(@Nullable Double waitingRoomTimeout) {
         this.waitingRoomTimeout = waitingRoomTimeout;
         return this;
@@ -123,16 +147,25 @@ public class PropertyCalendarBotAutomaticLeave {
           // force use of static builder() method
         }
 
+        /**
+         * Whether to leave if only bots remain
+         */
         public Builder detectBots(@Nullable Boolean detectBots) {
             this.detectBots = detectBots;
             return this;
         }
 
+        /**
+         * Seconds to wait when no other participants before leaving (default: 2)
+         */
         public Builder noParticipantsTimeout(@Nullable Double noParticipantsTimeout) {
             this.noParticipantsTimeout = noParticipantsTimeout;
             return this;
         }
 
+        /**
+         * Seconds to wait in waiting room before leaving (default: 1200)
+         */
         public Builder waitingRoomTimeout(@Nullable Double waitingRoomTimeout) {
             this.waitingRoomTimeout = waitingRoomTimeout;
             return this;

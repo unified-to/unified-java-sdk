@@ -16,17 +16,23 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PropertyCalendarBotRecordingConfigTranscription {
-
+    /**
+     * Whether to identify speakers in transcript
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_speaker_labels")
     private Boolean enableSpeakerLabels;
 
-
+    /**
+     * Whether to include word-level timestamps
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_word_timestamps")
     private Boolean enableWordTimestamps;
 
-
+    /**
+     * ISO language code (e.g., 'en-US')
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     private String language;
@@ -60,14 +66,23 @@ public class PropertyCalendarBotRecordingConfigTranscription {
             null, null);
     }
 
+    /**
+     * Whether to identify speakers in transcript
+     */
     public Optional<Boolean> enableSpeakerLabels() {
         return Optional.ofNullable(this.enableSpeakerLabels);
     }
 
+    /**
+     * Whether to include word-level timestamps
+     */
     public Optional<Boolean> enableWordTimestamps() {
         return Optional.ofNullable(this.enableWordTimestamps);
     }
 
+    /**
+     * ISO language code (e.g., 'en-US')
+     */
     public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
@@ -85,18 +100,27 @@ public class PropertyCalendarBotRecordingConfigTranscription {
     }
 
 
+    /**
+     * Whether to identify speakers in transcript
+     */
     public PropertyCalendarBotRecordingConfigTranscription withEnableSpeakerLabels(@Nullable Boolean enableSpeakerLabels) {
         this.enableSpeakerLabels = enableSpeakerLabels;
         return this;
     }
 
 
+    /**
+     * Whether to include word-level timestamps
+     */
     public PropertyCalendarBotRecordingConfigTranscription withEnableWordTimestamps(@Nullable Boolean enableWordTimestamps) {
         this.enableWordTimestamps = enableWordTimestamps;
         return this;
     }
 
 
+    /**
+     * ISO language code (e.g., 'en-US')
+     */
     public PropertyCalendarBotRecordingConfigTranscription withLanguage(@Nullable String language) {
         this.language = language;
         return this;
@@ -166,16 +190,25 @@ public class PropertyCalendarBotRecordingConfigTranscription {
           // force use of static builder() method
         }
 
+        /**
+         * Whether to identify speakers in transcript
+         */
         public Builder enableSpeakerLabels(@Nullable Boolean enableSpeakerLabels) {
             this.enableSpeakerLabels = enableSpeakerLabels;
             return this;
         }
 
+        /**
+         * Whether to include word-level timestamps
+         */
         public Builder enableWordTimestamps(@Nullable Boolean enableWordTimestamps) {
             this.enableWordTimestamps = enableWordTimestamps;
             return this;
         }
 
+        /**
+         * ISO language code (e.g., 'en-US')
+         */
         public Builder language(@Nullable String language) {
             this.language = language;
             return this;

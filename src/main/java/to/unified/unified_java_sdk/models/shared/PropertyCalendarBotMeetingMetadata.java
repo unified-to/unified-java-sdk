@@ -34,7 +34,9 @@ public class PropertyCalendarBotMeetingMetadata {
     @JsonProperty("host_name")
     private String hostName;
 
-
+    /**
+     * Platform-specific meeting identifier (not a unified object ref)
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meeting_identifier")
     private String meetingIdentifier;
@@ -44,7 +46,9 @@ public class PropertyCalendarBotMeetingMetadata {
     @JsonProperty("participant_count")
     private Double participantCount;
 
-
+    /**
+     * 'zoom', 'webex', 'google_meet', etc.
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     private String platform;
@@ -102,6 +106,9 @@ public class PropertyCalendarBotMeetingMetadata {
         return Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * Platform-specific meeting identifier (not a unified object ref)
+     */
     public Optional<String> meetingIdentifier() {
         return Optional.ofNullable(this.meetingIdentifier);
     }
@@ -110,6 +117,9 @@ public class PropertyCalendarBotMeetingMetadata {
         return Optional.ofNullable(this.participantCount);
     }
 
+    /**
+     * 'zoom', 'webex', 'google_meet', etc.
+     */
     public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
@@ -151,6 +161,9 @@ public class PropertyCalendarBotMeetingMetadata {
     }
 
 
+    /**
+     * Platform-specific meeting identifier (not a unified object ref)
+     */
     public PropertyCalendarBotMeetingMetadata withMeetingIdentifier(@Nullable String meetingIdentifier) {
         this.meetingIdentifier = meetingIdentifier;
         return this;
@@ -163,6 +176,9 @@ public class PropertyCalendarBotMeetingMetadata {
     }
 
 
+    /**
+     * 'zoom', 'webex', 'google_meet', etc.
+     */
     public PropertyCalendarBotMeetingMetadata withPlatform(@Nullable String platform) {
         this.platform = platform;
         return this;
@@ -266,6 +282,9 @@ public class PropertyCalendarBotMeetingMetadata {
             return this;
         }
 
+        /**
+         * Platform-specific meeting identifier (not a unified object ref)
+         */
         public Builder meetingIdentifier(@Nullable String meetingIdentifier) {
             this.meetingIdentifier = meetingIdentifier;
             return this;
@@ -276,6 +295,9 @@ public class PropertyCalendarBotMeetingMetadata {
             return this;
         }
 
+        /**
+         * 'zoom', 'webex', 'google_meet', etc.
+         */
         public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;

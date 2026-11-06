@@ -27,7 +27,9 @@ public class CalendarBotParticipant {
     @JsonProperty("id")
     private String id;
 
-
+    /**
+     * Whether this participant is a bot
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_bot")
     private Boolean isBot;
@@ -42,7 +44,9 @@ public class CalendarBotParticipant {
     @JsonProperty("is_host")
     private Boolean isHost;
 
-
+    /**
+     * Whether this participant is the current bot
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_self")
     private Boolean isSelf;
@@ -66,27 +70,37 @@ public class CalendarBotParticipant {
     @JsonProperty("name")
     private String name;
 
-
+    /**
+     * Platform-specific participant identifier
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     private String platform;
 
-
+    /**
+     * Platform-specific metadata
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform_metadata")
     private PlatformMetadata platformMetadata;
 
-
+    /**
+     * Whether participant is sharing screen
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshare_on")
     private Boolean screenshareOn;
 
-
+    /**
+     * Whether participant is currently speaking
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speaking")
     private Boolean speaking;
 
-
+    /**
+     * Whether participant's webcam is on
+     */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webcam_on")
     private Boolean webcamOn;
@@ -139,6 +153,9 @@ public class CalendarBotParticipant {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether this participant is a bot
+     */
     public Optional<Boolean> isBot() {
         return Optional.ofNullable(this.isBot);
     }
@@ -151,6 +168,9 @@ public class CalendarBotParticipant {
         return Optional.ofNullable(this.isHost);
     }
 
+    /**
+     * Whether this participant is the current bot
+     */
     public Optional<Boolean> isSelf() {
         return Optional.ofNullable(this.isSelf);
     }
@@ -173,22 +193,37 @@ public class CalendarBotParticipant {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Platform-specific participant identifier
+     */
     public Optional<String> platform() {
         return Optional.ofNullable(this.platform);
     }
 
+    /**
+     * Platform-specific metadata
+     */
     public Optional<PlatformMetadata> platformMetadata() {
         return Optional.ofNullable(this.platformMetadata);
     }
 
+    /**
+     * Whether participant is sharing screen
+     */
     public Optional<Boolean> screenshareOn() {
         return Optional.ofNullable(this.screenshareOn);
     }
 
+    /**
+     * Whether participant is currently speaking
+     */
     public Optional<Boolean> speaking() {
         return Optional.ofNullable(this.speaking);
     }
 
+    /**
+     * Whether participant's webcam is on
+     */
     public Optional<Boolean> webcamOn() {
         return Optional.ofNullable(this.webcamOn);
     }
@@ -210,6 +245,9 @@ public class CalendarBotParticipant {
     }
 
 
+    /**
+     * Whether this participant is a bot
+     */
     public CalendarBotParticipant withIsBot(@Nullable Boolean isBot) {
         this.isBot = isBot;
         return this;
@@ -228,6 +266,9 @@ public class CalendarBotParticipant {
     }
 
 
+    /**
+     * Whether this participant is the current bot
+     */
     public CalendarBotParticipant withIsSelf(@Nullable Boolean isSelf) {
         this.isSelf = isSelf;
         return this;
@@ -258,30 +299,45 @@ public class CalendarBotParticipant {
     }
 
 
+    /**
+     * Platform-specific participant identifier
+     */
     public CalendarBotParticipant withPlatform(@Nullable String platform) {
         this.platform = platform;
         return this;
     }
 
 
+    /**
+     * Platform-specific metadata
+     */
     public CalendarBotParticipant withPlatformMetadata(@Nullable PlatformMetadata platformMetadata) {
         this.platformMetadata = platformMetadata;
         return this;
     }
 
 
+    /**
+     * Whether participant is sharing screen
+     */
     public CalendarBotParticipant withScreenshareOn(@Nullable Boolean screenshareOn) {
         this.screenshareOn = screenshareOn;
         return this;
     }
 
 
+    /**
+     * Whether participant is currently speaking
+     */
     public CalendarBotParticipant withSpeaking(@Nullable Boolean speaking) {
         this.speaking = speaking;
         return this;
     }
 
 
+    /**
+     * Whether participant's webcam is on
+     */
     public CalendarBotParticipant withWebcamOn(@Nullable Boolean webcamOn) {
         this.webcamOn = webcamOn;
         return this;
@@ -388,6 +444,9 @@ public class CalendarBotParticipant {
             return this;
         }
 
+        /**
+         * Whether this participant is a bot
+         */
         public Builder isBot(@Nullable Boolean isBot) {
             this.isBot = isBot;
             return this;
@@ -403,6 +462,9 @@ public class CalendarBotParticipant {
             return this;
         }
 
+        /**
+         * Whether this participant is the current bot
+         */
         public Builder isSelf(@Nullable Boolean isSelf) {
             this.isSelf = isSelf;
             return this;
@@ -429,26 +491,41 @@ public class CalendarBotParticipant {
             return this;
         }
 
+        /**
+         * Platform-specific participant identifier
+         */
         public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
 
+        /**
+         * Platform-specific metadata
+         */
         public Builder platformMetadata(@Nullable PlatformMetadata platformMetadata) {
             this.platformMetadata = platformMetadata;
             return this;
         }
 
+        /**
+         * Whether participant is sharing screen
+         */
         public Builder screenshareOn(@Nullable Boolean screenshareOn) {
             this.screenshareOn = screenshareOn;
             return this;
         }
 
+        /**
+         * Whether participant is currently speaking
+         */
         public Builder speaking(@Nullable Boolean speaking) {
             this.speaking = speaking;
             return this;
         }
 
+        /**
+         * Whether participant's webcam is on
+         */
         public Builder webcamOn(@Nullable Boolean webcamOn) {
             this.webcamOn = webcamOn;
             return this;

@@ -20,6 +20,11 @@ import to.unified.unified_java_sdk.utils.Utils.JsonShape;
 import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
 import to.unified.unified_java_sdk.utils.Utils;
 
+/**
+ * PlatformMetadata
+ * 
+ * <p>Platform-specific metadata
+ */
 @JsonDeserialize(using = PlatformMetadata._Deserializer.class)
 public class PlatformMetadata {
 
