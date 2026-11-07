@@ -431,6 +431,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncCall call;
 
+    private final AsyncFax fax;
+
     private final AsyncScorecardtemplate scorecardtemplate;
 
     private final AsyncUnified unified;
@@ -1297,6 +1299,10 @@ public class AsyncUnifiedTo {
         return call;
     }
 
+    public AsyncFax fax() {
+        return fax;
+    }
+
     public AsyncScorecardtemplate scorecardtemplate() {
         return scorecardtemplate;
     }
@@ -1572,6 +1578,7 @@ public class AsyncUnifiedTo {
         this.ticket = new AsyncTicket(syncSDK.ticket(), sdkConfiguration);
         this.uc = new AsyncUc(syncSDK.uc(), sdkConfiguration);
         this.call = new AsyncCall(syncSDK.call(), sdkConfiguration);
+        this.fax = new AsyncFax(syncSDK.fax(), sdkConfiguration);
         this.scorecardtemplate = new AsyncScorecardtemplate(syncSDK.scorecardtemplate(), sdkConfiguration);
         this.unified = new AsyncUnified(syncSDK.unified(), sdkConfiguration);
         this.apicall = new AsyncApicall(syncSDK.apicall(), sdkConfiguration);

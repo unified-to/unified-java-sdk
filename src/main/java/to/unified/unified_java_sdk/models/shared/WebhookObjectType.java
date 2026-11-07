@@ -117,6 +117,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType TICKETING_CUSTOMER = new WebhookObjectType("ticketing_customer");
     public static final WebhookObjectType TICKETING_CATEGORY = new WebhookObjectType("ticketing_category");
     public static final WebhookObjectType UC_CONTACT = new WebhookObjectType("uc_contact");
+    public static final WebhookObjectType UC_FAX = new WebhookObjectType("uc_fax");
     public static final WebhookObjectType UC_CALL = new WebhookObjectType("uc_call");
     public static final WebhookObjectType UC_COMMENT = new WebhookObjectType("uc_comment");
     public static final WebhookObjectType UC_RECORDING = new WebhookObjectType("uc_recording");
@@ -427,6 +428,7 @@ public class WebhookObjectType {
         map.put("ticketing_customer", TICKETING_CUSTOMER);
         map.put("ticketing_category", TICKETING_CATEGORY);
         map.put("uc_contact", UC_CONTACT);
+        map.put("uc_fax", UC_FAX);
         map.put("uc_call", UC_CALL);
         map.put("uc_comment", UC_COMMENT);
         map.put("uc_recording", UC_RECORDING);
@@ -669,6 +671,7 @@ public class WebhookObjectType {
         map.put("ticketing_customer", WebhookObjectTypeEnum.TICKETING_CUSTOMER);
         map.put("ticketing_category", WebhookObjectTypeEnum.TICKETING_CATEGORY);
         map.put("uc_contact", WebhookObjectTypeEnum.UC_CONTACT);
+        map.put("uc_fax", WebhookObjectTypeEnum.UC_FAX);
         map.put("uc_call", WebhookObjectTypeEnum.UC_CALL);
         map.put("uc_comment", WebhookObjectTypeEnum.UC_COMMENT);
         map.put("uc_recording", WebhookObjectTypeEnum.UC_RECORDING);
@@ -912,6 +915,7 @@ public class WebhookObjectType {
         TICKETING_CUSTOMER("ticketing_customer"),
         TICKETING_CATEGORY("ticketing_category"),
         UC_CONTACT("uc_contact"),
+        UC_FAX("uc_fax"),
         UC_CALL("uc_call"),
         UC_COMMENT("uc_comment"),
         UC_RECORDING("uc_recording"),

@@ -10,16 +10,19 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcFaxRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcFaxRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcScorecardtemplateRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcFaxesRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcScorecardtemplatesRequest;
@@ -29,6 +32,7 @@ import to.unified.unified_java_sdk.models.operations.PatchUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcFaxRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
@@ -40,6 +44,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentReques
 import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcRecordingResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcCallRequestBuilder;
@@ -48,6 +54,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetUcCommentRequestBu
 import to.unified.unified_java_sdk.models.operations.async.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUcRecordingResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcScorecardRequestBuilder;
@@ -60,6 +68,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsRequest
 import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcContactsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcContactsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListUcFaxesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListUcFaxesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcRecordingsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcScorecardsRequestBuilder;
@@ -78,6 +88,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentReques
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcRecordingResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcCallRequestBuilder;
@@ -91,16 +103,19 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateUcRecordingResp
 import to.unified.unified_java_sdk.operations.CreateUcCall;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
+import to.unified.unified_java_sdk.operations.CreateUcFax;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
 import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
+import to.unified.unified_java_sdk.operations.GetUcFax;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
 import to.unified.unified_java_sdk.operations.GetUcScorecard;
 import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.ListUcContacts;
+import to.unified.unified_java_sdk.operations.ListUcFaxes;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
 import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
@@ -110,6 +125,7 @@ import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.RemoveUcContact;
+import to.unified.unified_java_sdk.operations.RemoveUcFax;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
@@ -226,6 +242,35 @@ public class AsyncUc {
 
 
     /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @return The async call builder
+     */
+    public CreateUcFaxRequestBuilder createUcFax() {
+        return new CreateUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<CreateUcFaxResponse> createUcFax(@Nonnull CreateUcFaxRequest request) {
+        AsyncRequestOperation<CreateUcFaxRequest, CreateUcFaxResponse> operation
+              = new CreateUcFax.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Create a recording
      * 
      * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
@@ -336,6 +381,35 @@ public class AsyncUc {
     public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetUcFaxRequestBuilder getUcFax() {
+        return new GetUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<GetUcFaxResponse> getUcFax(@Nonnull GetUcFaxRequest request) {
+        AsyncRequestOperation<GetUcFaxRequest, GetUcFaxResponse> operation
+              = new GetUcFax.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -534,6 +608,43 @@ public class AsyncUc {
     public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListUcFaxesRequestBuilder listUcFaxes() {
+        return new ListUcFaxesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListUcFaxesResponse>} - The async response
+     */
+    public CompletableFuture<ListUcFaxesResponse> listUcFaxes(@Nonnull ListUcFaxesRequest request) {
+        AsyncRequestOperation<ListUcFaxesRequest, ListUcFaxesResponse> operation
+              = new ListUcFaxes.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -815,6 +926,33 @@ public class AsyncUc {
     public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveUcFaxRequestBuilder removeUcFax() {
+        return new RemoveUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveUcFaxResponse>} - The async response
+     */
+    public CompletableFuture<RemoveUcFaxResponse> removeUcFax(@Nonnull RemoveUcFaxRequest request) {
+        AsyncRequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
+              = new RemoveUcFax.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

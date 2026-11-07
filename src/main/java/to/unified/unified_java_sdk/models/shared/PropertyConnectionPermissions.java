@@ -195,6 +195,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions UC_CALL_WRITE = new PropertyConnectionPermissions("uc_call_write");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
     public static final PropertyConnectionPermissions UC_CONTACT_WRITE = new PropertyConnectionPermissions("uc_contact_write");
+    public static final PropertyConnectionPermissions UC_FAX_READ = new PropertyConnectionPermissions("uc_fax_read");
+    public static final PropertyConnectionPermissions UC_FAX_WRITE = new PropertyConnectionPermissions("uc_fax_write");
     public static final PropertyConnectionPermissions UC_COMMENT_READ = new PropertyConnectionPermissions("uc_comment_read");
     public static final PropertyConnectionPermissions UC_COMMENT_WRITE = new PropertyConnectionPermissions("uc_comment_write");
     public static final PropertyConnectionPermissions UC_RECORDING_READ = new PropertyConnectionPermissions("uc_recording_read");
@@ -708,6 +710,8 @@ public class PropertyConnectionPermissions {
         map.put("uc_call_write", UC_CALL_WRITE);
         map.put("uc_contact_read", UC_CONTACT_READ);
         map.put("uc_contact_write", UC_CONTACT_WRITE);
+        map.put("uc_fax_read", UC_FAX_READ);
+        map.put("uc_fax_write", UC_FAX_WRITE);
         map.put("uc_comment_read", UC_COMMENT_READ);
         map.put("uc_comment_write", UC_COMMENT_WRITE);
         map.put("uc_recording_read", UC_RECORDING_READ);
@@ -1153,6 +1157,8 @@ public class PropertyConnectionPermissions {
         map.put("uc_call_write", PropertyConnectionPermissionsEnum.UC_CALL_WRITE);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
         map.put("uc_contact_write", PropertyConnectionPermissionsEnum.UC_CONTACT_WRITE);
+        map.put("uc_fax_read", PropertyConnectionPermissionsEnum.UC_FAX_READ);
+        map.put("uc_fax_write", PropertyConnectionPermissionsEnum.UC_FAX_WRITE);
         map.put("uc_comment_read", PropertyConnectionPermissionsEnum.UC_COMMENT_READ);
         map.put("uc_comment_write", PropertyConnectionPermissionsEnum.UC_COMMENT_WRITE);
         map.put("uc_recording_read", PropertyConnectionPermissionsEnum.UC_RECORDING_READ);
@@ -1599,6 +1605,8 @@ public class PropertyConnectionPermissions {
         UC_CALL_WRITE("uc_call_write"),
         UC_CONTACT_READ("uc_contact_read"),
         UC_CONTACT_WRITE("uc_contact_write"),
+        UC_FAX_READ("uc_fax_read"),
+        UC_FAX_WRITE("uc_fax_write"),
         UC_COMMENT_READ("uc_comment_read"),
         UC_COMMENT_WRITE("uc_comment_write"),
         UC_RECORDING_READ("uc_recording_read"),

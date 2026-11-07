@@ -110,6 +110,7 @@ WebhookObjectType custom = WebhookObjectType.of("custom_value");
 | `TICKETING_CUSTOMER`             | ticketing_customer               |
 | `TICKETING_CATEGORY`             | ticketing_category               |
 | `UC_CONTACT`                     | uc_contact                       |
+| `UC_FAX`                         | uc_fax                           |
 | `UC_CALL`                        | uc_call                          |
 | `UC_COMMENT`                     | uc_comment                       |
 | `UC_RECORDING`                   | uc_recording                     |

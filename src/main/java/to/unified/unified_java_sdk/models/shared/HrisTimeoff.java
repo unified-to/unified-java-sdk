@@ -36,6 +36,13 @@ public class HrisTimeoff {
     @JsonProperty("approver_user_id")
     private String approverUserId;
 
+    /**
+     * supporting documents (eg. doctor's notes) attached to the leave request
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("attachments")
+    private List<HrisAttachment> attachments;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
@@ -138,6 +145,7 @@ public class HrisTimeoff {
     public HrisTimeoff(
             @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
             @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("attachments") @Nullable List<HrisAttachment> attachments,
             @JsonProperty("comments") @Nullable String comments,
             @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
@@ -157,6 +165,7 @@ public class HrisTimeoff {
             @JsonProperty("user_id") @Nonnull String userId) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
+        this.attachments = attachments;
         this.comments = comments;
         this.companyId = companyId;
         this.createdAt = createdAt;
@@ -185,7 +194,7 @@ public class HrisTimeoff {
             null, null, null,
             null, null, null,
             null, null, null,
-            userId);
+            null, userId);
     }
 
     /**
@@ -200,6 +209,13 @@ public class HrisTimeoff {
      */
     public Optional<String> approverUserId() {
         return Optional.ofNullable(this.approverUserId);
+    }
+
+    /**
+     * supporting documents (eg. doctor's notes) attached to the leave request
+     */
+    public Optional<List<HrisAttachment>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     public Optional<String> comments() {
@@ -310,6 +326,15 @@ public class HrisTimeoff {
      */
     public HrisTimeoff withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
+        return this;
+    }
+
+
+    /**
+     * supporting documents (eg. doctor's notes) attached to the leave request
+     */
+    public HrisTimeoff withAttachments(@Nullable List<HrisAttachment> attachments) {
+        this.attachments = attachments;
         return this;
     }
 
@@ -449,6 +474,7 @@ public class HrisTimeoff {
         return 
             Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
             Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
+            Utils.enhancedDeepEquals(this.attachments, other.attachments) &&
             Utils.enhancedDeepEquals(this.comments, other.comments) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
@@ -471,13 +497,13 @@ public class HrisTimeoff {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            approvedAt, approverUserId, comments,
-            companyId, createdAt, duration,
-            durationType, endAt, id,
-            isPaid, metadata, originalType,
-            raw, reason, startAt,
-            status, type, updatedAt,
-            userId);
+            approvedAt, approverUserId, attachments,
+            comments, companyId, createdAt,
+            duration, durationType, endAt,
+            id, isPaid, metadata,
+            originalType, raw, reason,
+            startAt, status, type,
+            updatedAt, userId);
     }
     
     @Override
@@ -485,6 +511,7 @@ public class HrisTimeoff {
         return Utils.toString(HrisTimeoff.class,
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
+                "attachments", attachments,
                 "comments", comments,
                 "companyId", companyId,
                 "createdAt", createdAt,
@@ -510,6 +537,8 @@ public class HrisTimeoff {
         private OffsetDateTime approvedAt;
 
         private String approverUserId;
+
+        private List<HrisAttachment> attachments;
 
         private String comments;
 
@@ -562,6 +591,14 @@ public class HrisTimeoff {
          */
         public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
+            return this;
+        }
+
+        /**
+         * supporting documents (eg. doctor's notes) attached to the leave request
+         */
+        public Builder attachments(@Nullable List<HrisAttachment> attachments) {
+            this.attachments = attachments;
             return this;
         }
 
@@ -673,13 +710,13 @@ public class HrisTimeoff {
 
         public HrisTimeoff build() {
             return new HrisTimeoff(
-                approvedAt, approverUserId, comments,
-                companyId, createdAt, duration,
-                durationType, endAt, id,
-                isPaid, metadata, originalType,
-                raw, reason, startAt,
-                status, type, updatedAt,
-                userId);
+                approvedAt, approverUserId, attachments,
+                comments, companyId, createdAt,
+                duration, durationType, endAt,
+                id, isPaid, metadata,
+                originalType, raw, reason,
+                startAt, status, type,
+                updatedAt, userId);
         }
 
     }

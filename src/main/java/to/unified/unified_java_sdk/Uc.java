@@ -15,6 +15,9 @@ import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.CreateUcFaxRequest;
+import to.unified.unified_java_sdk.models.operations.CreateUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingResponse;
@@ -27,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.GetUcFaxRequest;
+import to.unified.unified_java_sdk.models.operations.GetUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcRecordingResponse;
@@ -45,6 +51,9 @@ import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcContactsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcContactsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcContactsResponse;
+import to.unified.unified_java_sdk.models.operations.ListUcFaxesRequest;
+import to.unified.unified_java_sdk.models.operations.ListUcFaxesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListUcFaxesResponse;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUcRecordingsResponse;
@@ -72,6 +81,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcContactRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUcContactResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveUcFaxRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUcFaxRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveUcFaxResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUcRecordingResponse;
@@ -90,16 +102,19 @@ import to.unified.unified_java_sdk.models.operations.UpdateUcRecordingResponse;
 import to.unified.unified_java_sdk.operations.CreateUcCall;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.CreateUcContact;
+import to.unified.unified_java_sdk.operations.CreateUcFax;
 import to.unified.unified_java_sdk.operations.CreateUcRecording;
 import to.unified.unified_java_sdk.operations.GetUcCall;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.GetUcContact;
+import to.unified.unified_java_sdk.operations.GetUcFax;
 import to.unified.unified_java_sdk.operations.GetUcRecording;
 import to.unified.unified_java_sdk.operations.GetUcScorecard;
 import to.unified.unified_java_sdk.operations.GetUcScorecardtemplate;
 import to.unified.unified_java_sdk.operations.ListUcCalls;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.ListUcContacts;
+import to.unified.unified_java_sdk.operations.ListUcFaxes;
 import to.unified.unified_java_sdk.operations.ListUcRecordings;
 import to.unified.unified_java_sdk.operations.ListUcScorecards;
 import to.unified.unified_java_sdk.operations.ListUcScorecardtemplates;
@@ -109,6 +124,7 @@ import to.unified.unified_java_sdk.operations.PatchUcContact;
 import to.unified.unified_java_sdk.operations.PatchUcRecording;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.RemoveUcContact;
+import to.unified.unified_java_sdk.operations.RemoveUcFax;
 import to.unified.unified_java_sdk.operations.RemoveUcRecording;
 import to.unified.unified_java_sdk.operations.UpdateUcCall;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
@@ -221,6 +237,34 @@ public class Uc {
     }
 
     /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @return The call builder
+     */
+    public CreateUcFaxRequestBuilder createUcFax() {
+        return new CreateUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a fax
+     * 
+     * <p>Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the
+     * provider's API. Returns the created UcFax.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateUcFaxResponse createUcFax(@Nonnull CreateUcFaxRequest request) {
+        RequestOperation<CreateUcFaxRequest, CreateUcFaxResponse> operation
+              = new CreateUcFax.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Create a recording
      * 
      * <p>Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped
@@ -329,6 +373,34 @@ public class Uc {
     public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetUcFaxRequestBuilder getUcFax() {
+        return new GetUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a fax
+     * 
+     * <p>Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use
+     * `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetUcFaxResponse getUcFax(@Nonnull GetUcFaxRequest request) {
+        RequestOperation<GetUcFaxRequest, GetUcFaxResponse> operation
+              = new GetUcFax.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -521,6 +593,42 @@ public class Uc {
     public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListUcFaxesRequestBuilder listUcFaxes() {
+        return new ListUcFaxesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all faxes
+     * 
+     * <p>Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page
+     * through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListUcFaxesResponse listUcFaxes(@Nonnull ListUcFaxesRequest request) {
+        RequestOperation<ListUcFaxesRequest, ListUcFaxesResponse> operation
+              = new ListUcFaxes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -793,6 +901,32 @@ public class Uc {
     public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveUcFaxRequestBuilder removeUcFax() {
+        return new RemoveUcFaxRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a fax
+     * 
+     * <p>Deletes the UcFax identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveUcFaxResponse removeUcFax(@Nonnull RemoveUcFaxRequest request) {
+        RequestOperation<RemoveUcFaxRequest, RemoveUcFaxResponse> operation
+              = new RemoveUcFax.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

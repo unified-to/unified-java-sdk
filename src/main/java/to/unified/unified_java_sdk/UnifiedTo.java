@@ -668,6 +668,9 @@ public class UnifiedTo {
     private final Call call;
 
 
+    private final Fax fax;
+
+
     private final Scorecardtemplate scorecardtemplate;
 
 
@@ -1758,6 +1761,11 @@ public class UnifiedTo {
     }
 
 
+    public Fax fax() {
+        return fax;
+    }
+
+
     public Scorecardtemplate scorecardtemplate() {
         return scorecardtemplate;
     }
@@ -2178,6 +2186,7 @@ public class UnifiedTo {
         this.ticket = new Ticket(sdkConfiguration);
         this.uc = new Uc(sdkConfiguration);
         this.call = new Call(sdkConfiguration);
+        this.fax = new Fax(sdkConfiguration);
         this.scorecardtemplate = new Scorecardtemplate(sdkConfiguration);
         this.unified = new Unified(sdkConfiguration);
         this.apicall = new Apicall(sdkConfiguration);
