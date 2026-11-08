@@ -179,6 +179,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncSaleschannel saleschannel;
 
+    private final AsyncTable table;
+
     private final AsyncCompute compute;
 
     private final AsyncDeployment deployment;
@@ -222,8 +224,6 @@ public class AsyncUnifiedTo {
     private final AsyncQuery query;
 
     private final AsyncRecord record;
-
-    private final AsyncTable table;
 
     private final AsyncEnrich enrich;
 
@@ -795,6 +795,10 @@ public class AsyncUnifiedTo {
         return saleschannel;
     }
 
+    public AsyncTable table() {
+        return table;
+    }
+
     public AsyncCompute compute() {
         return compute;
     }
@@ -881,10 +885,6 @@ public class AsyncUnifiedTo {
 
     public AsyncRecord record() {
         return record;
-    }
-
-    public AsyncTable table() {
-        return table;
     }
 
     public AsyncEnrich enrich() {
@@ -1452,6 +1452,7 @@ public class AsyncUnifiedTo {
         this.return_ = new AsyncReturn(syncSDK.return_(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
+        this.table = new AsyncTable(syncSDK.table(), sdkConfiguration);
         this.compute = new AsyncCompute(syncSDK.compute(), sdkConfiguration);
         this.deployment = new AsyncDeployment(syncSDK.deployment(), sdkConfiguration);
         this.domain = new AsyncDomain(syncSDK.domain(), sdkConfiguration);
@@ -1474,7 +1475,6 @@ public class AsyncUnifiedTo {
         this.database = new AsyncDatabase(syncSDK.database(), sdkConfiguration);
         this.query = new AsyncQuery(syncSDK.query(), sdkConfiguration);
         this.record = new AsyncRecord(syncSDK.record(), sdkConfiguration);
-        this.table = new AsyncTable(syncSDK.table(), sdkConfiguration);
         this.enrich = new AsyncEnrich(syncSDK.enrich(), sdkConfiguration);
         this.person = new AsyncPerson(syncSDK.person(), sdkConfiguration);
         this.forms = new AsyncForms(syncSDK.forms(), sdkConfiguration);

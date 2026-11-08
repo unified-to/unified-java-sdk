@@ -290,6 +290,9 @@ public class UnifiedTo {
     private final Saleschannel saleschannel;
 
 
+    private final Table table;
+
+
     private final Compute compute;
 
 
@@ -354,9 +357,6 @@ public class UnifiedTo {
 
 
     private final Record record;
-
-
-    private final Table table;
 
 
     private final Enrich enrich;
@@ -1131,6 +1131,11 @@ public class UnifiedTo {
     }
 
 
+    public Table table() {
+        return table;
+    }
+
+
     public Compute compute() {
         return compute;
     }
@@ -1238,11 +1243,6 @@ public class UnifiedTo {
 
     public Record record() {
         return record;
-    }
-
-
-    public Table table() {
-        return table;
     }
 
 
@@ -2060,6 +2060,7 @@ public class UnifiedTo {
         this.return_ = new Return(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
+        this.table = new Table(sdkConfiguration);
         this.compute = new Compute(sdkConfiguration);
         this.deployment = new Deployment(sdkConfiguration);
         this.domain = new Domain(sdkConfiguration);
@@ -2082,7 +2083,6 @@ public class UnifiedTo {
         this.database = new Database(sdkConfiguration);
         this.query = new Query(sdkConfiguration);
         this.record = new Record(sdkConfiguration);
-        this.table = new Table(sdkConfiguration);
         this.enrich = new Enrich(sdkConfiguration);
         this.person = new Person(sdkConfiguration);
         this.forms = new Forms(sdkConfiguration);

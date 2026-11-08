@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createDatastoreTable](#createdatastoretable) - Create a table
+* [getCommerceTable](#getcommercetable) - Retrieve a table
 * [getDatastoreTable](#getdatastoretable) - Retrieve a table
+* [listCommerceTables](#listcommercetables) - List all tables
 * [listDatastoreTables](#listdatastoretables) - List all tables
 * [patchDatastoreTable](#patchdatastoretable) - Update a table
 * [removeDatastoreTable](#removedatastoretable) - Remove a table
@@ -49,7 +51,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("f2f92f73-331d-48eb-949a-ea669cc50db6")
+                            .id("af382fbc-1d7e-41f5-aa7b-f33f51ef067e")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -59,7 +61,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("481b19e1-a677-48ca-92c8-92280397d6a1")
+                            .id("76a5ffa9-b696-4250-acfd-233a2e98d16a")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -69,7 +71,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("707c5e4a-8949-4921-a163-b48b47d862d7")
+                            .id("61b9d71a-ce7f-437b-95e4-d4f18f89c965")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -81,7 +83,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("2618a5fe-09ed-47c7-b221-b23bc19b221a")
+                            .id("af215c77-c881-4449-9f04-4d34740f3198")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -90,23 +92,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("60d955e1-24d5-40e8-bbb7-fa366969997a")
+                            .id("b5a629bc-67d2-4efa-9558-0a32f439dde7")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("e75a4e4e-7129-46c6-9755-cb72c6275765")
+                    .id("6eacc169-9d42-4515-b0a8-4ce14c8b929e")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("e75a4e4e-7129-46c6-9755-cb72c6275765")
+                            .tableId("6eacc169-9d42-4515-b0a8-4ce14c8b929e")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-13T17:21:45.586Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-13T18:35:14.899Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")
@@ -132,6 +134,64 @@ public class Application {
 ### Response
 
 **[CreateDatastoreTableResponse](../../models/operations/CreateDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCommerceTable
+
+Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCommerceTable" method="get" path="/commerce/{connection_id}/table/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCommerceTableRequest req = GetCommerceTableRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCommerceTableResponse res = sdk.table().getCommerceTable()
+                .request(req)
+                .call();
+
+        if (res.commerceTable().isPresent()) {
+            System.out.println(res.commerceTable().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetCommerceTableRequest](../../models/operations/GetCommerceTableRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetCommerceTableResponse](../../models/operations/GetCommerceTableResponse.md)**
 
 ### Errors
 
@@ -190,6 +250,63 @@ public class Application {
 ### Response
 
 **[GetDatastoreTableResponse](../../models/operations/GetDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listCommerceTables
+
+Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCommerceTables" method="get" path="/commerce/{connection_id}/table" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCommerceTablesRequest req = ListCommerceTablesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCommerceTablesResponse res = sdk.table().listCommerceTables()
+                .request(req)
+                .call();
+
+        if (res.commerceTables().isPresent()) {
+            System.out.println(res.commerceTables().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListCommerceTablesRequest](../../models/operations/ListCommerceTablesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListCommerceTablesResponse](../../models/operations/ListCommerceTablesResponse.md)**
 
 ### Errors
 
@@ -292,7 +409,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("d68309e3-db66-4b05-ab91-fbcf6d8523c1")
+                            .id("d7effdce-ca8e-4e72-b11c-778c722fba08")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -302,7 +419,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("7f3ca59e-beb9-4aa3-a105-420f603a2dbb")
+                            .id("32715faa-cbef-4d66-9689-61ebe15dcdb8")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -312,7 +429,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("4f881f7a-430d-480d-8948-7e8f087ec9ed")
+                            .id("f33d33bb-deca-4727-8ba2-1bba3957cc36")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -324,7 +441,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("2c7bc9e4-920f-4257-8f92-7dbf5e6bfead")
+                            .id("944d856f-d5f6-4a3b-b015-a92ac70f6c54")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -333,23 +450,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("6e86669b-85bd-40c4-89ba-3b306716982f")
+                            .id("4683ae57-c984-413c-a2a0-a4f45e49d0a7")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8")
+                    .id("f3021727-240c-4db6-a3f0-d630eb42b463")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8")
+                            .tableId("f3021727-240c-4db6-a3f0-d630eb42b463")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-13T17:21:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-13T18:35:14.901Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")
@@ -477,7 +594,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Antea soluta itaque clamo despecto basium accendo.")
-                            .id("d68309e3-db66-4b05-ab91-fbcf6d8523c1")
+                            .id("d7effdce-ca8e-4e72-b11c-778c722fba08")
                             .isIndexed(true)
                             .isUnique(true)
                             .scale(64d)
@@ -487,7 +604,7 @@ public class Application {
                             .originalType("conservo")
                             .type(DatastoreFieldType.SINGLE_SELECT)
                             .description("Nulla cattus aequus sumo neque alter cauda subseco.")
-                            .id("7f3ca59e-beb9-4aa3-a105-420f603a2dbb")
+                            .id("32715faa-cbef-4d66-9689-61ebe15dcdb8")
                             .isNullable(true)
                             .isUnique(true)
                             .precision(57d)
@@ -497,7 +614,7 @@ public class Application {
                             .originalType("sursum")
                             .type(DatastoreFieldType.NUMBER)
                             .description("Utilis callide adhuc verumtamen doloremque ceno sui sint.")
-                            .id("4f881f7a-430d-480d-8948-7e8f087ec9ed")
+                            .id("f33d33bb-deca-4727-8ba2-1bba3957cc36")
                             .isIndexed(true)
                             .isNullable(true)
                             .isUnique(true)
@@ -509,7 +626,7 @@ public class Application {
                             .originalType("tego")
                             .type(DatastoreFieldType.RELATION)
                             .description("Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.")
-                            .id("2c7bc9e4-920f-4257-8f92-7dbf5e6bfead")
+                            .id("944d856f-d5f6-4a3b-b015-a92ac70f6c54")
                             .precision(94d)
                             .scale(24d)
                             .build(),
@@ -518,23 +635,23 @@ public class Application {
                             .originalType("defessus")
                             .type(DatastoreFieldType.EMAIL)
                             .description("Communis coma cura audio aduro acer canis expedita.")
-                            .id("6e86669b-85bd-40c4-89ba-3b306716982f")
+                            .id("4683ae57-c984-413c-a2a0-a4f45e49d0a7")
                             .isIndexed(true)
                             .isPrimaryKey(true)
                             .isRequired(true)
                             .scale(68d)
                             .build()))
-                    .id("e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8")
+                    .id("f3021727-240c-4db6-a3f0-d630eb42b463")
                     .metadata(List.of())
                     .name("Rogahn, Lowe and Heller")
                     .relationships(List.of(
                         DatastoreRelationship.builder()
                             .field("Macejkovic - Shields")
                             .name("Hyatt, Ryan and Nienow")
-                            .tableId("e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8")
+                            .tableId("f3021727-240c-4db6-a3f0-d630eb42b463")
                             .type(DatastoreRelationshipType.MANY)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2022-08-13T17:21:45.587Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-08-13T18:35:14.901Z"))
                     .webUrl("https://nervous-deck.com")
                     .build())
                 .connectionId("<id>")

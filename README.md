@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.16'
+implementation 'to.unified:unified-java-sdk:0.50.17'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.16</version>
+    <version>0.50.17</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -923,6 +923,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getCommerceReturn](docs/sdks/commerce/README.md#getcommercereturn) - Retrieve a return
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
+* [getCommerceTable](docs/sdks/commerce/README.md#getcommercetable) - Retrieve a table
 * [listCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
@@ -933,6 +934,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listCommerceReturns](docs/sdks/commerce/README.md#listcommercereturns) - List all returns
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
+* [listCommerceTables](docs/sdks/commerce/README.md#listcommercetables) - List all tables
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
@@ -2776,7 +2778,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Table](docs/sdks/table/README.md)
 
 * [createDatastoreTable](docs/sdks/table/README.md#createdatastoretable) - Create a table
+* [getCommerceTable](docs/sdks/table/README.md#getcommercetable) - Retrieve a table
 * [getDatastoreTable](docs/sdks/table/README.md#getdatastoretable) - Retrieve a table
+* [listCommerceTables](docs/sdks/table/README.md#listcommercetables) - List all tables
 * [listDatastoreTables](docs/sdks/table/README.md#listdatastoretables) - List all tables
 * [patchDatastoreTable](docs/sdks/table/README.md#patchdatastoretable) - Update a table
 * [removeDatastoreTable](docs/sdks/table/README.md#removedatastoretable) - Remove a table
@@ -3123,7 +3127,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3135,7 +3139,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3183,7 +3187,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3195,7 +3199,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3262,7 +3266,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                        .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3274,7 +3278,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3429,7 +3433,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("c34c718e-58fc-4281-bcbf-94cc032a2d30")
+                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3441,7 +3445,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T05:30:40.415Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

@@ -132,6 +132,13 @@ public class AccountingSalesorder {
     private String organizationId;
 
     /**
+     * total of the payments applied so far
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("paid_amount")
+    private Double paidAmount;
+
+    /**
      * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -189,6 +196,13 @@ public class AccountingSalesorder {
     @JsonProperty("subtotal_amount")
     private Double subtotalAmount;
 
+    /**
+     * reference to a commerce_table (restaurant table) the order is seated at
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("table_id")
+    private String tableId;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
@@ -232,6 +246,7 @@ public class AccountingSalesorder {
             @JsonProperty("metadata") @Nullable List<AccountingMetadata> metadata,
             @JsonProperty("order_number") @Nullable String orderNumber,
             @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("paid_amount") @Nullable Double paidAmount,
             @JsonProperty("payments") @Nullable List<AccountingPaymentReference> payments,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -242,6 +257,7 @@ public class AccountingSalesorder {
             @JsonProperty("status") @Nullable AccountingSalesorderStatus status,
             @JsonProperty("subscription_id") @Nullable String subscriptionId,
             @JsonProperty("subtotal_amount") @Nullable Double subtotalAmount,
+            @JsonProperty("table_id") @Nullable String tableId,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("tip_amount") @Nullable Double tipAmount,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
@@ -265,6 +281,7 @@ public class AccountingSalesorder {
         this.metadata = metadata;
         this.orderNumber = orderNumber;
         this.organizationId = organizationId;
+        this.paidAmount = paidAmount;
         this.payments = payments;
         this.postedAt = postedAt;
         this.raw = raw;
@@ -275,6 +292,7 @@ public class AccountingSalesorder {
         this.status = status;
         this.subscriptionId = subscriptionId;
         this.subtotalAmount = subtotalAmount;
+        this.tableId = tableId;
         this.taxAmount = taxAmount;
         this.tipAmount = tipAmount;
         this.totalAmount = totalAmount;
@@ -292,7 +310,8 @@ public class AccountingSalesorder {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     /**
@@ -396,6 +415,13 @@ public class AccountingSalesorder {
     }
 
     /**
+     * total of the payments applied so far
+     */
+    public Optional<Double> paidAmount() {
+        return Optional.ofNullable(this.paidAmount);
+    }
+
+    /**
      * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
      */
     public Optional<List<AccountingPaymentReference>> payments() {
@@ -445,6 +471,13 @@ public class AccountingSalesorder {
      */
     public Optional<Double> subtotalAmount() {
         return Optional.ofNullable(this.subtotalAmount);
+    }
+
+    /**
+     * reference to a commerce_table (restaurant table) the order is seated at
+     */
+    public Optional<String> tableId() {
+        return Optional.ofNullable(this.tableId);
     }
 
     public Optional<Double> taxAmount() {
@@ -610,6 +643,15 @@ public class AccountingSalesorder {
 
 
     /**
+     * total of the payments applied so far
+     */
+    public AccountingSalesorder withPaidAmount(@Nullable Double paidAmount) {
+        this.paidAmount = paidAmount;
+        return this;
+    }
+
+
+    /**
      * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
      */
     public AccountingSalesorder withPayments(@Nullable List<AccountingPaymentReference> payments) {
@@ -681,6 +723,15 @@ public class AccountingSalesorder {
     }
 
 
+    /**
+     * reference to a commerce_table (restaurant table) the order is seated at
+     */
+    public AccountingSalesorder withTableId(@Nullable String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+
+
     public AccountingSalesorder withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -737,6 +788,7 @@ public class AccountingSalesorder {
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.orderNumber, other.orderNumber) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
             Utils.enhancedDeepEquals(this.payments, other.payments) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -747,6 +799,7 @@ public class AccountingSalesorder {
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.subscriptionId, other.subscriptionId) &&
             Utils.enhancedDeepEquals(this.subtotalAmount, other.subtotalAmount) &&
+            Utils.enhancedDeepEquals(this.tableId, other.tableId) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.tipAmount, other.tipAmount) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
@@ -762,11 +815,12 @@ public class AccountingSalesorder {
             employeeUserId, fees, fulfillmentType,
             guestCount, id, lineitems,
             locationId, metadata, orderNumber,
-            organizationId, payments, postedAt,
-            raw, refundedAmount, salesChannel,
-            serviceChargeAmount, shippingAddress, status,
-            subscriptionId, subtotalAmount, taxAmount,
-            tipAmount, totalAmount, updatedAt);
+            organizationId, paidAmount, payments,
+            postedAt, raw, refundedAmount,
+            salesChannel, serviceChargeAmount, shippingAddress,
+            status, subscriptionId, subtotalAmount,
+            tableId, taxAmount, tipAmount,
+            totalAmount, updatedAt);
     }
     
     @Override
@@ -791,6 +845,7 @@ public class AccountingSalesorder {
                 "metadata", metadata,
                 "orderNumber", orderNumber,
                 "organizationId", organizationId,
+                "paidAmount", paidAmount,
                 "payments", payments,
                 "postedAt", postedAt,
                 "raw", raw,
@@ -801,6 +856,7 @@ public class AccountingSalesorder {
                 "status", status,
                 "subscriptionId", subscriptionId,
                 "subtotalAmount", subtotalAmount,
+                "tableId", tableId,
                 "taxAmount", taxAmount,
                 "tipAmount", tipAmount,
                 "totalAmount", totalAmount,
@@ -848,6 +904,8 @@ public class AccountingSalesorder {
 
         private String organizationId;
 
+        private Double paidAmount;
+
         private List<AccountingPaymentReference> payments;
 
         private OffsetDateTime postedAt;
@@ -867,6 +925,8 @@ public class AccountingSalesorder {
         private String subscriptionId;
 
         private Double subtotalAmount;
+
+        private String tableId;
 
         private Double taxAmount;
 
@@ -1000,6 +1060,14 @@ public class AccountingSalesorder {
         }
 
         /**
+         * total of the payments applied so far
+         */
+        public Builder paidAmount(@Nullable Double paidAmount) {
+            this.paidAmount = paidAmount;
+            return this;
+        }
+
+        /**
          * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
          */
         public Builder payments(@Nullable List<AccountingPaymentReference> payments) {
@@ -1061,6 +1129,14 @@ public class AccountingSalesorder {
             return this;
         }
 
+        /**
+         * reference to a commerce_table (restaurant table) the order is seated at
+         */
+        public Builder tableId(@Nullable String tableId) {
+            this.tableId = tableId;
+            return this;
+        }
+
         public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -1092,11 +1168,12 @@ public class AccountingSalesorder {
                 employeeUserId, fees, fulfillmentType,
                 guestCount, id, lineitems,
                 locationId, metadata, orderNumber,
-                organizationId, payments, postedAt,
-                raw, refundedAmount, salesChannel,
-                serviceChargeAmount, shippingAddress, status,
-                subscriptionId, subtotalAmount, taxAmount,
-                tipAmount, totalAmount, updatedAt);
+                organizationId, paidAmount, payments,
+                postedAt, raw, refundedAmount,
+                salesChannel, serviceChargeAmount, shippingAddress,
+                status, subscriptionId, subtotalAmount,
+                tableId, taxAmount, tipAmount,
+                totalAmount, updatedAt);
         }
 
     }

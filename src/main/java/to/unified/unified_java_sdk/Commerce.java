@@ -57,6 +57,9 @@ import to.unified.unified_java_sdk.models.operations.GetCommerceReviewResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesResponse;
@@ -87,6 +90,9 @@ import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsResponse
 import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceSaleschannelsResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesResponse;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceCollectionResponse;
@@ -176,6 +182,7 @@ import to.unified.unified_java_sdk.operations.GetCommerceReservation;
 import to.unified.unified_java_sdk.operations.GetCommerceReturn;
 import to.unified.unified_java_sdk.operations.GetCommerceReview;
 import to.unified.unified_java_sdk.operations.GetCommerceSaleschannel;
+import to.unified.unified_java_sdk.operations.GetCommerceTable;
 import to.unified.unified_java_sdk.operations.ListCommerceAvailabilities;
 import to.unified.unified_java_sdk.operations.ListCommerceCollections;
 import to.unified.unified_java_sdk.operations.ListCommerceInventories;
@@ -186,6 +193,7 @@ import to.unified.unified_java_sdk.operations.ListCommerceReservations;
 import to.unified.unified_java_sdk.operations.ListCommerceReturns;
 import to.unified.unified_java_sdk.operations.ListCommerceReviews;
 import to.unified.unified_java_sdk.operations.ListCommerceSaleschannels;
+import to.unified.unified_java_sdk.operations.ListCommerceTables;
 import to.unified.unified_java_sdk.operations.PatchCommerceCollection;
 import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.PatchCommerceItem;
@@ -709,6 +717,34 @@ public class Commerce {
     }
 
     /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCommerceTableRequestBuilder getCommerceTable() {
+        return new GetCommerceTableRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        RequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
+              = new GetCommerceTable.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all availabilities
      * 
      * <p>Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before
@@ -1065,6 +1101,42 @@ public class Commerce {
     public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
         RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
               = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCommerceTablesRequestBuilder listCommerceTables() {
+        return new ListCommerceTablesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        RequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
+              = new ListCommerceTables.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

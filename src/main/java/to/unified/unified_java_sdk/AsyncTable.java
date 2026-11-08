@@ -8,15 +8,21 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequest;
 import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequest;
 import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetCommerceTableResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceTablesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListCommerceTablesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTablesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListDatastoreTablesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchDatastoreTableRequestBuilder;
@@ -26,7 +32,9 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveDatastoreTableR
 import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateDatastoreTableResponse;
 import to.unified.unified_java_sdk.operations.CreateDatastoreTable;
+import to.unified.unified_java_sdk.operations.GetCommerceTable;
 import to.unified.unified_java_sdk.operations.GetDatastoreTable;
+import to.unified.unified_java_sdk.operations.ListCommerceTables;
 import to.unified.unified_java_sdk.operations.ListDatastoreTables;
 import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
@@ -86,6 +94,35 @@ public class AsyncTable {
     /**
      * Retrieve a table
      * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetCommerceTableRequestBuilder getCommerceTable() {
+        return new GetCommerceTableRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetCommerceTableResponse>} - The async response
+     */
+    public CompletableFuture<GetCommerceTableResponse> getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        AsyncRequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
+              = new GetCommerceTable.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a table
+     * 
      * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -107,6 +144,43 @@ public class AsyncTable {
     public CompletableFuture<GetDatastoreTableResponse> getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
         AsyncRequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
               = new GetDatastoreTable.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListCommerceTablesRequestBuilder listCommerceTables() {
+        return new ListCommerceTablesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListCommerceTablesResponse>} - The async response
+     */
+    public CompletableFuture<ListCommerceTablesResponse> listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        AsyncRequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
+              = new ListCommerceTables.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

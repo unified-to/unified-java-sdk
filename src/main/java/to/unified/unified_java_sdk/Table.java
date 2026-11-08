@@ -9,9 +9,15 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetCommerceTableResponse;
 import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequest;
 import to.unified.unified_java_sdk.models.operations.GetDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetDatastoreTableResponse;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListCommerceTablesResponse;
 import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequest;
 import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListDatastoreTablesResponse;
@@ -25,7 +31,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequest
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateDatastoreTableResponse;
 import to.unified.unified_java_sdk.operations.CreateDatastoreTable;
+import to.unified.unified_java_sdk.operations.GetCommerceTable;
 import to.unified.unified_java_sdk.operations.GetDatastoreTable;
+import to.unified.unified_java_sdk.operations.ListCommerceTables;
 import to.unified.unified_java_sdk.operations.ListDatastoreTables;
 import to.unified.unified_java_sdk.operations.PatchDatastoreTable;
 import to.unified.unified_java_sdk.operations.RemoveDatastoreTable;
@@ -83,6 +91,34 @@ public class Table {
     /**
      * Retrieve a table
      * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetCommerceTableRequestBuilder getCommerceTable() {
+        return new GetCommerceTableRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a table
+     * 
+     * <p>Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetCommerceTableResponse getCommerceTable(@Nonnull GetCommerceTableRequest request) {
+        RequestOperation<GetCommerceTableRequest, GetCommerceTableResponse> operation
+              = new GetCommerceTable.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a table
+     * 
      * <p>Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -105,6 +141,42 @@ public class Table {
     public GetDatastoreTableResponse getDatastoreTable(@Nonnull GetDatastoreTableRequest request) {
         RequestOperation<GetDatastoreTableRequest, GetDatastoreTableResponse> operation
               = new GetDatastoreTable.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListCommerceTablesRequestBuilder listCommerceTables() {
+        return new ListCommerceTablesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all tables
+     * 
+     * <p>Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListCommerceTablesResponse listCommerceTables(@Nonnull ListCommerceTablesRequest request) {
+        RequestOperation<ListCommerceTablesRequest, ListCommerceTablesResponse> operation
+              = new ListCommerceTables.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
