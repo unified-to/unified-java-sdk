@@ -56,7 +56,7 @@ public class HrisEmployee {
     private String currency;
 
     /**
-     * YYYYMM/DD
+     * YYYY-MM-DD
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
@@ -432,7 +432,7 @@ public class HrisEmployee {
     }
 
     /**
-     * YYYYMM/DD
+     * YYYY-MM-DD
      */
     public Optional<OffsetDateTime> dateOfBirth() {
         return Optional.ofNullable(this.dateOfBirth);
@@ -693,7 +693,7 @@ public class HrisEmployee {
 
 
     /**
-     * YYYYMM/DD
+     * YYYY-MM-DD
      */
     public HrisEmployee withDateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
@@ -1245,7 +1245,7 @@ public class HrisEmployee {
         }
 
         /**
-         * YYYYMM/DD
+         * YYYY-MM-DD
          */
         public Builder dateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
             this.dateOfBirth = dateOfBirth;

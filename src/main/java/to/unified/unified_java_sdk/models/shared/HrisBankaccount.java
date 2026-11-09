@@ -148,7 +148,7 @@ public class HrisBankaccount {
     private OffsetDateTime updatedAt;
 
     /**
-     * employee ID (required for listcreate) (reference to HrisEmployee)
+     * employee ID (required for list and create) (reference to HrisEmployee)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
@@ -330,7 +330,7 @@ public class HrisBankaccount {
     }
 
     /**
-     * employee ID (required for listcreate) (reference to HrisEmployee)
+     * employee ID (required for list and create) (reference to HrisEmployee)
      */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
@@ -501,7 +501,7 @@ public class HrisBankaccount {
 
 
     /**
-     * employee ID (required for listcreate) (reference to HrisEmployee)
+     * employee ID (required for list and create) (reference to HrisEmployee)
      */
     public HrisBankaccount withUserId(@Nullable String userId) {
         this.userId = userId;
@@ -769,7 +769,7 @@ public class HrisBankaccount {
         }
 
         /**
-         * employee ID (required for listcreate) (reference to HrisEmployee)
+         * employee ID (required for list and create) (reference to HrisEmployee)
          */
         public Builder userId(@Nullable String userId) {
             this.userId = userId;

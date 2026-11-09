@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.17'
+implementation 'to.unified:unified-java-sdk:0.50.18'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.17</version>
+    <version>0.50.18</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2970,12 +2970,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [createUnifiedSecretsmanager](docs/sdks/unified/README.md#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [createUnifiedWorkspaceintegration](docs/sdks/unified/README.md#createunifiedworkspaceintegration) - Create workspace integration
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [getUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [getUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -2987,18 +2989,22 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [listUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
+* [patchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+* [updateUnifiedWorkspaceintegration](docs/sdks/unified/README.md#updateunifiedworkspaceintegration) - Update workspace integration
 
 ### [Unittype](docs/sdks/unittype/README.md)
 
@@ -3078,6 +3084,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
 * [updateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
+### [Workspaceintegration](docs/sdks/workspaceintegration/README.md)
+
+* [createUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#createunifiedworkspaceintegration) - Create workspace integration
+* [getUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
+* [listUnifiedWorkspaceintegrations](docs/sdks/workspaceintegration/README.md#listunifiedworkspaceintegrations) - List workspace integrations
+* [patchUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#patchunifiedworkspaceintegration) - Update workspace integration
+* [removeUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
+* [updateUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#updateunifiedworkspaceintegration) - Update workspace integration
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -3127,7 +3142,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3139,7 +3154,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3187,7 +3202,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3199,7 +3214,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3266,7 +3281,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                        .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3278,7 +3293,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3433,7 +3448,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("ef9a8d0f-0bbd-48a2-9e3d-95ca4b43d26f")
+                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3445,7 +3460,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T11:35:11.482Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

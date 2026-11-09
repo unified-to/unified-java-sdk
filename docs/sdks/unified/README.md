@@ -9,12 +9,14 @@
 * [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [createUnifiedSecretsmanager](#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
+* [createUnifiedWorkspaceintegration](#createunifiedworkspaceintegration) - Create workspace integration
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
 * [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
+* [getUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -26,18 +28,22 @@
 * [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [listUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
+* [patchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+* [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
+* [updateUnifiedWorkspaceintegration](#updateunifiedworkspaceintegration) - Update workspace integration
 
 ## createUnifiedConnection
 
@@ -327,6 +333,64 @@ public class Application {
 ### Response
 
 **[CreateUnifiedWebhookResponse](../../models/operations/CreateUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createUnifiedWorkspaceintegration
+
+Create workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createUnifiedWorkspaceintegration" method="post" path="/unified/workspaceintegration" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateUnifiedWorkspaceintegrationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.WorkspaceIntegration;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        WorkspaceIntegration req = WorkspaceIntegration.builder()
+                .integrationType("<value>")
+                .isActive(true)
+                .build();
+
+        CreateUnifiedWorkspaceintegrationResponse res = sdk.unified().createUnifiedWorkspaceintegration()
+                .request(req)
+                .call();
+
+        if (res.workspaceIntegration().isPresent()) {
+            System.out.println(res.workspaceIntegration().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                           | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `request`                                                           | [WorkspaceIntegration](../../models/shared/WorkspaceIntegration.md) | :heavy_check_mark:                                                  | The request object to use for the request.                          |
+
+### Response
+
+**[CreateUnifiedWorkspaceintegrationResponse](../../models/operations/CreateUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -670,6 +734,63 @@ public class Application {
 ### Response
 
 **[GetUnifiedWebhookResponse](../../models/operations/GetUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getUnifiedWorkspaceintegration
+
+Retrieve workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getUnifiedWorkspaceintegration" method="get" path="/unified/workspaceintegration/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceintegrationRequest;
+import to.unified.unified_java_sdk.models.operations.GetUnifiedWorkspaceintegrationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetUnifiedWorkspaceintegrationRequest req = GetUnifiedWorkspaceintegrationRequest.builder()
+                .id("<id>")
+                .build();
+
+        GetUnifiedWorkspaceintegrationResponse res = sdk.unified().getUnifiedWorkspaceintegration()
+                .request(req)
+                .call();
+
+        if (res.workspaceIntegration().isPresent()) {
+            System.out.println(res.workspaceIntegration().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [GetUnifiedWorkspaceintegrationRequest](../../models/operations/GetUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[GetUnifiedWorkspaceintegrationResponse](../../models/operations/GetUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -1238,6 +1359,57 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listUnifiedWorkspaceintegrations
+
+List workspace integrations
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listUnifiedWorkspaceintegrations" method="get" path="/unified/workspaceintegration" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListUnifiedWorkspaceintegrationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListUnifiedWorkspaceintegrationsResponse res = sdk.unified().listUnifiedWorkspaceintegrations()
+                .call();
+
+        if (res.workspaceIntegrations().isPresent()) {
+            System.out.println(res.workspaceIntegrations().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [ListUnifiedWorkspaceintegrationsRequest](../../models/operations/ListUnifiedWorkspaceintegrationsRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[ListUnifiedWorkspaceintegrationsResponse](../../models/operations/ListUnifiedWorkspaceintegrationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchUnifiedConnection
 
 Update connection
@@ -1476,6 +1648,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchUnifiedWorkspaceintegration" method="patch" path="/unified/workspaceintegration/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWorkspaceintegrationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedWorkspaceintegrationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.WorkspaceIntegrationPatch;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchUnifiedWorkspaceintegrationRequest req = PatchUnifiedWorkspaceintegrationRequest.builder()
+                .workspaceIntegrationPatch(WorkspaceIntegrationPatch.builder()
+                    .build())
+                .id("<id>")
+                .build();
+
+        PatchUnifiedWorkspaceintegrationResponse res = sdk.unified().patchUnifiedWorkspaceintegration()
+                .request(req)
+                .call();
+
+        if (res.workspaceIntegration().isPresent()) {
+            System.out.println(res.workspaceIntegration().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [PatchUnifiedWorkspaceintegrationRequest](../../models/operations/PatchUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[PatchUnifiedWorkspaceintegrationResponse](../../models/operations/PatchUnifiedWorkspaceintegrationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeUnifiedConnection
 
 Remove connection
@@ -1691,6 +1923,61 @@ public class Application {
 ### Response
 
 **[RemoveUnifiedWebhookResponse](../../models/operations/RemoveUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeUnifiedWorkspaceintegration
+
+Remove workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeUnifiedWorkspaceintegration" method="delete" path="/unified/workspaceintegration/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceintegrationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveUnifiedWorkspaceintegrationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveUnifiedWorkspaceintegrationRequest req = RemoveUnifiedWorkspaceintegrationRequest.builder()
+                .id("<id>")
+                .build();
+
+        RemoveUnifiedWorkspaceintegrationResponse res = sdk.unified().removeUnifiedWorkspaceintegration()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [RemoveUnifiedWorkspaceintegrationRequest](../../models/operations/RemoveUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[RemoveUnifiedWorkspaceintegrationResponse](../../models/operations/RemoveUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -1929,6 +2216,68 @@ public class Application {
 ### Response
 
 **[UpdateUnifiedWebhookTriggerResponse](../../models/operations/UpdateUnifiedWebhookTriggerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateUnifiedWorkspaceintegration" method="put" path="/unified/workspaceintegration/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWorkspaceintegrationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedWorkspaceintegrationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.WorkspaceIntegration;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateUnifiedWorkspaceintegrationRequest req = UpdateUnifiedWorkspaceintegrationRequest.builder()
+                .workspaceIntegration(WorkspaceIntegration.builder()
+                    .integrationType("<value>")
+                    .isActive(false)
+                    .build())
+                .id("<id>")
+                .build();
+
+        UpdateUnifiedWorkspaceintegrationResponse res = sdk.unified().updateUnifiedWorkspaceintegration()
+                .request(req)
+                .call();
+
+        if (res.workspaceIntegration().isPresent()) {
+            System.out.println(res.workspaceIntegration().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [UpdateUnifiedWorkspaceintegrationRequest](../../models/operations/UpdateUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[UpdateUnifiedWorkspaceintegrationResponse](../../models/operations/UpdateUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 

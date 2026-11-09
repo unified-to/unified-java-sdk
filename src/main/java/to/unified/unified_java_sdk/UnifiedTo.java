@@ -710,6 +710,9 @@ public class UnifiedTo {
     private final Webhook webhook;
 
 
+    private final Workspaceintegration workspaceintegration;
+
+
     private final Verification verification;
 
 
@@ -1831,6 +1834,11 @@ public class UnifiedTo {
     }
 
 
+    public Workspaceintegration workspaceintegration() {
+        return workspaceintegration;
+    }
+
+
     public Verification verification() {
         return verification;
     }
@@ -2200,6 +2208,7 @@ public class UnifiedTo {
         this.notification = new Notification(sdkConfiguration);
         this.secretsmanager = new Secretsmanager(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
+        this.workspaceintegration = new Workspaceintegration(sdkConfiguration);
         this.verification = new Verification(sdkConfiguration);
         this.request = new Request(sdkConfiguration);
         this.asyncSDK = new AsyncUnifiedTo(this, sdkConfiguration);

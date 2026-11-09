@@ -459,6 +459,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncWebhook webhook;
 
+    private final AsyncWorkspaceintegration workspaceintegration;
+
     private final AsyncVerification verification;
 
     private final AsyncRequest request;
@@ -1355,6 +1357,10 @@ public class AsyncUnifiedTo {
         return webhook;
     }
 
+    public AsyncWorkspaceintegration workspaceintegration() {
+        return workspaceintegration;
+    }
+
     public AsyncVerification verification() {
         return verification;
     }
@@ -1592,6 +1598,7 @@ public class AsyncUnifiedTo {
         this.notification = new AsyncNotification(syncSDK.notification(), sdkConfiguration);
         this.secretsmanager = new AsyncSecretsmanager(syncSDK.secretsmanager(), sdkConfiguration);
         this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
+        this.workspaceintegration = new AsyncWorkspaceintegration(syncSDK.workspaceintegration(), sdkConfiguration);
         this.verification = new AsyncVerification(syncSDK.verification(), sdkConfiguration);
         this.request = new AsyncRequest(syncSDK.request(), sdkConfiguration);
     }
