@@ -6,9 +6,15 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostRequest;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateSocialPostResponse;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.GetSocialInsightRequest;
 import to.unified.unified_java_sdk.models.operations.GetSocialInsightRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSocialInsightResponse;
@@ -21,6 +27,9 @@ import to.unified.unified_java_sdk.models.operations.GetSocialProfileResponse;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetSocialReviewResponse;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListSocialInsightsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSocialInsightsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSocialInsightsResponse;
@@ -33,33 +42,48 @@ import to.unified.unified_java_sdk.models.operations.ListSocialProfilesResponse;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequest;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListSocialReviewsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchSocialPostRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSocialPostRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchSocialPostResponse;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchSocialReviewResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveSocialPostRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveSocialPostRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveSocialPostResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialPostRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialPostRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialPostResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateSocialReviewResponse;
+import to.unified.unified_java_sdk.operations.CreateSocialComment;
 import to.unified.unified_java_sdk.operations.CreateSocialPost;
+import to.unified.unified_java_sdk.operations.GetSocialComment;
 import to.unified.unified_java_sdk.operations.GetSocialInsight;
 import to.unified.unified_java_sdk.operations.GetSocialPost;
 import to.unified.unified_java_sdk.operations.GetSocialProfile;
 import to.unified.unified_java_sdk.operations.GetSocialReview;
+import to.unified.unified_java_sdk.operations.ListSocialComments;
 import to.unified.unified_java_sdk.operations.ListSocialInsights;
 import to.unified.unified_java_sdk.operations.ListSocialPosts;
 import to.unified.unified_java_sdk.operations.ListSocialProfiles;
 import to.unified.unified_java_sdk.operations.ListSocialReviews;
+import to.unified.unified_java_sdk.operations.PatchSocialComment;
 import to.unified.unified_java_sdk.operations.PatchSocialPost;
 import to.unified.unified_java_sdk.operations.PatchSocialReview;
+import to.unified.unified_java_sdk.operations.RemoveSocialComment;
 import to.unified.unified_java_sdk.operations.RemoveSocialPost;
+import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateSocialPost;
 import to.unified.unified_java_sdk.operations.UpdateSocialReview;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -82,6 +106,34 @@ public class Social {
      */
     public AsyncSocial async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @return The call builder
+     */
+    public CreateSocialCommentRequestBuilder createSocialComment() {
+        return new CreateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        RequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
+              = new CreateSocialComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -109,6 +161,34 @@ public class Social {
     public CreateSocialPostResponse createSocialPost(@Nonnull CreateSocialPostRequest request) {
         RequestOperation<CreateSocialPostRequest, CreateSocialPostResponse> operation
               = new CreateSocialPost.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetSocialCommentRequestBuilder getSocialComment() {
+        return new GetSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        RequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
+              = new GetSocialComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -221,6 +301,42 @@ public class Social {
     public GetSocialReviewResponse getSocialReview(@Nonnull GetSocialReviewRequest request) {
         RequestOperation<GetSocialReviewRequest, GetSocialReviewResponse> operation
               = new GetSocialReview.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListSocialCommentsRequestBuilder listSocialComments() {
+        return new ListSocialCommentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        RequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
+              = new ListSocialComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -369,6 +485,34 @@ public class Social {
     }
 
     /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchSocialCommentRequestBuilder patchSocialComment() {
+        return new PatchSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        RequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
+              = new PatchSocialComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a post
      * 
      * <p>Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the
@@ -425,6 +569,32 @@ public class Social {
     }
 
     /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveSocialCommentRequestBuilder removeSocialComment() {
+        return new RemoveSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        RequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
+              = new RemoveSocialComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a post
      * 
      * <p>Deletes the SocialPost identified by `id`.
@@ -447,6 +617,34 @@ public class Social {
     public RemoveSocialPostResponse removeSocialPost(@Nonnull RemoveSocialPostRequest request) {
         RequestOperation<RemoveSocialPostRequest, RemoveSocialPostResponse> operation
               = new RemoveSocialPost.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateSocialCommentRequestBuilder updateSocialComment() {
+        return new UpdateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        RequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
+              = new UpdateSocialComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

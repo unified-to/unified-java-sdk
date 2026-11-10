@@ -377,6 +377,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
     public static final PropertyWorkspaceIntegrationPatchPermissions SOCIAL_REVIEW_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("social_review_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions SOCIAL_INSIGHT_READ = new PropertyWorkspaceIntegrationPatchPermissions("social_insight_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions SOCIAL_INSIGHT_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("social_insight_write");
+    public static final PropertyWorkspaceIntegrationPatchPermissions SOCIAL_COMMENT_READ = new PropertyWorkspaceIntegrationPatchPermissions("social_comment_read");
+    public static final PropertyWorkspaceIntegrationPatchPermissions SOCIAL_COMMENT_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("social_comment_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions LEGAL_MATTER_READ = new PropertyWorkspaceIntegrationPatchPermissions("legal_matter_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions LEGAL_MATTER_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("legal_matter_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions LEGAL_PRACTICEAREA_READ = new PropertyWorkspaceIntegrationPatchPermissions("legal_practicearea_read");
@@ -894,6 +896,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("social_review_write", SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", SOCIAL_INSIGHT_WRITE);
+        map.put("social_comment_read", SOCIAL_COMMENT_READ);
+        map.put("social_comment_write", SOCIAL_COMMENT_WRITE);
         map.put("legal_matter_read", LEGAL_MATTER_READ);
         map.put("legal_matter_write", LEGAL_MATTER_WRITE);
         map.put("legal_practicearea_read", LEGAL_PRACTICEAREA_READ);
@@ -1343,6 +1347,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("social_review_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.SOCIAL_INSIGHT_WRITE);
+        map.put("social_comment_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.SOCIAL_COMMENT_READ);
+        map.put("social_comment_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.SOCIAL_COMMENT_WRITE);
         map.put("legal_matter_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.LEGAL_MATTER_READ);
         map.put("legal_matter_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.LEGAL_MATTER_WRITE);
         map.put("legal_practicearea_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.LEGAL_PRACTICEAREA_READ);
@@ -1793,6 +1799,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         SOCIAL_REVIEW_WRITE("social_review_write"),
         SOCIAL_INSIGHT_READ("social_insight_read"),
         SOCIAL_INSIGHT_WRITE("social_insight_write"),
+        SOCIAL_COMMENT_READ("social_comment_read"),
+        SOCIAL_COMMENT_WRITE("social_comment_write"),
         LEGAL_MATTER_READ("legal_matter_read"),
         LEGAL_MATTER_WRITE("legal_matter_write"),
         LEGAL_PRACTICEAREA_READ("legal_practicearea_read"),

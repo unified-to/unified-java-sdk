@@ -9,6 +9,9 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentResponse;
@@ -18,6 +21,9 @@ import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentResponse;
@@ -27,6 +33,9 @@ import to.unified.unified_java_sdk.models.operations.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListKmsCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsResponse;
@@ -36,6 +45,9 @@ import to.unified.unified_java_sdk.models.operations.ListUcCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentResponse;
@@ -45,6 +57,9 @@ import to.unified.unified_java_sdk.models.operations.PatchUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentResponse;
@@ -54,6 +69,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentResponse;
@@ -61,21 +79,27 @@ import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentResponse;
 import to.unified.unified_java_sdk.operations.CreateKmsComment;
+import to.unified.unified_java_sdk.operations.CreateSocialComment;
 import to.unified.unified_java_sdk.operations.CreateTaskComment;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.GetKmsComment;
+import to.unified.unified_java_sdk.operations.GetSocialComment;
 import to.unified.unified_java_sdk.operations.GetTaskComment;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.ListKmsComments;
+import to.unified.unified_java_sdk.operations.ListSocialComments;
 import to.unified.unified_java_sdk.operations.ListTaskComments;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.PatchKmsComment;
+import to.unified.unified_java_sdk.operations.PatchSocialComment;
 import to.unified.unified_java_sdk.operations.PatchTaskComment;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.RemoveKmsComment;
+import to.unified.unified_java_sdk.operations.RemoveSocialComment;
 import to.unified.unified_java_sdk.operations.RemoveTaskComment;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
+import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -125,6 +149,34 @@ public class Comment {
     public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @return The call builder
+     */
+    public CreateSocialCommentRequestBuilder createSocialComment() {
+        return new CreateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSocialCommentResponse createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        RequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
+              = new CreateSocialComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -209,6 +261,34 @@ public class Comment {
     public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetSocialCommentRequestBuilder getSocialComment() {
+        return new GetSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSocialCommentResponse getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        RequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
+              = new GetSocialComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -301,6 +381,42 @@ public class Comment {
     public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListSocialCommentsRequestBuilder listSocialComments() {
+        return new ListSocialCommentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSocialCommentsResponse listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        RequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
+              = new ListSocialComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -407,6 +523,34 @@ public class Comment {
     /**
      * Update a comment
      * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchSocialCommentRequestBuilder patchSocialComment() {
+        return new PatchSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSocialCommentResponse patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        RequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
+              = new PatchSocialComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a comment
+     * 
      * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
      * request body.
      * 
@@ -489,6 +633,32 @@ public class Comment {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveSocialCommentRequestBuilder removeSocialComment() {
+        return new RemoveSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSocialCommentResponse removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        RequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
+              = new RemoveSocialComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a comment
+     * 
      * <p>Deletes the TaskComment identified by `id`.
      * 
      * @return The call builder
@@ -563,6 +733,34 @@ public class Comment {
     public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateSocialCommentRequestBuilder updateSocialComment() {
+        return new UpdateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSocialCommentResponse updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        RequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
+              = new UpdateSocialComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

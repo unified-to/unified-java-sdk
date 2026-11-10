@@ -409,6 +409,8 @@
 | `signingSignatoryWrite`              | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `signingTemplateRead`                | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `signingTemplateWrite`               | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `socialCommentRead`                  | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `socialCommentWrite`                 | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `socialInsightRead`                  | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `socialInsightWrite`                 | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `socialPostRead`                     | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |

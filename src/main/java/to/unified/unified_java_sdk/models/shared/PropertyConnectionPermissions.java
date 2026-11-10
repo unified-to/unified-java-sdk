@@ -377,6 +377,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SOCIAL_REVIEW_WRITE = new PropertyConnectionPermissions("social_review_write");
     public static final PropertyConnectionPermissions SOCIAL_INSIGHT_READ = new PropertyConnectionPermissions("social_insight_read");
     public static final PropertyConnectionPermissions SOCIAL_INSIGHT_WRITE = new PropertyConnectionPermissions("social_insight_write");
+    public static final PropertyConnectionPermissions SOCIAL_COMMENT_READ = new PropertyConnectionPermissions("social_comment_read");
+    public static final PropertyConnectionPermissions SOCIAL_COMMENT_WRITE = new PropertyConnectionPermissions("social_comment_write");
     public static final PropertyConnectionPermissions LEGAL_MATTER_READ = new PropertyConnectionPermissions("legal_matter_read");
     public static final PropertyConnectionPermissions LEGAL_MATTER_WRITE = new PropertyConnectionPermissions("legal_matter_write");
     public static final PropertyConnectionPermissions LEGAL_PRACTICEAREA_READ = new PropertyConnectionPermissions("legal_practicearea_read");
@@ -894,6 +896,8 @@ public class PropertyConnectionPermissions {
         map.put("social_review_write", SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", SOCIAL_INSIGHT_WRITE);
+        map.put("social_comment_read", SOCIAL_COMMENT_READ);
+        map.put("social_comment_write", SOCIAL_COMMENT_WRITE);
         map.put("legal_matter_read", LEGAL_MATTER_READ);
         map.put("legal_matter_write", LEGAL_MATTER_WRITE);
         map.put("legal_practicearea_read", LEGAL_PRACTICEAREA_READ);
@@ -1343,6 +1347,8 @@ public class PropertyConnectionPermissions {
         map.put("social_review_write", PropertyConnectionPermissionsEnum.SOCIAL_REVIEW_WRITE);
         map.put("social_insight_read", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_READ);
         map.put("social_insight_write", PropertyConnectionPermissionsEnum.SOCIAL_INSIGHT_WRITE);
+        map.put("social_comment_read", PropertyConnectionPermissionsEnum.SOCIAL_COMMENT_READ);
+        map.put("social_comment_write", PropertyConnectionPermissionsEnum.SOCIAL_COMMENT_WRITE);
         map.put("legal_matter_read", PropertyConnectionPermissionsEnum.LEGAL_MATTER_READ);
         map.put("legal_matter_write", PropertyConnectionPermissionsEnum.LEGAL_MATTER_WRITE);
         map.put("legal_practicearea_read", PropertyConnectionPermissionsEnum.LEGAL_PRACTICEAREA_READ);
@@ -1793,6 +1799,8 @@ public class PropertyConnectionPermissions {
         SOCIAL_REVIEW_WRITE("social_review_write"),
         SOCIAL_INSIGHT_READ("social_insight_read"),
         SOCIAL_INSIGHT_WRITE("social_insight_write"),
+        SOCIAL_COMMENT_READ("social_comment_read"),
+        SOCIAL_COMMENT_WRITE("social_comment_write"),
         LEGAL_MATTER_READ("legal_matter_read"),
         LEGAL_MATTER_WRITE("legal_matter_write"),
         LEGAL_PRACTICEAREA_READ("legal_practicearea_read"),

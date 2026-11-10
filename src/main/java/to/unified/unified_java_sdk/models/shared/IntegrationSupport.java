@@ -316,6 +316,11 @@ public class IntegrationSupport {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("list_meeting_url")
+    private ListMeetingUrl listMeetingUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_member_id")
     private ListMemberId listMemberId;
 
@@ -1206,6 +1211,7 @@ public class IntegrationSupport {
             @JsonProperty("list_location_id") @Nullable ListLocationId listLocationId,
             @JsonProperty("list_matter_id") @Nullable ListMatterId listMatterId,
             @JsonProperty("list_medium") @Nullable ListMedium listMedium,
+            @JsonProperty("list_meeting_url") @Nullable ListMeetingUrl listMeetingUrl,
             @JsonProperty("list_member_id") @Nullable ListMemberId listMemberId,
             @JsonProperty("list_offset") @Nullable ListOffset listOffset,
             @JsonProperty("list_order") @Nullable ListOrder listOrder,
@@ -1431,6 +1437,7 @@ public class IntegrationSupport {
         this.listLocationId = listLocationId;
         this.listMatterId = listMatterId;
         this.listMedium = listMedium;
+        this.listMeetingUrl = listMeetingUrl;
         this.listMemberId = listMemberId;
         this.listOffset = listOffset;
         this.listOrder = listOrder;
@@ -1648,7 +1655,7 @@ public class IntegrationSupport {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, rawObjects, null,
+            null, null, rawObjects,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -1676,7 +1683,8 @@ public class IntegrationSupport {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<FromWebhook> fromWebhook() {
@@ -1913,6 +1921,10 @@ public class IntegrationSupport {
 
     public Optional<ListMedium> listMedium() {
         return Optional.ofNullable(this.listMedium);
+    }
+
+    public Optional<ListMeetingUrl> listMeetingUrl() {
+        return Optional.ofNullable(this.listMeetingUrl);
     }
 
     public Optional<ListMemberId> listMemberId() {
@@ -2937,6 +2949,12 @@ public class IntegrationSupport {
 
     public IntegrationSupport withListMedium(@Nullable ListMedium listMedium) {
         this.listMedium = listMedium;
+        return this;
+    }
+
+
+    public IntegrationSupport withListMeetingUrl(@Nullable ListMeetingUrl listMeetingUrl) {
+        this.listMeetingUrl = listMeetingUrl;
         return this;
     }
 
@@ -4009,6 +4027,7 @@ public class IntegrationSupport {
             Utils.enhancedDeepEquals(this.listLocationId, other.listLocationId) &&
             Utils.enhancedDeepEquals(this.listMatterId, other.listMatterId) &&
             Utils.enhancedDeepEquals(this.listMedium, other.listMedium) &&
+            Utils.enhancedDeepEquals(this.listMeetingUrl, other.listMeetingUrl) &&
             Utils.enhancedDeepEquals(this.listMemberId, other.listMemberId) &&
             Utils.enhancedDeepEquals(this.listOffset, other.listOffset) &&
             Utils.enhancedDeepEquals(this.listOrder, other.listOrder) &&
@@ -4199,62 +4218,63 @@ public class IntegrationSupport {
             listItemVariantId, listJobId, listLabelId,
             listLeadId, listLimit, listLinkId,
             listListId, listListingId, listLocationId,
-            listMatterId, listMedium, listMemberId,
-            listOffset, listOrder, listOrderId,
-            listOrgId, listPackageId, listPageId,
-            listParentId, listPartId, listPatientId,
-            listPaymentId, listPayslipId, listPipelineId,
-            listPostId, listPracticeareaId, listPractitionerId,
-            listProfileId, listProjectId, listPropertyId,
-            listQuery, listRawFields, listReference,
-            listRegionId, listRepoId, listReservationId,
-            listRoleId, listRoomId, listRootId,
-            listSaleschannelId, listSegmentId, listServiceId,
-            listSessionId, listShipmentId, listSize,
-            listSortByCreatedAt, listSortByName, listSortByUpdatedAt,
-            listSource, listSpaceId, listStartGte,
-            listStatus, listStudentId, listTableId,
-            listTaskId, listTeacherId, listTemplateId,
-            listTicketId, listType, listUnittypeId,
-            listUpdatedGte, listUserId, listUserMentionedId,
-            listVisitorId, methods, nativeWebhookCalendarId,
-            nativeWebhookCarrierId, nativeWebhookChannelId, nativeWebhookCompanyId,
-            nativeWebhookCourseId, nativeWebhookDatabaseId, nativeWebhookEventId,
-            nativeWebhookFormId, nativeWebhookIoId, nativeWebhookLabelId,
-            nativeWebhookListId, nativeWebhookMemberId, nativeWebhookOrderId,
-            nativeWebhookParentId, nativeWebhookProjectId, nativeWebhookPropertyId,
-            nativeWebhookSessionId, nativeWebhookShipmentId, nativeWebhookStudentId,
-            nativeWebhookTableId, nativeWebhookTaskId, nativeWebhookTemplateId,
-            nativeWebhookType, nativeWebhookUpdatedGte, nativeWebhookVisitorId,
-            outboundFields, rawObjects, searchDomain,
-            searchEmail, searchLinkedinurl, searchName,
-            searchTwitter, slowFields, virtualWebhookAccountId,
-            virtualWebhookAdId, virtualWebhookApplicationId, virtualWebhookApproverUserId,
-            virtualWebhookAssignedUserId, virtualWebhookBankfeedaccountId, virtualWebhookBenefitId,
-            virtualWebhookBillId, virtualWebhookBranchId, virtualWebhookCalendarId,
-            virtualWebhookCallId, virtualWebhookCampaignId, virtualWebhookCandidateId,
-            virtualWebhookCarrierId, virtualWebhookChannelId, virtualWebhookCollectionId,
-            virtualWebhookCompanyId, virtualWebhookContactId, virtualWebhookCourseId,
-            virtualWebhookCustomerId, virtualWebhookCycleId, virtualWebhookDatabaseId,
-            virtualWebhookDealId, virtualWebhookEffectiveStatus, virtualWebhookEndLt,
-            virtualWebhookEventId, virtualWebhookExpand, virtualWebhookFields,
-            virtualWebhookFormId, virtualWebhookGroupId, virtualWebhookGuestId,
-            virtualWebhookInvoiceId, virtualWebhookIoId, virtualWebhookItemId,
-            virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLabelId,
-            virtualWebhookLeadId, virtualWebhookLimit, virtualWebhookLinkId,
-            virtualWebhookListId, virtualWebhookListingId, virtualWebhookLocationId,
-            virtualWebhookMatterId, virtualWebhookMemberId, virtualWebhookOrderId,
-            virtualWebhookOrgId, virtualWebhookPageId, virtualWebhookParentId,
-            virtualWebhookPartId, virtualWebhookPatientId, virtualWebhookPaymentId,
-            virtualWebhookPipelineId, virtualWebhookPostId, virtualWebhookPracticeareaId,
-            virtualWebhookPractitionerId, virtualWebhookProfileId, virtualWebhookProjectId,
-            virtualWebhookPropertyId, virtualWebhookReference, virtualWebhookRepoId,
-            virtualWebhookReservationId, virtualWebhookSaleschannelId, virtualWebhookSessionId,
-            virtualWebhookShipmentId, virtualWebhookSpaceId, virtualWebhookStartGte,
-            virtualWebhookStatus, virtualWebhookStudentId, virtualWebhookTableId,
-            virtualWebhookTaskId, virtualWebhookTemplateId, virtualWebhookTicketId,
-            virtualWebhookType, virtualWebhookUpdatedGte, virtualWebhookUserId,
-            virtualWebhookUserMentionedId, virtualWebhookVisitorId, webhookEvents);
+            listMatterId, listMedium, listMeetingUrl,
+            listMemberId, listOffset, listOrder,
+            listOrderId, listOrgId, listPackageId,
+            listPageId, listParentId, listPartId,
+            listPatientId, listPaymentId, listPayslipId,
+            listPipelineId, listPostId, listPracticeareaId,
+            listPractitionerId, listProfileId, listProjectId,
+            listPropertyId, listQuery, listRawFields,
+            listReference, listRegionId, listRepoId,
+            listReservationId, listRoleId, listRoomId,
+            listRootId, listSaleschannelId, listSegmentId,
+            listServiceId, listSessionId, listShipmentId,
+            listSize, listSortByCreatedAt, listSortByName,
+            listSortByUpdatedAt, listSource, listSpaceId,
+            listStartGte, listStatus, listStudentId,
+            listTableId, listTaskId, listTeacherId,
+            listTemplateId, listTicketId, listType,
+            listUnittypeId, listUpdatedGte, listUserId,
+            listUserMentionedId, listVisitorId, methods,
+            nativeWebhookCalendarId, nativeWebhookCarrierId, nativeWebhookChannelId,
+            nativeWebhookCompanyId, nativeWebhookCourseId, nativeWebhookDatabaseId,
+            nativeWebhookEventId, nativeWebhookFormId, nativeWebhookIoId,
+            nativeWebhookLabelId, nativeWebhookListId, nativeWebhookMemberId,
+            nativeWebhookOrderId, nativeWebhookParentId, nativeWebhookProjectId,
+            nativeWebhookPropertyId, nativeWebhookSessionId, nativeWebhookShipmentId,
+            nativeWebhookStudentId, nativeWebhookTableId, nativeWebhookTaskId,
+            nativeWebhookTemplateId, nativeWebhookType, nativeWebhookUpdatedGte,
+            nativeWebhookVisitorId, outboundFields, rawObjects,
+            searchDomain, searchEmail, searchLinkedinurl,
+            searchName, searchTwitter, slowFields,
+            virtualWebhookAccountId, virtualWebhookAdId, virtualWebhookApplicationId,
+            virtualWebhookApproverUserId, virtualWebhookAssignedUserId, virtualWebhookBankfeedaccountId,
+            virtualWebhookBenefitId, virtualWebhookBillId, virtualWebhookBranchId,
+            virtualWebhookCalendarId, virtualWebhookCallId, virtualWebhookCampaignId,
+            virtualWebhookCandidateId, virtualWebhookCarrierId, virtualWebhookChannelId,
+            virtualWebhookCollectionId, virtualWebhookCompanyId, virtualWebhookContactId,
+            virtualWebhookCourseId, virtualWebhookCustomerId, virtualWebhookCycleId,
+            virtualWebhookDatabaseId, virtualWebhookDealId, virtualWebhookEffectiveStatus,
+            virtualWebhookEndLt, virtualWebhookEventId, virtualWebhookExpand,
+            virtualWebhookFields, virtualWebhookFormId, virtualWebhookGroupId,
+            virtualWebhookGuestId, virtualWebhookInvoiceId, virtualWebhookIoId,
+            virtualWebhookItemId, virtualWebhookItemVariantId, virtualWebhookJobId,
+            virtualWebhookLabelId, virtualWebhookLeadId, virtualWebhookLimit,
+            virtualWebhookLinkId, virtualWebhookListId, virtualWebhookListingId,
+            virtualWebhookLocationId, virtualWebhookMatterId, virtualWebhookMemberId,
+            virtualWebhookOrderId, virtualWebhookOrgId, virtualWebhookPageId,
+            virtualWebhookParentId, virtualWebhookPartId, virtualWebhookPatientId,
+            virtualWebhookPaymentId, virtualWebhookPipelineId, virtualWebhookPostId,
+            virtualWebhookPracticeareaId, virtualWebhookPractitionerId, virtualWebhookProfileId,
+            virtualWebhookProjectId, virtualWebhookPropertyId, virtualWebhookReference,
+            virtualWebhookRepoId, virtualWebhookReservationId, virtualWebhookSaleschannelId,
+            virtualWebhookSessionId, virtualWebhookShipmentId, virtualWebhookSpaceId,
+            virtualWebhookStartGte, virtualWebhookStatus, virtualWebhookStudentId,
+            virtualWebhookTableId, virtualWebhookTaskId, virtualWebhookTemplateId,
+            virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
+            virtualWebhookUserId, virtualWebhookUserMentionedId, virtualWebhookVisitorId,
+            webhookEvents);
     }
     
     @Override
@@ -4319,6 +4339,7 @@ public class IntegrationSupport {
                 "listLocationId", listLocationId,
                 "listMatterId", listMatterId,
                 "listMedium", listMedium,
+                "listMeetingUrl", listMeetingUrl,
                 "listMemberId", listMemberId,
                 "listOffset", listOffset,
                 "listOrder", listOrder,
@@ -4607,6 +4628,8 @@ public class IntegrationSupport {
         private ListMatterId listMatterId;
 
         private ListMedium listMedium;
+
+        private ListMeetingUrl listMeetingUrl;
 
         private ListMemberId listMemberId;
 
@@ -5236,6 +5259,11 @@ public class IntegrationSupport {
 
         public Builder listMedium(@Nullable ListMedium listMedium) {
             this.listMedium = listMedium;
+            return this;
+        }
+
+        public Builder listMeetingUrl(@Nullable ListMeetingUrl listMeetingUrl) {
+            this.listMeetingUrl = listMeetingUrl;
             return this;
         }
 
@@ -6093,62 +6121,63 @@ public class IntegrationSupport {
                 listItemVariantId, listJobId, listLabelId,
                 listLeadId, listLimit, listLinkId,
                 listListId, listListingId, listLocationId,
-                listMatterId, listMedium, listMemberId,
-                listOffset, listOrder, listOrderId,
-                listOrgId, listPackageId, listPageId,
-                listParentId, listPartId, listPatientId,
-                listPaymentId, listPayslipId, listPipelineId,
-                listPostId, listPracticeareaId, listPractitionerId,
-                listProfileId, listProjectId, listPropertyId,
-                listQuery, listRawFields, listReference,
-                listRegionId, listRepoId, listReservationId,
-                listRoleId, listRoomId, listRootId,
-                listSaleschannelId, listSegmentId, listServiceId,
-                listSessionId, listShipmentId, listSize,
-                listSortByCreatedAt, listSortByName, listSortByUpdatedAt,
-                listSource, listSpaceId, listStartGte,
-                listStatus, listStudentId, listTableId,
-                listTaskId, listTeacherId, listTemplateId,
-                listTicketId, listType, listUnittypeId,
-                listUpdatedGte, listUserId, listUserMentionedId,
-                listVisitorId, methods, nativeWebhookCalendarId,
-                nativeWebhookCarrierId, nativeWebhookChannelId, nativeWebhookCompanyId,
-                nativeWebhookCourseId, nativeWebhookDatabaseId, nativeWebhookEventId,
-                nativeWebhookFormId, nativeWebhookIoId, nativeWebhookLabelId,
-                nativeWebhookListId, nativeWebhookMemberId, nativeWebhookOrderId,
-                nativeWebhookParentId, nativeWebhookProjectId, nativeWebhookPropertyId,
-                nativeWebhookSessionId, nativeWebhookShipmentId, nativeWebhookStudentId,
-                nativeWebhookTableId, nativeWebhookTaskId, nativeWebhookTemplateId,
-                nativeWebhookType, nativeWebhookUpdatedGte, nativeWebhookVisitorId,
-                outboundFields, rawObjects, searchDomain,
-                searchEmail, searchLinkedinurl, searchName,
-                searchTwitter, slowFields, virtualWebhookAccountId,
-                virtualWebhookAdId, virtualWebhookApplicationId, virtualWebhookApproverUserId,
-                virtualWebhookAssignedUserId, virtualWebhookBankfeedaccountId, virtualWebhookBenefitId,
-                virtualWebhookBillId, virtualWebhookBranchId, virtualWebhookCalendarId,
-                virtualWebhookCallId, virtualWebhookCampaignId, virtualWebhookCandidateId,
-                virtualWebhookCarrierId, virtualWebhookChannelId, virtualWebhookCollectionId,
-                virtualWebhookCompanyId, virtualWebhookContactId, virtualWebhookCourseId,
-                virtualWebhookCustomerId, virtualWebhookCycleId, virtualWebhookDatabaseId,
-                virtualWebhookDealId, virtualWebhookEffectiveStatus, virtualWebhookEndLt,
-                virtualWebhookEventId, virtualWebhookExpand, virtualWebhookFields,
-                virtualWebhookFormId, virtualWebhookGroupId, virtualWebhookGuestId,
-                virtualWebhookInvoiceId, virtualWebhookIoId, virtualWebhookItemId,
-                virtualWebhookItemVariantId, virtualWebhookJobId, virtualWebhookLabelId,
-                virtualWebhookLeadId, virtualWebhookLimit, virtualWebhookLinkId,
-                virtualWebhookListId, virtualWebhookListingId, virtualWebhookLocationId,
-                virtualWebhookMatterId, virtualWebhookMemberId, virtualWebhookOrderId,
-                virtualWebhookOrgId, virtualWebhookPageId, virtualWebhookParentId,
-                virtualWebhookPartId, virtualWebhookPatientId, virtualWebhookPaymentId,
-                virtualWebhookPipelineId, virtualWebhookPostId, virtualWebhookPracticeareaId,
-                virtualWebhookPractitionerId, virtualWebhookProfileId, virtualWebhookProjectId,
-                virtualWebhookPropertyId, virtualWebhookReference, virtualWebhookRepoId,
-                virtualWebhookReservationId, virtualWebhookSaleschannelId, virtualWebhookSessionId,
-                virtualWebhookShipmentId, virtualWebhookSpaceId, virtualWebhookStartGte,
-                virtualWebhookStatus, virtualWebhookStudentId, virtualWebhookTableId,
-                virtualWebhookTaskId, virtualWebhookTemplateId, virtualWebhookTicketId,
-                virtualWebhookType, virtualWebhookUpdatedGte, virtualWebhookUserId,
-                virtualWebhookUserMentionedId, virtualWebhookVisitorId, webhookEvents);
+                listMatterId, listMedium, listMeetingUrl,
+                listMemberId, listOffset, listOrder,
+                listOrderId, listOrgId, listPackageId,
+                listPageId, listParentId, listPartId,
+                listPatientId, listPaymentId, listPayslipId,
+                listPipelineId, listPostId, listPracticeareaId,
+                listPractitionerId, listProfileId, listProjectId,
+                listPropertyId, listQuery, listRawFields,
+                listReference, listRegionId, listRepoId,
+                listReservationId, listRoleId, listRoomId,
+                listRootId, listSaleschannelId, listSegmentId,
+                listServiceId, listSessionId, listShipmentId,
+                listSize, listSortByCreatedAt, listSortByName,
+                listSortByUpdatedAt, listSource, listSpaceId,
+                listStartGte, listStatus, listStudentId,
+                listTableId, listTaskId, listTeacherId,
+                listTemplateId, listTicketId, listType,
+                listUnittypeId, listUpdatedGte, listUserId,
+                listUserMentionedId, listVisitorId, methods,
+                nativeWebhookCalendarId, nativeWebhookCarrierId, nativeWebhookChannelId,
+                nativeWebhookCompanyId, nativeWebhookCourseId, nativeWebhookDatabaseId,
+                nativeWebhookEventId, nativeWebhookFormId, nativeWebhookIoId,
+                nativeWebhookLabelId, nativeWebhookListId, nativeWebhookMemberId,
+                nativeWebhookOrderId, nativeWebhookParentId, nativeWebhookProjectId,
+                nativeWebhookPropertyId, nativeWebhookSessionId, nativeWebhookShipmentId,
+                nativeWebhookStudentId, nativeWebhookTableId, nativeWebhookTaskId,
+                nativeWebhookTemplateId, nativeWebhookType, nativeWebhookUpdatedGte,
+                nativeWebhookVisitorId, outboundFields, rawObjects,
+                searchDomain, searchEmail, searchLinkedinurl,
+                searchName, searchTwitter, slowFields,
+                virtualWebhookAccountId, virtualWebhookAdId, virtualWebhookApplicationId,
+                virtualWebhookApproverUserId, virtualWebhookAssignedUserId, virtualWebhookBankfeedaccountId,
+                virtualWebhookBenefitId, virtualWebhookBillId, virtualWebhookBranchId,
+                virtualWebhookCalendarId, virtualWebhookCallId, virtualWebhookCampaignId,
+                virtualWebhookCandidateId, virtualWebhookCarrierId, virtualWebhookChannelId,
+                virtualWebhookCollectionId, virtualWebhookCompanyId, virtualWebhookContactId,
+                virtualWebhookCourseId, virtualWebhookCustomerId, virtualWebhookCycleId,
+                virtualWebhookDatabaseId, virtualWebhookDealId, virtualWebhookEffectiveStatus,
+                virtualWebhookEndLt, virtualWebhookEventId, virtualWebhookExpand,
+                virtualWebhookFields, virtualWebhookFormId, virtualWebhookGroupId,
+                virtualWebhookGuestId, virtualWebhookInvoiceId, virtualWebhookIoId,
+                virtualWebhookItemId, virtualWebhookItemVariantId, virtualWebhookJobId,
+                virtualWebhookLabelId, virtualWebhookLeadId, virtualWebhookLimit,
+                virtualWebhookLinkId, virtualWebhookListId, virtualWebhookListingId,
+                virtualWebhookLocationId, virtualWebhookMatterId, virtualWebhookMemberId,
+                virtualWebhookOrderId, virtualWebhookOrgId, virtualWebhookPageId,
+                virtualWebhookParentId, virtualWebhookPartId, virtualWebhookPatientId,
+                virtualWebhookPaymentId, virtualWebhookPipelineId, virtualWebhookPostId,
+                virtualWebhookPracticeareaId, virtualWebhookPractitionerId, virtualWebhookProfileId,
+                virtualWebhookProjectId, virtualWebhookPropertyId, virtualWebhookReference,
+                virtualWebhookRepoId, virtualWebhookReservationId, virtualWebhookSaleschannelId,
+                virtualWebhookSessionId, virtualWebhookShipmentId, virtualWebhookSpaceId,
+                virtualWebhookStartGte, virtualWebhookStatus, virtualWebhookStudentId,
+                virtualWebhookTableId, virtualWebhookTaskId, virtualWebhookTemplateId,
+                virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
+                virtualWebhookUserId, virtualWebhookUserMentionedId, virtualWebhookVisitorId,
+                webhookEvents);
         }
 
     }

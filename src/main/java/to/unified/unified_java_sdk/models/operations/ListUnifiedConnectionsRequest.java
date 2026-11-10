@@ -31,6 +31,12 @@ public class ListUnifiedConnectionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
     private String externalXref;
 
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private List<ListUnifiedConnectionsQueryParamFields> fields;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
@@ -59,6 +65,7 @@ public class ListUnifiedConnectionsRequest {
             @Nullable List<Categories> categories,
             @Nullable String env,
             @Nullable String externalXref,
+            @Nullable List<ListUnifiedConnectionsQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -67,6 +74,7 @@ public class ListUnifiedConnectionsRequest {
         this.categories = categories;
         this.env = env;
         this.externalXref = externalXref;
+        this.fields = fields;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -77,7 +85,7 @@ public class ListUnifiedConnectionsRequest {
     public ListUnifiedConnectionsRequest() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -96,6 +104,13 @@ public class ListUnifiedConnectionsRequest {
      */
     public Optional<String> externalXref() {
         return Optional.ofNullable(this.externalXref);
+    }
+
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    public Optional<List<ListUnifiedConnectionsQueryParamFields>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     public Optional<Double> limit() {
@@ -151,6 +166,15 @@ public class ListUnifiedConnectionsRequest {
     }
 
 
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    public ListUnifiedConnectionsRequest withFields(@Nullable List<ListUnifiedConnectionsQueryParamFields> fields) {
+        this.fields = fields;
+        return this;
+    }
+
+
     public ListUnifiedConnectionsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
@@ -198,6 +222,7 @@ public class ListUnifiedConnectionsRequest {
             Utils.enhancedDeepEquals(this.categories, other.categories) &&
             Utils.enhancedDeepEquals(this.env, other.env) &&
             Utils.enhancedDeepEquals(this.externalXref, other.externalXref) &&
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -209,8 +234,8 @@ public class ListUnifiedConnectionsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             categories, env, externalXref,
-            limit, offset, order,
-            sort, updatedGte);
+            fields, limit, offset,
+            order, sort, updatedGte);
     }
     
     @Override
@@ -219,6 +244,7 @@ public class ListUnifiedConnectionsRequest {
                 "categories", categories,
                 "env", env,
                 "externalXref", externalXref,
+                "fields", fields,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -234,6 +260,8 @@ public class ListUnifiedConnectionsRequest {
         private String env;
 
         private String externalXref;
+
+        private List<ListUnifiedConnectionsQueryParamFields> fields;
 
         private Double limit;
 
@@ -270,6 +298,14 @@ public class ListUnifiedConnectionsRequest {
             return this;
         }
 
+        /**
+         * Fields to return. Leave out auth to get connection metadata without credentials
+         */
+        public Builder fields(@Nullable List<ListUnifiedConnectionsQueryParamFields> fields) {
+            this.fields = fields;
+            return this;
+        }
+
         public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
@@ -302,8 +338,8 @@ public class ListUnifiedConnectionsRequest {
         public ListUnifiedConnectionsRequest build() {
             return new ListUnifiedConnectionsRequest(
                 categories, env, externalXref,
-                limit, offset, order,
-                sort, updatedGte);
+                fields, limit, offset,
+                order, sort, updatedGte);
         }
 
     }

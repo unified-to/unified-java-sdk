@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -77,6 +78,13 @@ public class AtsCandidate {
     @JsonProperty("first_name")
     private String firstName;
 
+    /**
+     * Whether the candidate must not be contacted for outreach
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_do_not_contact")
+    private Boolean hasDoNotContact;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
@@ -86,6 +94,13 @@ public class AtsCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     private String imageUrl;
+
+    /**
+     * Whether the candidate is confidential / private (visible only to permitted users)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_private")
+    private Boolean isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -199,8 +214,10 @@ public class AtsCandidate {
             @JsonProperty("experiences") @Nullable List<AtsCandidateExperience> experiences,
             @JsonProperty("external_identifier") @Nullable String externalIdentifier,
             @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("has_do_not_contact") @Nullable Boolean hasDoNotContact,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("job_ids") @Nullable List<String> jobIds,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("link_urls") @Nullable List<String> linkUrls,
@@ -228,8 +245,10 @@ public class AtsCandidate {
         this.experiences = experiences;
         this.externalIdentifier = externalIdentifier;
         this.firstName = firstName;
+        this.hasDoNotContact = hasDoNotContact;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.isPrivate = isPrivate;
         this.jobIds = jobIds;
         this.lastName = lastName;
         this.linkUrls = linkUrls;
@@ -259,7 +278,8 @@ public class AtsCandidate {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyAtsCandidateAddress> address() {
@@ -314,12 +334,26 @@ public class AtsCandidate {
         return Optional.ofNullable(this.firstName);
     }
 
+    /**
+     * Whether the candidate must not be contacted for outreach
+     */
+    public Optional<Boolean> hasDoNotContact() {
+        return Optional.ofNullable(this.hasDoNotContact);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
     public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
+    }
+
+    /**
+     * Whether the candidate is confidential / private (visible only to permitted users)
+     */
+    public Optional<Boolean> isPrivate() {
+        return Optional.ofNullable(this.isPrivate);
     }
 
     public Optional<List<String>> jobIds() {
@@ -489,6 +523,15 @@ public class AtsCandidate {
     }
 
 
+    /**
+     * Whether the candidate must not be contacted for outreach
+     */
+    public AtsCandidate withHasDoNotContact(@Nullable Boolean hasDoNotContact) {
+        this.hasDoNotContact = hasDoNotContact;
+        return this;
+    }
+
+
     public AtsCandidate withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -497,6 +540,15 @@ public class AtsCandidate {
 
     public AtsCandidate withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
+        return this;
+    }
+
+
+    /**
+     * Whether the candidate is confidential / private (visible only to permitted users)
+     */
+    public AtsCandidate withIsPrivate(@Nullable Boolean isPrivate) {
+        this.isPrivate = isPrivate;
         return this;
     }
 
@@ -645,8 +697,10 @@ public class AtsCandidate {
             Utils.enhancedDeepEquals(this.experiences, other.experiences) &&
             Utils.enhancedDeepEquals(this.externalIdentifier, other.externalIdentifier) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
+            Utils.enhancedDeepEquals(this.hasDoNotContact, other.hasDoNotContact) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.jobIds, other.jobIds) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.linkUrls, other.linkUrls) &&
@@ -672,13 +726,14 @@ public class AtsCandidate {
             address, companyId, companyName,
             createdAt, dateOfBirth, education,
             emails, experiences, externalIdentifier,
-            firstName, id, imageUrl,
-            jobIds, lastName, linkUrls,
-            metadata, name, origin,
-            raw, skills, sources,
-            summary, tags, telephones,
-            title, updatedAt, userId,
-            userIds, webUrl);
+            firstName, hasDoNotContact, id,
+            imageUrl, isPrivate, jobIds,
+            lastName, linkUrls, metadata,
+            name, origin, raw,
+            skills, sources, summary,
+            tags, telephones, title,
+            updatedAt, userId, userIds,
+            webUrl);
     }
     
     @Override
@@ -694,8 +749,10 @@ public class AtsCandidate {
                 "experiences", experiences,
                 "externalIdentifier", externalIdentifier,
                 "firstName", firstName,
+                "hasDoNotContact", hasDoNotContact,
                 "id", id,
                 "imageUrl", imageUrl,
+                "isPrivate", isPrivate,
                 "jobIds", jobIds,
                 "lastName", lastName,
                 "linkUrls", linkUrls,
@@ -738,9 +795,13 @@ public class AtsCandidate {
 
         private String firstName;
 
+        private Boolean hasDoNotContact;
+
         private String id;
 
         private String imageUrl;
+
+        private Boolean isPrivate;
 
         private List<String> jobIds;
 
@@ -842,6 +903,14 @@ public class AtsCandidate {
             return this;
         }
 
+        /**
+         * Whether the candidate must not be contacted for outreach
+         */
+        public Builder hasDoNotContact(@Nullable Boolean hasDoNotContact) {
+            this.hasDoNotContact = hasDoNotContact;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -849,6 +918,14 @@ public class AtsCandidate {
 
         public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
+            return this;
+        }
+
+        /**
+         * Whether the candidate is confidential / private (visible only to permitted users)
+         */
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
+            this.isPrivate = isPrivate;
             return this;
         }
 
@@ -964,13 +1041,14 @@ public class AtsCandidate {
                 address, companyId, companyName,
                 createdAt, dateOfBirth, education,
                 emails, experiences, externalIdentifier,
-                firstName, id, imageUrl,
-                jobIds, lastName, linkUrls,
-                metadata, name, origin,
-                raw, skills, sources,
-                summary, tags, telephones,
-                title, updatedAt, userId,
-                userIds, webUrl);
+                firstName, hasDoNotContact, id,
+                imageUrl, isPrivate, jobIds,
+                lastName, linkUrls, metadata,
+                name, origin, raw,
+                skills, sources, summary,
+                tags, telephones, title,
+                updatedAt, userId, userIds,
+                webUrl);
         }
 
     }

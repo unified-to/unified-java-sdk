@@ -5,21 +5,27 @@
 ### Available Operations
 
 * [createKmsComment](#createkmscomment) - Create a comment
+* [createSocialComment](#createsocialcomment) - Create a comment
 * [createTaskComment](#createtaskcomment) - Create a comment
 * [createUcComment](#createuccomment) - Create a comment
 * [getKmsComment](#getkmscomment) - Retrieve a comment
+* [getSocialComment](#getsocialcomment) - Retrieve a comment
 * [getTaskComment](#gettaskcomment) - Retrieve a comment
 * [getUcComment](#getuccomment) - Retrieve a comment
 * [listKmsComments](#listkmscomments) - List all comments
+* [listSocialComments](#listsocialcomments) - List all comments
 * [listTaskComments](#listtaskcomments) - List all comments
 * [listUcComments](#listuccomments) - List all comments
 * [patchKmsComment](#patchkmscomment) - Update a comment
+* [patchSocialComment](#patchsocialcomment) - Update a comment
 * [patchTaskComment](#patchtaskcomment) - Update a comment
 * [patchUcComment](#patchuccomment) - Update a comment
 * [removeKmsComment](#removekmscomment) - Remove a comment
+* [removeSocialComment](#removesocialcomment) - Remove a comment
 * [removeTaskComment](#removetaskcomment) - Remove a comment
 * [removeUcComment](#removeuccomment) - Remove a comment
 * [updateKmsComment](#updatekmscomment) - Update a comment
+* [updateSocialComment](#updatesocialcomment) - Update a comment
 * [updateTaskComment](#updatetaskcomment) - Update a comment
 * [updateUcComment](#updateuccomment) - Update a comment
 
@@ -56,10 +62,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("41f672e3-80e1-47c0-8095-5e0899104957")
+                    .id("f43f2bf7-9d6b-42d3-86b9-a278cc5e73c5")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-12-02T00:20:41.109Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T07:30:40.312Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -84,6 +90,66 @@ public class Application {
 ### Response
 
 **[CreateKmsCommentResponse](../../models/operations/CreateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createSocialComment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateSocialCommentRequest req = CreateSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateSocialCommentResponse res = sdk.comment().createSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateSocialCommentRequest](../../models/operations/CreateSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateSocialCommentResponse](../../models/operations/CreateSocialCommentResponse.md)**
 
 ### Errors
 
@@ -124,10 +190,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("7d67954a-b35f-4ae0-b343-7517ed3412dc")
+                    .id("71aecd3d-dbae-47a1-bc29-14777a1aa6b9")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-08T16:27:21.375Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-08T23:08:56.077Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -191,9 +257,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("80b0ab47-eb38-4666-9ca3-b769ab8cd1f7")
+                    .id("a71263f0-31ac-4c31-b10f-512fb8c5eddc")
                     .metadata(List.of())
-                    .updatedAt("2024-02-14T08:38:48.813Z")
+                    .updatedAt("2024-02-14T14:23:08.181Z")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -276,6 +342,64 @@ public class Application {
 ### Response
 
 **[GetKmsCommentResponse](../../models/operations/GetKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getSocialComment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetSocialCommentRequest req = GetSocialCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetSocialCommentResponse res = sdk.comment().getSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetSocialCommentRequest](../../models/operations/GetSocialCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetSocialCommentResponse](../../models/operations/GetSocialCommentResponse.md)**
 
 ### Errors
 
@@ -456,6 +580,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listSocialComments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListSocialCommentsRequest req = ListSocialCommentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListSocialCommentsResponse res = sdk.comment().listSocialComments()
+                .request(req)
+                .call();
+
+        if (res.socialComments().isPresent()) {
+            System.out.println(res.socialComments().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListSocialCommentsRequest](../../models/operations/ListSocialCommentsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListSocialCommentsResponse](../../models/operations/ListSocialCommentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listTaskComments
 
 Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -603,10 +784,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("22acd1eb-8ef3-4649-9975-3bed26247f3a")
+                    .id("5b687765-8bff-429b-b3a8-ef64d8632b5a")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-12-02T00:20:41.114Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T07:30:40.316Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -632,6 +813,67 @@ public class Application {
 ### Response
 
 **[PatchKmsCommentResponse](../../models/operations/PatchKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchSocialCommentRequest req = PatchSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchSocialCommentResponse res = sdk.comment().patchSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchSocialCommentRequest](../../models/operations/PatchSocialCommentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchSocialCommentResponse](../../models/operations/PatchSocialCommentResponse.md)**
 
 ### Errors
 
@@ -672,10 +914,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("1a4efae5-cd40-4cee-8eac-4e27e0dd25ae")
+                    .id("28361fa6-6da2-4f87-bd8c-11c4b3cf2fb1")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-08T16:27:21.381Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-08T23:08:56.079Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -740,9 +982,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("746fb16c-c50a-4ebf-9630-5558fa3356ba")
+                    .id("c1b6991e-59a7-4bec-9ca5-4cd167af58e8")
                     .metadata(List.of())
-                    .updatedAt("2024-02-14T08:38:48.816Z")
+                    .updatedAt("2024-02-14T14:23:08.183Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -824,6 +1066,62 @@ public class Application {
 ### Response
 
 **[RemoveKmsCommentResponse](../../models/operations/RemoveKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeSocialComment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveSocialCommentRequest req = RemoveSocialCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveSocialCommentResponse res = sdk.comment().removeSocialComment()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveSocialCommentRequest](../../models/operations/RemoveSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveSocialCommentResponse](../../models/operations/RemoveSocialCommentResponse.md)**
 
 ### Errors
 
@@ -976,10 +1274,10 @@ public class Application {
                     .content("Decimus tolero viriliter usque.")
                     .contentType(ContentType.HTML)
                     .createdAt(OffsetDateTime.parse("2022-08-26T14:40:49.732Z"))
-                    .id("22acd1eb-8ef3-4649-9975-3bed26247f3a")
+                    .id("5b687765-8bff-429b-b3a8-ef64d8632b5a")
                     .metadata(List.of())
                     .type(KmsCommentType.PAGE)
-                    .updatedAt(OffsetDateTime.parse("2023-12-02T00:20:41.114Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-12-02T07:30:40.316Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1005,6 +1303,67 @@ public class Application {
 ### Response
 
 **[UpdateKmsCommentResponse](../../models/operations/UpdateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateSocialCommentRequest req = UpdateSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateSocialCommentResponse res = sdk.comment().updateSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateSocialCommentRequest](../../models/operations/UpdateSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateSocialCommentResponse](../../models/operations/UpdateSocialCommentResponse.md)**
 
 ### Errors
 
@@ -1045,10 +1404,10 @@ public class Application {
                 .taskComment(TaskComment.builder()
                     .createdAt(OffsetDateTime.parse("2019-10-12T20:33:37.879Z"))
                     .hasChildren(true)
-                    .id("1a4efae5-cd40-4cee-8eac-4e27e0dd25ae")
+                    .id("28361fa6-6da2-4f87-bd8c-11c4b3cf2fb1")
                     .metadata(List.of())
                     .text("Colo ulciscor sublime tabernus.")
-                    .updatedAt(OffsetDateTime.parse("2021-10-08T16:27:21.381Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-10-08T23:08:56.079Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1113,9 +1472,9 @@ public class Application {
                 .ucComment(UcComment.builder()
                     .content("Vociferor vitiosus.")
                     .createdAt("2023-04-02T23:42:31.571Z")
-                    .id("746fb16c-c50a-4ebf-9630-5558fa3356ba")
+                    .id("c1b6991e-59a7-4bec-9ca5-4cd167af58e8")
                     .metadata(List.of())
-                    .updatedAt("2024-02-14T08:38:48.816Z")
+                    .updatedAt("2024-02-14T14:23:08.183Z")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

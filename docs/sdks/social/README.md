@@ -4,20 +4,86 @@
 
 ### Available Operations
 
+* [createSocialComment](#createsocialcomment) - Create a comment
 * [createSocialPost](#createsocialpost) - Create a post
+* [getSocialComment](#getsocialcomment) - Retrieve a comment
 * [getSocialInsight](#getsocialinsight) - Retrieve an insight
 * [getSocialPost](#getsocialpost) - Retrieve a post
 * [getSocialProfile](#getsocialprofile) - Retrieve a profile
 * [getSocialReview](#getsocialreview) - Retrieve a review
+* [listSocialComments](#listsocialcomments) - List all comments
 * [listSocialInsights](#listsocialinsights) - List all insights
 * [listSocialPosts](#listsocialposts) - List all posts
 * [listSocialProfiles](#listsocialprofiles) - List all profiles
 * [listSocialReviews](#listsocialreviews) - List all reviews
+* [patchSocialComment](#patchsocialcomment) - Update a comment
 * [patchSocialPost](#patchsocialpost) - Update a post
 * [patchSocialReview](#patchsocialreview) - Update a review
+* [removeSocialComment](#removesocialcomment) - Remove a comment
 * [removeSocialPost](#removesocialpost) - Remove a post
+* [updateSocialComment](#updatesocialcomment) - Update a comment
 * [updateSocialPost](#updatesocialpost) - Update a post
 * [updateSocialReview](#updatesocialreview) - Update a review
+
+## createSocialComment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateSocialCommentRequest req = CreateSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateSocialCommentResponse res = sdk.social().createSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateSocialCommentRequest](../../models/operations/CreateSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateSocialCommentResponse](../../models/operations/CreateSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createSocialPost
 
@@ -72,6 +138,64 @@ public class Application {
 ### Response
 
 **[CreateSocialPostResponse](../../models/operations/CreateSocialPostResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getSocialComment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetSocialCommentRequest req = GetSocialCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetSocialCommentResponse res = sdk.social().getSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetSocialCommentRequest](../../models/operations/GetSocialCommentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetSocialCommentResponse](../../models/operations/GetSocialCommentResponse.md)**
 
 ### Errors
 
@@ -311,6 +435,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listSocialComments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListSocialCommentsRequest req = ListSocialCommentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListSocialCommentsResponse res = sdk.social().listSocialComments()
+                .request(req)
+                .call();
+
+        if (res.socialComments().isPresent()) {
+            System.out.println(res.socialComments().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListSocialCommentsRequest](../../models/operations/ListSocialCommentsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListSocialCommentsResponse](../../models/operations/ListSocialCommentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listSocialInsights
 
 Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -539,6 +720,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchSocialCommentRequest req = PatchSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchSocialCommentResponse res = sdk.social().patchSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchSocialCommentRequest](../../models/operations/PatchSocialCommentRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchSocialCommentResponse](../../models/operations/PatchSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchSocialPost
 
 Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
@@ -661,6 +903,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeSocialComment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveSocialCommentRequest req = RemoveSocialCommentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveSocialCommentResponse res = sdk.social().removeSocialComment()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveSocialCommentRequest](../../models/operations/RemoveSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveSocialCommentResponse](../../models/operations/RemoveSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeSocialPost
 
 Deletes the SocialPost identified by `id`.
@@ -710,6 +1008,67 @@ public class Application {
 ### Response
 
 **[RemoveSocialPostResponse](../../models/operations/RemoveSocialPostResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.SocialComment;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateSocialCommentRequest req = UpdateSocialCommentRequest.builder()
+                .socialComment(SocialComment.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateSocialCommentResponse res = sdk.social().updateSocialComment()
+                .request(req)
+                .call();
+
+        if (res.socialComment().isPresent()) {
+            System.out.println(res.socialComment().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateSocialCommentRequest](../../models/operations/UpdateSocialCommentRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateSocialCommentResponse](../../models/operations/UpdateSocialCommentResponse.md)**
 
 ### Errors
 

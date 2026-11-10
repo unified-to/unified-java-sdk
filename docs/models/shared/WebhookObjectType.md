@@ -211,6 +211,7 @@ WebhookObjectType custom = WebhookObjectType.of("custom_value");
 | `SOCIAL_PROFILE`                 | social_profile                   |
 | `SOCIAL_REVIEW`                  | social_review                    |
 | `SOCIAL_INSIGHT`                 | social_insight                   |
+| `SOCIAL_COMMENT`                 | social_comment                   |
 | `LEGAL_MATTER`                   | legal_matter                     |
 | `LEGAL_PRACTICEAREA`             | legal_practicearea               |
 | `LEGAL_TIMEENTRY`                | legal_timeentry                  |

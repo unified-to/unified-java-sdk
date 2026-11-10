@@ -2040,6 +2040,16 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_comment_read")
+    private String socialCommentRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("social_comment_write")
+    private String socialCommentWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("social_insight_read")
     private String socialInsightRead;
 
@@ -3854,6 +3864,14 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
     public Optional<String> signingTemplateWrite() {
         return Optional.ofNullable(this.signingTemplateWrite);
+    }
+
+    public Optional<String> socialCommentRead() {
+        return Optional.ofNullable(this.socialCommentRead);
+    }
+
+    public Optional<String> socialCommentWrite() {
+        return Optional.ofNullable(this.socialCommentWrite);
     }
 
     public Optional<String> socialInsightRead() {
@@ -6445,6 +6463,18 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     }
 
 
+    public PropertyWorkspaceIntegrationOverridenScopes withSocialCommentRead(@Nullable String socialCommentRead) {
+        this.socialCommentRead = socialCommentRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withSocialCommentWrite(@Nullable String socialCommentWrite) {
+        this.socialCommentWrite = socialCommentWrite;
+        return this;
+    }
+
+
     public PropertyWorkspaceIntegrationOverridenScopes withSocialInsightRead(@Nullable String socialInsightRead) {
         this.socialInsightRead = socialInsightRead;
         return this;
@@ -7099,6 +7129,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.signingSignatoryWrite, other.signingSignatoryWrite) &&
             Utils.enhancedDeepEquals(this.signingTemplateRead, other.signingTemplateRead) &&
             Utils.enhancedDeepEquals(this.signingTemplateWrite, other.signingTemplateWrite) &&
+            Utils.enhancedDeepEquals(this.socialCommentRead, other.socialCommentRead) &&
+            Utils.enhancedDeepEquals(this.socialCommentWrite, other.socialCommentWrite) &&
             Utils.enhancedDeepEquals(this.socialInsightRead, other.socialInsightRead) &&
             Utils.enhancedDeepEquals(this.socialInsightWrite, other.socialInsightWrite) &&
             Utils.enhancedDeepEquals(this.socialPostRead, other.socialPostRead) &&
@@ -7278,20 +7310,21 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             shippingRateRead, shippingRateWrite, shippingShipmentRead,
             shippingShipmentWrite, shippingTrackingRead, signingDocumentRead,
             signingDocumentWrite, signingSignatoryRead, signingSignatoryWrite,
-            signingTemplateRead, signingTemplateWrite, socialInsightRead,
-            socialInsightWrite, socialPostRead, socialPostWrite,
-            socialProfileRead, socialProfileWrite, socialReviewRead,
-            socialReviewWrite, storageFileRead, storageFileWrite,
-            taskChangeRead, taskCommentRead, taskCommentWrite,
-            taskProjectRead, taskProjectWrite, taskTaskRead,
-            taskTaskWrite, ticketingCategoryRead, ticketingCategoryWrite,
-            ticketingCustomerRead, ticketingCustomerWrite, ticketingNoteRead,
-            ticketingNoteWrite, ticketingTicketRead, ticketingTicketWrite,
-            ucCallRead, ucCallWrite, ucCommentRead,
-            ucCommentWrite, ucContactRead, ucContactWrite,
-            ucFaxRead, ucFaxWrite, ucRecordingRead,
-            ucScorecardRead, ucScorecardtemplateRead, verificationPackageRead,
-            verificationRequestRead, verificationRequestWrite, webhook);
+            signingTemplateRead, signingTemplateWrite, socialCommentRead,
+            socialCommentWrite, socialInsightRead, socialInsightWrite,
+            socialPostRead, socialPostWrite, socialProfileRead,
+            socialProfileWrite, socialReviewRead, socialReviewWrite,
+            storageFileRead, storageFileWrite, taskChangeRead,
+            taskCommentRead, taskCommentWrite, taskProjectRead,
+            taskProjectWrite, taskTaskRead, taskTaskWrite,
+            ticketingCategoryRead, ticketingCategoryWrite, ticketingCustomerRead,
+            ticketingCustomerWrite, ticketingNoteRead, ticketingNoteWrite,
+            ticketingTicketRead, ticketingTicketWrite, ucCallRead,
+            ucCallWrite, ucCommentRead, ucCommentWrite,
+            ucContactRead, ucContactWrite, ucFaxRead,
+            ucFaxWrite, ucRecordingRead, ucScorecardRead,
+            ucScorecardtemplateRead, verificationPackageRead, verificationRequestRead,
+            verificationRequestWrite, webhook);
     }
     
     @Override
@@ -7701,6 +7734,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "signingSignatoryWrite", signingSignatoryWrite,
                 "signingTemplateRead", signingTemplateRead,
                 "signingTemplateWrite", signingTemplateWrite,
+                "socialCommentRead", socialCommentRead,
+                "socialCommentWrite", socialCommentWrite,
                 "socialInsightRead", socialInsightRead,
                 "socialInsightWrite", socialInsightWrite,
                 "socialPostRead", socialPostRead,
@@ -8555,6 +8590,10 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         private String signingTemplateRead;
 
         private String signingTemplateWrite;
+
+        private String socialCommentRead;
+
+        private String socialCommentWrite;
 
         private String socialInsightRead;
 
@@ -11064,6 +11103,18 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             return this;
         }
 
+        @JsonProperty("social_comment_read")
+        public Builder socialCommentRead(@Nullable String socialCommentRead) {
+            this.socialCommentRead = socialCommentRead;
+            return this;
+        }
+
+        @JsonProperty("social_comment_write")
+        public Builder socialCommentWrite(@Nullable String socialCommentWrite) {
+            this.socialCommentWrite = socialCommentWrite;
+            return this;
+        }
+
         @JsonProperty("social_insight_read")
         public Builder socialInsightRead(@Nullable String socialInsightRead) {
             this.socialInsightRead = socialInsightRead;
@@ -11709,6 +11760,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.signingSignatoryWrite = signingSignatoryWrite;
             _instance.signingTemplateRead = signingTemplateRead;
             _instance.signingTemplateWrite = signingTemplateWrite;
+            _instance.socialCommentRead = socialCommentRead;
+            _instance.socialCommentWrite = socialCommentWrite;
             _instance.socialInsightRead = socialInsightRead;
             _instance.socialInsightWrite = socialInsightWrite;
             _instance.socialPostRead = socialPostRead;

@@ -373,6 +373,8 @@ PropertyConnectionPermissions custom = PropertyConnectionPermissions.of("custom_
 | `SOCIAL_REVIEW_WRITE`                  | social_review_write                    |
 | `SOCIAL_INSIGHT_READ`                  | social_insight_read                    |
 | `SOCIAL_INSIGHT_WRITE`                 | social_insight_write                   |
+| `SOCIAL_COMMENT_READ`                  | social_comment_read                    |
+| `SOCIAL_COMMENT_WRITE`                 | social_comment_write                   |
 | `LEGAL_MATTER_READ`                    | legal_matter_read                      |
 | `LEGAL_MATTER_WRITE`                   | legal_matter_write                     |
 | `LEGAL_PRACTICEAREA_READ`              | legal_practicearea_read                |

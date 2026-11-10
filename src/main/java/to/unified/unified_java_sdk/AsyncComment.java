@@ -8,75 +8,99 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.ListKmsCommentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSocialCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCommentsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateKmsCommentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSocialCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListKmsCommentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListSocialCommentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListSocialCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListTaskCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUcCommentsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUcCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateKmsCommentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSocialCommentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateSocialCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateTaskCommentResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateUcCommentResponse;
 import to.unified.unified_java_sdk.operations.CreateKmsComment;
+import to.unified.unified_java_sdk.operations.CreateSocialComment;
 import to.unified.unified_java_sdk.operations.CreateTaskComment;
 import to.unified.unified_java_sdk.operations.CreateUcComment;
 import to.unified.unified_java_sdk.operations.GetKmsComment;
+import to.unified.unified_java_sdk.operations.GetSocialComment;
 import to.unified.unified_java_sdk.operations.GetTaskComment;
 import to.unified.unified_java_sdk.operations.GetUcComment;
 import to.unified.unified_java_sdk.operations.ListKmsComments;
+import to.unified.unified_java_sdk.operations.ListSocialComments;
 import to.unified.unified_java_sdk.operations.ListTaskComments;
 import to.unified.unified_java_sdk.operations.ListUcComments;
 import to.unified.unified_java_sdk.operations.PatchKmsComment;
+import to.unified.unified_java_sdk.operations.PatchSocialComment;
 import to.unified.unified_java_sdk.operations.PatchTaskComment;
 import to.unified.unified_java_sdk.operations.PatchUcComment;
 import to.unified.unified_java_sdk.operations.RemoveKmsComment;
+import to.unified.unified_java_sdk.operations.RemoveSocialComment;
 import to.unified.unified_java_sdk.operations.RemoveTaskComment;
 import to.unified.unified_java_sdk.operations.RemoveUcComment;
 import to.unified.unified_java_sdk.operations.UpdateKmsComment;
+import to.unified.unified_java_sdk.operations.UpdateSocialComment;
 import to.unified.unified_java_sdk.operations.UpdateTaskComment;
 import to.unified.unified_java_sdk.operations.UpdateUcComment;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -126,6 +150,35 @@ public class AsyncComment {
     public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @return The async call builder
+     */
+    public CreateSocialCommentRequestBuilder createSocialComment() {
+        return new CreateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a comment
+     * 
+     * <p>Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are
+     * mapped to the provider's API. Returns the created SocialComment.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<CreateSocialCommentResponse> createSocialComment(@Nonnull CreateSocialCommentRequest request) {
+        AsyncRequestOperation<CreateSocialCommentRequest, CreateSocialCommentResponse> operation
+              = new CreateSocialComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -221,6 +274,35 @@ public class AsyncComment {
     /**
      * Retrieve a comment
      * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetSocialCommentRequestBuilder getSocialComment() {
+        return new GetSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a comment
+     * 
+     * <p>Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<GetSocialCommentResponse> getSocialComment(@Nonnull GetSocialCommentRequest request) {
+        AsyncRequestOperation<GetSocialCommentRequest, GetSocialCommentResponse> operation
+              = new GetSocialComment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a comment
+     * 
      * <p>Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint.
      * Use `fields` to return only the fields you need.
      * 
@@ -308,6 +390,43 @@ public class AsyncComment {
     public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListSocialCommentsRequestBuilder listSocialComments() {
+        return new ListSocialCommentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all comments
+     * 
+     * <p>Returns a list of SocialComments. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListSocialCommentsResponse>} - The async response
+     */
+    public CompletableFuture<ListSocialCommentsResponse> listSocialComments(@Nonnull ListSocialCommentsRequest request) {
+        AsyncRequestOperation<ListSocialCommentsRequest, ListSocialCommentsResponse> operation
+              = new ListSocialComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -419,6 +538,35 @@ public class AsyncComment {
     /**
      * Update a comment
      * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchSocialCommentRequestBuilder patchSocialComment() {
+        return new PatchSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<PatchSocialCommentResponse> patchSocialComment(@Nonnull PatchSocialCommentRequest request) {
+        AsyncRequestOperation<PatchSocialCommentRequest, PatchSocialCommentResponse> operation
+              = new PatchSocialComment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a comment
+     * 
      * <p>Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the
      * request body.
      * 
@@ -504,6 +652,33 @@ public class AsyncComment {
     /**
      * Remove a comment
      * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveSocialCommentRequestBuilder removeSocialComment() {
+        return new RemoveSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a comment
+     * 
+     * <p>Deletes the SocialComment identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<RemoveSocialCommentResponse> removeSocialComment(@Nonnull RemoveSocialCommentRequest request) {
+        AsyncRequestOperation<RemoveSocialCommentRequest, RemoveSocialCommentResponse> operation
+              = new RemoveSocialComment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a comment
+     * 
      * <p>Deletes the TaskComment identified by `id`.
      * 
      * @return The async call builder
@@ -579,6 +754,35 @@ public class AsyncComment {
     public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateSocialCommentRequestBuilder updateSocialComment() {
+        return new UpdateSocialCommentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a comment
+     * 
+     * <p>Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateSocialCommentResponse>} - The async response
+     */
+    public CompletableFuture<UpdateSocialCommentResponse> updateSocialComment(@Nonnull UpdateSocialCommentRequest request) {
+        AsyncRequestOperation<UpdateSocialCommentRequest, UpdateSocialCommentResponse> operation
+              = new UpdateSocialComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

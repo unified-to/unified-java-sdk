@@ -218,6 +218,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType SOCIAL_PROFILE = new WebhookObjectType("social_profile");
     public static final WebhookObjectType SOCIAL_REVIEW = new WebhookObjectType("social_review");
     public static final WebhookObjectType SOCIAL_INSIGHT = new WebhookObjectType("social_insight");
+    public static final WebhookObjectType SOCIAL_COMMENT = new WebhookObjectType("social_comment");
     public static final WebhookObjectType LEGAL_MATTER = new WebhookObjectType("legal_matter");
     public static final WebhookObjectType LEGAL_PRACTICEAREA = new WebhookObjectType("legal_practicearea");
     public static final WebhookObjectType LEGAL_TIMEENTRY = new WebhookObjectType("legal_timeentry");
@@ -530,6 +531,7 @@ public class WebhookObjectType {
         map.put("social_profile", SOCIAL_PROFILE);
         map.put("social_review", SOCIAL_REVIEW);
         map.put("social_insight", SOCIAL_INSIGHT);
+        map.put("social_comment", SOCIAL_COMMENT);
         map.put("legal_matter", LEGAL_MATTER);
         map.put("legal_practicearea", LEGAL_PRACTICEAREA);
         map.put("legal_timeentry", LEGAL_TIMEENTRY);
@@ -774,6 +776,7 @@ public class WebhookObjectType {
         map.put("social_profile", WebhookObjectTypeEnum.SOCIAL_PROFILE);
         map.put("social_review", WebhookObjectTypeEnum.SOCIAL_REVIEW);
         map.put("social_insight", WebhookObjectTypeEnum.SOCIAL_INSIGHT);
+        map.put("social_comment", WebhookObjectTypeEnum.SOCIAL_COMMENT);
         map.put("legal_matter", WebhookObjectTypeEnum.LEGAL_MATTER);
         map.put("legal_practicearea", WebhookObjectTypeEnum.LEGAL_PRACTICEAREA);
         map.put("legal_timeentry", WebhookObjectTypeEnum.LEGAL_TIMEENTRY);
@@ -1019,6 +1022,7 @@ public class WebhookObjectType {
         SOCIAL_PROFILE("social_profile"),
         SOCIAL_REVIEW("social_review"),
         SOCIAL_INSIGHT("social_insight"),
+        SOCIAL_COMMENT("social_comment"),
         LEGAL_MATTER("legal_matter"),
         LEGAL_PRACTICEAREA("legal_practicearea"),
         LEGAL_TIMEENTRY("legal_timeentry"),

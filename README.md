@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.18'
+implementation 'to.unified:unified-java-sdk:0.50.19'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.18</version>
+    <version>0.50.19</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                    .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                    .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -886,21 +886,27 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Comment](docs/sdks/comment/README.md)
 
 * [createKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
+* [createSocialComment](docs/sdks/comment/README.md#createsocialcomment) - Create a comment
 * [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
 * [createUcComment](docs/sdks/comment/README.md#createuccomment) - Create a comment
 * [getKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
+* [getSocialComment](docs/sdks/comment/README.md#getsocialcomment) - Retrieve a comment
 * [getTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
 * [getUcComment](docs/sdks/comment/README.md#getuccomment) - Retrieve a comment
 * [listKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
+* [listSocialComments](docs/sdks/comment/README.md#listsocialcomments) - List all comments
 * [listTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
 * [listUcComments](docs/sdks/comment/README.md#listuccomments) - List all comments
 * [patchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
+* [patchSocialComment](docs/sdks/comment/README.md#patchsocialcomment) - Update a comment
 * [patchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
 * [patchUcComment](docs/sdks/comment/README.md#patchuccomment) - Update a comment
 * [removeKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
+* [removeSocialComment](docs/sdks/comment/README.md#removesocialcomment) - Remove a comment
 * [removeTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
 * [removeUcComment](docs/sdks/comment/README.md#removeuccomment) - Remove a comment
 * [updateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
+* [updateSocialComment](docs/sdks/comment/README.md#updatesocialcomment) - Update a comment
 * [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 * [updateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
@@ -2710,18 +2716,24 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Social](docs/sdks/social/README.md)
 
+* [createSocialComment](docs/sdks/social/README.md#createsocialcomment) - Create a comment
 * [createSocialPost](docs/sdks/social/README.md#createsocialpost) - Create a post
+* [getSocialComment](docs/sdks/social/README.md#getsocialcomment) - Retrieve a comment
 * [getSocialInsight](docs/sdks/social/README.md#getsocialinsight) - Retrieve an insight
 * [getSocialPost](docs/sdks/social/README.md#getsocialpost) - Retrieve a post
 * [getSocialProfile](docs/sdks/social/README.md#getsocialprofile) - Retrieve a profile
 * [getSocialReview](docs/sdks/social/README.md#getsocialreview) - Retrieve a review
+* [listSocialComments](docs/sdks/social/README.md#listsocialcomments) - List all comments
 * [listSocialInsights](docs/sdks/social/README.md#listsocialinsights) - List all insights
 * [listSocialPosts](docs/sdks/social/README.md#listsocialposts) - List all posts
 * [listSocialProfiles](docs/sdks/social/README.md#listsocialprofiles) - List all profiles
 * [listSocialReviews](docs/sdks/social/README.md#listsocialreviews) - List all reviews
+* [patchSocialComment](docs/sdks/social/README.md#patchsocialcomment) - Update a comment
 * [patchSocialPost](docs/sdks/social/README.md#patchsocialpost) - Update a post
 * [patchSocialReview](docs/sdks/social/README.md#patchsocialreview) - Update a review
+* [removeSocialComment](docs/sdks/social/README.md#removesocialcomment) - Remove a comment
 * [removeSocialPost](docs/sdks/social/README.md#removesocialpost) - Remove a post
+* [updateSocialComment](docs/sdks/social/README.md#updatesocialcomment) - Update a comment
 * [updateSocialPost](docs/sdks/social/README.md#updatesocialpost) - Update a post
 * [updateSocialReview](docs/sdks/social/README.md#updatesocialreview) - Update a review
 
@@ -3142,7 +3154,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                    .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3154,7 +3166,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3202,7 +3214,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                    .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3214,7 +3226,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3281,7 +3293,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                        .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3293,7 +3305,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3448,7 +3460,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b377c080-52a9-4828-8a10-5661d98a2e57")
+                    .id("d95782c3-4153-4c79-b439-0bf001c5e6be")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3460,7 +3472,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-11T17:47:02.335Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-11T23:49:58.809Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

@@ -3,6 +3,7 @@
 
 ## Fields
 
-| Field                | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *String*             | :heavy_check_mark:   | ID of the Connection |
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `fields`                                                                                                       | List\<[GetUnifiedConnectionQueryParamFields](../../models/operations/GetUnifiedConnectionQueryParamFields.md)> | :heavy_minus_sign:                                                                                             | Fields to return. Leave out auth to get connection metadata without credentials                                |
+| `id`                                                                                                           | *String*                                                                                                       | :heavy_check_mark:                                                                                             | ID of the Connection                                                                                           |

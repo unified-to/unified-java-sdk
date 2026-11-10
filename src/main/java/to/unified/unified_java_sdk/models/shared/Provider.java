@@ -21,11 +21,6 @@ import java.util.Optional;
 public class Provider {
 
     public static final Provider MEETING_CAPTIONS = new Provider("MEETING_CAPTIONS");
-    public static final Provider AWS_TRANSCRIBE = new Provider("AWS_TRANSCRIBE");
-    public static final Provider GOOGLE_SPEECH = new Provider("GOOGLE_SPEECH");
-    public static final Provider ASSEMBLYAI = new Provider("ASSEMBLYAI");
-    public static final Provider DEEPGRAM = new Provider("DEEPGRAM");
-    public static final Provider CUSTOM = new Provider("CUSTOM");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -100,34 +95,19 @@ public class Provider {
     private static final Map<String, Provider> createValuesMap() {
         Map<String, Provider> map = new LinkedHashMap<>();
         map.put("MEETING_CAPTIONS", MEETING_CAPTIONS);
-        map.put("AWS_TRANSCRIBE", AWS_TRANSCRIBE);
-        map.put("GOOGLE_SPEECH", GOOGLE_SPEECH);
-        map.put("ASSEMBLYAI", ASSEMBLYAI);
-        map.put("DEEPGRAM", DEEPGRAM);
-        map.put("CUSTOM", CUSTOM);
         return map;
     }
 
     private static final Map<String, ProviderEnum> createEnumsMap() {
         Map<String, ProviderEnum> map = new HashMap<>();
         map.put("MEETING_CAPTIONS", ProviderEnum.MEETING_CAPTIONS);
-        map.put("AWS_TRANSCRIBE", ProviderEnum.AWS_TRANSCRIBE);
-        map.put("GOOGLE_SPEECH", ProviderEnum.GOOGLE_SPEECH);
-        map.put("ASSEMBLYAI", ProviderEnum.ASSEMBLYAI);
-        map.put("DEEPGRAM", ProviderEnum.DEEPGRAM);
-        map.put("CUSTOM", ProviderEnum.CUSTOM);
         return map;
     }
     
     
     public enum ProviderEnum {
 
-        MEETING_CAPTIONS("MEETING_CAPTIONS"),
-        AWS_TRANSCRIBE("AWS_TRANSCRIBE"),
-        GOOGLE_SPEECH("GOOGLE_SPEECH"),
-        ASSEMBLYAI("ASSEMBLYAI"),
-        DEEPGRAM("DEEPGRAM"),
-        CUSTOM("CUSTOM"),;
+        MEETING_CAPTIONS("MEETING_CAPTIONS"),;
 
         private final String value;
 

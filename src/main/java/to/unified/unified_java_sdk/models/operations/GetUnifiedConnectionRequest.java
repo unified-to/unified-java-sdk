@@ -5,14 +5,22 @@ package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class GetUnifiedConnectionRequest {
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    private List<GetUnifiedConnectionQueryParamFields> fields;
+
     /**
      * ID of the Connection
      */
@@ -21,9 +29,23 @@ public class GetUnifiedConnectionRequest {
 
     @JsonCreator
     public GetUnifiedConnectionRequest(
+            @Nullable List<GetUnifiedConnectionQueryParamFields> fields,
             @Nonnull String id) {
+        this.fields = fields;
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+    }
+    
+    public GetUnifiedConnectionRequest(
+            @Nonnull String id) {
+        this(null, id);
+    }
+
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    public Optional<List<GetUnifiedConnectionQueryParamFields>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -35,6 +57,15 @@ public class GetUnifiedConnectionRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     */
+    public GetUnifiedConnectionRequest withFields(@Nullable List<GetUnifiedConnectionQueryParamFields> fields) {
+        this.fields = fields;
+        return this;
     }
 
 
@@ -57,28 +88,40 @@ public class GetUnifiedConnectionRequest {
         }
         GetUnifiedConnectionRequest other = (GetUnifiedConnectionRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.id, other.id);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id);
+            fields, id);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GetUnifiedConnectionRequest.class,
+                "fields", fields,
                 "id", id);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private List<GetUnifiedConnectionQueryParamFields> fields;
+
         private String id;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * Fields to return. Leave out auth to get connection metadata without credentials
+         */
+        public Builder fields(@Nullable List<GetUnifiedConnectionQueryParamFields> fields) {
+            this.fields = fields;
+            return this;
         }
 
         /**
@@ -91,7 +134,7 @@ public class GetUnifiedConnectionRequest {
 
         public GetUnifiedConnectionRequest build() {
             return new GetUnifiedConnectionRequest(
-                id);
+                fields, id);
         }
 
     }
