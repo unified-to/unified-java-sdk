@@ -43,10 +43,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-11-13T22:57:10.665Z"))
+                    .endAt(OffsetDateTime.parse("2025-11-14T13:33:39.540Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("557da49f-ddac-4516-a42f-12e2f5637f30")
+                    .id("16dca0b1-f924-422d-9a1c-621e9dbebf7a")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -56,12 +56,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-09-06T06:22:27.976Z"))
+                            .endAt(OffsetDateTime.parse("2023-09-06T11:27:27.424Z"))
                             .excludedDates(List.of(
-                                "2025-02-25T19:14:03.299Z"))
+                                "2025-02-26T06:43:54.278Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-05-07T03:49:47.755Z"))
+                                "2024-05-07T11:49:04.976Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -446,15 +446,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-10-01T19:58:19.924Z"))
+                            .endAt(OffsetDateTime.parse("2022-10-01T21:00:45.023Z"))
                             .excludedDates(List.of(
-                                "2024-09-12T07:51:30.672Z",
-                                "2024-08-27T13:53:18.952Z"))
+                                "2024-09-12T17:22:23.520Z",
+                                "2024-08-27T23:12:56.520Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-04-02T14:15:54.241Z",
-                                "2026-01-30T15:57:28.288Z",
-                                "2023-08-19T16:21:10.950Z"))
+                                "2024-04-02T21:50:29.363Z",
+                                "2026-01-31T07:29:29.177Z",
+                                "2023-08-19T21:13:36.415Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -592,15 +592,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-08-15T09:35:31.197Z"))
+                            .endAt(OffsetDateTime.parse("2026-08-16T03:28:07.750Z"))
                             .excludedDates(List.of(
-                                "2023-06-23T06:13:56.379Z",
-                                "2023-06-12T03:32:38.238Z"))
+                                "2023-06-23T10:25:19.696Z",
+                                "2023-06-12T07:36:05.090Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-10T17:43:26.356Z",
-                                "2023-08-25T13:39:01.165Z",
-                                "2024-10-07T20:45:09.858Z"))
+                                "2024-04-11T01:23:50.685Z",
+                                "2023-08-25T18:35:39.072Z",
+                                "2024-10-08T06:34:17.702Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -746,11 +746,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-05-14T09:05:28.228Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-14T21:30:45.598Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-10-21T06:05:53.419Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-22T00:46:16.580Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
@@ -930,10 +930,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-11-13T22:57:10.701Z"))
+                    .endAt(OffsetDateTime.parse("2025-11-14T13:33:39.578Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("816eb0ec-f818-4b8a-aacb-a6aa354d77e0")
+                    .id("acecd829-f4f9-4d34-a287-76ac998640a5")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -943,12 +943,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-09-06T06:22:27.988Z"))
+                            .endAt(OffsetDateTime.parse("2023-09-06T11:27:27.437Z"))
                             .excludedDates(List.of(
-                                "2025-02-25T19:14:03.326Z"))
+                                "2025-02-26T06:43:54.308Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-05-07T03:49:47.774Z"))
+                                "2024-05-07T11:49:04.997Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1333,15 +1333,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-10-01T19:58:19.926Z"))
+                            .endAt(OffsetDateTime.parse("2022-10-01T21:00:45.026Z"))
                             .excludedDates(List.of(
-                                "2024-09-12T07:51:30.695Z",
-                                "2024-08-27T13:53:18.974Z"))
+                                "2024-09-12T17:22:23.545Z",
+                                "2024-08-27T23:12:56.544Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-04-02T14:15:54.259Z",
-                                "2026-01-30T15:57:28.324Z",
-                                "2023-08-19T16:21:10.962Z"))
+                                "2024-04-02T21:50:29.383Z",
+                                "2026-01-31T07:29:29.217Z",
+                                "2023-08-19T21:13:36.428Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -1479,15 +1479,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-08-15T09:35:31.239Z"))
+                            .endAt(OffsetDateTime.parse("2026-08-16T03:28:07.796Z"))
                             .excludedDates(List.of(
-                                "2023-06-23T06:13:56.389Z",
-                                "2023-06-12T03:32:38.247Z"))
+                                "2023-06-23T10:25:19.707Z",
+                                "2023-06-12T07:36:05.100Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-10T17:43:26.374Z",
-                                "2023-08-25T13:39:01.177Z",
-                                "2024-10-07T20:45:09.881Z"))
+                                "2024-04-11T01:23:50.705Z",
+                                "2023-08-25T18:35:39.085Z",
+                                "2024-10-08T06:34:17.728Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -1633,11 +1633,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-05-14T09:05:28.258Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-14T21:30:45.630Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-10-21T06:05:53.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-22T00:46:16.628Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
@@ -1759,10 +1759,10 @@ public class Application {
                 .calendarWebinar(CalendarWebinar.builder()
                     .conference(List.of())
                     .createdAt(OffsetDateTime.parse("2022-07-06T11:45:14.631Z"))
-                    .endAt(OffsetDateTime.parse("2025-11-13T22:57:10.701Z"))
+                    .endAt(OffsetDateTime.parse("2025-11-14T13:33:39.578Z"))
                     .hasPolls(false)
                     .hasRecording(false)
-                    .id("816eb0ec-f818-4b8a-aacb-a6aa354d77e0")
+                    .id("acecd829-f4f9-4d34-a287-76ac998640a5")
                     .isAutoApprove(false)
                     .isEnabled(true)
                     .isWebcast(false)
@@ -1772,12 +1772,12 @@ public class Application {
                     .recurrence(List.of(
                         CalendarEventRecurrence.builder()
                             .count(10d)
-                            .endAt(OffsetDateTime.parse("2023-09-06T06:22:27.988Z"))
+                            .endAt(OffsetDateTime.parse("2023-09-06T11:27:27.437Z"))
                             .excludedDates(List.of(
-                                "2025-02-25T19:14:03.326Z"))
+                                "2025-02-26T06:43:54.308Z"))
                             .frequency(CalendarEventRecurrenceFrequency.MONTHLY)
                             .includedDates(List.of(
-                                "2024-05-07T03:49:47.774Z"))
+                                "2024-05-07T11:49:04.997Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -2162,15 +2162,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(3d)
-                            .endAt(OffsetDateTime.parse("2022-10-01T19:58:19.926Z"))
+                            .endAt(OffsetDateTime.parse("2022-10-01T21:00:45.026Z"))
                             .excludedDates(List.of(
-                                "2024-09-12T07:51:30.695Z",
-                                "2024-08-27T13:53:18.974Z"))
+                                "2024-09-12T17:22:23.545Z",
+                                "2024-08-27T23:12:56.544Z"))
                             .frequency(CalendarEventRecurrenceFrequency.DAILY)
                             .includedDates(List.of(
-                                "2024-04-02T14:15:54.259Z",
-                                "2026-01-30T15:57:28.324Z",
-                                "2023-08-19T16:21:10.962Z"))
+                                "2024-04-02T21:50:29.383Z",
+                                "2026-01-31T07:29:29.217Z",
+                                "2023-08-19T21:13:36.428Z"))
                             .interval(1d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.WE,
@@ -2308,15 +2308,15 @@ public class Application {
                             .build(),
                         CalendarEventRecurrence.builder()
                             .count(8d)
-                            .endAt(OffsetDateTime.parse("2026-08-15T09:35:31.239Z"))
+                            .endAt(OffsetDateTime.parse("2026-08-16T03:28:07.796Z"))
                             .excludedDates(List.of(
-                                "2023-06-23T06:13:56.389Z",
-                                "2023-06-12T03:32:38.247Z"))
+                                "2023-06-23T10:25:19.707Z",
+                                "2023-06-12T07:36:05.100Z"))
                             .frequency(CalendarEventRecurrenceFrequency.WEEKLY)
                             .includedDates(List.of(
-                                "2024-04-10T17:43:26.374Z",
-                                "2023-08-25T13:39:01.177Z",
-                                "2024-10-07T20:45:09.881Z"))
+                                "2024-04-11T01:23:50.705Z",
+                                "2023-08-25T18:35:39.085Z",
+                                "2024-10-08T06:34:17.728Z"))
                             .interval(8d)
                             .onDays(List.of(
                                 PropertyCalendarEventRecurrenceOnDays.SU,
@@ -2462,11 +2462,11 @@ public class Application {
                     .registrantPassword("W7J6DhkM")
                     .requireAddress(false)
                     .requireJobTitle(false)
-                    .startAt(OffsetDateTime.parse("2025-05-14T09:05:28.258Z"))
+                    .startAt(OffsetDateTime.parse("2025-05-14T21:30:45.630Z"))
                     .status(CalendarWebinarStatus.TENTATIVE)
                     .subject("Harum culpa decipio ex cubo ancilla cresco.")
                     .timezone("Europe/Kaliningrad")
-                    .updatedAt(OffsetDateTime.parse("2026-10-21T06:05:53.463Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-10-22T00:46:16.628Z"))
                     .webUrl("https://quiet-permafrost.name")
                     .build())
                 .connectionId("<id>")
