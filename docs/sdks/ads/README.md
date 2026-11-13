@@ -17,6 +17,7 @@
 * [getAdsCreative](#getadscreative) - Retrieve a creative
 * [getAdsGroup](#getadsgroup) - Retrieve a group
 * [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
+* [getAdsInventory](#getadsinventory) - Retrieve an inventory
 * [getAdsOrganization](#getadsorganization) - Retrieve an organization
 * [getAdsPromoted](#getadspromoted) - Retrieve a promoted
 * [getAdsTarget](#getadstarget) - Retrieve a target
@@ -26,6 +27,7 @@
 * [listAdsCreatives](#listadscreatives) - List all creatives
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
+* [listAdsInventories](#listadsinventories) - List all inventories
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
 * [listAdsPromoteds](#listadspromoteds) - List all promoteds
 * [listAdsReports](#listadsreports) - List all reports
@@ -86,11 +88,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("a65749fb-d77d-45a4-8f32-a6d61572de89")
+                    .id("90919b6c-9314-4c3f-a05c-08981159daf2")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-27T11:09:42.615Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-27T22:53:34.164Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -154,12 +156,12 @@ public class Application {
                 .adsAsset(AdsAsset.builder()
                     .createdAt(OffsetDateTime.parse("2020-03-27T20:14:38.603Z"))
                     .height(400d)
-                    .id("9da0537d-bd58-4082-90c9-987dd14716c9")
+                    .id("8ea71f0e-45c9-484a-80e8-694d011e4034")
                     .metadata(List.of())
                     .mimeType("IMAGE_PNG")
                     .name("Lockman - DuBuque")
                     .type(AdsAssetType.IMAGE)
-                    .updatedAt(OffsetDateTime.parse("2022-03-31T19:25:57.979Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-04-01T04:09:25.673Z"))
                     .url("https://informal-perfection.com/")
                     .width(600d)
                     .build())
@@ -229,18 +231,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-06-15T22:31:57.479Z"))
-                    .id("f266878d-6454-46ea-b34b-5d65b7451a36")
+                    .endAt(OffsetDateTime.parse("2025-06-16T18:15:34.369Z"))
+                    .id("c38e12c0-e676-4f52-a434-b763f591ce77")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-22T06:39:24.098Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-22T07:44:44.071Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-19T10:47:02.218Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-20T10:20:11.697Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -303,7 +305,7 @@ public class Application {
         CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("4d865ab5-48dd-4955-9f3d-74ee7a1f1b2a")
+                    .id("c258624b-4bb9-4218-9725-24dcffe3e64f")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -311,7 +313,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:52:57.631Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T10:44:21.654Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -379,16 +381,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-07-15T21:26:22.936Z"))
-                    .id("4e9d7034-ed1e-41ae-8842-642f0fc94039")
+                    .endAt(OffsetDateTime.parse("2026-07-17T00:54:17.143Z"))
+                    .id("641bea0b-7b14-43dd-950a-8c5bb2e6a129")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-28T17:12:54.968Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-29T18:50:30.018Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-20T22:22:29.149Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-21T07:56:35.022Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -451,11 +453,11 @@ public class Application {
         CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("48eb7978-d38a-4a47-bd68-e1e890f97381")
+                    .id("02707f97-7f4e-4573-a55f-fe6f69ee1e77")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:35:45.101Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:51:35.412Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -520,13 +522,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("a153e133-29db-429d-8949-a4b3fb5e2f7e")
+                    .id("f882471e-c331-4996-86da-9ef62d5cb8bc")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-04-17T23:19:54.648Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-19T01:29:59.359Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -899,6 +901,64 @@ public class Application {
 ### Response
 
 **[GetAdsInsertionorderResponse](../../models/operations/GetAdsInsertionorderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsInventoryRequest req = GetAdsInventoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsInventoryResponse res = sdk.ads().getAdsInventory()
+                .request(req)
+                .call();
+
+        if (res.adsInventory().isPresent()) {
+            System.out.println(res.adsInventory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAdsInventoryRequest](../../models/operations/GetAdsInventoryRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetAdsInventoryResponse](../../models/operations/GetAdsInventoryResponse.md)**
 
 ### Errors
 
@@ -1422,6 +1482,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsInventoriesRequest req = ListAdsInventoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsInventoriesResponse res = sdk.ads().listAdsInventories()
+                .request(req)
+                .call();
+
+        if (res.adsInventories().isPresent()) {
+            System.out.println(res.adsInventories().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAdsInventoriesRequest](../../models/operations/ListAdsInventoriesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListAdsInventoriesResponse](../../models/operations/ListAdsInventoriesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAdsOrganizations
 
 Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1687,11 +1804,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("d4f253c9-9bd2-44c0-a945-3a175003d427")
+                    .id("1fad33c2-4405-4c5e-b2b2-6ff9f61df0bc")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-27T11:09:42.624Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-27T22:53:34.176Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1760,18 +1877,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-06-15T22:31:57.566Z"))
-                    .id("ffb167ca-809f-48f7-8f69-c1fb0a3cec72")
+                    .endAt(OffsetDateTime.parse("2025-06-16T18:15:34.457Z"))
+                    .id("24a7996b-e578-4868-8604-13cc46c1719b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-22T06:39:24.102Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-22T07:44:44.075Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-19T10:47:02.322Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-20T10:20:11.802Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1835,7 +1952,7 @@ public class Application {
         PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("d5950434-3d8a-47b4-b3c7-01cf9353d871")
+                    .id("158687bb-382c-4f38-bc56-8d0a24b1abd8")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -1843,7 +1960,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:52:57.638Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T10:44:21.660Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1912,16 +2029,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-07-15T21:26:23.055Z"))
-                    .id("5d8149c4-1343-44b8-ba08-1812243d7cc4")
+                    .endAt(OffsetDateTime.parse("2026-07-17T00:54:17.299Z"))
+                    .id("46e16ebd-4bd1-472e-9283-e77a60c26013")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-28T17:12:55.079Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-29T18:50:30.164Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-20T22:22:29.191Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-21T07:56:35.076Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1985,11 +2102,11 @@ public class Application {
         PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("71e7bcdd-33ec-4d57-b2c4-50d4a0f01c8c")
+                    .id("c1be0f06-fd09-4784-b060-af30b4a2deb6")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:35:45.102Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:51:35.412Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2055,13 +2172,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("500ca32e-6c13-4be1-8933-b6ee82e963ed")
+                    .id("d5998d7f-a05f-4a03-9411-4b9697c9ab39")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-04-17T23:19:54.663Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-19T01:29:59.372Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2467,11 +2584,11 @@ public class Application {
                     .creativeAssetUrl("https://picsum.photos/seed/LwOzrpr9/948/2793")
                     .description("Accedo vespillo carpo dolor decet stillicidium comptus tenuis.")
                     .finalUrl("https://improbable-sanity.com")
-                    .id("d4f253c9-9bd2-44c0-a945-3a175003d427")
+                    .id("1fad33c2-4405-4c5e-b2b2-6ff9f61df0bc")
                     .metadata(List.of())
                     .name("Hermiston Group")
                     .status(AdsAdStatus.ARCHIVED)
-                    .updatedAt(OffsetDateTime.parse("2024-06-27T11:09:42.624Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-06-27T22:53:34.176Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2540,18 +2657,18 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-05-21T08:51:41.868Z"))
                     .currency("USD")
                     .effectiveStatus(EffectiveStatus.NOT_ELIGIBLE)
-                    .endAt(OffsetDateTime.parse("2025-06-15T22:31:57.566Z"))
-                    .id("ffb167ca-809f-48f7-8f69-c1fb0a3cec72")
+                    .endAt(OffsetDateTime.parse("2025-06-16T18:15:34.457Z"))
+                    .id("24a7996b-e578-4868-8604-13cc46c1719b")
                     .labels(List.of(
                         "comedo"))
                     .metadata(List.of())
                     .name("Emard Inc")
-                    .startAt(OffsetDateTime.parse("2022-07-22T06:39:24.102Z"))
+                    .startAt(OffsetDateTime.parse("2022-07-22T07:44:44.075Z"))
                     .status(AdsCampaignStatus.PROCESSING_FAILED)
                     .targeting(PropertyAdsCampaignTargeting.builder()
                         .build())
                     .totalSpendAmount(2349.8642875347286)
-                    .updatedAt(OffsetDateTime.parse("2026-01-19T10:47:02.322Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-01-20T10:20:11.802Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2615,7 +2732,7 @@ public class Application {
         UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
                 .adsCreative(AdsCreative.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-17T11:24:51.093Z"))
-                    .id("d5950434-3d8a-47b4-b3c7-01cf9353d871")
+                    .id("158687bb-382c-4f38-bc56-8d0a24b1abd8")
                     .labels(List.of(
                         "coma",
                         "accedo",
@@ -2623,7 +2740,7 @@ public class Application {
                     .metadata(List.of())
                     .name("Brekke, Bradtke and Robel")
                     .status(AdsCreativeStatus.PAUSED)
-                    .updatedAt(OffsetDateTime.parse("2021-07-02T04:52:57.638Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-02T10:44:21.660Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2692,16 +2809,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-08-29T17:59:41.045Z"))
                     .currency("USD")
                     .effectiveStatus(AdsGroupEffectiveStatus.PAUSED)
-                    .endAt(OffsetDateTime.parse("2026-07-15T21:26:23.055Z"))
-                    .id("5d8149c4-1343-44b8-ba08-1812243d7cc4")
+                    .endAt(OffsetDateTime.parse("2026-07-17T00:54:17.299Z"))
+                    .id("46e16ebd-4bd1-472e-9283-e77a60c26013")
                     .languageLocale("fr-FR")
                     .metadata(List.of())
                     .name("Stark - Baumbach")
-                    .startAt(OffsetDateTime.parse("2026-01-28T17:12:55.079Z"))
+                    .startAt(OffsetDateTime.parse("2026-01-29T18:50:30.164Z"))
                     .status(AdsGroupStatus.PROCESSING)
                     .targeting(PropertyAdsGroupTargeting.builder()
                         .build())
-                    .updatedAt(OffsetDateTime.parse("2022-01-20T22:22:29.191Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-21T07:56:35.076Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2765,11 +2882,11 @@ public class Application {
         UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
                 .adsInsertionorder(AdsInsertionorder.builder()
                     .createdAt(OffsetDateTime.parse("2021-04-10T06:57:36.611Z"))
-                    .id("71e7bcdd-33ec-4d57-b2c4-50d4a0f01c8c")
+                    .id("c1be0f06-fd09-4784-b060-af30b4a2deb6")
                     .metadata(List.of())
                     .name("Kunde, Smith and Reinger")
                     .status(AdsInsertionorderStatus.UNSPECIFIED)
-                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:35:45.102Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-29T00:51:35.412Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2835,13 +2952,13 @@ public class Application {
                     .accountNumber("LQUJx8zQBW")
                     .createdAt(OffsetDateTime.parse("2020-07-23T21:47:11.440Z"))
                     .currency("USD")
-                    .id("500ca32e-6c13-4be1-8933-b6ee82e963ed")
+                    .id("d5998d7f-a05f-4a03-9411-4b9697c9ab39")
                     .managers(List.of())
                     .metadata(List.of())
                     .name("Ankunding Inc")
                     .status(AdsOrganizationStatus.PROCESSING)
                     .timezone("Europe/Chisinau")
-                    .updatedAt(OffsetDateTime.parse("2026-04-17T23:19:54.663Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-19T01:29:59.372Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

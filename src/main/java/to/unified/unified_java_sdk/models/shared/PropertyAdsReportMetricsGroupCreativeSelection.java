@@ -27,6 +27,8 @@ public class PropertyAdsReportMetricsGroupCreativeSelection {
 
     public static final PropertyAdsReportMetricsGroupCreativeSelection OPTIMIZED = new PropertyAdsReportMetricsGroupCreativeSelection("OPTIMIZED");
     public static final PropertyAdsReportMetricsGroupCreativeSelection ROUND_ROBIN = new PropertyAdsReportMetricsGroupCreativeSelection("ROUND_ROBIN");
+    public static final PropertyAdsReportMetricsGroupCreativeSelection WEIGHTED = new PropertyAdsReportMetricsGroupCreativeSelection("WEIGHTED");
+    public static final PropertyAdsReportMetricsGroupCreativeSelection SEQUENTIAL = new PropertyAdsReportMetricsGroupCreativeSelection("SEQUENTIAL");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -102,6 +104,8 @@ public class PropertyAdsReportMetricsGroupCreativeSelection {
         Map<String, PropertyAdsReportMetricsGroupCreativeSelection> map = new LinkedHashMap<>();
         map.put("OPTIMIZED", OPTIMIZED);
         map.put("ROUND_ROBIN", ROUND_ROBIN);
+        map.put("WEIGHTED", WEIGHTED);
+        map.put("SEQUENTIAL", SEQUENTIAL);
         return map;
     }
 
@@ -109,6 +113,8 @@ public class PropertyAdsReportMetricsGroupCreativeSelection {
         Map<String, PropertyAdsReportMetricsGroupCreativeSelectionEnum> map = new HashMap<>();
         map.put("OPTIMIZED", PropertyAdsReportMetricsGroupCreativeSelectionEnum.OPTIMIZED);
         map.put("ROUND_ROBIN", PropertyAdsReportMetricsGroupCreativeSelectionEnum.ROUND_ROBIN);
+        map.put("WEIGHTED", PropertyAdsReportMetricsGroupCreativeSelectionEnum.WEIGHTED);
+        map.put("SEQUENTIAL", PropertyAdsReportMetricsGroupCreativeSelectionEnum.SEQUENTIAL);
         return map;
     }
     
@@ -116,7 +122,9 @@ public class PropertyAdsReportMetricsGroupCreativeSelection {
     public enum PropertyAdsReportMetricsGroupCreativeSelectionEnum {
 
         OPTIMIZED("OPTIMIZED"),
-        ROUND_ROBIN("ROUND_ROBIN"),;
+        ROUND_ROBIN("ROUND_ROBIN"),
+        WEIGHTED("WEIGHTED"),
+        SEQUENTIAL("SEQUENTIAL"),;
 
         private final String value;
 

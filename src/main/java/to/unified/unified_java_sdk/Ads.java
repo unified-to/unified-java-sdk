@@ -45,6 +45,9 @@ import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryResponse;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
@@ -72,6 +75,9 @@ import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
@@ -151,6 +157,7 @@ import to.unified.unified_java_sdk.operations.GetAdsCampaign;
 import to.unified.unified_java_sdk.operations.GetAdsCreative;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
 import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.GetAdsInventory;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
 import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.GetAdsTarget;
@@ -160,6 +167,7 @@ import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
 import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
+import to.unified.unified_java_sdk.operations.ListAdsInventories;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
 import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
@@ -569,6 +577,34 @@ public class Ads {
     }
 
     /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetAdsInventoryRequestBuilder getAdsInventory() {
+        return new GetAdsInventoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request) {
+        RequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
+              = new GetAdsInventory.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve an organization
      * 
      * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
@@ -865,6 +901,42 @@ public class Ads {
     public ListAdsInsertionordersResponse listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
         RequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
               = new ListAdsInsertionorders.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListAdsInventoriesRequestBuilder listAdsInventories() {
+        return new ListAdsInventoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request) {
+        RequestOperation<ListAdsInventoriesRequest, ListAdsInventoriesResponse> operation
+              = new ListAdsInventories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

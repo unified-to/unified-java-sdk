@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createCommerceInventory](#createcommerceinventory) - Create an inventory
+* [getAdsInventory](#getadsinventory) - Retrieve an inventory
 * [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
+* [listAdsInventories](#listadsinventories) - List all inventories
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
@@ -43,9 +45,9 @@ public class Application {
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("467abf18-851e-46a0-bbab-1dfc865482ba")
+                    .id("d17f95a5-709f-4087-a080-669764c651d2")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-12-07T23:37:48.323Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-08T22:48:25.956Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -70,6 +72,64 @@ public class Application {
 ### Response
 
 **[CreateCommerceInventoryResponse](../../models/operations/CreateCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsInventoryRequest req = GetAdsInventoryRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsInventoryResponse res = sdk.inventory().getAdsInventory()
+                .request(req)
+                .call();
+
+        if (res.adsInventory().isPresent()) {
+            System.out.println(res.adsInventory().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [GetAdsInventoryRequest](../../models/operations/GetAdsInventoryRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[GetAdsInventoryResponse](../../models/operations/GetAdsInventoryResponse.md)**
 
 ### Errors
 
@@ -128,6 +188,63 @@ public class Application {
 ### Response
 
 **[GetCommerceInventoryResponse](../../models/operations/GetCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsInventoriesRequest req = ListAdsInventoriesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsInventoriesResponse res = sdk.inventory().listAdsInventories()
+                .request(req)
+                .call();
+
+        if (res.adsInventories().isPresent()) {
+            System.out.println(res.adsInventories().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListAdsInventoriesRequest](../../models/operations/ListAdsInventoriesRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListAdsInventoriesResponse](../../models/operations/ListAdsInventoriesResponse.md)**
 
 ### Errors
 
@@ -224,9 +341,9 @@ public class Application {
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8c58db7e-b4d4-4917-a5b8-8454bbeff568")
+                    .id("65b223be-abf7-4070-9bac-514dc728d4c4")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-12-07T23:37:48.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-08T22:48:25.965Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -347,9 +464,9 @@ public class Application {
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
                     .available(337d)
-                    .id("8c58db7e-b4d4-4917-a5b8-8454bbeff568")
+                    .id("65b223be-abf7-4070-9bac-514dc728d4c4")
                     .metadata(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-12-07T23:37:48.329Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-12-08T22:48:25.965Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

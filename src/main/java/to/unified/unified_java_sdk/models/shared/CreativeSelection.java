@@ -27,6 +27,8 @@ public class CreativeSelection {
 
     public static final CreativeSelection OPTIMIZED = new CreativeSelection("OPTIMIZED");
     public static final CreativeSelection ROUND_ROBIN = new CreativeSelection("ROUND_ROBIN");
+    public static final CreativeSelection WEIGHTED = new CreativeSelection("WEIGHTED");
+    public static final CreativeSelection SEQUENTIAL = new CreativeSelection("SEQUENTIAL");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -102,6 +104,8 @@ public class CreativeSelection {
         Map<String, CreativeSelection> map = new LinkedHashMap<>();
         map.put("OPTIMIZED", OPTIMIZED);
         map.put("ROUND_ROBIN", ROUND_ROBIN);
+        map.put("WEIGHTED", WEIGHTED);
+        map.put("SEQUENTIAL", SEQUENTIAL);
         return map;
     }
 
@@ -109,6 +113,8 @@ public class CreativeSelection {
         Map<String, CreativeSelectionEnum> map = new HashMap<>();
         map.put("OPTIMIZED", CreativeSelectionEnum.OPTIMIZED);
         map.put("ROUND_ROBIN", CreativeSelectionEnum.ROUND_ROBIN);
+        map.put("WEIGHTED", CreativeSelectionEnum.WEIGHTED);
+        map.put("SEQUENTIAL", CreativeSelectionEnum.SEQUENTIAL);
         return map;
     }
     
@@ -116,7 +122,9 @@ public class CreativeSelection {
     public enum CreativeSelectionEnum {
 
         OPTIMIZED("OPTIMIZED"),
-        ROUND_ROBIN("ROUND_ROBIN"),;
+        ROUND_ROBIN("ROUND_ROBIN"),
+        WEIGHTED("WEIGHTED"),
+        SEQUENTIAL("SEQUENTIAL"),;
 
         private final String value;
 

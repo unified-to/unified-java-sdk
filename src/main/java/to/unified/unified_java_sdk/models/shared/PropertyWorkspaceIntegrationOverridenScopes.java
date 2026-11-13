@@ -355,6 +355,11 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ads_inventory_read")
+    private String adsInventoryRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ads_organization_read")
     private String adsOrganizationRead;
 
@@ -2518,6 +2523,10 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         return Optional.ofNullable(this.adsInsertionorderWrite);
     }
 
+    public Optional<String> adsInventoryRead() {
+        return Optional.ofNullable(this.adsInventoryRead);
+    }
+
     public Optional<String> adsOrganizationRead() {
         return Optional.ofNullable(this.adsOrganizationRead);
     }
@@ -4437,6 +4446,12 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
     public PropertyWorkspaceIntegrationOverridenScopes withAdsInsertionorderWrite(@Nullable String adsInsertionorderWrite) {
         this.adsInsertionorderWrite = adsInsertionorderWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withAdsInventoryRead(@Nullable String adsInventoryRead) {
+        this.adsInventoryRead = adsInventoryRead;
         return this;
     }
 
@@ -6792,6 +6807,7 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.adsGroupWrite, other.adsGroupWrite) &&
             Utils.enhancedDeepEquals(this.adsInsertionorderRead, other.adsInsertionorderRead) &&
             Utils.enhancedDeepEquals(this.adsInsertionorderWrite, other.adsInsertionorderWrite) &&
+            Utils.enhancedDeepEquals(this.adsInventoryRead, other.adsInventoryRead) &&
             Utils.enhancedDeepEquals(this.adsOrganizationRead, other.adsOrganizationRead) &&
             Utils.enhancedDeepEquals(this.adsOrganizationWrite, other.adsOrganizationWrite) &&
             Utils.enhancedDeepEquals(this.adsPromotedRead, other.adsPromotedRead) &&
@@ -7198,133 +7214,133 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             adsAssetRead, adsAssetWrite, adsCampaignRead,
             adsCampaignWrite, adsCreativeRead, adsCreativeWrite,
             adsGroupRead, adsGroupWrite, adsInsertionorderRead,
-            adsInsertionorderWrite, adsOrganizationRead, adsOrganizationWrite,
-            adsPromotedRead, adsReportRead, adsTargetRead,
-            analyticsEventRead, analyticsEventWrite, analyticsPropertyRead,
-            analyticsPropertyWrite, analyticsReportRead, analyticsSessionRead,
-            analyticsVisitorRead, analyticsVisitorWrite, assessmentOrderWrite,
-            assessmentPackageRead, assessmentPackageWrite, atsActivityRead,
-            atsActivityWrite, atsApplicationRead, atsApplicationWrite,
-            atsApplicationstatusRead, atsCandidateRead, atsCandidateWrite,
-            atsCompanyRead, atsCompanyWrite, atsDocumentRead,
-            atsDocumentWrite, atsInterviewRead, atsInterviewWrite,
-            atsJobRead, atsJobWrite, atsScorecardRead,
-            atsScorecardWrite, calendarBotRead, calendarBotWrite,
-            calendarBoteventRead, calendarBusyRead, calendarCalendarRead,
-            calendarCalendarWrite, calendarEventRead, calendarEventWrite,
-            calendarLinkRead, calendarLinkWrite, calendarLocationRead,
-            calendarRecordingRead, calendarRecordingWrite, calendarRoomRead,
-            calendarWebinarRead, calendarWebinarWrite, cdpActivationRead,
-            cdpActivationWrite, cdpDestinationRead, cdpDestinationWrite,
-            cdpEventRead, cdpEventWrite, cdpProfileRead,
-            cdpProfileWrite, cdpSegmentRead, cdpSegmentWrite,
-            cdpSourceRead, cdpSourceWrite, clubsActivityRead,
-            clubsActivityWrite, clubsEventRead, clubsEventWrite,
-            clubsGroupRead, clubsGroupWrite, clubsLocationRead,
-            clubsLocationWrite, clubsMemberRead, clubsMemberWrite,
-            commerceAvailabilityRead, commerceAvailabilityWrite, commerceCollectionRead,
-            commerceCollectionWrite, commerceInventoryRead, commerceInventoryWrite,
-            commerceItemRead, commerceItemWrite, commerceItemvariantRead,
-            commerceItemvariantWrite, commerceLocationRead, commerceLocationWrite,
-            commerceReservationRead, commerceReservationWrite, commerceReturnRead,
-            commerceReturnWrite, commerceReviewRead, commerceReviewWrite,
-            commerceSaleschannelRead, commerceSaleschannelWrite, commerceTableRead,
-            commerceTableWrite, computeDeploymentRead, computeDeploymentWrite,
-            computeDomainRead, computeDomainWrite, computeEnvvarRead,
-            computeEnvvarWrite, computeGputypeRead, computeInstanceRead,
-            computeInstanceWrite, computeKeyRead, computeKeyWrite,
-            computeRegionRead, computeServiceRead, computeServiceWrite,
-            computeSnapshotRead, computeSnapshotWrite, computeTemplateRead,
-            computeTemplateWrite, computeUsageRead, computeVolumeRead,
-            computeVolumeWrite, crmCompanyRead, crmCompanyWrite,
-            crmContactRead, crmContactWrite, crmDealRead,
-            crmDealWrite, crmEventRead, crmEventWrite,
-            crmLeadRead, crmLeadWrite, crmPipelineRead,
-            crmPipelineWrite, crmTaxonomyRead, datastoreDatabaseRead,
-            datastoreDatabaseWrite, datastoreQueryRead, datastoreQueryWrite,
-            datastoreRecordRead, datastoreRecordWrite, datastoreTableRead,
-            datastoreTableWrite, enrichCompanyRead, enrichPersonRead,
-            formsFormRead, formsFormWrite, formsSubmissionRead,
-            formsSubmissionWrite, genaiAgentRead, genaiAgentWrite,
-            genaiEmbeddingRead, genaiEmbeddingWrite, genaiMemoryRead,
-            genaiMemoryWrite, genaiModelRead, genaiOrganizationRead,
-            genaiOrganizationWrite, genaiPromptRead, genaiPromptWrite,
-            genaiSkillRead, genaiSkillWrite, genaiTaskRead,
-            genaiTaskWrite, healthcareAllergyRead, healthcareAllergyWrite,
-            healthcareAppointmentRead, healthcareAppointmentWrite, healthcareCareplanRead,
-            healthcareCareplanWrite, healthcareConditionRead, healthcareConditionWrite,
-            healthcareCoverageRead, healthcareCoverageWrite, healthcareDocumentRead,
-            healthcareDocumentWrite, healthcareEncounterRead, healthcareEncounterWrite,
-            healthcareGoalRead, healthcareGoalWrite, healthcareImmunizationRead,
-            healthcareImmunizationWrite, healthcareLocationRead, healthcareLocationWrite,
-            healthcareMedicationRead, healthcareMedicationWrite, healthcareObservationRead,
-            healthcareObservationWrite, healthcarePatientRead, healthcarePatientWrite,
-            healthcarePractitionerRead, healthcarePractitionerWrite, healthcareProcedureRead,
-            healthcareProcedureWrite, healthcareReportRead, healthcareReportWrite,
-            healthcareSlotRead, healthcareSlotWrite, hrisAttendanceRead,
-            hrisAttendanceWrite, hrisBankaccountRead, hrisBankaccountWrite,
-            hrisBenefitRead, hrisBenefitWrite, hrisCompanyRead,
-            hrisCompanyWrite, hrisDeductionRead, hrisDeductionWrite,
-            hrisDeviceRead, hrisDeviceWrite, hrisDocumentRead,
-            hrisDocumentWrite, hrisEarningRead, hrisEarningWrite,
-            hrisEmployeeRead, hrisEmployeeWrite, hrisGroupRead,
-            hrisGroupWrite, hrisJobRead, hrisJobWrite,
-            hrisLocationRead, hrisLocationWrite, hrisPaycodeRead,
-            hrisPaycodeWrite, hrisPayrollRead, hrisPayrollWrite,
-            hrisPayslipRead, hrisPayslipWrite, hrisTaxonomyRead,
-            hrisTaxonomyWrite, hrisTimeoffRead, hrisTimeoffWrite,
-            hrisTimeshiftRead, hrisTimeshiftWrite, kmsCommentRead,
-            kmsCommentWrite, kmsPageRead, kmsPageWrite,
-            kmsSpaceRead, kmsSpaceWrite, legalExpenseRead,
-            legalExpenseWrite, legalMatterRead, legalMatterWrite,
-            legalPracticeareaRead, legalPracticeareaWrite, legalTimeentryRead,
-            legalTimeentryWrite, lmsActivityRead, lmsActivityWrite,
-            lmsClassRead, lmsClassWrite, lmsCollectionRead,
-            lmsCollectionWrite, lmsContentRead, lmsContentWrite,
-            lmsCourseRead, lmsCourseWrite, lmsInstructorRead,
-            lmsInstructorWrite, lmsStudentRead, lmsStudentWrite,
-            martechCampaignRead, martechCampaignWrite, martechListRead,
-            martechListWrite, martechMemberRead, martechMemberWrite,
-            martechReportRead, martechReportWrite, messagingChannelRead,
-            messagingChannelWrite, messagingEventRead, messagingEventWrite,
-            messagingMessageRead, messagingMessageWrite, metadataMetadataRead,
-            metadataMetadataWrite, paymentLinkRead, paymentLinkWrite,
-            paymentPaymentRead, paymentPaymentWrite, paymentPayoutRead,
-            paymentRefundRead, paymentSubscriptionRead, paymentSubscriptionWrite,
-            performanceCycleRead, performanceFeedbackRead, performanceFeedbackWrite,
-            performanceGoalRead, performanceGoalWrite, performanceReviewRead,
-            performanceReviewWrite, plmBomlineRead, plmBomlineWrite,
-            plmCategoryRead, plmCategoryWrite, plmChangeRead,
-            plmChangeWrite, plmDocumentRead, plmDocumentWrite,
-            plmPartRead, plmPartWrite, propertyAvailabilityRead,
-            propertyConversationRead, propertyConversationWrite, propertyGuestRead,
-            propertyGuestWrite, propertyListingRead, propertyListingWrite,
-            propertyQuoteRead, propertyQuoteWrite, propertyReservationRead,
-            propertyReservationWrite, propertyReviewRead, propertyReviewWrite,
-            propertyUnittypeRead, repoBranchRead, repoBranchWrite,
-            repoCommitRead, repoCommitWrite, repoOrganizationRead,
-            repoOrganizationWrite, repoPullrequestRead, repoPullrequestWrite,
-            repoRepositoryRead, repoRepositoryWrite, scimGroupsRead,
-            scimGroupsWrite, scimUsersRead, scimUsersWrite,
-            shippingCarrierRead, shippingLabelRead, shippingLabelWrite,
-            shippingRateRead, shippingRateWrite, shippingShipmentRead,
-            shippingShipmentWrite, shippingTrackingRead, signingDocumentRead,
-            signingDocumentWrite, signingSignatoryRead, signingSignatoryWrite,
-            signingTemplateRead, signingTemplateWrite, socialCommentRead,
-            socialCommentWrite, socialInsightRead, socialInsightWrite,
-            socialPostRead, socialPostWrite, socialProfileRead,
-            socialProfileWrite, socialReviewRead, socialReviewWrite,
-            storageFileRead, storageFileWrite, taskChangeRead,
-            taskCommentRead, taskCommentWrite, taskProjectRead,
-            taskProjectWrite, taskTaskRead, taskTaskWrite,
-            ticketingCategoryRead, ticketingCategoryWrite, ticketingCustomerRead,
-            ticketingCustomerWrite, ticketingNoteRead, ticketingNoteWrite,
-            ticketingTicketRead, ticketingTicketWrite, ucCallRead,
-            ucCallWrite, ucCommentRead, ucCommentWrite,
-            ucContactRead, ucContactWrite, ucFaxRead,
-            ucFaxWrite, ucRecordingRead, ucScorecardRead,
-            ucScorecardtemplateRead, verificationPackageRead, verificationRequestRead,
-            verificationRequestWrite, webhook);
+            adsInsertionorderWrite, adsInventoryRead, adsOrganizationRead,
+            adsOrganizationWrite, adsPromotedRead, adsReportRead,
+            adsTargetRead, analyticsEventRead, analyticsEventWrite,
+            analyticsPropertyRead, analyticsPropertyWrite, analyticsReportRead,
+            analyticsSessionRead, analyticsVisitorRead, analyticsVisitorWrite,
+            assessmentOrderWrite, assessmentPackageRead, assessmentPackageWrite,
+            atsActivityRead, atsActivityWrite, atsApplicationRead,
+            atsApplicationWrite, atsApplicationstatusRead, atsCandidateRead,
+            atsCandidateWrite, atsCompanyRead, atsCompanyWrite,
+            atsDocumentRead, atsDocumentWrite, atsInterviewRead,
+            atsInterviewWrite, atsJobRead, atsJobWrite,
+            atsScorecardRead, atsScorecardWrite, calendarBotRead,
+            calendarBotWrite, calendarBoteventRead, calendarBusyRead,
+            calendarCalendarRead, calendarCalendarWrite, calendarEventRead,
+            calendarEventWrite, calendarLinkRead, calendarLinkWrite,
+            calendarLocationRead, calendarRecordingRead, calendarRecordingWrite,
+            calendarRoomRead, calendarWebinarRead, calendarWebinarWrite,
+            cdpActivationRead, cdpActivationWrite, cdpDestinationRead,
+            cdpDestinationWrite, cdpEventRead, cdpEventWrite,
+            cdpProfileRead, cdpProfileWrite, cdpSegmentRead,
+            cdpSegmentWrite, cdpSourceRead, cdpSourceWrite,
+            clubsActivityRead, clubsActivityWrite, clubsEventRead,
+            clubsEventWrite, clubsGroupRead, clubsGroupWrite,
+            clubsLocationRead, clubsLocationWrite, clubsMemberRead,
+            clubsMemberWrite, commerceAvailabilityRead, commerceAvailabilityWrite,
+            commerceCollectionRead, commerceCollectionWrite, commerceInventoryRead,
+            commerceInventoryWrite, commerceItemRead, commerceItemWrite,
+            commerceItemvariantRead, commerceItemvariantWrite, commerceLocationRead,
+            commerceLocationWrite, commerceReservationRead, commerceReservationWrite,
+            commerceReturnRead, commerceReturnWrite, commerceReviewRead,
+            commerceReviewWrite, commerceSaleschannelRead, commerceSaleschannelWrite,
+            commerceTableRead, commerceTableWrite, computeDeploymentRead,
+            computeDeploymentWrite, computeDomainRead, computeDomainWrite,
+            computeEnvvarRead, computeEnvvarWrite, computeGputypeRead,
+            computeInstanceRead, computeInstanceWrite, computeKeyRead,
+            computeKeyWrite, computeRegionRead, computeServiceRead,
+            computeServiceWrite, computeSnapshotRead, computeSnapshotWrite,
+            computeTemplateRead, computeTemplateWrite, computeUsageRead,
+            computeVolumeRead, computeVolumeWrite, crmCompanyRead,
+            crmCompanyWrite, crmContactRead, crmContactWrite,
+            crmDealRead, crmDealWrite, crmEventRead,
+            crmEventWrite, crmLeadRead, crmLeadWrite,
+            crmPipelineRead, crmPipelineWrite, crmTaxonomyRead,
+            datastoreDatabaseRead, datastoreDatabaseWrite, datastoreQueryRead,
+            datastoreQueryWrite, datastoreRecordRead, datastoreRecordWrite,
+            datastoreTableRead, datastoreTableWrite, enrichCompanyRead,
+            enrichPersonRead, formsFormRead, formsFormWrite,
+            formsSubmissionRead, formsSubmissionWrite, genaiAgentRead,
+            genaiAgentWrite, genaiEmbeddingRead, genaiEmbeddingWrite,
+            genaiMemoryRead, genaiMemoryWrite, genaiModelRead,
+            genaiOrganizationRead, genaiOrganizationWrite, genaiPromptRead,
+            genaiPromptWrite, genaiSkillRead, genaiSkillWrite,
+            genaiTaskRead, genaiTaskWrite, healthcareAllergyRead,
+            healthcareAllergyWrite, healthcareAppointmentRead, healthcareAppointmentWrite,
+            healthcareCareplanRead, healthcareCareplanWrite, healthcareConditionRead,
+            healthcareConditionWrite, healthcareCoverageRead, healthcareCoverageWrite,
+            healthcareDocumentRead, healthcareDocumentWrite, healthcareEncounterRead,
+            healthcareEncounterWrite, healthcareGoalRead, healthcareGoalWrite,
+            healthcareImmunizationRead, healthcareImmunizationWrite, healthcareLocationRead,
+            healthcareLocationWrite, healthcareMedicationRead, healthcareMedicationWrite,
+            healthcareObservationRead, healthcareObservationWrite, healthcarePatientRead,
+            healthcarePatientWrite, healthcarePractitionerRead, healthcarePractitionerWrite,
+            healthcareProcedureRead, healthcareProcedureWrite, healthcareReportRead,
+            healthcareReportWrite, healthcareSlotRead, healthcareSlotWrite,
+            hrisAttendanceRead, hrisAttendanceWrite, hrisBankaccountRead,
+            hrisBankaccountWrite, hrisBenefitRead, hrisBenefitWrite,
+            hrisCompanyRead, hrisCompanyWrite, hrisDeductionRead,
+            hrisDeductionWrite, hrisDeviceRead, hrisDeviceWrite,
+            hrisDocumentRead, hrisDocumentWrite, hrisEarningRead,
+            hrisEarningWrite, hrisEmployeeRead, hrisEmployeeWrite,
+            hrisGroupRead, hrisGroupWrite, hrisJobRead,
+            hrisJobWrite, hrisLocationRead, hrisLocationWrite,
+            hrisPaycodeRead, hrisPaycodeWrite, hrisPayrollRead,
+            hrisPayrollWrite, hrisPayslipRead, hrisPayslipWrite,
+            hrisTaxonomyRead, hrisTaxonomyWrite, hrisTimeoffRead,
+            hrisTimeoffWrite, hrisTimeshiftRead, hrisTimeshiftWrite,
+            kmsCommentRead, kmsCommentWrite, kmsPageRead,
+            kmsPageWrite, kmsSpaceRead, kmsSpaceWrite,
+            legalExpenseRead, legalExpenseWrite, legalMatterRead,
+            legalMatterWrite, legalPracticeareaRead, legalPracticeareaWrite,
+            legalTimeentryRead, legalTimeentryWrite, lmsActivityRead,
+            lmsActivityWrite, lmsClassRead, lmsClassWrite,
+            lmsCollectionRead, lmsCollectionWrite, lmsContentRead,
+            lmsContentWrite, lmsCourseRead, lmsCourseWrite,
+            lmsInstructorRead, lmsInstructorWrite, lmsStudentRead,
+            lmsStudentWrite, martechCampaignRead, martechCampaignWrite,
+            martechListRead, martechListWrite, martechMemberRead,
+            martechMemberWrite, martechReportRead, martechReportWrite,
+            messagingChannelRead, messagingChannelWrite, messagingEventRead,
+            messagingEventWrite, messagingMessageRead, messagingMessageWrite,
+            metadataMetadataRead, metadataMetadataWrite, paymentLinkRead,
+            paymentLinkWrite, paymentPaymentRead, paymentPaymentWrite,
+            paymentPayoutRead, paymentRefundRead, paymentSubscriptionRead,
+            paymentSubscriptionWrite, performanceCycleRead, performanceFeedbackRead,
+            performanceFeedbackWrite, performanceGoalRead, performanceGoalWrite,
+            performanceReviewRead, performanceReviewWrite, plmBomlineRead,
+            plmBomlineWrite, plmCategoryRead, plmCategoryWrite,
+            plmChangeRead, plmChangeWrite, plmDocumentRead,
+            plmDocumentWrite, plmPartRead, plmPartWrite,
+            propertyAvailabilityRead, propertyConversationRead, propertyConversationWrite,
+            propertyGuestRead, propertyGuestWrite, propertyListingRead,
+            propertyListingWrite, propertyQuoteRead, propertyQuoteWrite,
+            propertyReservationRead, propertyReservationWrite, propertyReviewRead,
+            propertyReviewWrite, propertyUnittypeRead, repoBranchRead,
+            repoBranchWrite, repoCommitRead, repoCommitWrite,
+            repoOrganizationRead, repoOrganizationWrite, repoPullrequestRead,
+            repoPullrequestWrite, repoRepositoryRead, repoRepositoryWrite,
+            scimGroupsRead, scimGroupsWrite, scimUsersRead,
+            scimUsersWrite, shippingCarrierRead, shippingLabelRead,
+            shippingLabelWrite, shippingRateRead, shippingRateWrite,
+            shippingShipmentRead, shippingShipmentWrite, shippingTrackingRead,
+            signingDocumentRead, signingDocumentWrite, signingSignatoryRead,
+            signingSignatoryWrite, signingTemplateRead, signingTemplateWrite,
+            socialCommentRead, socialCommentWrite, socialInsightRead,
+            socialInsightWrite, socialPostRead, socialPostWrite,
+            socialProfileRead, socialProfileWrite, socialReviewRead,
+            socialReviewWrite, storageFileRead, storageFileWrite,
+            taskChangeRead, taskCommentRead, taskCommentWrite,
+            taskProjectRead, taskProjectWrite, taskTaskRead,
+            taskTaskWrite, ticketingCategoryRead, ticketingCategoryWrite,
+            ticketingCustomerRead, ticketingCustomerWrite, ticketingNoteRead,
+            ticketingNoteWrite, ticketingTicketRead, ticketingTicketWrite,
+            ucCallRead, ucCallWrite, ucCommentRead,
+            ucCommentWrite, ucContactRead, ucContactWrite,
+            ucFaxRead, ucFaxWrite, ucRecordingRead,
+            ucScorecardRead, ucScorecardtemplateRead, verificationPackageRead,
+            verificationRequestRead, verificationRequestWrite, webhook);
     }
     
     @Override
@@ -7397,6 +7413,7 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "adsGroupWrite", adsGroupWrite,
                 "adsInsertionorderRead", adsInsertionorderRead,
                 "adsInsertionorderWrite", adsInsertionorderWrite,
+                "adsInventoryRead", adsInventoryRead,
                 "adsOrganizationRead", adsOrganizationRead,
                 "adsOrganizationWrite", adsOrganizationWrite,
                 "adsPromotedRead", adsPromotedRead,
@@ -7916,6 +7933,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         private String adsInsertionorderRead;
 
         private String adsInsertionorderWrite;
+
+        private String adsInventoryRead;
 
         private String adsOrganizationRead;
 
@@ -9078,6 +9097,12 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         @JsonProperty("ads_insertionorder_write")
         public Builder adsInsertionorderWrite(@Nullable String adsInsertionorderWrite) {
             this.adsInsertionorderWrite = adsInsertionorderWrite;
+            return this;
+        }
+
+        @JsonProperty("ads_inventory_read")
+        public Builder adsInventoryRead(@Nullable String adsInventoryRead) {
+            this.adsInventoryRead = adsInventoryRead;
             return this;
         }
 
@@ -11423,6 +11448,7 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.adsGroupWrite = adsGroupWrite;
             _instance.adsInsertionorderRead = adsInsertionorderRead;
             _instance.adsInsertionorderWrite = adsInsertionorderWrite;
+            _instance.adsInventoryRead = adsInventoryRead;
             _instance.adsOrganizationRead = adsOrganizationRead;
             _instance.adsOrganizationWrite = adsOrganizationWrite;
             _instance.adsPromotedRead = adsPromotedRead;

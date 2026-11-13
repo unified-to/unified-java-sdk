@@ -9,9 +9,15 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesResponse;
@@ -25,7 +31,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequ
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceInventoryResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceInventory;
+import to.unified.unified_java_sdk.operations.GetAdsInventory;
 import to.unified.unified_java_sdk.operations.GetCommerceInventory;
+import to.unified.unified_java_sdk.operations.ListAdsInventories;
 import to.unified.unified_java_sdk.operations.ListCommerceInventories;
 import to.unified.unified_java_sdk.operations.PatchCommerceInventory;
 import to.unified.unified_java_sdk.operations.RemoveCommerceInventory;
@@ -83,6 +91,34 @@ public class Inventory {
     /**
      * Retrieve an inventory
      * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetAdsInventoryRequestBuilder getAdsInventory() {
+        return new GetAdsInventoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsInventoryResponse getAdsInventory(@Nonnull GetAdsInventoryRequest request) {
+        RequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
+              = new GetAdsInventory.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
      * <p>Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list
      * endpoint. Use `fields` to return only the fields you need.
      * 
@@ -105,6 +141,42 @@ public class Inventory {
     public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListAdsInventoriesRequestBuilder listAdsInventories() {
+        return new ListAdsInventoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsInventoriesResponse listAdsInventories(@Nonnull ListAdsInventoriesRequest request) {
+        RequestOperation<ListAdsInventoriesRequest, ListAdsInventoriesResponse> operation
+              = new ListAdsInventories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

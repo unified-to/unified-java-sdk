@@ -39,6 +39,11 @@ public class AdsTargetType {
     public static final AdsTargetType CARRIER = new AdsTargetType("CARRIER");
     public static final AdsTargetType DEVICE_MODEL = new AdsTargetType("DEVICE_MODEL");
     public static final AdsTargetType OS_VERSION = new AdsTargetType("OS_VERSION");
+    public static final AdsTargetType CUSTOM_KEY = new AdsTargetType("CUSTOM_KEY");
+    public static final AdsTargetType CUSTOM_VALUE = new AdsTargetType("CUSTOM_VALUE");
+    public static final AdsTargetType BROWSER = new AdsTargetType("BROWSER");
+    public static final AdsTargetType OPERATING_SYSTEM = new AdsTargetType("OPERATING_SYSTEM");
+    public static final AdsTargetType DEVICE_CATEGORY = new AdsTargetType("DEVICE_CATEGORY");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -125,6 +130,11 @@ public class AdsTargetType {
         map.put("CARRIER", CARRIER);
         map.put("DEVICE_MODEL", DEVICE_MODEL);
         map.put("OS_VERSION", OS_VERSION);
+        map.put("CUSTOM_KEY", CUSTOM_KEY);
+        map.put("CUSTOM_VALUE", CUSTOM_VALUE);
+        map.put("BROWSER", BROWSER);
+        map.put("OPERATING_SYSTEM", OPERATING_SYSTEM);
+        map.put("DEVICE_CATEGORY", DEVICE_CATEGORY);
         return map;
     }
 
@@ -143,6 +153,11 @@ public class AdsTargetType {
         map.put("CARRIER", AdsTargetTypeEnum.CARRIER);
         map.put("DEVICE_MODEL", AdsTargetTypeEnum.DEVICE_MODEL);
         map.put("OS_VERSION", AdsTargetTypeEnum.OS_VERSION);
+        map.put("CUSTOM_KEY", AdsTargetTypeEnum.CUSTOM_KEY);
+        map.put("CUSTOM_VALUE", AdsTargetTypeEnum.CUSTOM_VALUE);
+        map.put("BROWSER", AdsTargetTypeEnum.BROWSER);
+        map.put("OPERATING_SYSTEM", AdsTargetTypeEnum.OPERATING_SYSTEM);
+        map.put("DEVICE_CATEGORY", AdsTargetTypeEnum.DEVICE_CATEGORY);
         return map;
     }
     
@@ -161,7 +176,12 @@ public class AdsTargetType {
         USER_LIST("USER_LIST"),
         CARRIER("CARRIER"),
         DEVICE_MODEL("DEVICE_MODEL"),
-        OS_VERSION("OS_VERSION"),;
+        OS_VERSION("OS_VERSION"),
+        CUSTOM_KEY("CUSTOM_KEY"),
+        CUSTOM_VALUE("CUSTOM_VALUE"),
+        BROWSER("BROWSER"),
+        OPERATING_SYSTEM("OPERATING_SYSTEM"),
+        DEVICE_CATEGORY("DEVICE_CATEGORY"),;
 
         private final String value;
 

@@ -180,6 +180,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType ADS_INSERTIONORDER = new WebhookObjectType("ads_insertionorder");
     public static final WebhookObjectType ADS_TARGET = new WebhookObjectType("ads_target");
     public static final WebhookObjectType ADS_PROMOTED = new WebhookObjectType("ads_promoted");
+    public static final WebhookObjectType ADS_INVENTORY = new WebhookObjectType("ads_inventory");
     public static final WebhookObjectType ANALYTICS_PROPERTY = new WebhookObjectType("analytics_property");
     public static final WebhookObjectType ANALYTICS_EVENT = new WebhookObjectType("analytics_event");
     public static final WebhookObjectType ANALYTICS_SESSION = new WebhookObjectType("analytics_session");
@@ -493,6 +494,7 @@ public class WebhookObjectType {
         map.put("ads_insertionorder", ADS_INSERTIONORDER);
         map.put("ads_target", ADS_TARGET);
         map.put("ads_promoted", ADS_PROMOTED);
+        map.put("ads_inventory", ADS_INVENTORY);
         map.put("analytics_property", ANALYTICS_PROPERTY);
         map.put("analytics_event", ANALYTICS_EVENT);
         map.put("analytics_session", ANALYTICS_SESSION);
@@ -738,6 +740,7 @@ public class WebhookObjectType {
         map.put("ads_insertionorder", WebhookObjectTypeEnum.ADS_INSERTIONORDER);
         map.put("ads_target", WebhookObjectTypeEnum.ADS_TARGET);
         map.put("ads_promoted", WebhookObjectTypeEnum.ADS_PROMOTED);
+        map.put("ads_inventory", WebhookObjectTypeEnum.ADS_INVENTORY);
         map.put("analytics_property", WebhookObjectTypeEnum.ANALYTICS_PROPERTY);
         map.put("analytics_event", WebhookObjectTypeEnum.ANALYTICS_EVENT);
         map.put("analytics_session", WebhookObjectTypeEnum.ANALYTICS_SESSION);
@@ -984,6 +987,7 @@ public class WebhookObjectType {
         ADS_INSERTIONORDER("ads_insertionorder"),
         ADS_TARGET("ads_target"),
         ADS_PROMOTED("ads_promoted"),
+        ADS_INVENTORY("ads_inventory"),
         ANALYTICS_PROPERTY("analytics_property"),
         ANALYTICS_EVENT("analytics_event"),
         ANALYTICS_SESSION("analytics_session"),

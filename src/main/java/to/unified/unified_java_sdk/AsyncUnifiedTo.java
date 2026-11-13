@@ -87,6 +87,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncInsertionorder insertionorder;
 
+    private final AsyncInventory inventory;
+
     private final AsyncPromoted promoted;
 
     private final AsyncReport report;
@@ -164,8 +166,6 @@ public class AsyncUnifiedTo {
     private final AsyncAvailability availability;
 
     private final AsyncCollection collection;
-
-    private final AsyncInventory inventory;
 
     private final AsyncItem item;
 
@@ -613,6 +613,10 @@ public class AsyncUnifiedTo {
         return insertionorder;
     }
 
+    public AsyncInventory inventory() {
+        return inventory;
+    }
+
     public AsyncPromoted promoted() {
         return promoted;
     }
@@ -767,10 +771,6 @@ public class AsyncUnifiedTo {
 
     public AsyncCollection collection() {
         return collection;
-    }
-
-    public AsyncInventory inventory() {
-        return inventory;
     }
 
     public AsyncItem item() {
@@ -1412,6 +1412,7 @@ public class AsyncUnifiedTo {
         this.creative = new AsyncCreative(syncSDK.creative(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
+        this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);
         this.promoted = new AsyncPromoted(syncSDK.promoted(), sdkConfiguration);
         this.report = new AsyncReport(syncSDK.report(), sdkConfiguration);
         this.target = new AsyncTarget(syncSDK.target(), sdkConfiguration);
@@ -1451,7 +1452,6 @@ public class AsyncUnifiedTo {
         this.commerce = new AsyncCommerce(syncSDK.commerce(), sdkConfiguration);
         this.availability = new AsyncAvailability(syncSDK.availability(), sdkConfiguration);
         this.collection = new AsyncCollection(syncSDK.collection(), sdkConfiguration);
-        this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
         this.itemvariant = new AsyncItemvariant(syncSDK.itemvariant(), sdkConfiguration);
         this.reservation = new AsyncReservation(syncSDK.reservation(), sdkConfiguration);

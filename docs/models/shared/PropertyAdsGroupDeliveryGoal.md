@@ -1,0 +1,12 @@
+# PropertyAdsGroupDeliveryGoal
+
+Booked delivery goal (Google Ad Manager goal)
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `period`                                                                                                   | [Optional\<PropertyAdsGroupDeliveryGoalPeriod>](../../models/shared/PropertyAdsGroupDeliveryGoalPeriod.md) | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
+| `quantity`                                                                                                 | *Optional\<Double>*                                                                                        | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |
+| `unit`                                                                                                     | [Optional\<PropertyAdsGroupDeliveryGoalUnit>](../../models/shared/PropertyAdsGroupDeliveryGoalUnit.md)     | :heavy_minus_sign:                                                                                         | N/A                                                                                                        |

@@ -20,6 +20,7 @@ import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
@@ -29,6 +30,7 @@ import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInventoriesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
@@ -77,6 +79,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupRequestBui
 import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsInventoryRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsInventoryResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsPromotedRequestBuilder;
@@ -95,6 +99,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsRequestB
 import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionordersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionordersResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsInventoriesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsInventoriesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsRequestBuilder;
@@ -152,6 +158,7 @@ import to.unified.unified_java_sdk.operations.GetAdsCampaign;
 import to.unified.unified_java_sdk.operations.GetAdsCreative;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
 import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
+import to.unified.unified_java_sdk.operations.GetAdsInventory;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
 import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.GetAdsTarget;
@@ -161,6 +168,7 @@ import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
 import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
+import to.unified.unified_java_sdk.operations.ListAdsInventories;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
 import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
@@ -584,6 +592,35 @@ public class AsyncAds {
 
 
     /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The async call builder
+     */
+    public GetAdsInventoryRequestBuilder getAdsInventory() {
+        return new GetAdsInventoryRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an inventory
+     * 
+     * <p>Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAdsInventoryResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsInventoryResponse> getAdsInventory(@Nonnull GetAdsInventoryRequest request) {
+        AsyncRequestOperation<GetAdsInventoryRequest, GetAdsInventoryResponse> operation
+              = new GetAdsInventory.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve an organization
      * 
      * <p>Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list
@@ -887,6 +924,43 @@ public class AsyncAds {
     public CompletableFuture<ListAdsInsertionordersResponse> listAdsInsertionorders(@Nonnull ListAdsInsertionordersRequest request) {
         AsyncRequestOperation<ListAdsInsertionordersRequest, ListAdsInsertionordersResponse> operation
               = new ListAdsInsertionorders.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The async call builder
+     */
+    public ListAdsInventoriesRequestBuilder listAdsInventories() {
+        return new ListAdsInventoriesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all inventories
+     * 
+     * <p>Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then
+     * page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListAdsInventoriesResponse>} - The async response
+     */
+    public CompletableFuture<ListAdsInventoriesResponse> listAdsInventories(@Nonnull ListAdsInventoriesRequest request) {
+        AsyncRequestOperation<ListAdsInventoriesRequest, ListAdsInventoriesResponse> operation
+              = new ListAdsInventories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

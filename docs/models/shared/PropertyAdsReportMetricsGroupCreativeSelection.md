@@ -20,3 +20,5 @@ PropertyAdsReportMetricsGroupCreativeSelection custom = PropertyAdsReportMetrics
 | ------------- | ------------- |
 | `OPTIMIZED`   | OPTIMIZED     |
 | `ROUND_ROBIN` | ROUND_ROBIN   |
+| `WEIGHTED`    | WEIGHTED      |
+| `SEQUENTIAL`  | SEQUENTIAL    |

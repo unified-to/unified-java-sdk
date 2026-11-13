@@ -72,6 +72,7 @@
 | `adsGroupWrite`                      | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `adsInsertionorderRead`              | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `adsInsertionorderWrite`             | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `adsInventoryRead`                   | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `adsOrganizationRead`                | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `adsOrganizationWrite`               | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `adsPromotedRead`                    | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |

@@ -74,6 +74,13 @@ public class AdsGroup {
     private String campaignId;
 
     /**
+     * How the line item is priced (Google Ad Manager costType)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cost_type")
+    private CostType costType;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -92,10 +99,31 @@ public class AdsGroup {
     @JsonProperty("creative_selection")
     private CreativeSelection creativeSelection;
 
+    /**
+     * Expected creative sizes (Google Ad Manager creativePlaceholders)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creative_sizes")
+    private List<AdsSize> creativeSizes;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     private String currency;
+
+    /**
+     * Booked delivery goal (Google Ad Manager goal)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("delivery_goal")
+    private PropertyAdsGroupDeliveryGoal deliveryGoal;
+
+    /**
+     * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("delivery_type")
+    private DeliveryType deliveryType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -170,6 +198,13 @@ public class AdsGroup {
     @JsonProperty("parent_id")
     private String parentId;
 
+    /**
+     * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("priority")
+    private Double priority;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promoted")
@@ -220,10 +255,14 @@ public class AdsGroup {
             @JsonProperty("budget_period") @Nullable AdsGroupBudgetPeriod budgetPeriod,
             @JsonProperty("budget_unit") @Nullable AdsGroupBudgetUnit budgetUnit,
             @JsonProperty("campaign_id") @Nullable String campaignId,
+            @JsonProperty("cost_type") @Nullable CostType costType,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
             @JsonProperty("creative_selection") @Nullable CreativeSelection creativeSelection,
+            @JsonProperty("creative_sizes") @Nullable List<AdsSize> creativeSizes,
             @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("delivery_goal") @Nullable PropertyAdsGroupDeliveryGoal deliveryGoal,
+            @JsonProperty("delivery_type") @Nullable DeliveryType deliveryType,
             @JsonProperty("effective_status") @Nullable AdsGroupEffectiveStatus effectiveStatus,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsGroupFrequencyCap frequencyCap,
@@ -237,6 +276,7 @@ public class AdsGroup {
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("pacing") @Nullable PropertyAdsGroupPacing pacing,
             @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("priority") @Nullable Double priority,
             @JsonProperty("promoted") @Nullable List<AdsPromoted> promoted,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -253,10 +293,14 @@ public class AdsGroup {
         this.budgetPeriod = budgetPeriod;
         this.budgetUnit = budgetUnit;
         this.campaignId = campaignId;
+        this.costType = costType;
         this.createdAt = createdAt;
         this.creativeIds = creativeIds;
         this.creativeSelection = creativeSelection;
+        this.creativeSizes = creativeSizes;
         this.currency = currency;
+        this.deliveryGoal = deliveryGoal;
+        this.deliveryType = deliveryType;
         this.effectiveStatus = effectiveStatus;
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
@@ -270,6 +314,7 @@ public class AdsGroup {
         this.organizationId = organizationId;
         this.pacing = pacing;
         this.parentId = parentId;
+        this.priority = priority;
         this.promoted = promoted;
         this.raw = raw;
         this.startAt = startAt;
@@ -290,7 +335,9 @@ public class AdsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
     public Optional<Double> bidAmount() {
@@ -340,6 +387,13 @@ public class AdsGroup {
     }
 
     /**
+     * How the line item is priced (Google Ad Manager costType)
+     */
+    public Optional<CostType> costType() {
+        return Optional.ofNullable(this.costType);
+    }
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<OffsetDateTime> createdAt() {
@@ -357,8 +411,29 @@ public class AdsGroup {
         return Optional.ofNullable(this.creativeSelection);
     }
 
+    /**
+     * Expected creative sizes (Google Ad Manager creativePlaceholders)
+     */
+    public Optional<List<AdsSize>> creativeSizes() {
+        return Optional.ofNullable(this.creativeSizes);
+    }
+
     public Optional<String> currency() {
         return Optional.ofNullable(this.currency);
+    }
+
+    /**
+     * Booked delivery goal (Google Ad Manager goal)
+     */
+    public Optional<PropertyAdsGroupDeliveryGoal> deliveryGoal() {
+        return Optional.ofNullable(this.deliveryGoal);
+    }
+
+    /**
+     * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+     */
+    public Optional<DeliveryType> deliveryType() {
+        return Optional.ofNullable(this.deliveryType);
     }
 
     public Optional<AdsGroupEffectiveStatus> effectiveStatus() {
@@ -423,6 +498,13 @@ public class AdsGroup {
 
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
+    }
+
+    /**
+     * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+     */
+    public Optional<Double> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     public Optional<List<AdsPromoted>> promoted() {
@@ -529,6 +611,15 @@ public class AdsGroup {
 
 
     /**
+     * How the line item is priced (Google Ad Manager costType)
+     */
+    public AdsGroup withCostType(@Nullable CostType costType) {
+        this.costType = costType;
+        return this;
+    }
+
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     public AdsGroup withCreatedAt(@Nullable OffsetDateTime createdAt) {
@@ -552,8 +643,35 @@ public class AdsGroup {
     }
 
 
+    /**
+     * Expected creative sizes (Google Ad Manager creativePlaceholders)
+     */
+    public AdsGroup withCreativeSizes(@Nullable List<AdsSize> creativeSizes) {
+        this.creativeSizes = creativeSizes;
+        return this;
+    }
+
+
     public AdsGroup withCurrency(@Nullable String currency) {
         this.currency = currency;
+        return this;
+    }
+
+
+    /**
+     * Booked delivery goal (Google Ad Manager goal)
+     */
+    public AdsGroup withDeliveryGoal(@Nullable PropertyAdsGroupDeliveryGoal deliveryGoal) {
+        this.deliveryGoal = deliveryGoal;
+        return this;
+    }
+
+
+    /**
+     * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+     */
+    public AdsGroup withDeliveryType(@Nullable DeliveryType deliveryType) {
+        this.deliveryType = deliveryType;
         return this;
     }
 
@@ -648,6 +766,15 @@ public class AdsGroup {
     }
 
 
+    /**
+     * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+     */
+    public AdsGroup withPriority(@Nullable Double priority) {
+        this.priority = priority;
+        return this;
+    }
+
+
     public AdsGroup withPromoted(@Nullable List<AdsPromoted> promoted) {
         this.promoted = promoted;
         return this;
@@ -715,10 +842,14 @@ public class AdsGroup {
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
             Utils.enhancedDeepEquals(this.budgetUnit, other.budgetUnit) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
+            Utils.enhancedDeepEquals(this.costType, other.costType) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
             Utils.enhancedDeepEquals(this.creativeSelection, other.creativeSelection) &&
+            Utils.enhancedDeepEquals(this.creativeSizes, other.creativeSizes) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.deliveryGoal, other.deliveryGoal) &&
+            Utils.enhancedDeepEquals(this.deliveryType, other.deliveryType) &&
             Utils.enhancedDeepEquals(this.effectiveStatus, other.effectiveStatus) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
@@ -732,6 +863,7 @@ public class AdsGroup {
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.pacing, other.pacing) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
+            Utils.enhancedDeepEquals(this.priority, other.priority) &&
             Utils.enhancedDeepEquals(this.promoted, other.promoted) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -747,14 +879,16 @@ public class AdsGroup {
             bidAmount, bidStrategy, billingEvent,
             budgetAllocationType, budgetAmount, budgetMaxAmount,
             budgetPeriod, budgetUnit, campaignId,
-            createdAt, creativeIds, creativeSelection,
-            currency, effectiveStatus, endAt,
-            frequencyCap, hasEuPoliticalAds, id,
-            insertionorderId, languageLocale, metadata,
-            name, optimizationGoal, organizationId,
-            pacing, parentId, promoted,
-            raw, startAt, status,
-            targeting, type, updatedAt);
+            costType, createdAt, creativeIds,
+            creativeSelection, creativeSizes, currency,
+            deliveryGoal, deliveryType, effectiveStatus,
+            endAt, frequencyCap, hasEuPoliticalAds,
+            id, insertionorderId, languageLocale,
+            metadata, name, optimizationGoal,
+            organizationId, pacing, parentId,
+            priority, promoted, raw,
+            startAt, status, targeting,
+            type, updatedAt);
     }
     
     @Override
@@ -769,10 +903,14 @@ public class AdsGroup {
                 "budgetPeriod", budgetPeriod,
                 "budgetUnit", budgetUnit,
                 "campaignId", campaignId,
+                "costType", costType,
                 "createdAt", createdAt,
                 "creativeIds", creativeIds,
                 "creativeSelection", creativeSelection,
+                "creativeSizes", creativeSizes,
                 "currency", currency,
+                "deliveryGoal", deliveryGoal,
+                "deliveryType", deliveryType,
                 "effectiveStatus", effectiveStatus,
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
@@ -786,6 +924,7 @@ public class AdsGroup {
                 "organizationId", organizationId,
                 "pacing", pacing,
                 "parentId", parentId,
+                "priority", priority,
                 "promoted", promoted,
                 "raw", raw,
                 "startAt", startAt,
@@ -816,13 +955,21 @@ public class AdsGroup {
 
         private String campaignId;
 
+        private CostType costType;
+
         private OffsetDateTime createdAt;
 
         private List<String> creativeIds;
 
         private CreativeSelection creativeSelection;
 
+        private List<AdsSize> creativeSizes;
+
         private String currency;
+
+        private PropertyAdsGroupDeliveryGoal deliveryGoal;
+
+        private DeliveryType deliveryType;
 
         private AdsGroupEffectiveStatus effectiveStatus;
 
@@ -849,6 +996,8 @@ public class AdsGroup {
         private PropertyAdsGroupPacing pacing;
 
         private String parentId;
+
+        private Double priority;
 
         private List<AdsPromoted> promoted;
 
@@ -924,6 +1073,14 @@ public class AdsGroup {
         }
 
         /**
+         * How the line item is priced (Google Ad Manager costType)
+         */
+        public Builder costType(@Nullable CostType costType) {
+            this.costType = costType;
+            return this;
+        }
+
+        /**
          * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -944,8 +1101,32 @@ public class AdsGroup {
             return this;
         }
 
+        /**
+         * Expected creative sizes (Google Ad Manager creativePlaceholders)
+         */
+        public Builder creativeSizes(@Nullable List<AdsSize> creativeSizes) {
+            this.creativeSizes = creativeSizes;
+            return this;
+        }
+
         public Builder currency(@Nullable String currency) {
             this.currency = currency;
+            return this;
+        }
+
+        /**
+         * Booked delivery goal (Google Ad Manager goal)
+         */
+        public Builder deliveryGoal(@Nullable PropertyAdsGroupDeliveryGoal deliveryGoal) {
+            this.deliveryGoal = deliveryGoal;
+            return this;
+        }
+
+        /**
+         * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+         */
+        public Builder deliveryType(@Nullable DeliveryType deliveryType) {
+            this.deliveryType = deliveryType;
             return this;
         }
 
@@ -1026,6 +1207,14 @@ public class AdsGroup {
             return this;
         }
 
+        /**
+         * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+         */
+        public Builder priority(@Nullable Double priority) {
+            this.priority = priority;
+            return this;
+        }
+
         public Builder promoted(@Nullable List<AdsPromoted> promoted) {
             this.promoted = promoted;
             return this;
@@ -1072,14 +1261,16 @@ public class AdsGroup {
                 bidAmount, bidStrategy, billingEvent,
                 budgetAllocationType, budgetAmount, budgetMaxAmount,
                 budgetPeriod, budgetUnit, campaignId,
-                createdAt, creativeIds, creativeSelection,
-                currency, effectiveStatus, endAt,
-                frequencyCap, hasEuPoliticalAds, id,
-                insertionorderId, languageLocale, metadata,
-                name, optimizationGoal, organizationId,
-                pacing, parentId, promoted,
-                raw, startAt, status,
-                targeting, type, updatedAt);
+                costType, createdAt, creativeIds,
+                creativeSelection, creativeSizes, currency,
+                deliveryGoal, deliveryType, effectiveStatus,
+                endAt, frequencyCap, hasEuPoliticalAds,
+                id, insertionorderId, languageLocale,
+                metadata, name, optimizationGoal,
+                organizationId, pacing, parentId,
+                priority, promoted, raw,
+                startAt, status, targeting,
+                type, updatedAt);
         }
 
     }

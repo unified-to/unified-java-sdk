@@ -306,6 +306,7 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_WRITE = new PropertyConnectionPermissions("ads_insertionorder_write");
     public static final PropertyConnectionPermissions ADS_TARGET_READ = new PropertyConnectionPermissions("ads_target_read");
     public static final PropertyConnectionPermissions ADS_PROMOTED_READ = new PropertyConnectionPermissions("ads_promoted_read");
+    public static final PropertyConnectionPermissions ADS_INVENTORY_READ = new PropertyConnectionPermissions("ads_inventory_read");
     public static final PropertyConnectionPermissions ANALYTICS_PROPERTY_READ = new PropertyConnectionPermissions("analytics_property_read");
     public static final PropertyConnectionPermissions ANALYTICS_PROPERTY_WRITE = new PropertyConnectionPermissions("analytics_property_write");
     public static final PropertyConnectionPermissions ANALYTICS_EVENT_READ = new PropertyConnectionPermissions("analytics_event_read");
@@ -825,6 +826,7 @@ public class PropertyConnectionPermissions {
         map.put("ads_insertionorder_write", ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", ADS_TARGET_READ);
         map.put("ads_promoted_read", ADS_PROMOTED_READ);
+        map.put("ads_inventory_read", ADS_INVENTORY_READ);
         map.put("analytics_property_read", ANALYTICS_PROPERTY_READ);
         map.put("analytics_property_write", ANALYTICS_PROPERTY_WRITE);
         map.put("analytics_event_read", ANALYTICS_EVENT_READ);
@@ -1276,6 +1278,7 @@ public class PropertyConnectionPermissions {
         map.put("ads_insertionorder_write", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", PropertyConnectionPermissionsEnum.ADS_TARGET_READ);
         map.put("ads_promoted_read", PropertyConnectionPermissionsEnum.ADS_PROMOTED_READ);
+        map.put("ads_inventory_read", PropertyConnectionPermissionsEnum.ADS_INVENTORY_READ);
         map.put("analytics_property_read", PropertyConnectionPermissionsEnum.ANALYTICS_PROPERTY_READ);
         map.put("analytics_property_write", PropertyConnectionPermissionsEnum.ANALYTICS_PROPERTY_WRITE);
         map.put("analytics_event_read", PropertyConnectionPermissionsEnum.ANALYTICS_EVENT_READ);
@@ -1728,6 +1731,7 @@ public class PropertyConnectionPermissions {
         ADS_INSERTIONORDER_WRITE("ads_insertionorder_write"),
         ADS_TARGET_READ("ads_target_read"),
         ADS_PROMOTED_READ("ads_promoted_read"),
+        ADS_INVENTORY_READ("ads_inventory_read"),
         ANALYTICS_PROPERTY_READ("analytics_property_read"),
         ANALYTICS_PROPERTY_WRITE("analytics_property_write"),
         ANALYTICS_EVENT_READ("analytics_event_read"),

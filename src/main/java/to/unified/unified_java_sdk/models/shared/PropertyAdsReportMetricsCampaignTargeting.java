@@ -34,6 +34,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     private PropertyAdsReportMetricsCampaignTargetingContent content;
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom")
+    private List<CustomTargeting> custom;
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -49,6 +56,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geographic")
     private PropertyAdsReportMetricsCampaignTargetingGeographic geographic;
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inventory")
+    private PropertyAdsReportMetricsCampaignTargetingInventory inventory;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -77,9 +91,11 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             @JsonProperty("audience") @Nullable PropertyAdsReportMetricsCampaignTargetingAudience audience,
             @JsonProperty("brand_safety") @Nullable PropertyAdsReportMetricsCampaignTargetingBrandSafety brandSafety,
             @JsonProperty("content") @Nullable PropertyAdsReportMetricsCampaignTargetingContent content,
+            @JsonProperty("custom") @Nullable List<CustomTargeting> custom,
             @JsonProperty("demographic") @Nullable PropertyAdsReportMetricsCampaignTargetingDemographic demographic,
             @JsonProperty("device") @Nullable PropertyAdsReportMetricsCampaignTargetingDevice device,
             @JsonProperty("geographic") @Nullable PropertyAdsReportMetricsCampaignTargetingGeographic geographic,
+            @JsonProperty("inventory") @Nullable PropertyAdsReportMetricsCampaignTargetingInventory inventory,
             @JsonProperty("language") @Nullable List<TargetRef> language,
             @JsonProperty("optimization") @Nullable PropertyAdsReportMetricsCampaignTargetingOptimization optimization,
             @JsonProperty("placement") @Nullable PropertyAdsReportMetricsCampaignTargetingPlacement placement,
@@ -87,9 +103,11 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         this.audience = audience;
         this.brandSafety = brandSafety;
         this.content = content;
+        this.custom = custom;
         this.demographic = demographic;
         this.device = device;
         this.geographic = geographic;
+        this.inventory = inventory;
         this.language = language;
         this.optimization = optimization;
         this.placement = placement;
@@ -100,7 +118,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<PropertyAdsReportMetricsCampaignTargetingAudience> audience() {
@@ -119,6 +137,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     }
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    public Optional<List<CustomTargeting>> custom() {
+        return Optional.ofNullable(this.custom);
+    }
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     public Optional<PropertyAdsReportMetricsCampaignTargetingDemographic> demographic() {
@@ -131,6 +156,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
     public Optional<PropertyAdsReportMetricsCampaignTargetingGeographic> geographic() {
         return Optional.ofNullable(this.geographic);
+    }
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    public Optional<PropertyAdsReportMetricsCampaignTargetingInventory> inventory() {
+        return Optional.ofNullable(this.inventory);
     }
 
     public Optional<List<TargetRef>> language() {
@@ -179,6 +211,15 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    public PropertyAdsReportMetricsCampaignTargeting withCustom(@Nullable List<CustomTargeting> custom) {
+        this.custom = custom;
+        return this;
+    }
+
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     public PropertyAdsReportMetricsCampaignTargeting withDemographic(@Nullable PropertyAdsReportMetricsCampaignTargetingDemographic demographic) {
@@ -195,6 +236,15 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
     public PropertyAdsReportMetricsCampaignTargeting withGeographic(@Nullable PropertyAdsReportMetricsCampaignTargetingGeographic geographic) {
         this.geographic = geographic;
+        return this;
+    }
+
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    public PropertyAdsReportMetricsCampaignTargeting withInventory(@Nullable PropertyAdsReportMetricsCampaignTargetingInventory inventory) {
+        this.inventory = inventory;
         return this;
     }
 
@@ -239,9 +289,11 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             Utils.enhancedDeepEquals(this.audience, other.audience) &&
             Utils.enhancedDeepEquals(this.brandSafety, other.brandSafety) &&
             Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.custom, other.custom) &&
             Utils.enhancedDeepEquals(this.demographic, other.demographic) &&
             Utils.enhancedDeepEquals(this.device, other.device) &&
             Utils.enhancedDeepEquals(this.geographic, other.geographic) &&
+            Utils.enhancedDeepEquals(this.inventory, other.inventory) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.optimization, other.optimization) &&
             Utils.enhancedDeepEquals(this.placement, other.placement) &&
@@ -252,9 +304,9 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     public int hashCode() {
         return Utils.enhancedHash(
             audience, brandSafety, content,
-            demographic, device, geographic,
-            language, optimization, placement,
-            schedule);
+            custom, demographic, device,
+            geographic, inventory, language,
+            optimization, placement, schedule);
     }
     
     @Override
@@ -263,9 +315,11 @@ public class PropertyAdsReportMetricsCampaignTargeting {
                 "audience", audience,
                 "brandSafety", brandSafety,
                 "content", content,
+                "custom", custom,
                 "demographic", demographic,
                 "device", device,
                 "geographic", geographic,
+                "inventory", inventory,
                 "language", language,
                 "optimization", optimization,
                 "placement", placement,
@@ -281,11 +335,15 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
         private PropertyAdsReportMetricsCampaignTargetingContent content;
 
+        private List<CustomTargeting> custom;
+
         private PropertyAdsReportMetricsCampaignTargetingDemographic demographic;
 
         private PropertyAdsReportMetricsCampaignTargetingDevice device;
 
         private PropertyAdsReportMetricsCampaignTargetingGeographic geographic;
+
+        private PropertyAdsReportMetricsCampaignTargetingInventory inventory;
 
         private List<TargetRef> language;
 
@@ -318,6 +376,14 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         }
 
         /**
+         * Key-value targeting; clauses are ANDed
+         */
+        public Builder custom(@Nullable List<CustomTargeting> custom) {
+            this.custom = custom;
+            return this;
+        }
+
+        /**
          * Demographic targeting (Meta: age_min, age_max, genders)
          */
         public Builder demographic(@Nullable PropertyAdsReportMetricsCampaignTargetingDemographic demographic) {
@@ -332,6 +398,14 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
         public Builder geographic(@Nullable PropertyAdsReportMetricsCampaignTargetingGeographic geographic) {
             this.geographic = geographic;
+            return this;
+        }
+
+        /**
+         * Publisher inventory (ad units, placements) to include / exclude
+         */
+        public Builder inventory(@Nullable PropertyAdsReportMetricsCampaignTargetingInventory inventory) {
+            this.inventory = inventory;
             return this;
         }
 
@@ -361,9 +435,9 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         public PropertyAdsReportMetricsCampaignTargeting build() {
             return new PropertyAdsReportMetricsCampaignTargeting(
                 audience, brandSafety, content,
-                demographic, device, geographic,
-                language, optimization, placement,
-                schedule);
+                custom, demographic, device,
+                geographic, inventory, language,
+                optimization, placement, schedule);
         }
 
     }

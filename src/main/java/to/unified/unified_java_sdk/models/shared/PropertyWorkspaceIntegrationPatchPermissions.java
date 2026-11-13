@@ -306,6 +306,7 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
     public static final PropertyWorkspaceIntegrationPatchPermissions ADS_INSERTIONORDER_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("ads_insertionorder_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions ADS_TARGET_READ = new PropertyWorkspaceIntegrationPatchPermissions("ads_target_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions ADS_PROMOTED_READ = new PropertyWorkspaceIntegrationPatchPermissions("ads_promoted_read");
+    public static final PropertyWorkspaceIntegrationPatchPermissions ADS_INVENTORY_READ = new PropertyWorkspaceIntegrationPatchPermissions("ads_inventory_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions ANALYTICS_PROPERTY_READ = new PropertyWorkspaceIntegrationPatchPermissions("analytics_property_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions ANALYTICS_PROPERTY_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("analytics_property_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions ANALYTICS_EVENT_READ = new PropertyWorkspaceIntegrationPatchPermissions("analytics_event_read");
@@ -825,6 +826,7 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("ads_insertionorder_write", ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", ADS_TARGET_READ);
         map.put("ads_promoted_read", ADS_PROMOTED_READ);
+        map.put("ads_inventory_read", ADS_INVENTORY_READ);
         map.put("analytics_property_read", ANALYTICS_PROPERTY_READ);
         map.put("analytics_property_write", ANALYTICS_PROPERTY_WRITE);
         map.put("analytics_event_read", ANALYTICS_EVENT_READ);
@@ -1276,6 +1278,7 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("ads_insertionorder_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.ADS_INSERTIONORDER_WRITE);
         map.put("ads_target_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.ADS_TARGET_READ);
         map.put("ads_promoted_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.ADS_PROMOTED_READ);
+        map.put("ads_inventory_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.ADS_INVENTORY_READ);
         map.put("analytics_property_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.ANALYTICS_PROPERTY_READ);
         map.put("analytics_property_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.ANALYTICS_PROPERTY_WRITE);
         map.put("analytics_event_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.ANALYTICS_EVENT_READ);
@@ -1728,6 +1731,7 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         ADS_INSERTIONORDER_WRITE("ads_insertionorder_write"),
         ADS_TARGET_READ("ads_target_read"),
         ADS_PROMOTED_READ("ads_promoted_read"),
+        ADS_INVENTORY_READ("ads_inventory_read"),
         ANALYTICS_PROPERTY_READ("analytics_property_read"),
         ANALYTICS_PROPERTY_WRITE("analytics_property_write"),
         ANALYTICS_EVENT_READ("analytics_event_read"),

@@ -34,6 +34,13 @@ public class PropertyAdsGroupTargeting {
     private PropertyAdsGroupTargetingContent content;
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom")
+    private List<CustomTargeting> custom;
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -49,6 +56,13 @@ public class PropertyAdsGroupTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geographic")
     private PropertyAdsGroupTargetingGeographic geographic;
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inventory")
+    private PropertyAdsGroupTargetingInventory inventory;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -77,9 +91,11 @@ public class PropertyAdsGroupTargeting {
             @JsonProperty("audience") @Nullable PropertyAdsGroupTargetingAudience audience,
             @JsonProperty("brand_safety") @Nullable PropertyAdsGroupTargetingBrandSafety brandSafety,
             @JsonProperty("content") @Nullable PropertyAdsGroupTargetingContent content,
+            @JsonProperty("custom") @Nullable List<CustomTargeting> custom,
             @JsonProperty("demographic") @Nullable PropertyAdsGroupTargetingDemographic demographic,
             @JsonProperty("device") @Nullable PropertyAdsGroupTargetingDevice device,
             @JsonProperty("geographic") @Nullable PropertyAdsGroupTargetingGeographic geographic,
+            @JsonProperty("inventory") @Nullable PropertyAdsGroupTargetingInventory inventory,
             @JsonProperty("language") @Nullable List<TargetRef> language,
             @JsonProperty("optimization") @Nullable PropertyAdsGroupTargetingOptimization optimization,
             @JsonProperty("placement") @Nullable PropertyAdsGroupTargetingPlacement placement,
@@ -87,9 +103,11 @@ public class PropertyAdsGroupTargeting {
         this.audience = audience;
         this.brandSafety = brandSafety;
         this.content = content;
+        this.custom = custom;
         this.demographic = demographic;
         this.device = device;
         this.geographic = geographic;
+        this.inventory = inventory;
         this.language = language;
         this.optimization = optimization;
         this.placement = placement;
@@ -100,7 +118,7 @@ public class PropertyAdsGroupTargeting {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<PropertyAdsGroupTargetingAudience> audience() {
@@ -119,6 +137,13 @@ public class PropertyAdsGroupTargeting {
     }
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    public Optional<List<CustomTargeting>> custom() {
+        return Optional.ofNullable(this.custom);
+    }
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     public Optional<PropertyAdsGroupTargetingDemographic> demographic() {
@@ -131,6 +156,13 @@ public class PropertyAdsGroupTargeting {
 
     public Optional<PropertyAdsGroupTargetingGeographic> geographic() {
         return Optional.ofNullable(this.geographic);
+    }
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    public Optional<PropertyAdsGroupTargetingInventory> inventory() {
+        return Optional.ofNullable(this.inventory);
     }
 
     public Optional<List<TargetRef>> language() {
@@ -179,6 +211,15 @@ public class PropertyAdsGroupTargeting {
 
 
     /**
+     * Key-value targeting; clauses are ANDed
+     */
+    public PropertyAdsGroupTargeting withCustom(@Nullable List<CustomTargeting> custom) {
+        this.custom = custom;
+        return this;
+    }
+
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      */
     public PropertyAdsGroupTargeting withDemographic(@Nullable PropertyAdsGroupTargetingDemographic demographic) {
@@ -195,6 +236,15 @@ public class PropertyAdsGroupTargeting {
 
     public PropertyAdsGroupTargeting withGeographic(@Nullable PropertyAdsGroupTargetingGeographic geographic) {
         this.geographic = geographic;
+        return this;
+    }
+
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     */
+    public PropertyAdsGroupTargeting withInventory(@Nullable PropertyAdsGroupTargetingInventory inventory) {
+        this.inventory = inventory;
         return this;
     }
 
@@ -239,9 +289,11 @@ public class PropertyAdsGroupTargeting {
             Utils.enhancedDeepEquals(this.audience, other.audience) &&
             Utils.enhancedDeepEquals(this.brandSafety, other.brandSafety) &&
             Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.custom, other.custom) &&
             Utils.enhancedDeepEquals(this.demographic, other.demographic) &&
             Utils.enhancedDeepEquals(this.device, other.device) &&
             Utils.enhancedDeepEquals(this.geographic, other.geographic) &&
+            Utils.enhancedDeepEquals(this.inventory, other.inventory) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.optimization, other.optimization) &&
             Utils.enhancedDeepEquals(this.placement, other.placement) &&
@@ -252,9 +304,9 @@ public class PropertyAdsGroupTargeting {
     public int hashCode() {
         return Utils.enhancedHash(
             audience, brandSafety, content,
-            demographic, device, geographic,
-            language, optimization, placement,
-            schedule);
+            custom, demographic, device,
+            geographic, inventory, language,
+            optimization, placement, schedule);
     }
     
     @Override
@@ -263,9 +315,11 @@ public class PropertyAdsGroupTargeting {
                 "audience", audience,
                 "brandSafety", brandSafety,
                 "content", content,
+                "custom", custom,
                 "demographic", demographic,
                 "device", device,
                 "geographic", geographic,
+                "inventory", inventory,
                 "language", language,
                 "optimization", optimization,
                 "placement", placement,
@@ -281,11 +335,15 @@ public class PropertyAdsGroupTargeting {
 
         private PropertyAdsGroupTargetingContent content;
 
+        private List<CustomTargeting> custom;
+
         private PropertyAdsGroupTargetingDemographic demographic;
 
         private PropertyAdsGroupTargetingDevice device;
 
         private PropertyAdsGroupTargetingGeographic geographic;
+
+        private PropertyAdsGroupTargetingInventory inventory;
 
         private List<TargetRef> language;
 
@@ -318,6 +376,14 @@ public class PropertyAdsGroupTargeting {
         }
 
         /**
+         * Key-value targeting; clauses are ANDed
+         */
+        public Builder custom(@Nullable List<CustomTargeting> custom) {
+            this.custom = custom;
+            return this;
+        }
+
+        /**
          * Demographic targeting (Meta: age_min, age_max, genders)
          */
         public Builder demographic(@Nullable PropertyAdsGroupTargetingDemographic demographic) {
@@ -332,6 +398,14 @@ public class PropertyAdsGroupTargeting {
 
         public Builder geographic(@Nullable PropertyAdsGroupTargetingGeographic geographic) {
             this.geographic = geographic;
+            return this;
+        }
+
+        /**
+         * Publisher inventory (ad units, placements) to include / exclude
+         */
+        public Builder inventory(@Nullable PropertyAdsGroupTargetingInventory inventory) {
+            this.inventory = inventory;
             return this;
         }
 
@@ -361,9 +435,9 @@ public class PropertyAdsGroupTargeting {
         public PropertyAdsGroupTargeting build() {
             return new PropertyAdsGroupTargeting(
                 audience, brandSafety, content,
-                demographic, device, geographic,
-                language, optimization, placement,
-                schedule);
+                custom, demographic, device,
+                geographic, inventory, language,
+                optimization, placement, schedule);
         }
 
     }

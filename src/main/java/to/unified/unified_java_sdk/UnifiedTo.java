@@ -152,6 +152,9 @@ public class UnifiedTo {
     private final Insertionorder insertionorder;
 
 
+    private final Inventory inventory;
+
+
     private final Promoted promoted;
 
 
@@ -267,9 +270,6 @@ public class UnifiedTo {
 
 
     private final Collection collection;
-
-
-    private final Inventory inventory;
 
 
     private final Item item;
@@ -904,6 +904,11 @@ public class UnifiedTo {
     }
 
 
+    public Inventory inventory() {
+        return inventory;
+    }
+
+
     public Promoted promoted() {
         return promoted;
     }
@@ -1096,11 +1101,6 @@ public class UnifiedTo {
 
     public Collection collection() {
         return collection;
-    }
-
-
-    public Inventory inventory() {
-        return inventory;
     }
 
 
@@ -2022,6 +2022,7 @@ public class UnifiedTo {
         this.creative = new Creative(sdkConfiguration);
         this.group = new Group(sdkConfiguration);
         this.insertionorder = new Insertionorder(sdkConfiguration);
+        this.inventory = new Inventory(sdkConfiguration);
         this.promoted = new Promoted(sdkConfiguration);
         this.report = new Report(sdkConfiguration);
         this.target = new Target(sdkConfiguration);
@@ -2061,7 +2062,6 @@ public class UnifiedTo {
         this.commerce = new Commerce(sdkConfiguration);
         this.availability = new Availability(sdkConfiguration);
         this.collection = new Collection(sdkConfiguration);
-        this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
         this.itemvariant = new Itemvariant(sdkConfiguration);
         this.reservation = new Reservation(sdkConfiguration);
