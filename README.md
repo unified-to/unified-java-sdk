@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.22'
+implementation 'to.unified:unified-java-sdk:0.50.23'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.22</version>
+    <version>0.50.23</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                    .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                    .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -355,6 +355,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 * [updateAccountingVendorcredit](docs/sdks/accounting/README.md#updateaccountingvendorcredit) - Update a vendorcredit
+
+### [Action](docs/sdks/action/README.md)
+
+* [createQmsAction](docs/sdks/action/README.md#createqmsaction) - Create an action
+* [getQmsAction](docs/sdks/action/README.md#getqmsaction) - Retrieve an action
+* [listQmsActions](docs/sdks/action/README.md#listqmsactions) - List all actions
+* [patchQmsAction](docs/sdks/action/README.md#patchqmsaction) - Update an action
+* [updateQmsAction](docs/sdks/action/README.md#updateqmsaction) - Update an action
 
 ### [Activation](docs/sdks/activation/README.md)
 
@@ -593,6 +601,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisAttendance](docs/sdks/attendance/README.md#patchhrisattendance) - Update an attendance
 * [removeHrisAttendance](docs/sdks/attendance/README.md#removehrisattendance) - Remove an attendance
 * [updateHrisAttendance](docs/sdks/attendance/README.md#updatehrisattendance) - Update an attendance
+
+### [Audit](docs/sdks/audit/README.md)
+
+* [createQmsAudit](docs/sdks/audit/README.md#createqmsaudit) - Create an audit
+* [getQmsAudit](docs/sdks/audit/README.md#getqmsaudit) - Retrieve an audit
+* [listQmsAudits](docs/sdks/audit/README.md#listqmsaudits) - List all audits
+* [patchQmsAudit](docs/sdks/audit/README.md#patchqmsaudit) - Update an audit
+* [updateQmsAudit](docs/sdks/audit/README.md#updateqmsaudit) - Update an audit
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -1693,6 +1709,14 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
 * [listSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
 
+### [Inspection](docs/sdks/inspection/README.md)
+
+* [createQmsInspection](docs/sdks/inspection/README.md#createqmsinspection) - Create an inspection
+* [getQmsInspection](docs/sdks/inspection/README.md#getqmsinspection) - Retrieve an inspection
+* [listQmsInspections](docs/sdks/inspection/README.md#listqmsinspections) - List all inspections
+* [patchQmsInspection](docs/sdks/inspection/README.md#patchqmsinspection) - Update an inspection
+* [updateQmsInspection](docs/sdks/inspection/README.md#updateqmsinspection) - Update an inspection
+
 ### [Instance](docs/sdks/instance/README.md)
 
 * [createComputeInstance](docs/sdks/instance/README.md#createcomputeinstance) - Create an instance
@@ -1748,8 +1772,13 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Issue](docs/sdks/issue/README.md)
 
+* [createQmsIssue](docs/sdks/issue/README.md#createqmsissue) - Create an issue
+* [getQmsIssue](docs/sdks/issue/README.md#getqmsissue) - Retrieve an issue
 * [getUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
+* [listQmsIssues](docs/sdks/issue/README.md#listqmsissues) - List all issues
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
+* [patchQmsIssue](docs/sdks/issue/README.md#patchqmsissue) - Update an issue
+* [updateQmsIssue](docs/sdks/issue/README.md#updateqmsissue) - Update an issue
 
 ### [Item](docs/sdks/item/README.md)
 
@@ -2404,6 +2433,29 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [getAccountingPurchasereceipt](docs/sdks/purchasereceipt/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [listAccountingPurchasereceipts](docs/sdks/purchasereceipt/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
+
+### [Qms](docs/sdks/qms/README.md)
+
+* [createQmsAction](docs/sdks/qms/README.md#createqmsaction) - Create an action
+* [createQmsAudit](docs/sdks/qms/README.md#createqmsaudit) - Create an audit
+* [createQmsInspection](docs/sdks/qms/README.md#createqmsinspection) - Create an inspection
+* [createQmsIssue](docs/sdks/qms/README.md#createqmsissue) - Create an issue
+* [getQmsAction](docs/sdks/qms/README.md#getqmsaction) - Retrieve an action
+* [getQmsAudit](docs/sdks/qms/README.md#getqmsaudit) - Retrieve an audit
+* [getQmsInspection](docs/sdks/qms/README.md#getqmsinspection) - Retrieve an inspection
+* [getQmsIssue](docs/sdks/qms/README.md#getqmsissue) - Retrieve an issue
+* [listQmsActions](docs/sdks/qms/README.md#listqmsactions) - List all actions
+* [listQmsAudits](docs/sdks/qms/README.md#listqmsaudits) - List all audits
+* [listQmsInspections](docs/sdks/qms/README.md#listqmsinspections) - List all inspections
+* [listQmsIssues](docs/sdks/qms/README.md#listqmsissues) - List all issues
+* [patchQmsAction](docs/sdks/qms/README.md#patchqmsaction) - Update an action
+* [patchQmsAudit](docs/sdks/qms/README.md#patchqmsaudit) - Update an audit
+* [patchQmsInspection](docs/sdks/qms/README.md#patchqmsinspection) - Update an inspection
+* [patchQmsIssue](docs/sdks/qms/README.md#patchqmsissue) - Update an issue
+* [updateQmsAction](docs/sdks/qms/README.md#updateqmsaction) - Update an action
+* [updateQmsAudit](docs/sdks/qms/README.md#updateqmsaudit) - Update an audit
+* [updateQmsInspection](docs/sdks/qms/README.md#updateqmsinspection) - Update an inspection
+* [updateQmsIssue](docs/sdks/qms/README.md#updateqmsissue) - Update an issue
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -3158,7 +3210,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                    .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3170,7 +3222,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3218,7 +3270,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                    .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3230,7 +3282,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3297,7 +3349,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                        .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3309,7 +3361,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3464,7 +3516,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("f4e4b83a-29c2-4bc9-9533-b0c30cd918f5")
+                    .id("b624dc49-e33a-4f21-9acb-7c05dff87712")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3476,7 +3528,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T18:04:20.547Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:35:28.689Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

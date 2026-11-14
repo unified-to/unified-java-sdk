@@ -467,6 +467,14 @@ public class PropertyWorkspaceIntegrationPermissions {
     public static final PropertyWorkspaceIntegrationPermissions PLM_CHANGE_WRITE = new PropertyWorkspaceIntegrationPermissions("plm_change_write");
     public static final PropertyWorkspaceIntegrationPermissions PLM_CATEGORY_READ = new PropertyWorkspaceIntegrationPermissions("plm_category_read");
     public static final PropertyWorkspaceIntegrationPermissions PLM_CATEGORY_WRITE = new PropertyWorkspaceIntegrationPermissions("plm_category_write");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_ISSUE_READ = new PropertyWorkspaceIntegrationPermissions("qms_issue_read");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_ISSUE_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_issue_write");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_ACTION_READ = new PropertyWorkspaceIntegrationPermissions("qms_action_read");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_ACTION_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_action_write");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_INSPECTION_READ = new PropertyWorkspaceIntegrationPermissions("qms_inspection_read");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_INSPECTION_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_inspection_write");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_AUDIT_READ = new PropertyWorkspaceIntegrationPermissions("qms_audit_read");
+    public static final PropertyWorkspaceIntegrationPermissions QMS_AUDIT_WRITE = new PropertyWorkspaceIntegrationPermissions("qms_audit_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -987,6 +995,14 @@ public class PropertyWorkspaceIntegrationPermissions {
         map.put("plm_change_write", PLM_CHANGE_WRITE);
         map.put("plm_category_read", PLM_CATEGORY_READ);
         map.put("plm_category_write", PLM_CATEGORY_WRITE);
+        map.put("qms_issue_read", QMS_ISSUE_READ);
+        map.put("qms_issue_write", QMS_ISSUE_WRITE);
+        map.put("qms_action_read", QMS_ACTION_READ);
+        map.put("qms_action_write", QMS_ACTION_WRITE);
+        map.put("qms_inspection_read", QMS_INSPECTION_READ);
+        map.put("qms_inspection_write", QMS_INSPECTION_WRITE);
+        map.put("qms_audit_read", QMS_AUDIT_READ);
+        map.put("qms_audit_write", QMS_AUDIT_WRITE);
         return map;
     }
 
@@ -1439,6 +1455,14 @@ public class PropertyWorkspaceIntegrationPermissions {
         map.put("plm_change_write", PropertyWorkspaceIntegrationPermissionsEnum.PLM_CHANGE_WRITE);
         map.put("plm_category_read", PropertyWorkspaceIntegrationPermissionsEnum.PLM_CATEGORY_READ);
         map.put("plm_category_write", PropertyWorkspaceIntegrationPermissionsEnum.PLM_CATEGORY_WRITE);
+        map.put("qms_issue_read", PropertyWorkspaceIntegrationPermissionsEnum.QMS_ISSUE_READ);
+        map.put("qms_issue_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_ISSUE_WRITE);
+        map.put("qms_action_read", PropertyWorkspaceIntegrationPermissionsEnum.QMS_ACTION_READ);
+        map.put("qms_action_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_ACTION_WRITE);
+        map.put("qms_inspection_read", PropertyWorkspaceIntegrationPermissionsEnum.QMS_INSPECTION_READ);
+        map.put("qms_inspection_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_INSPECTION_WRITE);
+        map.put("qms_audit_read", PropertyWorkspaceIntegrationPermissionsEnum.QMS_AUDIT_READ);
+        map.put("qms_audit_write", PropertyWorkspaceIntegrationPermissionsEnum.QMS_AUDIT_WRITE);
         return map;
     }
     
@@ -1891,7 +1915,15 @@ public class PropertyWorkspaceIntegrationPermissions {
         PLM_CHANGE_READ("plm_change_read"),
         PLM_CHANGE_WRITE("plm_change_write"),
         PLM_CATEGORY_READ("plm_category_read"),
-        PLM_CATEGORY_WRITE("plm_category_write"),;
+        PLM_CATEGORY_WRITE("plm_category_write"),
+        QMS_ISSUE_READ("qms_issue_read"),
+        QMS_ISSUE_WRITE("qms_issue_write"),
+        QMS_ACTION_READ("qms_action_read"),
+        QMS_ACTION_WRITE("qms_action_write"),
+        QMS_INSPECTION_READ("qms_inspection_read"),
+        QMS_INSPECTION_WRITE("qms_inspection_write"),
+        QMS_AUDIT_READ("qms_audit_read"),
+        QMS_AUDIT_WRITE("qms_audit_write"),;
 
         private final String value;
 

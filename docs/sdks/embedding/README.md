@@ -42,7 +42,7 @@ public class Application {
                     .dimension(423d)
                     .embeddings("Est.")
                     .encondingFormat(EncondingFormat.FLOAT)
-                    .id("1705c056-e77c-4a90-aa66-f09426e1e6f4")
+                    .id("9fdfe060-cf1b-427d-b2f9-44306393b091")
                     .maxTokens(223d)
                     .tokensUsed(836d)
                     .type("classification")

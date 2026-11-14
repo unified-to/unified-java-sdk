@@ -1,0 +1,13 @@
+# QmsMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [Optional\<QmsMetadataExtraData>](../../models/shared/QmsMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [Optional\<QmsMetadataFormat>](../../models/shared/QmsMetadataFormat.md)       | :heavy_minus_sign:                                                             | The data type of the custom field, which determines how `value` is formatted.  |
+| `id`                                                                           | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | The ID of the custom field definition (from the metadata/metadata endpoint).   |
+| `namespace`                                                                    | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *Optional\<String>*                                                            | :heavy_minus_sign:                                                             | The integration's API name (key) of an existing custom field.                  |
+| `value`                                                                        | [Optional\<QmsMetadataValue>](../../models/shared/QmsMetadataValue.md)         | :heavy_minus_sign:                                                             | The field's value, typed by `format`.                                          |

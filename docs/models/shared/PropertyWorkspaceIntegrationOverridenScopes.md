@@ -382,6 +382,14 @@
 | `propertyReviewRead`                 | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `propertyReviewWrite`                | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `propertyUnittypeRead`               | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsActionRead`                      | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsActionWrite`                     | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsAuditRead`                       | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsAuditWrite`                      | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsInspectionRead`                  | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsInspectionWrite`                 | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsIssueRead`                       | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
+| `qmsIssueWrite`                      | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `repoBranchRead`                     | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `repoBranchWrite`                    | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |
 | `repoCommitRead`                     | *Optional\<String>*                  | :heavy_minus_sign:                   | N/A                                  |

@@ -53,3 +53,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
+| `QMS`          | qms            |

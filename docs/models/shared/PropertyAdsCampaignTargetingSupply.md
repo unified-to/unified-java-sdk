@@ -1,0 +1,13 @@
+# PropertyAdsCampaignTargetingSupply
+
+Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `authorizedSellerStatus`                                                           | [Optional\<AuthorizedSellerStatus>](../../models/shared/AuthorizedSellerStatus.md) | :heavy_minus_sign:                                                                 | ads.txt seller authorization to buy from                                           |
+| `dealGroups`                                                                       | List\<[TargetRef](../../models/shared/TargetRef.md)>                               | :heavy_minus_sign:                                                                 | Groups of deals (ads_target type DEAL_GROUP)                                       |
+| `deals`                                                                            | List\<[TargetRef](../../models/shared/TargetRef.md)>                               | :heavy_minus_sign:                                                                 | Deals / inventory packages (ads_target type DEAL)                                  |
+| `exchanges`                                                                        | List\<[TargetRef](../../models/shared/TargetRef.md)>                               | :heavy_minus_sign:                                                                 | Public exchanges to buy on (ads_target type EXCHANGE)                              |

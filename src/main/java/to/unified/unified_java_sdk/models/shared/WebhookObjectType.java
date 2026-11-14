@@ -266,6 +266,10 @@ public class WebhookObjectType {
     public static final WebhookObjectType PLM_DOCUMENT = new WebhookObjectType("plm_document");
     public static final WebhookObjectType PLM_CHANGE = new WebhookObjectType("plm_change");
     public static final WebhookObjectType PLM_CATEGORY = new WebhookObjectType("plm_category");
+    public static final WebhookObjectType QMS_ISSUE = new WebhookObjectType("qms_issue");
+    public static final WebhookObjectType QMS_ACTION = new WebhookObjectType("qms_action");
+    public static final WebhookObjectType QMS_INSPECTION = new WebhookObjectType("qms_inspection");
+    public static final WebhookObjectType QMS_AUDIT = new WebhookObjectType("qms_audit");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -580,6 +584,10 @@ public class WebhookObjectType {
         map.put("plm_document", PLM_DOCUMENT);
         map.put("plm_change", PLM_CHANGE);
         map.put("plm_category", PLM_CATEGORY);
+        map.put("qms_issue", QMS_ISSUE);
+        map.put("qms_action", QMS_ACTION);
+        map.put("qms_inspection", QMS_INSPECTION);
+        map.put("qms_audit", QMS_AUDIT);
         return map;
     }
 
@@ -826,6 +834,10 @@ public class WebhookObjectType {
         map.put("plm_document", WebhookObjectTypeEnum.PLM_DOCUMENT);
         map.put("plm_change", WebhookObjectTypeEnum.PLM_CHANGE);
         map.put("plm_category", WebhookObjectTypeEnum.PLM_CATEGORY);
+        map.put("qms_issue", WebhookObjectTypeEnum.QMS_ISSUE);
+        map.put("qms_action", WebhookObjectTypeEnum.QMS_ACTION);
+        map.put("qms_inspection", WebhookObjectTypeEnum.QMS_INSPECTION);
+        map.put("qms_audit", WebhookObjectTypeEnum.QMS_AUDIT);
         return map;
     }
     
@@ -1072,7 +1084,11 @@ public class WebhookObjectType {
         PLM_BOMLINE("plm_bomline"),
         PLM_DOCUMENT("plm_document"),
         PLM_CHANGE("plm_change"),
-        PLM_CATEGORY("plm_category"),;
+        PLM_CATEGORY("plm_category"),
+        QMS_ISSUE("qms_issue"),
+        QMS_ACTION("qms_action"),
+        QMS_INSPECTION("qms_inspection"),
+        QMS_AUDIT("qms_audit"),;
 
         private final String value;
 

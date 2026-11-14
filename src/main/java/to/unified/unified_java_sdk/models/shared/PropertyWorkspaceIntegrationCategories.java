@@ -60,6 +60,7 @@ public class PropertyWorkspaceIntegrationCategories {
     public static final PropertyWorkspaceIntegrationCategories HEALTHCARE = new PropertyWorkspaceIntegrationCategories("healthcare");
     public static final PropertyWorkspaceIntegrationCategories PROPERTY = new PropertyWorkspaceIntegrationCategories("property");
     public static final PropertyWorkspaceIntegrationCategories PLM = new PropertyWorkspaceIntegrationCategories("plm");
+    public static final PropertyWorkspaceIntegrationCategories QMS = new PropertyWorkspaceIntegrationCategories("qms");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -173,6 +174,7 @@ public class PropertyWorkspaceIntegrationCategories {
         map.put("healthcare", HEALTHCARE);
         map.put("property", PROPERTY);
         map.put("plm", PLM);
+        map.put("qms", QMS);
         return map;
     }
 
@@ -218,6 +220,7 @@ public class PropertyWorkspaceIntegrationCategories {
         map.put("healthcare", PropertyWorkspaceIntegrationCategoriesEnum.HEALTHCARE);
         map.put("property", PropertyWorkspaceIntegrationCategoriesEnum.PROPERTY);
         map.put("plm", PropertyWorkspaceIntegrationCategoriesEnum.PLM);
+        map.put("qms", PropertyWorkspaceIntegrationCategoriesEnum.QMS);
         return map;
     }
     
@@ -263,7 +266,8 @@ public class PropertyWorkspaceIntegrationCategories {
         COMPUTE("compute"),
         HEALTHCARE("healthcare"),
         PROPERTY("property"),
-        PLM("plm"),;
+        PLM("plm"),
+        QMS("qms"),;
 
         private final String value;
 

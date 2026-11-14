@@ -86,6 +86,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     @JsonProperty("schedule")
     private List<AdSchedule> schedule;
 
+    /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("supply")
+    private PropertyAdsReportMetricsCampaignTargetingSupply supply;
+
     @JsonCreator
     public PropertyAdsReportMetricsCampaignTargeting(
             @JsonProperty("audience") @Nullable PropertyAdsReportMetricsCampaignTargetingAudience audience,
@@ -99,7 +106,8 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             @JsonProperty("language") @Nullable List<TargetRef> language,
             @JsonProperty("optimization") @Nullable PropertyAdsReportMetricsCampaignTargetingOptimization optimization,
             @JsonProperty("placement") @Nullable PropertyAdsReportMetricsCampaignTargetingPlacement placement,
-            @JsonProperty("schedule") @Nullable List<AdSchedule> schedule) {
+            @JsonProperty("schedule") @Nullable List<AdSchedule> schedule,
+            @JsonProperty("supply") @Nullable PropertyAdsReportMetricsCampaignTargetingSupply supply) {
         this.audience = audience;
         this.brandSafety = brandSafety;
         this.content = content;
@@ -112,13 +120,15 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         this.optimization = optimization;
         this.placement = placement;
         this.schedule = schedule;
+        this.supply = supply;
     }
     
     public PropertyAdsReportMetricsCampaignTargeting() {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyAdsReportMetricsCampaignTargetingAudience> audience() {
@@ -182,6 +192,13 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
     public Optional<List<AdSchedule>> schedule() {
         return Optional.ofNullable(this.schedule);
+    }
+
+    /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     */
+    public Optional<PropertyAdsReportMetricsCampaignTargetingSupply> supply() {
+        return Optional.ofNullable(this.supply);
     }
 
     public static Builder builder() {
@@ -276,6 +293,15 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     }
 
 
+    /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     */
+    public PropertyAdsReportMetricsCampaignTargeting withSupply(@Nullable PropertyAdsReportMetricsCampaignTargetingSupply supply) {
+        this.supply = supply;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -297,7 +323,8 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.optimization, other.optimization) &&
             Utils.enhancedDeepEquals(this.placement, other.placement) &&
-            Utils.enhancedDeepEquals(this.schedule, other.schedule);
+            Utils.enhancedDeepEquals(this.schedule, other.schedule) &&
+            Utils.enhancedDeepEquals(this.supply, other.supply);
     }
     
     @Override
@@ -306,7 +333,8 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             audience, brandSafety, content,
             custom, demographic, device,
             geographic, inventory, language,
-            optimization, placement, schedule);
+            optimization, placement, schedule,
+            supply);
     }
     
     @Override
@@ -323,7 +351,8 @@ public class PropertyAdsReportMetricsCampaignTargeting {
                 "language", language,
                 "optimization", optimization,
                 "placement", placement,
-                "schedule", schedule);
+                "schedule", schedule,
+                "supply", supply);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -352,6 +381,8 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         private PropertyAdsReportMetricsCampaignTargetingPlacement placement;
 
         private List<AdSchedule> schedule;
+
+        private PropertyAdsReportMetricsCampaignTargetingSupply supply;
 
         private Builder() {
           // force use of static builder() method
@@ -432,12 +463,21 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             return this;
         }
 
+        /**
+         * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+         */
+        public Builder supply(@Nullable PropertyAdsReportMetricsCampaignTargetingSupply supply) {
+            this.supply = supply;
+            return this;
+        }
+
         public PropertyAdsReportMetricsCampaignTargeting build() {
             return new PropertyAdsReportMetricsCampaignTargeting(
                 audience, brandSafety, content,
                 custom, demographic, device,
                 geographic, inventory, language,
-                optimization, placement, schedule);
+                optimization, placement, schedule,
+                supply);
         }
 
     }

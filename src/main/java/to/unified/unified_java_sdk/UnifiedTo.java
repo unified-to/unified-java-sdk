@@ -590,6 +590,21 @@ public class UnifiedTo {
     private final Unittype unittype;
 
 
+    private final Qms qms;
+
+
+    private final Action action;
+
+
+    private final Audit audit;
+
+
+    private final Inspection inspection;
+
+
+    private final Issue issue;
+
+
     private final Repo repo;
 
 
@@ -696,9 +711,6 @@ public class UnifiedTo {
 
 
     private final Saml saml;
-
-
-    private final Issue issue;
 
 
     private final Notification notification;
@@ -1634,6 +1646,31 @@ public class UnifiedTo {
     }
 
 
+    public Qms qms() {
+        return qms;
+    }
+
+
+    public Action action() {
+        return action;
+    }
+
+
+    public Audit audit() {
+        return audit;
+    }
+
+
+    public Inspection inspection() {
+        return inspection;
+    }
+
+
+    public Issue issue() {
+        return issue;
+    }
+
+
     public Repo repo() {
         return repo;
     }
@@ -1811,11 +1848,6 @@ public class UnifiedTo {
 
     public Saml saml() {
         return saml;
-    }
-
-
-    public Issue issue() {
-        return issue;
     }
 
 
@@ -2168,6 +2200,11 @@ public class UnifiedTo {
         this.guest = new Guest(sdkConfiguration);
         this.listing = new Listing(sdkConfiguration);
         this.unittype = new Unittype(sdkConfiguration);
+        this.qms = new Qms(sdkConfiguration);
+        this.action = new Action(sdkConfiguration);
+        this.audit = new Audit(sdkConfiguration);
+        this.inspection = new Inspection(sdkConfiguration);
+        this.issue = new Issue(sdkConfiguration);
         this.repo = new Repo(sdkConfiguration);
         this.branch = new Branch(sdkConfiguration);
         this.commit = new Commit(sdkConfiguration);
@@ -2204,7 +2241,6 @@ public class UnifiedTo {
         this.auth = new Auth(sdkConfiguration);
         this.login = new Login(sdkConfiguration);
         this.saml = new Saml(sdkConfiguration);
-        this.issue = new Issue(sdkConfiguration);
         this.notification = new Notification(sdkConfiguration);
         this.secretsmanager = new Secretsmanager(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);

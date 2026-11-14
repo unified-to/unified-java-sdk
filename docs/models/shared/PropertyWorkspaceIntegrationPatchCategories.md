@@ -56,3 +56,4 @@ PropertyWorkspaceIntegrationPatchCategories custom = PropertyWorkspaceIntegratio
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
+| `QMS`          | qms            |

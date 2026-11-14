@@ -74,6 +74,13 @@ public class PropertyAdsReportMetricsGroup {
     private String campaignId;
 
     /**
+     * Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("conversion_tracking")
+    private List<AdsConversionTracking> conversionTracking;
+
+    /**
      * How the line item is priced (Google Ad Manager costType)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -255,6 +262,7 @@ public class PropertyAdsReportMetricsGroup {
             @JsonProperty("budget_period") @Nullable PropertyAdsReportMetricsGroupBudgetPeriod budgetPeriod,
             @JsonProperty("budget_unit") @Nullable PropertyAdsReportMetricsGroupBudgetUnit budgetUnit,
             @JsonProperty("campaign_id") @Nullable String campaignId,
+            @JsonProperty("conversion_tracking") @Nullable List<AdsConversionTracking> conversionTracking,
             @JsonProperty("cost_type") @Nullable PropertyAdsReportMetricsGroupCostType costType,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
@@ -293,6 +301,7 @@ public class PropertyAdsReportMetricsGroup {
         this.budgetPeriod = budgetPeriod;
         this.budgetUnit = budgetUnit;
         this.campaignId = campaignId;
+        this.conversionTracking = conversionTracking;
         this.costType = costType;
         this.createdAt = createdAt;
         this.creativeIds = creativeIds;
@@ -337,7 +346,7 @@ public class PropertyAdsReportMetricsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> bidAmount() {
@@ -384,6 +393,13 @@ public class PropertyAdsReportMetricsGroup {
      */
     public Optional<String> campaignId() {
         return Optional.ofNullable(this.campaignId);
+    }
+
+    /**
+     * Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+     */
+    public Optional<List<AdsConversionTracking>> conversionTracking() {
+        return Optional.ofNullable(this.conversionTracking);
     }
 
     /**
@@ -606,6 +622,15 @@ public class PropertyAdsReportMetricsGroup {
      */
     public PropertyAdsReportMetricsGroup withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
+        return this;
+    }
+
+
+    /**
+     * Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+     */
+    public PropertyAdsReportMetricsGroup withConversionTracking(@Nullable List<AdsConversionTracking> conversionTracking) {
+        this.conversionTracking = conversionTracking;
         return this;
     }
 
@@ -842,6 +867,7 @@ public class PropertyAdsReportMetricsGroup {
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
             Utils.enhancedDeepEquals(this.budgetUnit, other.budgetUnit) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
+            Utils.enhancedDeepEquals(this.conversionTracking, other.conversionTracking) &&
             Utils.enhancedDeepEquals(this.costType, other.costType) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
@@ -879,16 +905,16 @@ public class PropertyAdsReportMetricsGroup {
             bidAmount, bidStrategy, billingEvent,
             budgetAllocationType, budgetAmount, budgetMaxAmount,
             budgetPeriod, budgetUnit, campaignId,
-            costType, createdAt, creativeIds,
-            creativeSelection, creativeSizes, currency,
-            deliveryGoal, deliveryType, effectiveStatus,
-            endAt, frequencyCap, hasEuPoliticalAds,
-            id, insertionorderId, languageLocale,
-            metadata, name, optimizationGoal,
-            organizationId, pacing, parentId,
-            priority, promoted, raw,
-            startAt, status, targeting,
-            type, updatedAt);
+            conversionTracking, costType, createdAt,
+            creativeIds, creativeSelection, creativeSizes,
+            currency, deliveryGoal, deliveryType,
+            effectiveStatus, endAt, frequencyCap,
+            hasEuPoliticalAds, id, insertionorderId,
+            languageLocale, metadata, name,
+            optimizationGoal, organizationId, pacing,
+            parentId, priority, promoted,
+            raw, startAt, status,
+            targeting, type, updatedAt);
     }
     
     @Override
@@ -903,6 +929,7 @@ public class PropertyAdsReportMetricsGroup {
                 "budgetPeriod", budgetPeriod,
                 "budgetUnit", budgetUnit,
                 "campaignId", campaignId,
+                "conversionTracking", conversionTracking,
                 "costType", costType,
                 "createdAt", createdAt,
                 "creativeIds", creativeIds,
@@ -954,6 +981,8 @@ public class PropertyAdsReportMetricsGroup {
         private PropertyAdsReportMetricsGroupBudgetUnit budgetUnit;
 
         private String campaignId;
+
+        private List<AdsConversionTracking> conversionTracking;
 
         private PropertyAdsReportMetricsGroupCostType costType;
 
@@ -1069,6 +1098,14 @@ public class PropertyAdsReportMetricsGroup {
          */
         public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
+            return this;
+        }
+
+        /**
+         * Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+         */
+        public Builder conversionTracking(@Nullable List<AdsConversionTracking> conversionTracking) {
+            this.conversionTracking = conversionTracking;
             return this;
         }
 
@@ -1261,16 +1298,16 @@ public class PropertyAdsReportMetricsGroup {
                 bidAmount, bidStrategy, billingEvent,
                 budgetAllocationType, budgetAmount, budgetMaxAmount,
                 budgetPeriod, budgetUnit, campaignId,
-                costType, createdAt, creativeIds,
-                creativeSelection, creativeSizes, currency,
-                deliveryGoal, deliveryType, effectiveStatus,
-                endAt, frequencyCap, hasEuPoliticalAds,
-                id, insertionorderId, languageLocale,
-                metadata, name, optimizationGoal,
-                organizationId, pacing, parentId,
-                priority, promoted, raw,
-                startAt, status, targeting,
-                type, updatedAt);
+                conversionTracking, costType, createdAt,
+                creativeIds, creativeSelection, creativeSizes,
+                currency, deliveryGoal, deliveryType,
+                effectiveStatus, endAt, frequencyCap,
+                hasEuPoliticalAds, id, insertionorderId,
+                languageLocale, metadata, name,
+                optimizationGoal, organizationId, pacing,
+                parentId, priority, promoted,
+                raw, startAt, status,
+                targeting, type, updatedAt);
         }
 
     }

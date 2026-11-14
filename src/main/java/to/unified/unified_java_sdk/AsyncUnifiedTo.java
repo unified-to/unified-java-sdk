@@ -379,6 +379,16 @@ public class AsyncUnifiedTo {
 
     private final AsyncUnittype unittype;
 
+    private final AsyncQms qms;
+
+    private final AsyncAction action;
+
+    private final AsyncAudit audit;
+
+    private final AsyncInspection inspection;
+
+    private final AsyncIssue issue;
+
     private final AsyncRepo repo;
 
     private final AsyncBranch branch;
@@ -450,8 +460,6 @@ public class AsyncUnifiedTo {
     private final AsyncLogin login;
 
     private final AsyncSaml saml;
-
-    private final AsyncIssue issue;
 
     private final AsyncNotification notification;
 
@@ -1197,6 +1205,26 @@ public class AsyncUnifiedTo {
         return unittype;
     }
 
+    public AsyncQms qms() {
+        return qms;
+    }
+
+    public AsyncAction action() {
+        return action;
+    }
+
+    public AsyncAudit audit() {
+        return audit;
+    }
+
+    public AsyncInspection inspection() {
+        return inspection;
+    }
+
+    public AsyncIssue issue() {
+        return issue;
+    }
+
     public AsyncRepo repo() {
         return repo;
     }
@@ -1339,10 +1367,6 @@ public class AsyncUnifiedTo {
 
     public AsyncSaml saml() {
         return saml;
-    }
-
-    public AsyncIssue issue() {
-        return issue;
     }
 
     public AsyncNotification notification() {
@@ -1558,6 +1582,11 @@ public class AsyncUnifiedTo {
         this.guest = new AsyncGuest(syncSDK.guest(), sdkConfiguration);
         this.listing = new AsyncListing(syncSDK.listing(), sdkConfiguration);
         this.unittype = new AsyncUnittype(syncSDK.unittype(), sdkConfiguration);
+        this.qms = new AsyncQms(syncSDK.qms(), sdkConfiguration);
+        this.action = new AsyncAction(syncSDK.action(), sdkConfiguration);
+        this.audit = new AsyncAudit(syncSDK.audit(), sdkConfiguration);
+        this.inspection = new AsyncInspection(syncSDK.inspection(), sdkConfiguration);
+        this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.repo = new AsyncRepo(syncSDK.repo(), sdkConfiguration);
         this.branch = new AsyncBranch(syncSDK.branch(), sdkConfiguration);
         this.commit = new AsyncCommit(syncSDK.commit(), sdkConfiguration);
@@ -1594,7 +1623,6 @@ public class AsyncUnifiedTo {
         this.auth = new AsyncAuth(syncSDK.auth(), sdkConfiguration);
         this.login = new AsyncLogin(syncSDK.login(), sdkConfiguration);
         this.saml = new AsyncSaml(syncSDK.saml(), sdkConfiguration);
-        this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.notification = new AsyncNotification(syncSDK.notification(), sdkConfiguration);
         this.secretsmanager = new AsyncSecretsmanager(syncSDK.secretsmanager(), sdkConfiguration);
         this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);

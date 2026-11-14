@@ -48,7 +48,8 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     COMPUTE("compute"),
     HEALTHCARE("healthcare"),
     PROPERTY("property"),
-    PLM("plm");
+    PLM("plm"),
+    QMS("qms");
 
     @JsonValue
     private final String value;

@@ -46,7 +46,8 @@ public enum GetAdsGroupQueryParamFields {
     PRIORITY("priority"),
     COST_TYPE("cost_type"),
     DELIVERY_GOAL("delivery_goal"),
-    CREATIVE_SIZES("creative_sizes");
+    CREATIVE_SIZES("creative_sizes"),
+    CONVERSION_TRACKING("conversion_tracking");
 
     @JsonValue
     private final String value;

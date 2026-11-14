@@ -1905,6 +1905,46 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_action_read")
+    private String qmsActionRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_action_write")
+    private String qmsActionWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_audit_read")
+    private String qmsAuditRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_audit_write")
+    private String qmsAuditWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_inspection_read")
+    private String qmsInspectionRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_inspection_write")
+    private String qmsInspectionWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_issue_read")
+    private String qmsIssueRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("qms_issue_write")
+    private String qmsIssueWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_branch_read")
     private String repoBranchRead;
 
@@ -3761,6 +3801,38 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
     public Optional<String> propertyUnittypeRead() {
         return Optional.ofNullable(this.propertyUnittypeRead);
+    }
+
+    public Optional<String> qmsActionRead() {
+        return Optional.ofNullable(this.qmsActionRead);
+    }
+
+    public Optional<String> qmsActionWrite() {
+        return Optional.ofNullable(this.qmsActionWrite);
+    }
+
+    public Optional<String> qmsAuditRead() {
+        return Optional.ofNullable(this.qmsAuditRead);
+    }
+
+    public Optional<String> qmsAuditWrite() {
+        return Optional.ofNullable(this.qmsAuditWrite);
+    }
+
+    public Optional<String> qmsInspectionRead() {
+        return Optional.ofNullable(this.qmsInspectionRead);
+    }
+
+    public Optional<String> qmsInspectionWrite() {
+        return Optional.ofNullable(this.qmsInspectionWrite);
+    }
+
+    public Optional<String> qmsIssueRead() {
+        return Optional.ofNullable(this.qmsIssueRead);
+    }
+
+    public Optional<String> qmsIssueWrite() {
+        return Optional.ofNullable(this.qmsIssueWrite);
     }
 
     public Optional<String> repoBranchRead() {
@@ -6310,6 +6382,54 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     }
 
 
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsActionRead(@Nullable String qmsActionRead) {
+        this.qmsActionRead = qmsActionRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsActionWrite(@Nullable String qmsActionWrite) {
+        this.qmsActionWrite = qmsActionWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsAuditRead(@Nullable String qmsAuditRead) {
+        this.qmsAuditRead = qmsAuditRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsAuditWrite(@Nullable String qmsAuditWrite) {
+        this.qmsAuditWrite = qmsAuditWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsInspectionRead(@Nullable String qmsInspectionRead) {
+        this.qmsInspectionRead = qmsInspectionRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsInspectionWrite(@Nullable String qmsInspectionWrite) {
+        this.qmsInspectionWrite = qmsInspectionWrite;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsIssueRead(@Nullable String qmsIssueRead) {
+        this.qmsIssueRead = qmsIssueRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withQmsIssueWrite(@Nullable String qmsIssueWrite) {
+        this.qmsIssueWrite = qmsIssueWrite;
+        return this;
+    }
+
+
     public PropertyWorkspaceIntegrationOverridenScopes withRepoBranchRead(@Nullable String repoBranchRead) {
         this.repoBranchRead = repoBranchRead;
         return this;
@@ -7117,6 +7237,14 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.propertyReviewRead, other.propertyReviewRead) &&
             Utils.enhancedDeepEquals(this.propertyReviewWrite, other.propertyReviewWrite) &&
             Utils.enhancedDeepEquals(this.propertyUnittypeRead, other.propertyUnittypeRead) &&
+            Utils.enhancedDeepEquals(this.qmsActionRead, other.qmsActionRead) &&
+            Utils.enhancedDeepEquals(this.qmsActionWrite, other.qmsActionWrite) &&
+            Utils.enhancedDeepEquals(this.qmsAuditRead, other.qmsAuditRead) &&
+            Utils.enhancedDeepEquals(this.qmsAuditWrite, other.qmsAuditWrite) &&
+            Utils.enhancedDeepEquals(this.qmsInspectionRead, other.qmsInspectionRead) &&
+            Utils.enhancedDeepEquals(this.qmsInspectionWrite, other.qmsInspectionWrite) &&
+            Utils.enhancedDeepEquals(this.qmsIssueRead, other.qmsIssueRead) &&
+            Utils.enhancedDeepEquals(this.qmsIssueWrite, other.qmsIssueWrite) &&
             Utils.enhancedDeepEquals(this.repoBranchRead, other.repoBranchRead) &&
             Utils.enhancedDeepEquals(this.repoBranchWrite, other.repoBranchWrite) &&
             Utils.enhancedDeepEquals(this.repoCommitRead, other.repoCommitRead) &&
@@ -7317,30 +7445,33 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             propertyGuestRead, propertyGuestWrite, propertyListingRead,
             propertyListingWrite, propertyQuoteRead, propertyQuoteWrite,
             propertyReservationRead, propertyReservationWrite, propertyReviewRead,
-            propertyReviewWrite, propertyUnittypeRead, repoBranchRead,
-            repoBranchWrite, repoCommitRead, repoCommitWrite,
-            repoOrganizationRead, repoOrganizationWrite, repoPullrequestRead,
-            repoPullrequestWrite, repoRepositoryRead, repoRepositoryWrite,
-            scimGroupsRead, scimGroupsWrite, scimUsersRead,
-            scimUsersWrite, shippingCarrierRead, shippingLabelRead,
-            shippingLabelWrite, shippingRateRead, shippingRateWrite,
-            shippingShipmentRead, shippingShipmentWrite, shippingTrackingRead,
-            signingDocumentRead, signingDocumentWrite, signingSignatoryRead,
-            signingSignatoryWrite, signingTemplateRead, signingTemplateWrite,
-            socialCommentRead, socialCommentWrite, socialInsightRead,
-            socialInsightWrite, socialPostRead, socialPostWrite,
-            socialProfileRead, socialProfileWrite, socialReviewRead,
-            socialReviewWrite, storageFileRead, storageFileWrite,
-            taskChangeRead, taskCommentRead, taskCommentWrite,
-            taskProjectRead, taskProjectWrite, taskTaskRead,
-            taskTaskWrite, ticketingCategoryRead, ticketingCategoryWrite,
-            ticketingCustomerRead, ticketingCustomerWrite, ticketingNoteRead,
-            ticketingNoteWrite, ticketingTicketRead, ticketingTicketWrite,
-            ucCallRead, ucCallWrite, ucCommentRead,
-            ucCommentWrite, ucContactRead, ucContactWrite,
-            ucFaxRead, ucFaxWrite, ucRecordingRead,
-            ucScorecardRead, ucScorecardtemplateRead, verificationPackageRead,
-            verificationRequestRead, verificationRequestWrite, webhook);
+            propertyReviewWrite, propertyUnittypeRead, qmsActionRead,
+            qmsActionWrite, qmsAuditRead, qmsAuditWrite,
+            qmsInspectionRead, qmsInspectionWrite, qmsIssueRead,
+            qmsIssueWrite, repoBranchRead, repoBranchWrite,
+            repoCommitRead, repoCommitWrite, repoOrganizationRead,
+            repoOrganizationWrite, repoPullrequestRead, repoPullrequestWrite,
+            repoRepositoryRead, repoRepositoryWrite, scimGroupsRead,
+            scimGroupsWrite, scimUsersRead, scimUsersWrite,
+            shippingCarrierRead, shippingLabelRead, shippingLabelWrite,
+            shippingRateRead, shippingRateWrite, shippingShipmentRead,
+            shippingShipmentWrite, shippingTrackingRead, signingDocumentRead,
+            signingDocumentWrite, signingSignatoryRead, signingSignatoryWrite,
+            signingTemplateRead, signingTemplateWrite, socialCommentRead,
+            socialCommentWrite, socialInsightRead, socialInsightWrite,
+            socialPostRead, socialPostWrite, socialProfileRead,
+            socialProfileWrite, socialReviewRead, socialReviewWrite,
+            storageFileRead, storageFileWrite, taskChangeRead,
+            taskCommentRead, taskCommentWrite, taskProjectRead,
+            taskProjectWrite, taskTaskRead, taskTaskWrite,
+            ticketingCategoryRead, ticketingCategoryWrite, ticketingCustomerRead,
+            ticketingCustomerWrite, ticketingNoteRead, ticketingNoteWrite,
+            ticketingTicketRead, ticketingTicketWrite, ucCallRead,
+            ucCallWrite, ucCommentRead, ucCommentWrite,
+            ucContactRead, ucContactWrite, ucFaxRead,
+            ucFaxWrite, ucRecordingRead, ucScorecardRead,
+            ucScorecardtemplateRead, verificationPackageRead, verificationRequestRead,
+            verificationRequestWrite, webhook);
     }
     
     @Override
@@ -7723,6 +7854,14 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "propertyReviewRead", propertyReviewRead,
                 "propertyReviewWrite", propertyReviewWrite,
                 "propertyUnittypeRead", propertyUnittypeRead,
+                "qmsActionRead", qmsActionRead,
+                "qmsActionWrite", qmsActionWrite,
+                "qmsAuditRead", qmsAuditRead,
+                "qmsAuditWrite", qmsAuditWrite,
+                "qmsInspectionRead", qmsInspectionRead,
+                "qmsInspectionWrite", qmsInspectionWrite,
+                "qmsIssueRead", qmsIssueRead,
+                "qmsIssueWrite", qmsIssueWrite,
                 "repoBranchRead", repoBranchRead,
                 "repoBranchWrite", repoBranchWrite,
                 "repoCommitRead", repoCommitRead,
@@ -8553,6 +8692,22 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         private String propertyReviewWrite;
 
         private String propertyUnittypeRead;
+
+        private String qmsActionRead;
+
+        private String qmsActionWrite;
+
+        private String qmsAuditRead;
+
+        private String qmsAuditWrite;
+
+        private String qmsInspectionRead;
+
+        private String qmsInspectionWrite;
+
+        private String qmsIssueRead;
+
+        private String qmsIssueWrite;
 
         private String repoBranchRead;
 
@@ -10960,6 +11115,54 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             return this;
         }
 
+        @JsonProperty("qms_action_read")
+        public Builder qmsActionRead(@Nullable String qmsActionRead) {
+            this.qmsActionRead = qmsActionRead;
+            return this;
+        }
+
+        @JsonProperty("qms_action_write")
+        public Builder qmsActionWrite(@Nullable String qmsActionWrite) {
+            this.qmsActionWrite = qmsActionWrite;
+            return this;
+        }
+
+        @JsonProperty("qms_audit_read")
+        public Builder qmsAuditRead(@Nullable String qmsAuditRead) {
+            this.qmsAuditRead = qmsAuditRead;
+            return this;
+        }
+
+        @JsonProperty("qms_audit_write")
+        public Builder qmsAuditWrite(@Nullable String qmsAuditWrite) {
+            this.qmsAuditWrite = qmsAuditWrite;
+            return this;
+        }
+
+        @JsonProperty("qms_inspection_read")
+        public Builder qmsInspectionRead(@Nullable String qmsInspectionRead) {
+            this.qmsInspectionRead = qmsInspectionRead;
+            return this;
+        }
+
+        @JsonProperty("qms_inspection_write")
+        public Builder qmsInspectionWrite(@Nullable String qmsInspectionWrite) {
+            this.qmsInspectionWrite = qmsInspectionWrite;
+            return this;
+        }
+
+        @JsonProperty("qms_issue_read")
+        public Builder qmsIssueRead(@Nullable String qmsIssueRead) {
+            this.qmsIssueRead = qmsIssueRead;
+            return this;
+        }
+
+        @JsonProperty("qms_issue_write")
+        public Builder qmsIssueWrite(@Nullable String qmsIssueWrite) {
+            this.qmsIssueWrite = qmsIssueWrite;
+            return this;
+        }
+
         @JsonProperty("repo_branch_read")
         public Builder repoBranchRead(@Nullable String repoBranchRead) {
             this.repoBranchRead = repoBranchRead;
@@ -11758,6 +11961,14 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.propertyReviewRead = propertyReviewRead;
             _instance.propertyReviewWrite = propertyReviewWrite;
             _instance.propertyUnittypeRead = propertyUnittypeRead;
+            _instance.qmsActionRead = qmsActionRead;
+            _instance.qmsActionWrite = qmsActionWrite;
+            _instance.qmsAuditRead = qmsAuditRead;
+            _instance.qmsAuditWrite = qmsAuditWrite;
+            _instance.qmsInspectionRead = qmsInspectionRead;
+            _instance.qmsInspectionWrite = qmsInspectionWrite;
+            _instance.qmsIssueRead = qmsIssueRead;
+            _instance.qmsIssueWrite = qmsIssueWrite;
             _instance.repoBranchRead = repoBranchRead;
             _instance.repoBranchWrite = repoBranchWrite;
             _instance.repoCommitRead = repoCommitRead;

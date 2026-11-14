@@ -44,6 +44,9 @@ public class AdsTargetType {
     public static final AdsTargetType BROWSER = new AdsTargetType("BROWSER");
     public static final AdsTargetType OPERATING_SYSTEM = new AdsTargetType("OPERATING_SYSTEM");
     public static final AdsTargetType DEVICE_CATEGORY = new AdsTargetType("DEVICE_CATEGORY");
+    public static final AdsTargetType EXCHANGE = new AdsTargetType("EXCHANGE");
+    public static final AdsTargetType DEAL = new AdsTargetType("DEAL");
+    public static final AdsTargetType DEAL_GROUP = new AdsTargetType("DEAL_GROUP");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -135,6 +138,9 @@ public class AdsTargetType {
         map.put("BROWSER", BROWSER);
         map.put("OPERATING_SYSTEM", OPERATING_SYSTEM);
         map.put("DEVICE_CATEGORY", DEVICE_CATEGORY);
+        map.put("EXCHANGE", EXCHANGE);
+        map.put("DEAL", DEAL);
+        map.put("DEAL_GROUP", DEAL_GROUP);
         return map;
     }
 
@@ -158,6 +164,9 @@ public class AdsTargetType {
         map.put("BROWSER", AdsTargetTypeEnum.BROWSER);
         map.put("OPERATING_SYSTEM", AdsTargetTypeEnum.OPERATING_SYSTEM);
         map.put("DEVICE_CATEGORY", AdsTargetTypeEnum.DEVICE_CATEGORY);
+        map.put("EXCHANGE", AdsTargetTypeEnum.EXCHANGE);
+        map.put("DEAL", AdsTargetTypeEnum.DEAL);
+        map.put("DEAL_GROUP", AdsTargetTypeEnum.DEAL_GROUP);
         return map;
     }
     
@@ -181,7 +190,10 @@ public class AdsTargetType {
         CUSTOM_VALUE("CUSTOM_VALUE"),
         BROWSER("BROWSER"),
         OPERATING_SYSTEM("OPERATING_SYSTEM"),
-        DEVICE_CATEGORY("DEVICE_CATEGORY"),;
+        DEVICE_CATEGORY("DEVICE_CATEGORY"),
+        EXCHANGE("EXCHANGE"),
+        DEAL("DEAL"),
+        DEAL_GROUP("DEAL_GROUP"),;
 
         private final String value;
 
