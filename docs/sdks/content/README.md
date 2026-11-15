@@ -47,7 +47,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("4014882b-fcb0-495a-8d54-c00a005717c0")
+                    .id("61b1bafa-60dc-4598-a486-fe1bed21fc04")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -101,7 +101,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:41:55.442Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:46:48.586Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -113,7 +113,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:04:49.427Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:09:55.898Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -296,7 +296,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("6d41f57e-408b-441a-a2b2-e542b319a49c")
+                    .id("efc0f511-49a6-417b-83c0-284ebee28f73")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -350,7 +350,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:41:55.447Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:46:48.594Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -362,7 +362,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:04:49.433Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:09:55.907Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -487,7 +487,7 @@ public class Application {
                     .description("Usque laboriosam ventosus adflicto.")
                     .difficulty("Beginner")
                     .durationMinutes(19d)
-                    .id("6d41f57e-408b-441a-a2b2-e542b319a49c")
+                    .id("efc0f511-49a6-417b-83c0-284ebee28f73")
                     .instructors(List.of())
                     .isActive(true)
                     .languages(List.of(
@@ -541,7 +541,7 @@ public class Application {
                     .metadata(List.of())
                     .name("ut")
                     .providerName("Bins LLC")
-                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:41:55.447Z"))
+                    .publishedAt(OffsetDateTime.parse("2022-09-10T16:46:48.594Z"))
                     .shortDescription("Caritas.")
                     .skills(List.of(
                         "trucido"))
@@ -553,7 +553,7 @@ public class Application {
                             .build()))
                     .tags(List.of(
                         "dens"))
-                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:04:49.433Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-10-11T23:09:55.907Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
