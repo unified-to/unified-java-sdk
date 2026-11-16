@@ -17,7 +17,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateQmsIssueRequest {
     /**
-     * A nonconformance, complaint, audit finding or problem report
+     * A nonconformance, complaint, audit finding or other quality issue
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     private QmsIssue qmsIssue;
@@ -74,7 +74,7 @@ public class UpdateQmsIssueRequest {
     }
 
     /**
-     * A nonconformance, complaint, audit finding or problem report
+     * A nonconformance, complaint, audit finding or other quality issue
      */
     public QmsIssue qmsIssue() {
         return this.qmsIssue;
@@ -116,7 +116,7 @@ public class UpdateQmsIssueRequest {
 
 
     /**
-     * A nonconformance, complaint, audit finding or problem report
+     * A nonconformance, complaint, audit finding or other quality issue
      */
     public UpdateQmsIssueRequest withQmsIssue(@Nonnull QmsIssue qmsIssue) {
         this.qmsIssue = Utils.checkNotNull(qmsIssue, "qmsIssue");
@@ -214,7 +214,7 @@ public class UpdateQmsIssueRequest {
         }
 
         /**
-         * A nonconformance, complaint, audit finding or problem report
+         * A nonconformance, complaint, audit finding or other quality issue
          */
         public Builder qmsIssue(@Nonnull QmsIssue qmsIssue) {
             this.qmsIssue = Utils.checkNotNull(qmsIssue, "qmsIssue");

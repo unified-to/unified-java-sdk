@@ -18,11 +18,6 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
-/**
- * QmsInspectionStatus
- * 
- * <p>Normalized status of a quality record
- */
 public class QmsInspectionStatus {
 
     public static final QmsInspectionStatus OPEN = new QmsInspectionStatus("OPEN");

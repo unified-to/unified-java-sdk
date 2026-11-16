@@ -20,16 +20,24 @@ import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSe
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersResponse;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.shared.SecretsManager;
 import to.unified.unified_java_sdk.operations.CreateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.GetUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerInstructions;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerSecrets;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
+import to.unified.unified_java_sdk.operations.PatchUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -162,6 +170,28 @@ public class Secretsmanager {
     }
 
     /**
+     * Update secrets manager
+     * 
+     * @return The call builder
+     */
+    public PatchUnifiedSecretsmanagerRequestBuilder patchUnifiedSecretsmanager() {
+        return new PatchUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchUnifiedSecretsmanagerResponse patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        RequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
+              = new PatchUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove secrets manager
      * 
      * @return The call builder
@@ -180,6 +210,28 @@ public class Secretsmanager {
     public RemoveUnifiedSecretsmanagerResponse removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
         RequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
               = new RemoveUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @return The call builder
+     */
+    public UpdateUnifiedSecretsmanagerRequestBuilder updateUnifiedSecretsmanager() {
+        return new UpdateUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateUnifiedSecretsmanagerResponse updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        RequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
+              = new UpdateUnifiedSecretsmanager.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

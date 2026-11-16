@@ -8,6 +8,7 @@
 * [getPropertyGuest](#getpropertyguest) - Retrieve a guest
 * [listPropertyGuests](#listpropertyguests) - List all guests
 * [patchPropertyGuest](#patchpropertyguest) - Update a guest
+* [removePropertyGuest](#removepropertyguest) - Remove a guest
 * [updatePropertyGuest](#updatepropertyguest) - Update a guest
 
 ## createPropertyGuest
@@ -56,7 +57,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("0f1f472c-2591-4050-8ea6-26f1fc7c6cf8")
+                    .id("6716fe12-9a39-4135-a84d-97b5471f52c3")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -69,7 +70,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.643Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -262,7 +263,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("30c721ac-c38b-4d29-bc8e-aeb0011f504d")
+                    .id("c6ba411c-668f-48e4-bdca-f03d743b6873")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -275,7 +276,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.897Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -301,6 +302,62 @@ public class Application {
 ### Response
 
 **[PatchPropertyGuestResponse](../../models/operations/PatchPropertyGuestResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePropertyGuestRequest req = RemovePropertyGuestRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePropertyGuestResponse res = sdk.guest().removePropertyGuest()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemovePropertyGuestRequest](../../models/operations/RemovePropertyGuestRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemovePropertyGuestResponse](../../models/operations/RemovePropertyGuestResponse.md)**
 
 ### Errors
 
@@ -354,7 +411,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("30c721ac-c38b-4d29-bc8e-aeb0011f504d")
+                    .id("c6ba411c-668f-48e4-bdca-f03d743b6873")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -367,7 +424,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.897Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

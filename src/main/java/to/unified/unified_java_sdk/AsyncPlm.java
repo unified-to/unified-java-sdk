@@ -26,6 +26,7 @@ import to.unified.unified_java_sdk.models.operations.PatchPlmChangeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePlmBomlineRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmChangeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmDocumentRequest;
@@ -68,6 +69,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartRequestBu
 import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemovePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemovePlmBomlineResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmBomlineResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmChangeRequestBuilder;
@@ -95,6 +98,7 @@ import to.unified.unified_java_sdk.operations.PatchPlmChange;
 import to.unified.unified_java_sdk.operations.PatchPlmDocument;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
 import to.unified.unified_java_sdk.operations.RemovePlmBomline;
+import to.unified.unified_java_sdk.operations.RemovePlmPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmBomline;
 import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
@@ -706,6 +710,33 @@ public class AsyncPlm {
     public CompletableFuture<RemovePlmBomlineResponse> removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
         AsyncRequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
               = new RemovePlmBomline.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePlmPartRequestBuilder removePlmPart() {
+        return new RemovePlmPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        AsyncRequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
+              = new RemovePlmPart.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

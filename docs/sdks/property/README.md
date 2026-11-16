@@ -31,7 +31,9 @@
 * [patchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [patchPropertyReview](#patchpropertyreview) - Update a review
 * [removeAnalyticsProperty](#removeanalyticsproperty) - Remove a property
+* [removePropertyGuest](#removepropertyguest) - Remove a guest
 * [removePropertyListing](#removepropertylisting) - Remove a listing
+* [removePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [updateAnalyticsProperty](#updateanalyticsproperty) - Update a property
 * [updatePropertyGuest](#updatepropertyguest) - Update a guest
 * [updatePropertyListing](#updatepropertylisting) - Update a listing
@@ -70,10 +72,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("3fe18edc-597e-4085-a2c7-95e41635c524")
+                    .id("c631431a-3149-4823-baf0-e1cebd19c215")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:13:04.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:27:27.301Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -137,13 +139,13 @@ public class Application {
                 .propertyConversation(PropertyConversation.builder()
                     .createdAt(OffsetDateTime.parse("2022-06-20T00:02:46.530Z"))
                     .guestName("Evie Okuneva")
-                    .id("c38ae989-73ba-4ace-85ec-463a02259d91")
+                    .id("2bdb820e-0237-4699-afa7-8c8cb02f5482")
                     .isUnread(false)
                     .messages(List.of(
                         PropertyMessage.builder()
                             .attachments(List.of())
-                            .createdAt(OffsetDateTime.parse("2025-05-02T02:46:37.414Z"))
-                            .id("9265bca8-f659-497d-a84e-bdd8821dc514")
+                            .createdAt(OffsetDateTime.parse("2025-05-03T11:02:29.200Z"))
+                            .id("ad460423-f3cd-4d8c-8034-2adb7fe6466c")
                             .isAutomatic(false)
                             .message("Vinitor caterva amor sophismata admitto colo tempore aufero torrens.")
                             .senderName("Evie Okuneva")
@@ -151,15 +153,15 @@ public class Application {
                             .build(),
                         PropertyMessage.builder()
                             .attachments(List.of())
-                            .createdAt(OffsetDateTime.parse("2026-05-18T22:10:41.396Z"))
-                            .id("4d063089-7c3e-4a1d-b29c-ce6720ff754b")
+                            .createdAt(OffsetDateTime.parse("2026-05-20T18:12:25.530Z"))
+                            .id("7dd5485b-ce30-4d10-a7c6-a9627fea5e05")
                             .message("Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.")
                             .senderName("Ms. Patti Lynch")
                             .senderType(SenderType.HOST)
                             .build()))
                     .metadata(List.of())
                     .source("Airbnb")
-                    .updatedAt(OffsetDateTime.parse("2026-05-18T22:10:41.396Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-05-20T18:12:25.530Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -237,7 +239,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("0f1f472c-2591-4050-8ea6-26f1fc7c6cf8")
+                    .id("6716fe12-9a39-4135-a84d-97b5471f52c3")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -250,7 +252,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.875Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.643Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -341,7 +343,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("1412bf06-fad6-4fd3-927b-941a429671f2")
+                    .id("b5f120c8-fe4a-4578-a6d2-0957f29cd5cc")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -357,7 +359,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-21T10:02:09.534Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-23T10:20:20.340Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")
@@ -425,9 +427,9 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-12-18T19:14:11.415Z"))
                     .currency("USD")
                     .depositAmount(594.54)
-                    .endAt(OffsetDateTime.parse("2026-11-28"))
+                    .endAt(OffsetDateTime.parse("2026-11-30"))
                     .guests(2d)
-                    .id("30d0aa4b-117b-4239-a113-cb2d1af200d6")
+                    .id("4cbc4542-75fa-4f7e-8e48-359223657f56")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1665d)
@@ -448,7 +450,7 @@ public class Application {
                             .name("Lodging tax")
                             .type(PropertyLineitemType.TAX)
                             .build()))
-                    .startAt(OffsetDateTime.parse("2026-11-19"))
+                    .startAt(OffsetDateTime.parse("2026-11-21"))
                     .totalAmount(1981.8)
                     .build())
                 .connectionId("<id>")
@@ -522,7 +524,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("993aae9b-274c-45d0-9239-631b4bae2c3b")
+                    .id("6ffd2510-6152-4a89-baf3-2934411cda22")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -558,7 +560,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.840Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.396Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1485,10 +1487,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("075794dd-6d00-4e5f-8bd4-465b65d20c96")
+                    .id("aa23357e-1f2e-4adf-b1c5-d1fa3e0b64e4")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:13:04.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:27:27.301Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1567,7 +1569,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("30c721ac-c38b-4d29-bc8e-aeb0011f504d")
+                    .id("c6ba411c-668f-48e4-bdca-f03d743b6873")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -1580,7 +1582,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.897Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1672,7 +1674,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("8325a575-beb8-499e-a0ac-b28595d47dfc")
+                    .id("b0113e41-653f-45d0-8d7a-91463144e738")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -1688,7 +1690,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-21T10:02:09.571Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-23T10:20:20.360Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")
@@ -1763,7 +1765,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("3c0bfed0-82f2-407d-b339-a26fe0ec32e4")
+                    .id("857f4669-54a2-4d9f-abd7-2c319ff23b21")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -1799,7 +1801,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.398Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1894,13 +1896,13 @@ public class Application {
                             .build()))
                     .content("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.")
                     .createdAt(OffsetDateTime.parse("2022-10-17T11:17:07.682Z"))
-                    .id("60543b62-4cbb-44ff-bea6-9ac2c0df1ab3")
+                    .id("3140f20e-7711-4b8d-afe6-5a0db558f8c6")
                     .isPublic(true)
                     .metadata(List.of())
                     .privateFeedback("Tripudio neque communis.")
                     .rating(3d)
                     .source("Airbnb")
-                    .updatedAt(OffsetDateTime.parse("2026-03-02T17:39:53.299Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-04T10:40:54.471Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1989,6 +1991,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePropertyGuestRequest req = RemovePropertyGuestRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePropertyGuestResponse res = sdk.property().removePropertyGuest()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemovePropertyGuestRequest](../../models/operations/RemovePropertyGuestRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemovePropertyGuestResponse](../../models/operations/RemovePropertyGuestResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removePropertyListing
 
 Deletes the PropertyListing identified by `id`.
@@ -2045,6 +2103,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePropertyReservationRequest req = RemovePropertyReservationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePropertyReservationResponse res = sdk.property().removePropertyReservation()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemovePropertyReservationRequest](../../models/operations/RemovePropertyReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[RemovePropertyReservationResponse](../../models/operations/RemovePropertyReservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateAnalyticsProperty
 
 Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
@@ -2077,10 +2191,10 @@ public class Application {
                 .analyticsProperty(AnalyticsProperty.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-05T19:04:58.430Z"))
                     .currency("USD")
-                    .id("075794dd-6d00-4e5f-8bd4-465b65d20c96")
+                    .id("aa23357e-1f2e-4adf-b1c5-d1fa3e0b64e4")
                     .name("Daniel, Goldner and Dickinson")
                     .timezone("UTC")
-                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:13:04.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-09-14T23:27:27.301Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2159,7 +2273,7 @@ public class Application {
                             .type(PropertyEmailType.HOME)
                             .build()))
                     .firstName("Melissa")
-                    .id("30c721ac-c38b-4d29-bc8e-aeb0011f504d")
+                    .id("c6ba411c-668f-48e4-bdca-f03d743b6873")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg")
                     .language("es")
                     .lastName("Green")
@@ -2172,7 +2286,7 @@ public class Application {
                             .telephone("+14564841285")
                             .type(PropertyTelephoneType.MOBILE)
                             .build()))
-                    .updatedAt(OffsetDateTime.parse("2025-07-14T13:11:20.897Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-16T01:42:25.656Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2264,7 +2378,7 @@ public class Application {
                     .currency("USD")
                     .description("Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.")
                     .houseRules("No smoking. No parties or events.")
-                    .id("8325a575-beb8-499e-a0ac-b28595d47dfc")
+                    .id("b0113e41-653f-45d0-8d7a-91463144e738")
                     .imageUrls(List.of(
                         "https://loremflickr.com/23/1328?lock=5798241296161663",
                         "https://loremflickr.com/12/1312?lock=6354590363728966"))
@@ -2280,7 +2394,7 @@ public class Application {
                     .startPriceAmount(470d)
                     .timezone("America/Los_Angeles")
                     .type(PropertyListingType.ROOM)
-                    .updatedAt(OffsetDateTime.parse("2026-09-21T10:02:09.571Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-23T10:20:20.360Z"))
                     .webUrl("https://tight-pronoun.info/")
                     .build())
                 .connectionId("<id>")
@@ -2355,7 +2469,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("3c0bfed0-82f2-407d-b339-a26fe0ec32e4")
+                    .id("857f4669-54a2-4d9f-abd7-2c319ff23b21")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -2391,7 +2505,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.398Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")
@@ -2486,13 +2600,13 @@ public class Application {
                             .build()))
                     .content("Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.")
                     .createdAt(OffsetDateTime.parse("2022-10-17T11:17:07.682Z"))
-                    .id("60543b62-4cbb-44ff-bea6-9ac2c0df1ab3")
+                    .id("3140f20e-7711-4b8d-afe6-5a0db558f8c6")
                     .isPublic(true)
                     .metadata(List.of())
                     .privateFeedback("Tripudio neque communis.")
                     .rating(3d)
                     .source("Airbnb")
-                    .updatedAt(OffsetDateTime.parse("2026-03-02T17:39:53.299Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-04T10:40:54.471Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

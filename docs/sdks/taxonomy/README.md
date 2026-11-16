@@ -8,6 +8,9 @@
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
+* [patchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
+* [removeHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
+* [updateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 
 ## createHrisTaxonomy
 
@@ -45,13 +48,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
                     .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
                     .domain("Health")
-                    .id("8c456555-cb3b-42b0-ae9f-0cf521bde301")
+                    .id("010270db-f5e7-4b9b-b182-44ec803a38af")
                     .isActive(false)
                     .metadata(List.of())
                     .name("International Functionality Architect")
                     .subcategory("Marble")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-06-03T11:00:04.146Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.643Z"))
                     .url("https://fixed-membership.biz/")
                     .build())
                 .connectionId("<id>")
@@ -249,6 +252,214 @@ public class Application {
 ### Response
 
 **[ListHrisTaxonomiesResponse](../../models/operations/ListHrisTaxonomiesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisTaxonomyRequest req = PatchHrisTaxonomyRequest.builder()
+                .hrisTaxonomy(HrisTaxonomy.builder()
+                    .alternativeNames(List.of(
+                        "Facilitator",
+                        "National"))
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
+                    .domain("Health")
+                    .id("2d9f56a8-8e4d-4c51-acd1-3ac8f2450442")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("International Functionality Architect")
+                    .subcategory("Marble")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.645Z"))
+                    .url("https://fixed-membership.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisTaxonomyResponse res = sdk.taxonomy().patchHrisTaxonomy()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomy().isPresent()) {
+            System.out.println(res.hrisTaxonomy().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisTaxonomyRequest](../../models/operations/PatchHrisTaxonomyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchHrisTaxonomyResponse](../../models/operations/PatchHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisTaxonomyRequest req = RemoveHrisTaxonomyRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisTaxonomyResponse res = sdk.taxonomy().removeHrisTaxonomy()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisTaxonomyRequest](../../models/operations/RemoveHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveHrisTaxonomyResponse](../../models/operations/RemoveHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisTaxonomyRequest req = UpdateHrisTaxonomyRequest.builder()
+                .hrisTaxonomy(HrisTaxonomy.builder()
+                    .alternativeNames(List.of(
+                        "Facilitator",
+                        "National"))
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
+                    .domain("Health")
+                    .id("2d9f56a8-8e4d-4c51-acd1-3ac8f2450442")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("International Functionality Architect")
+                    .subcategory("Marble")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.645Z"))
+                    .url("https://fixed-membership.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisTaxonomyResponse res = sdk.taxonomy().updateHrisTaxonomy()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomy().isPresent()) {
+            System.out.println(res.hrisTaxonomy().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisTaxonomyRequest](../../models/operations/UpdateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateHrisTaxonomyResponse](../../models/operations/UpdateHrisTaxonomyResponse.md)**
 
 ### Errors
 

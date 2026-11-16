@@ -130,9 +130,7 @@ public class QmsAudit {
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
-    /**
-     * Normalized status of a quality record
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private QmsAuditStatus status;
@@ -330,9 +328,6 @@ public class QmsAudit {
         return Optional.ofNullable(this.startAt);
     }
 
-    /**
-     * Normalized status of a quality record
-     */
     public Optional<QmsAuditStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -506,9 +501,6 @@ public class QmsAudit {
     }
 
 
-    /**
-     * Normalized status of a quality record
-     */
     public QmsAudit withStatus(@Nullable QmsAuditStatus status) {
         this.status = status;
         return this;
@@ -801,9 +793,6 @@ public class QmsAudit {
             return this;
         }
 
-        /**
-         * Normalized status of a quality record
-         */
         public Builder status(@Nullable QmsAuditStatus status) {
             this.status = status;
             return this;

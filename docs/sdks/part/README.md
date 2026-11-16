@@ -8,6 +8,7 @@
 * [getPlmPart](#getplmpart) - Retrieve a part
 * [listPlmParts](#listplmparts) - List all parts
 * [patchPlmPart](#patchplmpart) - Update a part
+* [removePlmPart](#removeplmpart) - Remove a part
 * [updatePlmPart](#updateplmpart) - Update a part
 
 ## createPlmPart
@@ -44,10 +45,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("edd759cb-829f-4fba-8cd1-f34789c1ed7d")
+                    .id("d1d17550-7dba-4386-8812-862c80454dbb")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("da826483-fbec-429d-aac2-0aa822331622")
+                    .masterIdentifier("38c93670-d215-4816-828f-8cdf514f88f4")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -57,7 +58,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.419Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")
@@ -239,10 +240,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("c8a046ae-426d-44f2-b292-2844b2b42612")
+                    .id("68c10319-21ab-44a9-b873-061ed4415b1f")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("3f9c4ea8-5210-4498-a541-315554381cd2")
+                    .masterIdentifier("337e79f2-8c11-4d62-93d0-ec47354b813b")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -252,7 +253,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.422Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")
@@ -279,6 +280,62 @@ public class Application {
 ### Response
 
 **[PatchPlmPartResponse](../../models/operations/PatchPlmPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePlmPartRequest req = RemovePlmPartRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePlmPartResponse res = sdk.part().removePlmPart()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemovePlmPartRequest](../../models/operations/RemovePlmPartRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[RemovePlmPartResponse](../../models/operations/RemovePlmPartResponse.md)**
 
 ### Errors
 
@@ -320,10 +377,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("c8a046ae-426d-44f2-b292-2844b2b42612")
+                    .id("68c10319-21ab-44a9-b873-061ed4415b1f")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("3f9c4ea8-5210-4498-a541-315554381cd2")
+                    .masterIdentifier("337e79f2-8c11-4d62-93d0-ec47354b813b")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -333,7 +390,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.422Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")

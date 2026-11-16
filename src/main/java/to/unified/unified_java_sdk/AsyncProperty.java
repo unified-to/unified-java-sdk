@@ -34,7 +34,9 @@ import to.unified.unified_java_sdk.models.operations.PatchPropertyListingRequest
 import to.unified.unified_java_sdk.models.operations.PatchPropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyListingRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyListingRequest;
@@ -94,8 +96,12 @@ import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReviewRe
 import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReviewResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsPropertyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyGuestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyGuestResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemovePropertyListingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemovePropertyListingResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsPropertyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAnalyticsPropertyResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyGuestRequestBuilder;
@@ -133,7 +139,9 @@ import to.unified.unified_java_sdk.operations.PatchPropertyListing;
 import to.unified.unified_java_sdk.operations.PatchPropertyReservation;
 import to.unified.unified_java_sdk.operations.PatchPropertyReview;
 import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.operations.RemovePropertyListing;
+import to.unified.unified_java_sdk.operations.RemovePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
 import to.unified.unified_java_sdk.operations.UpdatePropertyGuest;
 import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
@@ -1008,6 +1016,33 @@ public class AsyncProperty {
 
 
     /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePropertyGuestRequestBuilder removePropertyGuest() {
+        return new RemovePropertyGuestRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyGuestResponse> removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        AsyncRequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
+              = new RemovePropertyGuest.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove a listing
      * 
      * <p>Deletes the PropertyListing identified by `id`.
@@ -1029,6 +1064,33 @@ public class AsyncProperty {
     public CompletableFuture<RemovePropertyListingResponse> removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
         AsyncRequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
               = new RemovePropertyListing.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePropertyReservationRequestBuilder removePropertyReservation() {
+        return new RemovePropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyReservationResponse> removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        AsyncRequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
+              = new RemovePropertyReservation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

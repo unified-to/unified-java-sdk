@@ -43,7 +43,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("d32195a1-5c20-4900-a56e-acd808d6c5e9")
+                    .id("02dd2d0d-6897-43d9-8e0c-36cc6a0ff552")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -62,7 +62,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-23T11:14:44.241Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-25T03:46:20.032Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -241,7 +241,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("50c2da0c-1636-46a5-ab71-42e8520e6950")
+                    .id("efd06cdb-00ac-4df9-8f71-5dda8799392b")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -260,7 +260,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-23T11:14:44.258Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-25T03:46:20.041Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -381,7 +381,7 @@ public class Application {
                 .lmsClass(LmsClass.builder()
                     .createdAt(OffsetDateTime.parse("2020-02-20T14:48:51.845Z"))
                     .description("Anser sperno decerno.")
-                    .id("50c2da0c-1636-46a5-ab71-42e8520e6950")
+                    .id("efd06cdb-00ac-4df9-8f71-5dda8799392b")
                     .instructors(List.of())
                     .languages(List.of(
                         "in"))
@@ -400,7 +400,7 @@ public class Application {
                     .metadata(List.of())
                     .name("virtus")
                     .students(List.of())
-                    .updatedAt(OffsetDateTime.parse("2025-08-23T11:14:44.258Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-08-25T03:46:20.041Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -67,6 +67,7 @@
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisJob](#patchhrisjob) - Update a job
 * [patchHrisLocation](#patchhrislocation) - Update a location
+* [patchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
 * [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [removeHrisAttendance](#removehrisattendance) - Remove an attendance
@@ -81,6 +82,7 @@
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisJob](#removehrisjob) - Remove a job
 * [removeHrisLocation](#removehrislocation) - Remove a location
+* [removeHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
 * [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [updateHrisAttendance](#updatehrisattendance) - Update an attendance
@@ -95,6 +97,7 @@
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisJob](#updatehrisjob) - Update a job
 * [updateHrisLocation](#updatehrislocation) - Update a location
+* [updateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 * [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
@@ -129,8 +132,8 @@ public class Application {
         CreateHrisAttendanceRequest req = CreateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:24:34.854Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-12T04:50:49.973Z"))
+                    .endAt(OffsetDateTime.parse("2024-05-06T20:10:20.704Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-12T07:15:19.745Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -139,28 +142,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-20T02:08:43.365Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-20T03:11:01.965Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-26T03:03:22.992Z"))
-                            .id("33982595-3489-48bc-b1c9-4c60aa4779d2")
+                            .endAt(OffsetDateTime.parse("2024-02-27T03:01:23.228Z"))
+                            .id("5cd908e1-6758-4033-b248-240cae71af5b")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-11-09T04:16:20.525Z"))
+                            .startAt(OffsetDateTime.parse("2023-11-10T01:25:45.494Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("07cce3fb-6ec9-4efd-9b9e-d1ba2108d6d7")
+                    .id("9522d463-7e60-49cd-b7fa-b5814157c5d0")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-21T22:07:46.111Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-22T02:21:41.803Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -229,7 +232,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("87b5f252-f526-45b5-9340-75448de74d6e")
+                    .id("15166ff4-5101-46a4-b156-7dcccd3429a2")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -237,7 +240,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-20T16:25:06.207Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-22T08:37:43.263Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -307,13 +310,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("808e77ce-f220-44b4-9bda-ed10b312c9ac")
+                    .id("7b1b09cb-606b-464c-b322-0fb7d9c4a0e8")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-31T06:43:27.206Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-01T04:19:32.238Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -384,11 +387,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("6c82d8a7-a511-4f48-94be-3a813b8c620e")
+                    .id("afbc0fb0-2e8a-44fd-9904-d26598c1730d")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-01T11:06:01.407Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-11-03T12:20:24.032Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -457,14 +460,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("4da41f65-15bc-4504-8900-8d771e99c9c7")
+                    .id("e36ca7e1-b6f3-4df6-9324-df8598a7eeef")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-04-02T12:53:27.093Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-04T02:36:42.927Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-04-06T00:16:55.680Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-07T06:45:45.892Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -535,7 +538,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("31b6219a-0ef8-46bd-951f-5220d9e7fb7c")
+                    .id("d963b5a8-2568-4f64-bef9-5efbee507e11")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -543,7 +546,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T13:11:56.076Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T16:37:18.759Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -609,10 +612,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("d5e7926c-a47b-4db7-9ecf-d5c08f28fa04")
+                    .id("343bfe20-c84f-4640-8cb0-e835c8b1b2af")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-29T08:32:21.858Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-30T21:19:51.597Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -678,12 +681,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("2e936362-d9dd-45ab-bd96-bc29ede022f0")
+                    .id("07045cc7-52e7-4752-a5a5-2403492def7c")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-08-05T07:14:10.727Z"))
+                    .startAt(OffsetDateTime.parse("2022-08-06T05:37:06.348Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-12T01:28:02.175Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-12T08:06:13.007Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -780,7 +783,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("c1ce070f-7cbd-48f5-be73-0229cd1112e6")
+                    .id("707b4157-c86a-4ec5-bf4e-c247e7692a2b")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -791,7 +794,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("22e1ea5e-4936-43fd-b811-6bb629de7964")
+                            .id("ce7d15cf-9906-4252-95f4-602c82ad6144")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -834,7 +837,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-22T00:08:37.390Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-22T06:00:16.664Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -898,12 +901,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("56987874-885b-42d9-8b57-264e01db5a02")
+                    .id("92263f0e-a716-4a2b-adc3-81556bdc6ad6")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-06-11T13:13:20.792Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-13T07:49:20.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -969,11 +972,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("6a5eecd5-0fcc-4d2c-9ee6-0ad93820cce9")
+                    .id("a2202ccc-cf49-433e-bcdf-8f0c91cb286c")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-02-08T06:01:23.584Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T00:43:13.377Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1047,7 +1050,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("7a3cdcb8-0db7-4271-8c97-00c78ccf561f")
+                    .id("c608411e-b659-40aa-96ca-fabed999a2b4")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -1067,7 +1070,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T20:33:38.356Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T14:41:14.815Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1135,13 +1138,13 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
                     .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
                     .domain("Health")
-                    .id("8c456555-cb3b-42b0-ae9f-0cf521bde301")
+                    .id("010270db-f5e7-4b9b-b182-44ec803a38af")
                     .isActive(false)
                     .metadata(List.of())
                     .name("International Functionality Architect")
                     .subcategory("Marble")
                     .type(HrisTaxonomyType.KNOWLEDGE)
-                    .updatedAt(OffsetDateTime.parse("2023-06-03T11:00:04.146Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.643Z"))
                     .url("https://fixed-membership.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1205,7 +1208,7 @@ public class Application {
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-25T04:42:59.972Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-25T08:28:33.425Z"))
                     .attachments(List.of(
                         HrisAttachment.builder()
                             .contentType("application/pdf")
@@ -1218,16 +1221,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2025-01-13T01:12:33.551Z"))
-                    .id("d4b3e2e9-808d-4eca-9b9f-dc729f073ddc")
+                    .endAt(OffsetDateTime.parse("2025-01-14T08:57:03.108Z"))
+                    .id("5c606537-c7c5-441f-99c2-f180e6c6ff6d")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-13T21:14:20.941Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-14T16:01:58.951Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-16T10:47:08.461Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-16T18:17:56.861Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1290,7 +1293,7 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-28T01:12:55.027Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-28T21:52:00.290Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -1300,13 +1303,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-10-20T18:33:10.090Z"))
+                    .endAt(OffsetDateTime.parse("2026-10-22T19:39:11.994Z"))
                     .hours(6d)
-                    .id("830f8f0e-4e03-4595-bc58-5c1a65e69689")
+                    .id("9aefbd62-36ad-46d0-b84c-ecef739ec118")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-26T05:20:51.405Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-08T11:12:19.618Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-27T08:40:59.769Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-09T00:46:43.089Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3439,8 +3442,8 @@ public class Application {
         PatchHrisAttendanceRequest req = PatchHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:24:34.865Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-12T04:50:49.974Z"))
+                    .endAt(OffsetDateTime.parse("2024-05-06T20:10:20.711Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-12T07:15:19.745Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -3449,28 +3452,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-20T02:08:43.365Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-20T03:11:01.965Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-26T03:03:23.002Z"))
-                            .id("fc3e5806-3f0b-4bc2-953b-b34fe48a2518")
+                            .endAt(OffsetDateTime.parse("2024-02-27T03:01:23.234Z"))
+                            .id("30131dbc-6690-407b-850b-9227dc0c3cf2")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-11-09T04:16:20.534Z"))
+                            .startAt(OffsetDateTime.parse("2023-11-10T01:25:45.499Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("ba42222e-d4de-47ab-86a1-9db1ac9443bd")
+                    .id("2f482267-cf80-490c-891d-98de285e0708")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-21T22:07:46.113Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-22T02:21:41.805Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3540,7 +3543,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("0e07d57b-846a-401d-8825-6ff5d44fdf76")
+                    .id("be0925eb-62c7-40fd-aee8-22a80472f59d")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -3548,7 +3551,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-20T16:25:06.217Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-22T08:37:43.274Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3619,13 +3622,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("adc68c43-7190-4192-9b01-07997bd5262e")
+                    .id("804db955-9455-4d68-b400-ccb2da7af933")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-31T06:43:27.212Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-01T04:19:32.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3697,11 +3700,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("21c00425-cc8c-4410-97dd-bc6f11b212b9")
+                    .id("e0f986a2-05c6-4138-bb11-010ea85836a0")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-01T11:06:01.421Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-11-03T12:20:24.041Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3771,14 +3774,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("f9488d2c-266c-4c36-ad31-46cb94db3c78")
+                    .id("16160888-06f7-444d-bb95-86368e1f153b")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-04-02T12:53:27.102Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-04T02:36:42.938Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-04-06T00:16:55.687Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-07T06:45:45.901Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3850,7 +3853,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("75c4ee0f-ebf8-43e2-80b6-77ae588df5c1")
+                    .id("52373cf0-672e-4641-868f-4a3f0b9a5b8d")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -3858,7 +3861,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T13:11:56.082Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T16:37:18.764Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -3925,10 +3928,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("bc3ccf15-c83a-48fe-9eeb-89b25baa1809")
+                    .id("245f676e-a5f1-4417-b3ac-4d0648c41644")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-29T08:32:21.867Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-30T21:19:51.602Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3995,12 +3998,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("619205ff-80cf-49b6-9936-62ad901e34bc")
+                    .id("c9f7d345-cb91-4af1-a7ae-e9ccb28fd32b")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-08-05T07:14:10.733Z"))
+                    .startAt(OffsetDateTime.parse("2022-08-06T05:37:06.353Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-12T01:28:02.177Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-12T08:06:13.009Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4098,7 +4101,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("c66b91cc-f11d-4504-b4d0-d59875cc76f9")
+                    .id("97589961-dc09-4a14-927d-c5770e874a73")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -4109,7 +4112,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("9f147f26-c019-4e53-bb1e-de68c273686b")
+                            .id("b9e4e4d2-c380-408d-b0a8-5096fa56cef7")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -4152,7 +4155,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-22T00:08:37.399Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-22T06:00:16.671Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4217,12 +4220,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("a7d3865f-4801-48e4-9d1d-16d9eb7e5d1d")
+                    .id("a8616c2c-de93-467e-969c-d88d8a6e6570")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-06-11T13:13:20.801Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-13T07:49:20.792Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4289,11 +4292,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("8a3629dc-0a63-4f7c-9f61-318964492af2")
+                    .id("c142f789-1676-4c3e-a6d0-e4a3d82a75ee")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-02-08T06:01:23.616Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T00:43:13.409Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4368,7 +4371,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("ce4b220c-b814-41d9-b7e8-e34ab6866f5e")
+                    .id("c349e202-221e-4b1d-b653-9d148caa127f")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -4388,7 +4391,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T20:33:38.362Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T14:41:14.820Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4414,6 +4417,82 @@ public class Application {
 ### Response
 
 **[PatchHrisLocationResponse](../../models/operations/PatchHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisTaxonomyRequest req = PatchHrisTaxonomyRequest.builder()
+                .hrisTaxonomy(HrisTaxonomy.builder()
+                    .alternativeNames(List.of(
+                        "Facilitator",
+                        "National"))
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
+                    .domain("Health")
+                    .id("2d9f56a8-8e4d-4c51-acd1-3ac8f2450442")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("International Functionality Architect")
+                    .subcategory("Marble")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.645Z"))
+                    .url("https://fixed-membership.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisTaxonomyResponse res = sdk.hris().patchHrisTaxonomy()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomy().isPresent()) {
+            System.out.println(res.hrisTaxonomy().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [PatchHrisTaxonomyRequest](../../models/operations/PatchHrisTaxonomyRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[PatchHrisTaxonomyResponse](../../models/operations/PatchHrisTaxonomyResponse.md)**
 
 ### Errors
 
@@ -4452,7 +4531,7 @@ public class Application {
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-25T04:42:59.974Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-25T08:28:33.426Z"))
                     .attachments(List.of(
                         HrisAttachment.builder()
                             .contentType("application/pdf")
@@ -4465,16 +4544,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2025-01-13T01:12:33.567Z"))
-                    .id("f4e70743-9a44-4179-8915-a9375415f255")
+                    .endAt(OffsetDateTime.parse("2025-01-14T08:57:03.118Z"))
+                    .id("798c3024-c554-4b36-af59-b63ac9523642")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-13T21:14:20.950Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-14T16:01:58.957Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-16T10:47:08.465Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-16T18:17:56.863Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -4538,7 +4617,7 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-28T01:12:55.032Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-28T21:52:00.294Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -4548,13 +4627,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-10-20T18:33:10.102Z"))
+                    .endAt(OffsetDateTime.parse("2026-10-22T19:39:12.004Z"))
                     .hours(6d)
-                    .id("f94b8fd0-1cb5-4669-a0ea-a44479f03039")
+                    .id("729bf08a-8342-4dd4-8422-29a966dc1e95")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-26T05:20:51.412Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-08T11:12:19.621Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-27T08:40:59.775Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-09T00:46:43.092Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5259,6 +5338,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisTaxonomyRequest req = RemoveHrisTaxonomyRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisTaxonomyResponse res = sdk.hris().removeHrisTaxonomy()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [RemoveHrisTaxonomyRequest](../../models/operations/RemoveHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[RemoveHrisTaxonomyResponse](../../models/operations/RemoveHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisTimeoff
 
 Deletes the HrisTimeoff identified by `id`.
@@ -5402,8 +5537,8 @@ public class Application {
         UpdateHrisAttendanceRequest req = UpdateHrisAttendanceRequest.builder()
                 .hrisAttendance(HrisAttendance.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2024-05-05T18:24:34.865Z"))
-                    .startAt(OffsetDateTime.parse("2021-11-12T04:50:49.974Z"))
+                    .endAt(OffsetDateTime.parse("2024-05-06T20:10:20.711Z"))
+                    .startAt(OffsetDateTime.parse("2021-11-12T07:15:19.745Z"))
                     .address(PropertyHrisAttendanceAddress.builder()
                         .address1("14108 Allie Flats")
                         .city("Kearaborough")
@@ -5412,28 +5547,28 @@ public class Application {
                         .region("Tennessee")
                         .regionCode("CA")
                         .build())
-                    .approvedAt(OffsetDateTime.parse("2021-09-20T02:08:43.365Z"))
+                    .approvedAt(OffsetDateTime.parse("2021-09-20T03:11:01.965Z"))
                     .breaks(List.of(
                         HrisAttendanceBreak.builder()
                             .durationMinutes(51d)
-                            .endAt(OffsetDateTime.parse("2024-02-26T03:03:23.002Z"))
-                            .id("fc3e5806-3f0b-4bc2-953b-b34fe48a2518")
+                            .endAt(OffsetDateTime.parse("2024-02-27T03:01:23.234Z"))
+                            .id("30131dbc-6690-407b-850b-9227dc0c3cf2")
                             .isPaid(false)
                             .name("Lunch")
-                            .startAt(OffsetDateTime.parse("2023-11-09T04:16:20.534Z"))
+                            .startAt(OffsetDateTime.parse("2023-11-10T01:25:45.499Z"))
                             .build()))
                     .createdAt(OffsetDateTime.parse("2021-08-10T19:43:18.452Z"))
                     .currency("EUR")
                     .declaredTipsAmount(54d)
                     .hourlyRate(16d)
                     .hours(10d)
-                    .id("ba42222e-d4de-47ab-86a1-9db1ac9443bd")
+                    .id("2f482267-cf80-490c-891d-98de285e0708")
                     .jobName("Human Accountability Administrator")
                     .metadata(List.of())
                     .nonCashTipsAmount(167d)
                     .status(HrisAttendanceStatus.OPEN)
                     .timezone("America/Atikokan")
-                    .updatedAt(OffsetDateTime.parse("2022-01-21T22:07:46.113Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-01-22T02:21:41.805Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5503,7 +5638,7 @@ public class Application {
                     .countryCode("US")
                     .createdAt(OffsetDateTime.parse("2019-11-16T16:43:45.976Z"))
                     .currency("USD")
-                    .id("0e07d57b-846a-401d-8825-6ff5d44fdf76")
+                    .id("be0925eb-62c7-40fd-aee8-22a80472f59d")
                     .isPrimary(true)
                     .metadata(List.of())
                     .name("Granville Schumm - Checking")
@@ -5511,7 +5646,7 @@ public class Application {
                     .routingNumber("448650724")
                     .splitAmount(98d)
                     .splitType(SplitType.PERCENTAGE)
-                    .updatedAt(OffsetDateTime.parse("2025-07-20T16:25:06.217Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-22T08:37:43.274Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5582,13 +5717,13 @@ public class Application {
                     .employerContributionMaxAmount(179093d)
                     .employerContributionType(EmployerContributionType.PERCENTAGE)
                     .frequency(HrisBenefitFrequency.MONTH)
-                    .id("adc68c43-7190-4192-9b01-07997bd5262e")
+                    .id("804db955-9455-4d68-b400-ccb2da7af933")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Frozen Wooden Ball")
                     .tax(Tax.PRE_TAX)
                     .type(HrisBenefitType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2023-03-31T06:43:27.212Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-01T04:19:32.243Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5660,11 +5795,11 @@ public class Application {
                         .regionCode("MO")
                         .build())
                     .createdAt(OffsetDateTime.parse("2021-05-02T22:27:38.970Z"))
-                    .id("21c00425-cc8c-4410-97dd-bc6f11b212b9")
+                    .id("e0f986a2-05c6-4138-bb11-010ea85836a0")
                     .legalName("Gottlieb Group LLC")
                     .metadata(List.of())
                     .name("Gottlieb Group")
-                    .updatedAt(OffsetDateTime.parse("2026-11-01T11:06:01.421Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-11-03T12:20:24.041Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5734,14 +5869,14 @@ public class Application {
                     .employerType(EmployerType.PERCENTAGE)
                     .frequency(HrisDeductionFrequency.ONE_TIME)
                     .garnishmentType(GarnishmentType.CHILD_SUPPORT)
-                    .id("f9488d2c-266c-4c36-ad31-46cb94db3c78")
+                    .id("16160888-06f7-444d-bb95-86368e1f153b")
                     .isActive(true)
                     .maxAmount(21794d)
                     .metadata(List.of())
                     .notes("Carmen desidero.")
-                    .startAt(OffsetDateTime.parse("2025-04-02T12:53:27.102Z"))
+                    .startAt(OffsetDateTime.parse("2025-04-04T02:36:42.938Z"))
                     .type(HrisDeductionType.FIXED)
-                    .updatedAt(OffsetDateTime.parse("2024-04-06T00:16:55.687Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-04-07T06:45:45.901Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5813,7 +5948,7 @@ public class Application {
                     .hasHdEncrypted(true)
                     .hasPasswordManager(true)
                     .hasScreenlock(false)
-                    .id("75c4ee0f-ebf8-43e2-80b6-77ae588df5c1")
+                    .id("52373cf0-672e-4641-868f-4a3f0b9a5b8d")
                     .isMissing(false)
                     .manufacturer("Hackett Inc")
                     .metadata(List.of())
@@ -5821,7 +5956,7 @@ public class Application {
                     .name("august-laptop")
                     .os("transmitter")
                     .osVersion("8.4.8")
-                    .updatedAt(OffsetDateTime.parse("2023-06-21T13:11:56.082Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-22T16:37:18.764Z"))
                     .version("4.15.7")
                     .build())
                 .connectionId("<id>")
@@ -5888,10 +6023,10 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-10-27T11:47:26.086Z"))
                     .documentUrl("https://sore-decision.biz/")
                     .filename("ridge_forager.xsl")
-                    .id("bc3ccf15-c83a-48fe-9eeb-89b25baa1809")
+                    .id("245f676e-a5f1-4417-b3ac-4d0648c41644")
                     .metadata(List.of())
                     .type(HrisDocumentType.POLICY)
-                    .updatedAt(OffsetDateTime.parse("2025-10-29T08:32:21.867Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-10-30T21:19:51.602Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -5958,12 +6093,12 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2019-01-26T12:44:52.326Z"))
                     .currency("USD")
                     .frequency(HrisEarningFrequency.SEMIMONTHLY)
-                    .id("619205ff-80cf-49b6-9936-62ad901e34bc")
+                    .id("c9f7d345-cb91-4af1-a7ae-e9ccb28fd32b")
                     .metadata(List.of())
                     .notes("Deporto truculenter vinum beatae.")
-                    .startAt(OffsetDateTime.parse("2022-08-05T07:14:10.733Z"))
+                    .startAt(OffsetDateTime.parse("2022-08-06T05:37:06.353Z"))
                     .status(HrisEarningStatus.ENDED)
-                    .updatedAt(OffsetDateTime.parse("2020-02-12T01:28:02.177Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-02-12T08:06:13.009Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6061,7 +6196,7 @@ public class Application {
                     .gender(HrisEmployeeGender.MALE)
                     .hasMfa(true)
                     .hiredAt(OffsetDateTime.parse("2019-09-16T15:08:53.262Z"))
-                    .id("c66b91cc-f11d-4504-b4d0-d59875cc76f9")
+                    .id("97589961-dc09-4a14-927d-c5770e874a73")
                     .imageUrl("https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg")
                     .languageLocale("in")
                     .lastName("Prohaska")
@@ -6072,7 +6207,7 @@ public class Application {
                             .extraData(HrisMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(HrisMetadataFormat.TEXT)
-                            .id("9f147f26-c019-4e53-bb1e-de68c273686b")
+                            .id("b9e4e4d2-c380-408d-b0a8-5096fa56cef7")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(HrisMetadataValue.of("tutis"))
@@ -6115,7 +6250,7 @@ public class Application {
                     .timeoffDaysUsed(9d)
                     .timezone("Europe/Ljubljana")
                     .title("District Branding Specialist")
-                    .updatedAt(OffsetDateTime.parse("2020-07-22T00:08:37.399Z"))
+                    .updatedAt(OffsetDateTime.parse("2020-07-22T06:00:16.671Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6180,12 +6315,12 @@ public class Application {
                 .hrisGroup(HrisGroup.builder()
                     .createdAt(OffsetDateTime.parse("2023-11-01T13:13:40.714Z"))
                     .description("Absorbeo casso.")
-                    .id("a7d3865f-4801-48e4-9d1d-16d9eb7e5d1d")
+                    .id("a8616c2c-de93-467e-969c-d88d8a6e6570")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Games")
                     .type(HrisGroupType.BRANCH)
-                    .updatedAt(OffsetDateTime.parse("2026-06-11T13:13:20.801Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-06-13T07:49:20.792Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6252,11 +6387,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2020-10-28T01:13:19.491Z"))
                     .description("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.")
                     .employmentType(HrisJobEmploymentType.FREELANCE)
-                    .id("8a3629dc-0a63-4f7c-9f61-318964492af2")
+                    .id("c142f789-1676-4c3e-a6d0-e4a3d82a75ee")
                     .isActive(false)
                     .metadata(List.of())
                     .name("Internal Integration Specialist")
-                    .updatedAt(OffsetDateTime.parse("2023-02-08T06:01:23.616Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-02-09T00:43:13.409Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6331,7 +6466,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-07-18T10:32:01.414Z"))
                     .currency("MNT")
                     .description("Commemoro acervus.")
-                    .id("ce4b220c-b814-41d9-b7e8-e34ab6866f5e")
+                    .id("c349e202-221e-4b1d-b653-9d148caa127f")
                     .isActive(false)
                     .isHq(true)
                     .languageLocale("it")
@@ -6351,7 +6486,7 @@ public class Application {
                             .type(HrisTelephoneType.HOME)
                             .build()))
                     .timezone("Asia/Jerusalem")
-                    .updatedAt(OffsetDateTime.parse("2023-06-29T20:33:38.362Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-06-30T14:41:14.820Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6377,6 +6512,82 @@ public class Application {
 ### Response
 
 **[UpdateHrisLocationResponse](../../models/operations/UpdateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisTaxonomyRequest req = UpdateHrisTaxonomyRequest.builder()
+                .hrisTaxonomy(HrisTaxonomy.builder()
+                    .alternativeNames(List.of(
+                        "Facilitator",
+                        "National"))
+                    .createdAt(OffsetDateTime.parse("2022-06-23T02:10:00.789Z"))
+                    .description("Uterque vespillo adnuo ea commodo turbo suscipio condico.")
+                    .domain("Health")
+                    .id("2d9f56a8-8e4d-4c51-acd1-3ac8f2450442")
+                    .isActive(false)
+                    .metadata(List.of())
+                    .name("International Functionality Architect")
+                    .subcategory("Marble")
+                    .type(HrisTaxonomyType.KNOWLEDGE)
+                    .updatedAt(OffsetDateTime.parse("2023-06-03T21:39:48.645Z"))
+                    .url("https://fixed-membership.biz/")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisTaxonomyResponse res = sdk.hris().updateHrisTaxonomy()
+                .request(req)
+                .call();
+
+        if (res.hrisTaxonomy().isPresent()) {
+            System.out.println(res.hrisTaxonomy().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [UpdateHrisTaxonomyRequest](../../models/operations/UpdateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[UpdateHrisTaxonomyResponse](../../models/operations/UpdateHrisTaxonomyResponse.md)**
 
 ### Errors
 
@@ -6415,7 +6626,7 @@ public class Application {
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
                     .userId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-02-25T04:42:59.974Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-02-25T08:28:33.426Z"))
                     .attachments(List.of(
                         HrisAttachment.builder()
                             .contentType("application/pdf")
@@ -6428,16 +6639,16 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-10-06T18:00:20.615Z"))
                     .duration(4d)
                     .durationType(DurationType.DAY)
-                    .endAt(OffsetDateTime.parse("2025-01-13T01:12:33.567Z"))
-                    .id("f4e70743-9a44-4179-8915-a9375415f255")
+                    .endAt(OffsetDateTime.parse("2025-01-14T08:57:03.118Z"))
+                    .id("798c3024-c554-4b36-af59-b63ac9523642")
                     .isPaid(true)
                     .metadata(List.of())
                     .originalType("acerbitas ut")
                     .reason("verto")
-                    .startAt(OffsetDateTime.parse("2023-09-13T21:14:20.950Z"))
+                    .startAt(OffsetDateTime.parse("2023-09-14T16:01:58.957Z"))
                     .status(HrisTimeoffStatus.DENIED)
                     .type(HrisTimeoffType.IN_LIEU)
-                    .updatedAt(OffsetDateTime.parse("2022-07-16T10:47:08.465Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-07-16T18:17:56.863Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -6501,7 +6712,7 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .approvedAt(OffsetDateTime.parse("2022-07-28T01:12:55.032Z"))
+                    .approvedAt(OffsetDateTime.parse("2022-07-28T21:52:00.294Z"))
                     .compensation(List.of(
                         HrisCompensation.builder()
                             .amount(76761d)
@@ -6511,13 +6722,13 @@ public class Application {
                             .type(HrisCompensationType.COMMISSION)
                             .build()))
                     .createdAt(OffsetDateTime.parse("2019-07-01T23:53:15.738Z"))
-                    .endAt(OffsetDateTime.parse("2026-10-20T18:33:10.102Z"))
+                    .endAt(OffsetDateTime.parse("2026-10-22T19:39:12.004Z"))
                     .hours(6d)
-                    .id("f94b8fd0-1cb5-4669-a0ea-a44479f03039")
+                    .id("729bf08a-8342-4dd4-8422-29a966dc1e95")
                     .isApproved(false)
                     .metadata(List.of())
-                    .startAt(OffsetDateTime.parse("2023-07-26T05:20:51.412Z"))
-                    .updatedAt(OffsetDateTime.parse("2021-07-08T11:12:19.621Z"))
+                    .startAt(OffsetDateTime.parse("2023-07-27T08:40:59.775Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-07-09T00:46:43.092Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

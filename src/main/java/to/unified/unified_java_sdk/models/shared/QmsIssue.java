@@ -20,7 +20,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 /**
  * QmsIssue
  * 
- * <p>A nonconformance, complaint, audit finding or problem report
+ * <p>A nonconformance, complaint, audit finding or other quality issue
  */
 public class QmsIssue {
     /**
@@ -61,9 +61,7 @@ public class QmsIssue {
     @JsonProperty("description")
     private String description;
 
-    /**
-     * What to do with the nonconforming material
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disposition")
     private Disposition disposition;
@@ -151,16 +149,12 @@ public class QmsIssue {
     @JsonProperty("severity")
     private Severity severity;
 
-    /**
-     * Where a quality issue was found
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     private QmsIssueSource source;
 
-    /**
-     * Normalized status of a quality record
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private QmsIssueStatus status;
@@ -302,9 +296,6 @@ public class QmsIssue {
         return Optional.ofNullable(this.description);
     }
 
-    /**
-     * What to do with the nonconforming material
-     */
     public Optional<Disposition> disposition() {
         return Optional.ofNullable(this.disposition);
     }
@@ -388,16 +379,10 @@ public class QmsIssue {
         return Optional.ofNullable(this.severity);
     }
 
-    /**
-     * Where a quality issue was found
-     */
     public Optional<QmsIssueSource> source() {
         return Optional.ofNullable(this.source);
     }
 
-    /**
-     * Normalized status of a quality record
-     */
     public Optional<QmsIssueStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -484,9 +469,6 @@ public class QmsIssue {
     }
 
 
-    /**
-     * What to do with the nonconforming material
-     */
     public QmsIssue withDisposition(@Nullable Disposition disposition) {
         this.disposition = disposition;
         return this;
@@ -598,18 +580,12 @@ public class QmsIssue {
     }
 
 
-    /**
-     * Where a quality issue was found
-     */
     public QmsIssue withSource(@Nullable QmsIssueSource source) {
         this.source = source;
         return this;
     }
 
 
-    /**
-     * Normalized status of a quality record
-     */
     public QmsIssue withStatus(@Nullable QmsIssueStatus status) {
         this.status = status;
         return this;
@@ -843,9 +819,6 @@ public class QmsIssue {
             return this;
         }
 
-        /**
-         * What to do with the nonconforming material
-         */
         public Builder disposition(@Nullable Disposition disposition) {
             this.disposition = disposition;
             return this;
@@ -943,17 +916,11 @@ public class QmsIssue {
             return this;
         }
 
-        /**
-         * Where a quality issue was found
-         */
         public Builder source(@Nullable QmsIssueSource source) {
             this.source = source;
             return this;
         }
 
-        /**
-         * Normalized status of a quality record
-         */
         public Builder status(@Nullable QmsIssueStatus status) {
             this.status = status;
             return this;

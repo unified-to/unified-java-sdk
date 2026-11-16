@@ -42,6 +42,7 @@
 * [patchComputeInstance](#patchcomputeinstance) - Update an instance
 * [patchComputeKey](#patchcomputekey) - Update a key
 * [patchComputeService](#patchcomputeservice) - Update a service
+* [patchComputeSnapshot](#patchcomputesnapshot) - Update a snapshot
 * [patchComputeTemplate](#patchcomputetemplate) - Update a template
 * [patchComputeVolume](#patchcomputevolume) - Update a volume
 * [removeComputeDeployment](#removecomputedeployment) - Remove a deployment
@@ -59,6 +60,7 @@
 * [updateComputeInstance](#updatecomputeinstance) - Update an instance
 * [updateComputeKey](#updatecomputekey) - Update a key
 * [updateComputeService](#updatecomputeservice) - Update a service
+* [updateComputeSnapshot](#updatecomputesnapshot) - Update a snapshot
 * [updateComputeTemplate](#updatecomputetemplate) - Update a template
 * [updateComputeVolume](#updatecomputevolume) - Update a volume
 
@@ -97,13 +99,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-09-16T07:15:43.914Z"))
-                    .id("d658301c-17ce-40a4-961a-774147fc100b")
+                    .finishedAt(OffsetDateTime.parse("2025-09-17T19:51:25.755Z"))
+                    .id("7346cc28-8e27-49ef-af6a-b4ea86706588")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-25T20:50:50.254Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-27T05:03:27.616Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-03-21T04:04:25.202Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-22T22:21:01.167Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -167,12 +169,12 @@ public class Application {
         CreateComputeDomainRequest req = CreateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("992cb50c-b289-42cb-b742-0bcf39818be0")
+                    .id("4174a159-241c-4a6c-8553-8232dfb8feb1")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-17T07:13:36.836Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T11:31:39.979Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -237,11 +239,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("14445ca5-c368-48cf-b624-d9008fb55be2")
+                    .id("eade7a48-150d-412d-bb77-04f429a19401")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-21T12:36:48.589Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-23T01:43:58.918Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -319,7 +321,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("c1463b14-efc2-460e-a8bd-da13db9822bb")
+                    .id("d20d10ae-ccb7-4524-b43b-3a0ca20025c6")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -334,11 +336,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-04-07T13:12:30.584Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-08T19:23:48.203Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-07-02T03:33:29.009Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T12:34:36.163Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -401,11 +403,11 @@ public class Application {
         CreateComputeKeyRequest req = CreateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("321a0337-8c1a-4529-b6ea-400a6aa433d7")
+                    .id("cd28dd29-5e86-49c0-995f-90515b6aa1bc")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-15T12:45:51.041Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-16T06:29:12.281Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -470,7 +472,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("fd924324-0b49-4eed-981f-493ce879288f")
+                    .id("0e6306dd-309d-464f-8775-26ad583302c2")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -481,7 +483,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-16T11:35:07.153Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-17T12:00:28.682Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -545,13 +547,13 @@ public class Application {
         CreateComputeSnapshotRequest req = CreateComputeSnapshotRequest.builder()
                 .computeSnapshot(ComputeSnapshot.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
-                    .id("522b73a5-ef34-4eb0-8b48-2f0a319bd0f9")
+                    .id("54f1bc94-1d68-4013-9074-6348421b9ceb")
                     .metadata(List.of())
                     .name("snap-alius")
                     .sizeMb(169984d)
                     .status(ComputeSnapshotStatus.DELETING)
                     .type(ComputeSnapshotType.DISK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-21T04:23:30.814Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.237Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -619,17 +621,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("fea99188-c494-4a66-8586-821ab85b16d6")
+                    .id("030863a9-a81b-425f-9af3-f0052ddfdb7a")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-12T23:56:50.955Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-14T17:39:39.725Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-25T16:26:07.238Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T19:09:44.640Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -692,14 +694,14 @@ public class Application {
         CreateComputeVolumeRequest req = CreateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("573c1a8a-606d-4b15-804a-e3c86aa0fd6f")
+                    .id("3f051417-ccfa-432f-b7b4-1c70263ed8d0")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-17T10:24:01.576Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-18T01:58:37.872Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -2089,13 +2091,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-09-16T07:15:43.922Z"))
-                    .id("a49ddaca-677f-433a-8505-f40328191558")
+                    .finishedAt(OffsetDateTime.parse("2025-09-17T19:51:25.762Z"))
+                    .id("fbfa5494-9f6e-45cf-9e5c-d667d45615a6")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-25T20:50:50.261Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-27T05:03:27.622Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-03-21T04:04:25.211Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-22T22:21:01.175Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -2160,12 +2162,12 @@ public class Application {
         PatchComputeDomainRequest req = PatchComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("bd20b6c7-838d-41e4-a283-345f4c9e98c9")
+                    .id("af71ef15-f01f-4385-ad5b-6d2a9ccccba0")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-17T07:13:36.841Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T11:31:39.983Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2231,11 +2233,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("a5e81e78-5158-4908-8059-c228f3f700f9")
+                    .id("f3e9ac0e-8969-48d6-ba3a-01ecb0e80726")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-21T12:36:48.595Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-23T01:43:58.923Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2314,7 +2316,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("85adafc7-24ae-43b8-b14c-d1840005816b")
+                    .id("5dea0983-bcfb-4312-bf90-aee5bd7065df")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -2329,11 +2331,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-04-07T13:12:30.601Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-08T19:23:48.215Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-07-02T03:33:29.028Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T12:34:36.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2397,11 +2399,11 @@ public class Application {
         PatchComputeKeyRequest req = PatchComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("0f6e4027-78cd-4ffd-ac2c-ef7f9a61e1d6")
+                    .id("54ba2391-3f5f-443f-8546-3263430b7232")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-15T12:45:51.044Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-16T06:29:12.284Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2467,7 +2469,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("9b510b72-3ff0-411b-9398-36ad1a597bd8")
+                    .id("1707048e-b4d1-44d3-aa61-88efb6c5368f")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -2478,7 +2480,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-16T11:35:07.161Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-17T12:00:28.687Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -2505,6 +2507,76 @@ public class Application {
 ### Response
 
 **[PatchComputeServiceResponse](../../models/operations/PatchComputeServiceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchComputeSnapshotRequest req = PatchComputeSnapshotRequest.builder()
+                .computeSnapshot(ComputeSnapshot.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
+                    .id("8236394c-c3a7-4792-b0c9-b1348c8b6510")
+                    .metadata(List.of())
+                    .name("snap-alius")
+                    .sizeMb(169984d)
+                    .status(ComputeSnapshotStatus.DELETING)
+                    .type(ComputeSnapshotType.DISK)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.244Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchComputeSnapshotResponse res = sdk.compute().patchComputeSnapshot()
+                .request(req)
+                .call();
+
+        if (res.computeSnapshot().isPresent()) {
+            System.out.println(res.computeSnapshot().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchComputeSnapshotRequest](../../models/operations/PatchComputeSnapshotRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchComputeSnapshotResponse](../../models/operations/PatchComputeSnapshotResponse.md)**
 
 ### Errors
 
@@ -2548,17 +2620,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("4b266833-8ca9-4777-9057-2d099cdb7b7c")
+                    .id("88739a73-80b0-4825-b23b-6cc3b8f4fae6")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-12T23:56:50.967Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-14T17:39:39.735Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-25T16:26:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T19:09:44.646Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2622,14 +2694,14 @@ public class Application {
         PatchComputeVolumeRequest req = PatchComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("4dbe754b-a29e-48c2-830c-324b877c8038")
+                    .id("8b65db47-cf48-41d7-8903-4515de6f5818")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-17T10:24:01.579Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-18T01:58:37.876Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")
@@ -3202,13 +3274,13 @@ public class Application {
                     .commitMessage("copy primary pixel")
                     .createdAt(OffsetDateTime.parse("2022-06-07T03:52:04.613Z"))
                     .environment(Environment.PREVIEW)
-                    .finishedAt(OffsetDateTime.parse("2025-09-16T07:15:43.922Z"))
-                    .id("a49ddaca-677f-433a-8505-f40328191558")
+                    .finishedAt(OffsetDateTime.parse("2025-09-17T19:51:25.762Z"))
+                    .id("fbfa5494-9f6e-45cf-9e5c-d667d45615a6")
                     .metadata(List.of())
-                    .startedAt(OffsetDateTime.parse("2025-04-25T20:50:50.261Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-27T05:03:27.622Z"))
                     .status(ComputeDeploymentStatus.LIVE)
                     .trigger(Trigger.API)
-                    .updatedAt(OffsetDateTime.parse("2026-03-21T04:04:25.211Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-03-22T22:21:01.175Z"))
                     .url("https://comfortable-petal.name")
                     .build())
                 .connectionId("<id>")
@@ -3273,12 +3345,12 @@ public class Application {
         UpdateComputeDomainRequest req = UpdateComputeDomainRequest.builder()
                 .computeDomain(ComputeDomain.builder()
                     .createdAt(OffsetDateTime.parse("2019-11-22T16:38:26.009Z"))
-                    .id("bd20b6c7-838d-41e4-a283-345f4c9e98c9")
+                    .id("af71ef15-f01f-4385-ad5b-6d2a9ccccba0")
                     .isPrimary(false)
                     .metadata(List.of())
                     .name("mysterious-republican.usable-section.info")
                     .status(ComputeDomainStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-11-17T07:13:36.841Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-11-18T11:31:39.983Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3344,11 +3416,11 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2021-08-16T07:52:27.306Z"))
                     .environments(List.of(
                         PropertyComputeEnvvarEnvironments.PREVIEW))
-                    .id("a5e81e78-5158-4908-8059-c228f3f700f9")
+                    .id("f3e9ac0e-8969-48d6-ba3a-01ecb0e80726")
                     .isSecret(true)
                     .metadata(List.of())
                     .name("AEGER_SUBSTANTIA")
-                    .updatedAt(OffsetDateTime.parse("2025-07-21T12:36:48.595Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-23T01:43:58.923Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3427,7 +3499,7 @@ public class Application {
                             .build()))
                     .gpuCount(0d)
                     .hasInternetAccess(true)
-                    .id("85adafc7-24ae-43b8-b14c-d1840005816b")
+                    .id("5dea0983-bcfb-4312-bf90-aee5bd7065df")
                     .image("ubuntu:24.04")
                     .market(Market.SPOT)
                     .memoryMb(2048d)
@@ -3442,11 +3514,11 @@ public class Application {
                         .port(22d)
                         .username("root")
                         .build())
-                    .startedAt(OffsetDateTime.parse("2025-04-07T13:12:30.601Z"))
+                    .startedAt(OffsetDateTime.parse("2025-04-08T19:23:48.215Z"))
                     .status(ComputeInstanceStatus.ERROR)
                     .statusReason("Sponte quasi adversus alioqui reiciendis arca carmen canis.")
                     .type(ComputeInstanceType.BAREMETAL)
-                    .updatedAt(OffsetDateTime.parse("2025-07-02T03:33:29.028Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-07-03T12:34:36.177Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3510,11 +3582,11 @@ public class Application {
         UpdateComputeKeyRequest req = UpdateComputeKeyRequest.builder()
                 .computeKey(ComputeKey.builder()
                     .createdAt(OffsetDateTime.parse("2023-08-19T14:31:46.492Z"))
-                    .id("0f6e4027-78cd-4ffd-ac2c-ef7f9a61e1d6")
+                    .id("54ba2391-3f5f-443f-8546-3263430b7232")
                     .metadata(List.of())
                     .name("nienow-secret")
                     .type(ComputeKeyType.SECRET)
-                    .updatedAt(OffsetDateTime.parse("2024-10-15T12:45:51.044Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-10-16T06:29:12.284Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3580,7 +3652,7 @@ public class Application {
                     .branch("main")
                     .buildCommand("npm run build")
                     .createdAt(OffsetDateTime.parse("2023-10-04T02:06:29.391Z"))
-                    .id("9b510b72-3ff0-411b-9398-36ad1a597bd8")
+                    .id("1707048e-b4d1-44d3-aa61-88efb6c5368f")
                     .instanceCount(6d)
                     .maxInstanceCount(6d)
                     .metadata(List.of())
@@ -3591,7 +3663,7 @@ public class Application {
                     .runtime("python")
                     .status(ComputeServiceStatus.SUSPENDED)
                     .type(ComputeServiceType.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-04-16T11:35:07.161Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-04-17T12:00:28.687Z"))
                     .url("https://tame-sideboard.rotating-shoulder.biz")
                     .build())
                 .connectionId("<id>")
@@ -3618,6 +3690,76 @@ public class Application {
 ### Response
 
 **[UpdateComputeServiceResponse](../../models/operations/UpdateComputeServiceResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateComputeSnapshotRequest req = UpdateComputeSnapshotRequest.builder()
+                .computeSnapshot(ComputeSnapshot.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
+                    .id("8236394c-c3a7-4792-b0c9-b1348c8b6510")
+                    .metadata(List.of())
+                    .name("snap-alius")
+                    .sizeMb(169984d)
+                    .status(ComputeSnapshotStatus.DELETING)
+                    .type(ComputeSnapshotType.DISK)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.244Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateComputeSnapshotResponse res = sdk.compute().updateComputeSnapshot()
+                .request(req)
+                .call();
+
+        if (res.computeSnapshot().isPresent()) {
+            System.out.println(res.computeSnapshot().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateComputeSnapshotRequest](../../models/operations/UpdateComputeSnapshotRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateComputeSnapshotResponse](../../models/operations/UpdateComputeSnapshotResponse.md)**
 
 ### Errors
 
@@ -3661,17 +3803,17 @@ public class Application {
                     .dockerfile("FROM ubuntu:24.04\nRUN apt-get update")
                     .gpuCount(2d)
                     .gpuModel(ComputeTemplateGpuModel.NVIDIA_GH200)
-                    .id("4b266833-8ca9-4777-9057-2d099cdb7b7c")
+                    .id("88739a73-80b0-4825-b23b-6cc3b8f4fae6")
                     .image("perfumed-molasses/cohibeo:5.2")
                     .isPublic(false)
-                    .lastUsedAt(OffsetDateTime.parse("2026-04-12T23:56:50.967Z"))
+                    .lastUsedAt(OffsetDateTime.parse("2026-04-14T17:39:39.735Z"))
                     .memoryMb(8192d)
                     .metadata(List.of())
                     .name("multi-byte-card")
                     .ports(List.of(
                         8080d))
                     .status(ComputeTemplateStatus.OTHER)
-                    .updatedAt(OffsetDateTime.parse("2025-02-25T16:26:07.246Z"))
+                    .updatedAt(OffsetDateTime.parse("2025-02-26T19:09:44.646Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3735,14 +3877,14 @@ public class Application {
         UpdateComputeVolumeRequest req = UpdateComputeVolumeRequest.builder()
                 .computeVolume(ComputeVolume.builder()
                     .createdAt(OffsetDateTime.parse("2022-11-15T15:12:48.055Z"))
-                    .id("4dbe754b-a29e-48c2-830c-324b877c8038")
+                    .id("8b65db47-cf48-41d7-8903-4515de6f5818")
                     .instanceIds(List.of())
                     .metadata(List.of())
                     .name("vol-solum")
                     .sizeMb(1024000d)
                     .status(ComputeVolumeStatus.OTHER)
                     .type(ComputeVolumeType.HIGH_PERFORMANCE)
-                    .updatedAt(OffsetDateTime.parse("2024-02-17T10:24:01.579Z"))
+                    .updatedAt(OffsetDateTime.parse("2024-02-18T01:58:37.876Z"))
                     .usedMb(524986d)
                     .build())
                 .connectionId("<id>")

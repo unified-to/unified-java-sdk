@@ -120,6 +120,9 @@ import to.unified.unified_java_sdk.models.operations.PatchComputeKeyResponse;
 import to.unified.unified_java_sdk.models.operations.PatchComputeServiceRequest;
 import to.unified.unified_java_sdk.models.operations.PatchComputeServiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchComputeServiceResponse;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchComputeTemplateResponse;
@@ -171,6 +174,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateComputeKeyResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeServiceRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeServiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeServiceResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateComputeTemplateResponse;
@@ -215,6 +221,7 @@ import to.unified.unified_java_sdk.operations.PatchComputeEnvvar;
 import to.unified.unified_java_sdk.operations.PatchComputeInstance;
 import to.unified.unified_java_sdk.operations.PatchComputeKey;
 import to.unified.unified_java_sdk.operations.PatchComputeService;
+import to.unified.unified_java_sdk.operations.PatchComputeSnapshot;
 import to.unified.unified_java_sdk.operations.PatchComputeTemplate;
 import to.unified.unified_java_sdk.operations.PatchComputeVolume;
 import to.unified.unified_java_sdk.operations.RemoveComputeDeployment;
@@ -232,6 +239,7 @@ import to.unified.unified_java_sdk.operations.UpdateComputeEnvvar;
 import to.unified.unified_java_sdk.operations.UpdateComputeInstance;
 import to.unified.unified_java_sdk.operations.UpdateComputeKey;
 import to.unified.unified_java_sdk.operations.UpdateComputeService;
+import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.operations.UpdateComputeTemplate;
 import to.unified.unified_java_sdk.operations.UpdateComputeVolume;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -1417,6 +1425,34 @@ public class Compute {
     }
 
     /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchComputeSnapshotRequestBuilder patchComputeSnapshot() {
+        return new PatchComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeSnapshotResponse patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request) {
+        RequestOperation<PatchComputeSnapshotRequest, PatchComputeSnapshotResponse> operation
+              = new PatchComputeSnapshot.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a template
      * 
      * <p>Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change
@@ -1871,6 +1907,34 @@ public class Compute {
     public UpdateComputeServiceResponse updateComputeService(@Nonnull UpdateComputeServiceRequest request) {
         RequestOperation<UpdateComputeServiceRequest, UpdateComputeServiceResponse> operation
               = new UpdateComputeService.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateComputeSnapshotRequestBuilder updateComputeSnapshot() {
+        return new UpdateComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeSnapshotResponse updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request) {
+        RequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
+              = new UpdateComputeSnapshot.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

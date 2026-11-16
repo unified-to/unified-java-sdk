@@ -23,6 +23,7 @@
 * [patchPlmDocument](#patchplmdocument) - Update a document
 * [patchPlmPart](#patchplmpart) - Update a part
 * [removePlmBomline](#removeplmbomline) - Remove a bomline
+* [removePlmPart](#removeplmpart) - Remove a part
 * [updatePlmBomline](#updateplmbomline) - Update a bomline
 * [updatePlmChange](#updateplmchange) - Update a change
 * [updatePlmDocument](#updateplmdocument) - Update a document
@@ -61,11 +62,11 @@ public class Application {
                 .plmBomline(PlmBomline.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
                     .effectiveAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
-                    .id("084760f9-f299-46dd-a747-839c373781b9")
+                    .id("204abd1e-ebea-4a39-920f-d4ec423797d8")
                     .quantity(7d)
                     .referenceDesignators(List.of())
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2023-04-19T22:55:28.202Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-20T10:09:53.959Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -130,14 +131,14 @@ public class Application {
                     .affectedItems(List.of())
                     .createdAt(OffsetDateTime.parse("2021-08-02T05:58:32.287Z"))
                     .description("Vorago spiculum avaritia adipiscor callide.")
-                    .id("86b8e604-b537-4df4-923f-58f0b014d5ff")
+                    .id("890414d5-60ae-42fb-bdf6-6afed387b4a0")
                     .metadata(List.of())
                     .name("Update goodwill")
                     .number("ECO-6591")
                     .priority("Medium")
                     .status(PlmChangeStatus.IN_REVIEW)
                     .type(PlmChangeType.ORDER)
-                    .updatedAt(OffsetDateTime.parse("2026-09-27T08:17:37.683Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T08:36:59.588Z"))
                     .url("https://warmhearted-fraudster.biz/")
                     .build())
                 .connectionId("<id>")
@@ -202,9 +203,9 @@ public class Application {
                 .plmDocument(PlmDocument.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-16T01:44:30.293Z"))
                     .fileIds(List.of())
-                    .id("a7e10011-7e06-407a-8587-a29b59fbf86c")
+                    .id("0652570f-5a47-4d74-a3cf-5f28faa9a475")
                     .lifecycleState("Under Review")
-                    .masterIdentifier("3997ba56-185c-4ae2-b2aa-44a75e8b5701")
+                    .masterIdentifier("48a993b6-019c-4c26-9a32-afd72a206ca6")
                     .metadata(List.of())
                     .name("Procedure taxicab")
                     .number("DOC-086886")
@@ -212,7 +213,7 @@ public class Application {
                     .revision("C")
                     .status(PlmDocumentStatus.IN_REVIEW)
                     .type(PlmDocumentType.PROCEDURE)
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T01:44:22.082Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-10T01:47:30.194Z"))
                     .url("https://uncommon-guide.info/")
                     .build())
                 .connectionId("<id>")
@@ -279,10 +280,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("edd759cb-829f-4fba-8cd1-f34789c1ed7d")
+                    .id("d1d17550-7dba-4386-8812-862c80454dbb")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("da826483-fbec-429d-aac2-0aa822331622")
+                    .masterIdentifier("38c93670-d215-4816-828f-8cdf514f88f4")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -292,7 +293,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.050Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.419Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")
@@ -933,11 +934,11 @@ public class Application {
                 .plmBomline(PlmBomline.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
                     .effectiveAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
-                    .id("5534fa1f-679d-4794-bc39-420973bbcc9f")
+                    .id("55a79ef5-c0ef-4962-aeb0-f6f88f7bbe23")
                     .quantity(7d)
                     .referenceDesignators(List.of())
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2023-04-19T22:55:28.204Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-20T10:09:53.961Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1003,14 +1004,14 @@ public class Application {
                     .affectedItems(List.of())
                     .createdAt(OffsetDateTime.parse("2021-08-02T05:58:32.287Z"))
                     .description("Vorago spiculum avaritia adipiscor callide.")
-                    .id("c4098027-ad3e-42da-9079-05d0001df474")
+                    .id("bd1ac7ce-8d47-44d2-b190-04b0bbe25f5e")
                     .metadata(List.of())
                     .name("Update goodwill")
                     .number("ECO-6591")
                     .priority("Medium")
                     .status(PlmChangeStatus.IN_REVIEW)
                     .type(PlmChangeType.ORDER)
-                    .updatedAt(OffsetDateTime.parse("2026-09-27T08:17:37.707Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T08:36:59.600Z"))
                     .url("https://warmhearted-fraudster.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1076,9 +1077,9 @@ public class Application {
                 .plmDocument(PlmDocument.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-16T01:44:30.293Z"))
                     .fileIds(List.of())
-                    .id("ea6aee38-78d4-4ab4-b138-c666aec2b5c0")
+                    .id("3d9e471c-7b12-4886-9d65-f6e80d55d3fd")
                     .lifecycleState("Under Review")
-                    .masterIdentifier("3915710a-c783-426e-b6a5-9d0ca594a3ef")
+                    .masterIdentifier("81228e8a-3e2a-4c51-af0e-7edc5eab9787")
                     .metadata(List.of())
                     .name("Procedure taxicab")
                     .number("DOC-086886")
@@ -1086,7 +1087,7 @@ public class Application {
                     .revision("C")
                     .status(PlmDocumentStatus.IN_REVIEW)
                     .type(PlmDocumentType.PROCEDURE)
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T01:44:22.099Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-10T01:47:30.203Z"))
                     .url("https://uncommon-guide.info/")
                     .build())
                 .connectionId("<id>")
@@ -1154,10 +1155,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("c8a046ae-426d-44f2-b292-2844b2b42612")
+                    .id("68c10319-21ab-44a9-b873-061ed4415b1f")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("3f9c4ea8-5210-4498-a541-315554381cd2")
+                    .masterIdentifier("337e79f2-8c11-4d62-93d0-ec47354b813b")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -1167,7 +1168,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.422Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")
@@ -1257,6 +1258,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePlmPartRequest req = RemovePlmPartRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePlmPartResponse res = sdk.plm().removePlmPart()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [RemovePlmPartRequest](../../models/operations/RemovePlmPartRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[RemovePlmPartResponse](../../models/operations/RemovePlmPartResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updatePlmBomline
 
 Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the request body.
@@ -1290,11 +1347,11 @@ public class Application {
                 .plmBomline(PlmBomline.builder()
                     .createdAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
                     .effectiveAt(OffsetDateTime.parse("2022-04-02T07:09:29.598Z"))
-                    .id("5534fa1f-679d-4794-bc39-420973bbcc9f")
+                    .id("55a79ef5-c0ef-4962-aeb0-f6f88f7bbe23")
                     .quantity(7d)
                     .referenceDesignators(List.of())
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2023-04-19T22:55:28.204Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-04-20T10:09:53.961Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1360,14 +1417,14 @@ public class Application {
                     .affectedItems(List.of())
                     .createdAt(OffsetDateTime.parse("2021-08-02T05:58:32.287Z"))
                     .description("Vorago spiculum avaritia adipiscor callide.")
-                    .id("c4098027-ad3e-42da-9079-05d0001df474")
+                    .id("bd1ac7ce-8d47-44d2-b190-04b0bbe25f5e")
                     .metadata(List.of())
                     .name("Update goodwill")
                     .number("ECO-6591")
                     .priority("Medium")
                     .status(PlmChangeStatus.IN_REVIEW)
                     .type(PlmChangeType.ORDER)
-                    .updatedAt(OffsetDateTime.parse("2026-09-27T08:17:37.707Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-29T08:36:59.600Z"))
                     .url("https://warmhearted-fraudster.biz/")
                     .build())
                 .connectionId("<id>")
@@ -1433,9 +1490,9 @@ public class Application {
                 .plmDocument(PlmDocument.builder()
                     .createdAt(OffsetDateTime.parse("2020-10-16T01:44:30.293Z"))
                     .fileIds(List.of())
-                    .id("ea6aee38-78d4-4ab4-b138-c666aec2b5c0")
+                    .id("3d9e471c-7b12-4886-9d65-f6e80d55d3fd")
                     .lifecycleState("Under Review")
-                    .masterIdentifier("3915710a-c783-426e-b6a5-9d0ca594a3ef")
+                    .masterIdentifier("81228e8a-3e2a-4c51-af0e-7edc5eab9787")
                     .metadata(List.of())
                     .name("Procedure taxicab")
                     .number("DOC-086886")
@@ -1443,7 +1500,7 @@ public class Application {
                     .revision("C")
                     .status(PlmDocumentStatus.IN_REVIEW)
                     .type(PlmDocumentType.PROCEDURE)
-                    .updatedAt(OffsetDateTime.parse("2026-09-08T01:44:22.099Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-09-10T01:47:30.203Z"))
                     .url("https://uncommon-guide.info/")
                     .build())
                 .connectionId("<id>")
@@ -1511,10 +1568,10 @@ public class Application {
                     .description("Pectus tero ulterius aestivus talis tero ullam cruciamentum.")
                     .documentIds(List.of())
                     .fileIds(List.of())
-                    .id("c8a046ae-426d-44f2-b292-2844b2b42612")
+                    .id("68c10319-21ab-44a9-b873-061ed4415b1f")
                     .isAssembly(false)
                     .lifecycleState("Design")
-                    .masterIdentifier("3f9c4ea8-5210-4498-a541-315554381cd2")
+                    .masterIdentifier("337e79f2-8c11-4d62-93d0-ec47354b813b")
                     .metadata(List.of())
                     .name("grumpy PCB")
                     .number("PRT-009154")
@@ -1524,7 +1581,7 @@ public class Application {
                     .status(PlmPartStatus.IN_WORK)
                     .type(PlmPartType.SOFTWARE)
                     .unitOfMeasure("EA")
-                    .updatedAt(OffsetDateTime.parse("2021-04-12T09:47:20.055Z"))
+                    .updatedAt(OffsetDateTime.parse("2021-04-12T22:50:25.422Z"))
                     .url("https://inborn-independence.info")
                     .build())
                 .connectionId("<id>")

@@ -18,6 +18,9 @@ import to.unified.unified_java_sdk.models.operations.ListPropertyGuestsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyGuestResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestResponse;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyGuestResponse;
@@ -25,6 +28,7 @@ import to.unified.unified_java_sdk.operations.CreatePropertyGuest;
 import to.unified.unified_java_sdk.operations.GetPropertyGuest;
 import to.unified.unified_java_sdk.operations.ListPropertyGuests;
 import to.unified.unified_java_sdk.operations.PatchPropertyGuest;
+import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.operations.UpdatePropertyGuest;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -165,6 +169,32 @@ public class Guest {
     public PatchPropertyGuestResponse patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request) {
         RequestOperation<PatchPropertyGuestRequest, PatchPropertyGuestResponse> operation
               = new PatchPropertyGuest.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePropertyGuestRequestBuilder removePropertyGuest() {
+        return new RemovePropertyGuestRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        RequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
+              = new RemovePropertyGuest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

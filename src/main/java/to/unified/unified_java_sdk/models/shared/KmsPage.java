@@ -22,6 +22,14 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class KmsPage {
     /**
+     * The page body, in the format given by `type`. Used to create/update only; read a page's body from
+     * `download_url`.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content")
+    private String content;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -102,6 +110,7 @@ public class KmsPage {
 
     @JsonCreator
     public KmsPage(
+            @JsonProperty("content") @Nullable String content,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("download_url") @Nullable String downloadUrl,
             @JsonProperty("has_children") @Nullable Boolean hasChildren,
@@ -116,6 +125,7 @@ public class KmsPage {
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
             @JsonProperty("web_url") @Nullable String webUrl) {
+        this.content = content;
         this.createdAt = createdAt;
         this.downloadUrl = downloadUrl;
         this.hasChildren = hasChildren;
@@ -138,8 +148,16 @@ public class KmsPage {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, type, null,
-            null, null);
+            null, null, type,
+            null, null, null);
+    }
+
+    /**
+     * The page body, in the format given by `type`. Used to create/update only; read a page's body from
+     * `download_url`.
+     */
+    public Optional<String> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -215,6 +233,16 @@ public class KmsPage {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The page body, in the format given by `type`. Used to create/update only; read a page's body from
+     * `download_url`.
+     */
+    public KmsPage withContent(@Nullable String content) {
+        this.content = content;
+        return this;
     }
 
 
@@ -327,6 +355,7 @@ public class KmsPage {
         }
         KmsPage other = (KmsPage) o;
         return 
+            Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.downloadUrl, other.downloadUrl) &&
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
@@ -346,16 +375,17 @@ public class KmsPage {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, downloadUrl, hasChildren,
-            id, isActive, metadata,
-            parentId, raw, spaceId,
-            title, type, updatedAt,
-            userId, webUrl);
+            content, createdAt, downloadUrl,
+            hasChildren, id, isActive,
+            metadata, parentId, raw,
+            spaceId, title, type,
+            updatedAt, userId, webUrl);
     }
     
     @Override
     public String toString() {
         return Utils.toString(KmsPage.class,
+                "content", content,
                 "createdAt", createdAt,
                 "downloadUrl", downloadUrl,
                 "hasChildren", hasChildren,
@@ -374,6 +404,8 @@ public class KmsPage {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String content;
 
         private OffsetDateTime createdAt;
 
@@ -405,6 +437,15 @@ public class KmsPage {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The page body, in the format given by `type`. Used to create/update only; read a page's body from
+         * `download_url`.
+         */
+        public Builder content(@Nullable String content) {
+            this.content = content;
+            return this;
         }
 
         /**
@@ -494,11 +535,11 @@ public class KmsPage {
 
         public KmsPage build() {
             return new KmsPage(
-                createdAt, downloadUrl, hasChildren,
-                id, isActive, metadata,
-                parentId, raw, spaceId,
-                title, type, updatedAt,
-                userId, webUrl);
+                content, createdAt, downloadUrl,
+                hasChildren, id, isActive,
+                metadata, parentId, raw,
+                spaceId, title, type,
+                updatedAt, userId, webUrl);
         }
 
     }

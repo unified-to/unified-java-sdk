@@ -10,19 +10,27 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateComputeSnapshotRequest;
 import to.unified.unified_java_sdk.models.operations.GetComputeSnapshotRequest;
 import to.unified.unified_java_sdk.models.operations.ListComputeSnapshotsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateComputeSnapshotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetComputeSnapshotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeSnapshotsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListComputeSnapshotsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveComputeSnapshotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateComputeSnapshotResponse;
 import to.unified.unified_java_sdk.operations.CreateComputeSnapshot;
 import to.unified.unified_java_sdk.operations.GetComputeSnapshot;
 import to.unified.unified_java_sdk.operations.ListComputeSnapshots;
+import to.unified.unified_java_sdk.operations.PatchComputeSnapshot;
 import to.unified.unified_java_sdk.operations.RemoveComputeSnapshot;
+import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -142,6 +150,35 @@ public class AsyncSnapshot {
 
 
     /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchComputeSnapshotRequestBuilder patchComputeSnapshot() {
+        return new PatchComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<PatchComputeSnapshotResponse> patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request) {
+        AsyncRequestOperation<PatchComputeSnapshotRequest, PatchComputeSnapshotResponse> operation
+              = new PatchComputeSnapshot.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove a snapshot
      * 
      * <p>Deletes the ComputeSnapshot identified by `id`.
@@ -163,6 +200,35 @@ public class AsyncSnapshot {
     public CompletableFuture<RemoveComputeSnapshotResponse> removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request) {
         AsyncRequestOperation<RemoveComputeSnapshotRequest, RemoveComputeSnapshotResponse> operation
               = new RemoveComputeSnapshot.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateComputeSnapshotRequestBuilder updateComputeSnapshot() {
+        return new UpdateComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateComputeSnapshotResponse>} - The async response
+     */
+    public CompletableFuture<UpdateComputeSnapshotResponse> updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request) {
+        AsyncRequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
+              = new UpdateComputeSnapshot.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

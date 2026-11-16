@@ -18,6 +18,9 @@ import to.unified.unified_java_sdk.models.operations.ListPlmPartsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartResponse;
@@ -25,6 +28,7 @@ import to.unified.unified_java_sdk.operations.CreatePlmPart;
 import to.unified.unified_java_sdk.operations.GetPlmPart;
 import to.unified.unified_java_sdk.operations.ListPlmParts;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
+import to.unified.unified_java_sdk.operations.RemovePlmPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -165,6 +169,32 @@ public class Part {
     public PatchPlmPartResponse patchPlmPart(@Nonnull PatchPlmPartRequest request) {
         RequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
               = new PatchPlmPart.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePlmPartRequestBuilder removePlmPart() {
+        return new RemovePlmPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        RequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
+              = new RemovePlmPart.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

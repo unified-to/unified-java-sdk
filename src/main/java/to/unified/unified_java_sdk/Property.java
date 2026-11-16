@@ -87,9 +87,15 @@ import to.unified.unified_java_sdk.models.operations.PatchPropertyReviewResponse
 import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAnalyticsPropertyResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestResponse;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyListingRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyListingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemovePropertyListingResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAnalyticsPropertyResponse;
@@ -132,7 +138,9 @@ import to.unified.unified_java_sdk.operations.PatchPropertyListing;
 import to.unified.unified_java_sdk.operations.PatchPropertyReservation;
 import to.unified.unified_java_sdk.operations.PatchPropertyReview;
 import to.unified.unified_java_sdk.operations.RemoveAnalyticsProperty;
+import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.operations.RemovePropertyListing;
+import to.unified.unified_java_sdk.operations.RemovePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdateAnalyticsProperty;
 import to.unified.unified_java_sdk.operations.UpdatePropertyGuest;
 import to.unified.unified_java_sdk.operations.UpdatePropertyListing;
@@ -979,6 +987,32 @@ public class Property {
     }
 
     /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePropertyGuestRequestBuilder removePropertyGuest() {
+        return new RemovePropertyGuestRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyGuestResponse removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        RequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
+              = new RemovePropertyGuest.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a listing
      * 
      * <p>Deletes the PropertyListing identified by `id`.
@@ -1001,6 +1035,32 @@ public class Property {
     public RemovePropertyListingResponse removePropertyListing(@Nonnull RemovePropertyListingRequest request) {
         RequestOperation<RemovePropertyListingRequest, RemovePropertyListingResponse> operation
               = new RemovePropertyListing.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePropertyReservationRequestBuilder removePropertyReservation() {
+        return new RemovePropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePropertyReservationResponse removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        RequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
+              = new RemovePropertyReservation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.operations.CreatePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.GetPlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.ListPlmPartsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmPartRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreatePlmPartResponse;
@@ -20,12 +21,15 @@ import to.unified.unified_java_sdk.models.operations.async.ListPlmPartsRequestBu
 import to.unified.unified_java_sdk.models.operations.async.ListPlmPartsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchPlmPartResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmPartRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePlmPartResponse;
 import to.unified.unified_java_sdk.operations.CreatePlmPart;
 import to.unified.unified_java_sdk.operations.GetPlmPart;
 import to.unified.unified_java_sdk.operations.ListPlmParts;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
+import to.unified.unified_java_sdk.operations.RemovePlmPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmPart;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -169,6 +173,33 @@ public class AsyncPart {
     public CompletableFuture<PatchPlmPartResponse> patchPlmPart(@Nonnull PatchPlmPartRequest request) {
         AsyncRequestOperation<PatchPlmPartRequest, PatchPlmPartResponse> operation
               = new PatchPlmPart.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePlmPartRequestBuilder removePlmPart() {
+        return new RemovePlmPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePlmPartResponse>} - The async response
+     */
+    public CompletableFuture<RemovePlmPartResponse> removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        AsyncRequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
+              = new RemovePlmPart.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

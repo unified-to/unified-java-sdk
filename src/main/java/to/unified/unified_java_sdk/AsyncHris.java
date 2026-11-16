@@ -70,6 +70,7 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisAttendanceRequest;
@@ -84,6 +85,7 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisAttendanceRequest;
@@ -98,6 +100,7 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisJobRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisAttendanceRequestBuilder;
@@ -226,6 +229,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchHrisJobRequestBu
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftRequestBuilder;
@@ -254,6 +259,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveHrisJobRequestB
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftRequestBuilder;
@@ -282,6 +289,8 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisJobRequestB
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisJobResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftRequestBuilder;
@@ -349,6 +358,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisJob;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
+import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.operations.RemoveHrisAttendance;
@@ -363,6 +373,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
+import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.operations.UpdateHrisAttendance;
@@ -377,6 +388,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
+import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -2374,6 +2386,35 @@ public class AsyncHris {
 
 
     /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisTaxonomyRequestBuilder patchHrisTaxonomy() {
+        return new PatchHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        AsyncRequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
+              = new PatchHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a timeoff
      * 
      * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
@@ -2750,6 +2791,33 @@ public class AsyncHris {
     public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
               = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisTaxonomyRequestBuilder removeHrisTaxonomy() {
+        return new RemoveHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        AsyncRequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
+              = new RemoveHrisTaxonomy.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -3152,6 +3220,35 @@ public class AsyncHris {
     public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
               = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisTaxonomyRequestBuilder updateHrisTaxonomy() {
+        return new UpdateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        AsyncRequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
+              = new UpdateHrisTaxonomy.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

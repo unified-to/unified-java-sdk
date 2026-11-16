@@ -123,9 +123,7 @@ public class QmsAction {
     @JsonProperty("root_cause")
     private String rootCause;
 
-    /**
-     * Normalized status of a quality record
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private QmsActionStatus status;
@@ -323,9 +321,6 @@ public class QmsAction {
         return Optional.ofNullable(this.rootCause);
     }
 
-    /**
-     * Normalized status of a quality record
-     */
     public Optional<QmsActionStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -497,9 +492,6 @@ public class QmsAction {
     }
 
 
-    /**
-     * Normalized status of a quality record
-     */
     public QmsAction withStatus(@Nullable QmsActionStatus status) {
         this.status = status;
         return this;
@@ -793,9 +785,6 @@ public class QmsAction {
             return this;
         }
 
-        /**
-         * Normalized status of a quality record
-         */
         public Builder status(@Nullable QmsActionStatus status) {
             this.status = status;
             return this;

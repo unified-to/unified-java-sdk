@@ -30,6 +30,7 @@
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
+* [patchUnifiedSecretsmanager](#patchunifiedsecretsmanager) - Update secrets manager
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
@@ -40,6 +41,7 @@
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
+* [updateUnifiedSecretsmanager](#updateunifiedsecretsmanager) - Update secrets manager
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
@@ -1474,6 +1476,71 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchUnifiedSecretsmanagerRequest req = PatchUnifiedSecretsmanagerRequest.builder()
+                .secretsManager(SecretsManager.builder()
+                    .auth(Map.ofEntries(
+                        Map.entry("key", "<value>"),
+                        Map.entry("key1", "<value>")))
+                    .name("<value>")
+                    .type(SecretsManagerType.AKEYLESS)
+                    .build())
+                .id("<id>")
+                .build();
+
+        PatchUnifiedSecretsmanagerResponse res = sdk.unified().patchUnifiedSecretsmanager()
+                .request(req)
+                .call();
+
+        if (res.secretsManager().isPresent()) {
+            System.out.println(res.secretsManager().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [PatchUnifiedSecretsmanagerRequest](../../models/operations/PatchUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[PatchUnifiedSecretsmanagerResponse](../../models/operations/PatchUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchUnifiedWebhook
 
 Update webhook subscription
@@ -2042,6 +2109,70 @@ public class Application {
 ### Response
 
 **[UpdateUnifiedConnectionResponse](../../models/operations/UpdateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.util.Map;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateUnifiedSecretsmanagerRequest req = UpdateUnifiedSecretsmanagerRequest.builder()
+                .secretsManager(SecretsManager.builder()
+                    .auth(Map.ofEntries(
+                        Map.entry("key", "<value>")))
+                    .name("<value>")
+                    .type(SecretsManagerType.ALIBABACLOUD)
+                    .build())
+                .id("<id>")
+                .build();
+
+        UpdateUnifiedSecretsmanagerResponse res = sdk.unified().updateUnifiedSecretsmanager()
+                .request(req)
+                .call();
+
+        if (res.secretsManager().isPresent()) {
+            System.out.println(res.secretsManager().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [UpdateUnifiedSecretsmanagerRequest](../../models/operations/UpdateUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[UpdateUnifiedSecretsmanagerResponse](../../models/operations/UpdateUnifiedSecretsmanagerResponse.md)**
 
 ### Errors
 

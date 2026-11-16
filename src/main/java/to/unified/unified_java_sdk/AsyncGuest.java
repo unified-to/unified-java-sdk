@@ -11,6 +11,7 @@ import to.unified.unified_java_sdk.models.operations.CreatePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.GetPropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.ListPropertyGuestsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyGuestRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyGuestRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreatePropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreatePropertyGuestResponse;
@@ -20,12 +21,15 @@ import to.unified.unified_java_sdk.models.operations.async.ListPropertyGuestsReq
 import to.unified.unified_java_sdk.models.operations.async.ListPropertyGuestsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchPropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchPropertyGuestResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyGuestRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyGuestResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyGuestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyGuestResponse;
 import to.unified.unified_java_sdk.operations.CreatePropertyGuest;
 import to.unified.unified_java_sdk.operations.GetPropertyGuest;
 import to.unified.unified_java_sdk.operations.ListPropertyGuests;
 import to.unified.unified_java_sdk.operations.PatchPropertyGuest;
+import to.unified.unified_java_sdk.operations.RemovePropertyGuest;
 import to.unified.unified_java_sdk.operations.UpdatePropertyGuest;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -169,6 +173,33 @@ public class AsyncGuest {
     public CompletableFuture<PatchPropertyGuestResponse> patchPropertyGuest(@Nonnull PatchPropertyGuestRequest request) {
         AsyncRequestOperation<PatchPropertyGuestRequest, PatchPropertyGuestResponse> operation
               = new PatchPropertyGuest.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePropertyGuestRequestBuilder removePropertyGuest() {
+        return new RemovePropertyGuestRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a guest
+     * 
+     * <p>Deletes the PropertyGuest identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePropertyGuestResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyGuestResponse> removePropertyGuest(@Nonnull RemovePropertyGuestRequest request) {
+        AsyncRequestOperation<RemovePropertyGuestRequest, RemovePropertyGuestResponse> operation
+              = new RemovePropertyGuest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

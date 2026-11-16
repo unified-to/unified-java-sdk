@@ -16,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.ListPropertyReservationsReq
 import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchPropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePropertyReservationRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceReservationRequestBuilder;
@@ -36,6 +37,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReservat
 import to.unified.unified_java_sdk.models.operations.async.PatchPropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyReservationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemovePropertyReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateCommerceReservationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdatePropertyReservationRequestBuilder;
@@ -49,6 +52,7 @@ import to.unified.unified_java_sdk.operations.ListPropertyReservations;
 import to.unified.unified_java_sdk.operations.PatchCommerceReservation;
 import to.unified.unified_java_sdk.operations.PatchPropertyReservation;
 import to.unified.unified_java_sdk.operations.RemoveCommerceReservation;
+import to.unified.unified_java_sdk.operations.RemovePropertyReservation;
 import to.unified.unified_java_sdk.operations.UpdateCommerceReservation;
 import to.unified.unified_java_sdk.operations.UpdatePropertyReservation;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -344,6 +348,33 @@ public class AsyncReservation {
     public CompletableFuture<RemoveCommerceReservationResponse> removeCommerceReservation(@Nonnull RemoveCommerceReservationRequest request) {
         AsyncRequestOperation<RemoveCommerceReservationRequest, RemoveCommerceReservationResponse> operation
               = new RemoveCommerceReservation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemovePropertyReservationRequestBuilder removePropertyReservation() {
+        return new RemovePropertyReservationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a reservation
+     * 
+     * <p>Deletes the PropertyReservation identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemovePropertyReservationResponse>} - The async response
+     */
+    public CompletableFuture<RemovePropertyReservationResponse> removePropertyReservation(@Nonnull RemovePropertyReservationRequest request) {
+        AsyncRequestOperation<RemovePropertyReservationRequest, RemovePropertyReservationResponse> operation
+              = new RemovePropertyReservation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

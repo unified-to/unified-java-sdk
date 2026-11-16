@@ -18,11 +18,6 @@ import java.util.Optional;
  * without runtime errors. Instances are immutable singletons with reference equality.
  * Use {@code asEnum()} for switch expressions.
  */
-/**
- * Disposition
- * 
- * <p>What to do with the nonconforming material
- */
 public class Disposition {
 
     public static final Disposition USE_AS_IS = new Disposition("USE_AS_IS");

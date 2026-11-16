@@ -13,6 +13,7 @@
 * [patchCommerceReservation](#patchcommercereservation) - Update a reservation
 * [patchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](#removecommercereservation) - Remove a reservation
+* [removePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 * [updatePropertyReservation](#updatepropertyreservation) - Update a reservation
 
@@ -51,13 +52,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("ecdec097-2337-4639-bcef-a2b4ec1df512")
+                    .id("e47a5f26-a3df-4215-a76d-8b9d64ffa792")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-09T02:14:42.970Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-09T13:01:00.078Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -131,7 +132,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("993aae9b-274c-45d0-9239-631b4bae2c3b")
+                    .id("6ffd2510-6152-4a89-baf3-2934411cda22")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -167,7 +168,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.840Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.396Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")
@@ -465,13 +466,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("c17dc499-cfd4-452b-b06d-434759e2be4d")
+                    .id("f8bf6d4e-4900-4d39-a1cd-1ad06d9143eb")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-09T02:14:42.974Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-09T13:01:00.080Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -546,7 +547,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("3c0bfed0-82f2-407d-b339-a26fe0ec32e4")
+                    .id("857f4669-54a2-4d9f-abd7-2c319ff23b21")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -582,7 +583,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.398Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")
@@ -672,6 +673,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePropertyReservationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemovePropertyReservationRequest req = RemovePropertyReservationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemovePropertyReservationResponse res = sdk.reservation().removePropertyReservation()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemovePropertyReservationRequest](../../models/operations/RemovePropertyReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[RemovePropertyReservationResponse](../../models/operations/RemovePropertyReservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateCommerceReservation
 
 Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
@@ -707,13 +764,13 @@ public class Application {
                     .guestEmail("julien.bartoletti@icloud.com")
                     .guestName("Julien Bartoletti")
                     .guestPhone("(728) 596-2620")
-                    .id("c17dc499-cfd4-452b-b06d-434759e2be4d")
+                    .id("f8bf6d4e-4900-4d39-a1cd-1ad06d9143eb")
                     .metadata(List.of())
                     .notes("Adsum textilis ipsum despecto.")
                     .size(10d)
                     .startAt(OffsetDateTime.parse("2021-12-18T00:40:25.125Z"))
                     .status(CommerceReservationStatus.PENDING)
-                    .updatedAt(OffsetDateTime.parse("2023-01-09T02:14:42.974Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-01-09T13:01:00.080Z"))
                     .url("https://expensive-gift.org")
                     .build())
                 .connectionId("<id>")
@@ -788,7 +845,7 @@ public class Application {
                     .guestEmail("anya.parisian@hotmail.com")
                     .guestName("Anya Parisian")
                     .guests(6d)
-                    .id("3c0bfed0-82f2-407d-b339-a26fe0ec32e4")
+                    .id("857f4669-54a2-4d9f-abd7-2c319ff23b21")
                     .lineItems(List.of(
                         PropertyLineitem.builder()
                             .amount(1980d)
@@ -824,7 +881,7 @@ public class Application {
                     .startAt(OffsetDateTime.parse("2022-09-25T17:17:08.838Z"))
                     .status(PropertyReservationStatus.PENDING)
                     .totalAmount(2181.6)
-                    .updatedAt(OffsetDateTime.parse("2022-11-17T23:45:09.843Z"))
+                    .updatedAt(OffsetDateTime.parse("2022-11-18T04:52:22.398Z"))
                     .webUrl("https://antique-tennis.biz/")
                     .build())
                 .connectionId("<id>")

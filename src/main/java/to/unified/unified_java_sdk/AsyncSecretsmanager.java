@@ -11,7 +11,9 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagerSecretsRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedSecretsmanagersRequest;
+import to.unified.unified_java_sdk.models.operations.PatchUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveUnifiedSecretsmanagerRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateUnifiedSecretsmanagerRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedSecretsmanagerRequestBuilder;
@@ -22,15 +24,21 @@ import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsman
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagerSecretsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListUnifiedSecretsmanagersResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedSecretsmanagerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveUnifiedSecretsmanagerResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedSecretsmanagerRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateUnifiedSecretsmanagerResponse;
 import to.unified.unified_java_sdk.models.shared.SecretsManager;
 import to.unified.unified_java_sdk.operations.CreateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.GetUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerInstructions;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagerSecrets;
 import to.unified.unified_java_sdk.operations.ListUnifiedSecretsmanagers;
+import to.unified.unified_java_sdk.operations.PatchUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.operations.RemoveUnifiedSecretsmanager;
+import to.unified.unified_java_sdk.operations.UpdateUnifiedSecretsmanager;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -169,6 +177,29 @@ public class AsyncSecretsmanager {
 
 
     /**
+     * Update secrets manager
+     * 
+     * @return The async call builder
+     */
+    public PatchUnifiedSecretsmanagerRequestBuilder patchUnifiedSecretsmanager() {
+        return new PatchUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<PatchUnifiedSecretsmanagerResponse> patchUnifiedSecretsmanager(@Nonnull PatchUnifiedSecretsmanagerRequest request) {
+        AsyncRequestOperation<PatchUnifiedSecretsmanagerRequest, PatchUnifiedSecretsmanagerResponse> operation
+              = new PatchUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove secrets manager
      * 
      * @return The async call builder
@@ -186,6 +217,29 @@ public class AsyncSecretsmanager {
     public CompletableFuture<RemoveUnifiedSecretsmanagerResponse> removeUnifiedSecretsmanager(@Nonnull RemoveUnifiedSecretsmanagerRequest request) {
         AsyncRequestOperation<RemoveUnifiedSecretsmanagerRequest, RemoveUnifiedSecretsmanagerResponse> operation
               = new RemoveUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update secrets manager
+     * 
+     * @return The async call builder
+     */
+    public UpdateUnifiedSecretsmanagerRequestBuilder updateUnifiedSecretsmanager() {
+        return new UpdateUnifiedSecretsmanagerRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update secrets manager
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateUnifiedSecretsmanagerResponse>} - The async response
+     */
+    public CompletableFuture<UpdateUnifiedSecretsmanagerResponse> updateUnifiedSecretsmanager(@Nonnull UpdateUnifiedSecretsmanagerRequest request) {
+        AsyncRequestOperation<UpdateUnifiedSecretsmanagerRequest, UpdateUnifiedSecretsmanagerResponse> operation
+              = new UpdateUnifiedSecretsmanager.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

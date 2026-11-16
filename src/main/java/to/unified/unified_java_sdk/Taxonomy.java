@@ -18,10 +18,22 @@ import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
+import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -169,6 +181,88 @@ public class Taxonomy {
     public ListHrisTaxonomiesResponse listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
         RequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
               = new ListHrisTaxonomies.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchHrisTaxonomyRequestBuilder patchHrisTaxonomy() {
+        return new PatchHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxonomyResponse patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        RequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
+              = new PatchHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisTaxonomyRequestBuilder removeHrisTaxonomy() {
+        return new RemoveHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        RequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
+              = new RemoveHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisTaxonomyRequestBuilder updateHrisTaxonomy() {
+        return new UpdateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        RequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
+              = new UpdateHrisTaxonomy.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

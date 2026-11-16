@@ -7,7 +7,9 @@
 * [createComputeSnapshot](#createcomputesnapshot) - Create a snapshot
 * [getComputeSnapshot](#getcomputesnapshot) - Retrieve a snapshot
 * [listComputeSnapshots](#listcomputesnapshots) - List all snapshots
+* [patchComputeSnapshot](#patchcomputesnapshot) - Update a snapshot
 * [removeComputeSnapshot](#removecomputesnapshot) - Remove a snapshot
+* [updateComputeSnapshot](#updatecomputesnapshot) - Update a snapshot
 
 ## createComputeSnapshot
 
@@ -40,13 +42,13 @@ public class Application {
         CreateComputeSnapshotRequest req = CreateComputeSnapshotRequest.builder()
                 .computeSnapshot(ComputeSnapshot.builder()
                     .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
-                    .id("522b73a5-ef34-4eb0-8b48-2f0a319bd0f9")
+                    .id("54f1bc94-1d68-4013-9074-6348421b9ceb")
                     .metadata(List.of())
                     .name("snap-alius")
                     .sizeMb(169984d)
                     .status(ComputeSnapshotStatus.DELETING)
                     .type(ComputeSnapshotType.DISK)
-                    .updatedAt(OffsetDateTime.parse("2026-04-21T04:23:30.814Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.237Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -193,6 +195,76 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchComputeSnapshotRequest req = PatchComputeSnapshotRequest.builder()
+                .computeSnapshot(ComputeSnapshot.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
+                    .id("8236394c-c3a7-4792-b0c9-b1348c8b6510")
+                    .metadata(List.of())
+                    .name("snap-alius")
+                    .sizeMb(169984d)
+                    .status(ComputeSnapshotStatus.DELETING)
+                    .type(ComputeSnapshotType.DISK)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.244Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchComputeSnapshotResponse res = sdk.snapshot().patchComputeSnapshot()
+                .request(req)
+                .call();
+
+        if (res.computeSnapshot().isPresent()) {
+            System.out.println(res.computeSnapshot().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchComputeSnapshotRequest](../../models/operations/PatchComputeSnapshotRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchComputeSnapshotResponse](../../models/operations/PatchComputeSnapshotResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeComputeSnapshot
 
 Deletes the ComputeSnapshot identified by `id`.
@@ -242,6 +314,76 @@ public class Application {
 ### Response
 
 **[RemoveComputeSnapshotResponse](../../models/operations/RemoveComputeSnapshotResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import java.time.OffsetDateTime;
+import java.util.List;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.shared.*;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateComputeSnapshotRequest req = UpdateComputeSnapshotRequest.builder()
+                .computeSnapshot(ComputeSnapshot.builder()
+                    .createdAt(OffsetDateTime.parse("2021-09-24T14:40:06.110Z"))
+                    .id("8236394c-c3a7-4792-b0c9-b1348c8b6510")
+                    .metadata(List.of())
+                    .name("snap-alius")
+                    .sizeMb(169984d)
+                    .status(ComputeSnapshotStatus.DELETING)
+                    .type(ComputeSnapshotType.DISK)
+                    .updatedAt(OffsetDateTime.parse("2026-04-23T00:28:38.244Z"))
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateComputeSnapshotResponse res = sdk.snapshot().updateComputeSnapshot()
+                .request(req)
+                .call();
+
+        if (res.computeSnapshot().isPresent()) {
+            System.out.println(res.computeSnapshot().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateComputeSnapshotRequest](../../models/operations/UpdateComputeSnapshotRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateComputeSnapshotResponse](../../models/operations/UpdateComputeSnapshotResponse.md)**
 
 ### Errors
 

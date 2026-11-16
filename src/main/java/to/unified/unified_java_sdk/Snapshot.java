@@ -15,13 +15,21 @@ import to.unified.unified_java_sdk.models.operations.GetComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.ListComputeSnapshotsRequest;
 import to.unified.unified_java_sdk.models.operations.ListComputeSnapshotsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListComputeSnapshotsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchComputeSnapshotResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveComputeSnapshotRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveComputeSnapshotRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveComputeSnapshotResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateComputeSnapshotResponse;
 import to.unified.unified_java_sdk.operations.CreateComputeSnapshot;
 import to.unified.unified_java_sdk.operations.GetComputeSnapshot;
 import to.unified.unified_java_sdk.operations.ListComputeSnapshots;
+import to.unified.unified_java_sdk.operations.PatchComputeSnapshot;
 import to.unified.unified_java_sdk.operations.RemoveComputeSnapshot;
+import to.unified.unified_java_sdk.operations.UpdateComputeSnapshot;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -137,6 +145,34 @@ public class Snapshot {
     }
 
     /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchComputeSnapshotRequestBuilder patchComputeSnapshot() {
+        return new PatchComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchComputeSnapshotResponse patchComputeSnapshot(@Nonnull PatchComputeSnapshotRequest request) {
+        RequestOperation<PatchComputeSnapshotRequest, PatchComputeSnapshotResponse> operation
+              = new PatchComputeSnapshot.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a snapshot
      * 
      * <p>Deletes the ComputeSnapshot identified by `id`.
@@ -159,6 +195,34 @@ public class Snapshot {
     public RemoveComputeSnapshotResponse removeComputeSnapshot(@Nonnull RemoveComputeSnapshotRequest request) {
         RequestOperation<RemoveComputeSnapshotRequest, RemoveComputeSnapshotResponse> operation
               = new RemoveComputeSnapshot.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateComputeSnapshotRequestBuilder updateComputeSnapshot() {
+        return new UpdateComputeSnapshotRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a snapshot
+     * 
+     * <p>Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change
+     * in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateComputeSnapshotResponse updateComputeSnapshot(@Nonnull UpdateComputeSnapshotRequest request) {
+        RequestOperation<UpdateComputeSnapshotRequest, UpdateComputeSnapshotResponse> operation
+              = new UpdateComputeSnapshot.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

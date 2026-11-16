@@ -50,7 +50,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("003b0b76-8e30-4318-af7f-41ef108188a6")
+                    .id("437ff27e-9be3-436a-bec5-8ed47cde0ad4")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -62,7 +62,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-30T13:46:06.184Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-01T00:30:43.393Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -361,7 +361,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("401751dd-f80b-4f12-a812-6391ecd26978")
+                    .id("eec2e927-a85b-4fb7-880a-32b88c8e32dd")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -373,7 +373,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-30T13:46:06.187Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-01T00:30:43.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -499,7 +499,7 @@ public class Application {
                     .description("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.")
                     .hasRedirectUrl(true)
                     .hasTargetUrl(false)
-                    .id("401751dd-f80b-4f12-a812-6391ecd26978")
+                    .id("eec2e927-a85b-4fb7-880a-32b88c8e32dd")
                     .infoUrl("https://ugly-instance.biz/")
                     .integrationTypes(List.of(
                         "viridis"))
@@ -511,7 +511,7 @@ public class Application {
                     .regions(List.of())
                     .tags(List.of(
                         "clamo"))
-                    .updatedAt(OffsetDateTime.parse("2023-09-30T13:46:06.187Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-10-01T00:30:43.398Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

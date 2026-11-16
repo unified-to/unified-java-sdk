@@ -152,9 +152,7 @@ public class QmsInspection {
     @JsonProperty("serial_number")
     private String serialNumber;
 
-    /**
-     * Normalized status of a quality record
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private QmsInspectionStatus status;
@@ -378,9 +376,6 @@ public class QmsInspection {
         return Optional.ofNullable(this.serialNumber);
     }
 
-    /**
-     * Normalized status of a quality record
-     */
     public Optional<QmsInspectionStatus> status() {
         return Optional.ofNullable(this.status);
     }
@@ -578,9 +573,6 @@ public class QmsInspection {
     }
 
 
-    /**
-     * Normalized status of a quality record
-     */
     public QmsInspection withStatus(@Nullable QmsInspectionStatus status) {
         this.status = status;
         return this;
@@ -914,9 +906,6 @@ public class QmsInspection {
             return this;
         }
 
-        /**
-         * Normalized status of a quality record
-         */
         public Builder status(@Nullable QmsInspectionStatus status) {
             this.status = status;
             return this;

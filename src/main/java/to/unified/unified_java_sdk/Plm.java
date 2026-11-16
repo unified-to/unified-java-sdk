@@ -63,6 +63,9 @@ import to.unified.unified_java_sdk.models.operations.PatchPlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.RemovePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.RemovePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemovePlmBomlineResponse;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequest;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemovePlmPartResponse;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmBomlineRequest;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmBomlineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdatePlmBomlineResponse;
@@ -94,6 +97,7 @@ import to.unified.unified_java_sdk.operations.PatchPlmChange;
 import to.unified.unified_java_sdk.operations.PatchPlmDocument;
 import to.unified.unified_java_sdk.operations.PatchPlmPart;
 import to.unified.unified_java_sdk.operations.RemovePlmBomline;
+import to.unified.unified_java_sdk.operations.RemovePlmPart;
 import to.unified.unified_java_sdk.operations.UpdatePlmBomline;
 import to.unified.unified_java_sdk.operations.UpdatePlmChange;
 import to.unified.unified_java_sdk.operations.UpdatePlmDocument;
@@ -687,6 +691,32 @@ public class Plm {
     public RemovePlmBomlineResponse removePlmBomline(@Nonnull RemovePlmBomlineRequest request) {
         RequestOperation<RemovePlmBomlineRequest, RemovePlmBomlineResponse> operation
               = new RemovePlmBomline.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemovePlmPartRequestBuilder removePlmPart() {
+        return new RemovePlmPartRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a part
+     * 
+     * <p>Deletes the PlmPart identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemovePlmPartResponse removePlmPart(@Nonnull RemovePlmPartRequest request) {
+        RequestOperation<RemovePlmPartRequest, RemovePlmPartResponse> operation
+              = new RemovePlmPart.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

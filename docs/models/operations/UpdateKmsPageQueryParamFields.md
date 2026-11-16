@@ -27,3 +27,4 @@ UpdateKmsPageQueryParamFields value = UpdateKmsPageQueryParamFields.ID;
 | `HAS_CHILDREN` | has_children   |
 | `WEB_URL`      | web_url        |
 | `RAW`          | raw            |
+| `CONTENT`      | content        |

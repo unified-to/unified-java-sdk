@@ -22,7 +22,8 @@ public enum CreateKmsPageQueryParamFields {
     METADATA("metadata"),
     HAS_CHILDREN("has_children"),
     WEB_URL("web_url"),
-    RAW("raw");
+    RAW("raw"),
+    CONTENT("content");
 
     @JsonValue
     private final String value;

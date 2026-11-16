@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.24'
+implementation 'to.unified:unified-java-sdk:0.50.25'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.24</version>
+    <version>0.50.25</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1055,6 +1055,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchComputeInstance](docs/sdks/compute/README.md#patchcomputeinstance) - Update an instance
 * [patchComputeKey](docs/sdks/compute/README.md#patchcomputekey) - Update a key
 * [patchComputeService](docs/sdks/compute/README.md#patchcomputeservice) - Update a service
+* [patchComputeSnapshot](docs/sdks/compute/README.md#patchcomputesnapshot) - Update a snapshot
 * [patchComputeTemplate](docs/sdks/compute/README.md#patchcomputetemplate) - Update a template
 * [patchComputeVolume](docs/sdks/compute/README.md#patchcomputevolume) - Update a volume
 * [removeComputeDeployment](docs/sdks/compute/README.md#removecomputedeployment) - Remove a deployment
@@ -1072,6 +1073,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateComputeInstance](docs/sdks/compute/README.md#updatecomputeinstance) - Update an instance
 * [updateComputeKey](docs/sdks/compute/README.md#updatecomputekey) - Update a key
 * [updateComputeService](docs/sdks/compute/README.md#updatecomputeservice) - Update a service
+* [updateComputeSnapshot](docs/sdks/compute/README.md#updatecomputesnapshot) - Update a snapshot
 * [updateComputeTemplate](docs/sdks/compute/README.md#updatecomputetemplate) - Update a template
 * [updateComputeVolume](docs/sdks/compute/README.md#updatecomputevolume) - Update a volume
 
@@ -1546,6 +1548,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getPropertyGuest](docs/sdks/guest/README.md#getpropertyguest) - Retrieve a guest
 * [listPropertyGuests](docs/sdks/guest/README.md#listpropertyguests) - List all guests
 * [patchPropertyGuest](docs/sdks/guest/README.md#patchpropertyguest) - Update a guest
+* [removePropertyGuest](docs/sdks/guest/README.md#removepropertyguest) - Remove a guest
 * [updatePropertyGuest](docs/sdks/guest/README.md#updatepropertyguest) - Update a guest
 
 ### [Healthcare](docs/sdks/healthcare/README.md)
@@ -1659,6 +1662,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [patchHrisTaxonomy](docs/sdks/hris/README.md#patchhristaxonomy) - Update a taxonomy
 * [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
@@ -1673,6 +1677,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [removeHrisTaxonomy](docs/sdks/hris/README.md#removehristaxonomy) - Remove a taxonomy
 * [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
@@ -1687,6 +1692,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [updateHrisTaxonomy](docs/sdks/hris/README.md#updatehristaxonomy) - Update a taxonomy
 * [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
@@ -2177,6 +2183,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
 * [listPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
 * [patchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
+* [removePlmPart](docs/sdks/part/README.md#removeplmpart) - Remove a part
 * [updatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
@@ -2302,6 +2309,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchPlmDocument](docs/sdks/plm/README.md#patchplmdocument) - Update a document
 * [patchPlmPart](docs/sdks/plm/README.md#patchplmpart) - Update a part
 * [removePlmBomline](docs/sdks/plm/README.md#removeplmbomline) - Remove a bomline
+* [removePlmPart](docs/sdks/plm/README.md#removeplmpart) - Remove a part
 * [updatePlmBomline](docs/sdks/plm/README.md#updateplmbomline) - Update a bomline
 * [updatePlmChange](docs/sdks/plm/README.md#updateplmchange) - Update a change
 * [updatePlmDocument](docs/sdks/plm/README.md#updateplmdocument) - Update a document
@@ -2404,7 +2412,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchPropertyReservation](docs/sdks/property/README.md#patchpropertyreservation) - Update a reservation
 * [patchPropertyReview](docs/sdks/property/README.md#patchpropertyreview) - Update a review
 * [removeAnalyticsProperty](docs/sdks/property/README.md#removeanalyticsproperty) - Remove a property
+* [removePropertyGuest](docs/sdks/property/README.md#removepropertyguest) - Remove a guest
 * [removePropertyListing](docs/sdks/property/README.md#removepropertylisting) - Remove a listing
+* [removePropertyReservation](docs/sdks/property/README.md#removepropertyreservation) - Remove a reservation
 * [updateAnalyticsProperty](docs/sdks/property/README.md#updateanalyticsproperty) - Update a property
 * [updatePropertyGuest](docs/sdks/property/README.md#updatepropertyguest) - Update a guest
 * [updatePropertyListing](docs/sdks/property/README.md#updatepropertylisting) - Update a listing
@@ -2575,6 +2585,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
 * [patchPropertyReservation](docs/sdks/reservation/README.md#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
+* [removePropertyReservation](docs/sdks/reservation/README.md#removepropertyreservation) - Remove a reservation
 * [updateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 * [updatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
@@ -2672,7 +2683,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedSecretsmanagerInstructions](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagers) - List secrets managers
+* [patchUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [removeUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedsecretsmanager) - Remove secrets manager
+* [updateUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#updateunifiedsecretsmanager) - Update secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2768,7 +2781,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createComputeSnapshot](docs/sdks/snapshot/README.md#createcomputesnapshot) - Create a snapshot
 * [getComputeSnapshot](docs/sdks/snapshot/README.md#getcomputesnapshot) - Retrieve a snapshot
 * [listComputeSnapshots](docs/sdks/snapshot/README.md#listcomputesnapshots) - List all snapshots
+* [patchComputeSnapshot](docs/sdks/snapshot/README.md#patchcomputesnapshot) - Update a snapshot
 * [removeComputeSnapshot](docs/sdks/snapshot/README.md#removecomputesnapshot) - Remove a snapshot
+* [updateComputeSnapshot](docs/sdks/snapshot/README.md#updatecomputesnapshot) - Update a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2894,6 +2909,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
+* [patchHrisTaxonomy](docs/sdks/taxonomy/README.md#patchhristaxonomy) - Update a taxonomy
+* [removeHrisTaxonomy](docs/sdks/taxonomy/README.md#removehristaxonomy) - Remove a taxonomy
+* [updateHrisTaxonomy](docs/sdks/taxonomy/README.md#updatehristaxonomy) - Update a taxonomy
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -3059,6 +3077,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
+* [patchUnifiedSecretsmanager](docs/sdks/unified/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -3069,6 +3088,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
+* [updateUnifiedSecretsmanager](docs/sdks/unified/README.md#updateunifiedsecretsmanager) - Update secrets manager
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
@@ -3210,7 +3230,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3222,7 +3242,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3270,7 +3290,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3282,7 +3302,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3349,7 +3369,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                        .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3361,7 +3381,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3516,7 +3536,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("b8faefab-9230-454e-a309-f112a86c38e7")
+                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3528,7 +3548,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-12T23:39:28.304Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

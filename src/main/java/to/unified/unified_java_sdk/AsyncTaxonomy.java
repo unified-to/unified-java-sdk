@@ -11,6 +11,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTaxonomyRequestBuilder;
@@ -19,10 +22,19 @@ import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesRequ
 import to.unified.unified_java_sdk.models.operations.async.ListCrmTaxonomiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTaxonomyRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTaxonomyResponse;
 import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
 import to.unified.unified_java_sdk.operations.ListCrmTaxonomies;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
+import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -173,6 +185,91 @@ public class AsyncTaxonomy {
     public CompletableFuture<ListHrisTaxonomiesResponse> listHrisTaxonomies(@Nonnull ListHrisTaxonomiesRequest request) {
         AsyncRequestOperation<ListHrisTaxonomiesRequest, ListHrisTaxonomiesResponse> operation
               = new ListHrisTaxonomies.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisTaxonomyRequestBuilder patchHrisTaxonomy() {
+        return new PatchHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTaxonomyResponse> patchHrisTaxonomy(@Nonnull PatchHrisTaxonomyRequest request) {
+        AsyncRequestOperation<PatchHrisTaxonomyRequest, PatchHrisTaxonomyResponse> operation
+              = new PatchHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisTaxonomyRequestBuilder removeHrisTaxonomy() {
+        return new RemoveHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a taxonomy
+     * 
+     * <p>Deletes the HrisTaxonomy identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTaxonomyResponse> removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
+        AsyncRequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
+              = new RemoveHrisTaxonomy.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisTaxonomyRequestBuilder updateHrisTaxonomy() {
+        return new UpdateHrisTaxonomyRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxonomy
+     * 
+     * <p>Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in
+     * the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisTaxonomyResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTaxonomyResponse> updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
+        AsyncRequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
+              = new UpdateHrisTaxonomy.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

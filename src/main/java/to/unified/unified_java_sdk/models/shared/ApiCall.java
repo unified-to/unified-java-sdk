@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.LazySingletonValue;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -97,6 +98,14 @@ public class ApiCall {
     private String path;
 
     /**
+     * Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are
+     * not stored.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("query_params")
+    private List<String> queryParams;
+
+    /**
      * The size of the response
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -152,6 +161,7 @@ public class ApiCall {
             @JsonProperty("method") @Nonnull String method,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("path") @Nonnull String path,
+            @JsonProperty("query_params") @Nullable List<String> queryParams,
             @JsonProperty("size") @Nullable Double size,
             @JsonProperty("status") @Nonnull String status,
             @JsonProperty("type") @Nonnull ApiCallType type,
@@ -177,6 +187,7 @@ public class ApiCall {
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.path = Optional.ofNullable(path)
             .orElseThrow(() -> new IllegalArgumentException("path cannot be null"));
+        this.queryParams = queryParams;
         this.size = size;
         this.status = Optional.ofNullable(status)
             .orElseThrow(() -> new IllegalArgumentException("status cannot be null"));
@@ -199,9 +210,9 @@ public class ApiCall {
             null, null, null,
             null, integrationType, null,
             null, method, name,
-            path, null, status,
-            type, null, null,
-            null, null);
+            path, null, null,
+            status, type, null,
+            null, null, null);
     }
 
     public Optional<String> connectionId() {
@@ -275,6 +286,14 @@ public class ApiCall {
      */
     public String path() {
         return this.path;
+    }
+
+    /**
+     * Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are
+     * not stored.
+     */
+    public Optional<List<String>> queryParams() {
+        return Optional.ofNullable(this.queryParams);
     }
 
     /**
@@ -422,6 +441,16 @@ public class ApiCall {
 
 
     /**
+     * Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are
+     * not stored.
+     */
+    public ApiCall withQueryParams(@Nullable List<String> queryParams) {
+        this.queryParams = queryParams;
+        return this;
+    }
+
+
+    /**
      * The size of the response
      */
     public ApiCall withSize(@Nullable Double size) {
@@ -498,6 +527,7 @@ public class ApiCall {
             Utils.enhancedDeepEquals(this.method, other.method) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.path, other.path) &&
+            Utils.enhancedDeepEquals(this.queryParams, other.queryParams) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -514,9 +544,9 @@ public class ApiCall {
             environment, error, externalXref,
             id, integrationType, ipAddress,
             isBillable, method, name,
-            path, size, status,
-            type, unifiedResponseTime, userAgent,
-            webhookId, workspaceId);
+            path, queryParams, size,
+            status, type, unifiedResponseTime,
+            userAgent, webhookId, workspaceId);
     }
     
     @Override
@@ -535,6 +565,7 @@ public class ApiCall {
                 "method", method,
                 "name", name,
                 "path", path,
+                "queryParams", queryParams,
                 "size", size,
                 "status", status,
                 "type", type,
@@ -572,6 +603,8 @@ public class ApiCall {
         private String name;
 
         private String path;
+
+        private List<String> queryParams;
 
         private Double size;
 
@@ -678,6 +711,15 @@ public class ApiCall {
         }
 
         /**
+         * Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are
+         * not stored.
+         */
+        public Builder queryParams(@Nullable List<String> queryParams) {
+            this.queryParams = queryParams;
+            return this;
+        }
+
+        /**
          * The size of the response
          */
         public Builder size(@Nullable Double size) {
@@ -730,9 +772,9 @@ public class ApiCall {
                 environment, error, externalXref,
                 id, integrationType, ipAddress,
                 isBillable, method, name,
-                path, size, status,
-                type, unifiedResponseTime, userAgent,
-                webhookId, workspaceId);
+                path, queryParams, size,
+                status, type, unifiedResponseTime,
+                userAgent, webhookId, workspaceId);
         }
 
 
