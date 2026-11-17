@@ -193,6 +193,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_PAYCODE_WRITE = new PropertyConnectionPermissions("hris_paycode_write");
     public static final PropertyConnectionPermissions HRIS_EARNING_READ = new PropertyConnectionPermissions("hris_earning_read");
     public static final PropertyConnectionPermissions HRIS_EARNING_WRITE = new PropertyConnectionPermissions("hris_earning_write");
+    public static final PropertyConnectionPermissions HRIS_TAXWITHHOLDING_READ = new PropertyConnectionPermissions("hris_taxwithholding_read");
+    public static final PropertyConnectionPermissions HRIS_TAXWITHHOLDING_WRITE = new PropertyConnectionPermissions("hris_taxwithholding_write");
     public static final PropertyConnectionPermissions UC_CALL_READ = new PropertyConnectionPermissions("uc_call_read");
     public static final PropertyConnectionPermissions UC_CALL_WRITE = new PropertyConnectionPermissions("uc_call_write");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
@@ -721,6 +723,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_paycode_write", HRIS_PAYCODE_WRITE);
         map.put("hris_earning_read", HRIS_EARNING_READ);
         map.put("hris_earning_write", HRIS_EARNING_WRITE);
+        map.put("hris_taxwithholding_read", HRIS_TAXWITHHOLDING_READ);
+        map.put("hris_taxwithholding_write", HRIS_TAXWITHHOLDING_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
         map.put("uc_call_write", UC_CALL_WRITE);
         map.put("uc_contact_read", UC_CONTACT_READ);
@@ -1181,6 +1185,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_paycode_write", PropertyConnectionPermissionsEnum.HRIS_PAYCODE_WRITE);
         map.put("hris_earning_read", PropertyConnectionPermissionsEnum.HRIS_EARNING_READ);
         map.put("hris_earning_write", PropertyConnectionPermissionsEnum.HRIS_EARNING_WRITE);
+        map.put("hris_taxwithholding_read", PropertyConnectionPermissionsEnum.HRIS_TAXWITHHOLDING_READ);
+        map.put("hris_taxwithholding_write", PropertyConnectionPermissionsEnum.HRIS_TAXWITHHOLDING_WRITE);
         map.put("uc_call_read", PropertyConnectionPermissionsEnum.UC_CALL_READ);
         map.put("uc_call_write", PropertyConnectionPermissionsEnum.UC_CALL_WRITE);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
@@ -1642,6 +1648,8 @@ public class PropertyConnectionPermissions {
         HRIS_PAYCODE_WRITE("hris_paycode_write"),
         HRIS_EARNING_READ("hris_earning_read"),
         HRIS_EARNING_WRITE("hris_earning_write"),
+        HRIS_TAXWITHHOLDING_READ("hris_taxwithholding_read"),
+        HRIS_TAXWITHHOLDING_WRITE("hris_taxwithholding_write"),
         UC_CALL_READ("uc_call_read"),
         UC_CALL_WRITE("uc_call_write"),
         UC_CONTACT_READ("uc_contact_read"),

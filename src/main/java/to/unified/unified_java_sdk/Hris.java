@@ -45,6 +45,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTaxwithholdingResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -99,6 +102,9 @@ import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxwithholdingRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxwithholdingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetHrisTaxwithholdingResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
@@ -153,6 +159,9 @@ import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTaxonomiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxwithholdingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxwithholdingsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListHrisTaxwithholdingsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
@@ -198,6 +207,9 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxwithholdingRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxwithholdingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTaxwithholdingResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
@@ -243,6 +255,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxwithholdingRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxwithholdingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTaxwithholdingResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
@@ -288,6 +303,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxonomyResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxwithholdingRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxwithholdingRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTaxwithholdingResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
@@ -307,6 +325,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisJob;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.CreateHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
 import to.unified.unified_java_sdk.operations.GetHrisAttendance;
@@ -325,6 +344,7 @@ import to.unified.unified_java_sdk.operations.GetHrisPaycode;
 import to.unified.unified_java_sdk.operations.GetHrisPayroll;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.GetHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.GetHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
 import to.unified.unified_java_sdk.operations.ListHrisAttendances;
@@ -343,6 +363,7 @@ import to.unified.unified_java_sdk.operations.ListHrisPaycodes;
 import to.unified.unified_java_sdk.operations.ListHrisPayrolls;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.operations.ListHrisTaxonomies;
+import to.unified.unified_java_sdk.operations.ListHrisTaxwithholdings;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
 import to.unified.unified_java_sdk.operations.PatchHrisAttendance;
@@ -358,6 +379,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisJob;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.PatchHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.operations.RemoveHrisAttendance;
@@ -373,6 +395,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisJob;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.RemoveHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.RemoveHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.operations.UpdateHrisAttendance;
@@ -388,6 +411,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisJob;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
 import to.unified.unified_java_sdk.operations.UpdateHrisTaxonomy;
+import to.unified.unified_java_sdk.operations.UpdateHrisTaxwithholding;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
@@ -773,6 +797,34 @@ public class Hris {
     public CreateHrisTaxonomyResponse createHrisTaxonomy(@Nonnull CreateHrisTaxonomyRequest request) {
         RequestOperation<CreateHrisTaxonomyRequest, CreateHrisTaxonomyResponse> operation
               = new CreateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @return The call builder
+     */
+    public CreateHrisTaxwithholdingRequestBuilder createHrisTaxwithholding() {
+        return new CreateHrisTaxwithholdingRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a taxwithholding
+     * 
+     * <p>Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body;
+     * they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTaxwithholdingResponse createHrisTaxwithholding(@Nonnull CreateHrisTaxwithholdingRequest request) {
+        RequestOperation<CreateHrisTaxwithholdingRequest, CreateHrisTaxwithholdingResponse> operation
+              = new CreateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1277,6 +1329,34 @@ public class Hris {
     public GetHrisTaxonomyResponse getHrisTaxonomy(@Nonnull GetHrisTaxonomyRequest request) {
         RequestOperation<GetHrisTaxonomyRequest, GetHrisTaxonomyResponse> operation
               = new GetHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @return The call builder
+     */
+    public GetHrisTaxwithholdingRequestBuilder getHrisTaxwithholding() {
+        return new GetHrisTaxwithholdingRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a taxwithholding
+     * 
+     * <p>Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list
+     * endpoint. Use `fields` to return only the fields you need.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetHrisTaxwithholdingResponse getHrisTaxwithholding(@Nonnull GetHrisTaxwithholdingRequest request) {
+        RequestOperation<GetHrisTaxwithholdingRequest, GetHrisTaxwithholdingResponse> operation
+              = new GetHrisTaxwithholding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1913,6 +1993,42 @@ public class Hris {
     }
 
     /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @return The call builder
+     */
+    public ListHrisTaxwithholdingsRequestBuilder listHrisTaxwithholdings() {
+        return new ListHrisTaxwithholdingsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all taxwithholdings
+     * 
+     * <p>Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging,
+     * then page through them with `limit` and `offset` (the default and maximum page size depend on the
+     * integration). Use `fields` to return only the fields you need and reduce the response size.
+     * 
+     * <p>When the integration supports a total count, it is returned in the `X-Total-Count` response header.
+     * Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListHrisTaxwithholdingsResponse listHrisTaxwithholdings(@Nonnull ListHrisTaxwithholdingsRequest request) {
+        RequestOperation<ListHrisTaxwithholdingsRequest, ListHrisTaxwithholdingsResponse> operation
+              = new ListHrisTaxwithholdings.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all timeoffs
      * 
      * <p>Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then
@@ -2349,6 +2465,34 @@ public class Hris {
     }
 
     /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @return The call builder
+     */
+    public PatchHrisTaxwithholdingRequestBuilder patchHrisTaxwithholding() {
+        return new PatchHrisTaxwithholdingRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTaxwithholdingResponse patchHrisTaxwithholding(@Nonnull PatchHrisTaxwithholdingRequest request) {
+        RequestOperation<PatchHrisTaxwithholdingRequest, PatchHrisTaxwithholdingResponse> operation
+              = new PatchHrisTaxwithholding.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a timeoff
      * 
      * <p>Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the
@@ -2739,6 +2883,32 @@ public class Hris {
     public RemoveHrisTaxonomyResponse removeHrisTaxonomy(@Nonnull RemoveHrisTaxonomyRequest request) {
         RequestOperation<RemoveHrisTaxonomyRequest, RemoveHrisTaxonomyResponse> operation
               = new RemoveHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisTaxwithholdingRequestBuilder removeHrisTaxwithholding() {
+        return new RemoveHrisTaxwithholdingRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a taxwithholding
+     * 
+     * <p>Deletes the HrisTaxwithholding identified by `id`.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTaxwithholdingResponse removeHrisTaxwithholding(@Nonnull RemoveHrisTaxwithholdingRequest request) {
+        RequestOperation<RemoveHrisTaxwithholdingRequest, RemoveHrisTaxwithholdingResponse> operation
+              = new RemoveHrisTaxwithholding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -3155,6 +3325,34 @@ public class Hris {
     public UpdateHrisTaxonomyResponse updateHrisTaxonomy(@Nonnull UpdateHrisTaxonomyRequest request) {
         RequestOperation<UpdateHrisTaxonomyRequest, UpdateHrisTaxonomyResponse> operation
               = new UpdateHrisTaxonomy.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisTaxwithholdingRequestBuilder updateHrisTaxwithholding() {
+        return new UpdateHrisTaxwithholdingRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a taxwithholding
+     * 
+     * <p>Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to
+     * change in the request body.
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTaxwithholdingResponse updateHrisTaxwithholding(@Nonnull UpdateHrisTaxwithholdingRequest request) {
+        RequestOperation<UpdateHrisTaxwithholdingRequest, UpdateHrisTaxwithholdingResponse> operation
+              = new UpdateHrisTaxwithholding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

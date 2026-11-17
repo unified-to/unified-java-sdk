@@ -303,6 +303,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncPayslip payslip;
 
+    private final AsyncTaxwithholding taxwithholding;
+
     private final AsyncTimeoff timeoff;
 
     private final AsyncTimeshift timeshift;
@@ -1053,6 +1055,10 @@ public class AsyncUnifiedTo {
         return payslip;
     }
 
+    public AsyncTaxwithholding taxwithholding() {
+        return taxwithholding;
+    }
+
     public AsyncTimeoff timeoff() {
         return timeoff;
     }
@@ -1544,6 +1550,7 @@ public class AsyncUnifiedTo {
         this.paycode = new AsyncPaycode(syncSDK.paycode(), sdkConfiguration);
         this.payroll = new AsyncPayroll(syncSDK.payroll(), sdkConfiguration);
         this.payslip = new AsyncPayslip(syncSDK.payslip(), sdkConfiguration);
+        this.taxwithholding = new AsyncTaxwithholding(syncSDK.taxwithholding(), sdkConfiguration);
         this.timeoff = new AsyncTimeoff(syncSDK.timeoff(), sdkConfiguration);
         this.timeshift = new AsyncTimeshift(syncSDK.timeshift(), sdkConfiguration);
         this.kms = new AsyncKms(syncSDK.kms(), sdkConfiguration);

@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.25'
+implementation 'to.unified:unified-java-sdk:0.50.26'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.25</version>
+    <version>0.50.26</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                    .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                    .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1612,6 +1612,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisJob](docs/sdks/hris/README.md#createhrisjob) - Create a job
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [createHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
+* [createHrisTaxwithholding](docs/sdks/hris/README.md#createhristaxwithholding) - Create a taxwithholding
 * [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
@@ -1630,6 +1631,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [getHrisPayroll](docs/sdks/hris/README.md#gethrispayroll) - Retrieve a payroll
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [getHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [getHrisTaxwithholding](docs/sdks/hris/README.md#gethristaxwithholding) - Retrieve a taxwithholding
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [listHrisAttendances](docs/sdks/hris/README.md#listhrisattendances) - List all attendances
@@ -1648,6 +1650,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listHrisPayrolls](docs/sdks/hris/README.md#listhrispayrolls) - List all payrolls
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [listHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
+* [listHrisTaxwithholdings](docs/sdks/hris/README.md#listhristaxwithholdings) - List all taxwithholdings
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [patchHrisAttendance](docs/sdks/hris/README.md#patchhrisattendance) - Update an attendance
@@ -1663,6 +1666,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [patchHrisTaxonomy](docs/sdks/hris/README.md#patchhristaxonomy) - Update a taxonomy
+* [patchHrisTaxwithholding](docs/sdks/hris/README.md#patchhristaxwithholding) - Update a taxwithholding
 * [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
@@ -1678,6 +1682,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [removeHrisTaxonomy](docs/sdks/hris/README.md#removehristaxonomy) - Remove a taxonomy
+* [removeHrisTaxwithholding](docs/sdks/hris/README.md#removehristaxwithholding) - Remove a taxwithholding
 * [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
@@ -1693,6 +1698,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [updateHrisTaxonomy](docs/sdks/hris/README.md#updatehristaxonomy) - Update a taxonomy
+* [updateHrisTaxwithholding](docs/sdks/hris/README.md#updatehristaxwithholding) - Update a taxwithholding
 * [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
@@ -2922,6 +2928,15 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [updateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
 
+### [Taxwithholding](docs/sdks/taxwithholding/README.md)
+
+* [createHrisTaxwithholding](docs/sdks/taxwithholding/README.md#createhristaxwithholding) - Create a taxwithholding
+* [getHrisTaxwithholding](docs/sdks/taxwithholding/README.md#gethristaxwithholding) - Retrieve a taxwithholding
+* [listHrisTaxwithholdings](docs/sdks/taxwithholding/README.md#listhristaxwithholdings) - List all taxwithholdings
+* [patchHrisTaxwithholding](docs/sdks/taxwithholding/README.md#patchhristaxwithholding) - Update a taxwithholding
+* [removeHrisTaxwithholding](docs/sdks/taxwithholding/README.md#removehristaxwithholding) - Remove a taxwithholding
+* [updateHrisTaxwithholding](docs/sdks/taxwithholding/README.md#updatehristaxwithholding) - Update a taxwithholding
+
 ### [Template](docs/sdks/template/README.md)
 
 * [createComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
@@ -3230,7 +3245,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                    .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3242,7 +3257,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3290,7 +3305,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                    .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3302,7 +3317,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3369,7 +3384,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                        .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3381,7 +3396,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3536,7 +3551,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("453c6a24-84f8-42b0-8ac0-6ac7b3d202db")
+                    .id("142cdb4b-aed5-4c0a-bc5c-c412aca079ed")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3548,7 +3563,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-13T12:15:07.848Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-13T18:09:06.785Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

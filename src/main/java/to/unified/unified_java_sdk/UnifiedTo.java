@@ -476,6 +476,9 @@ public class UnifiedTo {
     private final Payslip payslip;
 
 
+    private final Taxwithholding taxwithholding;
+
+
     private final Timeoff timeoff;
 
 
@@ -1456,6 +1459,11 @@ public class UnifiedTo {
     }
 
 
+    public Taxwithholding taxwithholding() {
+        return taxwithholding;
+    }
+
+
     public Timeoff timeoff() {
         return timeoff;
     }
@@ -2162,6 +2170,7 @@ public class UnifiedTo {
         this.paycode = new Paycode(sdkConfiguration);
         this.payroll = new Payroll(sdkConfiguration);
         this.payslip = new Payslip(sdkConfiguration);
+        this.taxwithholding = new Taxwithholding(sdkConfiguration);
         this.timeoff = new Timeoff(sdkConfiguration);
         this.timeshift = new Timeshift(sdkConfiguration);
         this.kms = new Kms(sdkConfiguration);

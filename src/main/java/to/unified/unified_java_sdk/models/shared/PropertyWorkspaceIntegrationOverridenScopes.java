@@ -1470,6 +1470,16 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hris_taxwithholding_read")
+    private String hrisTaxwithholdingRead;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hris_taxwithholding_write")
+    private String hrisTaxwithholdingWrite;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hris_timeoff_read")
     private String hrisTimeoffRead;
 
@@ -3453,6 +3463,14 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
 
     public Optional<String> hrisTaxonomyWrite() {
         return Optional.ofNullable(this.hrisTaxonomyWrite);
+    }
+
+    public Optional<String> hrisTaxwithholdingRead() {
+        return Optional.ofNullable(this.hrisTaxwithholdingRead);
+    }
+
+    public Optional<String> hrisTaxwithholdingWrite() {
+        return Optional.ofNullable(this.hrisTaxwithholdingWrite);
     }
 
     public Optional<String> hrisTimeoffRead() {
@@ -5860,6 +5878,18 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
     }
 
 
+    public PropertyWorkspaceIntegrationOverridenScopes withHrisTaxwithholdingRead(@Nullable String hrisTaxwithholdingRead) {
+        this.hrisTaxwithholdingRead = hrisTaxwithholdingRead;
+        return this;
+    }
+
+
+    public PropertyWorkspaceIntegrationOverridenScopes withHrisTaxwithholdingWrite(@Nullable String hrisTaxwithholdingWrite) {
+        this.hrisTaxwithholdingWrite = hrisTaxwithholdingWrite;
+        return this;
+    }
+
+
     public PropertyWorkspaceIntegrationOverridenScopes withHrisTimeoffRead(@Nullable String hrisTimeoffRead) {
         this.hrisTimeoffRead = hrisTimeoffRead;
         return this;
@@ -7150,6 +7180,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             Utils.enhancedDeepEquals(this.hrisPayslipWrite, other.hrisPayslipWrite) &&
             Utils.enhancedDeepEquals(this.hrisTaxonomyRead, other.hrisTaxonomyRead) &&
             Utils.enhancedDeepEquals(this.hrisTaxonomyWrite, other.hrisTaxonomyWrite) &&
+            Utils.enhancedDeepEquals(this.hrisTaxwithholdingRead, other.hrisTaxwithholdingRead) &&
+            Utils.enhancedDeepEquals(this.hrisTaxwithholdingWrite, other.hrisTaxwithholdingWrite) &&
             Utils.enhancedDeepEquals(this.hrisTimeoffRead, other.hrisTimeoffRead) &&
             Utils.enhancedDeepEquals(this.hrisTimeoffWrite, other.hrisTimeoffWrite) &&
             Utils.enhancedDeepEquals(this.hrisTimeshiftRead, other.hrisTimeshiftRead) &&
@@ -7416,62 +7448,63 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             hrisJobWrite, hrisLocationRead, hrisLocationWrite,
             hrisPaycodeRead, hrisPaycodeWrite, hrisPayrollRead,
             hrisPayrollWrite, hrisPayslipRead, hrisPayslipWrite,
-            hrisTaxonomyRead, hrisTaxonomyWrite, hrisTimeoffRead,
-            hrisTimeoffWrite, hrisTimeshiftRead, hrisTimeshiftWrite,
-            kmsCommentRead, kmsCommentWrite, kmsPageRead,
-            kmsPageWrite, kmsSpaceRead, kmsSpaceWrite,
-            legalExpenseRead, legalExpenseWrite, legalMatterRead,
-            legalMatterWrite, legalPracticeareaRead, legalPracticeareaWrite,
-            legalTimeentryRead, legalTimeentryWrite, lmsActivityRead,
-            lmsActivityWrite, lmsClassRead, lmsClassWrite,
-            lmsCollectionRead, lmsCollectionWrite, lmsContentRead,
-            lmsContentWrite, lmsCourseRead, lmsCourseWrite,
-            lmsInstructorRead, lmsInstructorWrite, lmsStudentRead,
-            lmsStudentWrite, martechCampaignRead, martechCampaignWrite,
-            martechListRead, martechListWrite, martechMemberRead,
-            martechMemberWrite, martechReportRead, martechReportWrite,
-            messagingChannelRead, messagingChannelWrite, messagingEventRead,
-            messagingEventWrite, messagingMessageRead, messagingMessageWrite,
-            metadataMetadataRead, metadataMetadataWrite, paymentLinkRead,
-            paymentLinkWrite, paymentPaymentRead, paymentPaymentWrite,
-            paymentPayoutRead, paymentRefundRead, paymentSubscriptionRead,
-            paymentSubscriptionWrite, performanceCycleRead, performanceFeedbackRead,
-            performanceFeedbackWrite, performanceGoalRead, performanceGoalWrite,
-            performanceReviewRead, performanceReviewWrite, plmBomlineRead,
-            plmBomlineWrite, plmCategoryRead, plmCategoryWrite,
-            plmChangeRead, plmChangeWrite, plmDocumentRead,
-            plmDocumentWrite, plmPartRead, plmPartWrite,
-            propertyAvailabilityRead, propertyConversationRead, propertyConversationWrite,
-            propertyGuestRead, propertyGuestWrite, propertyListingRead,
-            propertyListingWrite, propertyQuoteRead, propertyQuoteWrite,
-            propertyReservationRead, propertyReservationWrite, propertyReviewRead,
-            propertyReviewWrite, propertyUnittypeRead, qmsActionRead,
-            qmsActionWrite, qmsAuditRead, qmsAuditWrite,
-            qmsInspectionRead, qmsInspectionWrite, qmsIssueRead,
-            qmsIssueWrite, repoBranchRead, repoBranchWrite,
-            repoCommitRead, repoCommitWrite, repoOrganizationRead,
-            repoOrganizationWrite, repoPullrequestRead, repoPullrequestWrite,
-            repoRepositoryRead, repoRepositoryWrite, scimGroupsRead,
-            scimGroupsWrite, scimUsersRead, scimUsersWrite,
-            shippingCarrierRead, shippingLabelRead, shippingLabelWrite,
-            shippingRateRead, shippingRateWrite, shippingShipmentRead,
-            shippingShipmentWrite, shippingTrackingRead, signingDocumentRead,
-            signingDocumentWrite, signingSignatoryRead, signingSignatoryWrite,
-            signingTemplateRead, signingTemplateWrite, socialCommentRead,
-            socialCommentWrite, socialInsightRead, socialInsightWrite,
-            socialPostRead, socialPostWrite, socialProfileRead,
-            socialProfileWrite, socialReviewRead, socialReviewWrite,
-            storageFileRead, storageFileWrite, taskChangeRead,
-            taskCommentRead, taskCommentWrite, taskProjectRead,
-            taskProjectWrite, taskTaskRead, taskTaskWrite,
-            ticketingCategoryRead, ticketingCategoryWrite, ticketingCustomerRead,
-            ticketingCustomerWrite, ticketingNoteRead, ticketingNoteWrite,
-            ticketingTicketRead, ticketingTicketWrite, ucCallRead,
-            ucCallWrite, ucCommentRead, ucCommentWrite,
-            ucContactRead, ucContactWrite, ucFaxRead,
-            ucFaxWrite, ucRecordingRead, ucScorecardRead,
-            ucScorecardtemplateRead, verificationPackageRead, verificationRequestRead,
-            verificationRequestWrite, webhook);
+            hrisTaxonomyRead, hrisTaxonomyWrite, hrisTaxwithholdingRead,
+            hrisTaxwithholdingWrite, hrisTimeoffRead, hrisTimeoffWrite,
+            hrisTimeshiftRead, hrisTimeshiftWrite, kmsCommentRead,
+            kmsCommentWrite, kmsPageRead, kmsPageWrite,
+            kmsSpaceRead, kmsSpaceWrite, legalExpenseRead,
+            legalExpenseWrite, legalMatterRead, legalMatterWrite,
+            legalPracticeareaRead, legalPracticeareaWrite, legalTimeentryRead,
+            legalTimeentryWrite, lmsActivityRead, lmsActivityWrite,
+            lmsClassRead, lmsClassWrite, lmsCollectionRead,
+            lmsCollectionWrite, lmsContentRead, lmsContentWrite,
+            lmsCourseRead, lmsCourseWrite, lmsInstructorRead,
+            lmsInstructorWrite, lmsStudentRead, lmsStudentWrite,
+            martechCampaignRead, martechCampaignWrite, martechListRead,
+            martechListWrite, martechMemberRead, martechMemberWrite,
+            martechReportRead, martechReportWrite, messagingChannelRead,
+            messagingChannelWrite, messagingEventRead, messagingEventWrite,
+            messagingMessageRead, messagingMessageWrite, metadataMetadataRead,
+            metadataMetadataWrite, paymentLinkRead, paymentLinkWrite,
+            paymentPaymentRead, paymentPaymentWrite, paymentPayoutRead,
+            paymentRefundRead, paymentSubscriptionRead, paymentSubscriptionWrite,
+            performanceCycleRead, performanceFeedbackRead, performanceFeedbackWrite,
+            performanceGoalRead, performanceGoalWrite, performanceReviewRead,
+            performanceReviewWrite, plmBomlineRead, plmBomlineWrite,
+            plmCategoryRead, plmCategoryWrite, plmChangeRead,
+            plmChangeWrite, plmDocumentRead, plmDocumentWrite,
+            plmPartRead, plmPartWrite, propertyAvailabilityRead,
+            propertyConversationRead, propertyConversationWrite, propertyGuestRead,
+            propertyGuestWrite, propertyListingRead, propertyListingWrite,
+            propertyQuoteRead, propertyQuoteWrite, propertyReservationRead,
+            propertyReservationWrite, propertyReviewRead, propertyReviewWrite,
+            propertyUnittypeRead, qmsActionRead, qmsActionWrite,
+            qmsAuditRead, qmsAuditWrite, qmsInspectionRead,
+            qmsInspectionWrite, qmsIssueRead, qmsIssueWrite,
+            repoBranchRead, repoBranchWrite, repoCommitRead,
+            repoCommitWrite, repoOrganizationRead, repoOrganizationWrite,
+            repoPullrequestRead, repoPullrequestWrite, repoRepositoryRead,
+            repoRepositoryWrite, scimGroupsRead, scimGroupsWrite,
+            scimUsersRead, scimUsersWrite, shippingCarrierRead,
+            shippingLabelRead, shippingLabelWrite, shippingRateRead,
+            shippingRateWrite, shippingShipmentRead, shippingShipmentWrite,
+            shippingTrackingRead, signingDocumentRead, signingDocumentWrite,
+            signingSignatoryRead, signingSignatoryWrite, signingTemplateRead,
+            signingTemplateWrite, socialCommentRead, socialCommentWrite,
+            socialInsightRead, socialInsightWrite, socialPostRead,
+            socialPostWrite, socialProfileRead, socialProfileWrite,
+            socialReviewRead, socialReviewWrite, storageFileRead,
+            storageFileWrite, taskChangeRead, taskCommentRead,
+            taskCommentWrite, taskProjectRead, taskProjectWrite,
+            taskTaskRead, taskTaskWrite, ticketingCategoryRead,
+            ticketingCategoryWrite, ticketingCustomerRead, ticketingCustomerWrite,
+            ticketingNoteRead, ticketingNoteWrite, ticketingTicketRead,
+            ticketingTicketWrite, ucCallRead, ucCallWrite,
+            ucCommentRead, ucCommentWrite, ucContactRead,
+            ucContactWrite, ucFaxRead, ucFaxWrite,
+            ucRecordingRead, ucScorecardRead, ucScorecardtemplateRead,
+            verificationPackageRead, verificationRequestRead, verificationRequestWrite,
+            webhook);
     }
     
     @Override
@@ -7767,6 +7800,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
                 "hrisPayslipWrite", hrisPayslipWrite,
                 "hrisTaxonomyRead", hrisTaxonomyRead,
                 "hrisTaxonomyWrite", hrisTaxonomyWrite,
+                "hrisTaxwithholdingRead", hrisTaxwithholdingRead,
+                "hrisTaxwithholdingWrite", hrisTaxwithholdingWrite,
                 "hrisTimeoffRead", hrisTimeoffRead,
                 "hrisTimeoffWrite", hrisTimeoffWrite,
                 "hrisTimeshiftRead", hrisTimeshiftRead,
@@ -8518,6 +8553,10 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
         private String hrisTaxonomyRead;
 
         private String hrisTaxonomyWrite;
+
+        private String hrisTaxwithholdingRead;
+
+        private String hrisTaxwithholdingWrite;
 
         private String hrisTimeoffRead;
 
@@ -10593,6 +10632,18 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             return this;
         }
 
+        @JsonProperty("hris_taxwithholding_read")
+        public Builder hrisTaxwithholdingRead(@Nullable String hrisTaxwithholdingRead) {
+            this.hrisTaxwithholdingRead = hrisTaxwithholdingRead;
+            return this;
+        }
+
+        @JsonProperty("hris_taxwithholding_write")
+        public Builder hrisTaxwithholdingWrite(@Nullable String hrisTaxwithholdingWrite) {
+            this.hrisTaxwithholdingWrite = hrisTaxwithholdingWrite;
+            return this;
+        }
+
         @JsonProperty("hris_timeoff_read")
         public Builder hrisTimeoffRead(@Nullable String hrisTimeoffRead) {
             this.hrisTimeoffRead = hrisTimeoffRead;
@@ -11874,6 +11925,8 @@ public class PropertyWorkspaceIntegrationOverridenScopes {
             _instance.hrisPayslipWrite = hrisPayslipWrite;
             _instance.hrisTaxonomyRead = hrisTaxonomyRead;
             _instance.hrisTaxonomyWrite = hrisTaxonomyWrite;
+            _instance.hrisTaxwithholdingRead = hrisTaxwithholdingRead;
+            _instance.hrisTaxwithholdingWrite = hrisTaxwithholdingWrite;
             _instance.hrisTimeoffRead = hrisTimeoffRead;
             _instance.hrisTimeoffWrite = hrisTimeoffWrite;
             _instance.hrisTimeshiftRead = hrisTimeshiftRead;

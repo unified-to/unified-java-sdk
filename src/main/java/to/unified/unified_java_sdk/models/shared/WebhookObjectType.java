@@ -108,6 +108,7 @@ public class WebhookObjectType {
     public static final WebhookObjectType HRIS_PAYROLL = new WebhookObjectType("hris_payroll");
     public static final WebhookObjectType HRIS_PAYCODE = new WebhookObjectType("hris_paycode");
     public static final WebhookObjectType HRIS_EARNING = new WebhookObjectType("hris_earning");
+    public static final WebhookObjectType HRIS_TAXWITHHOLDING = new WebhookObjectType("hris_taxwithholding");
     public static final WebhookObjectType MARTECH_LIST = new WebhookObjectType("martech_list");
     public static final WebhookObjectType MARTECH_MEMBER = new WebhookObjectType("martech_member");
     public static final WebhookObjectType MARTECH_CAMPAIGN = new WebhookObjectType("martech_campaign");
@@ -426,6 +427,7 @@ public class WebhookObjectType {
         map.put("hris_payroll", HRIS_PAYROLL);
         map.put("hris_paycode", HRIS_PAYCODE);
         map.put("hris_earning", HRIS_EARNING);
+        map.put("hris_taxwithholding", HRIS_TAXWITHHOLDING);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
         map.put("martech_campaign", MARTECH_CAMPAIGN);
@@ -676,6 +678,7 @@ public class WebhookObjectType {
         map.put("hris_payroll", WebhookObjectTypeEnum.HRIS_PAYROLL);
         map.put("hris_paycode", WebhookObjectTypeEnum.HRIS_PAYCODE);
         map.put("hris_earning", WebhookObjectTypeEnum.HRIS_EARNING);
+        map.put("hris_taxwithholding", WebhookObjectTypeEnum.HRIS_TAXWITHHOLDING);
         map.put("martech_list", WebhookObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", WebhookObjectTypeEnum.MARTECH_MEMBER);
         map.put("martech_campaign", WebhookObjectTypeEnum.MARTECH_CAMPAIGN);
@@ -927,6 +930,7 @@ public class WebhookObjectType {
         HRIS_PAYROLL("hris_payroll"),
         HRIS_PAYCODE("hris_paycode"),
         HRIS_EARNING("hris_earning"),
+        HRIS_TAXWITHHOLDING("hris_taxwithholding"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
         MARTECH_CAMPAIGN("martech_campaign"),

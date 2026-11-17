@@ -193,6 +193,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
     public static final PropertyWorkspaceIntegrationPatchPermissions HRIS_PAYCODE_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("hris_paycode_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions HRIS_EARNING_READ = new PropertyWorkspaceIntegrationPatchPermissions("hris_earning_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions HRIS_EARNING_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("hris_earning_write");
+    public static final PropertyWorkspaceIntegrationPatchPermissions HRIS_TAXWITHHOLDING_READ = new PropertyWorkspaceIntegrationPatchPermissions("hris_taxwithholding_read");
+    public static final PropertyWorkspaceIntegrationPatchPermissions HRIS_TAXWITHHOLDING_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("hris_taxwithholding_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions UC_CALL_READ = new PropertyWorkspaceIntegrationPatchPermissions("uc_call_read");
     public static final PropertyWorkspaceIntegrationPatchPermissions UC_CALL_WRITE = new PropertyWorkspaceIntegrationPatchPermissions("uc_call_write");
     public static final PropertyWorkspaceIntegrationPatchPermissions UC_CONTACT_READ = new PropertyWorkspaceIntegrationPatchPermissions("uc_contact_read");
@@ -721,6 +723,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("hris_paycode_write", HRIS_PAYCODE_WRITE);
         map.put("hris_earning_read", HRIS_EARNING_READ);
         map.put("hris_earning_write", HRIS_EARNING_WRITE);
+        map.put("hris_taxwithholding_read", HRIS_TAXWITHHOLDING_READ);
+        map.put("hris_taxwithholding_write", HRIS_TAXWITHHOLDING_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
         map.put("uc_call_write", UC_CALL_WRITE);
         map.put("uc_contact_read", UC_CONTACT_READ);
@@ -1181,6 +1185,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         map.put("hris_paycode_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.HRIS_PAYCODE_WRITE);
         map.put("hris_earning_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.HRIS_EARNING_READ);
         map.put("hris_earning_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.HRIS_EARNING_WRITE);
+        map.put("hris_taxwithholding_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.HRIS_TAXWITHHOLDING_READ);
+        map.put("hris_taxwithholding_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.HRIS_TAXWITHHOLDING_WRITE);
         map.put("uc_call_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.UC_CALL_READ);
         map.put("uc_call_write", PropertyWorkspaceIntegrationPatchPermissionsEnum.UC_CALL_WRITE);
         map.put("uc_contact_read", PropertyWorkspaceIntegrationPatchPermissionsEnum.UC_CONTACT_READ);
@@ -1642,6 +1648,8 @@ public class PropertyWorkspaceIntegrationPatchPermissions {
         HRIS_PAYCODE_WRITE("hris_paycode_write"),
         HRIS_EARNING_READ("hris_earning_read"),
         HRIS_EARNING_WRITE("hris_earning_write"),
+        HRIS_TAXWITHHOLDING_READ("hris_taxwithholding_read"),
+        HRIS_TAXWITHHOLDING_WRITE("hris_taxwithholding_write"),
         UC_CALL_READ("uc_call_read"),
         UC_CALL_WRITE("uc_call_write"),
         UC_CONTACT_READ("uc_contact_read"),
