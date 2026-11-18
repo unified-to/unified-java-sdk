@@ -46,7 +46,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("eee93938-a57e-4a73-9977-ee03bd0aba24")
+                    .id("57787b61-9a8f-423a-a1ce-bdfa8fcb90fb")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -56,10 +56,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("21c26713-eb11-4834-be0d-d7d100d8b4d4")
+                            .id("177afc4a-9733-49ad-babb-368d2971f42e")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("86b0f9d2-a91f-4873-8ed9-923d759690fe")
+                                    .id("37debc79-cf33-4a42-b76e-d2c6c7ca337c")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -72,7 +72,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("a217ea55-6dea-4ab2-bab1-05767eca6565")
+                            .id("d64ff7f3-fe58-4f8f-a615-fb16aefa1e3b")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -83,14 +83,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("f953bf0b-d919-47a7-a2dd-13ada8b7444e")
+                            .id("d8b1af4a-e4d0-4092-8012-4df050ad36d7")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("d0bd2b2d-3d4a-41a0-9dfa-96339f2f1fd1")
+                            .id("7dbb561a-16ac-4881-80ad-747c74bd3fb0")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -106,7 +106,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T03:18:23.747Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T01:22:16.140Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -291,7 +291,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("6dfd10a2-2046-49a1-969c-918aad7d5325")
+                    .id("96102b65-adbd-4d4b-aa9e-adee18d97584")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -301,10 +301,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("7f0e8466-1569-43d4-90d6-ed570f747267")
+                            .id("91457b29-51ec-4dbf-a93a-a20043359b39")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("239dbc9e-135e-432a-af36-f22080b5155b")
+                                    .id("0ff608a8-fce0-4b50-ba42-152eeb345d30")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -317,7 +317,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("b9bb395a-19be-4f5b-aeda-d8e60c9acfca")
+                            .id("da757bd4-c4db-4485-ab38-959ce377adc4")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -328,14 +328,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("a7fbe068-0171-4a75-add3-74fcd4e661fd")
+                            .id("140eaaa2-15fe-4015-bc8e-4eceb8c8c2c1")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("c5ed066a-4b04-4a2a-9771-203fb6ddda90")
+                            .id("7bbb1262-95bb-4bfa-a3b8-9ad5a879488d")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -351,7 +351,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T03:18:23.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T01:22:16.169Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
@@ -478,7 +478,7 @@ public class Application {
                     .createdAt(OffsetDateTime.parse("2022-01-20T13:49:12.968Z"))
                     .description("Stylish Salad designed to make you stand out with little looks")
                     .height(54d)
-                    .id("6dfd10a2-2046-49a1-969c-918aad7d5325")
+                    .id("96102b65-adbd-4d4b-aa9e-adee18d97584")
                     .isActive(true)
                     .isFeatured(false)
                     .isVisible(false)
@@ -488,10 +488,10 @@ public class Application {
                             .url("https://loremflickr.com/2126/721?lock=8820088623807162")
                             .alt("Hic desipio thorax.")
                             .height(961d)
-                            .id("7f0e8466-1569-43d4-90d6-ed570f747267")
+                            .id("91457b29-51ec-4dbf-a93a-a20043359b39")
                             .metadata(List.of(
                                 CommerceMetadata.builder()
-                                    .id("239dbc9e-135e-432a-af36-f22080b5155b")
+                                    .id("0ff608a8-fce0-4b50-ba42-152eeb345d30")
                                     .slug("ubi")
                                     .value(CommerceMetadataValue.of("textus"))
                                     .build()))
@@ -504,7 +504,7 @@ public class Application {
                             .extraData(CommerceMetadataExtraData.of(Map.ofEntries(
                                 Map.entry("display_name", "Custom Property"))))
                             .format(CommerceMetadataFormat.TEXT)
-                            .id("b9bb395a-19be-4f5b-aeda-d8e60c9acfca")
+                            .id("da757bd4-c4db-4485-ab38-959ce377adc4")
                             .namespace("custom")
                             .slug("custom_property")
                             .value(CommerceMetadataValue.of("absens"))
@@ -515,14 +515,14 @@ public class Application {
                             .name("Color")
                             .values(List.of(
                                 "olive"))
-                            .id("a7fbe068-0171-4a75-add3-74fcd4e661fd")
+                            .id("140eaaa2-15fe-4015-bc8e-4eceb8c8c2c1")
                             .position(1d)
                             .build(),
                         CommerceItemOption.builder()
                             .name("Size")
                             .values(List.of(
                                 "S"))
-                            .id("c5ed066a-4b04-4a2a-9771-203fb6ddda90")
+                            .id("7bbb1262-95bb-4bfa-a3b8-9ad5a879488d")
                             .position(2d)
                             .build()))
                     .prices(List.of(
@@ -538,7 +538,7 @@ public class Application {
                     .tags(List.of(
                         "deserunt"))
                     .totalStock(436d)
-                    .updatedAt(OffsetDateTime.parse("2026-04-02T03:18:23.776Z"))
+                    .updatedAt(OffsetDateTime.parse("2026-04-03T01:22:16.169Z"))
                     .weight(46d)
                     .weightUnit(CommerceItemvariantWeightUnit.OZ)
                     .width(40d)
