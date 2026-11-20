@@ -73,6 +73,13 @@ public class HrisPaycode {
     @JsonProperty("is_pre_tax")
     private Boolean isPreTax;
 
+    /**
+     * true when earnings under this code count as retirement-plan compensation
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_retirement_eligible")
+    private Boolean isRetirementEligible;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
@@ -111,6 +118,7 @@ public class HrisPaycode {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_employer") @Nullable Boolean isEmployer,
             @JsonProperty("is_pre_tax") @Nullable Boolean isPreTax,
+            @JsonProperty("is_retirement_eligible") @Nullable Boolean isRetirementEligible,
             @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -125,6 +133,7 @@ public class HrisPaycode {
         this.isActive = isActive;
         this.isEmployer = isEmployer;
         this.isPreTax = isPreTax;
+        this.isRetirementEligible = isRetirementEligible;
         this.metadata = metadata;
         this.name = name;
         this.raw = raw;
@@ -137,7 +146,7 @@ public class HrisPaycode {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -186,6 +195,13 @@ public class HrisPaycode {
 
     public Optional<Boolean> isPreTax() {
         return Optional.ofNullable(this.isPreTax);
+    }
+
+    /**
+     * true when earnings under this code count as retirement-plan compensation
+     */
+    public Optional<Boolean> isRetirementEligible() {
+        return Optional.ofNullable(this.isRetirementEligible);
     }
 
     public Optional<List<HrisMetadata>> metadata() {
@@ -282,6 +298,15 @@ public class HrisPaycode {
     }
 
 
+    /**
+     * true when earnings under this code count as retirement-plan compensation
+     */
+    public HrisPaycode withIsRetirementEligible(@Nullable Boolean isRetirementEligible) {
+        this.isRetirementEligible = isRetirementEligible;
+        return this;
+    }
+
+
     public HrisPaycode withMetadata(@Nullable List<HrisMetadata> metadata) {
         this.metadata = metadata;
         return this;
@@ -334,6 +359,7 @@ public class HrisPaycode {
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isEmployer, other.isEmployer) &&
             Utils.enhancedDeepEquals(this.isPreTax, other.isPreTax) &&
+            Utils.enhancedDeepEquals(this.isRetirementEligible, other.isRetirementEligible) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -347,8 +373,8 @@ public class HrisPaycode {
             code, companyId, createdAt,
             description, detailType, id,
             isActive, isEmployer, isPreTax,
-            metadata, name, raw,
-            type, updatedAt);
+            isRetirementEligible, metadata, name,
+            raw, type, updatedAt);
     }
     
     @Override
@@ -363,6 +389,7 @@ public class HrisPaycode {
                 "isActive", isActive,
                 "isEmployer", isEmployer,
                 "isPreTax", isPreTax,
+                "isRetirementEligible", isRetirementEligible,
                 "metadata", metadata,
                 "name", name,
                 "raw", raw,
@@ -390,6 +417,8 @@ public class HrisPaycode {
         private Boolean isEmployer;
 
         private Boolean isPreTax;
+
+        private Boolean isRetirementEligible;
 
         private List<HrisMetadata> metadata;
 
@@ -462,6 +491,14 @@ public class HrisPaycode {
             return this;
         }
 
+        /**
+         * true when earnings under this code count as retirement-plan compensation
+         */
+        public Builder isRetirementEligible(@Nullable Boolean isRetirementEligible) {
+            this.isRetirementEligible = isRetirementEligible;
+            return this;
+        }
+
         public Builder metadata(@Nullable List<HrisMetadata> metadata) {
             this.metadata = metadata;
             return this;
@@ -495,8 +532,8 @@ public class HrisPaycode {
                 code, companyId, createdAt,
                 description, detailType, id,
                 isActive, isEmployer, isPreTax,
-                metadata, name, raw,
-                type, updatedAt);
+                isRetirementEligible, metadata, name,
+                raw, type, updatedAt);
         }
 
     }

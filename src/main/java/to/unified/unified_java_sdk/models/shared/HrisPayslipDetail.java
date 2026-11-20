@@ -63,6 +63,20 @@ public class HrisPayslipDetail {
     @JsonProperty("is_pre_tax")
     private Boolean isPreTax;
 
+    /**
+     * true when this line counts as retirement-plan compensation
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_retirement_eligible")
+    private Boolean isRetirementEligible;
+
+    /**
+     * the payroll system's identifier for the retirement-plan loan this line repays
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loan_identifier")
+    private String loanIdentifier;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
@@ -101,6 +115,13 @@ public class HrisPayslipDetail {
     @JsonProperty("ytd_amount")
     private Double ytdAmount;
 
+    /**
+     * year-to-date hours for this line
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ytd_hours")
+    private Double ytdHours;
+
     @JsonCreator
     public HrisPayslipDetail(
             @JsonProperty("amount") double amount,
@@ -112,12 +133,15 @@ public class HrisPayslipDetail {
             @JsonProperty("hours") @Nullable Double hours,
             @JsonProperty("is_employer") @Nullable Boolean isEmployer,
             @JsonProperty("is_pre_tax") @Nullable Boolean isPreTax,
+            @JsonProperty("is_retirement_eligible") @Nullable Boolean isRetirementEligible,
+            @JsonProperty("loan_identifier") @Nullable String loanIdentifier,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("original_type") @Nullable String originalType,
             @JsonProperty("paycode_id") @Nullable String paycodeId,
             @JsonProperty("rate_amount") @Nullable Double rateAmount,
             @JsonProperty("type") @Nullable HrisPayslipDetailType type,
-            @JsonProperty("ytd_amount") @Nullable Double ytdAmount) {
+            @JsonProperty("ytd_amount") @Nullable Double ytdAmount,
+            @JsonProperty("ytd_hours") @Nullable Double ytdHours) {
         this.amount = amount;
         this.benefitId = benefitId;
         this.companyAmount = companyAmount;
@@ -127,17 +151,21 @@ public class HrisPayslipDetail {
         this.hours = hours;
         this.isEmployer = isEmployer;
         this.isPreTax = isPreTax;
+        this.isRetirementEligible = isRetirementEligible;
+        this.loanIdentifier = loanIdentifier;
         this.name = name;
         this.originalType = originalType;
         this.paycodeId = paycodeId;
         this.rateAmount = rateAmount;
         this.type = type;
         this.ytdAmount = ytdAmount;
+        this.ytdHours = ytdHours;
     }
     
     public HrisPayslipDetail(
             double amount) {
         this(amount, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -183,6 +211,20 @@ public class HrisPayslipDetail {
         return Optional.ofNullable(this.isPreTax);
     }
 
+    /**
+     * true when this line counts as retirement-plan compensation
+     */
+    public Optional<Boolean> isRetirementEligible() {
+        return Optional.ofNullable(this.isRetirementEligible);
+    }
+
+    /**
+     * the payroll system's identifier for the retirement-plan loan this line repays
+     */
+    public Optional<String> loanIdentifier() {
+        return Optional.ofNullable(this.loanIdentifier);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -217,6 +259,13 @@ public class HrisPayslipDetail {
      */
     public Optional<Double> ytdAmount() {
         return Optional.ofNullable(this.ytdAmount);
+    }
+
+    /**
+     * year-to-date hours for this line
+     */
+    public Optional<Double> ytdHours() {
+        return Optional.ofNullable(this.ytdHours);
     }
 
     public static Builder builder() {
@@ -281,6 +330,24 @@ public class HrisPayslipDetail {
     }
 
 
+    /**
+     * true when this line counts as retirement-plan compensation
+     */
+    public HrisPayslipDetail withIsRetirementEligible(@Nullable Boolean isRetirementEligible) {
+        this.isRetirementEligible = isRetirementEligible;
+        return this;
+    }
+
+
+    /**
+     * the payroll system's identifier for the retirement-plan loan this line repays
+     */
+    public HrisPayslipDetail withLoanIdentifier(@Nullable String loanIdentifier) {
+        this.loanIdentifier = loanIdentifier;
+        return this;
+    }
+
+
     public HrisPayslipDetail withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -329,6 +396,15 @@ public class HrisPayslipDetail {
     }
 
 
+    /**
+     * year-to-date hours for this line
+     */
+    public HrisPayslipDetail withYtdHours(@Nullable Double ytdHours) {
+        this.ytdHours = ytdHours;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -348,12 +424,15 @@ public class HrisPayslipDetail {
             Utils.enhancedDeepEquals(this.hours, other.hours) &&
             Utils.enhancedDeepEquals(this.isEmployer, other.isEmployer) &&
             Utils.enhancedDeepEquals(this.isPreTax, other.isPreTax) &&
+            Utils.enhancedDeepEquals(this.isRetirementEligible, other.isRetirementEligible) &&
+            Utils.enhancedDeepEquals(this.loanIdentifier, other.loanIdentifier) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.originalType, other.originalType) &&
             Utils.enhancedDeepEquals(this.paycodeId, other.paycodeId) &&
             Utils.enhancedDeepEquals(this.rateAmount, other.rateAmount) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
-            Utils.enhancedDeepEquals(this.ytdAmount, other.ytdAmount);
+            Utils.enhancedDeepEquals(this.ytdAmount, other.ytdAmount) &&
+            Utils.enhancedDeepEquals(this.ytdHours, other.ytdHours);
     }
     
     @Override
@@ -362,8 +441,9 @@ public class HrisPayslipDetail {
             amount, benefitId, companyAmount,
             deductionId, description, employeeAmount,
             hours, isEmployer, isPreTax,
-            name, originalType, paycodeId,
-            rateAmount, type, ytdAmount);
+            isRetirementEligible, loanIdentifier, name,
+            originalType, paycodeId, rateAmount,
+            type, ytdAmount, ytdHours);
     }
     
     @Override
@@ -378,12 +458,15 @@ public class HrisPayslipDetail {
                 "hours", hours,
                 "isEmployer", isEmployer,
                 "isPreTax", isPreTax,
+                "isRetirementEligible", isRetirementEligible,
+                "loanIdentifier", loanIdentifier,
                 "name", name,
                 "originalType", originalType,
                 "paycodeId", paycodeId,
                 "rateAmount", rateAmount,
                 "type", type,
-                "ytdAmount", ytdAmount);
+                "ytdAmount", ytdAmount,
+                "ytdHours", ytdHours);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -407,6 +490,10 @@ public class HrisPayslipDetail {
 
         private Boolean isPreTax;
 
+        private Boolean isRetirementEligible;
+
+        private String loanIdentifier;
+
         private String name;
 
         private String originalType;
@@ -418,6 +505,8 @@ public class HrisPayslipDetail {
         private HrisPayslipDetailType type;
 
         private Double ytdAmount;
+
+        private Double ytdHours;
 
         private Builder() {
           // force use of static builder() method
@@ -471,6 +560,22 @@ public class HrisPayslipDetail {
             return this;
         }
 
+        /**
+         * true when this line counts as retirement-plan compensation
+         */
+        public Builder isRetirementEligible(@Nullable Boolean isRetirementEligible) {
+            this.isRetirementEligible = isRetirementEligible;
+            return this;
+        }
+
+        /**
+         * the payroll system's identifier for the retirement-plan loan this line repays
+         */
+        public Builder loanIdentifier(@Nullable String loanIdentifier) {
+            this.loanIdentifier = loanIdentifier;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -513,13 +618,22 @@ public class HrisPayslipDetail {
             return this;
         }
 
+        /**
+         * year-to-date hours for this line
+         */
+        public Builder ytdHours(@Nullable Double ytdHours) {
+            this.ytdHours = ytdHours;
+            return this;
+        }
+
         public HrisPayslipDetail build() {
             return new HrisPayslipDetail(
                 amount, benefitId, companyAmount,
                 deductionId, description, employeeAmount,
                 hours, isEmployer, isPreTax,
-                name, originalType, paycodeId,
-                rateAmount, type, ytdAmount);
+                isRetirementEligible, loanIdentifier, name,
+                originalType, paycodeId, rateAmount,
+                type, ytdAmount, ytdHours);
         }
 
     }

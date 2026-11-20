@@ -40,6 +40,12 @@ public class HrisBenefitType {
     public static final HrisBenefitType COMMUTER = new HrisBenefitType("COMMUTER");
     public static final HrisBenefitType DEPENDENT_CARE = new HrisBenefitType("DEPENDENT_CARE");
     public static final HrisBenefitType PENSION = new HrisBenefitType("PENSION");
+    public static final HrisBenefitType RETIREMENT_CATCHUP = new HrisBenefitType("RETIREMENT_CATCHUP");
+    public static final HrisBenefitType RETIREMENT_ROTH_CATCHUP = new HrisBenefitType("RETIREMENT_ROTH_CATCHUP");
+    public static final HrisBenefitType RETIREMENT_AFTER_TAX = new HrisBenefitType("RETIREMENT_AFTER_TAX");
+    public static final HrisBenefitType COLLEGE_SAVINGS = new HrisBenefitType("COLLEGE_SAVINGS");
+    public static final HrisBenefitType EARNED_WAGE_ACCESS = new HrisBenefitType("EARNED_WAGE_ACCESS");
+    public static final HrisBenefitType UNION_DUES = new HrisBenefitType("UNION_DUES");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -133,6 +139,12 @@ public class HrisBenefitType {
         map.put("COMMUTER", COMMUTER);
         map.put("DEPENDENT_CARE", DEPENDENT_CARE);
         map.put("PENSION", PENSION);
+        map.put("RETIREMENT_CATCHUP", RETIREMENT_CATCHUP);
+        map.put("RETIREMENT_ROTH_CATCHUP", RETIREMENT_ROTH_CATCHUP);
+        map.put("RETIREMENT_AFTER_TAX", RETIREMENT_AFTER_TAX);
+        map.put("COLLEGE_SAVINGS", COLLEGE_SAVINGS);
+        map.put("EARNED_WAGE_ACCESS", EARNED_WAGE_ACCESS);
+        map.put("UNION_DUES", UNION_DUES);
         return map;
     }
 
@@ -158,6 +170,12 @@ public class HrisBenefitType {
         map.put("COMMUTER", HrisBenefitTypeEnum.COMMUTER);
         map.put("DEPENDENT_CARE", HrisBenefitTypeEnum.DEPENDENT_CARE);
         map.put("PENSION", HrisBenefitTypeEnum.PENSION);
+        map.put("RETIREMENT_CATCHUP", HrisBenefitTypeEnum.RETIREMENT_CATCHUP);
+        map.put("RETIREMENT_ROTH_CATCHUP", HrisBenefitTypeEnum.RETIREMENT_ROTH_CATCHUP);
+        map.put("RETIREMENT_AFTER_TAX", HrisBenefitTypeEnum.RETIREMENT_AFTER_TAX);
+        map.put("COLLEGE_SAVINGS", HrisBenefitTypeEnum.COLLEGE_SAVINGS);
+        map.put("EARNED_WAGE_ACCESS", HrisBenefitTypeEnum.EARNED_WAGE_ACCESS);
+        map.put("UNION_DUES", HrisBenefitTypeEnum.UNION_DUES);
         return map;
     }
     
@@ -183,7 +201,13 @@ public class HrisBenefitType {
         RETIREMENT_ROTH("RETIREMENT_ROTH"),
         COMMUTER("COMMUTER"),
         DEPENDENT_CARE("DEPENDENT_CARE"),
-        PENSION("PENSION"),;
+        PENSION("PENSION"),
+        RETIREMENT_CATCHUP("RETIREMENT_CATCHUP"),
+        RETIREMENT_ROTH_CATCHUP("RETIREMENT_ROTH_CATCHUP"),
+        RETIREMENT_AFTER_TAX("RETIREMENT_AFTER_TAX"),
+        COLLEGE_SAVINGS("COLLEGE_SAVINGS"),
+        EARNED_WAGE_ACCESS("EARNED_WAGE_ACCESS"),
+        UNION_DUES("UNION_DUES"),;
 
         private final String value;
 

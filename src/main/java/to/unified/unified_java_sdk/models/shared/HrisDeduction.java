@@ -102,6 +102,13 @@ public class HrisDeduction {
     private Boolean isActive;
 
     /**
+     * the payroll system's identifier for the retirement-plan loan this deduction repays
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("loan_identifier")
+    private String loanIdentifier;
+
+    /**
      * annual maximum employee amount (always money)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -170,6 +177,7 @@ public class HrisDeduction {
             @JsonProperty("garnishment_type") @Nullable GarnishmentType garnishmentType,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("loan_identifier") @Nullable String loanIdentifier,
             @JsonProperty("max_amount") @Nullable Double maxAmount,
             @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("notes") @Nullable String notes,
@@ -191,6 +199,7 @@ public class HrisDeduction {
         this.garnishmentType = garnishmentType;
         this.id = id;
         this.isActive = isActive;
+        this.loanIdentifier = loanIdentifier;
         this.maxAmount = maxAmount;
         this.metadata = metadata;
         this.notes = notes;
@@ -209,7 +218,8 @@ public class HrisDeduction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -282,6 +292,13 @@ public class HrisDeduction {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    /**
+     * the payroll system's identifier for the retirement-plan loan this deduction repays
+     */
+    public Optional<String> loanIdentifier() {
+        return Optional.ofNullable(this.loanIdentifier);
     }
 
     /**
@@ -437,6 +454,15 @@ public class HrisDeduction {
 
 
     /**
+     * the payroll system's identifier for the retirement-plan loan this deduction repays
+     */
+    public HrisDeduction withLoanIdentifier(@Nullable String loanIdentifier) {
+        this.loanIdentifier = loanIdentifier;
+        return this;
+    }
+
+
+    /**
      * annual maximum employee amount (always money)
      */
     public HrisDeduction withMaxAmount(@Nullable Double maxAmount) {
@@ -527,6 +553,7 @@ public class HrisDeduction {
             Utils.enhancedDeepEquals(this.garnishmentType, other.garnishmentType) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.loanIdentifier, other.loanIdentifier) &&
             Utils.enhancedDeepEquals(this.maxAmount, other.maxAmount) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
@@ -545,9 +572,10 @@ public class HrisDeduction {
             coverageLevel, createdAt, employerAmount,
             employerType, endAt, frequency,
             garnishmentType, id, isActive,
-            maxAmount, metadata, notes,
-            paycodeId, raw, startAt,
-            type, updatedAt, userId);
+            loanIdentifier, maxAmount, metadata,
+            notes, paycodeId, raw,
+            startAt, type, updatedAt,
+            userId);
     }
     
     @Override
@@ -565,6 +593,7 @@ public class HrisDeduction {
                 "garnishmentType", garnishmentType,
                 "id", id,
                 "isActive", isActive,
+                "loanIdentifier", loanIdentifier,
                 "maxAmount", maxAmount,
                 "metadata", metadata,
                 "notes", notes,
@@ -602,6 +631,8 @@ public class HrisDeduction {
         private String id;
 
         private Boolean isActive;
+
+        private String loanIdentifier;
 
         private Double maxAmount;
 
@@ -710,6 +741,14 @@ public class HrisDeduction {
         }
 
         /**
+         * the payroll system's identifier for the retirement-plan loan this deduction repays
+         */
+        public Builder loanIdentifier(@Nullable String loanIdentifier) {
+            this.loanIdentifier = loanIdentifier;
+            return this;
+        }
+
+        /**
          * annual maximum employee amount (always money)
          */
         public Builder maxAmount(@Nullable Double maxAmount) {
@@ -775,9 +814,10 @@ public class HrisDeduction {
                 coverageLevel, createdAt, employerAmount,
                 employerType, endAt, frequency,
                 garnishmentType, id, isActive,
-                maxAmount, metadata, notes,
-                paycodeId, raw, startAt,
-                type, updatedAt, userId);
+                loanIdentifier, maxAmount, metadata,
+                notes, paycodeId, raw,
+                startAt, type, updatedAt,
+                userId);
         }
 
     }

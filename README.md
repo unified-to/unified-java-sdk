@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.50.28'
+implementation 'to.unified:unified-java-sdk:0.50.29'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.50.28</version>
+    <version>0.50.29</version>
 </dependency>
 ```
 
@@ -99,7 +99,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -111,7 +111,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -158,7 +158,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -170,7 +170,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3245,7 +3245,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3257,7 +3257,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3305,7 +3305,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3317,7 +3317,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -3384,7 +3384,7 @@ public class Application {
                         .currency("CAD")
                         .customerDefinedCode("6170")
                         .description("Voluptatibus valde spoliatio.")
-                        .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                        .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                         .isPayable(false)
                         .metadata(List.of())
                         .name("Auto Loan Account")
@@ -3396,7 +3396,7 @@ public class Application {
                                 .originalType("vilitas")
                                 .build()))
                         .type(Type.ACCOUNTS_RECEIVABLE)
-                        .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                        .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                         .build())
                     .connectionId("<id>")
                     .build();
@@ -3551,7 +3551,7 @@ public class Application {
                     .currency("CAD")
                     .customerDefinedCode("6170")
                     .description("Voluptatibus valde spoliatio.")
-                    .id("93007540-29ed-41a9-a49b-d051b9f3e5e2")
+                    .id("3ac58e37-edf9-49e0-bcde-23814767273b")
                     .isPayable(false)
                     .metadata(List.of())
                     .name("Auto Loan Account")
@@ -3563,7 +3563,7 @@ public class Application {
                             .originalType("vilitas")
                             .build()))
                     .type(Type.ACCOUNTS_RECEIVABLE)
-                    .updatedAt(OffsetDateTime.parse("2023-08-14T06:47:14.222Z"))
+                    .updatedAt(OffsetDateTime.parse("2023-08-14T12:48:07.131Z"))
                     .build())
                 .connectionId("<id>")
                 .build();

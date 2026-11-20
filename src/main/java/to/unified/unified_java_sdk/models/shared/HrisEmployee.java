@@ -86,6 +86,13 @@ public class HrisEmployee {
     @JsonProperty("employment_status")
     private EmploymentStatus employmentStatus;
 
+    /**
+     * why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employment_status_reason")
+    private EmploymentStatusReason employmentStatusReason;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
@@ -163,6 +170,21 @@ public class HrisEmployee {
     @JsonProperty("last_name")
     private String lastName;
 
+    /**
+     * expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("leave_end_at")
+    private OffsetDateTime leaveEndAt;
+
+    /**
+     * start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("leave_start_at")
+    private OffsetDateTime leaveStartAt;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
@@ -208,6 +230,13 @@ public class HrisEmployee {
     private Map<String, Object> raw;
 
     /**
+     * most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rehired_at")
+    private OffsetDateTime rehiredAt;
+
+    /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -220,6 +249,21 @@ public class HrisEmployee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salutation")
     private String salutation;
+
+    /**
+     * seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("seniority_started_at")
+    private OffsetDateTime seniorityStartedAt;
+
+    /**
+     * adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("service_started_at")
+    private OffsetDateTime serviceStartedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -302,6 +346,7 @@ public class HrisEmployee {
             @JsonProperty("employee_number") @Nullable String employeeNumber,
             @JsonProperty("employee_roles") @Nullable List<PropertyHrisEmployeeEmployeeRoles> employeeRoles,
             @JsonProperty("employment_status") @Nullable EmploymentStatus employmentStatus,
+            @JsonProperty("employment_status_reason") @Nullable EmploymentStatusReason employmentStatusReason,
             @JsonProperty("employment_type") @Nullable HrisEmployeeEmploymentType employmentType,
             @JsonProperty("first_name") @Nullable String firstName,
             @JsonProperty("flsa_status") @Nullable FlsaStatus flsaStatus,
@@ -314,6 +359,8 @@ public class HrisEmployee {
             @JsonProperty("job_id") @Nullable String jobId,
             @JsonProperty("language_locale") @Nullable String languageLocale,
             @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("leave_end_at") @Nullable OffsetDateTime leaveEndAt,
+            @JsonProperty("leave_start_at") @Nullable OffsetDateTime leaveStartAt,
             @JsonProperty("locations") @Nullable List<HrisLocation> locations,
             @JsonProperty("manager_id") @Nullable String managerId,
             @JsonProperty("marital_status") @Nullable HrisEmployeeMaritalStatus maritalStatus,
@@ -322,8 +369,11 @@ public class HrisEmployee {
             @JsonProperty("pay_frequency") @Nullable PayFrequency payFrequency,
             @JsonProperty("pronouns") @Nullable String pronouns,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("rehired_at") @Nullable OffsetDateTime rehiredAt,
             @JsonProperty("relationships") @Nullable List<HrisEmployeerelationship> relationships,
             @JsonProperty("salutation") @Nullable String salutation,
+            @JsonProperty("seniority_started_at") @Nullable OffsetDateTime seniorityStartedAt,
+            @JsonProperty("service_started_at") @Nullable OffsetDateTime serviceStartedAt,
             @JsonProperty("ssn_sin") @Nullable String ssnSin,
             @JsonProperty("storage_quota_allocated") @Nullable Double storageQuotaAllocated,
             @JsonProperty("storage_quota_available") @Nullable Double storageQuotaAvailable,
@@ -347,6 +397,7 @@ public class HrisEmployee {
         this.employeeNumber = employeeNumber;
         this.employeeRoles = employeeRoles;
         this.employmentStatus = employmentStatus;
+        this.employmentStatusReason = employmentStatusReason;
         this.employmentType = employmentType;
         this.firstName = firstName;
         this.flsaStatus = flsaStatus;
@@ -359,6 +410,8 @@ public class HrisEmployee {
         this.jobId = jobId;
         this.languageLocale = languageLocale;
         this.lastName = lastName;
+        this.leaveEndAt = leaveEndAt;
+        this.leaveStartAt = leaveStartAt;
         this.locations = locations;
         this.managerId = managerId;
         this.maritalStatus = maritalStatus;
@@ -367,8 +420,11 @@ public class HrisEmployee {
         this.payFrequency = payFrequency;
         this.pronouns = pronouns;
         this.raw = raw;
+        this.rehiredAt = rehiredAt;
         this.relationships = relationships;
         this.salutation = salutation;
+        this.seniorityStartedAt = seniorityStartedAt;
+        this.serviceStartedAt = serviceStartedAt;
         this.ssnSin = ssnSin;
         this.storageQuotaAllocated = storageQuotaAllocated;
         this.storageQuotaAvailable = storageQuotaAvailable;
@@ -385,6 +441,8 @@ public class HrisEmployee {
     
     public HrisEmployee() {
         this(null, null, null,
+            null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -460,6 +518,13 @@ public class HrisEmployee {
         return Optional.ofNullable(this.employmentStatus);
     }
 
+    /**
+     * why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+     */
+    public Optional<EmploymentStatusReason> employmentStatusReason() {
+        return Optional.ofNullable(this.employmentStatusReason);
+    }
+
     public Optional<HrisEmployeeEmploymentType> employmentType() {
         return Optional.ofNullable(this.employmentType);
     }
@@ -533,6 +598,21 @@ public class HrisEmployee {
         return Optional.ofNullable(this.lastName);
     }
 
+    /**
+     * expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
+    public Optional<OffsetDateTime> leaveEndAt() {
+        return Optional.ofNullable(this.leaveEndAt);
+    }
+
+    /**
+     * start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> leaveStartAt() {
+        return Optional.ofNullable(this.leaveStartAt);
+    }
+
     public Optional<List<HrisLocation>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -572,6 +652,13 @@ public class HrisEmployee {
     }
 
     /**
+     * most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> rehiredAt() {
+        return Optional.ofNullable(this.rehiredAt);
+    }
+
+    /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
     public Optional<List<HrisEmployeerelationship>> relationships() {
@@ -583,6 +670,21 @@ public class HrisEmployee {
      */
     public Optional<String> salutation() {
         return Optional.ofNullable(this.salutation);
+    }
+
+    /**
+     * seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> seniorityStartedAt() {
+        return Optional.ofNullable(this.seniorityStartedAt);
+    }
+
+    /**
+     * adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<OffsetDateTime> serviceStartedAt() {
+        return Optional.ofNullable(this.serviceStartedAt);
     }
 
     public Optional<String> ssnSin() {
@@ -731,6 +833,15 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+     */
+    public HrisEmployee withEmploymentStatusReason(@Nullable EmploymentStatusReason employmentStatusReason) {
+        this.employmentStatusReason = employmentStatusReason;
+        return this;
+    }
+
+
     public HrisEmployee withEmploymentType(@Nullable HrisEmployeeEmploymentType employmentType) {
         this.employmentType = employmentType;
         return this;
@@ -828,6 +939,25 @@ public class HrisEmployee {
     }
 
 
+    /**
+     * expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+     * format)
+     */
+    public HrisEmployee withLeaveEndAt(@Nullable OffsetDateTime leaveEndAt) {
+        this.leaveEndAt = leaveEndAt;
+        return this;
+    }
+
+
+    /**
+     * start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisEmployee withLeaveStartAt(@Nullable OffsetDateTime leaveStartAt) {
+        this.leaveStartAt = leaveStartAt;
+        return this;
+    }
+
+
     public HrisEmployee withLocations(@Nullable List<HrisLocation> locations) {
         this.locations = locations;
         return this;
@@ -883,6 +1013,15 @@ public class HrisEmployee {
 
 
     /**
+     * most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisEmployee withRehiredAt(@Nullable OffsetDateTime rehiredAt) {
+        this.rehiredAt = rehiredAt;
+        return this;
+    }
+
+
+    /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
     public HrisEmployee withRelationships(@Nullable List<HrisEmployeerelationship> relationships) {
@@ -896,6 +1035,25 @@ public class HrisEmployee {
      */
     public HrisEmployee withSalutation(@Nullable String salutation) {
         this.salutation = salutation;
+        return this;
+    }
+
+
+    /**
+     * seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisEmployee withSeniorityStartedAt(@Nullable OffsetDateTime seniorityStartedAt) {
+        this.seniorityStartedAt = seniorityStartedAt;
+        return this;
+    }
+
+
+    /**
+     * adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 /
+     * YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public HrisEmployee withServiceStartedAt(@Nullable OffsetDateTime serviceStartedAt) {
+        this.serviceStartedAt = serviceStartedAt;
         return this;
     }
 
@@ -1005,6 +1163,7 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.employeeNumber, other.employeeNumber) &&
             Utils.enhancedDeepEquals(this.employeeRoles, other.employeeRoles) &&
             Utils.enhancedDeepEquals(this.employmentStatus, other.employmentStatus) &&
+            Utils.enhancedDeepEquals(this.employmentStatusReason, other.employmentStatusReason) &&
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.flsaStatus, other.flsaStatus) &&
@@ -1017,6 +1176,8 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.jobId, other.jobId) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
+            Utils.enhancedDeepEquals(this.leaveEndAt, other.leaveEndAt) &&
+            Utils.enhancedDeepEquals(this.leaveStartAt, other.leaveStartAt) &&
             Utils.enhancedDeepEquals(this.locations, other.locations) &&
             Utils.enhancedDeepEquals(this.managerId, other.managerId) &&
             Utils.enhancedDeepEquals(this.maritalStatus, other.maritalStatus) &&
@@ -1025,8 +1186,11 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.payFrequency, other.payFrequency) &&
             Utils.enhancedDeepEquals(this.pronouns, other.pronouns) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.rehiredAt, other.rehiredAt) &&
             Utils.enhancedDeepEquals(this.relationships, other.relationships) &&
             Utils.enhancedDeepEquals(this.salutation, other.salutation) &&
+            Utils.enhancedDeepEquals(this.seniorityStartedAt, other.seniorityStartedAt) &&
+            Utils.enhancedDeepEquals(this.serviceStartedAt, other.serviceStartedAt) &&
             Utils.enhancedDeepEquals(this.ssnSin, other.ssnSin) &&
             Utils.enhancedDeepEquals(this.storageQuotaAllocated, other.storageQuotaAllocated) &&
             Utils.enhancedDeepEquals(this.storageQuotaAvailable, other.storageQuotaAvailable) &&
@@ -1047,14 +1211,16 @@ public class HrisEmployee {
             address, bio, companyId,
             compensation, createdAt, currency,
             dateOfBirth, emails, employeeNumber,
-            employeeRoles, employmentStatus, employmentType,
-            firstName, flsaStatus, gender,
-            groups, hasMfa, hiredAt,
-            id, imageUrl, jobId,
-            languageLocale, lastName, locations,
+            employeeRoles, employmentStatus, employmentStatusReason,
+            employmentType, firstName, flsaStatus,
+            gender, groups, hasMfa,
+            hiredAt, id, imageUrl,
+            jobId, languageLocale, lastName,
+            leaveEndAt, leaveStartAt, locations,
             managerId, maritalStatus, metadata,
             name, payFrequency, pronouns,
-            raw, relationships, salutation,
+            raw, rehiredAt, relationships,
+            salutation, seniorityStartedAt, serviceStartedAt,
             ssnSin, storageQuotaAllocated, storageQuotaAvailable,
             storageQuotaUsed, telephones, terminatedAt,
             terminationReason, timeoffDaysTotal, timeoffDaysUsed,
@@ -1075,6 +1241,7 @@ public class HrisEmployee {
                 "employeeNumber", employeeNumber,
                 "employeeRoles", employeeRoles,
                 "employmentStatus", employmentStatus,
+                "employmentStatusReason", employmentStatusReason,
                 "employmentType", employmentType,
                 "firstName", firstName,
                 "flsaStatus", flsaStatus,
@@ -1087,6 +1254,8 @@ public class HrisEmployee {
                 "jobId", jobId,
                 "languageLocale", languageLocale,
                 "lastName", lastName,
+                "leaveEndAt", leaveEndAt,
+                "leaveStartAt", leaveStartAt,
                 "locations", locations,
                 "managerId", managerId,
                 "maritalStatus", maritalStatus,
@@ -1095,8 +1264,11 @@ public class HrisEmployee {
                 "payFrequency", payFrequency,
                 "pronouns", pronouns,
                 "raw", raw,
+                "rehiredAt", rehiredAt,
                 "relationships", relationships,
                 "salutation", salutation,
+                "seniorityStartedAt", seniorityStartedAt,
+                "serviceStartedAt", serviceStartedAt,
                 "ssnSin", ssnSin,
                 "storageQuotaAllocated", storageQuotaAllocated,
                 "storageQuotaAvailable", storageQuotaAvailable,
@@ -1136,6 +1308,8 @@ public class HrisEmployee {
 
         private EmploymentStatus employmentStatus;
 
+        private EmploymentStatusReason employmentStatusReason;
+
         private HrisEmployeeEmploymentType employmentType;
 
         private String firstName;
@@ -1160,6 +1334,10 @@ public class HrisEmployee {
 
         private String lastName;
 
+        private OffsetDateTime leaveEndAt;
+
+        private OffsetDateTime leaveStartAt;
+
         private List<HrisLocation> locations;
 
         private String managerId;
@@ -1176,9 +1354,15 @@ public class HrisEmployee {
 
         private Map<String, Object> raw;
 
+        private OffsetDateTime rehiredAt;
+
         private List<HrisEmployeerelationship> relationships;
 
         private String salutation;
+
+        private OffsetDateTime seniorityStartedAt;
+
+        private OffsetDateTime serviceStartedAt;
 
         private String ssnSin;
 
@@ -1278,6 +1462,14 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+         */
+        public Builder employmentStatusReason(@Nullable EmploymentStatusReason employmentStatusReason) {
+            this.employmentStatusReason = employmentStatusReason;
+            return this;
+        }
+
         public Builder employmentType(@Nullable HrisEmployeeEmploymentType employmentType) {
             this.employmentType = employmentType;
             return this;
@@ -1363,6 +1555,23 @@ public class HrisEmployee {
             return this;
         }
 
+        /**
+         * expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ
+         * format)
+         */
+        public Builder leaveEndAt(@Nullable OffsetDateTime leaveEndAt) {
+            this.leaveEndAt = leaveEndAt;
+            return this;
+        }
+
+        /**
+         * start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder leaveStartAt(@Nullable OffsetDateTime leaveStartAt) {
+            this.leaveStartAt = leaveStartAt;
+            return this;
+        }
+
         public Builder locations(@Nullable List<HrisLocation> locations) {
             this.locations = locations;
             return this;
@@ -1410,6 +1619,14 @@ public class HrisEmployee {
         }
 
         /**
+         * most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder rehiredAt(@Nullable OffsetDateTime rehiredAt) {
+            this.rehiredAt = rehiredAt;
+            return this;
+        }
+
+        /**
          * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
          */
         public Builder relationships(@Nullable List<HrisEmployeerelationship> relationships) {
@@ -1422,6 +1639,23 @@ public class HrisEmployee {
          */
         public Builder salutation(@Nullable String salutation) {
             this.salutation = salutation;
+            return this;
+        }
+
+        /**
+         * seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder seniorityStartedAt(@Nullable OffsetDateTime seniorityStartedAt) {
+            this.seniorityStartedAt = seniorityStartedAt;
+            return this;
+        }
+
+        /**
+         * adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 /
+         * YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder serviceStartedAt(@Nullable OffsetDateTime serviceStartedAt) {
+            this.serviceStartedAt = serviceStartedAt;
             return this;
         }
 
@@ -1502,14 +1736,16 @@ public class HrisEmployee {
                 address, bio, companyId,
                 compensation, createdAt, currency,
                 dateOfBirth, emails, employeeNumber,
-                employeeRoles, employmentStatus, employmentType,
-                firstName, flsaStatus, gender,
-                groups, hasMfa, hiredAt,
-                id, imageUrl, jobId,
-                languageLocale, lastName, locations,
+                employeeRoles, employmentStatus, employmentStatusReason,
+                employmentType, firstName, flsaStatus,
+                gender, groups, hasMfa,
+                hiredAt, id, imageUrl,
+                jobId, languageLocale, lastName,
+                leaveEndAt, leaveStartAt, locations,
                 managerId, maritalStatus, metadata,
                 name, payFrequency, pronouns,
-                raw, relationships, salutation,
+                raw, rehiredAt, relationships,
+                salutation, seniorityStartedAt, serviceStartedAt,
                 ssnSin, storageQuotaAllocated, storageQuotaAvailable,
                 storageQuotaUsed, telephones, terminatedAt,
                 terminationReason, timeoffDaysTotal, timeoffDaysUsed,

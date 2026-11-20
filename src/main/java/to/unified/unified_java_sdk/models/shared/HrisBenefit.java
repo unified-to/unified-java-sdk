@@ -26,6 +26,13 @@ import to.unified.unified_java_sdk.utils.Utils;
  */
 public class HrisBenefit {
     /**
+     * the payroll system's code for this benefit plan
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("code")
+    private String code;
+
+    /**
      * (reference to HrisCompany)
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -62,6 +69,13 @@ public class HrisBenefit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_amount")
     private Double employerContributionAmount;
+
+    /**
+     * kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("employer_contribution_category")
+    private EmployerContributionCategory employerContributionCategory;
 
     /**
      * always money
@@ -111,6 +125,13 @@ public class HrisBenefit {
     private Map<String, Object> raw;
 
     /**
+     * the retirement plan this benefit belongs to (for RETIREMENT* types)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("retirement_plan_type")
+    private RetirementPlanType retirementPlanType;
+
+    /**
      * Tax describes the tax treatment of the benefit
      */
     @JsonInclude(Include.NON_ABSENT)
@@ -131,12 +152,14 @@ public class HrisBenefit {
 
     @JsonCreator
     public HrisBenefit(
+            @JsonProperty("code") @Nullable String code,
             @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("coverage_level") @Nullable CoverageLevel coverageLevel,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("employer_contribution_amount") @Nullable Double employerContributionAmount,
+            @JsonProperty("employer_contribution_category") @Nullable EmployerContributionCategory employerContributionCategory,
             @JsonProperty("employer_contribution_max_amount") @Nullable Double employerContributionMaxAmount,
             @JsonProperty("employer_contribution_type") @Nullable EmployerContributionType employerContributionType,
             @JsonProperty("frequency") @Nullable HrisBenefitFrequency frequency,
@@ -145,15 +168,18 @@ public class HrisBenefit {
             @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("retirement_plan_type") @Nullable RetirementPlanType retirementPlanType,
             @JsonProperty("tax") @Nullable Tax tax,
             @JsonProperty("type") @Nullable HrisBenefitType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.code = code;
         this.companyId = companyId;
         this.coverageLevel = coverageLevel;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
         this.employerContributionAmount = employerContributionAmount;
+        this.employerContributionCategory = employerContributionCategory;
         this.employerContributionMaxAmount = employerContributionMaxAmount;
         this.employerContributionType = employerContributionType;
         this.frequency = frequency;
@@ -162,6 +188,7 @@ public class HrisBenefit {
         this.metadata = metadata;
         this.name = name;
         this.raw = raw;
+        this.retirementPlanType = retirementPlanType;
         this.tax = tax;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -173,7 +200,15 @@ public class HrisBenefit {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null, null);
+    }
+
+    /**
+     * the payroll system's code for this benefit plan
+     */
+    public Optional<String> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -210,6 +245,13 @@ public class HrisBenefit {
      */
     public Optional<Double> employerContributionAmount() {
         return Optional.ofNullable(this.employerContributionAmount);
+    }
+
+    /**
+     * kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+     */
+    public Optional<EmployerContributionCategory> employerContributionCategory() {
+        return Optional.ofNullable(this.employerContributionCategory);
     }
 
     /**
@@ -255,6 +297,13 @@ public class HrisBenefit {
     }
 
     /**
+     * the retirement plan this benefit belongs to (for RETIREMENT* types)
+     */
+    public Optional<RetirementPlanType> retirementPlanType() {
+        return Optional.ofNullable(this.retirementPlanType);
+    }
+
+    /**
      * Tax describes the tax treatment of the benefit
      */
     public Optional<Tax> tax() {
@@ -274,6 +323,15 @@ public class HrisBenefit {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * the payroll system's code for this benefit plan
+     */
+    public HrisBenefit withCode(@Nullable String code) {
+        this.code = code;
+        return this;
     }
 
 
@@ -321,6 +379,15 @@ public class HrisBenefit {
      */
     public HrisBenefit withEmployerContributionAmount(@Nullable Double employerContributionAmount) {
         this.employerContributionAmount = employerContributionAmount;
+        return this;
+    }
+
+
+    /**
+     * kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+     */
+    public HrisBenefit withEmployerContributionCategory(@Nullable EmployerContributionCategory employerContributionCategory) {
+        this.employerContributionCategory = employerContributionCategory;
         return this;
     }
 
@@ -384,6 +451,15 @@ public class HrisBenefit {
 
 
     /**
+     * the retirement plan this benefit belongs to (for RETIREMENT* types)
+     */
+    public HrisBenefit withRetirementPlanType(@Nullable RetirementPlanType retirementPlanType) {
+        this.retirementPlanType = retirementPlanType;
+        return this;
+    }
+
+
+    /**
      * Tax describes the tax treatment of the benefit
      */
     public HrisBenefit withTax(@Nullable Tax tax) {
@@ -417,12 +493,14 @@ public class HrisBenefit {
         }
         HrisBenefit other = (HrisBenefit) o;
         return 
+            Utils.enhancedDeepEquals(this.code, other.code) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.coverageLevel, other.coverageLevel) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.employerContributionAmount, other.employerContributionAmount) &&
+            Utils.enhancedDeepEquals(this.employerContributionCategory, other.employerContributionCategory) &&
             Utils.enhancedDeepEquals(this.employerContributionMaxAmount, other.employerContributionMaxAmount) &&
             Utils.enhancedDeepEquals(this.employerContributionType, other.employerContributionType) &&
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
@@ -431,6 +509,7 @@ public class HrisBenefit {
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.retirementPlanType, other.retirementPlanType) &&
             Utils.enhancedDeepEquals(this.tax, other.tax) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -439,23 +518,26 @@ public class HrisBenefit {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            companyId, coverageLevel, createdAt,
-            currency, description, employerContributionAmount,
-            employerContributionMaxAmount, employerContributionType, frequency,
-            id, isActive, metadata,
-            name, raw, tax,
+            code, companyId, coverageLevel,
+            createdAt, currency, description,
+            employerContributionAmount, employerContributionCategory, employerContributionMaxAmount,
+            employerContributionType, frequency, id,
+            isActive, metadata, name,
+            raw, retirementPlanType, tax,
             type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(HrisBenefit.class,
+                "code", code,
                 "companyId", companyId,
                 "coverageLevel", coverageLevel,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
                 "employerContributionAmount", employerContributionAmount,
+                "employerContributionCategory", employerContributionCategory,
                 "employerContributionMaxAmount", employerContributionMaxAmount,
                 "employerContributionType", employerContributionType,
                 "frequency", frequency,
@@ -464,6 +546,7 @@ public class HrisBenefit {
                 "metadata", metadata,
                 "name", name,
                 "raw", raw,
+                "retirementPlanType", retirementPlanType,
                 "tax", tax,
                 "type", type,
                 "updatedAt", updatedAt);
@@ -471,6 +554,8 @@ public class HrisBenefit {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String code;
 
         private String companyId;
 
@@ -483,6 +568,8 @@ public class HrisBenefit {
         private String description;
 
         private Double employerContributionAmount;
+
+        private EmployerContributionCategory employerContributionCategory;
 
         private Double employerContributionMaxAmount;
 
@@ -500,6 +587,8 @@ public class HrisBenefit {
 
         private Map<String, Object> raw;
 
+        private RetirementPlanType retirementPlanType;
+
         private Tax tax;
 
         private HrisBenefitType type;
@@ -508,6 +597,14 @@ public class HrisBenefit {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * the payroll system's code for this benefit plan
+         */
+        public Builder code(@Nullable String code) {
+            this.code = code;
+            return this;
         }
 
         /**
@@ -549,6 +646,14 @@ public class HrisBenefit {
          */
         public Builder employerContributionAmount(@Nullable Double employerContributionAmount) {
             this.employerContributionAmount = employerContributionAmount;
+            return this;
+        }
+
+        /**
+         * kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+         */
+        public Builder employerContributionCategory(@Nullable EmployerContributionCategory employerContributionCategory) {
+            this.employerContributionCategory = employerContributionCategory;
             return this;
         }
 
@@ -603,6 +708,14 @@ public class HrisBenefit {
         }
 
         /**
+         * the retirement plan this benefit belongs to (for RETIREMENT* types)
+         */
+        public Builder retirementPlanType(@Nullable RetirementPlanType retirementPlanType) {
+            this.retirementPlanType = retirementPlanType;
+            return this;
+        }
+
+        /**
          * Tax describes the tax treatment of the benefit
          */
         public Builder tax(@Nullable Tax tax) {
@@ -625,11 +738,12 @@ public class HrisBenefit {
 
         public HrisBenefit build() {
             return new HrisBenefit(
-                companyId, coverageLevel, createdAt,
-                currency, description, employerContributionAmount,
-                employerContributionMaxAmount, employerContributionType, frequency,
-                id, isActive, metadata,
-                name, raw, tax,
+                code, companyId, coverageLevel,
+                createdAt, currency, description,
+                employerContributionAmount, employerContributionCategory, employerContributionMaxAmount,
+                employerContributionType, frequency, id,
+                isActive, metadata, name,
+                raw, retirementPlanType, tax,
                 type, updatedAt);
         }
 

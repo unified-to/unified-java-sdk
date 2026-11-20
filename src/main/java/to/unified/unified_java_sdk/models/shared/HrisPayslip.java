@@ -189,6 +189,13 @@ public class HrisPayslip {
     @JsonProperty("user_id")
     private String userId;
 
+    /**
+     * year-to-date hours paid as of this payslip
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ytd_hours")
+    private Double ytdHours;
+
     @JsonCreator
     public HrisPayslip(
             @JsonProperty("company_id") @Nullable String companyId,
@@ -217,7 +224,8 @@ public class HrisPayslip {
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("type") @Nullable HrisPayslipType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("user_id") @Nullable String userId) {
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("ytd_hours") @Nullable Double ytdHours) {
         this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -245,6 +253,7 @@ public class HrisPayslip {
         this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.ytdHours = ytdHours;
     }
     
     public HrisPayslip() {
@@ -256,7 +265,8 @@ public class HrisPayslip {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -416,6 +426,13 @@ public class HrisPayslip {
      */
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    /**
+     * year-to-date hours paid as of this payslip
+     */
+    public Optional<Double> ytdHours() {
+        return Optional.ofNullable(this.ytdHours);
     }
 
     public static Builder builder() {
@@ -636,6 +653,15 @@ public class HrisPayslip {
     }
 
 
+    /**
+     * year-to-date hours paid as of this payslip
+     */
+    public HrisPayslip withYtdHours(@Nullable Double ytdHours) {
+        this.ytdHours = ytdHours;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -672,7 +698,8 @@ public class HrisPayslip {
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.ytdHours, other.ytdHours);
     }
     
     @Override
@@ -686,7 +713,8 @@ public class HrisPayslip {
             metadata, netAmount, netYtdAmount,
             paidAt, paymentReference, paymentType,
             payrollId, raw, startAt,
-            type, updatedAt, userId);
+            type, updatedAt, userId,
+            ytdHours);
     }
     
     @Override
@@ -718,7 +746,8 @@ public class HrisPayslip {
                 "startAt", startAt,
                 "type", type,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "ytdHours", ytdHours);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -777,6 +806,8 @@ public class HrisPayslip {
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private Double ytdHours;
 
         private Builder() {
           // force use of static builder() method
@@ -968,6 +999,14 @@ public class HrisPayslip {
             return this;
         }
 
+        /**
+         * year-to-date hours paid as of this payslip
+         */
+        public Builder ytdHours(@Nullable Double ytdHours) {
+            this.ytdHours = ytdHours;
+            return this;
+        }
+
         public HrisPayslip build() {
             return new HrisPayslip(
                 companyId, createdAt, currency,
@@ -978,7 +1017,8 @@ public class HrisPayslip {
                 metadata, netAmount, netYtdAmount,
                 paidAt, paymentReference, paymentType,
                 payrollId, raw, startAt,
-                type, updatedAt, userId);
+                type, updatedAt, userId,
+                ytdHours);
         }
 
     }
